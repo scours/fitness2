@@ -38,6 +38,7 @@ Created on Sun Jan 23 14:19:03 2022
 # 2022-03-27 add __setitem__(), fromkeysvalues(), struct2param()
 # 2022-03-28 add read() and write()
 # 2022-03-29 fix protection for $var, $variable - add keysorted(), tostruct()
+# 2022-03-30 specific display p"this/is/my/path" for pstr
 
 # %% Dependencies
 from math import * # import math to authorize all math expressions in parameters
@@ -343,15 +344,21 @@ class struct():
             for key,value in self.__dict__.items():
                 if key not in self._excludedattr:
                     if isinstance(value,(int,float,str,list,tuple,np.ndarray,np.generic)):
-                        print(fmt % key,value)
+                        if isinstance(value,pstr):
+                            print(fmt % key,'p"'+value+'"')
+                        else:
+                            print(fmt % key,value)
                     elif isinstance(value,struct):
                         print(fmt % key,value.__str__())
                     elif isinstance(value,type):
                         print(fmt % key,str(value))
                     else:
                         print(fmt % key,type(value))
-                    if self._evalfeature and isinstance(value,str):
-                        print(fmteval % "",tmp.getattr(key))
+                    if self._evalfeature:
+                        if isinstance(value,pstr):
+                            print(fmteval % "",'p"'+tmp.getattr(key)+'"')
+                        elif isinstance(value,str):
+                            print(fmteval % "",tmp.getattr(key))
             print(line)
             return f"{self._fulltype} ({self._type} object) with {len(self)} {self._ftype}s"
 
@@ -719,6 +726,7 @@ class param(struct):
         if len(tmp)==0:
             return s
         else:
+            ispstr = isinstance(s,pstr)
             ssafe, escape = param.escape(s)
             slines = ssafe.split("\n")
             for i in range(len(slines)):
@@ -734,7 +742,10 @@ class param(struct):
                 if protection or self._protection:
                     slines[i], escape2 = self.protect(slines[i])
                 # conversion
-                slines[i] = tmp.format(slines[i],escape=escape)+comment
+                if ispstr:
+                    slines[i] = pstr.eval(tmp.format(slines[i],escape=escape),ispstr=ispstr)
+                else:
+                    slines[i] = tmp.format(slines[i],escape=escape)+comment
             return "\n".join(slines)
         
     # returns the equivalent structure evaluated
@@ -747,8 +758,23 @@ class param(struct):
 
 
 # %% str class for file and paths
+# this class guarantees that paths are POSIX at any time
+
 class pstr(str):
-    """ str class for paths and filenames """
+    """ 
+        str class for paths and filenames
+            a = pstr("this/is/mypath//")
+            b = pstr("mylocalfolder/myfile.ext")
+            c = a / b # this/is/mypath/mylocalfolder/myfile.ext
+            
+            note: keep trailing "/" if present
+            
+            Methods such as replace()... convert pstr back to str
+            use pstr.eval("some/path/afterreplcament",ispstr=True) to keep the class pstr
+            
+            Operators + and += generate a pstr
+
+    """
      
     def __repr__(self):
         result = self.topath()

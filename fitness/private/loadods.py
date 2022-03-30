@@ -15,7 +15,7 @@ Created on Sat Mar 26 14:07:16 2022
 # Revision history
 # 2022-03-27 early version
 # 2022-04-28 RC, add alias with struct.pstr() (path type)
-# 2022-03-29 fix path concatenation
+# 2022-03-29 fix path concatenation 
 
 # Dependencies
 import os
