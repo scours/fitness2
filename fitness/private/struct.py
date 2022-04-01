@@ -8,7 +8,7 @@ __credits__ = ["Olivier Vitrac"]
 __license__ = "GPLv3"
 __maintainer__ = "Olivier Vitrac"
 __email__ = "olivier.vitrac@agroparistech.fr"
-__version__ = "0.35"
+__version__ = "0.41"
 
 """
 Matlab-like Structure class
@@ -39,6 +39,7 @@ Created on Sun Jan 23 14:19:03 2022
 # 2022-03-28 add read() and write()
 # 2022-03-29 fix protection for $var, $variable - add keysorted(), tostruct()
 # 2022-03-30 specific display p"this/is/my/path" for pstr
+# 2022-03-31 add dispmax
 
 # %% Dependencies
 from math import * # import math to authorize all math expressions in parameters
@@ -138,6 +139,7 @@ class struct():
     _fulltype = "structure" # full name
     _ftype = "field"        # field name
     _evalfeature = False    # true if eval() is available
+    _maxdisplay = 40        # maximum number of characters to display (should be even)
     
     # attributes for the iterator method
     # Please keep it static, duplicate the object before changing _iter_
@@ -327,6 +329,14 @@ class struct():
                 delattr(self,k)
         return self
     
+    def dispmax(self,content):
+        """ optimize display """
+        strcontent = str(content)
+        if len(strcontent)>self._maxdisplay:
+            nchar = round(self._maxdisplay/2)
+            return strcontent[:nchar]+" [...] "+strcontent[-nchar:]
+        else:
+            return content
 
     def __repr__(self):
         """ display method """
@@ -345,20 +355,20 @@ class struct():
                 if key not in self._excludedattr:
                     if isinstance(value,(int,float,str,list,tuple,np.ndarray,np.generic)):
                         if isinstance(value,pstr):
-                            print(fmt % key,'p"'+value+'"')
+                            print(fmt % key,'p"'+self.dispmax(value)+'"')
                         else:
-                            print(fmt % key,value)
+                            print(fmt % key,self.dispmax(value))
                     elif isinstance(value,struct):
-                        print(fmt % key,value.__str__())
+                        print(fmt % key,self.dispmax(value.__str__()))
                     elif isinstance(value,type):
-                        print(fmt % key,str(value))
+                        print(fmt % key,self.dispmax(str(value)))
                     else:
                         print(fmt % key,type(value))
                     if self._evalfeature:
                         if isinstance(value,pstr):
-                            print(fmteval % "",'p"'+tmp.getattr(key)+'"')
+                            print(fmteval % "",'p"'+self.dispmax(tmp.getattr(key))+'"')
                         elif isinstance(value,str):
-                            print(fmteval % "",tmp.getattr(key))
+                            print(fmteval % "",self.dispmax(tmp.getattr(key)))
             print(line)
             return f"{self._fulltype} ({self._type} object) with {len(self)} {self._ftype}s"
 
@@ -446,7 +456,7 @@ class struct():
     # write a file
     def write(self,file):
         """ 
-            write the equivalent structure
+            write the equivalent structure (not recursive for nested struct)
                 write(filename)
         """
         f = open(file,mode="w",encoding='utf-8')
