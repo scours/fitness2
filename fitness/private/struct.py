@@ -39,7 +39,9 @@ Created on Sun Jan 23 14:19:03 2022
 # 2022-03-28 add read() and write()
 # 2022-03-29 fix protection for $var, $variable - add keysorted(), tostruct()
 # 2022-03-30 specific display p"this/is/my/path" for pstr
-# 2022-03-31 add dispmax
+# 2022-03-31 add dispmax()
+# 2022-04-05 add check(), such that a.check(b) is similar to b+a
+# 2022-04-09 manage None and [] values in check()
 
 # %% Dependencies
 from math import * # import math to authorize all math expressions in parameters
@@ -132,6 +134,30 @@ class struct():
                  d= None,
                 ee= None
                  )
+    > Overview of implemented methods
+        check()
+        dict2struct()
+        disp()
+        dispmax()
+        format()
+        fromkeys()
+        fromkeysvalues()
+        generator()
+        getattr(key)
+        hasattr(key)
+        items()
+        keys()
+        keyssorted()
+        read()
+        scan()
+        set()
+        setattr()
+        struct2dict()
+        struct2param()
+        values()
+        write()
+        zip()
+    
     """
     
     # attributes to be overdefined
@@ -496,6 +522,27 @@ class struct():
                 s.setattr(lhs,v)
         f.close()
         return s
+
+    # argcheck
+    def check(self,default):
+        """
+        populate fields from a default structure
+            check(defaultstruct)
+            missing field, None and [] values are replaced by default ones
+            
+            Note: a.check(b) is equivalent to b+a except for [] and None values
+        """
+        if not isinstance(default,struct):
+            raise TypeError("the first argument must be a structure")
+        for f in default.keys():
+            ref = default.getattr(f)
+            if f not in self:
+                self.setattr(f, ref)
+            else:
+                current = self.getattr(f)
+                if ((current is None)  or (current==[])) and \
+                    ((ref is not None) and (ref!=[])):
+                        self.setattr(f, ref)
                 
                  
 # %% param class with scripting and evaluation capabilities
@@ -825,6 +872,7 @@ class pstr(str):
         return pstr(str(self)+value)
         
 
+
 # %% DEBUG  
 # ===================================================   
 # main()
@@ -872,4 +920,8 @@ if __name__ == '__main__':
     p=struct.fromkeysvalues(["a","b","c","d"],[1,2,3]).struct2param()
     ptxt = p.protect("$c=$a+$b")
     definitions.write("../../tmp/test.txt")
-    
+    # populate/inherit fields
+    default = struct(a=1,b="2",c=[1,2,3])
+    tst = struct(a=10)
+    tst.check(default)
+    tst.disp()
