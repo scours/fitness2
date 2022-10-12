@@ -1,0 +1,125 @@
+/*
+ * File: css.css
+ * Contract: EU contract 2017-1-FR01-KA202-037441
+ * Project: FitNESS ERASMUS+
+ * File Created: Monday, 26th October 2020
+ * Author: Steward OUADI
+ * -----
+ * Last Modified: Tuesday, 10th November 2020
+ * Modified By: Steward OUADI
+ * -----
+ */
+.btn {
+  background-color: #3498db;
+  color: white;
+  padding: 16px;
+  margin-bottom: 50px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #2980b9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+.editable-element {
+  margin-bottom: 50px;
+}
+
+#title-nb-chars-container,
+#abstract-nb-words-container,
+#nb-keywords-container,
+#nb-topics-container {
+  float: right;
+  padding: 0.1rem 0 0 0;
+  font-size: 0.875rem;
+}
+
+.display-buttons {
+  overflow: hidden;
+}
+
+.left-group-button {
+  float: left;
+}
+
+.right-group-button {
+  float: right;
+}
+
+#upload-button {
+  background-color: #d3d3d3;
+}
+
+#header {
+  margin-bottom: 50px;
+}
+
+.flex-vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.examples {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.examples,
+.exampleItem {
+  color: grey;
+}
+
+.step-explanation-text,
+.examples,
+.exampleItem {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.fields-container {
+  margin: 20px;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+#license {
+  margin-bottom: 10px;
+}
