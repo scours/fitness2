@@ -196,17 +196,17 @@ The FITNess platform combines computer code (client and server sides, on-line an
 
 <br /><img src="images/Slide9.PNG" alt="PPT" style="zoom:67%;" /><br />
 
-> Original PowerPoint files are not provided as it was decided to distribute only 🌐 WEB compliant files. All slides are available as JPG (raster images) and SVG (vectorial images) in the 📂 folders `src_part1/, src_part2/...` corresponding to the considered part. The text is available in the original MarkDown files next to the 📄 original files `part1.html, part2.html....`
+> Original PowerPoint files are not provided as it was decided to distribute only 🌐 WEB compliant files. All slides are available as JPG (raster images) and SVG (vectorial images) in the 📂 folders `lectures/html/common(or specialized)/S*/U*/src_part1/, src_part2/...` corresponding to the considered part. The text is available in the original MarkDown files next to the 📄 original files `part1.html, part2.html....`
 
 ### 6.2 Running off-line | 💤
 
-You do not it any &#128423; webserver to 🛫 launch the FITNess platform content. You just need to ⬇️ download everything (see **§6.1**), open the 📂 folder `lectures/` and start the application by clicking on the 📄 file `index.html`. No installation is needed and it runs on Windows, Linux, Mac with a modern &#128468; Web browser. Eligible browsers must use the render engine WebKit or Chromium such as: Google Chrome, FireFox, Safari, Microsoft Edge based on Chromium... Internet Explorer is not supported.
+You do not need any &#128423; webserver to 🛫 launch the FITNess platform content. You just need to ⬇️ download everything (see **§6.1**), open the 📂 folder `lectures/` and start the application by clicking on the 📄 file `index.html`. No installation is needed and it runs on Windows, Linux, Mac with a modern &#128468; Web browser. Eligible browsers must use the render engine WebKit or Chromium such as: Google Chrome, FireFox, Safari, Microsoft Edge based on Chromium... Internet Explorer is not supported.
 
 > We use a🏳️🏴 dual technology enabling FITNess to run within a webserver (Apache for us on Ubuntu 18.04 for development and CentOS 8 for production) or without. **All URLs are indeed relative and not absolute, asynchronous connections to the server are replaced by a faked server when the system goes offline** 💤. 
 
 ### 6.3 Cloning FITNess | 🤳
 
-The platform FITNess has been designed to be easily duplicated as needed from a 🗜️ ZIP package. The 📐flexible architecture enables to ⚓anchor the server to any 🗁 place of an existing &#128423; webserver (with several GB of free space). There is no special security configuration required as 🚫 no information is sent back to the server. All 🕀 interactions run within on the client side with ✔️ proper JavaScript codes included in each 📦 package.
+The platform FITNess has been designed to be easily duplicated as needed from a 🗜️ ZIP package. The 📐flexible architecture enables to ⚓anchor the server to any 🗁 place of an existing &#128423; webserver (with several GB of free space). There is no special security configuration required as 🚫 no information is sent back to the server. All 🕀 interactions run on the client side with ✔️ proper JavaScript codes included in each 📦 package.
 
 > FITNess runs on https://fitness.agroparistech.fr within a VirtualHost directory `conf.d/` in Apache. We use a customized version of &#128479; fancy-index to render &#128486;nicely&#128487; the content of each folder with a uniform &#128445; layout between all &#128464; pages of FITNess. 
 >
