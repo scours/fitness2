@@ -190,9 +190,7 @@ Each presentation includes a presenter mode (<kbd>P</kbd>) enabling a display on
 
 ### 6.1 Download procedure | ⬇️
 
-The FITNess platform combines computer code (client and server sides, on-line and off-lines), teaching (HTML, Markdown, SVG, PNG) material and activities (Q&A, case-studies, guidelines, videos...). The 🗄️ entire content of FITNess (with sources) is released as 🗜️ ZIP packages with (~3.5 GB, *without movies and animations*) and without videos (~18 GB, *all included*).  The ⬇️ **download page** is called `Zip/`; it is accessible from the welcome page or with this link: [https://fitness.agroparistech.fr/fitness/zip](https://fitness.agroparistech.fr/fitness/zip/?C=M;O=D).
-
-> Sort the files by date or size by clicking on the corresponding column titles <kbd>Last modified</kbd> or <kbd>Size</kbd> and pick the version, which fits your need. Bash scripts are made available to show which files have been excluded.
+The FITNess platform combines computer code (client and server sides, on-line and off-lines), teaching (HTML, Markdown, SVG, PNG) material and activities (Q&A, case-studies, guidelines, videos...). The 🗄️ entire content of FITNess (with sources) is released as 🗜️ ZIP packages with (~25 GB). Click here to ⬇️ [**download the zip file**](https://filesender.renater.fr/?s=download&token=acf32521-fff1-47a2-99da-7884cd6632ca).
 
 <br /><img src="images/Slide9.PNG" alt="PPT" style="zoom:67%;" /><br />
 
