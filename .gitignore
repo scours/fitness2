@@ -189,3 +189,5 @@ lmp*
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+.history/*
