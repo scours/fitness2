@@ -5,7 +5,7 @@
  * File Created: Thursday, 5th November 2020
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 11th October 2022
+ * Last Modified: Wednesday, 2nd November 2022
  * Modified By: Steward OUADI
  * -----
  */
@@ -567,7 +567,8 @@ function getArrayOfString(elementId) {
 
 // Start file download.
 document.getElementById("save-button").addEventListener("click", function () {
-  const modifiedLecture = currentLecture;
+  const modifiedLecture = {};
+  modifiedLecture.idx = currentLecture.idx;
   const isoStringDate = new Date().toISOString();
 
   // Set user modified values
