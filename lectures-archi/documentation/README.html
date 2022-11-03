@@ -22,6 +22,8 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
@@ -49,7 +51,7 @@ sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inh
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
 figure > table { margin: 0px; }
-thead, tr { break-inside: avoid; break-after: auto; }
+tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
 table.md-table td { min-width: 32px; }
@@ -71,7 +73,6 @@ div.hr:focus { cursor: none; }
 #write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
 .md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
 .CodeMirror-line, twitterwidget { break-inside: avoid; }
-svg { break-inside: avoid; }
 .footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
 .footnotes + .footnotes { margin-top: 0px; }
 .md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
@@ -86,7 +87,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
   body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; padding-bottom: 0px !important; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
@@ -129,7 +130,6 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 }
 a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
 .footnote-line a:not(.reversefootnote) { color: inherit; }
-.reversefootnote { font-family: ui-monospace, sans-serif; }
 .md-attr { display: none; }
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
@@ -879,7 +879,7 @@ h5 {
 }
 
 /** put counter result into headings */
-#write h1:before {
+/*#write h1:before {
   counter-increment: h1;
   content: counter(h1) ". ";
 }
@@ -891,7 +891,7 @@ h5 {
 
 #write h3:before,
 h3.md-focus.md-heading:before {
-  /*override the default style for focused headings */
+  //override the default style for focused headings
   counter-increment: h3;
   content: counter(h1) "." counter(h2) "." counter(h3) ". ";
 }
@@ -914,7 +914,7 @@ h6.md-focus.md-heading:before {
   counter-increment: h6;
   content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "."
     counter(h5) "." counter(h6) ". ";
-}
+}*/
 
 /** override the default style for focused headings */
 #write > h3.md-focus:before,
@@ -949,10 +949,10 @@ h6.md-focus:before {
  * Last Modified: Thursday, 14th April 2022
  * Modified By: Steward OUADI
  */
-
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
 </style><title>README</title>
 </head>
-<body class='typora-export os-windows'><div class='typora-export-content'>
+<body class='typora-export'><div class='typora-export-content'>
 <div id='write'  class=''><p>&nbsp;</p>
     <style>
     .center {
@@ -967,6 +967,6 @@ h6.md-focus:before {
     <a href="https://fitness.agroparistech.fr/" target="_blank">   
   		<img src="images/logo/Fitness2_logo.PNG" alt="FitNESS logo" class="center">
     </a>
-</header><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n6"><a class="md-toc-inner" href="#download-the-interface">Download the interface </a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n222"><a class="md-toc-inner" href="#how-to-modify-displayed-lectures-on-the-interface">How to modify displayed lectures on the interface? </a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n257"><a class="md-toc-inner" href="#how-to-add-a-new-lecture-to-the-interface">How to add a new lecture to the interface?</a></span></p></div><h1 id='download-the-interface'><span>Download the interface </span></h1><p><a href="https://filesender.renater.fr/?s=download&token=9ff5b8df-8f0f-4f7c-ab6c-8df2dd4636f2" target="_blank"><span>Here is the link to download the interface.</span></a><span> </span></p><p><span>Once you have downloaded the file, unzip it and open the </span><strong><span>sidepanel.html</span></strong><span> file. You should see an interface like this one: </span></p><p><img src="img/main-page.PNG" referrerpolicy="no-referrer" alt="main-page"></p><p>&nbsp;</p><p><span>You can then select a course by clicking on &quot;Lectures&quot; on the left. This menu allows you to click on a particular lecture and see the details of that lecture. This menu allows you to view courses up to level 3: level 1 -&gt; level 2 -&gt; level 3.</span></p><p><span>When you click on a course, the details displayed are not final, i.e. the information displayed can be changed. </span></p><p>&nbsp;</p><h1 id='how-to-modify-displayed-lectures-on-the-interface'><span>How to modify displayed lectures on the interface? </span></h1><p><span>These courses can be modified by anyone using the GitHub collaboration tool. To edit the courses you will need to: </span></p><ol><li><span>Create a </span><a href="https://github.com/join" target="_blank"><span>GitHub account</span></a><span>, you can see the different GitHub accounts types </span><a href="https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account" target="_blank"><span>here</span></a><span>.</span></li><li><span>Clone the project (repository): Go to </span><a href="https://github.com/scours/fitness2/tree/wip" target="_blank"><span>this page</span></a><span> and </span><a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo" target="_blank"><span>fork</span></a><span> the &quot;wip&quot; folder (or branch) of the project</span></li><li><span>Once the project is forked, you have a copy of the project. You can make the changes you want. To modify the lectures displayed, you will have to modify the manifests/root.manifest file. All the changes you want to make must be inside the &quot;children&quot; property. The root file is configured as follows: You have the &quot;children&quot; property, then, inside that property, you have the path for each lecture to be displayed. For example </span><code>Properties of food packaging materials/Thermal, mechanical and barrier properties/thermal-properties-methods-and-standards</code><span> will display the thermal properties methods and standards lectures details. Those details can be found in the &quot;thermal-properties-methods-and-standards&quot; file which is inside the &quot;</span><strong><span>Thermal, mechanical and barrier properties</span></strong><span>&quot; folder which is inside the &quot;</span><strong><span>Properties of food packaging materials</span></strong><span>&quot; folder. The root file allows us to define what we want to display on the left side of the interface. The root file is in </span><a href="https://en.wikipedia.org/wiki/JSON" target="_blank"><span>json</span></a><span>, so the content added to this file must follow the json format. Essentially, for this file, it comes down to respecting braces, quotation marks, commas and square brackets. A visual interface to modify the root file can be created if needed. </span><a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank"><span>Here</span></a><span> you can find more information on the json format.</span></li><li><span>Once you have made your modifications, you can contribute and propose your modifications by creating a </span><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" target="_blank"><span>pull request</span></a><span>. The pull request is needed to see your modifications on the interface provided, as the interface is working with this </span><a href="https://github.com/scours/fitness2/blob/wip/manifests/root.manifest" target="_blank"><span>root.manifest</span></a><span> file. Once your modifications will be accepted, your modifications will be merged with this </span><a href="https://github.com/scours/fitness2/blob/wip/manifests/root.manifest" target="_blank"><span>root.manifest</span></a><span> file and the interface will be able to reflect and display your modifications.</span></li></ol><p>&nbsp;</p><h1 id='how-to-add-a-new-lecture-to-the-interface'><span>How to add a new lecture to the interface?</span></h1><p>&nbsp;</p><p><strong><span>Contributors</span></strong></p><p><span>Steward OUADI, AgroParisTech</span></p><p><span>Olivier VITRAC, INRAE</span></p></div></div>
+</header><p>&nbsp;</p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n7"><a class="md-toc-inner" href="#download-the-interface">Download the interface </a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n15"><a class="md-toc-inner" href="#how-to-modify-displayed-lectures-on-the-interface">How to modify displayed lectures on the interface? </a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n27"><a class="md-toc-inner" href="#how-to-addmodify-a-lecture-toof-the-interface">How to add/modify a lecture to/of the interface?</a></span></p></div><h1 id='download-the-interface'><span>Download the interface </span></h1><p><a href="https://github.com/scours/fitness2/tree/wip" target="_blank"><span>Click on this GitHub repository</span></a><span>, then click on the </span><code>Code</code><span> button on the right and on &quot;Download ZIP&quot;.</span></p><p><span>Once you have downloaded the file, unzip it and open the </span><strong><span>lectures-archi/sidepanel.html</span></strong><span> file. You should see an interface like this one: </span></p><p><img src="img/main-page.PNG" referrerpolicy="no-referrer" alt="main-page"></p><p>&nbsp;</p><p><span>You can then select a course by clicking on &quot;Lectures&quot; on the left. This menu allows you to click on a particular lecture and see the details of that lecture. This menu allows you to view courses up to level 3: level 1 -&gt; level 2 -&gt; level 3.</span></p><p><span>When you click on a course, the details displayed are not final, i.e. the information displayed can be changed. </span></p><p>&nbsp;</p><h1 id='how-to-modify-displayed-lectures-on-the-interface'><span>How to modify displayed lectures on the interface? </span></h1><p><span>These courses can be modified by anyone using the GitHub collaboration tool. To edit the courses you will need to: </span></p><ol start='' ><li><p><span>Create a </span><a href="https://github.com/join" target="_blank"><span>GitHub account</span></a></p><ol><li><span>You can see the different GitHub accounts types </span><a href="https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account" target="_blank"><span>here</span></a><span>.</span></li></ol></li><li><p><span>Clone the project (repository)</span></p><ol><li><span>Go to </span><a href="https://github.com/scours/fitness2/tree/wip" target="_blank"><span>this page</span></a><span> and </span><a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo" target="_blank"><span>fork</span></a><span> the &quot;wip&quot; folder (or branch) of the project</span></li></ol></li><li><p><span>Modify displayed lectures:</span></p><ol><li><span>Once the project is forked, you have a copy of the project. You can make the changes you want. To modify the lectures displayed, you will have to modify the manifests/root.manifest file. All the changes you want to make must be inside the &quot;children&quot; property. The root file is configured as follows: You have the &quot;children&quot; property, then, inside that property, you have the path for each lecture to be displayed. For example </span><code>Properties of food packaging materials/Thermal, mechanical and barrier properties/thermal-properties-methods-and-standards</code><span> will display the thermal properties methods and standards lectures details. Those details can be found in the &quot;thermal-properties-methods-and-standards&quot; file which is inside the &quot;</span><strong><span>Thermal, mechanical and barrier properties</span></strong><span>&quot; folder which is inside the &quot;</span><strong><span>Properties of food packaging materials</span></strong><span>&quot; folder. The root file allows us to define what we want to display on the left side of the interface. The root file is in </span><a href="https://en.wikipedia.org/wiki/JSON" target="_blank"><span>json</span></a><span>, so the content added to this file must follow the json format. Essentially, for this file, it comes down to respecting braces, quotation marks, commas and square brackets. A visual interface to modify the root file can be created if needed. </span><a href="https://www.w3schools.com/js/js_json_intro.asp" target="_blank"><span>Here</span></a><span> you can find more information on the json format.</span></li></ol></li><li><p><span>Contribute with your modifications: </span></p><ol><li><span>Once you have made your modifications, you can contribute and propose your modifications by creating a </span><a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request" target="_blank"><span>pull request</span></a><span>. The pull request is needed to see your modifications on the interface provided, as the interface is working with this </span><a href="https://github.com/scours/fitness2/blob/wip/manifests/root.manifest" target="_blank"><span>root.manifest</span></a><span> file. Once your modifications will be accepted, your modifications will be merged with this </span><a href="https://github.com/scours/fitness2/blob/wip/manifests/root.manifest" target="_blank"><span>root.manifest</span></a><span> file and the interface will be able to reflect and display your modifications.</span></li></ol></li></ol><p>&nbsp;</p><h1 id='how-to-addmodify-a-lecture-toof-the-interface'><span>How to add/modify a lecture to/of the interface?</span></h1><p><strong><span>To add a lecture</span></strong></p><ol><li><p><span>Add lectures information and save them</span></p><ol><li><span>Once you are on the interface, as shown in the  </span><a href='#download-the-interface'><span>&quot;Download the interface&quot;</span></a><span> section, you will see the &quot;Manifest editor&quot; link at the bottom of the page. Click on that link and fill the fields. Once you are satisfied, click on the &quot;Save modifications&quot; button at the bottom of the page, then a file containing all your changes will be downloaded, we call that file the manifest file.</span></li></ol></li><li><p><span>Upload the manifest file to GitHub</span></p><ol><li><p><span>If you have not created a GitHub account or cloned the project yet, you can do that by following the procedure in the </span><a href='#how-to-modify-displayed-lectures-on-the-interface'><span>&quot;How to modify displayed lectures on the interface?&quot;</span></a><span> section.</span></p></li><li><p><span>Upload the manifest file in the </span><code>manifest</code><span> folder of your cloned project</span></p><ol><li><span>Go to GitHub and open your cloned project, then upload the manifest file using </span><a href="https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository" target="_blank"><span>this procedure</span></a><span> </span></li></ol></li></ol></li><li><p><span>Contribute with your modifications</span></p><ol><li><span>You can contribute with your changes by following the &quot;contribute with your modifications&quot; steps in the </span><a href='#how-to-modify-displayed-lectures-on-the-interface'><span>&quot;How to modify displayed lectures on the interface?&quot;</span></a><span> section.</span></li></ol></li></ol><p>&nbsp;</p><p><strong><span>To modify a lecture</span></strong></p><p><span>These are almost the same steps as for adding a lecture (above). What changes is step 1 which allows you to fill in the fields: when you want to modify a lecture, you click on &quot;Manifest editor&quot;, then on &quot;import a manifest&quot; and then you modify the desired fields. For the rest, the procedure is the same.</span></p><p>&nbsp;</p><p>&nbsp;</p><p><strong><span>Contributors</span></strong></p><p><span>Steward OUADI, AgroParisTech</span></p><p><span>Olivier VITRAC, INRAE</span></p></div></div>
 </body>
 </html>
