@@ -220,10 +220,10 @@ function addListenersToDropdownButtons() {
 /* Extract and store all lectures into a global array*/
 async function extractMetaData() {
   const pathSeparator = "/";
-  // let basePath =
-  //   "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
-  //   pathSeparator;
-  let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
+  let basePath =
+    "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
+    pathSeparator;
+  // let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
 
   // let basePath = "manifests" + pathSeparator;
   let fileExtension = ".manifest";
