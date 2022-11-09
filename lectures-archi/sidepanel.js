@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 12th October 2022
+ * Last Modified: Wednesday, 9th November 2022
  * Modified By: Steward OUADI
  */
 
@@ -24,10 +24,10 @@ function contentToDisplayChildrenArrayEmpty(tocElement) {
   // Children array is empty, so we will just display Unit title
   console.log("children is empty");
   console.log(tocElement.title);
-  console.log(tocElement.server + "/fitness/" + tocElement.url);
+  console.log(tocElement.userProvidedURLForLecture);
   let groupListLiElement = document.createElement("li");
   let groupListAElement = document.createElement("a");
-  groupListAElement.href = tocElement.server + "/fitness/" + tocElement.url; // Get course URL
+  groupListAElement.href = tocElement.userProvidedURLForLecture; // Get course URL
   groupListAElement.text = tocElement.title;
   groupListAElement.target = "_blank";
   groupListLiElement.appendChild(groupListAElement);
@@ -154,7 +154,7 @@ function createAElementForDropDownMenu(identifier) {
     // Difficulty level
     const difficultyLevelElement = document.createElement("p");
     const difficultyLevelNode = document.createTextNode(
-      "Difficulty level: to be completed"
+      "Difficulty level: " + lecture.difficultyLevel
     );
     difficultyLevelElement.appendChild(difficultyLevelNode);
 
@@ -172,7 +172,7 @@ function createAElementForDropDownMenu(identifier) {
 
     // Course URL
     let courseUrlElement = document.createElement("a");
-    courseUrlElement.href = lecture.server + "/fitness/" + lecture.url; // Get course URL
+    courseUrlElement.href = lecture.userProvidedURLForLecture; // Get course URL
     courseUrlElement.text = "Read the lecture";
     courseUrlElement.target = "_blank";
 
@@ -220,9 +220,11 @@ function addListenersToDropdownButtons() {
 /* Extract and store all lectures into a global array*/
 async function extractMetaData() {
   const pathSeparator = "/";
-  let basePath =
-    "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
-    pathSeparator;
+  // let basePath =
+  //   "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
+  //   pathSeparator;
+  let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
+
   // let basePath = "manifests" + pathSeparator;
   let fileExtension = ".manifest";
 
@@ -417,7 +419,7 @@ async function extractMetaData() {
         // Children array is empty, so we will just display title
         console.log("root level, children is empty");
         console.log(tocElement.title);
-        console.log(tocElement.server + "/fitness/" + tocElement.url);
+        console.log(tocElement.userProvidedURLForLecture);
         englobingNavList.appendChild(
           contentToDisplayChildrenArrayEmpty(tocElement)
         );
