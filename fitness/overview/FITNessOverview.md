@@ -190,7 +190,7 @@ Each presentation includes a presenter mode (<kbd>P</kbd>) enabling a display on
 
 ### 6.1 Download procedure | ⬇️
 
-The FITNess platform combines computer code (client and server sides, on-line and off-lines), teaching (HTML, Markdown, SVG, PNG) material and activities (Q&A, case-studies, guidelines, videos...). The 🗄️ entire content of FITNess (with sources) is released as 🗜️ ZIP packages with (~23 GB). Click here to ⬇️ [**download the zip file**](https://filesender.renater.fr/?s=download&token=df69b950-a768-4069-b122-a0dff9da0193).
+The FITNess platform combines computer code (client and server sides, on-line and off-lines), teaching (HTML, Markdown, SVG, PNG) material and activities (Q&A, case-studies, guidelines, videos...). The 🗄️ entire content of FITNess (with sources) is released as 🗜️ ZIP packages with (~23 GB). Click here to ⬇️ [**download the zip file**](https://agroparistechfr-my.sharepoint.com/:u:/g/personal/ouadi_agroparistech_fr/EZsFUzrWudZLlJq1nNilzFQBlOprA91NLGhDO-kf4k24iQ?e=QDY5VT).
 
 <br /><img src="images/Slide9.PNG" alt="PPT" style="zoom:67%;" /><br />
 
