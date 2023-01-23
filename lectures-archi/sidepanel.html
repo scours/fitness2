@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Tuesday, 6th September 2022
 Author: Steward OUADI
 -----
-Last Modified: Wednesday, 9th November 2022
+Last Modified: Monday, 23rd January 2023
 Modified By: Steward OUADI
 -->
 
@@ -21,22 +21,22 @@ Modified By: Steward OUADI
             font-family: "Lato", sans-serif;
         }
 
-        /* Fixed sidenav, full height */
-        .sidenav {
+        .sidebar {
             height: 95%;
-            width: 30%;
+            width: 0;
             position: fixed;
             z-index: 1;
             top: 0;
             left: 0;
             background-color: #e8712f;
             overflow-x: hidden;
-            padding-top: 20px;
-            padding-left: 1%;
+            transition: 0.5s;
+            padding-top: 60px;
         }
 
+
         /* Style the sidenav links and the dropdown button */
-        .sidenav a,
+        .sidebar a,
         .dropdown-btn {
             padding: 6px 8px 6px 16px;
             text-decoration: none;
@@ -45,14 +45,20 @@ Modified By: Steward OUADI
             display: block;
             border: none;
             background: none;
-            width: 100%;
+            /* width: 100%; */
             text-align: left;
             cursor: pointer;
             outline: none;
+            transition: 0.3s;
+
         }
 
-        /* On mouse-over */
-        .sidenav a:hover,
+
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
         .dropdown-btn:hover {
             color: #cab6b6;
             /* font-size: 22px; */
@@ -60,12 +66,14 @@ Modified By: Steward OUADI
 
         /* Main content */
         .main {
-            margin-left: 30%;
+            /* margin-left: 30%; */
             /* Same as the width of the sidenav */
             font-size: 20px;
             /* Increased text to enable scrolling */
-            padding: 0px 10px;
-            padding-left: 2%;
+            /* padding: 0px 10px; */
+            /* padding-left: 10%; */
+            transition: margin-left 0.5s;
+            padding: 16px;
         }
 
         /* Add an active class to the active dropdown button */
@@ -74,7 +82,9 @@ Modified By: Steward OUADI
             color: white;
         }
 
-        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to
+          change the design of the dropdown content */
         .dropdown-container {
             display: none;
             background-color: #c06332;
@@ -87,13 +97,37 @@ Modified By: Steward OUADI
             padding-right: 8px;
         }
 
-        /* Some media queries for responsiveness */
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            position: absolute;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            z-index: 5;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a
+        smaller font size) */
         @media screen and (max-height: 450px) {
-            .sidenav {
+            .sidebar {
                 padding-top: 15px;
             }
 
-            .sidenav a {
+            .sidebar a {
                 font-size: 18px;
             }
         }
@@ -111,7 +145,7 @@ Modified By: Steward OUADI
             bottom: 0;
             width: 100%;
             /* Set the fixed height of the footer here */
-            /* To complement the .sidenav height and reach 100%. */
+            /* To complement the .sidebar height and reach 100%. */
             height: 5%;
             /* Vertically center the text there */
             line-height: 60px;
@@ -123,86 +157,36 @@ Modified By: Steward OUADI
 
 
 <body>
-    <div class="flex-vertical-center">
-        <img src="src/Fitness2_logo.PNG" referrerpolicy="no-referrer" alt="FITNESS" title="ERASMUS+ Project"
-            width="200px" height="auto" />
-    </div>
 
-    <div class="sidenav">
+    <div id="sidebar-menu" class="sidebar">
+
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
         <button class="dropdown-btn">Lectures
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container" id="dropdown-container-id">
         </div>
+
     </div>
 
-    <!-- <div class="sidenav">
-        <button class="dropdown-btn">Lectures
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-container" id="dropdown-container-id">
-            <a href="#panorama-of-food-packaging" id="panorama-of-food-packaging" class="dropdown-container-class">
-                Panorama of food packaging</a><a href="#thermal-properties-methods-and-standards"
-                id="thermal-properties-methods-and-standards" class="dropdown-container-class">Thermal properties:
-                methods and standards</a><a
-                href="#smart-packaging-from-principles-to-commercially-available-intelligent-packaging-systems"
-                id="smart-packaging-from-principles-to-commercially-available-intelligent-packaging-systems"
-                class="dropdown-container-class">Smart Packaging: from principles to commercially available intelligent
-                packaging systems</a><a href="#hazard-identification-and-characterization-part-1"
-                id="hazard-identification-and-characterization-part-1" class="dropdown-container-class">Hazard
-                identification and characterization (1/2): introduction</a><button class="dropdown-btn"
-                id="dropdown-btn-mySubFolder">
-                mySubFolder<i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container" id="dropdown-container-mySubFolder">
-                <a href="#hazard-identification-and-characterization-part-1"
-                    id="hazard-identification-and-characterization-part-1" class="dropdown-container-class">Hazard
-                    identification and characterization (1/2): introduction</a><a href="#panorama-of-food-packaging"
-                    id="panorama-of-food-packaging" class="dropdown-container-class">
-                    Panorama of food packaging</a>
-            </div>
-            <button class="dropdown-btn" id="dropdown-btn-my other folder">
-                my other folder<i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-container" id="dropdown-container-my other folder">
-                <a href="#hazard-identification-and-characterization-part-1"
-                    id="hazard-identification-and-characterization-part-1" class="dropdown-container-class">Hazard
-                    identification and characterization (1/2): introduction</a>
-            </div>
+    <button id="open-menu-button" class="openbtn" onclick="openNav()">☰</button>
+    <div class="main flex-vertical-center" id="main-id">
+        <div>
+            <img src="src/Fitness2_logo.PNG" referrerpolicy="no-referrer" alt="FITNESS" title="ERASMUS+ Project"
+                width="200px" height="auto" />
         </div>
-    </div> -->
+        <div id="main-content">
 
-
-    <div class="main" id="main-id">
-        <h2>Select your lecture on the left side</h2>
+            <h2>Select your lecture on the left side</h2>
+        </div>
     </div>
 
 
     <script src="LecturePath.js"></script>
-    <!-- <script src="root.js"></script> -->
-    <!-- <script src="root-1.js"></script> -->
     <script src="sidepanel.js"></script>
     <link rel="stylesheet" href="modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
-    <!-- <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
 
-        var i;
-
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function () {
-                console.log("clicked on a dropdown subfolder")
-                console.log(this)
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script> -->
     <footer class="footer">
         <div class="container">
             <a href="modifyLectures/modifyLecture.html" target="_blank" title="Manifest editor">

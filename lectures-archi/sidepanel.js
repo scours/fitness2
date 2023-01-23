@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 9th November 2022
+ * Last Modified: Monday, 23rd January 2023
  * Modified By: Steward OUADI
  */
 
@@ -36,7 +36,7 @@ function contentToDisplayChildrenArrayEmpty(tocElement) {
 }
 
 const mainDropDownContainer = document.getElementById("dropdown-container-id");
-const mainView = document.getElementById("main-id");
+const mainContent = document.getElementById("main-content");
 // Map in which we have a dropdown menu id and its corresponding lecture
 const lecturesContainer = new Map();
 
@@ -188,7 +188,7 @@ function createAElementForDropDownMenu(identifier) {
     mainDiv.appendChild(courseUrlElement);
     mainDiv.appendChild(authorsElement);
 
-    mainView.innerHTML = mainDiv.outerHTML;
+    mainContent.innerHTML = mainDiv.outerHTML;
   });
 
   return aElement;
@@ -457,3 +457,50 @@ function loadFile(filePath) {
   // Finally add it to the <head>
   document.getElementsByTagName("head")[0].appendChild(scriptTag);
 }
+
+// function openNav() {
+//   document.getElementById("sidebar-menu").style.width = "60%";
+//   document.getElementById("main-id").style.marginLeft = "60%";
+
+//   document.getElementById("open-menu-button").style.visibility = "hidden";
+// }
+
+// function closeNav() {
+//   document.getElementById("sidebar-menu").style.width = "0";
+//   document.getElementById("main-id").style.marginLeft = "0";
+
+//   document.getElementById("open-menu-button").style.visibility = "visible";
+// }
+
+function openNav() {
+  document.getElementById("sidebar-menu").style.width = "60%";
+  document.getElementById("main-id").style.marginLeft = "60%";
+  // document.getElementById("open-menu-button").classList.toggle("hidden");
+  document.getElementById("open-menu-button").style.visibility = "hidden";
+}
+
+function closeNav() {
+  document.getElementById("sidebar-menu").style.width = "0";
+  document.getElementById("main-id").style.marginLeft = "0";
+  // document.getElementById("open-menu-button").classList.toggle("hidden");
+  document.getElementById("open-menu-button").style.visibility = "visible";
+}
+
+// window.onload = function () {
+//   document
+//     .getElementById("open-menu-button")
+//     .addEventListener("click", openNav);
+//   document.getElementById("sidebar-menu").addEventListener("click", closeNav);
+// };
+
+// function openNav() {
+//   document.getElementById("sidebar-menu").style.width = "60%";
+//   document.getElementById("reveal-global-div").style.marginLeft = "60%";
+//   document.getElementById("open-menu-button").style.visibility = "hidden";
+// }
+
+// function closeNav() {
+//   document.getElementById("sidebar-menu").style.width = "0";
+//   document.getElementById("reveal-global-div").style.marginLeft = "0";
+//   document.getElementById("open-menu-button").style.visibility = "visible";
+// }
