@@ -5,7 +5,7 @@
  * File Created: Thursday, 5th November 2020
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 2nd November 2022
+ * Last Modified: Tuesday, 24th January 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -136,6 +136,9 @@ const minKeywords = 3;
 
 const topicsMinLength = 1;
 const topicsMaxLength = 8;
+
+const minId = 100; // Minimum lecture ID
+const maxId = 900000; // Maximum lecture ID
 
 function createLectureFileName(isoStringDate) {
   let lectureFileName;
@@ -649,7 +652,6 @@ function setDifficultyLevelsDefaultValues() {
 function setDropDownData(lecture) {
   // Get lecture data and add them into sets containing all the levels/sections/units/difficulty level from all lectures
   levels.add(lecture.level);
-  setDifficultyLevelsDefaultValues();
   sections.add(lecture.section);
   units.add(lecture.unit);
 }
@@ -689,3 +691,38 @@ function createAndDisplayLectureContent() {
     }
   });
 }
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
+/**
+ * Fill the fields once the metadata html page is opened
+ */
+function fillFieldsOnceOpened() {
+  const id = getRandomInt(minId, maxId);
+  const lecture = {
+    idx: id,
+    title: "Title",
+    level: "Level",
+    section: "Section",
+    unit: "Unit",
+    difficultyLevel: "Novice",
+    part: "Part1",
+    author: "Author",
+    institution: "Institution",
+    abstract: "Abstract",
+    topic: ["topic1", "topic2", "topic3"],
+    license: "BY-SA-ND",
+    keywords: ["keyword1", "keyword2", "keyword3"],
+    userProvidedURLForLecture: "",
+  };
+
+  currentLecture = lecture;
+  fillInputs(lecture);
+}
+
+setDifficultyLevelsDefaultValues();
+fillFieldsOnceOpened();
