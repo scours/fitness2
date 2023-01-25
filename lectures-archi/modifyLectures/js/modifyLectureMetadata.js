@@ -5,7 +5,7 @@
  * File Created: Thursday, 5th November 2020
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 24th January 2023
+ * Last Modified: Wednesday, 25th January 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -14,10 +14,11 @@
 
 let currentLectureId = "";
 let currentLecture = "";
-const levels = new Set(); // Set containing all the levels from all lectures
-const difficultyLevel = new Set(); // Set containing all the difficulty levels from all lectures
-const sections = new Set(); // Set containing all the sections from all lectures
-const units = new Set(); // Set containing all the units from all lectures
+const levels = new Set(); // Set containing all the levels for all lectures
+const difficultyLevel = new Set(); // Set containing all the difficulty levels for all lectures
+const sections = new Set(); // Set containing all the sections for all lectures
+const units = new Set(); // Set containing all the units for all lectures
+const institutions = new Set(); // Set containing all the institutions for all lectures
 
 // Set element ids so we can get them from "document" object
 const headerElementId = "header";
@@ -140,9 +141,8 @@ const topicsMaxLength = 8;
 const minId = 100; // Minimum lecture ID
 const maxId = 900000; // Maximum lecture ID
 
-function createLectureFileName(isoStringDate) {
+function createLectureFileName(isoStringDate, title) {
   let lectureFileName;
-  let title = currentLecture.title;
 
   // Remove chars not allowed in path
   let removedCharsNotAllowed = title.replace(/[/\\?%*:|"<>]/g, "-");
@@ -497,6 +497,11 @@ function fillInputs(lecture) {
     difficultyLevel,
     lecture.difficultyLevel
   );
+  createDropDownOptions(
+    institutionElementId,
+    institutions,
+    lecture.institution
+  );
 }
 
 function download(filename, stringifiedModifiedLecture) {
@@ -608,9 +613,7 @@ document.getElementById("save-button").addEventListener("click", function () {
   modifiedLecture.keywords = keywords;
   modifiedLecture.userProvidedURLForLecture = userProvidedURLForLecture;
 
-  // Store modified data in json format. Filename is composed of lecture id and modification date
-  // const filename = `lecture-id_${currentLecture.idx}__iso-date_${isoStringDate}.json`;
-  const filename = createLectureFileName(isoStringDate);
+  const filename = createLectureFileName(isoStringDate, title);
 
   download(filename, JSON.stringify(modifiedLecture, null, 2));
 
@@ -647,6 +650,46 @@ function setDifficultyLevelsDefaultValues() {
   difficultyLevel.add("Novice");
   difficultyLevel.add("Intermediate");
   difficultyLevel.add("Advanced");
+}
+
+function setInstitutionDefaultValues() {
+  institutions.add("AgroParisTech");
+  institutions.add("CSIC");
+  institutions.add("FPF");
+  institutions.add("Institut-Agro-Dijon");
+  institutions.add("LNE");
+  institutions.add("TUM");
+  institutions.add("UB");
+  institutions.add("UCP");
+  institutions.add("UNIZG");
+  institutions.add("U_Aarhus");
+}
+
+function setLevelDefaultValues() {
+  levels.add("common");
+  levels.add("specialized");
+}
+
+function setSectionDefaultValues() {
+  for (let i = 1; i <= 8; i++) {
+    sections.add("S" + i);
+  }
+}
+
+function setUnitDefaultValues() {
+  for (let i = 1; i <= 8; i++) {
+    for (let j = 1; j <= 8; j++) {
+      units.add("U" + i + "." + j);
+    }
+  }
+}
+
+function setDropDownDefaultValues() {
+  setDifficultyLevelsDefaultValues();
+  setLevelDefaultValues();
+  setSectionDefaultValues();
+  setUnitDefaultValues();
+  setInstitutionDefaultValues();
 }
 
 function setDropDownData(lecture) {
@@ -724,5 +767,5 @@ function fillFieldsOnceOpened() {
   fillInputs(lecture);
 }
 
-setDifficultyLevelsDefaultValues();
+setDropDownDefaultValues();
 fillFieldsOnceOpened();
