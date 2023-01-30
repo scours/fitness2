@@ -753,7 +753,7 @@ function fillFieldsOnceOpened() {
     section: "Section",
     unit: "Unit",
     difficultyLevel: "Novice",
-    part: "Part1",
+    part: "part1",
     author: "Author",
     institution: "Institution",
     abstract: "Abstract",
