@@ -1,0 +1,33 @@
+{
+  "idx": 2,
+  "title": "Glass Packaging - Packaging materials and production processes (1/2)",
+  "level": "common",
+  "section": "S1",
+  "unit": "U1.2",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": "Fatima Pocas",
+  "institution": "UCP",
+  "abstract": "Packaging systems can be made from various materials: glass materials (1/2)",
+  "topic": [
+    "materials",
+    "glass",
+    "bottles"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "annealing",
+    "blow",
+    "bottle",
+    "composition",
+    "glass",
+    "packages",
+    "packaging",
+    "production",
+    "silica",
+    "surface",
+    "temperature",
+    "type"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part1.html#/2"
+}

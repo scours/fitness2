@@ -1,0 +1,35 @@
+{
+  "idx": 8,
+  "title": "Paper and paperboard - Packaging materials and production processes (2/2)",
+  "level": "common",
+  "section": "S1",
+  "unit": "U1.2",
+  "difficultyLevel": "Novice",
+  "part": "part7",
+  "author": "Fatima Pocas",
+  "institution": "UCP",
+  "abstract": "Packaging systems can be made from various materials: paper and paperboard (2/2)",
+  "topic": [
+    "materials",
+    "paper",
+    "board",
+    "paperboard",
+    "migration"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "board",
+    "boxe",
+    "bursting",
+    "corrugated",
+    "fefco",
+    "fluting",
+    "medium",
+    "structure",
+    "test",
+    "thickness",
+    "unit",
+    "wall"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part7.html#/2"
+}

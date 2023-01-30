@@ -1,0 +1,36 @@
+{
+  "idx": 4,
+  "title": "Metal Packaging - Packaging materials and production processes",
+  "level": "common",
+  "section": "S1",
+  "unit": "U1.2",
+  "difficultyLevel": "Novice",
+  "part": "part3",
+  "author": "Fatima Pocas",
+  "institution": "UCP",
+  "abstract": "Packaging systems can be made from various materials: Metal Packaging",
+  "topic": [
+    "materials",
+    "metal",
+    "cans",
+    "corrosion",
+    "interactions",
+    "migration"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "alloy",
+    "cans",
+    "coating",
+    "electrolytic",
+    "ends",
+    "external",
+    "good",
+    "lacquer",
+    "metal",
+    "packaging",
+    "seam",
+    "sheet"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part3.html#/2"
+}

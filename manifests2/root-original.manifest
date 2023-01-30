@@ -1,0 +1,90 @@
+/*
+ * File: root-original.manifest
+ * Contract: EU contract 2022-FR01-KA220-HED-000023509
+ * Project: FitNESS 2 ERASMUS+
+ * File Created: Wednesday, 25th January 2023
+ * Author: Steward OUADI
+ * -----
+ * Last Modified: Wednesday, 25th January 2023
+ * Modified By: Steward OUADI
+ */
+
+{
+  "children": [
+    "What is food packaging/Packaging materials and shaping process/glass-packaging-part-1",
+    "What is food packaging/Packaging materials and shaping process/glass-packaging-part-2",
+    "What is food packaging/Packaging materials and shaping process/metal-packaging",
+    "What is food packaging/Packaging materials and shaping process/plastic-packaging-part-1",
+    "What is food packaging/Packaging materials and shaping process/plastic-packaging-part-2",
+    "What is food packaging/Packaging materials and shaping process/paper-and-paperboard-part-1",
+    "What is food packaging/Packaging materials and shaping process/paper-and-paperboard-part-2",
+    "What is food packaging/Packaging materials and shaping process/bio-based-materials",
+    "What is food packaging/Packaging materials and shaping process/cork-as-food-packaging",
+    "What is food packaging/Packaging materials and shaping process/wood-packaging",
+    "What is food packaging/Basic legal framework/legal-framework-overview",
+
+    "Properties of food packaging materials/Thermal, mechanical and barrier properties/thermal-properties",
+    "Properties of food packaging materials/Thermal, mechanical and barrier properties/mechanical-properties",
+    "Properties of food packaging materials/Thermal, mechanical and barrier properties/mass-transfer-properties",
+    "Properties of food packaging materials/Thermal, mechanical and barrier properties/optical-properties",
+    "Properties of food packaging materials/Thermal, mechanical and barrier properties/surface-properties",
+    "Properties of food packaging materials/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies",
+    "Properties of food packaging materials/Chemical and physical stability of packaging materials/food-packaging-interactions",
+    "Properties of food packaging materials/Chemical and physical stability of packaging materials/strategies-to-reduce-food-packaging-interactions",
+    "Properties of food packaging materials/Mechanical design of packaging/the-basics-of-mechanical-engineering-for-packaging-designer",
+
+    "Packaging and food preservation/Common physical chemical factors affecting food stability/overview",
+    "Packaging and food preservation/Food packaging and shelf life/shelf-life-definitions",
+    "Packaging and food preservation/Food packaging and shelf life/factors-affecting-shelf-life",
+    "Packaging and food preservation/Food packaging and shelf life/study-shelf-life",
+    "Packaging and food preservation/Food packaging and shelf life/predict-shelf-life",
+
+    "Innovations in food packaging/Biobased and biodegradable materials/from-polymers-to-bioplastics",
+    "Innovations in food packaging/Biobased and biodegradable materials/cellulose-derivates",
+    "Innovations in food packaging/Active packaging/overview",
+    "Innovations in food packaging/Active packaging/humidity-control",
+    "Innovations in food packaging/Smart packaging/overview",
+    "Innovations in food packaging/Nanotechnology strategies/definitions",
+
+    "Risk assessment/Hazard identification and characterization/introduction",
+    "Risk assessment/Hazard identification and characterization/methodologies",
+
+    "Decision making and advanced risk management techniques/Introduction to decision theory and risk management/introduction",
+    "Decision making and advanced risk management techniques/Managing uncertainty by intervals and worst-case scenarios/monotonic-calculations",
+    "Decision making and advanced risk management techniques/Probabilistic approaches and Bayesian approaches/descriptions",
+
+    "Legislation regulation of food contact materials/EU legislation, national regulations, US regulations, others/regulatory-framework",
+    "Legislation regulation of food contact materials/GMP and quality assurance standards/safety-and-quality-management-system",
+
+    "Mass transfer in food packaging/Principles of mass transfer/principles-part-1",
+    "Mass transfer in food packaging/Principles of mass transfer/principles-part-2",
+    "Mass transfer in food packaging/Migration modeling for monomaterials/mass-transfer-modeling",
+    "Mass transfer in food packaging/Modeling for multi-materials, multi-steps process/mass-transfer-for-multi-materials",
+    "Mass transfer in food packaging/Calculation of permeability in composite systems/from-ideal-laminates-to-materials",
+    "Mass transfer in food packaging/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale",
+    "Mass transfer in food packaging/Micro holes and leaks in packaging/measurement-and-modeling",
+
+    "FMECA applied to food packaging design/History and principles of FMEA-FMECA/fmeca-approaches",
+    "FMECA applied to food packaging design/Diagram-based approaches/overview",
+    "FMECA applied to food packaging design/Computer-aided approaches/overview",
+
+    "Molecular and thermodynamical modeling/Principles (forcefields, statistical-ensembles), overview of online databases/overview",
+    "Molecular and thermodynamical modeling/Calculations using fluctuation theorems/overview",
+
+    "Eco-design/Methodologies used in life cycle assessment/sustainability-and-packaging",
+    "Eco-design/Methodologies used in life cycle assessment/life-cycle-assessment",
+    "Eco-design/Tools for life cycle impact assessment/overview",
+    "Eco-design/Biodegradation and microplastics/overview",
+    "Eco-design/Environmental impact of plastics and recycling/overview",
+    "Eco-design/Safety assessment of recycling processes/overview",
+
+    "Forming, filling and sealing processes/Introduction to mechanical processes/introduction",
+    "Forming, filling and sealing processes/Forming processes/overview",
+    "Forming, filling and sealing processes/Filling processes/overview",
+    "Forming, filling and sealing processes/Sealing processes/overview",
+    "Forming, filling and sealing processes/Beverage filling processes/overview",
+    "Forming, filling and sealing processes/Forming, filling and sealing machines/overview",
+    "Forming, filling and sealing processes/Surface treatments and coatings/overview",
+    "Forming, filling and sealing processes/Packaging line optimization/overview"
+  ]
+}
