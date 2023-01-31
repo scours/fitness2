@@ -5,7 +5,7 @@
  * File Created: Thursday, 5th November 2020
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 25th January 2023
+ * Last Modified: Tuesday, 31st January 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -656,6 +656,7 @@ function setInstitutionDefaultValues() {
   institutions.add("AgroParisTech");
   institutions.add("CSIC");
   institutions.add("FPF");
+  institutions.add("INRAE");
   institutions.add("Institut-Agro-Dijon");
   institutions.add("LNE");
   institutions.add("TUM");
