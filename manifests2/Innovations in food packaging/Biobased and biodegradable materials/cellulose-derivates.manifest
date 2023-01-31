@@ -1,0 +1,36 @@
+{
+  "idx": 28,
+  "title": "Biobased and biodegradable materials 2/2 (please read §1 before)  - level intermediate",
+  "level": "common",
+  "section": "S4",
+  "unit": "U4.1",
+  "difficultyLevel": "Intermediate",
+  "part": "part2",
+  "author": "Maria José Fabra",
+  "institution": "CSIC",
+  "abstract": "Biobased and biodegradable materials: cellulose derivates, polylactic acid, polyhydroxyalkanoates",
+  "topic": [
+    "biodegradable",
+    "renewable",
+    "environment",
+    "cellulose",
+    "PLA",
+    "PHA"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "c",
+    "cellulose",
+    "machines",
+    "oh",
+    "pha",
+    "poly",
+    "polymers",
+    "properties",
+    "source",
+    "technical",
+    "unit",
+    "water"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S4/U4.1/part2.html#/2"
+}

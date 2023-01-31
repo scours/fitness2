@@ -1,0 +1,37 @@
+{
+  "idx": 65,
+  "title": "Surface treatment and coating principles and technologies.",
+  "level": "specialized",
+  "section": "S8",
+  "unit": "U8.7",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Mia Kurek",
+  "institution": "UNIZG",
+  "abstract": "Surface treatments increase the surface energy of the packaging surface in order to maximize the contact surface area and the adhesion of adhesives, inks and coatings. Principles and available technologies are reviewed in this lecture.  -  level intermediate",
+  "topic": [
+    "coating",
+    "surface",
+    "process",
+    "materials",
+    "permeation",
+    "migration",
+    "recycling"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "barrier",
+    "cans",
+    "coating",
+    "coatings",
+    "deposition",
+    "dip",
+    "forming",
+    "outputspecialized",
+    "steel",
+    "surface",
+    "unit",
+    "welded"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.7/part1.html#/2"
+}

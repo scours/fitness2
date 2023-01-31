@@ -1,0 +1,34 @@
+{
+  "idx": 33,
+  "title": "Hazard identification and characterization (1/2): introduction",
+  "level": "specialized",
+  "section": "S1",
+  "unit": "U1.1",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Marie-Christine Chagnon",
+  "institution": "UB",
+  "abstract": "Any chemical is likely to produce some form of adverse effect if taken in sufficient quantity. The concepts of acute toxicology and new concepts (endocrine disruption, low-dose effects and non-monotonic dose response, additive effects, biotests, SAR and QSAR models...). Part 1/2: Introduction: history, basic concepts, risk vs hazard,  endocrine disruptors in food contact materials, the risk assessment process. - level intermediate, advanced",
+  "topic": [
+    "hazard",
+    "risk",
+    "toxicology",
+    "endocrine"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "bisethylhexyl",
+    "contact",
+    "endocrine",
+    "food",
+    "hazard",
+    "i",
+    "migration",
+    "nonintentionally",
+    "paradigm",
+    "risk",
+    "substances",
+    "suspected"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S1/U1.1/part1.html#/2"
+}

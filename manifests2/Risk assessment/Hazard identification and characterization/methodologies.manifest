@@ -1,0 +1,35 @@
+{
+  "idx": 34,
+  "title": "Hazard identification and characterization (2/2): methodologies",
+  "level": "specialized",
+  "section": "S1",
+  "unit": "U1.1",
+  "difficultyLevel": "Intermediate",
+  "part": "part2",
+  "author": "Marie-Christine Chagnon",
+  "institution": "UB",
+  "abstract": "Any chemical is likely to produce some form of adverse effect if taken in sufficient quantity. The concepts of acute toxicology and new concepts (endocrine disruption, low-dose effects and non-monotonic dose response, additive effects, biotests, SAR and QSAR models...). Part 2/2: Methodologies for hazard identification and characterization | In Silico SAR and QSAR methods, tools (OECD, Vega-NIC, Derek Nexus, ToxTree, Caesar, EPIsuite) | In vitro vs in vivo studies - level intermediate, advanced",
+  "topic": [
+    "hazard",
+    "risk",
+    "toxicology",
+    "endocrine",
+    "prediction"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "chemicals",
+    "examples",
+    "hazard",
+    "human",
+    "phase",
+    "properties",
+    "qsar",
+    "relationship",
+    "smile",
+    "structural",
+    "studies",
+    "vitro"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S1/U1.1/part2.html#/2"
+}
