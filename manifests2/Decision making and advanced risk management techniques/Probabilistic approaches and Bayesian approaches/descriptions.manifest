@@ -1,0 +1,36 @@
+{
+  "idx": 37,
+  "title": "Probabilistic and Bayesian descriptions of migration",
+  "level": "specialized",
+  "section": "S2",
+  "unit": "U2.3",
+  "difficultyLevel": "Advanced",
+  "part": "part1",
+  "author": "Olivier Vitrac",
+  "institution": "INRAE",
+  "abstract": "Mass transfer equations (transport and boundary conditions) are not linear in time and space. Monotonic properties, shown in 2.2, are used to derive a general methodology to calculate migration and food contamination, when all properties are governed by arbitrary statistics representing either variabilities (initial amounts, thicknesses, contact times, temperature) or uncertainty (diffusivities, chemical affinity). This lecture will enable you to evaluate the probability the contamination of food exceeds a prescribed value. As a result, the calculated distributions can be used for calculating exposure by taking into account (or not) the practices of the consumer and of the supply chain. - level advanced",
+  "topic": [
+    "risk",
+    "modeling",
+    "migration",
+    "uncertainty",
+    "probabilistic",
+    "overestimation"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "*",
+    "c",
+    "ds",
+    "fcm",
+    "fo",
+    "food",
+    "full",
+    "ms",
+    "probabilistic",
+    "purchases",
+    "unit",
+    "variable"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S2/U2.3/part1.html#/2"
+}

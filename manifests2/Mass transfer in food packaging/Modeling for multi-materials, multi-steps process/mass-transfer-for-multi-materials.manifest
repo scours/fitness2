@@ -1,0 +1,38 @@
+{
+  "idx": 43,
+  "title": " Migration modeling for multi-materials: theory and case-studies",
+  "level": "specialized",
+  "section": "S4",
+  "unit": "U4.3",
+  "difficultyLevel": "Advanced",
+  "part": "part1",
+  "author": "Olivier Vitrac",
+  "institution": "INRAE",
+  "abstract": "The results of monomaterials are generalized to multimaterials and multilayers enabling the simulation of the migration of adhesive, printing ink.. constituents.   -  level advanced",
+  "topic": [
+    "diffusion",
+    "migration",
+    "modeling",
+    "plastics",
+    "regulation",
+    "compliance",
+    "design",
+    "risk"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "bpa",
+    "chain",
+    "chained",
+    "contact",
+    "discourse",
+    "ec",
+    "environment",
+    "food",
+    "migration",
+    "nested",
+    "software",
+    "unit"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.3/part1.html#/2"
+}

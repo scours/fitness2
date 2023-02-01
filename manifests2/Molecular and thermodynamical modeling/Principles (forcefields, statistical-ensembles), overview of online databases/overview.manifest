@@ -1,0 +1,34 @@
+{
+  "idx": 50,
+  "title": "Principles of molecular and thermodynamical modeling: forcefields, statistical-ensembles, on-line databases",
+  "level": "specialized",
+  "section": "S6",
+  "unit": "U6.1",
+  "difficultyLevel": "Advanced",
+  "part": "part1",
+  "author": "Olivier Vitrac",
+  "institution": "INRAE",
+  "abstract": "Molecular and thermodynamical modeling can fill the gap of missing data for some polymers, specific molecules (non-intentionally added substances), conditions (migration at rubber state) etc. With time, calculations tend to be cheaper and faster than experiments, while offering similar reliability.   -   level advanced",
+  "topic": [
+    "molecular",
+    "diffusion",
+    "modeling",
+    "thermodynamics"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "block",
+    "costs",
+    "etot",
+    "example",
+    "model",
+    "molecular",
+    "move",
+    "p",
+    "physical",
+    "properties",
+    "statistical",
+    "unit"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S6/U6.1/part1.html#/2"
+}
