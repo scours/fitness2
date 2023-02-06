@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 23rd January 2023
+ * Last Modified: Monday, 6th February 2023
  * Modified By: Steward OUADI
  */
 
@@ -122,6 +122,49 @@ function createDropDownMenuElements() {
   console.log("showing main dropdown container end");
 }
 
+function getStarElements(difficultyLevel) {
+  const firstStar = document.createElement("i");
+  const secondStar = document.createElement("i");
+  const thirdStar = document.createElement("i");
+
+  const stars = [firstStar, secondStar, thirdStar];
+
+  if (difficultyLevel.toLowerCase() === "novice") {
+    firstStar.setAttribute("class", "fa fa-star star-color-green little-space");
+    secondStar.setAttribute(
+      "class",
+      "fa fa-star-o star-color-green little-space"
+    );
+    thirdStar.setAttribute(
+      "class",
+      "fa fa-star-o star-color-green little-space"
+    );
+  }
+
+  if (difficultyLevel.toLowerCase() === "intermediate") {
+    firstStar.setAttribute(
+      "class",
+      "fa fa-star star-color-yellow little-space"
+    );
+    secondStar.setAttribute(
+      "class",
+      "fa fa-star star-color-yellow little-space"
+    );
+    thirdStar.setAttribute(
+      "class",
+      "fa fa-star-o star-color-yellow little-space"
+    );
+  }
+
+  if (difficultyLevel.toLowerCase() === "advanced") {
+    for (let i = 0; i < stars.length; i++) {
+      stars[i].setAttribute("class", "fa fa-star star-color-red little-space");
+    }
+  }
+
+  return stars;
+}
+
 function createAElementForDropDownMenu(identifier) {
   const lecture = lecturesContainer.get(identifier);
   // We have a child, so we will insert it in the dropdown menu
@@ -158,6 +201,8 @@ function createAElementForDropDownMenu(identifier) {
     );
     difficultyLevelElement.appendChild(difficultyLevelNode);
 
+    addStarsToElement(lecture, difficultyLevelElement);
+
     // Topics
     const topicsElement = document.createElement("p");
     const topicsNode = document.createTextNode("Topics: " + lecture.topic);
@@ -191,7 +236,15 @@ function createAElementForDropDownMenu(identifier) {
     mainContent.innerHTML = mainDiv.outerHTML;
   });
 
+  addStarsToElement(lecture, aElement);
   return aElement;
+}
+
+function addStarsToElement(lecture, element) {
+  const stars = getStarElements(lecture.difficultyLevel);
+  for (i = 0; i < stars.length; i++) {
+    element.appendChild(stars[i]);
+  }
 }
 
 function addListenersToDropdownButtons() {
@@ -223,7 +276,7 @@ async function extractMetaData() {
   let basePath =
     "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
     pathSeparator;
-  // let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
+  // let basePath = "http://127.0.0.1:5501/manifests2" + pathSeparator;
 
   // let basePath = "manifests" + pathSeparator;
   let fileExtension = ".manifest";
