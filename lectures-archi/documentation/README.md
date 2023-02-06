@@ -12,7 +12,7 @@
 </head>
 <header>
     <a href="https://fitness.agroparistech.fr/" target="_blank">   
-  		<img src="images/logo/Fitness2_logo.PNG" alt="FitNESS logo"  class="center">
+  		<img src="img/logo/Fitness2_logo.PNG" alt="FitNESS logo"  class="center">
     </a>
 </header>
 
