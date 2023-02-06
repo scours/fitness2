@@ -1,0 +1,34 @@
+{
+  "idx": 6,
+  "title": "Plastic Packaging - Packaging materials and production processes (2/2)",
+  "level": "common",
+  "section": "S1",
+  "unit": "U1.2",
+  "difficultyLevel": "Novice",
+  "part": "part5",
+  "author": "Fátima Poças",
+  "institution": "UCP",
+  "abstract": "Packaging systems can be made from various materials: plastics (2/2)",
+  "topic": [
+    "materials",
+    "plastics",
+    "polymers",
+    "migration"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "adhesive",
+    "extrusion",
+    "material",
+    "mould",
+    "packaging",
+    "plastics",
+    "properties",
+    "screw",
+    "sheet",
+    "station",
+    "testing",
+    "tube"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part5.html#/2"
+}

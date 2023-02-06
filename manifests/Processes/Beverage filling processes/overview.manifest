@@ -1,0 +1,38 @@
+{
+  "idx": 63,
+  "title": "Beverage filling: principles, closing and labelling",
+  "level": "specialized",
+  "section": "S8",
+  "unit": "U8.5",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Horst-Christian Langowski",
+  "institution": "",
+  "abstract": "The bottles are filled at speeds of several thousand or even tens of thousands of bottles per hour. The bottles are eventually cleaned, filled, heat treated (if necessary), labeled, cartoned and palletized in parallel. Not only does the bottle have to be filled with the right volume, but also the overpressure and usually negative pressure requirements have to be met. The constraints of asepticity/sanitization, leak tightness and air/oxygen removal are discussed in this course.    -  level intermediate, advanced",
+  "topic": [
+    "filling",
+    "bottles",
+    "labels",
+    "aseptic",
+    "thermal",
+    "pressure",
+    "design",
+    "optimization"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "bottle",
+    "closure",
+    "differential",
+    "filling",
+    "flow",
+    "label",
+    "oxygen",
+    "packaging",
+    "partner",
+    "starwheel",
+    "tubeless",
+    "version"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.5/part1.html#/2"
+}

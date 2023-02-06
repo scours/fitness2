@@ -1,0 +1,37 @@
+{
+  "idx": 64,
+  "title": "Principles and overview of forming, filling, sealing, bag and thermoforming machines.",
+  "level": "specialized",
+  "section": "S8",
+  "unit": "U8.6",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Horst-Christian Langowski",
+  "institution": "TUM",
+  "abstract": "Ready-to-eat foods are packaged in a variety of different shapes and sizes to suit the use and minimize food waste: bowls, cups, blister packs, bags... or simply wrapped in film. The aseptic packaging allows the conservation over several days or even weeks without heat treatment. Like modified atmosphere filling, it has its own constraints. In particular, the volume of air/atmosphere that must be maintained under strong aseptic constraints without affecting production rates or the safety of the final product must be minimized.        -  level intermediate, advanced",
+  "topic": [
+    "forming",
+    "filling",
+    "sealing",
+    "food",
+    "thermoforming",
+    "modified atmosphere",
+    "aseptic"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "bag",
+    "drawoff",
+    "filling",
+    "film",
+    "force",
+    "forming",
+    "machines",
+    "packaging",
+    "roll",
+    "sealing",
+    "sidesealed",
+    "web"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.6/part1.html#/2"
+}

@@ -1,0 +1,37 @@
+{
+  "idx": 66,
+  "title": "Packaging Line and Process Optimisation",
+  "level": "specialized",
+  "section": "S8",
+  "unit": "U8.8",
+  "difficultyLevel": "Advanced",
+  "part": "part1",
+  "author": "Murielle Hayert",
+  "institution": "AgroParisTech",
+  "abstract": "A packaging line is a series system of the stages of the packaging process. For each stage, one or more (parallel) machines are used. These machines frequently have to deal with failures. The machines are put in a sequence and connected by conveyors, which can also serve as buffers. Which tools to optimize the packaging line and assure efficiency? Efficiency is the quality of being efficient, meaning that it produces the expected results without waste. Follow the lecture to learn mor    -   level advanced",
+  "topic": [
+    "process",
+    "filling",
+    "closing",
+    "bottles",
+    "optimization",
+    "machine",
+    "design"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "basic",
+    "bottles",
+    "buffer",
+    "efficiency",
+    "line",
+    "losses",
+    "machine",
+    "mer",
+    "opi",
+    "packaging",
+    "time",
+    "washer"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.8/part1.html#/1"
+}

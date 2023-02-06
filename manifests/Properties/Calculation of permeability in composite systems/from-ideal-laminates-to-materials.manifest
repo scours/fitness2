@@ -1,0 +1,34 @@
+{
+  "idx": 44,
+  "title": "Permeability in composites: from ideal laminates to materials with defects and dispersed particles.",
+  "level": "specialized",
+  "section": "S4",
+  "unit": "U4.4",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Oliver Miesbauer",
+  "institution": "TUM",
+  "abstract": "The results of diffusion/migration in multimaterial/multilayer are exemplified at steady state to derive effective permeabilities from composite systems.  -  level intermediate, advanced",
+  "topic": [
+    "permeation",
+    "diffusion",
+    "defects",
+    "holes",
+    "modeling"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "barrier",
+    "composite",
+    "diffusion",
+    "dim",
+    "materials",
+    "model",
+    "normal",
+    "phases",
+    "sorption",
+    "surface",
+    "time"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.4/part1.html#/2"
+}

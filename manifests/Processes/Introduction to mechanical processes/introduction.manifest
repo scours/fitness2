@@ -1,0 +1,36 @@
+{
+  "idx": 59,
+  "title": "Introduction into mechanical processes in packaging",
+  "level": "specialized",
+  "section": "S8",
+  "unit": "U8.1",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": "Horst-Christian Langowski",
+  "institution": "TUM",
+  "abstract": "The most important factors for a company: i) Product quality from the customer's point of view, ii) Compliance with legal requirements, iii) Profitability: costs vs. revenue. These factors are essentially determined by the packaging material and the packaging process. This lecture is an introduction to U8.2-U8.6.    - level basic, intermediate",
+  "topic": [
+    "forming",
+    "filling",
+    "sealing",
+    "process",
+    "design",
+    "optimization"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "data",
+    "din",
+    "example",
+    "factors",
+    "filling",
+    "first",
+    "german",
+    "mechanical",
+    "operations",
+    "packaging",
+    "packing",
+    "wrapping"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.1/part1.html#/2"
+}

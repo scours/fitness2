@@ -1,0 +1,37 @@
+{
+  "idx": 61,
+  "title": "Filling Processes and dosing principles, devices, how to assess their accuracy",
+  "level": "specialized",
+  "section": "S8",
+  "unit": "U8.3",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Horst-Christian Langowski",
+  "institution": "TUM",
+  "abstract": "How to fill small 25 g chip bags at a high rate and with a precise weight without breaking them. This is the challenge of filling packaging with solid food. The weight cannot be exact in relation to the printed value on the package, but it must absolutely be within precise tolerance values by legislation in place (European rules). This lecture presents the principles and their implementation for powdered dry food but also for ready meals that do not flow.    - level intermediate, advanced",
+  "topic": [
+    "dosing",
+    "food",
+    "weight",
+    "statistical",
+    "calibration",
+    "legal",
+    "optimization"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "dosing",
+    "feed",
+    "filling",
+    "flow",
+    "fpvo",
+    "gravimetric",
+    "ml",
+    "negative",
+    "piston",
+    "product",
+    "tu",
+    "weighing"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.3/part1.html#/2"
+}

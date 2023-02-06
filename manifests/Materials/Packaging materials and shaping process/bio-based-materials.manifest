@@ -1,0 +1,36 @@
+{
+  "idx": 9,
+  "title": "Bio-based materials - Packaging materials and production processes",
+  "level": "common",
+  "section": "S1",
+  "unit": "U1.2",
+  "difficultyLevel": "Novice",
+  "part": "part8",
+  "author": "Fátima Poças",
+  "institution": "UCP",
+  "abstract": "This lecture introduces bio-based materials for food packaging. Their consituents are fully or partly extracted from biomass:  polysaccharides and proteins. Materials made from biomass (renewable resources) are coined boisourced, but it does not mean that they are biodegradable. The standards applicable to these materials are briefly presented. ",
+  "topic": [
+    "materials",
+    "biosourced",
+    "renewable",
+    "proteins",
+    "polysaccharides",
+    "starch",
+    "cellulose"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "acid",
+    "bio",
+    "biobased",
+    "blends",
+    "cellulose",
+    "clays",
+    "determination",
+    "lignin",
+    "materials",
+    "moulded",
+    "polymers"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part8.html#/2"
+}

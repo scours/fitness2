@@ -1,0 +1,35 @@
+{
+  "idx": 60,
+  "title": "Plastics forming process applicable to food packaging lines.",
+  "level": "specialized",
+  "section": "S8",
+  "unit": "U8.2",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Horst-Christian Langowski",
+  "institution": "TUM",
+  "abstract": "This lecture describes plastics forming processes that can be directly integrated into a packaging line: thermoforming, cold forming, erecting.     - level intermediate",
+  "topic": [
+    "forming",
+    "thermoforming",
+    "erecting",
+    "line",
+    "process"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "example",
+    "forming",
+    "injection",
+    "methods",
+    "mould",
+    "moulding",
+    "partner",
+    "preforms",
+    "processes",
+    "sealing",
+    "stretch",
+    "temperature"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.2/part1.html#/2"
+}

@@ -1,0 +1,34 @@
+{
+  "idx": 18,
+  "title": "Introduction to preservation and packaging technologies",
+  "level": "common",
+  "section": "S2",
+  "unit": "U2.2",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": "Fátima Poças",
+  "institution": "UCP",
+  "abstract": "Introduction to preservation and packaging technologies: thermal processing, modified atmosphere, aseptic packaging.",
+  "topic": [
+    "process",
+    "aseptic",
+    "modified atmosphere",
+    "thermal"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "aseptic",
+    "barrier",
+    "dry",
+    "expansion",
+    "food",
+    "foods",
+    "frozen",
+    "heat",
+    "materials",
+    "packaging",
+    "pressure",
+    "temperature"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S2/U2.2/part1.html#/2"
+}
