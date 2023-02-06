@@ -1,0 +1,34 @@
+{
+  "idx": 51,
+  "title": "Microscopic theories of molecular diffusion in polymers",
+  "level": "specialized",
+  "section": "S6",
+  "unit": "U6.2",
+  "difficultyLevel": "Advanced",
+  "part": "part1",
+  "author": "Olivier Vitrac",
+  "institution": "INRAE",
+  "abstract": "Diffusion in solids are less described than in liquids and gases. Theories are scarce and the last results of research are presented.  -  level advanced",
+  "topic": [
+    "molecular",
+    "diffusion",
+    "modeling",
+    "thermodynamics"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "blocked",
+    "brownian",
+    "coupled",
+    "data",
+    "exp",
+    "food",
+    "main",
+    "ns",
+    "scaling",
+    "tg",
+    "unit",
+    "volume"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S6/U6.2/part1.html#/2"
+}
