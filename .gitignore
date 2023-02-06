@@ -1,3 +1,14 @@
+/*
+ * File: .gitignore
+ * Contract: EU contract 2022-FR01-KA220-HED-000023509
+ * Project: FitNESS 2 ERASMUS+
+ * File Created: Monday, 12th September 2022
+ * Author: Steward OUADI
+ * -----
+ * Last Modified: Monday, 6th February 2023
+ * Modified By: Steward OUADI
+ */
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -32,6 +43,7 @@ MANIFEST
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+
 
 # Installer logs
 pip-log.txt
@@ -194,14 +206,4 @@ Thumbs.db
 .history/*
 
 # vscode settings/*
- * File: .gitignore
- * Contract: EU contract 2022-FR01-KA220-HED-000023509
- * Project: FitNESS 2 ERASMUS+
- * File Created: Monday, 12th September 2022
- * Author: Steward OUADI
- * -----
- * Last Modified: Thursday, 3rd November 2022
- * Modified By: Steward OUADI
- */
-
 .vscode
