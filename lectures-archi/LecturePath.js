@@ -5,7 +5,7 @@
  * File Created: Wednesday, 21st September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 21st September 2022
+ * Last Modified: Monday, 13th February 2023
  * Modified By: Steward OUADI
  */
 
@@ -14,6 +14,7 @@ class LecturePath {
   name;
   isFile;
   children = new Map();
+  manifestPath;
   /**
    * Create a LecturePath object with the following properties
    * @param {*} parentName: the name of the parent of this lecture
@@ -21,14 +22,16 @@ class LecturePath {
    * @param {*} isFile: boolean value to indicate whether it is a file or not.
    *            It's either a file or a folder
    * @param {*} children: the children (LecturePath) of the current LecturePath
+   * @param {*} manifestPath: path to the manifest file
    */
-  constructor(parentName, name, isFile, children) {
+  constructor(parentName, name, isFile, children, manifestPath) {
     this.parentName = parentName;
     this.name = name;
     this.isFile = isFile;
     if (children !== undefined) {
       this.children.set(children.name, children);
     }
+    this.manifestPath = manifestPath;
   }
 
   /**

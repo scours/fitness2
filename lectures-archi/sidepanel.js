@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 6th February 2023
+ * Last Modified: Monday, 13th February 2023
  * Modified By: Steward OUADI
  */
 
@@ -101,19 +101,21 @@ function createDropDownMenuElements() {
 
           for (let [keyK, valueK] of valueJ.children) {
             // Third level
-            const aElementK = createAElementForDropDownMenu(keyK);
+            const aElementK = createAElementForDropDownMenu(
+              valueK.manifestPath
+            );
             console.log("displaying eElementK beg");
             console.log(aElementK);
             console.log("displaying eElementK end");
             dropdownContainerDivJ.appendChild(aElementK);
           }
         } else {
-          const aElementJ = createAElementForDropDownMenu(keyJ);
+          const aElementJ = createAElementForDropDownMenu(valueJ.manifestPath);
           dropdownContainerDivI.appendChild(aElementJ);
         }
       }
     } else {
-      const aElementI = createAElementForDropDownMenu(keyI);
+      const aElementI = createAElementForDropDownMenu(valueI.manifestPath);
       mainDropDownContainer.appendChild(aElementI);
     }
   }
@@ -163,6 +165,19 @@ function getStarElements(difficultyLevel) {
   }
 
   return stars;
+}
+
+function makeid(length) {
+  let result = "";
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
 }
 
 function createAElementForDropDownMenu(identifier) {
@@ -273,10 +288,10 @@ function addListenersToDropdownButtons() {
 /* Extract and store all lectures into a global array*/
 async function extractMetaData() {
   const pathSeparator = "/";
-  let basePath =
-    "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
-    pathSeparator;
-  // let basePath = "http://127.0.0.1:5501/manifests2" + pathSeparator;
+  // let basePath =
+  //   "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
+  //   pathSeparator;
+  let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
 
   // let basePath = "manifests" + pathSeparator;
   let fileExtension = ".manifest";
@@ -331,7 +346,8 @@ async function extractMetaData() {
                       splitPath[0],
                       splitPath[1],
                       true,
-                      undefined
+                      undefined,
+                      filePath
                     );
 
                     // Search in lecturesPaths if this folder already exists
@@ -345,7 +361,8 @@ async function extractMetaData() {
                         undefined,
                         splitPath[0],
                         false,
-                        fileLecturePath
+                        fileLecturePath,
+                        filePath
                       );
                       // And add it inside the lecturesPaths
                       lecturesPaths.set(splitPath[0], folderLecturePath);
@@ -360,7 +377,8 @@ async function extractMetaData() {
                       splitPath[1],
                       splitPath[2],
                       true,
-                      undefined
+                      undefined,
+                      filePath
                     );
 
                     let folder1LecturePath;
@@ -374,7 +392,8 @@ async function extractMetaData() {
                         undefined,
                         splitPath[0],
                         false,
-                        undefined
+                        undefined,
+                        filePath
                       );
                       // And add it inside the lecturesPaths
                       lecturesPaths.set(splitPath[0], folder1LecturePath);
@@ -395,7 +414,8 @@ async function extractMetaData() {
                         splitPath[0],
                         splitPath[1],
                         false,
-                        fileLecturePath
+                        fileLecturePath,
+                        filePath
                       );
 
                       // Add folder 2 as a child of folder 1
@@ -443,7 +463,7 @@ async function extractMetaData() {
                   }
 
                   // We will insert the lecture into a map
-                  lecturesContainer.set(lectureKey, tocElementLevel1);
+                  lecturesContainer.set(filePath, tocElementLevel1);
                 }
               } else {
                 // There is no separator, so this is just a level 1 file.
@@ -451,7 +471,8 @@ async function extractMetaData() {
                   undefined,
                   filePath,
                   true,
-                  undefined
+                  undefined,
+                  filePath
                 );
 
                 // Add this lecture inside the lecturesPaths

@@ -12,19 +12,19 @@
     "What is food packaging/Packaging materials and shaping process/wood-packaging",
     "What is food packaging/Basic legal framework/legal-framework-overview",
 
-    "Properties/Thermal, mechanical and barrier properties/thermal-properties",
-    "Properties/Thermal, mechanical and barrier properties/mechanical-properties",
-    "Properties/Thermal, mechanical and barrier properties/mass-transfer-properties",
-    "Properties/Thermal, mechanical and barrier properties/optical-properties",
-    "Properties/Thermal, mechanical and barrier properties/surface-properties",
+    "Packaging properties/Thermal, mechanical and barrier properties/thermal-properties",
+    "Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties",
+    "Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties",
+    "Packaging properties/Thermal, mechanical and barrier properties/optical-properties",
+    "Packaging properties/Thermal, mechanical and barrier properties/surface-properties",
     "XXX/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies",
-    "Properties/Chemical and physical stability of packaging materials/food-packaging-interactions",
-    "Properties/Chemical and physical stability of packaging materials/strategies-to-reduce-food-packaging-interactions",
-    "Properties/Mechanical design of packaging/the-basics-of-mechanical-engineering-for-packaging-designer",
-    "Properties/Principles of mass transfer/principles-part-1",
-    "Properties/Principles of mass transfer/principles-part-2",
-    "Properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials",
-    "Properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale",
+    "Packaging properties/Chemical and physical stability of packaging materials/food-packaging-interactions",
+    "Packaging properties/Chemical and physical stability of packaging materials/strategies-to-reduce-food-packaging-interactions",
+    "Packaging properties/Mechanical design of packaging/the-basics-of-mechanical-engineering-for-packaging-designer",
+    "Packaging properties/Principles of mass transfer/principles-part-1",
+    "Packaging properties/Principles of mass transfer/principles-part-2",
+    "Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials",
+    "Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale",
     
 
 
@@ -92,6 +92,6 @@
  * File Created: Thursday, 2nd February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 6th February 2023
+ * Last Modified: Monday, 13th February 2023
  * Modified By: Steward OUADI
  */
