@@ -1,0 +1,35 @@
+{
+  "idx": 555809,
+  "title": "Risk assessment tools",
+  "level": "specialized",
+  "section": "S1",
+  "unit": "U1.3",
+  "difficultyLevel": "Intermediate",
+  "part": "",
+  "author": "Marie-Christine Chagnon",
+  "institution": "UB",
+  "abstract": "The Unit called “Risk assessment pragmatic tools, FCM specificities and NIAS issues” introduces the Threshold of Toxicological Concern (TTC) approach as a useful tool to predict the risk assessment of a substance at low level in food when toxicological data are missing. Then, the risk assessment of Food Contact Materials (FCM) is also discussed. Finally, since NIAS are the major source of alerts regards to food contact materials, the last section is dedicated to the risk assessment of Non-Intentionally Added Substance (NIAS) and strategies to help industries to manage the risk linked to NIAS. Regards to FCM, to going further see units : basic legal framework and unit : EU, US and others regulations.",
+  "topic": [
+    "hazard assessment",
+    "hazard characterization",
+    "food toxicology",
+    "predictive tools",
+    "risk assessment agencies",
+    "migration",
+    "exposure assessment",
+    "risk characterization",
+    "in silico",
+    "in vitro",
+    "in vivo studies",
+    "TTC"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Non-Intentionally Added Substance (NIAS)",
+    "Food Contact Material risk assessment (FCM)",
+    "Threshold of Toxicological Concern (TTC)",
+    "Estimated Daily Intake (EDI)",
+    "risk assessment of unknown NIAS and cocktail effects"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/Institut-Agro-Dijon/risk-assessment-tools.html#/"
+}

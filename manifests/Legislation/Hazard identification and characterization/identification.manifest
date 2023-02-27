@@ -1,0 +1,40 @@
+{
+  "idx": 34,
+  "title": "Identification",
+  "level": "specialized",
+  "section": "S1",
+  "unit": "U1.1",
+  "difficultyLevel": "Intermediate",
+  "part": "part2",
+  "author": "Marie-Christine Chagnon",
+  "institution": "UB",
+  "abstract": "Firstly, the hazard identification and characterization lecture introduce the context of the food safety regarding food chemicals. The specific Mode of Action of carcinogenic substances (genotoxic or not) is particularly addressed with special tools to assess the risk due to DNA reactive substances. New emerging risk such as endocrine disrupters is introduced as FCM substances may be concerned (e.g. BPA). The four pillars of chemical RA are described in detail. Each step of RA is specific and permit to generate precious information.",
+  "topic": [
+    "hazard",
+    "risk",
+    "toxicology",
+    "endocrine",
+    "prediction"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "chemicals",
+    "examples",
+    "hazard",
+    "human",
+    "phase",
+    "properties",
+    "qsar",
+    "relationship",
+    "smile",
+    "structural",
+    "studies",
+    "vitro",
+    "food safety",
+    "chemical hazard",
+    "carcinogenic mode of action",
+    "toxicokinetic",
+    "toxicological reference value (TRV)"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/Institut-Agro-Dijon/Hazard-id-char-part-2.html#/"
+}

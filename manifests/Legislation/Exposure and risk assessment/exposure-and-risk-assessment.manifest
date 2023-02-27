@@ -1,0 +1,33 @@
+{
+  "idx": 555808,
+  "title": "Exposure and risk assessment",
+  "level": "specialized",
+  "section": "S1",
+  "unit": "U1.2",
+  "difficultyLevel": "Intermediate",
+  "part": "",
+  "author": "Marie-Christine Chagnon",
+  "institution": "UB",
+  "abstract": "Then, in the third step named “Exposure assessment” the human exposure is determined. It consists to study foodstuff chemical contamination and foodstuff consumption. Regarding to FCM, the level of migration will determine the consumer exposure. To going further see the units on migration modelling in monomaterials (Unit 4.2 Specialized) and migration modelling for multimaterials, multistep process, reusable materials (Unit4.3 Specialized).'Risk characterization' is the final step of the risk assessment which will define if there is a safety concern or not for the consumer exposed to the substance of interest. Conclusions and scientific opinions made by RA agencies, such as EFSA, are useful for risk managers to reduce the consumer exposition if necessary and to write/amend new regulations. ",
+  "topic": [
+    "hazard assessment",
+    "hazard characterization",
+    "food toxicology",
+    "predictive tools",
+    "risk assessment agencies",
+    "migration",
+    "exposure assessment",
+    "risk characterization",
+    "in silico",
+    "in vitro",
+    "in vivo studies",
+    "TTC"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "exposure assessment",
+    "Total Diet Study (TDS)",
+    "risk characterization"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/Institut-Agro-Dijon/exposure-ass-risk-char.html#/"
+}

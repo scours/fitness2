@@ -1,0 +1,39 @@
+{
+  "idx": 33,
+  "title": "Introduction",
+  "level": "specialized",
+  "section": "S1",
+  "unit": "U1.1",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Marie-Christine Chagnon",
+  "institution": "UB",
+  "abstract": "Food safety is essential and a prerequisite step in any innovation strategy. In Europe, Risk Assessment (RA) is an independent scientific process and it is the foundation upon which the risk analysis is built for food safety.The objectives of these lectures: hazard identification and characterization (Unit 1.1 Specialized), the exposure assessment and the risk characterization (Unit 1.2 Specialized) are to get specialized training in food safety and risk assessment. As foodstuffs are wrapped with packaging, the risk linked to Intentionally Added Substances (IAS), used for Food Contact Materials (FCM), must be assessed as they can be released into the food. ",
+  "topic": [
+    "hazard",
+    "risk",
+    "toxicology",
+    "endocrine"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "bisethylhexyl",
+    "contact",
+    "endocrine",
+    "food",
+    "hazard",
+    "i",
+    "migration",
+    "nonintentionally",
+    "paradigm",
+    "risk",
+    "substances",
+    "suspected", 
+    "food safety",
+    "chemical hazard",
+    "carcinogenic mode of action",
+    "toxicokinetic",
+    "toxicological reference value (TRV)"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/Institut-Agro-Dijon/Hazard-id-char-part-1.html#/"
+}
