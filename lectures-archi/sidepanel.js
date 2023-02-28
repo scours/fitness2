@@ -22,9 +22,9 @@ const lecturesPaths = new Map();
  */
 function contentToDisplayChildrenArrayEmpty(tocElement) {
   // Children array is empty, so we will just display Unit title
-  console.log("children is empty");
-  console.log(tocElement.title);
-  console.log(tocElement.userProvidedURLForLecture);
+  // console.log("children is empty");
+  // console.log(tocElement.title);
+  // console.log(tocElement.userProvidedURLForLecture);
   let groupListLiElement = document.createElement("li");
   let groupListAElement = document.createElement("a");
   groupListAElement.href = tocElement.userProvidedURLForLecture; // Get course URL
@@ -56,15 +56,6 @@ function getDropdownButtonAndContainer(dropdownButtonName, id) {
   dropdownContainerDiv.id = "dropdown-container-" + id;
 
   return { dropdownButton, dropdownContainerDiv };
-
-  //   <button class="dropdown-btn">Dropdown
-  //   <i class="fa fa-caret-down"></i>
-  // </button>
-  // <div class="dropdown-container">
-  //   <a href="#">Link 1</a>
-  //   <a href="#">Link 2</a>
-  //   <a href="#">Link 3</a>
-  // </div>
 }
 
 function createDropDownMenuElements() {
@@ -82,10 +73,10 @@ function createDropDownMenuElements() {
         dropDownButtonAndContainerI.dropdownContainerDiv;
       mainDropDownContainer.appendChild(dropdownButtonI);
       mainDropDownContainer.appendChild(dropdownContainerDivI);
-      console.log("we will loop through valueI.children");
+      // console.log("we will loop through valueI.children");
       for (let [keyJ, valueJ] of valueI.children) {
         if (valueJ.children.size > 0) {
-          console.log("we will loop through valueJ.children");
+          // console.log("we will loop through valueJ.children");
           // Second level
           // If there are children
           const dropDownButtonAndContainerJ = getDropdownButtonAndContainer(
@@ -104,9 +95,9 @@ function createDropDownMenuElements() {
             const aElementK = createAElementForDropDownMenu(
               valueK.manifestPath
             );
-            console.log("displaying eElementK beg");
-            console.log(aElementK);
-            console.log("displaying eElementK end");
+            // console.log("displaying eElementK beg");
+            // console.log(aElementK);
+            // console.log("displaying eElementK end");
             dropdownContainerDivJ.appendChild(aElementK);
           }
         } else {
@@ -119,9 +110,9 @@ function createDropDownMenuElements() {
       mainDropDownContainer.appendChild(aElementI);
     }
   }
-  console.log("showing main dropdown container beg");
-  console.log(mainDropDownContainer.outerHTML);
-  console.log("showing main dropdown container end");
+  // console.log("showing main dropdown container beg");
+  // console.log(mainDropDownContainer.outerHTML);
+  // console.log("showing main dropdown container end");
 }
 
 function getStarElements(difficultyLevel) {
@@ -190,14 +181,14 @@ function createAElementForDropDownMenu(identifier) {
   aElement.id = identifier;
   aElement.setAttribute("class", "dropdown-container-class");
   aElement.addEventListener("click", (event) => {
-    console.log("lecture from new drop down menu");
-    console.log(event);
-    console.log(identifier);
+    // console.log("lecture from new drop down menu");
+    // console.log(event);
+    // console.log(identifier);
     const targetId = identifier;
-    console.log(targetId);
+    // console.log(targetId);
     const y = 0;
-    console.log("showing y");
-    console.log(y);
+    // console.log("showing y");
+    // console.log(y);
     // We will modify main view to display the content of the selected lecture
 
     // Let's get the lecture by using its id in the map
@@ -272,8 +263,8 @@ function addListenersToDropdownButtons() {
 
   for (i = 0; i < dropdown.length; i++) {
     dropdown[i].addEventListener("click", function () {
-      console.log("clicked on a dropdown subfolder");
-      console.log(this);
+      // console.log("clicked on a dropdown subfolder");
+      // console.log(this);
       this.classList.toggle("active");
       var dropdownContent = this.nextElementSibling;
       if (dropdownContent.style.display === "block") {
@@ -288,10 +279,10 @@ function addListenersToDropdownButtons() {
 /* Extract and store all lectures into a global array*/
 async function extractMetaData() {
   const pathSeparator = "/";
-  // let basePath =
-  //   "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
-  //   pathSeparator;
-  let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
+  let basePath =
+    "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
+    pathSeparator;
+  // let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
 
   // let basePath = "manifests" + pathSeparator;
   let fileExtension = ".manifest";
@@ -304,11 +295,11 @@ async function extractMetaData() {
   let rootFileName = basePath + "root" + fileExtension + textToForceRefresh;
 
   const res = await fetch(rootFileName); // fetch method will fetch JSON file
-  console.log(res);
+  // console.log(res);
   if (res.ok) {
     // tocElement, is table of content element, its an object that contains lectures information
     let tocElement = await res.json();
-    console.log(tocElement);
+    // console.log(tocElement);
 
     if (tocElement !== "undefined") {
       if (tocElement.children.length > 0) {
@@ -321,11 +312,11 @@ async function extractMetaData() {
             basePath + filePath + fileExtension
           );
 
-          console.log(level1ChildRes);
+          // console.log(level1ChildRes);
           if (level1ChildRes.ok) {
             // tocElementLevel1, is table of content element, its an object that contains lectures information
             let tocElementLevel1 = await level1ChildRes.json();
-            console.log(tocElementLevel1);
+            // console.log(tocElementLevel1);
 
             if (tocElementLevel1 !== "undefined") {
               const splitPath = filePath.split(pathSeparator);
@@ -482,32 +473,29 @@ async function extractMetaData() {
               }
             }
           } else {
-            console.log("Can't read level 1 file");
+            // console.log("Can't read level 1 file");
           }
         }
-        console.log("lecturesPaths beg");
-        console.log(lecturesPaths);
-        console.log("lecturesPaths end");
+        // console.log("lecturesPaths beg");
+        // console.log(lecturesPaths);
+        // console.log("lecturesPaths end");
         createDropDownMenuElements();
       } else {
         // Children array is empty, so we will just display title
-        console.log("root level, children is empty");
-        console.log(tocElement.title);
-        console.log(tocElement.userProvidedURLForLecture);
+        // console.log("root level, children is empty");
+        // console.log(tocElement.title);
+        // console.log(tocElement.userProvidedURLForLecture);
         englobingNavList.appendChild(
           contentToDisplayChildrenArrayEmpty(tocElement)
         );
       }
     }
   } else {
-    console.log("Can't read root file");
+    // console.log("Can't read root file");
   }
   addListenersToDropdownButtons();
 }
 extractMetaData();
-/*let myLectPath = new LecturePath("parentName", "Name", false, "children");
-console.log(myLectPath);
-console.log(myLectPath.parentName);*/
 
 function loadFile(filePath) {
   // Create a <script> tag, set its source
@@ -532,20 +520,6 @@ function loadFile(filePath) {
   document.getElementsByTagName("head")[0].appendChild(scriptTag);
 }
 
-// function openNav() {
-//   document.getElementById("sidebar-menu").style.width = "60%";
-//   document.getElementById("main-id").style.marginLeft = "60%";
-
-//   document.getElementById("open-menu-button").style.visibility = "hidden";
-// }
-
-// function closeNav() {
-//   document.getElementById("sidebar-menu").style.width = "0";
-//   document.getElementById("main-id").style.marginLeft = "0";
-
-//   document.getElementById("open-menu-button").style.visibility = "visible";
-// }
-
 function openNav() {
   document.getElementById("sidebar-menu").style.width = "60%";
   document.getElementById("main-id").style.marginLeft = "60%";
@@ -559,22 +533,3 @@ function closeNav() {
   // document.getElementById("open-menu-button").classList.toggle("hidden");
   document.getElementById("open-menu-button").style.visibility = "visible";
 }
-
-// window.onload = function () {
-//   document
-//     .getElementById("open-menu-button")
-//     .addEventListener("click", openNav);
-//   document.getElementById("sidebar-menu").addEventListener("click", closeNav);
-// };
-
-// function openNav() {
-//   document.getElementById("sidebar-menu").style.width = "60%";
-//   document.getElementById("reveal-global-div").style.marginLeft = "60%";
-//   document.getElementById("open-menu-button").style.visibility = "hidden";
-// }
-
-// function closeNav() {
-//   document.getElementById("sidebar-menu").style.width = "0";
-//   document.getElementById("reveal-global-div").style.marginLeft = "0";
-//   document.getElementById("open-menu-button").style.visibility = "visible";
-// }
