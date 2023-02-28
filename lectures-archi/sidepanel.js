@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 13th February 2023
+ * Last Modified: Tuesday, 28th February 2023
  * Modified By: Steward OUADI
  */
 
@@ -288,10 +288,10 @@ function addListenersToDropdownButtons() {
 /* Extract and store all lectures into a global array*/
 async function extractMetaData() {
   const pathSeparator = "/";
-  // let basePath =
-  //   "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
-  //   pathSeparator;
-  let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
+  let basePath =
+    "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
+    pathSeparator;
+  // let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
 
   // let basePath = "manifests" + pathSeparator;
   let fileExtension = ".manifest";

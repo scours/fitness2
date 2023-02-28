@@ -1,0 +1,37 @@
+{
+  "idx": 49,
+  "title": "FMECA approaches (application to mass transfer problems)",
+  "level": "specialized",
+  "section": "S5",
+  "unit": "U5.3",
+  "difficultyLevel": "Advanced",
+  "part": "part1",
+  "author": "Olivier Vitrac",
+  "institution": "INRAE",
+  "abstract": "Computer-aided approaches facilitate the deployment of FMECA approaches. The lecture illustrates various situations calculated with the open-source software FMECAengine identification of critical steps, components, substances   -   level advanced",
+  "topic": [
+    "design",
+    "prevention",
+    "safe-by-design",
+    "migration",
+    "risk",
+    "safety",
+    "modeling"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "benevolent",
+    "beverage",
+    "bulky",
+    "criticality",
+    "four",
+    "materials",
+    "max",
+    "migration",
+    "optimal",
+    "severity",
+    "unit",
+    "validation"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S5/U5.3/part1.html#/2"
+}

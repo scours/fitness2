@@ -1,0 +1,36 @@
+{
+  "idx": 27,
+  "title": "Part 1",
+  "level": "common",
+  "section": "S4",
+  "unit": "U4.1",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Maria José Fabra",
+  "institution": "CSIC",
+  "abstract": "Biobased and biodegradable materials: from polymers to bioplastics",
+  "topic": [
+    "biodegradable",
+    "renewable",
+    "environment",
+    "starch",
+    "polysaccharides",
+    "proteins"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "*",
+    "biobased",
+    "biodegradable",
+    "biodegradation",
+    "bioplastics",
+    "low",
+    "main",
+    "petroleumbased",
+    "plastic",
+    "polymers",
+    "starch",
+    "unit"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S4/U4.1/part1.html#/2"
+}

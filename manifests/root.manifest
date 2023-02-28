@@ -41,6 +41,29 @@
     "Processes/Hygienic design and microbiological assesment of packaging lines/overview",
 
     "Shelf-life/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies",
+    "Shelf-life/Common physical chemical factors affecting food stability/overview",
+    "Shelf-life/Food packaging and shelf life/shelf-life-definitions",
+    "Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life",
+    "Shelf-life/Food packaging and shelf life/study-shelf-life",
+    "Shelf-life/Food packaging and shelf life/predict-shelf-life",
+
+
+    "Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging",
+    "Environmental pollution/Methodologies used in life cycle assessment/life-cycle-assessment",
+    "Environmental pollution/Tools for life cycle impact assessment/overview",
+    "Environmental pollution/Biodegradation and microplastics/overview",
+
+
+    "Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics",
+    "Innovations/Biobased and biodegradable materials/cellulose-derivates",
+    "Innovations/Active packaging/overview",
+    "Innovations/Active packaging/humidity-control",
+    "Innovations/Smart packaging/overview",
+    "Innovations/Nanotechnology strategies/definitions",
+
+    "Recoverability/Environmental impact of plastics and recycling/overview",
+    "Recoverability/Safety assessment of recycling processes/overview",
+
     "Legislation/EU, US others regulations/regulatory-framework",
     "Legislation/GMP and quality assurance standards/safety-and-quality-management-system",
     "Legislation/Hazard identification and characterization/introduction",
@@ -49,8 +72,22 @@
     "Legislation/Exposure and risk assessment/exposure-and-risk-assessment",
     "Legislation/Risk assessment tools/risk-assessment-tools",
 
-    "Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging",
-    "Environmental pollution/Methodologies used in life cycle assessment/life-cycle-assessment"
+    "Modeling tools/Migration modeling for monomaterials/mass-transfer-modeling",
+    "Modeling tools/Modeling for multi-materials, multi-steps process/mass-transfer-for-multi-materials",
+    "Modeling tools/Introduction to decision theory and risk management/introduction",
+    "Modeling tools/Managing uncertainty by intervals and worst-case scenarios/monotonic-calculations",
+    "Modeling tools/Probabilistic approaches and Bayesian approaches/descriptions",
+    "Modeling tools/History and principles of FMEA-FMECA/fmeca-approaches",
+    "Modeling tools/Diagram-based approaches/overview",
+    "Modeling tools/Computer-aided approaches/overview",
+    "Modeling tools/Principles (forcefields, statistical-ensembles), overview of online databases/overview",
+    "Modeling tools/Microscopic theories of transport coefficients and free-energies/overview",
+    "Modeling tools/Calculations using fluctuation theorems/overview"
+
+
+
+
+
 
 
 

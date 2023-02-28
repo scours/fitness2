@@ -1,0 +1,27 @@
+{
+  "idx": 23,
+  "title": "Definitions",
+  "level": "common",
+  "section": "S3",
+  "unit": "U3.2",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Thomas Karbowiak",
+  "institution": "Institut-Agro-Dijon",
+  "abstract": "Shelf-life is a concept covering many facets in food (please read §3.1 before)  - level intermediate",
+  "topic": [
+    "shelf-life",
+    "quality",
+    "consumer",
+    "acceptability",
+    "law"
+  ],
+  "license": "BY-NC-SA",
+  "keywords": [
+    "acceptability limit",
+    "quality",
+    "primary shelf life",
+    "secondary shelf life"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part1.html#/2"
+}

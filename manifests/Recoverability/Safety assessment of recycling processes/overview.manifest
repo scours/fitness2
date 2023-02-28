@@ -1,0 +1,35 @@
+{
+  "idx": 58,
+  "title": "Overview",
+  "level": "specialized",
+  "section": "S7",
+  "unit": "U7.5",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Fátima Poças",
+  "institution": "UCP",
+  "abstract": "The directive (EU) 2019/904 requires the phase out of single-use plastics, the generalization of recycling and the reuse of materials in contact with food. The recycling of materials for food contact is authorized in Europe and the USA but under certain conditions. These include the control of deposits, cleaning of polymers, mechanical or chemical recycling, and the implementation of good industrial practices within the framework of regulation (EU) 2023/2006. For health safety reasons, only mechanical recycling of PET is now widespread and complies with clearly defended standards (regulation (EU) 282/2008). This course explains the conditions for the evaluation of recycled PET (rPET): validation of a recycling process and of the utilization of the recycled material.    Level intermediate, advanced",
+  "topic": [
+    "recycling",
+    "process",
+    "pet",
+    "bottles",
+    "risk"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "chemicals",
+    "contamination",
+    "decontamination",
+    "examples",
+    "input",
+    "key",
+    "pet",
+    "recycling",
+    "reg",
+    "steps",
+    "technology",
+    "unit"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.5/part1.html#/2"
+}

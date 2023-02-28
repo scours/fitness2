@@ -1,0 +1,27 @@
+{
+  "idx": 26,
+  "title": "How to calculate/predict shelf-life",
+  "level": "common",
+  "section": "S3",
+  "unit": "U3.2",
+  "difficultyLevel": "Intermediate",
+  "part": "part4",
+  "author": "Thomas Karbowiak",
+  "institution": "Institut-Agro-Dijon",
+  "abstract": "The quality of most foods and beverages decreases with time. The length of time between processing and consumption, during which the product maintains an “acceptable” quality, is named shelf life.\nThe unit is divided into four sections. In the first section shelf life definitions and related regulation aspects are discussed. The second section is focused on factors influencing the shelf life, such as product characteristics, food packaging and environment. The third section introduces accelerated shelf life testing. The last section gives the tools for the prediction of shelf life of packaged foods.",
+  "topic": [
+    "shelf-life",
+    "quality",
+    "prediction",
+    "degradation",
+    "microbiological",
+    "chemical"
+  ],
+  "license": "BY-NC-SA",
+  "keywords": [
+    "microbiological degradation",
+    "chemical degradation",
+    "migration"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part4.html#/2"
+}

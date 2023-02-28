@@ -1,0 +1,34 @@
+{
+  "idx": 22,
+  "title": "Overview physical and chemical processes impacting the shelf-life of food-products (processed or not)",
+  "level": "common",
+  "section": "S3",
+  "unit": "U3.1",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Horst-Christian Langowski",
+  "institution": "TUM",
+  "abstract": "Effects of water, oxygen, light, flavor losses, fresh food products, functionality requirements (please read §2.4 before) - level intermediate",
+  "topic": [
+    "shelf-life",
+    "humidity",
+    "oxygen",
+    "permeation"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "aw",
+    "conditions",
+    "examples",
+    "light",
+    "mechanisms",
+    "packaging",
+    "product",
+    "products",
+    "reaction",
+    "sorption",
+    "transport",
+    "water"
+  ],
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S3/U3.1/part1.html#/2"
+}
