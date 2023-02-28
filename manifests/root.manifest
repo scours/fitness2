@@ -1,44 +1,47 @@
 {
   "children": [
-    "Materials/Panorama of food packaging/panorama-of-food-packaging-part-1",
-    "Materials/Packaging materials and shaping process/glass-packaging-part-1",
-    "Materials/Packaging materials and shaping process/glass-packaging-part-2",
-    "Materials/Packaging materials and shaping process/metal-packaging",
-    "Materials/Packaging materials and shaping process/plastic-packaging-part-1",
-    "Materials/Packaging materials and shaping process/plastic-packaging-part-2",
-    "Materials/Packaging materials and shaping process/paper-and-paperboard-part-1",
-    "Materials/Packaging materials and shaping process/paper-and-paperboard-part-2",
-    "Materials/Packaging materials and shaping process/bio-based-materials",
-    "Materials/Packaging materials and shaping process/cork-as-food-packaging",
-    "Materials/Packaging materials and shaping process/wood-packaging",
-    "Materials/Basic legal framework/legal-framework-overview",
+    "Packaging materials/Introduction/panorama-of-food-packaging-part-1",
+    "Packaging materials/Packaging materials and shaping process/glass-packaging-part-1",
+    "Packaging materials/Packaging materials and shaping process/glass-packaging-part-2",
+    "Packaging materials/Packaging materials and shaping process/metal-packaging",
+    "Packaging materials/Packaging materials and shaping process/plastic-packaging-part-1",
+    "Packaging materials/Packaging materials and shaping process/plastic-packaging-part-2",
+    "Packaging materials/Packaging materials and shaping process/paper-and-paperboard-part-1",
+    "Packaging materials/Packaging materials and shaping process/paper-and-paperboard-part-2",
+    "Packaging materials/Packaging materials and shaping process/bio-based-materials",
+    "Packaging materials/Packaging materials and shaping process/cork-as-food-packaging",
+    "Packaging materials/Packaging materials and shaping process/wood-packaging",
+    "Packaging materials/Basic legal framework/legal-framework-overview",
+
+    "Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer",
 
     "Packaging properties/Thermal, mechanical and barrier properties/thermal-properties",
     "Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties",
     "Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties",
     "Packaging properties/Thermal, mechanical and barrier properties/optical-properties",
     "Packaging properties/Thermal, mechanical and barrier properties/surface-properties",
-    "Packaging properties/Chemical and physical stability of packaging materials/food-packaging-interactions",
-    "Packaging properties/Chemical and physical stability of packaging materials/strategies-to-reduce-food-packaging-interactions",
-    "Packaging properties/Mechanical design of packaging/the-basics-of-mechanical-engineering-for-packaging-designer",
+    "Packaging properties/Chemical and physical/food-packaging-interactions",
+    "Packaging properties/Chemical and physical/strategies-to-reduce-food-packaging-interactions", 
     "Packaging properties/Principles of mass transfer/principles-part-1",
     "Packaging properties/Principles of mass transfer/principles-part-2",
     "Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials",
     "Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale",
     "Packaging properties/Micro holes and leaks in packaging/measurement-and-modeling",
 
-    "Processes/Introduction to mechanical processes/introduction",
-    "Processes/Forming processes/overview",
-    "Processes/Transport and forming of films and sheets/overview",
-    "Processes/Filling processes/overview",
-    "Processes/Sealing processes/overview",
-    "Processes/Beverage filling processes/overview",
-    "Processes/Forming, filling and sealing machines/overview",
-    "Processes/Surface treatments and coatings/overview",
-    "Processes/Printing and labelling processes/overview",
-    "Processes/Digitization of packaging processes/overview",
-    "Processes/Packaging line optimization/overview",
-    "Processes/Hygienic design and microbiological assesment of packaging lines/overview",
+
+
+    "Packaging processes/introduction-to-mechanical-processes",
+    "Packaging processes/Forming/plastic-forming",
+    "Packaging processes/Forming/films-and-sheets",
+    "Packaging processes/Filling and dosing/principles",
+    "Packaging processes/Filling and dosing/forming-filling-sealing",
+    "Packaging processes/Filling and dosing/beverage-filling",
+    "Packaging processes/Sealing/overview",
+    "Packaging processes/surface-treatments-and-coatings",
+    "Packaging processes/Printing and labelling processes/overview",
+    "Packaging processes/Digitization of packaging processes/overview",
+    "Packaging processes/Packaging line/optimization",
+    "Packaging processes/Packaging line/hygienic-design",
 
     "Shelf-life/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies",
     "Shelf-life/Common physical chemical factors affecting food stability/overview",
@@ -84,18 +87,7 @@
     "Modeling tools/Microscopic theories of transport coefficients and free-energies/overview",
     "Modeling tools/Calculations using fluctuation theorems/overview"
 
-
-
-
-
-
-
-
-
-
-
   ]
 }
-
 
 

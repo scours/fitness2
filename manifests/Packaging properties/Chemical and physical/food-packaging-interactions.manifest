@@ -1,11 +1,11 @@
 {
-  "idx": 20,
-  "title": "Chemical and physical stability of packaging materials: strategies to reduce food-packaging interactions and to improve packaging inertia",
+  "idx": 19,
+  "title": "Part 1",
   "level": "common",
   "section": "S2",
   "unit": "U2.3",
   "difficultyLevel": "Intermediate",
-  "part": "part2",
+  "part": "part1",
   "author": "Mario Scetar",
   "institution": "UNIZG",
   "abstract": "Chemical and physical stability of packaging materials (please read §2.1 and §2.2 before)  - level intermediate",
@@ -19,18 +19,18 @@
   ],
   "license": "BY-SA-ND",
   "keywords": [
-    "contact",
+    "aroma",
     "corrosion",
     "food",
-    "foodstuff",
-    "lacquer",
+    "foodpackage",
+    "light",
     "material",
-    "migration",
-    "oc",
+    "packaged",
     "packaging",
-    "prevent",
-    "problems",
-    "tin"
+    "product",
+    "protection",
+    "sulphide",
+    "uv"
   ],
-  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S2/U2.3/part2.html#/2"
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S2/U2.3/part1.html#/2"
 }

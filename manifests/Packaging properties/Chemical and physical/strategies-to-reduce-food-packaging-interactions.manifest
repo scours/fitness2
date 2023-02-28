@@ -1,11 +1,11 @@
 {
-  "idx": 19,
-  "title": "Chemical and physical stability of packaging materials: food-packaging interactions: permeation, sorption/desorption, migration ",
+  "idx": 20,
+  "title": "Part 2",
   "level": "common",
   "section": "S2",
   "unit": "U2.3",
   "difficultyLevel": "Intermediate",
-  "part": "part1",
+  "part": "part2",
   "author": "Mario Scetar",
   "institution": "UNIZG",
   "abstract": "Chemical and physical stability of packaging materials (please read §2.1 and §2.2 before)  - level intermediate",
@@ -19,18 +19,18 @@
   ],
   "license": "BY-SA-ND",
   "keywords": [
-    "aroma",
+    "contact",
     "corrosion",
     "food",
-    "foodpackage",
-    "light",
+    "foodstuff",
+    "lacquer",
     "material",
-    "packaged",
+    "migration",
+    "oc",
     "packaging",
-    "product",
-    "protection",
-    "sulphide",
-    "uv"
+    "prevent",
+    "problems",
+    "tin"
   ],
-  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S2/U2.3/part1.html#/2"
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S2/U2.3/part2.html#/2"
 }
