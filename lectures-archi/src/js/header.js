@@ -5,15 +5,14 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 21st February 2023
+ * Last Modified: Thursday, 2nd March 2023
  * Modified By: Steward OUADI
  */
 class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <div class="topnav" id="topNavId1">
-        <a href="/" class="active">Home</a>
-        <a href="#about">About</a>
+        <a href="/" >Home</a>
         <a href="javascript:void(0);" class="icon" onclick="topNavOnClick()">
             <i class="fa fa-bars"></i>
         </a>
