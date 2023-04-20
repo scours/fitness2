@@ -7,7 +7,7 @@ author:
 - contacts steward.ouadi@agroparistech.fr, olivier.vitrac@agroparistech.fr
 - University of Paris-Saclay, INRAE, AgroParisTech, UMR 0782 SayFood, Massy, France
 - EU Erasmus+ Programme (contracts 2017-1-FR01-KA202-037441, 2022-FR01-KA220-HED-000023509)
-date: Monday, March 6, 2023
+date: Tuesday, March 7, 2023
 
 ---
 
