@@ -1,0 +1,278 @@
+<!--
+File: sidepanel_new_way.html
+Contract: EU contract 2022-FR01-KA220-HED-000023509
+Project: FitNESS 2 ERASMUS+
+File Created: Tuesday, 6th September 2022
+Author: Steward OUADI
+-----
+Last Modified: Thursday, 20th April 2023
+Modified By: Steward OUADI
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="src/css/font-awesome-4-7-0.min.css">
+    <link href="src/css/fitness.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            height: 95%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #ec6807;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+
+        /* Style the sidenav links and the dropdown button */
+        .sidebar a,
+        .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #f1f1f1;
+            display: block;
+            border: none;
+            background: none;
+            /* width: 100%; */
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
+
+        }
+
+
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .dropdown-btn:hover {
+            color: #cab6b6;
+            /* font-size: 22px; */
+        }
+
+        /* Main content */
+        .main {
+            /* margin-left: 30%; */
+            /* Same as the width of the sidenav */
+            /* font-size: 20px; */
+            /* Increased text to enable scrolling */
+            /* padding: 0px 10px; */
+            /* padding-left: 10%; */
+            transition: margin-left 0.5s;
+            padding: 3% 15%;
+        }
+
+        /* Add an active class to the active dropdown button */
+        .active {
+            background-color: #c06332;
+            color: white;
+        }
+
+
+        .lecture-button-in-text {
+            background-color: #ec6807;
+            color: white;
+            padding: 1%;
+        }
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to
+          change the design of the dropdown content */
+        .dropdown-container {
+            display: none;
+            background-color: #c06332;
+            padding-left: 8px;
+        }
+
+        /* Optional: Style the caret down icon */
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 1.5em;
+            position: absolute;
+            cursor: pointer;
+            background-color: #ec6807;
+            color: white;
+            /* padding: 10px 15px; */
+            padding: 1%;
+            /* margin: 1% 2%; */
+            border: none;
+            z-index: 5;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a
+        smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+
+            .main {
+
+                padding: 5% 20%;
+            }
+        }
+
+        .flex-vertical-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 50px;
+        }
+
+        /* .footer {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            /* padding-top: 2%; */
+        /* padding: 5%; */
+        /* Set the fixed height of the footer here */
+        /* To complement the .sidebar height and reach 100%. */
+        /* height: 5%; */
+        /* Vertically center the text there */
+        /* line-height: 60px; */
+        /* background-color: #f5f5f5; */
+        /* } */
+
+        */ .little-space {
+            margin-left: 1%;
+        }
+
+        .star-color-green {
+            color: green;
+        }
+
+        .star-color-yellow {
+            color: goldenrod;
+        }
+
+        .star-color-red {
+            color: darkred;
+        }
+
+        .wrap {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .frame {
+            width: 100%;
+            height: 820px;
+            border: 0;
+            /* -ms-transform: scale(0.40);
+            -moz-transform: scale(0.40);
+            -o-transform: scale(0.40);
+            -webkit-transform: scale(0.40);
+            transform: scale(0.40);
+
+            -ms-transform-origin: 0 0;
+            -moz-transform-origin: 0 0;
+            -o-transform-origin: 0 0;
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0; */
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <main-header></main-header>
+
+    <div id="sidebar-menu" class="sidebar">
+
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <button class="dropdown-btn">Lectures
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container" id="dropdown-container-id">
+        </div>
+
+    </div>
+
+    <button id="open-menu-button" class="openbtn" onclick="openNav()">
+        <i class="fa fa-book" aria-hidden="true"></i>
+    </button>
+    <div class="main flex-vertical-center" id="main-id">
+
+        <div id="main-content">
+
+            <h2>Click on the <i class="fa fa-book lecture-button-in-text" aria-hidden="true"></i>
+                button, on the left, to select your lecture.</h2>
+
+            <p>
+                <!-- Add br tag so the footer is not just below the text. As by default, this is just a one line text -->
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </p>
+        </div>
+    </div>
+
+    <main-footer></main-footer>
+
+    <script src="LecturePath.js"></script>
+    <script src="sidepanel_new_way.js"></script>
+    <link rel="stylesheet" href="modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
+
+    <script src="src/js/header.js"></script>
+    <script src="src/js/footer.js"></script>
+</body>
+
+
+
+</html>
