@@ -1,11 +1,11 @@
 /*
  * File: beginner.js
  * Contract: EU contract 2017-1-FR01-KA202-037441
- * Project: FitNESS ERASMUS+
+ * Project: FitNESS 2 ERASMUS+
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Friday, 25th June 2021
+ * Last Modified: Tuesday, 16th May 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -373,6 +373,10 @@
     });
   }
 
+  function isUndefined(variableToTest) {
+    return undefined === variableToTest;
+  }
+
   function buildSlides() {
     // for each question...
     let slidesIterator = 0; // iterator for questions
@@ -383,10 +387,22 @@
       // Determine if it's the global info slide
       if (currentSlide.id === "global") {
         shufflingIsActivated = currentSlide.shuffleAnswers;
-        globalSlidesInfo.initialCurrentScore = currentSlide.currentScore;
-        globalSlidesInfo.currentScore = currentSlide.currentScore;
-        globalSlidesInfo.scoreIntermediate = currentSlide.scoreIntermediate;
-        globalSlidesInfo.scoreAdvanced = currentSlide.scoreAdvanced;
+        globalSlidesInfo.initialCurrentScore = isUndefined(
+          currentSlide.currentScore
+        )
+          ? 0
+          : currentSlide.currentScore;
+        globalSlidesInfo.currentScore = isUndefined(currentSlide.currentScore)
+          ? 0
+          : currentSlide.currentScore;
+        globalSlidesInfo.scoreIntermediate = isUndefined(
+          currentSlide.scoreIntermediate
+        )
+          ? 0
+          : currentSlide.scoreIntermediate;
+        globalSlidesInfo.scoreAdvanced = isUndefined(currentSlide.scoreAdvanced)
+          ? 0
+          : currentSlide.scoreAdvanced;
         globalSlidesInfo.coursesBeginner = currentSlide.coursesBeginner;
         globalSlidesInfo.coursesIntermediate = currentSlide.coursesIntermediate;
         globalSlidesInfo.coursesAdvanced = currentSlide.coursesAdvanced;
