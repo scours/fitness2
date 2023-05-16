@@ -1,0 +1,146 @@
+/*
+ * File: quiz.css
+ * Contract: EU contract 2017-1-FR01-KA202-037441
+ * Project: FitNESS ERASMUS+
+ * File Created: Tuesday, 8th December 2020
+ * Author: Steward OUADI
+ * -----
+ * Last Modified: Monday, 12th April 2021
+ * Modified By: Steward OUADI
+ * -----
+ */
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+body {
+  font-size: 1.5rem;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Arial", "sans-serif",
+    "!important";
+  color: #333;
+  font-weight: 400;
+  text-align: center;
+  background-color: #ffffff;
+  max-width: 50em;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 400;
+  margin: 0px;
+  padding: 10px;
+  font-size: 1.8rem;
+  background-color: #faf0e7;
+  color: #c6392e;
+  border-left: 4px solid #c6392e;
+  text-justify: newspaper;
+}
+
+.question {
+  font-weight: 800;
+  font-size: 2.1rem;
+  margin-bottom: 2.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  color: #322289;
+}
+
+.answers {
+  margin-bottom: 1rem;
+  text-align: left;
+  display: inline-block;
+  color: #322289;
+}
+
+.answers label {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+button {
+  position: relative;
+  margin-top: 32rem;
+  font-family: "Work Sans", sans-serif;
+  font-size: 2rem;
+  background-color: #cf701c;
+  color: #fff;
+  border: 0px;
+  border-radius: 3px;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  z-index: 99;
+}
+
+button:hover {
+  background-color: #c6392e;
+}
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.active-slide {
+  opacity: 1;
+  z-index: 2;
+}
+
+.quiz-container {
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+}
+
+input[type="radio"]:after {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  top: -0.5rem;
+  left: -0.8rem;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #d1d3d1;
+}
+
+input[type="radio"]:checked:after {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+  top: -0.5rem;
+  left: -0.8rem;
+  position: relative;
+  background-color: #cf701c;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #cf701c;
+}
+
+kbd {
+  margin: 0px 0.1em;
+  padding: 0.1em 0.6em;
+  border-radius: 3px;
+  border: 1px solid rgb(204, 204, 204);
+  color: #fff;
+  line-height: 1.4;
+  font-family: "Work Sans", sans-serif;
+  font-size: 1rem;
+  display: inline-block;
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2), inset 0px 0px 0px 2px #ffffff;
+  background-color: #cf701c;
+  -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #ffffff inset;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  text-shadow: 0 1px 0 #c6392e;
+}
+
+hr.fitness {
+  border-top: 2px dotted #c6392e;
+}
