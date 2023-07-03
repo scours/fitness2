@@ -80,6 +80,8 @@ Modified By: Steward OUADI
   <script>
     let currentFilename = "";
 
+    displaySendResultsByEmailButtonIfNecessary();
+
     function generateIdentifier() {
       var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
       var identifier = '';
@@ -149,6 +151,8 @@ Modified By: Steward OUADI
               currentQuestion.correctAnswer = answerIndex;
             }
             answerIndex = String.fromCharCode(answerIndex.charCodeAt(0) + 1);
+          } else if (line.startsWith('canBeSentByEmail')) {
+            canBeSentByEmail = line.split(':')[1].trim();
           }
         });
 
@@ -172,8 +176,7 @@ Modified By: Steward OUADI
       var popupContent = "<h2>Send results by email</h2>" +
         "<label for='input-id'>Identifier: (you can change it to write your own)</label>" +
         "<input type='text' id='input-id' value='" + defaultSessionIdentifier + "'>" +
-        "<button id='btn-send'>Send</button>" +
-        "<button id='btn-cancel'>Cancel</button>";
+        "<button id='btn-send'>Send</button>";
 
       popup.document.write(popupContent);
 
@@ -185,35 +188,32 @@ Modified By: Steward OUADI
         var sessionIdentifier = popup.document.getElementById("input-id").value;
         console.log("first click")
         // Perform necessary actions to send the results via email
-        // btnSend.addEventListener("click", function () {
+
         console.log("clicked on send");
-        // var recipient1 = "olivier.vitrac@agroparistech.fr";
+        var recipient1 = "olivier.vitrac@agroparistech.fr";
         var recipient2 = "steward.ouadi@agroparistech.fr";
         var title = currentFilename;
         var identifier = sessionIdentifier;
         var subject = encodeURIComponent(title + "|" + identifier);
         var content = encodeURIComponent(JSON.stringify(questionsAndUserAnswers, undefined, 2));
 
-        // var mailtoLink = "mailto:" + recipient1 + "," + recipient2 + "?cc=" + cc + "&subject=" + subject + "&body=" +
-        // content;
-
-        var mailtoLink = "mailto:" + recipient2 + "?subject=" + subject +
+        var mailtoLink = "mailto:" + recipient1 + "," + recipient2 + "?subject=" + subject +
           "&body=" +
           content;
+
+        // var mailtoLink = "mailto:" + recipient2 + "?subject=" + subject +
+        //   "&body=" +
+        //   content;
         // var mailtoLink = "mailto:" + recipient + "?subject=" + subject + "&body=" + content;
 
 
         window.location.href = mailtoLink;
-        // });
+
 
         popup.close();
       });
 
-      // Add functionality to the "Cancel" button
-      var btnCancel = popup.document.getElementById("btn-cancel");
-      btnCancel.addEventListener("click", function () {
-        popup.close();
-      });
+
 
       // Prevent the default form submission behavior when pressing Enter
       popup.document.onkeydown = function (event) {

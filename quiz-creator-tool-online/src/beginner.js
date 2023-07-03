@@ -702,7 +702,7 @@ function computeScore() {
 
         const questionAndUserAnswer = {
           currentSlide,
-          userAnswer: userAnswer,
+          userAnswer: userAnswer === undefined ? "undefined" : userAnswer,
         };
 
         questionsAndUserAnswers.push(questionAndUserAnswer);
@@ -736,8 +736,19 @@ function showNumberOfAnswersOutOfTotal() {
 function showResults() {
   computeScore();
   showNumberOfAnswersOutOfTotal();
+  displaySendResultsByEmailButtonIfNecessary();
   createMenuBasedOnLearnerAnswers();
   showNextSlide();
+}
+
+function displaySendResultsByEmailButtonIfNecessary() {
+  var containerElement = document.getElementById("submit-results-proposal");
+
+  if (canBeSentByEmail) {
+    containerElement.style.display = "block"; // Show the container element
+  } else {
+    containerElement.style.display = "none"; // Hide the container element
+  }
 }
 
 function setNavigationButtonsText() {
@@ -1141,6 +1152,10 @@ const suggestionMenuId = "menu-based-on-learner-answers";
 
 // Table containing questions and user answers
 let questionsAndUserAnswers = [];
+
+// indicates whether the result of the questionnaire is to be sent by e-mail or not. If so, a button allows you to
+// do so, once you have clicked on the button that allows to view the results.
+let canBeSentByEmail = false;
 
 // Read data when state is ready
 document.onreadystatechange = async function () {
