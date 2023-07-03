@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 19th April 2023
+ * Last Modified: Wednesday, 7th June 2023
  * Modified By: Steward OUADI
  */
 
@@ -501,7 +501,11 @@ async function extractMetaData() {
     // console.log("Can't read root file");
   }
   addListenersToDropdownButtons();
+  loader.style.display = "none"; // Hide the loader
 }
+
+// Display loader as soon as the page is loaded
+loader.style.display = "block";
 extractMetaData();
 
 function loadFile(filePath) {
