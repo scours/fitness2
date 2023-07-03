@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Tuesday, 16th May 2023
+ * Last Modified: Monday, 3rd July 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -699,6 +699,13 @@ function computeScore() {
         }
 
         globalSlidesInfo.currentScore = newCurrentScore;
+
+        const questionAndUserAnswer = {
+          currentSlide,
+          userAnswer: userAnswer,
+        };
+
+        questionsAndUserAnswers.push(questionAndUserAnswer);
       }
 
       // If current question is of type multiple correct answers, get list of answers
@@ -1131,6 +1138,9 @@ let shufflingIsActivated = false;
 // Reserved keywords
 // Reserved keyword: this menu id should not be used in the config file
 const suggestionMenuId = "menu-based-on-learner-answers";
+
+// Table containing questions and user answers
+let questionsAndUserAnswers = [];
 
 // Read data when state is ready
 document.onreadystatechange = async function () {

@@ -78,6 +78,22 @@ Modified By: Steward OUADI
   <script type="text/javascript" src="src/beginner.js"></script>
 
   <script>
+    let currentFilename = "";
+
+    function generateIdentifier() {
+      var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var identifier = '';
+
+      for (var i = 0; i < 5; i++) {
+        var randomIndex = Math.floor(Math.random() * characters.length);
+        identifier
+          += characters.charAt(randomIndex);
+      }
+      return identifier;
+    }
+
+    const defaultSessionIdentifier = generateIdentifier();
+
     function convertQuestions() {
       const fileInput = document.getElementById('fileInput');
       const file = fileInput.files[0];
@@ -85,6 +101,8 @@ Modified By: Steward OUADI
         alert('Please select a file');
         return;
       }
+
+      currentFilename = file.name;
 
       const reader = new FileReader();
       reader.onload = (event) => {
@@ -147,6 +165,64 @@ Modified By: Steward OUADI
       };
       reader.readAsText(file);
     }
+
+    document.getElementById("submit-results").addEventListener("click", function () {
+      var popup = window.open("", "popup", "width=400,height=300");
+
+      var popupContent = "<h2>Send results by email</h2>" +
+        "<label for='input-id'>Identifier: (you can change it to write your own)</label>" +
+        "<input type='text' id='input-id' value='" + defaultSessionIdentifier + "'>" +
+        "<button id='btn-send'>Send</button>" +
+        "<button id='btn-cancel'>Cancel</button>";
+
+      popup.document.write(popupContent);
+
+      // popup.document.getElementsByTagName("form")[0].addEventListener("submit", function (event) {
+      //   event.preventDefault();
+      // });
+      var btnSend = popup.document.getElementById("btn-send");
+      popup.document.getElementById("btn-send").addEventListener("click", function () {
+        var sessionIdentifier = popup.document.getElementById("input-id").value;
+        console.log("first click")
+        // Perform necessary actions to send the results via email
+        // btnSend.addEventListener("click", function () {
+        console.log("clicked on send");
+        // var recipient1 = "olivier.vitrac@agroparistech.fr";
+        var recipient2 = "steward.ouadi@agroparistech.fr";
+        var title = currentFilename;
+        var identifier = sessionIdentifier;
+        var subject = encodeURIComponent(title + "|" + identifier);
+        var content = encodeURIComponent(JSON.stringify(questionsAndUserAnswers, undefined, 2));
+
+        // var mailtoLink = "mailto:" + recipient1 + "," + recipient2 + "?cc=" + cc + "&subject=" + subject + "&body=" +
+        // content;
+
+        var mailtoLink = "mailto:" + recipient2 + "?subject=" + subject +
+          "&body=" +
+          content;
+        // var mailtoLink = "mailto:" + recipient + "?subject=" + subject + "&body=" + content;
+
+
+        window.location.href = mailtoLink;
+        // });
+
+        popup.close();
+      });
+
+      // Add functionality to the "Cancel" button
+      var btnCancel = popup.document.getElementById("btn-cancel");
+      btnCancel.addEventListener("click", function () {
+        popup.close();
+      });
+
+      // Prevent the default form submission behavior when pressing Enter
+      popup.document.onkeydown = function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          return false;
+        }
+      };
+    });
   </script>
 
 
