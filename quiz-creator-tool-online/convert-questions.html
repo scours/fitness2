@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert Questions</title>
+</head>
+<body>
+  <input type="file" id="fileInput" accept=".md">
+  <button onclick="convertQuestions()">Convert Questions</button>
+  <pre id="output"></pre>
+
+  <script>
+    function convertQuestions() {
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+      if (!file) {
+        alert('Please select a file');
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const lines = event.target.result.split('\n');
+        const configurationData = [];
+
+        let currentQuestion = null;
+        let answerIndex = 'a';
+
+        lines.forEach((line) => {
+          line = line.trim();
+
+          if (line.startsWith('Q')) {
+            if (currentQuestion !== null) {
+              configurationData.push(currentQuestion);
+            }
+            currentQuestion = {
+              id: line.split(':')[0].trim(),
+              question: {
+                text: line.split(':')[1].trim(),
+              },
+              answers: {},
+              pointsIfCorrectAnswer: 1,
+              pointsIfWrongAnswer: 0,
+            };
+            answerIndex = 'a';
+          } else if (line.startsWith('-')) {
+            const isCorrect = line.startsWith('- [x]');
+            // const answerText = line.slice(5).trim();
+            const answerText = line.split(']')[1].trim();
+
+            currentQuestion.answers[answerIndex] = { text: answerText };
+            if (isCorrect) {
+              currentQuestion.correctAnswer = answerIndex;
+            }
+            answerIndex = String.fromCharCode(answerIndex.charCodeAt(0) + 1);
+          }
+        });
+
+        if (currentQuestion !== null) {
+          configurationData.push(currentQuestion);
+        }
+
+        const result = `const configurationData = ${JSON.stringify(configurationData, null, 2)};`;
+        document.getElementById('output').textContent = result;
+      };
+      reader.readAsText(file);
+    }
+  </script>
+</body>
+</html>

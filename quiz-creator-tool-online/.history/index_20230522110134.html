@@ -1,0 +1,153 @@
+<!--
+File: index.html
+Contract: EU contract 2022-FR01-KA220-HED-000023509
+Project: FitNESS 2 ERASMUS+
+File Created: Thursday, 17th December 2020
+Authors: Olivier VITRAC, Steward OUADI
+-----
+Last Modified: Monday, 22nd May 2023
+Modified By: Steward OUADI
+-----
+-->
+<html>
+<!-- Test for beginners - designed by Olivier Vitrac - rev. $ 2020-12-04 $ -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITNess test</title>
+  <link type="text/css" rel="stylesheet" href="src/quiz.css" />
+</head>
+
+<body>
+  <label for="fileInput" class="custom-file-label">Import questions</label>
+  <input type="file" id="fileInput" accept=".md" onchange="myFunction(event)">
+
+
+  <button style="padding: 1px; position:unset;" onclick="convertQuestions()">Show questions</button>
+  <pre id="output"></pre>
+  <h1>
+    <table>
+      <tr>
+        <td>
+          <img src="src/Fitness2_logo.png" referrerpolicy="no-referrer" alt="FITNESS" title="ERASMUS+ Project" class=""
+            width="128px" height="" />
+        </td>
+        <td>ERASMUS+ programme (contract 2022-FR01-KA220-HED-000023509)</td>
+      </tr>
+    </table>
+  </h1>
+  <div id="qbutton">
+    <button id="previous"></button>
+    <button id="next"></button>
+    <button id="submit"></button>
+  </div>
+  <div id="results"></div>
+  <div class="quiz-container">
+    <div id="quiz">
+      <p>Step 1: Import questions: Click on the "Browse" button to import the Markdown file containing your questions.
+      </p>
+      <p>Step 2: Show questions: Click on the "Show questions" button to to display your questions using the FITNESS
+        quiz format.</p>
+    </div>
+
+  </div>
+
+
+  <!-- Include libraries -->
+  <script src="src/libraries/math.js" type="text/javascript"></script>
+  <script src="src/utils.js" type="text/javascript"></script>
+
+  <!-- Include classes -->
+  <script src="src/GlobalSlide.js"></script>
+  <script src="src/RadioButtonQuizSlide.js"></script>
+  <script src="src/SuggestionMenuSlide.js"></script>
+  <script src="src/CheckBoxButtonQuizSlide.js"></script>
+  <script src="src/ImageOnlySlide.js"></script>
+
+
+
+  <!-- config.js: used to get configuration -->
+  <!-- <script src="src/config.js"></script> -->
+
+  <script src="../../src/js/utils.js"></script>
+  <script type="text/javascript" src="src/beginner.js"></script>
+
+  <script>
+    function convertQuestions() {
+      const fileInput = document.getElementById('fileInput');
+      const file = fileInput.files[0];
+      if (!file) {
+        alert('Please select a file');
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const lines = event.target.result.split('\n');
+        const configurationData = [];
+
+        const globalSlide = {
+          id: "global",
+          shuffleAnswers: false,
+          currentScore: 0,
+        };
+
+        configurationData.push(globalSlide);
+
+        let currentQuestion = null;
+        let answerIndex = 'a';
+
+        lines.forEach((line) => {
+          line = line.trim();
+
+          if (line.startsWith('Q')) {
+            if (currentQuestion !== null) {
+              configurationData.push(currentQuestion);
+            }
+            currentQuestion = {
+              id: line.split(':')[0].trim(),
+              question: {
+                text: line.split(':')[1].trim(),
+              },
+              answers: {},
+              pointsIfCorrectAnswer: 1,
+              pointsIfWrongAnswer: 0,
+            };
+            answerIndex = 'a';
+          } else if (line.startsWith('-')) {
+            const isCorrect = line.startsWith('- [x]');
+            // const answerText = line.slice(5).trim();
+            const answerText = line.split(']')[1].trim();
+
+            currentQuestion.answers[answerIndex] = {
+              text: answerText
+            };
+            if (isCorrect) {
+              currentQuestion.correctAnswer = answerIndex;
+            }
+            answerIndex = String.fromCharCode(answerIndex.charCodeAt(0) + 1);
+          }
+        });
+
+        if (currentQuestion !== null) {
+          configurationData.push(currentQuestion);
+        }
+
+        const result = `const configurationData = ${JSON.stringify(configurationData, null, 2)};`;
+        const quizContainer = document.getElementById("quiz");
+        quizContainer.innerHTML = "";
+        allSlides = configurationData;
+        DoQuiz();
+        // document.getElementById('output').textContent = result;
+      };
+      reader.readAsText(file);
+    }
+  </script>
+
+
+
+
+</body>
+
+</html>
