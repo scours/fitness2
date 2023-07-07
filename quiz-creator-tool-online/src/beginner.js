@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Monday, 3rd July 2023
+ * Last Modified: Thursday, 6th July 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -744,7 +744,7 @@ function showResults() {
 function displaySendResultsByEmailButtonIfNecessary() {
   var containerElement = document.getElementById("submit-results-proposal");
 
-  if (canBeSentByEmail) {
+  if (canBeSentByEmail === "true") {
     containerElement.style.display = "block"; // Show the container element
   } else {
     containerElement.style.display = "none"; // Hide the container element
