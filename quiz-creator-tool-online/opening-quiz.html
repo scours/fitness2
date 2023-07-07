@@ -28,7 +28,6 @@ Modified By: Steward OUADI
   <input type="file" id="fileInput" accept=".md" onchange="convertQuestions()">
 
 
-
   <!-- <button style="padding: 1px; position:unset;" onclick="convertQuestions()">Show questions</button> -->
   <pre id="output"></pre>
   <h1>
@@ -215,8 +214,10 @@ Modified By: Steward OUADI
           "&body=" +
           content;
 
-        window.location.href = mailtoLink;
-        window.location.target = "_top";
+        // window.open (instead of window.location.href) so we can increase the number of devices that can handle
+        // the mailto link
+        window.open(mailtoLink, '_blank');
+
 
 
         popup.close();

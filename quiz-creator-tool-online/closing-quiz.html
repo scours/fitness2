@@ -215,13 +215,10 @@ Modified By: Steward OUADI
           "&body=" +
           content;
 
-        // var mailtoLink = "mailto:" + recipient2 + "?subject=" + subject +
-        //   "&body=" +
-        //   content;
-        // var mailtoLink = "mailto:" + recipient + "?subject=" + subject + "&body=" + content;
-
-
-        window.location.href = mailtoLink;
+        // window.open (instead of window.location.href) so we can increase the number of devices that can
+        // handle
+        // the mailto link
+        window.open(mailtoLink, '_blank');
 
 
         popup.close();
