@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Thursday, 6th July 2023
+ * Last Modified: Tuesday, 10th October 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -103,7 +103,8 @@ function getScoreForCheckboxesQuiz(
   );
 
   let nbCheckedAnswers = 0;
-
+  // let userAnswersAndExpectedAnswers = [];
+  let userAnswers = [];
   for (let i = 0; i < allPossibleAnswers.length; i++) {
     if (
       allPossibleAnswers[i].value == 1 &&
@@ -135,6 +136,9 @@ function getScoreForCheckboxesQuiz(
       scoreForCurrentQuestionMatrix = newScoreForCurrentQuestionMatrix;
 
       nbCheckedAnswers++;
+
+      // User has selected this answer, so push his answer in answer list.
+      userAnswers.push(allPossibleAnswers[i].id);
     }
 
     if (
@@ -158,8 +162,19 @@ function getScoreForCheckboxesQuiz(
       scoreForCurrentQuestionMatrix = newScoreForCurrentQuestionMatrix;
 
       nbCheckedAnswers++;
+      // User has selected this answer, so push his answer in answer list.
+      userAnswers.push(allPossibleAnswers[i].id);
     }
   }
+  // userAnswersAndExpectedAnswers.push({ userAnswers });
+  // console.log(userAnswersAndExpectedAnswers);
+
+  const questionAndUserAnswer = {
+    currentSlide,
+    userAnswer: userAnswers === undefined ? "undefined" : userAnswers,
+  };
+
+  questionsAndUserAnswers.push(questionAndUserAnswer);
 
   if (
     scoreForCurrentQuestion < 0 ||

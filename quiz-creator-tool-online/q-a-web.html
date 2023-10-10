@@ -24,8 +24,8 @@ Modified By: Steward OUADI
     <button id="submit-results">Submit results by email</button>
     <p>By clicking on the button above, you will send your answers to the creator of this quiz.</p>
   </div>
-  <label for="fileInput" class="custom-file-label">Import questions</label>
-  <input type="file" id="fileInput" accept=".md" onchange="convertQuestions()">
+  <!-- <label for="fileInput" class="custom-file-label">Import questions</label> -->
+  <!-- <input type="file" id="fileInput" accept=".md" onchange="convertQuestions()"> -->
 
 
 
@@ -191,7 +191,264 @@ Modified By: Steward OUADI
       const result = `const configurationData = ${JSON.stringify(configurationData, null, 2)};`;
       const quizContainer = document.getElementById("quiz");
       quizContainer.innerHTML = "";
-      allSlides = configurationData;
+      // allSlides = configurationData;
+      allSlides = allSlides = [{
+          id: "global",
+          shuffleAnswers: false,
+          currentScore: [0, 0, 0],
+        },
+        {
+          id: "intro-slide",
+          img: "src/configContent/images/mermaid-representation-for-a-quiz.svg",
+          next: {
+            specific: "quest-1",
+          },
+          nextButtonText: "Start",
+        },
+        {
+          id: "quest-1",
+          question: {
+            text: "Quest 1",
+          },
+          answers: {
+            a: {
+              text: "Right answer"
+            },
+            b: {
+              text: "Wrong answer"
+            },
+            c: {
+              text: "Wrong answer"
+            },
+            d: {
+              text: "Wrong answer"
+            },
+          },
+          correctAnswer: "a",
+          next: {
+            type: "score",
+            passed: "quest-2",
+            notPassed: "quest-3",
+          },
+
+          minimumPassedScore: [1, 0, 0],
+          pointsIfCorrectAnswer: [2, 2, 2],
+          pointsIfWrongAnswer: [0, 0, 0],
+        },
+        {
+          id: "quest-2",
+          question: {
+            text: "Question 2",
+          },
+          answers: {
+            a: {
+              text: "Wrong answer"
+            },
+            b: {
+              text: "Wrong answer"
+            },
+            c: {
+              text: "Right answer"
+            },
+            d: {
+              text: "Wrong answer"
+            },
+          },
+          correctAnswer: "c",
+          next: {
+            type: "score",
+            passed: "quest-4",
+            notPassed: "quest-5",
+          },
+
+          minimumPassedScore: [1, 0, 0],
+          pointsIfCorrectAnswer: [2, 2, 2],
+          pointsIfWrongAnswer: [0, 0, 0],
+        },
+        {
+          id: "quest-3",
+          question: {
+            text: "Question 3",
+          },
+          answers: {
+            a: {
+              text: "Wrong answer"
+            },
+            b: {
+              text: "Wrong answer"
+            },
+            c: {
+              text: "Wrong answer"
+            },
+            d: {
+              text: "Right answer"
+            },
+          },
+          correctAnswer: "d",
+          next: {
+            type: "score",
+            passed: "quest-6",
+            notPassed: "quest-7",
+          },
+
+          minimumPassedScore: [1, 0, 0],
+          pointsIfCorrectAnswer: [2, 2, 2],
+          pointsIfWrongAnswer: [0, 0, 0],
+        },
+        {
+          id: "quest-4",
+          question: {
+            text: "Question 4",
+          },
+          answers: {
+            a: {
+              text: "Right answer"
+            },
+            b: {
+              text: "Wrong answer"
+            },
+            c: {
+              text: "Wrong answer"
+            },
+            d: {
+              text: "Wrong answer"
+            },
+            e: {
+              text: "Right answer"
+            },
+          },
+          correctAnswer: ["a", "e"],
+          next: {
+            specific: "quest-8",
+          },
+
+          minimumPassedScore: [1, 0, 0],
+          pointsIfCorrectAnswer: [2, 2, 2],
+          pointsIfWrongAnswer: [0, 0, 0],
+        },
+        {
+          id: "quest-5",
+          question: {
+            text: "Question 5",
+          },
+          answers: {
+            a: {
+              text: "Right answer"
+            },
+            b: {
+              text: "Wrong answer"
+            },
+            c: {
+              text: "Wrong answer"
+            },
+            d: {
+              text: "Wrong answer"
+            },
+            e: {
+              text: "Right answer"
+            },
+          },
+          correctAnswer: ["a", "e"],
+          next: {
+            specific: "quest-8"
+          },
+
+          minimumPassedScore: [1, 0, 0],
+          pointsIfCorrectAnswer: [2, 2, 2],
+          pointsIfWrongAnswer: [0, 0, 0],
+        },
+        {
+          id: "quest-6",
+          question: {
+            text: "Question 6",
+          },
+          answers: {
+            a: {
+              text: "Right answer"
+            },
+            b: {
+              text: "Wrong answer"
+            },
+            c: {
+              text: "Wrong answer"
+            },
+            d: {
+              text: "Wrong answer"
+            },
+            e: {
+              text: "Right answer"
+            },
+          },
+          correctAnswer: ["a", "e"],
+          next: {
+            specific: "quest-8"
+          },
+
+          minimumPassedScore: [1, 0, 0],
+          pointsIfCorrectAnswer: [2, 2, 2],
+          pointsIfWrongAnswer: [0, 0, 0],
+        },
+        {
+          id: "quest-7",
+          question: {
+            text: "Question 7",
+          },
+          answers: {
+            a: {
+              text: "Right answer"
+            },
+            b: {
+              text: "Wrong answer"
+            },
+            c: {
+              text: "Wrong answer"
+            },
+            d: {
+              text: "Wrong answer"
+            },
+            e: {
+              text: "Right answer"
+            },
+          },
+          correctAnswer: ["a", "e"],
+          next: {
+            specific: "quest-8"
+          },
+
+          minimumPassedScore: [1, 0, 0],
+          pointsIfCorrectAnswer: [2, 2, 2],
+          pointsIfWrongAnswer: [0, 0, 0],
+        },
+
+        {
+          id: "quest-8",
+          question: {
+            text: "Question 8",
+          },
+          answers: {
+            a: {
+              text: "Right answer"
+            },
+            b: {
+              text: "Wrong answer"
+            },
+            c: {
+              text: "Wrong answer"
+            },
+            d: {
+              text: "Wrong answer"
+            },
+            e: {
+              text: "Right answer"
+            },
+          },
+          correctAnswer: ["a", "e"],
+
+          minimumPassedScore: [1, 0, 0],
+          pointsIfCorrectAnswer: [2, 2, 2],
+          pointsIfWrongAnswer: [0, 0, 0],
+        },
+      ];
       DoQuiz();
       // document.getElementById('output').textContent = result;
     }
