@@ -1,11 +1,11 @@
 /*
  * File: CheckBoxButtonQuizSlide.js
  * Contract: EU contract 2017-1-FR01-KA202-037441
- * Project: FitNESS ERASMUS+
+ * Project: FitNESS 2 ERASMUS+
  * File Created: Wednesday, 14th April 2021
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 23rd June 2021
+ * Last Modified: Tuesday, 10th October 2023
  * Modified By: Steward OUADI
  */
 class CheckBoxButtonQuizSlide extends GlobalSlide {
@@ -31,6 +31,7 @@ class CheckBoxButtonQuizSlide extends GlobalSlide {
     input.type = this.type;
     input.name = `question${questionNumber}`;
     input.value = checkboxValue;
+    input.id = letter;
 
     label.appendChild(input);
 
