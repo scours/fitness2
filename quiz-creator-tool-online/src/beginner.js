@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Tuesday, 10th October 2023
+ * Last Modified: Monday, 16th October 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -103,6 +103,7 @@ function getScoreForCheckboxesQuiz(
   );
 
   let nbCheckedAnswers = 0;
+  let nbExpectedCorrectAnswers = 0;
   // let userAnswersAndExpectedAnswers = [];
   let userAnswers = [];
   for (let i = 0; i < allPossibleAnswers.length; i++) {
@@ -111,6 +112,7 @@ function getScoreForCheckboxesQuiz(
       allPossibleAnswers[i].checked == false
     ) {
       rep = false;
+      nbExpectedCorrectAnswers++;
     }
 
     if (
@@ -162,6 +164,7 @@ function getScoreForCheckboxesQuiz(
       scoreForCurrentQuestionMatrix = newScoreForCurrentQuestionMatrix;
 
       nbCheckedAnswers++;
+      nbExpectedCorrectAnswers++;
       // User has selected this answer, so push his answer in answer list.
       userAnswers.push(allPossibleAnswers[i].id);
     }
@@ -176,9 +179,11 @@ function getScoreForCheckboxesQuiz(
 
   questionsAndUserAnswers.push(questionAndUserAnswer);
 
+  // If score negative or if selected all answers while all answers are not expected to be selected
   if (
     scoreForCurrentQuestion < 0 ||
-    nbCheckedAnswers === allPossibleAnswers.length
+    (nbCheckedAnswers === allPossibleAnswers.length &&
+      nbCheckedAnswers !== nbExpectedCorrectAnswers)
   ) {
     scoreForCurrentQuestion = 0;
   }
@@ -741,7 +746,9 @@ function computeScore() {
 function showNumberOfAnswersOutOfTotal() {
   // show number of correct answers out of total
   var dt = new Date();
-  resultsContainer.innerHTML = `Your score is <b>${numberOfCorrectAnswers}</b>
+  resultsContainer.innerHTML = `Your score is <b>${numberOfCorrectAnswers.toFixed(
+    2
+  )}</b>
          correct answers out of <b>${
            visitedQuestions.size
          }</b> questions | <font size="0.4rem">${dt.toLocaleString()}</font>
