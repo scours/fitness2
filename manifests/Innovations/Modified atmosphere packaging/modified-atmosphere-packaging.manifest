@@ -1,0 +1,24 @@
+{
+  "idx": 65529,
+  "title": "Modified atmosphere packaging",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": "UNIZG",
+  "institution": "UNIZG",
+  "abstract": "Abstract",
+  "topic": [
+    "topic1",
+    "topic2",
+    "topic3"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "userProvidedURLForLecture": ""
+}
