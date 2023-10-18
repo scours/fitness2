@@ -1,24 +1,31 @@
 {
   "idx": 65529,
-  "title": "Modified atmosphere packaging",
-  "level": "",
-  "section": "",
+  "title": "Modified atmosphere packaging ",
+  "level": "common",
+  "section": "S6",
   "unit": "",
-  "difficultyLevel": "Novice",
+  "difficultyLevel": "Advanced",
   "part": "part1",
-  "author": "UNIZG",
-  "institution": "UNIZG",
-  "abstract": "Abstract",
-  "topic": [
-    "topic1",
-    "topic2",
-    "topic3"
+  "author": [
+    "Mario Ščetar",
+    "Mia Kurek",
+    "Kata Galić"
   ],
-  "license": "BY-SA-ND",
+  "institution": "UNIZG",
+  "abstract": "Modified atmosphere packaging is a preservation method where the surrounding atmosphere of the product is replaced typically with an inert gas, such as nitrogen combined with an antimicrobially active carbon dioxide, and oxygen in exact amounts, to extend its shelf life. Control of water loss, protection from skin abrasion and softening, reduced contamination of the produce during handling, and delayed ripening and slow various compositional changes associated with ripening are only some benefits of using MAP. Gases used, product and storage factors to be taken into account, packaging materials, and mathematical principles are well described in this presentation. ",
+  "topic": [
+    "fresh product",
+    "shelf life",
+    "packaging methods"
+  ],
+  "license": "CC-BY",
   "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
+    "method",
+    "materials",
+    "respiration",
+    "mixed gases",
+    "modified atmosphere",
+    "shelf life"
   ],
   "userProvidedURLForLecture": ""
 }
