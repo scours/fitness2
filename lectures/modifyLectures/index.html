@@ -1,0 +1,118 @@
+<!--
+File: index.html
+Contract: EU contract 2017-1-FR01-KA202-037441
+Project: FitNESS ERASMUS+
+File Created: Friday, 23rd October 2020
+Author: Steward OUADI
+-----
+Last Modified: Monday, 7th December 2020
+Modified By: Steward OUADI
+-----
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div class="flex-vertical-center">
+      <img
+        src="../src/Fitness logo RVB.png"
+        referrerpolicy="no-referrer"
+        alt="FITNESS"
+        title="ERASMUS+ Project"
+        width="200px"
+        height="auto"
+      />
+      <h1>Update the metadata of your lecture</h1>
+      <p>
+        Click on the button to display the list of the authors and select your
+        name to get access to your lectures.
+      </p>
+
+      <div class="dropdown">
+        <button onclick="dropDownButtonHandler()" class="btn">
+          Please select your name
+        </button>
+        <div id="myDropdown" class="dropdown-content"></div>
+      </div>
+    </div>
+
+    <script>
+      let lectures;
+      let authors = new Set();
+
+      function getTopWords(topWords, topWordsFrequencies) {
+        const newTopWords = [];
+
+        for (let i = 0; i < topWordsFrequencies.length; i++) {
+          if (topWordsFrequencies[i] >= 10) {
+            newTopWords[i] = topWords[i];
+          }
+        }
+
+        return newTopWords.join(' '); // Transform array of words into a string
+      }
+
+      function sortAuthors() {
+        const tmpArray = Array.from(authors);
+        const sortedAuthors = tmpArray.sort();
+        authors.clear;
+        authors = new Set(sortedAuthors);
+      }
+
+      /* Extract and store all lectures into a global array*/
+      async function extractLectures() {
+        const res = await fetch(
+          './../../lectures/src/json/content_transitional.json'
+        ); // fetch method will fetch JSON file
+        lectures = await res.json();
+
+        lectures.forEach((lecture) => {
+          // Copying lecture to modify only attributes that should be modified
+          const newLecture = lecture;
+          authors.add(lecture.author);
+        });
+
+        sortAuthors();
+        localStorage.setItem('lectures', JSON.stringify(lectures));
+      }
+      extractLectures();
+      const dropDown = document.getElementById('myDropdown');
+      /* When the user clicks on the button, toggle between hiding and showing the dropdown content */
+      function dropDownButtonHandler() {
+        dropDown.classList.toggle('show');
+        // Make sure drop down is empty before adding content
+        dropDown.innerHTML = '';
+        var sPageURL = window.location.href;
+        for (const author of authors) {
+          const a = document.createElement('a');
+
+          let currentFilename = sPageURL.split('/').pop();
+          const currentPath = window.location.href.split(currentFilename)[0];
+          a.href = encodeURI(`${currentPath}listOfLectures?name=${author}`);
+          a.innerHTML = author;
+          dropDown.appendChild(a);
+        }
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches('.btn')) {
+          var dropdowns = document.getElementsByClassName('dropdown-content');
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+              // Clear the drop down content when the user clicks outside
+              dropDown.innerHTML = '';
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="css/css.css" />
+  </body>
+</html>

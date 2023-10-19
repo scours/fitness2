@@ -1,0 +1,133 @@
+/*
+ * File: myCss.css
+ * Contract: EU contract 2017-1-FR01-KA202-037441
+ * Project: FitNESS ERASMUS+
+ * File Created: Tuesday, 10th November 2020
+ * Author: Steward OUADI
+ * -----
+ * Last Modified: Monday, 14th December 2020
+ * Modified By: Steward OUADI
+ * -----
+ */
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+
+.center {
+  text-align: center;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.abstract-div-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  border-radius: 3px;
+  margin-bottom: 30px;
+  background-color: #e6e6e6;
+}
+
+/* On smaller screens, increase number of lines showed */
+@media screen and (max-width: 800px) {
+  .abstract-div-text {
+    -webkit-line-clamp: 20;
+  }
+}
+
+.image-container-row {
+  display: flex;
+}
+
+.image-container {
+  padding: 5px;
+}
+
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+    0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+  color: #333;
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+/* Activity indicator - start */
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #32228a;
+  border-bottom: 16px solid #c8392e;
+  border-right: 16px solid #d0701c;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Activity indicator - end */

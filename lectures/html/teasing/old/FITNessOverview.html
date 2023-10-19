@@ -1,0 +1,789 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>FITNessOverview</title><style type='text/css'>html {overflow-x: initial !important;}:root { --node-fill: #ECECFF; --node-border: #CCCCFF; --cluster-fill: #ffffde; --cluster-border: #aaaa33; --note-fill: #fff5ad; --note-border: #aaaa33; --mermaid-color: var(--text-color); }
+
+
+:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
+.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background: rgba(255, 255, 0, 0.4); }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fff;
+    --control-text-color: #777;
+}
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+    color: #322289;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 40px 30px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+#write p {
+    /* text-indent: 2rem; */
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+}
+
+#write ol li {
+    padding-left: 0.5rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #c6392e;
+    font-weight: 600;
+    padding: 0px 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+h2 a,
+h3 a {
+    color: #322289;
+}
+
+h3 a:before {
+    content: '#';
+    color: #c6392e;
+    position: absolute;;
+    left: -0.7em;
+    margin-top: -0.05em;
+    padding-right: 0.5em;
+    font-size: 1.2em;
+    line-height: 1;
+    font-weight: bold;
+}
+
+h1 {
+    padding-bottom: .4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0px 15px 0px;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0px 7px 0px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 4px solid #c6392e;
+    padding: 10px 0px 10px 15px;
+    color: #777;
+    background-color: rgba(207, 111, 28, .1);
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #fafafa;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0px 1px 0 1px;
+}
+
+#write em {
+    padding: 0px 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: #f2f2f2;
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid #F4F4F4;
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0rem !important;
+    line-height: 1.43rem;
+    background-color: #F8F8F8 !important;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+#write code, tt {
+    margin: 0 2px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    background-color: #f8f8f8;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#write {
+  max-width: auto; /*adjust writing area position*/
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#typora-source .CodeMirror-lines {
+  max-width: auto; /*or 1000px*/
+}
+ :root {--mermaid-font-zoom:1.8em ;}  .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><figure><table><thead><tr><th style='text-align:left;' ><img src="images/Fitness%20logo%20RVB.png" style="zoom:15%;" /></th><th style='text-align:center;' ><kbd><span>version 2️⃣02️⃣0</span></kbd></th></tr></thead><tbody><tr><td style='text-align:left;' ><em><span>Food packaging open courseware for higher education and staff of companies</span></em><br><a href='https://fitness.agroparistech.fr' target='_blank' class='url'>https://fitness.agroparistech.fr</a></td><td style='text-align:center;' ><span>🇪🇺 </span><small><span>ERASMUS+  Programme</span><br><a href="https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2017-1-FR01-KA202-037441" title="Project on the European Commission website" target="_blank"><i><span>contract 2017-1-FR01-KA202-037441</span></i></a></small></td></tr></tbody></table></figure><h1><a name="fitness-platform" class="md-header-anchor"></a><span>FITNESS PLATFORM</span></h1><p><span>INRAE</span><span>\</span><a href="mailto:olivier.vitrac@agroparistech.fr"><span>Olivier Vitrac</span></a><span> - December 2020</span></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n4301"><a class="md-toc-inner" href="#fitness-platform">FITNESS PLATFORM</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4588"><a class="md-toc-inner" href="#1-context--our-ambition🌱">1. CONTEXT &amp; OUR AMBITION|🌱</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4586"><a class="md-toc-inner" href="#2-our-goals--approach-📚📖💻🎓">2. OUR GOALS &amp; APPROACH| 📚📖💻🎓</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4584"><a class="md-toc-inner" href="#3-fitness-platform-at-a-glance--👁️">3. FITNESS PLATFORM AT A GLANCE | 👁️</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4326"><a class="md-toc-inner" href="#31-everything-in-54--⏱">3.1 Everything in 54'' | ⏱</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4329"><a class="md-toc-inner" href="#32-welcome-screen--😊">3.2 Welcome screen | 😊</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4340"><a class="md-toc-inner" href="#33-it-works-with-all-screens--📲">3.3 It works with all screens | 📲</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4345"><a class="md-toc-inner" href="#34-an-adaptive-interface--🏫🏭12796365039">3.4 An adaptive interface | 🏫🏭🏛️</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4351"><a class="md-toc-inner" href="#35-hundreds-contents-for-self--or-directed--training--🗓️💯">3.5 Hundreds contents for self- or directed- training | 🗓️💯</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4357"><a class="md-toc-inner" href="#36-find-relations-on-each-page--🧭🕸️">3.6 Find relations on each page | 🧭🕸️</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4582"><a class="md-toc-inner" href="#4-how-it-works--8505🧙♂️">4. HOW IT WORKS | ℹ🧙‍♂️</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4364"><a class="md-toc-inner" href="#41-workflow-automation--⚙️🐾">4.1 Workflow automation | ⚙️🐾</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4395"><a class="md-toc-inner" href="#42-why-markdown--📑">4.2 Why Markdown? | 📑</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4398"><a class="md-toc-inner" href="#43-metadata--🔎🔖">4.3 Metadata | 🔎🔖</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4580"><a class="md-toc-inner" href="#5-how-to-use-it--👥">5. HOW TO USE IT | 👥</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4406"><a class="md-toc-inner" href="#51-browsing--🕵️♀️🕵️♂️">5.1 Browsing | 🕵️‍♀️🕵️‍♂️</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4409"><a class="md-toc-inner" href="#52-learning--👩🎓👨🎓">5.2 Learning | 👩‍🎓👨‍🎓</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4412"><a class="md-toc-inner" href="#53-teaching-and-learning--👩🏫👨🏫">5.3 Teaching and learning | 👩‍🏫👨‍🏫</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4578"><a class="md-toc-inner" href="#6-how-to-clone-fitness-or-to-run-it-offline--📴">6. HOW TO CLONE FITNESS OR TO RUN IT OFFLINE | 📴</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4416"><a class="md-toc-inner" href="#61-download-procedure--⬇️">6.1 Download procedure | ⬇️</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4423"><a class="md-toc-inner" href="#62-running-off-line--💤">6.2 Running off-line | 💤</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4427"><a class="md-toc-inner" href="#63-cloning-fitness--🤳">6.3 Cloning FITNess | 🤳</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4576"><a class="md-toc-inner" href="#7-how-to-revise-or-add-content-🙋🏻♀️🎗️✏️">7. HOW TO REVISE OR ADD CONTENT| 🙋🏻‍♀️🎗️✏️</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4434"><a class="md-toc-inner" href="#71-license-🔓©🖼">7.1 License 🔓©🖼</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4451"><a class="md-toc-inner" href="#72-minor-revisions-and-derivative-works--🛩️">7.2 Minor revisions and derivative works | 🛩️</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4469"><a class="md-toc-inner" href="#73-major-updates--✈️">7.3 Major updates | ✈️</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4484"><a class="md-toc-inner" href="#74-main-developed-tools-server-side--🧰">7.4 Main developed tools (server-side) | 🧰</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n4574"><a class="md-toc-inner" href="#8-contributors--🧑🤝🧑">8. CONTRIBUTORS | 🧑‍🤝‍🧑</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4541"><a class="md-toc-inner" href="#81-acknowledgments--🧗🧗♀️">8.1 Acknowledgments | 🧗🧗‍♀️</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4550"><a class="md-toc-inner" href="#82-academic-contributors--🏫">8.2 Academic contributors | 🏫</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n4563"><a class="md-toc-inner" href="#83-technical-contributors--👨💻">8.3 Technical contributors | 👨‍💻</a></span></p></div><p>&nbsp;</p><p>&nbsp;</p><h2><a name="1-context--our-ambition🌱" class="md-header-anchor"></a><span>1. CONTEXT &amp; OUR AMBITION|🌱</span></h2><p><span>Because the lifetime of food packaging materials is short (less than 6 months), they represent the majority of ♳ plastic wastes. Their 🏭 production, 🚮 collection and ♻️ recycling is also impacting the 🌱environment. They are, however, essential to the 🧃preservation of food, ⛑️food safety and 🥡 food convenience. We are engaged in a ⏲️transitional period imposed by coercive ⚖️ laws : 🚫Single Use Plastics Directive (EU) 2019/904/EC, ⛔ French anti-waste law... None of the proposed lecture contains the 🔢 solution, but the 🔌🌐🎓 platform </span><strong><span>FITNess</span></strong><span> provides the only 💡 sensible answer to this 🚩complex issue.</span></p><blockquote><p><span>It is necessary to educate oneself, to complete one&#39;s education on these complex issues and to mobilize scattered and interdisciplinary knowledge. </span></p></blockquote><p><img src="images/FITNess2020.png" alt="overview" style="zoom: 20%;" /></p><p><span>All food packaging and food contact materials are considered ♳♴♵♶♷♸♹🥫🧃🥤🍵🍺</span>&#9749;<span>🍯🍼🥗🍱🍫🥡🍬🍭🍽️🥢🍳🍜 as well as the supply chain ⛓️📦🚚🛒🏬🏭🥦🌾🐟🐄🐖🐔. Production, distribution, design, convenience, environmental impacts, risks, costs, legal constraints are detailed 💰🛢️⚖️🚮♻️🍂🌍⛰️🌊🌈🌥️☠️.</span></p><p>&nbsp;</p><p>&nbsp;</p><h2><a name="2-our-goals--approach-📚📖💻🎓" class="md-header-anchor"></a><span>2. OUR GOALS &amp; APPROACH| 📚📖💻🎓</span></h2><blockquote><p><span>FITNess stands for &quot;</span><em><span>Food packaging open courseware for higher education and staff of companies</span></em><span>&quot;. It is a part of an ERASMUS+ Programme funded by the EU Commission (contract 2017-1-FR01-KA202-037441). The starting point of the project is that the challenges posed by food packaging (waste, food and packaging safety, food waste, food prices) need to be addressed through better education of future and current professionals.</span></p></blockquote><p><span>The concept of </span><strong><span>FITNess version 1️⃣</span></strong><span> (this version, </span><a href='https://fitness.agroparistech.fr/' target='_blank' class='url'>https://fitness.agroparistech.fr/</a><span>) is based on three pillars:</span></p><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><strong><span>A  </span>&#9989;<span> validated content</span></strong><span> (quality, rigor, and openness) covering all essential aspects of food packaging for two levels (novice and advanced);</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>An 🔓 </span><strong><span>open-source distribution format</span></strong><span>, which can be read on any terminal and even as a PowerPoint replacement product for teaching classrooms. All interactive and non-interactive WEB documents are supported and can be run with or without a server.</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>A 🔍</span><strong><span>search engine</span></strong><span> adapted to blended-learning education.</span></p></li></ul><p><span>The organization in two levels </span><kbd><span>common</span></kbd><span> | </span><kbd><span>specialized</span></kbd><span> is arbitrary and do not represent necessarily an indication on the level of difficulty. They notify whether recent scientific results are used or not. </span><kbd><span>Common</span></kbd><span> contents do not require any specific technical or scientific background. </span><kbd><span>Specialized</span></kbd><span> content are specific and therefore more </span><kbd><span>advanced</span></kbd><span>. The different sections and units are less connected together. They can be read in arbitrary order based on your interests and needs. Our intent was not to be </span><u><span>exhaustive</span></u><span>, but to propose sufficient materials to resolve real problems associated to food packaging: design, compliance, risk and impact assessment... Though the content was prepared by experts in the field, the content cannot be considered authoritative and cannot replace the scientific literature or reference text books.</span></p><blockquote><p><span>The content is provided &quot;AS IS&quot;. We are diligent to improve the quality of the content and of the experience.  </span></p></blockquote><p><img src="images/responsibleFITNess.png" alt="overview" style="zoom: 20%;" /></p><p>&nbsp;</p><p>&nbsp;</p><h2><a name="3-fitness-platform-at-a-glance--👁️" class="md-header-anchor"></a><span>3. FITNESS PLATFORM AT A GLANCE | 👁️</span></h2><h3><a name="31-everything-in-54--⏱" class="md-header-anchor"></a><span>3.1 Everything in 54&#39;&#39; | ⏱</span></h3><video width="100%" controls="controls" poster="./videos/conv4web_fitness_overview.jpg" preload="auto">
+    <source type="video/webm" src="./videos/conv4web_fitness_overview.webm">
+    <source type="video/mp4" src="./videos/conv4web_fitness_overview.mp4">
+</video><p><span>👷</span><small><span>The video was recorded with an oldest version of the platform FITNess (version 2️⃣01️⃣9). 🎁 Check below the new content and features of FITNess 🎂2️⃣02️⃣0.</span></small></p><h3><a name="32-welcome-screen--😊" class="md-header-anchor"></a><span>3.2 Welcome screen | 😊</span></h3><p><span>FITNess works within your web-browser online or offline: no installation, no password, no tracking.</span></p><p><br><img src="images/Slide4.PNG" alt="PPT" style="zoom:67%;" /><br></p><blockquote><p><span>👍 The platform is organized as an </span><kbd><span>APP</span></kbd><span>, you can reach all the proposed content from one single page. 💡 The platform integrates its own search engine, but you can ask </span><kbd><span>Google</span></kbd><span> what it knows from any topic using the platform FITNess.</span></p><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><small><span>Example 1: </span><a href='https://www.google.com/search?q=diffusion&amp;sitesearch=fitness.agroparistech.fr' target='_blank' class='url'>https://www.google.com/search?q=diffusion&sitesearch=fitness.agroparistech.fr</a><span> (search the word </span><strong><span>diffusion</span></strong><span>)</span></small></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><small><span>Example 2: </span><a href='https://www.google.com/search?q=bottle+site%A3fitness.agroparistech.fr&amp;tbm=isch' target='_blank' class='url'>https://www.google.com/search?q=bottle+site%A3fitness.agroparistech.fr&tbm=isch</a><span> (search the image of a </span><strong><span>bottle</span></strong><span>)</span></small></p></li></ul><p><span>Take the benefit of the permissive license of FITNess content.</span></p></blockquote><h3><a name="33-it-works-with-all-screens--📲" class="md-header-anchor"></a><span>3.3 It works with all screens | 📲</span></h3><p><span>The interface is intuitive and accessible at the tips of your fingers. </span><strong><span>Learn whenever 🕗🕓📅 and wherever 🏡🏖️🌴🏢🏫 you want</span></strong><span>.</span></p><p><br><img src="images/Slide5.PNG" alt="PPT" style="zoom:67%;" /><br></p><blockquote><p><span>👍 We recommend the users to select a terminal, which is adapted to your eyes and fingers.</span></p></blockquote><h3><a name="34-an-adaptive-interface--🏫🏭12796365039" class="md-header-anchor"></a><span>3.4 An adaptive interface | 🏫🏭</span>&#127963;&#65039;</h3><p><span>The interface is intuitive and adapts to the needs and context whether you are a 👩‍🎓👨‍🎓 student/learner who is being followed by a 👩‍🏫👨🏽‍🏫 teacher/trainer, an 🧍🧍‍♀️🧍‍♂️🤰 autodictate, a 👷👨‍🔧👨‍🔬👨‍🍳👨‍🌾👨‍💼 professional updating his knowledge, or a teacher needs a software to deliver his course in a 🏫 classroom or a 🏡📡distance learning environment.</span></p><br><p><img src="images/Slide6.PNG" alt="PPT" style="zoom:67%;" /><br></p><blockquote><p><span>👍 We encourage curiosity, do not hesitate to click on related documents and activities.</span></p></blockquote><h3><a name="35-hundreds-contents-for-self--or-directed--training--🗓️💯" class="md-header-anchor"></a><span>3.5 Hundreds contents for self- or directed- training | 🗓️💯</span></h3><p><span>The content of FITNess is varied and sufficiently developed to offer 2️⃣to 3️⃣📆 months of online training. It is not constructed in a linear sequence and can be followed in an order adapted to each individual&#39;s level and needs. The main index </span>&#128451;&#65039;<span> provides a reading guide built on the basis of progressive 🎚️ level and complexity. </span></p><br><p><img src="images/Slide7.PNG" alt="PPT" style="zoom:67%;" /><br></p><blockquote><p><span>👍 Though we offer a wealth of presentations and videos, we invite trainees and students to take time to read more detailed documents and to follow step-by-step the proposed case-studies.</span></p></blockquote><h3><a name="36-find-relations-on-each-page--🧭🕸️" class="md-header-anchor"></a><span>3.6 Find relations on each page | 🧭🕸️</span></h3><p><span>⛓️🔗 Relations can appear as as linked 📄 documents and ⛳🎣 activities or as 📖 related lectures. Topics offer a free alternative to 🧭discover new contents and lectures.</span></p><br><p><img src="images/Slide8.PNG" alt="PPT" style="zoom:67%;" /><br></p><blockquote><p><span>👍 In presentation mode, press </span><kbd><span>?</span></kbd><span> to list ⌨️ shortcuts. Keys </span><kbd><span>ESC</span></kbd><span> or </span><kbd><span>O</span></kbd><span> gives you access to access to the slide sorter. Note the ⏯️ button to launch the slideshow automatically. The horizontal bar enables to jump to any slide (⏮️⏭️). Arrows ↔️️️ ️(content direction) ↕️ (links) appear automatically to adapt to the content.</span></p></blockquote><p>&nbsp;</p><p>&nbsp;</p><h2><a name="4-how-it-works--8505🧙♂️" class="md-header-anchor"></a><span>4. HOW IT WORKS | </span>&#8505;<span>🧙‍♂️</span></h2><h3><a name="41-workflow-automation--⚙️🐾" class="md-header-anchor"></a><span>4.1 Workflow automation | ⚙️🐾</span></h3><p><span>Most of the content has been prepared using PowerPoint and converted into HTML5, CSS and JavaScript codes. One practical consequences is that the content can be hosted on a Web Server (accessible from everywhere without authentication and installation), read on any smart phone/tablet/PC and combined with all existing Web Technologies (interactive content, indexing, cloning). Currently, ~3,000 slides are searchable, printable, and accessible as a single document for both the learner/student and the teacher. This static content is combined with case-studies and many supplementary materials. A </span><strong><span>dual interface</span></strong><span> enables the teacher/professor to use also a browser for class teaching. </span>
+<img src="images/image1.png" alt="PPT" style="zoom:67%;" /></p><p><span>The vectorial content is preserved to offer the same quality (or even superior) within a web-browser. The search engine written in JavaScript (</span><code>jsonsearch2de()</code><span>) reuses a database (1.2 MB) built during conversion stage using semantic analysis and statistical analysis. The 🕵search occurs in real-time (by typing three letters) directly in the webpage. Additional </span><em><span>metadata</span></em><span> added by the teacher enable to connect all lectures and contents regardless their location in the structure.</span></p><blockquote><p><strong><em><span>Example of the generation of FITNess 2020 (version Dec 21, 2020).</span></em></strong><span> The core of FITNess (version 2020) was built from 115 </span><kbd><span>PPTx</span></kbd><span> documents (&gt;300 slides, obeying to ), which were converted and indexed in about 10-15 mins using three main core programs (open-source, located in the directory make/): </span><code>pptx2reveal()</code><span>, </span><code>extractTXTfromPPT()</code><span> and </span><code>update_content_JSON()</code><span>. Scripts (last one: </span><code>fileid_20201123_20201221</code><span>, </span><code>addsearch2index</code><span>) finalize the assembly of all generated files and attach all related documents (videos, animations, Q&amp;A, case-studies, guidelines). </span></p></blockquote><p><span>The following features have been explicitly considered:</span></p><ul><li><span>One </span><strong><span>single tool</span></strong><span> for teacher (presenter view) and learner (web)</span></li><li><strong><span>No installation</span></strong><span> required (pure Web, responsive </span><em><span>HTML5</span></em><span>, supports all screens, touch-screen interface)</span></li><li><span>Each slide, page, document has its </span><strong><span>own URL</span></strong><span> (</span><em><span>e.g.</span></em><span>, steps to authorize a new substance is shown in </span><kbd><span>Level specialized</span></kbd><span>/</span><kbd><span>Section S3</span></kbd><span>/</span><kbd><span>Unit U3.1</span></kbd><span>/</span><kbd><span>part1</span></kbd><span>#/</span><kbd><span>Slide 7</span></kbd><span>, which reads in shorts: </span><a href='https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S3/U3.1/part1.html#/7'><span>specialized/S3/U3.1/part1.html#/7</span></a></li><li><span>The platform supports </span><strong><span>online</span></strong><span> (no registration, no tracking) and </span><strong><span>offline</span></strong><span> (from 2 to 9 GB) working modes.</span></li><li><strong><span>Open-source</span></strong><span> code, content with permissive licenses</span></li><li><span>Slides and text can be </span><strong><span>edited</span></strong><span> in </span><em><span>Markdown</span></em></li><li><strong><span>Blended learning</span></strong><span>: mixed content, interactive content</span></li><li><em><span>Google</span></em><span>-like Search Engine</span></li><li><span>All documents can be </span><strong><span>printed</span></strong><span> (as </span><em><span>Wikipedia</span></em><span>)</span></li><li><span>Online supports are </span><strong><span>indexed</span></strong><span> by </span><em><span>Google</span></em></li><li><span>Everything is </span><strong><span>cloneable</span></strong></li></ul><blockquote><p><strong><em><span>Server conversion vs. standalone one</span></em></strong><span>. Streamline conversion is agile, efficient and independent of commercial software. It enabled trainers/teachers to be focused on the creation of original contents.  Full traceability is maintained at each stage by embedding metadata on each page/slide and page (source file, version, list of converted objects, text searchable by Google). The content and the structure can be refreshed as many times as required. The workflow combines </span><em><span>prefetch files</span></em><span> and </span><em><span>fingerprints</span></em><span> (hash keys) to determine, which files and branches need to be updated.</span></p></blockquote><h3><a name="42-why-markdown--📑" class="md-header-anchor"></a><span>4.2 Why Markdown? | 📑</span></h3><p><span>Markdown is becoming rapidly a standard on the web. It enables rich-text by using a lightweight markup syntax. Plan-text and Markdown editors can be used to update or to edit the content (to add links, videos, JavaScript code, flowcharts and diagrams written in </span><a href='https://mermaid-js.github.io/mermaid/'><span>Mermaid</span></a><span>, etc.) </span><a href='https://typora.io/'><span>Typora</span></a><span> was chosen as recommended Markdown editor as it free and available across all platforms (OS X, Linux, Windows). </span></p><p><img src="images/image2.png" alt="PPT" style="zoom:67%;" /></p><h3><a name="43-metadata--🔎🔖" class="md-header-anchor"></a><span>4.3 Metadata | 🔎🔖</span></h3><p><span>Metadata are essential to offer an experience of blended learning: you start where, when and how you wish. Their nature is diverse. Firstly, they provide an automatic and human description of each material. They contain also structural and administrative information, such as the type of license, the name, the revision history and the list of authors of the original document.</span></p><p><img src="images/image3.png" alt="metadata" style="zoom:67%;" /></p><p><span>Metadata are organized in a very large database (JSON format), which can be read by a browser and added to the content of a web page. This information is used to offer new capabilities: such as extracting all documents related together or containing a specific keyword. The depicted example (below) is showing how the equation of Piringer can be retrieved and visualized from the multiple content of FITNess.</span></p><p><img src="images/image4.png" alt="metadata" style="zoom:67%;" /></p><p><span>Ninety percent of metadata are extracted automatically from documents (PPTx, PDF...).  Specific contents such as abstracts, topics, recommended readings require the contribution of the teacher/professor. A specific interface is proposed to revise the default values of metadata. A robot merge the different versions to smooth conflicts and reach a consistent database.</span></p><p><img src="images/image5.png" alt="metadata" style="zoom:67%;" /></p><p>&nbsp;</p><p>&nbsp;</p><h2><a name="5-how-to-use-it--👥" class="md-header-anchor"></a><span>5. HOW TO USE IT | 👥</span></h2><h3><a name="51-browsing--🕵️♀️🕵️♂️" class="md-header-anchor"></a><span>5.1 Browsing | 🕵️‍♀️🕵️‍♂️</span></h3><p><span>The main content of FITNess is proposed as a single index corresponding to a suggestion of a full curriculum. Alternatively, a lecture can be found by entering keywords and/or following suggested topics. The content of FITNess is vast and interdisciplinary. The contributors think that the structured and specific approaches of learning are both valuable. As a rule of thumb, starts by the table of content when you need to learn progressively and type in the search area as soon as you are looking for something more specific. Clicking on search by keywords activates a full search on all slides.</span></p><p><img src="images/image6.png" alt="metadata" style="zoom:67%;" /></p><h3><a name="52-learning--👩🎓👨🎓" class="md-header-anchor"></a><span>5.2 Learning | 👩‍🎓👨‍🎓</span></h3><p><span>Most of the lectures are provided as a slideshow very similar to PowerPoint. The main difference is that the progression (backward and forward) can be done horizontally (as in PowerPoint: main slides) and vertically. Vertical slides are slides generated automatically to offer a table of content and connections with previous and next lectures. Press </span><kbd><span>?</span></kbd><span> to list all available options. For example, </span><kbd><span>O</span></kbd><span> is used to activate the overview (slide sorter in PowerPoint).</span></p><p><img src="images/image7.png" alt="metadata" style="zoom:67%;" /></p><h3><a name="53-teaching-and-learning--👩🏫👨🏫" class="md-header-anchor"></a><span>5.3 Teaching and learning | 👩‍🏫👨‍🏫</span></h3><p><span>Each presentation includes a presenter mode (</span><kbd><span>P</span></kbd><span>) enabling a display on dual screens or screen+beamer. The presenter mode is showing the notes, the elapsed time, the next slide... The layout can be changed. Pressing </span><kbd><span>Ctrl</span></kbd><span>+</span><kbd><span>P</span></kbd><span> prints the entire document or a specific slide.</span></p><p><img src="images/image8.png" alt="metadata" style="zoom:67%;" /></p><p>&nbsp;</p><p>&nbsp;</p><h2><a name="6-how-to-clone-fitness-or-to-run-it-offline--📴" class="md-header-anchor"></a><span>6. HOW TO CLONE FITNESS OR TO RUN IT OFFLINE | 📴</span></h2><h3><a name="61-download-procedure--⬇️" class="md-header-anchor"></a><span>6.1 Download procedure | ⬇️</span></h3><p><span>The FITNess platform combines computer code (client and server sides, on-line and off-lines), teaching (HTML, Markdown, SVG, PNG) material and activities (Q&amp;A, case-studies, guidelines, videos...). The 🗄️ entire content of FITNess (with sources) is released as 🗜️ ZIP packages with (~3.5 GB, </span><em><span>without movies and animations</span></em><span>) and without videos (~18 GB, </span><em><span>all included</span></em><span>).  The ⬇️ </span><strong><span>download page</span></strong><span> is called </span><code>Zip/</code><span>; it is accessible from the welcome page or with this link: </span><a href='https://fitness.agroparistech.fr/fitness/zip/?C=M;O=D'><span>https://fitness.agroparistech.fr/fitness/zip</span></a><span>.</span></p><blockquote><p><span>Sort the files by date or size by clicking on the corresponding column titles </span><kbd><span>Last modified</span></kbd><span> or </span><kbd><span>Size</span></kbd><span> and pick the version, which fits your need. Bash scripts are made available to show which files have been excluded.</span></p></blockquote><p><br><img src="images/Slide9.PNG" alt="PPT" style="zoom:67%;" /><br></p><blockquote><p><span>Original PowerPoint files are not provided as it was decided to distribute only 🌐 WEB compliant files. All slides are available as JPG (raster images) and SVG (vectorial images) in the 📂 folders </span><code>src_part1/, src_part2/...</code><span> corresponding to the considered part. The text is available in the original MarkDown files next to the 📄 original files </span><code>part1.html, part2.html....</code></p></blockquote><h3><a name="62-running-off-line--💤" class="md-header-anchor"></a><span>6.2 Running off-line | 💤</span></h3><p><span>You do not it any </span>&#128423;<span> webserver to 🛫 launch the FITNess platform content. You just need to ⬇️ download everything (see </span><strong><span>§6.1</span></strong><span>), open the 📂 folder </span><code>lectures/</code><span> and start the application by clicking on the 📄 file </span><code>index.html</code><span>. No installation is needed and it runs on Windows, Linux, Mac with a modern </span>&#128468;<span> Web browser. Eligible browsers must use the render engine WebKit or Chromium such as: Google Chrome, FireFox, Safari, Microsoft Edge based on Chromium... Internet Explorer is not supported.</span></p><blockquote><p><span>We use a🏳️🏴 dual technology enabling FITNess to run within a webserver (Apache for us on Ubuntu 18.04 for development and CentOS 8 for production) or without. </span><strong><span>All URLs are indeed relative and not absolute, asynchronous connections to the server are replaced by a faked server when the system goes offline</span></strong><span> 💤. </span></p></blockquote><h3><a name="63-cloning-fitness--🤳" class="md-header-anchor"></a><span>6.3 Cloning FITNess | 🤳</span></h3><p><span>The platform FITNess has been designed to be easily duplicated as needed from a 🗜️ ZIP package. The 📐flexible architecture enables to ⚓anchor the server to any 🗁 place of an existing </span>&#128423;<span> webserver (with several GB of free space). There is no special security configuration required as 🚫 no information is sent back to the server. All 🕀 interactions run within on the client side with ✔️ proper JavaScript codes included in each 📦 package.</span></p><blockquote><p><span>FITNess runs on </span><a href='https://fitness.agroparistech.fr' target='_blank' class='url'>https://fitness.agroparistech.fr</a><span> within a VirtualHost directory </span><code>conf.d/</code><span> in Apache. We use a customized version of </span>&#128479;<span> fancy-index to render </span>&#128486;<span>nicely</span>&#128487;<span> the content of each folder with a uniform </span>&#128445;<span> layout between all </span>&#128464;<span> pages of FITNess. </span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="sh" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="sh"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 46.2153px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 34px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>35</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -33.9931px; width: 34px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">#Fitness configuratop, (partial description due to security reason)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment"># $ INRA\Olivier Vitrac - rev. 2020/12/30 $</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Alias /fitness/ <span class="cm-string">"/##############/fitness2020/www/"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;Directory <span class="cm-string">"/##############/fitness2020/www/"</span>&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment"># index options (we keep visible only files associated to lectures)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>Options FollowSymlinks Indexes MultiViews</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>IndexOptions <span class="cm-def">Charset</span><span class="cm-operator">=</span>UTF-8 <span class="cm-operator">+</span>FoldersFirst <span class="cm-operator">+</span>IgnoreCase <span class="cm-operator">+</span>ScanHTMLTitles</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>IndexOptions IgnoreCase FancyIndexing HTMLTable SuppressHTMLPreamble FoldersFirst VersionSort <span class="cm-def">NameWidth</span><span class="cm-operator">=</span>* <span class="cm-def">DescriptionWidth</span><span class="cm-operator">=</span>* XHTML</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>IndexOptions <span class="cm-def">IconHeight</span><span class="cm-operator">=</span><span class="cm-number">32</span> <span class="cm-def">IconWidth</span><span class="cm-operator">=</span><span class="cm-number">32</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>IndexIgnoreReset ON</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>IndexIgnore .ftpquota .DS_Store .git *.ico *~ *<span class="cm-comment"># *.asv *.bak *.sav *.json *.js </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>[.... removed lines]</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>IndexOrderDefault Ascending Name</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment"># style (we apply a very similar style to all pages of FITNess including index)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>IndexStyleSheet /fitness/fancy-index/style.css</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>HeaderName /fitness/fancy-index/header.html</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>ReadmeName /fitness/fancy-index/footer.html</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment"># Fitness descriptions (a description is added to all files)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>AddDescription <span class="cm-string">"internal lectures of AgroParisTech"</span> */AgroParisTech</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>AddDescription <span class="cm-string">"Lectures not included in Fitness"</span> */external</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>AddDescription <span class="cm-string">"Safe Food Packaging Portal version 3"</span> SFPP3 sfpp3</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>[.... removed lines]</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>AddDescription <span class="cm-string">"interactive content in HTML"</span> .html</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>AddDescription <span class="cm-string">"Markdown source file (see HTML version)"</span> .md .MD</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>[.... removed lines]</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>AddDescription <span class="cm-string">"assets"</span> */src</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>AddDescription <span class="cm-string">"Fitness source code"</span> */make</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>AddDescription <span class="cm-string">"&lt;b&gt;MAIN LECTURE FOLDER&lt;/b&gt;"</span> */lectures</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>AddDescription <span class="cm-string">"&lt;b&gt;Lecture content in HTML&lt;/b&gt;"</span> */html</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment"># icons (all icons are shown in SVG)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">31</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>[.... removed lines]</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">32</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span><span class="cm-comment"># authorizations</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">33</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" class="cm-tab-wrap-hack" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>AllowOverride none<span class="cm-tab" role="presentation" cm-text="	">  </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">34</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tab" role="presentation" cm-text="	">    </span>Require all granted</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.9931px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">35</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">&lt;/Directory&gt;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 870px;"></div><div class="CodeMirror-gutters" style="height: 870px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 34px;"></div></div></div></div></pre><p><span>🆘</span><small><span>Send an 📧 e-mail to </span><a href='mailto:olivier.vitrac@agroparistech.fr'><span>Olivier Vitrac</span></a><span> if you need assistance during duplication.</span></small></p></blockquote><p>&nbsp;</p><p>&nbsp;</p><h2><a name="7-how-to-revise-or-add-content-🙋🏻♀️🎗️✏️" class="md-header-anchor"></a><span>7. HOW TO REVISE OR ADD CONTENT| 🙋🏻‍♀️🎗️✏️</span></h2><h3><a name="71-license-🔓©🖼" class="md-header-anchor"></a><span>7.1 License 🔓©🖼</span></h3><p><span>The 🖼️ content of FITNess is 🆓 and released on permissive licenses (</span><a href='[Creative Commons license - Wikipedia](https://en.wikipedia.org/wiki/Creative_Commons_license#Four_rights)'><span>Creative Commons version 4.0</span></a><span>: </span><kbd><span>CC</span></kbd><span>). The content of FITNess is publicly © copyrighted (free distribution). </span></p><blockquote><p><span>The © rights associated to the content of FITNess depends on the document and on the author. Please, check all the time the license associated to it. In case of doubts ,contact the author or the administrator of the platform.</span></p><p><span>In absence of license </span><kbd><span>CC</span></kbd><span> </span><kbd><strong><span>BY</span></strong></kbd><span>-</span><strong><kbd><span>NC</span></kbd></strong><span>-</span><kbd><strong><span>SA</span></strong></kbd><span> holds (Attribution, Non-Commercial, Share-alike). For some works, the previous license is replaced by a more restrictive one: </span><kbd><span>CC</span></kbd><span> </span><kbd><strong><span>BY</span></strong></kbd><span>-</span><strong><kbd><span>ND</span></kbd></strong><span>-</span><kbd><strong><span>SA</span></strong></kbd><span> holds (Attribution, Non-Derivative, Share-alike).</span></p><blockquote><blockquote><p><strong><span>Meaning of clauses</span></strong><span> </span><kbd><span>CC</span></kbd><span> 4.0 | </span><em><span>Remember that our work is non-commercial and educational.</span></em></p></blockquote><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><kbd><strong><span>BY</span></strong></kbd><span> Credit must be given to the author and the affiliated institution. </span><strong><span>We add that you have to acknowledge that the content and the tools have been partly funded by the European Commission under the contract  </span><a href='https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2017-1-FR01-KA202-037441'><span>2017-1-FR01-KA202-037441</span></a><span>.</span></strong></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><kbd><strong><span>NC</span></strong></kbd><span> You copy, distribute, display, and perform the work and make derivative works and remixes based on it only for </span><a href='https://en.wikipedia.org/wiki/Non-commercial'><span>non-commercial</span></a><span> purposes.</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><kbd><strong><span>ND</span></strong></kbd><span> You copy, distribute, display and perform only verbatim copies of the work, not </span><a href='https://en.wikipedia.org/wiki/Derivative_work'><span>derivative works</span></a><span> and </span><a href='https://en.wikipedia.org/wiki/Remix_culture'><span>remixes</span></a><span> based on it. Since version 4.0, derivative works are allowed but must not be shared.</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><kbd><strong><span>SA</span></strong></kbd><span> You may distribute derivative works only under a license identical (&quot;</span><em><span>not more restrictive</span></em><span>&quot;) to the license that governs the original work.</span></p></li></ul></blockquote></blockquote><h3><a name="72-minor-revisions-and-derivative-works--🛩️" class="md-header-anchor"></a><span>7.2 Minor revisions and derivative works | 🛩️</span></h3><p><span>Minor revisions and derivations are easily to perform as the entire platform and content relies on web technologies. All files are TEXT files or IMAGES or VIDEOS and interpreted by your browser, not by the server. All documents can be edited and updated on the platform (nothing is hidden,  </span><kbd><span>CTRL</span></kbd><span>+</span><kbd><span>U</span></kbd><span> on any page will show you the code). </span></p><blockquote><p><span>HTML 5 documents with complex interactions are not easy to modify. You need a good text editor, such as </span><a href='https://code.visualstudio.com/'><span>Visual Studio Code</span></a><span>, it is free and available on all systems. For presentations and text works, we recommend an alternative is to modify the native </span><kbd><span>Markdown</span></kbd><span> document, which has been used to generate the corresponding HTML 5. Standard  </span><kbd><span>Markdown</span></kbd><span> documents are used for text (usually written with </span><a href='https://typora.io/'><span>Typora</span></a><span>, free while in beta version). A </span><a href='https://github.com/webpro/reveal-md'><span>flavored </span><kbd><span>Markdown</span></kbd></a><span> is used to create animated presentations using the </span><a href='https://revealjs.com/'><span>the HTML presentation framework | reveal.js</span></a><span>.</span></p><blockquote><p><span>Example: To modify the presentation </span><a href='https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.html#/'><span>common&gt;S4&gt;U4.3&gt;part1</span></a><span> on &quot;Smart Packaging&quot;, replaces in the URL the extension </span><kbd><span>.html</span></kbd><span> by </span><kbd><span>.md</span></kbd><span>:</span></p><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><a href='https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.html' target='_blank' class='url'>https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.html</a></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>by </span><a href='https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.md' target='_blank' class='url'>https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.md</a></p></li></ul><blockquote><p><span>The content reads easily. Slides are added vertically (</span><!--v--><span>) or horizontally (</span><!--s--><span>).</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="markdown" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="markdown"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 46.2153px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 34px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>70</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -33.993px; width: 34px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-hr">---</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">2</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">title: 'common&gt;S4&gt;U4.3&gt;part1'</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">3</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">separator: &lt;!--s--&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">4</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">verticalSeparator: &lt;!--v--&gt;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">5</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">theme: moon</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">6</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">revealOptions:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">7</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> transition: 'convex'</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">8</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> backgroundTransition: 'fade'</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">9</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> viewDistance: 5</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">10</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> center: false</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">11</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[.... removed lines]</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">12</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> maxScale: 3</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">13</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> display: 'block'</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">14</div></div><pre class=" cm-yaml CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> transitionSpeed: 'default'</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-hr">---</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-hr">___</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">17</div></div><pre class=" cm-header cm-header2 CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" cm-header cm-header2">## Smart packaging - INNOVATIONS IN FOOD PACKAGING</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">18</div></div><pre class=" cm-header cm-header3 CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" cm-header cm-header3">### Maria Jose Fabra</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-hr">___</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> version: production (0.331)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> date: December 29, 2020</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> content: 37 slides</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> class: common&gt;S4&gt;U4.3&gt;part1</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> title: Smart packaging - INNOVATIONS IN FOOD PACKAGING</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> source: CO_4_3<span class="cm-em">_ BA_IN_Va_CSIC.pptx</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-em">hash: 92d9d09a92855d8b57090b47c1bbbae7</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-em">contact: olivier.vitrac@agroparistech.fr</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">28</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-em cm-del">~~~~</span><span class="cm-em">[REMOVED LINES]</span><span class="cm-em cm-del">~~~~</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">29</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">30</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!--v--&gt;</span>---</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">31</div></div><pre class=" cm-header cm-header1 CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" cm-header cm-header1"># CONTENT</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">32</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-hr">---</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">33</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[1/37]</span> <span class="cm-string">[Slide 01/37]</span>(#/1)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">34</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[2/37]</span> <span class="cm-string">[Unit 4.3]</span>(#/2)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">35</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[3/37]</span> <span class="cm-string">[Slide 03/37]</span>(#/3)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">36</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[4/37]</span> <span class="cm-string">[Smart]</span>(#/4)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">37</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[5/37]</span> <span class="cm-string">[Applications]</span>(#/5)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">38</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[6/37]</span> <span class="cm-string">[Measuring the condition of the package on the outside]</span>(#/6)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">39</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[7/37]</span> <span class="cm-string">[Indicators]</span>(#/7)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">40</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[8/37]</span> <span class="cm-string">[Substances that indicate the presence or absence of another substance or the degree of reaction between two or more substances [...]</span>](#/8)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">41</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[9/37]</span> <span class="cm-string">[Time-temperature indicator (tti)]</span>(#/9)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">42</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[10/37]</span> <span class="cm-string">[Time-temperature indicator]</span>(#/10)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">43</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">* &nbsp;<span class="cm-link">[11/37]</span> <span class="cm-string">[Time-temperature indicator]</span>(#/11)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">44</div></div><pre class=" cm-header cm-header2 CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" cm-cm-header cm-cm-header2">* &nbsp;</span><span class=" cm-cm-header cm-cm-header2 cm-link">[12/37]</span> <span class=" cm-cm-header cm-cm-header2 cm-string">[Time-temperature indicator]</span><span class=" cm-cm-header cm-cm-header2">(#/12)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">45</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-header cm-header2">---</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">46</div></div><pre class=" cm-header cm-header4 CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" cm-header cm-header4">#### </span><span class=" cm-link cm-header cm-header4">[go back to the main menu (all lectures)]</span><span class=" cm-string">(./../../../../../lectures/html/index.html)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">47</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-hr">---</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">48</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!--v--&gt;</span>---</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">49</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-del">~~~~</span>[REMOVED LINES]<span class="cm-del">~~~~</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">50</div></div><pre class=" cm-header cm-header1 CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" cm-header cm-header1"># slide 03/37</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">51</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">![Slide3.svg]</span><span class="cm-string">(./src_part1/Slide3.svg  "slide 3 of 37")</span> </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">52</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">note: </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">53</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-del">~~~~</span>[REMOVED LINES]<span class="cm-del">~~~~</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">54</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">55</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">content provided AS IS - <span class="cm-link">[report a problem]</span><span class="cm-string">(mailto:olivier.vitrac@agroparistech.fr)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">56</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!--s--&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">57</div></div><pre class=" cm-header cm-header1 CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class=" cm-header cm-header1"># Smart</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">58</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag">![Slide4.svg]</span><span class="cm-string">(./src_part1/Slide4.svg  "slide 4 of 37")</span> </span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">59</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">note: ### A packaging system that is capable of carrying out intelligent functions like - Detecting Sensing</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">60</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Recording</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">61</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Tracing</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">62</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Communicating</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">63</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Applying scientific logic</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">64</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">65</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-del">~~~~</span>[REMOVED LINES]<span class="cm-del">~~~~</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">66</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">67</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">68</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">content provided AS IS - <span class="cm-link">[report a problem]</span><span class="cm-string">(mailto:olivier.vitrac@agroparistech.fr)</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 26px;">69</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">&lt;!--s--&gt;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -33.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 26px;">70</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 1663px;"></div><div class="CodeMirror-gutters" style="height: 1663px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 34px;"></div></div></div></div></pre></blockquote><p><span>🆘The file above has been generated automatically with </span><code>ppt2reveal_v2</code><span>, but it can edited and 📧 send back to </span><a href='mailto:olivier.vitrac@agroparistech.fr'><span>Olivier Vitrac</span></a><span>. The conversion to HTML 5 is performed command line (syntax in Bash, assuming </span><code>node.js</code><span> 10.x or later installed, as well as </span><code>reveal-md</code><span>, current version 4.3):</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="bash"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="bash"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 38.2205px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 26px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -25.9983px; width: 26px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -25.9983px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">reveal-md <span class="cm-def">$markdonwfile</span> <span class="cm-attribute">--static</span> <span class="cm-def">$staticpage</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="height: 23px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><span>For Typora files, choose File</span>&rarr;<span>Export</span>&rarr;<span>Html.</span></p></blockquote><p><span>⚠️The platform does not accept direct upload to the server. You need an account with valid credentials to change the content on the platform. On your personal duplicate of the platform, you do not suffer similar constraints.</span></p></blockquote><h3><a name="73-major-updates--✈️" class="md-header-anchor"></a><span>7.3 Major updates | ✈️</span></h3><p><span>It is not recommended to apply large modifications (insertions, replacements, new structures) using the previous methodology. 🖇️Dependencies and 👣 metadata will not be properly managed. The ⚙️ process to generate automatically the entire platform is complex and is quite complex. The ⛓️ workflow used to generate the version of December 21</span><sup><span>st</span></sup><span>, 2020 is shown as an illustration. The final result has the size of 15 GB (excluding all prefetch files) and require several minutes to be completed on a fast computer (16 cores). Videos require proper encoding to be watched on any support.</span></p><div class="md-diagram-panel"><svg id="mermaidChart1014" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="1492.9530029296875" style="max-width: 971.469px; height: 1532.95px;" viewBox="0 0 971.4686889648438 1492.9530029296875" class="md-require-zoom-fix"><style>#mermaidChart1014{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:8.888888535676193px;fill:#333333;}#mermaidChart1014 .error-icon{fill:hsl(60,100%,100%);}#mermaidChart1014 .error-text{fill:rgb(0,0,0);stroke:rgb(0,0,0);}#mermaidChart1014 .edge-thickness-normal{stroke-width:2px;}#mermaidChart1014 .edge-thickness-thick{stroke-width:3.5px;}#mermaidChart1014 .edge-pattern-solid{stroke-dasharray:0;}#mermaidChart1014 .edge-pattern-dashed{stroke-dasharray:3;}#mermaidChart1014 .edge-pattern-dotted{stroke-dasharray:2;}#mermaidChart1014 .marker{fill:#000000;}#mermaidChart1014 .marker.cross{stroke:#000000;}#mermaidChart1014 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:8.888888535676193px;}#mermaidChart1014 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaidChart1014 .label text{fill:#333;}#mermaidChart1014 .node rect,#mermaidChart1014 .node circle,#mermaidChart1014 .node ellipse,#mermaidChart1014 .node polygon,#mermaidChart1014 .node path{fill:#ECECFF;stroke:hsl(240,60%,86.2745098039%);stroke-width:1px;}#mermaidChart1014 .node .label{text-align:center;}#mermaidChart1014 .node.clickable{cursor:pointer;}#mermaidChart1014 .arrowheadPath{fill:undefined;}#mermaidChart1014 .edgePath .path{stroke:#000000;stroke-width:1.5px;}#mermaidChart1014 .flowchart-link{stroke:#000000;fill:none;}#mermaidChart1014 .edgeLabel{background-color:#f4f4f4;text-align:center;}#mermaidChart1014 .edgeLabel rect{opacity:0.5;background-color:#f4f4f4;fill:#f4f4f4;}#mermaidChart1014 .cluster rect{fill:hsl(60,100%,100%);stroke:hsl(60,60%,90%);stroke-width:1px;}#mermaidChart1014 .cluster text{fill:rgb(0,0,0);}#mermaidChart1014 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(60,100%,100%);border:1px solid undefined;border-radius:2px;pointer-events:none;z-index:100;}#mermaidChart1014:root{--mermaid-font-family:sans-serif;}#mermaidChart1014:root{--mermaid-alt-font-family:sans-serif;}#mermaidChart1014 flowchart{fill:apa;}</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-ed LE-down" id="L-ed-down" style="opacity: 1;"><path class="path" d="M615.0976524353027,101.796875L615.0976524353027,163.6953125L615.0976524353027,225.59375" marker-end="url(#arrowhead35778)" style=" stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead35778" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-add LE-down" id="L-add-down" style="opacity: 1;"><path class="path" d="M799.7148399353027,101.796875L799.7148399353027,163.6953125L694.6795120189951,225.59375" marker-end="url(#arrowhead35779)" style="fill:none"></path><defs><marker id="arrowhead35779" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-ods LE-proj" id="L-ods-proj" style="opacity: 1;"><path class="path" d="M138.43358993530273,319.390625L138.43358993530273,381.2890625L329.82421875,502.37067514819216" marker-end="url(#arrowhead35780)" style="fill:none"></path><defs><marker id="arrowhead35780" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-m LE-proj" id="L-m-proj" style="opacity: 1;"><path class="path" d="M396.40233993530273,319.390625L396.40233993530273,381.2890625L384.64598649001596,443.1875" marker-end="url(#arrowhead35781)" style=" stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead35781" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-down LE-proj" id="L-down-proj" style="opacity: 1;"><path class="path" d="M615.0976524353027,319.390625L615.0976524353027,381.2890625L407.63671875,503.97620415857114" marker-end="url(#arrowhead35782)" style=" stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead35782" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-proj LE-sandbox" id="L-proj-sandbox" style="opacity: 1;"><path class="path" d="M400.4109806909888,610.78125L423.8125,672.6796875L423.8125,734.578125" marker-end="url(#arrowhead35783)" style="fill:none"></path><defs><marker id="arrowhead35783" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-proj LE-mauto" id="L-proj-mauto" style="opacity: 1;"><path class="path" d="M329.82421875,564.3046772529126L216.84375,672.6796875L216.84375,734.578125" marker-end="url(#arrowhead35784)" style=" stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead35784" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-mauto LE-content" id="L-mauto-content" style="opacity: 1;"><path class="path" d="M216.84375,828.375L216.84375,890.2734375L365.1370700171591,989.0703125" marker-end="url(#arrowhead35785)" style="fill:none"></path><defs><marker id="arrowhead35785" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-sandbox LE-content" id="L-sandbox-content" style="opacity: 1;"><path class="path" d="M423.8125,828.375L423.8125,890.2734375L431.7590554453322,989.0703125" marker-end="url(#arrowhead35786)" style="fill:none"></path><defs><marker id="arrowhead35786" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-usr LE-content" id="L-usr-content" style="opacity: 1;"><path class="path" d="M623.1484375,828.375L623.1484375,890.2734375L495.92408482023166,989.0703125" marker-end="url(#arrowhead35787)" style="fill:none"></path><defs><marker id="arrowhead35787" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-proj LE-www" id="L-proj-www" style="opacity: 1;"><path class="path" d="M329.82421875,545.0915275498809L55.6796875,672.6796875L55.6796875,781.4765625L55.6796875,890.2734375L55.6796875,1035.96875L55.6796875,1181.6640625L406.38671493530273,1337.342907760495" marker-end="url(#arrowhead35788)" style=" stroke-width: 3.5px;fill:none"></path><defs><marker id="arrowhead35788" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-proj LE-index" id="L-proj-index" style="opacity: 1;"><path class="path" d="M407.63671875,538.5486930653418L858.8984336853027,672.6796875L858.8984336853027,781.4765625L858.8984336853027,890.2734375L858.8984336853027,952.171875" marker-end="url(#arrowhead35789)" style="fill:none"></path><defs><marker id="arrowhead35789" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-content LE-www" id="L-content-www" style="opacity: 1;"><path class="path" d="M435.53125,1082.8671875L435.53125,1181.6640625L446.2056305459483,1243.5625" marker-end="url(#arrowhead35790)" style="fill:none"></path><defs><marker id="arrowhead35790" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-index LE-www" id="L-index-www" style="opacity: 1;"><path class="path" d="M858.8984336853027,1119.765625L858.8984336853027,1181.6640625L527.6523399353027,1336.0062979865882" marker-end="url(#arrowhead35791)" style="fill:none"></path><defs><marker id="arrowhead35791" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(615.0976524353027,163.6953125)" style="opacity: 1;"><g transform="translate(-63.234375,-36.8984375)" class="label"><rect rx="0" ry="0" width="126.46875" height="73.796875"></rect><foreignObject width="126.4765625" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>PPTX,videos, etc.</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(799.7148399353027,163.6953125)" style="opacity: 1;"><g transform="translate(-48.8671875,-36.8984375)" class="label"><rect rx="0" ry="0" width="97.734375" height="73.796875"></rect><foreignObject width="97.734375" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>any WEB type</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(138.43358993530273,381.2890625)" style="opacity: 1;"><g transform="translate(-16.265625,-36.8984375)" class="label"><rect rx="0" ry="0" width="32.53125" height="73.796875"></rect><foreignObject width="32.5390625" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>alias</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(396.40233993530273,381.2890625)" style="opacity: 1;"><g transform="translate(-53.09375,-36.8984375)" class="label"><rect rx="0" ry="0" width="106.1875" height="73.796875"></rect><foreignObject width="106.1953125" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>matlab/octave</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(615.0976524353027,381.2890625)" style="opacity: 1;"><g transform="translate(-145.6015625,-36.8984375)" class="label"><rect rx="0" ry="0" width="291.203125" height="73.796875"></rect><foreignObject width="291.2109375" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>with videos/, casestudies/, guidance/...</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(423.8125,672.6796875)" style="opacity: 1;"><g transform="translate(-28.25,-36.8984375)" class="label"><rect rx="0" ry="0" width="56.5" height="73.796875"></rect><foreignObject width="56.5078125" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>fileid.m</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(216.84375,672.6796875)" style="opacity: 1;"><g transform="translate(-62.421875,-36.8984375)" class="label"><rect rx="0" ry="0" width="124.84375" height="73.796875"></rect><foreignObject width="124.8515625" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>semantic analysis</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(216.84375,890.2734375)" style="opacity: 1;"><g transform="translate(-93.484375,-36.8984375)" class="label"><rect rx="0" ry="0" width="186.96875" height="73.796875"></rect><foreignObject width="186.9765625" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span><b>update_content_JSON.m</b></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(423.8125,890.2734375)" style="opacity: 1;"><g transform="translate(-93.484375,-36.8984375)" class="label"><rect rx="0" ry="0" width="186.96875" height="73.796875"></rect><foreignObject width="186.9765625" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span><b>update_content_JSON.m</b></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(623.1484375,890.2734375)" style="opacity: 1;"><g transform="translate(-68.4921875,-36.8984375)" class="label"><rect rx="0" ry="0" width="136.984375" height="73.796875"></rect><foreignObject width="136.9921875" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span><b>mergemetadata.m</b></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(55.6796875,890.2734375)" style="opacity: 1;"><g transform="translate(-47.6796875,-36.8984375)" class="label"><rect rx="0" ry="0" width="95.359375" height="73.796875"></rect><foreignObject width="95.3671875" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span>major upload</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(858.8984336853027,781.4765625)" style="opacity: 1;"><g transform="translate(-73.3046875,-36.8984375)" class="label"><rect rx="0" ry="0" width="146.609375" height="73.796875"></rect><foreignObject width="146.6171875" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span><b>addsearch2index.m</b></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(435.53125,1181.6640625)" style="opacity: 1;"><g transform="translate(-63.1796875,-36.8984375)" class="label"><rect rx="0" ry="0" width="126.359375" height="73.796875"></rect><foreignObject width="126.3671875" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span><b>lectures/src/json</b></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-ed-39566" transform="translate(615.0976524353027,54.8984375)" style="opacity: 1;"><rect rx="0" ry="0" x="-53.171875" y="-46.8984375" width="106.34375" height="93.796875" class="label-container" style="fill:#333333;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-43.171875,-36.8984375)"><foreignObject width="86.34375" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">edit all files</div></foreignObject></g></g></g><g class="node default" id="flowchart-down-39567" transform="translate(615.0976524353027,272.4921875)" style="opacity: 1;"><rect rx="5" ry="5" x="-85.6796875" y="-46.8984375" width="171.359375" height="93.796875" class="label-container" style="fill:#0000CC;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-75.6796875,-36.8984375)"><foreignObject width="151.3671875" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">download folder tree</div></foreignObject></g></g></g><g class="node default" id="flowchart-add-39568" transform="translate(799.7148399353027,54.8984375)" style="opacity: 1;"><rect rx="0" ry="0" x="-81.4453125" y="-46.8984375" width="162.890625" height="93.796875" class="label-container" style="fill:#808080;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-71.4453125,-36.8984375)"><foreignObject width="142.8984375" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">add dependent files</div></foreignObject></g></g></g><g class="node default" id="flowchart-ods-39570" transform="translate(138.43358993530273,272.4921875)" style="opacity: 1;"><rect rx="0" ry="0" x="-129.5546875" y="-46.8984375" width="259.109375" height="93.796875" class="label-container" style="fill:#333333;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-119.5546875,-36.8984375)"><foreignObject width="239.1171875" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">edit <b>fileid.ods</b> FITNess config file</div></foreignObject></g></g></g><g class="node default" id="flowchart-proj-39571" transform="translate(368.73046875,526.984375)" style="opacity: 1;"><rect rx="5" ry="5" x="-38.90625" y="-83.796875" width="77.8125" height="167.59375" class="label-container" style="fill:#322289;stroke:#333;stroke-width:4px;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-28.90625,-73.796875)"><foreignObject width="57.8203125" height="147.60000610351562"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">lectures<br> update</div></foreignObject></g></g></g><g class="node default" id="flowchart-m-39572" transform="translate(396.40233993530273,272.4921875)" style="opacity: 1;"><rect rx="0" ry="0" x="-78.4140625" y="-46.8984375" width="156.828125" height="93.796875" class="label-container" style="fill:#333333;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-68.4140625,-36.8984375)"><foreignObject width="136.828125" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">edit <b>fileid.m</b> script</div></foreignObject></g></g></g><g class="node default" id="flowchart-sandbox-39577" transform="translate(423.8125,781.4765625)" style="opacity: 1;"><rect rx="5" ry="5" x="-45.4609375" y="-46.8984375" width="90.921875" height="93.796875" class="label-container" style="fill:#116644;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-35.4609375,-36.8984375)"><foreignObject width="70.9296875" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">static site</div></foreignObject></g></g></g><g class="node default" id="flowchart-mauto-39579" transform="translate(216.84375,781.4765625)" style="opacity: 1;"><rect rx="5" ry="5" x="-44.3828125" y="-46.8984375" width="88.765625" height="93.796875" class="label-container" style="fill:#117700;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-34.3828125,-36.8984375)"><foreignObject width="68.765625" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">metadata</div></foreignObject></g></g></g><g class="node default" id="flowchart-content-39581" transform="translate(435.53125,1035.96875)" style="opacity: 1;"><rect rx="5" ry="5" x="-104.75" y="-46.8984375" width="209.5" height="93.796875" class="label-container" style="fill:#E96900;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-94.75,-36.8984375)"><foreignObject width="189.5078125" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>content_transitional.json</b></div></foreignObject></g></g></g><g class="node default" id="flowchart-usr-39584" transform="translate(623.1484375,781.4765625)" style="opacity: 1;"><rect rx="0" ry="0" x="-103.875" y="-46.8984375" width="207.75" height="93.796875" class="label-container" style="fill:#22A2C9;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-93.875,-36.8984375)"><foreignObject width="187.7578125" height="73.79998779296875"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">user metadata from forms</div></foreignObject></g></g></g><g class="node default" id="flowchart-www-39587" transform="translate(467.01952743530273,1364.2578125)" style="opacity: 1;"><rect rx="0" ry="0" x="-60.6328125" y="-120.6953125" width="121.265625" height="241.390625" class="label-container" style="fill:#981A1A;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-50.6328125,-110.6953125)"><foreignObject width="101.2734375" height="221.40000915527344"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">folders<br><b>lectures/html</b><br><b>lectures/src</b></div></foreignObject></g></g></g><g class="node default" id="flowchart-index-39589" transform="translate(858.8984336853027,1035.96875)" style="opacity: 1;"><rect rx="0" ry="0" x="-104.5703125" y="-83.796875" width="209.140625" height="167.59375" class="label-container" style="fill:#C6392E;"></rect><g class="label" transform="translate(0,0)"><g style="color:#fff;" transform="translate(-94.5703125,-73.796875)"><foreignObject width="189.140625" height="147.60000610351562"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">update<br><b>lectures/html/index.html</b></div></foreignObject></g></g></g></g></g></g></svg></div><blockquote><blockquote><p>&#8505;&#65039;<span> Similar information is included on the platform as README.html, README.pdf and README.md file.</span></p><ul><li><a href='https://fitness.agroparistech.fr/fitness/README.html' target='_blank' class='url'>https://fitness.agroparistech.fr/fitness/README.html</a></li><li><a href='https://fitness.agroparistech.fr/fitness/README.pdf' target='_blank' class='url'>https://fitness.agroparistech.fr/fitness/README.pdf</a></li><li><a href='https://fitness.agroparistech.fr/fitness/README.md' target='_blank' class='url'>https://fitness.agroparistech.fr/fitness/README.md</a></li></ul></blockquote><blockquote><p><span>🎨 The conversion from </span>&#128461;<span> PPTx to </span>&#128442;<span> HTML5  uses an intermediate conversion in </span>&#128464;<span> PDF (and </span>&#128443;<span> PNG files for legacy with the initial behavior). The conversion to PDF is automatic via </span><code>libreoffice --headless --convert-to pdf PPTxfile.pptx</code><span>and the subsequent conversion to PNG via </span><code>convert -density 300x300 PPTxfile.pdf Slide%d.png</code><span> are acceptable options. However, it is recommended to use the export (saveas) features of Microsoft Office 2019/365 to preserve 100% of the appearance of the slides (ex. transparencies, fonts, etc.). All slides were exported with a 300dpi resolution (see </span><a href='https://docs.microsoft.com/en-us/office/troubleshoot/powerpoint/change-export-slide-resolution'><span>How to change the export resolution of a PowerPoint slide</span></a><span>).</span></p></blockquote></blockquote><h3><a name="74-main-developed-tools-server-side--🧰" class="md-header-anchor"></a><span>7.4 Main developed tools (server-side) | 🧰</span></h3><p><span>Several significant tools (server-side) have been developed to automate the conversion of files, the creation of metadata and the generation of the entire website and to maintain 🧷versioning and traceability of all actions. All developments have be made with Linux Ubuntu LTS 18.04 in mind, they may work on other distributions, Windows and MacOS with little modifications.</span></p><blockquote><p><span>🖿 The main developed tools (which have been made public) are located in the make folder: </span><a href='https://fitness.agroparistech.fr/fitness/make/'><span>https://fitness.agroparistech.fr/fitness/make/</span></a></p><blockquote><p><span>🛠️All the tools in this folder are released under the </span><a href='https://www.gnu.org/licenses/gpl-3.0.en.html'><span>GNU General Public License v3.0</span></a><span>. </span><mark><em><span>We attract your attention on article 15 and on the absence of Warranty of any kind.</span></em></mark></p><blockquote><p><span>⚖️</span><strong><span>15. Disclaimer of Warranty</span></strong></p><p><span>THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW. EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.</span></p></blockquote><p><span>⚡</span><mark><span>Please use these tools with care, they are moving/deleting, writing, modifying files and folders</span></mark><span>. The use of relative paths instead of absolute paths require a careful definition of server fitness via its </span><code>fileid_###.ods</code><span> file. The language </span><kbd><span>alias()</span></kbd><span> has bee developed to avoid mistakes. The syntax is close to Bash, but with object methods and capabilities mimicking the features of PowerShell of Microsoft. It is used now in our group to manage simulation scripts in our researches.</span></p></blockquote></blockquote><figure><table><thead><tr><th><span>🔧🔨Tools (main)</span></th><th><span>🗒️ Short description</span></th><th><span>🔗 Main dependencies</span></th></tr></thead><tbody><tr><td><a href='https://fitness.agroparistech.fr/fitness/make/fileid_20201123_20201221.ods'><span>fileid_20201123_20201221.ods</span></a></td><td>&#128451;&#65039;<span> last full website definition</span></td><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/alias.m'><span>alias.m</span></a></td></tr><tr><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/fileid_20201123_20201221.m'><span>fileid_20201123_20201221.m</span></a></td><td>&#128451;&#65039;<span> last website script engine</span></td><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/extractTXTfromPPT.m'><span>extractTXTfromPPT.m</span></a><br><a href='https://fitness.agroparistech.fr/fitness/make/matlab/pptx2reveal_v2.m'><span>pptx2reveal_v2.m</span></a></td></tr><tr><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/alias.m'><span>alias.m</span></a></td><td>&#128488;<span> scripting language (full class) to generate the entire website</span></td><td><span>none</span></td></tr><tr><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/update_content_JSON.m'><span>update_content_JSON.m</span></a></td><td>&#128373;<span> script  to manage and update all metadata (fully automatic)</span></td><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/alias.m'><span>alias.m</span></a></td></tr><tr><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/mergemetadata.m'><span>mergemetadata.m</span></a></td><td><span>👌 script to mitigate existing data and those generated by authors using the </span><a href='https://fitness.agroparistech.fr/fitness/lectures/modifyLectures/index.html'><span>online interface</span></a></td><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/alias.m'><span>alias.m</span></a></td></tr><tr><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/addsearch2index.m'><span>addsearch2index</span></a></td><td><span>🔎 Add the search engine to the main index generated by </span><a href='https://fitness.agroparistech.fr/fitness/make/fileid_20201123_20201221.ods'><span>fileid_20201123_20201221.ods</span></a></td><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/alias.m'><span>alias.m</span></a></td></tr><tr><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/pptx2reveal_v2.m'><span>pptx2reveal_v2.m</span></a></td><td><span>🎨main conversion tool (many examples are provided )</span></td><td><a href='http://manpages.ubuntu.com/manpages/xenial/man1/pdf2svg.1.html'><span>pdf2svg</span></a><span> </span><em><span>(external)</span></em><br><a href='https://imagemagick.org/script/mogrify.php'><span>ImageMagick</span></a><em><span>(external)</span></em><br><a href='https://github.com/webpro/reveal-md'><span>reveal-md</span></a><br><a href='https://github.com/nodejs/node'><span>Node.js</span></a><br><a href='https://fitness.agroparistech.fr/fitness/make/matlab/extractTXTfromPPT.m'><span>extractTXTfromPPT.m</span></a></td></tr><tr><td><a href='https://fitness.agroparistech.fr/fitness/make/matlab/extractTXTfromPPT.m'><span>extractTXTfromPPT.m</span></a></td><td><span>💬 main tool to extract text, layout from PPTx files</span></td><td>&nbsp;</td></tr><tr><td><a href='https://fitness.agroparistech.fr/fitness/make/video4web.sh'><span>video4web.sh</span></a><br><a href='https://fitness.agroparistech.fr/fitness/make/video4webmute.sh'><span>video4webmute.sh</span></a></td><td><span>🎞️ video conversion for the web</span></td><td><a href='https://ffmpeg.org/'><span>FFmpeg</span></a><span> </span><em><span>(external)</span></em></td></tr></tbody></table></figure><blockquote><p><span>🗄️ Metadata plays an essential role, the current database used by the platform is available here:</span></p><blockquote><p><a href='https://fitness.agroparistech.fr/fitness/lectures/src/json/content_transitional.json' target='_blank' class='url'>https://fitness.agroparistech.fr/fitness/lectures/src/json/content_transitional.json</a></p></blockquote></blockquote><p>&nbsp;</p><p>&nbsp;</p><h2><a name="8-contributors--🧑🤝🧑" class="md-header-anchor"></a><span>8. CONTRIBUTORS | 🧑‍🤝‍🧑</span></h2><h3><a name="81-acknowledgments--🧗🧗♀️" class="md-header-anchor"></a><span>8.1 Acknowledgments | 🧗🧗‍♀️</span></h3><blockquote><blockquote><p><span>🌄 </span><strong><span>A large project such as FITNess cannot be successful without the help of its contributors: the testers, the creators of course materials, the teachers and the students.  We would like to thank them all warmly. We learn a lot together</span></strong><span>.**</span></p></blockquote><blockquote><p><span>🛤️</span><strong><span>The creation of the platform has been a real adventure</span></strong><span> and a real gamble after some erring with commercial tools that were not able to manage efficiently and faithfully thousands of slides. Commercial tools are efficient on small projects only and they require a lot of human resources and recoding. An update can be done with our framework within a couple of minutes without using a 🖱️.</span></p></blockquote><blockquote><p><span>😷🦠The platform was widely used during the COVID19 pandemic. Don&#39;t refrain from using it, it is free and highly available. We have achieved a tripling of the network bandwidth. The server has 48 cores available and will eventually host the calculation tools that are today on the </span><a href='[INRA:: THE SAFE FOOD PACKAGING PORTAL v2.0 and 3.0 (agroparistech.fr)](http://sfpp3.agroparistech.fr/)'><span>SafeFoodPackaging Portal</span></a><span>.</span></p></blockquote></blockquote><h3><a name="82-academic-contributors--🏫" class="md-header-anchor"></a><span>8.2 Academic contributors | 🏫</span></h3><p><span>Nine institutions originating from five countries contributed to create contents for FITNess.</span></p><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>CROATIA (UZAB-PBF)</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>FRANCE (ACTIA, LNE, AGROPARISTECH/INRAE, AGROSUPDIJON)</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>GERMANY (TUM)</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>PORTUGAL (UCP)</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>SPAIN (CSIC)</span></p></li></ul><h3><a name="83-technical-contributors--👨💻" class="md-header-anchor"></a><span>8.3 Technical contributors | 👨‍💻</span></h3><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>Olivier VITRAC, INRAE - </span><small><span>main designer and developer, documentation, server administrator, author - all versions</span></small></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>Steward OUADI, AgroParisTech - </span><small><span>client side (current version of the search engine, interface to metadata) - FITNess 2️⃣02️⃣0</span></small></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>Dipesh CHAUDHARI, AgroParisTech - </span><small><span>client side (first version of the search engine) - FITNess 2️⃣01️⃣9</span></small></p></li></ul><p>&nbsp;</p><p><code>$ Revision date: 2021-01-02 | FITNess 2020 $</code><span> |  Please report to </span><a href="mailto:olivier.vitrac@groparistech.fr"><span>Olivier Vitrac</span></a></p></div>
+</body>
+</html>

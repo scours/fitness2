@@ -1,0 +1,704 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>ecodesign-main-page</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fff;
+    --control-text-color: #777;
+}
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+    color: #322289;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 40px 30px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+#write p {
+    /* text-indent: 2rem; */
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+}
+
+#write ol li {
+    padding-left: 0.5rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #c6392e;
+    font-weight: 600;
+    padding: 0px 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+h2 a,
+h3 a {
+    color: #322289;
+}
+
+h3 a:before {
+    content: '#';
+    color: #c6392e;
+    position: absolute;;
+    left: -0.7em;
+    margin-top: -0.05em;
+    padding-right: 0.5em;
+    font-size: 1.2em;
+    line-height: 1;
+    font-weight: bold;
+}
+
+h1 {
+    padding-bottom: .4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0px 15px 0px;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0px 7px 0px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 4px solid #c6392e;
+    padding: 10px 0px 10px 15px;
+    color: #777;
+    background-color: rgba(207, 111, 28, .1);
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #fafafa;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0px 1px 0 1px;
+}
+
+#write em {
+    padding: 0px 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: #f2f2f2;
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid #F4F4F4;
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0rem !important;
+    line-height: 1.43rem;
+    background-color: #F8F8F8 !important;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+#write code, tt {
+    margin: 0 2px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    background-color: #f8f8f8;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#write {
+  max-width: auto; /*adjust writing area position*/
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#typora-source .CodeMirror-lines {
+  max-width: auto; /*or 1000px*/
+}
+ .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export'>
+<div id='write'  class=''><p>&nbsp;</p><p>&nbsp;</p><p><img src="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.3/extra/src/image1.png" referrerpolicy="no-referrer" alt="logo"></p><h1><a name="ecodesign" class="md-header-anchor"></a><span>Ecodesign</span></h1><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n4"><a class="md-toc-inner" href="#ecodesign">Ecodesign</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n6"><a class="md-toc-inner" href="#introduction">Introduction</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n29"><a class="md-toc-inner" href="#organization-of-the-course">Organization of the course</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n32"><a class="md-toc-inner" href="#main-presentation-on-ecodesignhttpsfitnessagroparistechfrfitnessextensionsspecializedecodesignecodesignpart1html1">Main presentation on Ecodesign</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n35"><a class="md-toc-inner" href="#step-by-step-ecodesing-of-packagingstep-by-stephtml">Step-by-step ecodesing of packaging</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n39"><a class="md-toc-inner" href="#ecodesign-toolboxecodesign-toolboxhtml">Ecodesign ToolBox</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n43"><a class="md-toc-inner" href="#comparison-of-packaging-from-an-environmental-point-of-view">Comparison of packaging from an environmental point of view</a></span><span role="listitem" class="md-toc-item md-toc-h5" data-ref="n46"><a class="md-toc-inner" href="#advantages-and-inconvenients-of-lca-in-ecodesignadvantages-and-precautions-with-lcahtml">Advantages and Inconvenients of LCA in Ecodesign</a></span></p></div><h4><a name="introduction" class="md-header-anchor"></a><span>Introduction</span></h4><p><span>Ecodesign consists in taking into account the environmental footprint of products and services in the general desing process. The overall goal is the decrease of the environmental impact as compared to a reference state and to avoid shifting environmental burdens from a specific process or product to another. </span></p><p><span>Ecodesign in the packaging sector includes a several number of different methodologies, which will be presented here. Because of the very integrated character of packaging in the supply chain of goods much care has to be taken to avoid the shifting burdens issue.Key notions and principles of ecodesing are presented in this course. </span></p><p><span>To better understand this course, some pre-requisites are necessary. They can be found in the following Fitness courses:</span></p><ul><li><a href='https://fitness.agroparistech.fr/fitness/lectures/html/#2-properties-of-food-packaging-materials'><span>Properties of food packaging materials</span></a><span>: It is essential to have a strong knowledge of the physical and chemical caracteristics a packaging has or must have to fulfill its function.</span></li><li><a href='https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.4/part1.html#/2'><span>Environmental impact of packaging and recycling</span></a><span>: Main environmental impacts of packaging are presented in this course.</span></li><li><a href='https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.1/part1.html#/2'><span>Methodologies used in life cycle assessment</span></a><span>: Life cycle analysis and assesment (LCA) allows the quantification of environmental impacts.</span></li><li><a href='https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part1.html#/3'><span>Food packaging and shelf life</span></a><span>: The main function of packaging is to protect food, the shelf-life is an essential element to take into account when ecodesigning a product.</span></li></ul><p>&nbsp;</p><p><span>For more external ressources, ecodesign is discussed in the following articles:</span></p><ul><li><span>Grönman et al., Framework for Sustainable Food Packaging Design, Packag. Technol. Sci., 26 (2013) 187-200; </span><a href='https://onlinelibrary.wiley.com/doi/full/10.1002/pts.1971' target='_blank' class='url'>https://onlinelibrary.wiley.com/doi/full/10.1002/pts.1971</a></li><li><span>de Koeijer et al., Realizing Product-Packaging Combinations in Circular Systems: Shaping the Research Agenda, Packag. Technol. Sci., 30 (2017) 443-460, </span><a href='https://onlinelibrary.wiley.com/doi/full/10.1002/pts.2219' target='_blank' class='url'>https://onlinelibrary.wiley.com/doi/full/10.1002/pts.2219</a></li><li><span>Svanes et al., Sustainable Packaging Design: a Holistic Methodology for Packaging Design, Packag. Technol. Sci., 23 (2010) 161-175, </span><a href='https://onlinelibrary.wiley.com/doi/abs/10.1002/Pts.887?casa_token=X8R95niWQa4AAAAA:7icpi6buC-GjOUkmO7ptxyYYfpwUpRJXx_OaRDUZnrbKmZCe7C6uuwcaC5oBkIP43IpSnuVDpSRpa65s' target='_blank' class='url'>https://onlinelibrary.wiley.com/doi/abs/10.1002/Pts.887?casa_token=X8R95niWQa4AAAAA:7icpi6buC-GjOUkmO7ptxyYYfpwUpRJXx_OaRDUZnrbKmZCe7C6uuwcaC5oBkIP43IpSnuVDpSRpa65s</a></li></ul><p>&nbsp;</p><h4><a name="organization-of-the-course" class="md-header-anchor"></a><span>Organization of the course</span></h4><p><span>This course is organized in the following way: a </span><strong><span>main presentation on Ecodesign</span></strong><span> will allow you to understand the key elements to ecodesign. A </span><strong><span>step-by-step animation</span></strong><span> then presents the key points for the ecodesing of a packaging system throughout its life cycle. The </span><strong><span>toolbox</span></strong><span> gathers a number of ecodesing tools which can be applied at different stages of the design process. For one central overview, you will be able to navigate to get further information on a given item. To illustrate key notions of ecodesign, environmental </span><strong><span>comparisons</span></strong><span> of different packagings are presented using LCA methodology. To better understand the nature of LCA, a presentation of some key notions are given.</span></p><p>&nbsp;</p><h4><a name="main-presentation-on-ecodesignhttpsfitnessagroparistechfrfitnessextensionsspecializedecodesignecodesignpart1html1" class="md-header-anchor"></a><a href='https://fitness.agroparistech.fr/fitness/extensions/specialized/ECODESIGN/Ecodesign_part1.html#/1'><span>Main presentation on Ecodesign</span></a></h4><p><em><span>General presentation of eco-design and it&#39;s importance in the packaging industry</span></em></p><p>&nbsp;</p><h4><a name="step-by-step-ecodesing-of-packagingstep-by-stephtml" class="md-header-anchor"></a><a href='step-by-step.html'><span>Step-by-step ecodesing of packaging</span></a></h4><p><em><span>Key points of ecodesign using a step-by-step approach</span></em></p><p><span>Ecodesign should always be done having a </span><strong><span>holistic</span></strong><span> point of view, and the reduction of the environmental burden in one step should not increase the burden to another step. This presentation guides you step-by-step through the issues which can be encountered in packaging ecodesign.</span></p><p>&nbsp;</p><h4><a name="ecodesign-toolboxecodesign-toolboxhtml" class="md-header-anchor"></a><a href='ecodesign-toolbox.html'><span>Ecodesign ToolBox</span></a></h4><p><em><span>Some General tools and methods used for ecodesign</span></em></p><p><span>Some tools and methods used for ecodesign are summed in the following toolbox: it allows to view which type of tools can be emploied at specific stages with different degrees of freedom during the ecodesign process.</span></p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="589px" viewBox="-0.5 -0.5 589 369" content="<mxfile host=&quot;app.diagrams.net&quot; modified=&quot;2020-07-30T07:30:34.462Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36&quot; etag=&quot;wRj3e-ESXm7wxhlJWcQc&quot; version=&quot;13.5.5&quot; type=&quot;device&quot;><diagram id=&quot;cBcC0OIpuHeckdHUnnz9&quot; name=&quot;Page-1&quot;>7Vpdc6M2FP01nj4lA8hg8+g49nY6u91u006n+yaDAtoI5ArZcfLrewXCfAh/xIsz61nnIQNXQlzdc3R1rswATZPNB4GX8SceEjZwrHAzQPcDxxl7Y/ivDC+FYTh2CkMkaFiY7MrwQF+JNlrauqIhyRodJedM0mXTGPA0JYFs2LAQ/LnZ7ZGz5luXOCKG4SHAzLT+Q0MZ62k5o8r+K6FRXL7Z9vyiJcFlZz2TLMYhf66Z0GyApoJzWVwlmylhKnZlXIrn5jtat44JkspjHojEb58XM+5++vYn/+qvHr58/ff1Ro+yxmylJ6ydlS9lBEgaTlQg4S5gOMtoMEB3sUwYGGy4fOSp1LjZ6j6Tgj9tg4XAYnqqX0vCRvC13x8IT4gUL9DhuQq5q8MY16Jd2gRhWNJ1EzKskY+2w23f8Aen4IljaZI6lh5HcxR5VnOIjK9EQPRT9RAfGGjYGkdiERFpjAMXtVlXphzAN4DpfD+YPzF4I+/AQGdGzzPQ+4smZOB4OFkCDukiW27hqCEqyUY2MRQko694kXew4B6vJM/0AlW3jEapwh8AJQIMayIkhYw30Q0JDUP18N1STTWfvHs3cO/VWqeMTTnj8Nh9ylOyZUzLKPgqDUmoHcgzhPa4nTGG+yimPCObvSTTrZ7vNcEb6QR9gISOtZtvDYArNP/OiPi8+KY2G8dieEFY8eg0JsHTDaMZhEwN6zGFy0LAVaSucBoqtq8YbGf5OxlNn4xHb6DbTd7pNoc077mXN6NaYDTPLpAeNTo06fL93HB8u8ENu9QkNW74HdxoZ+8juAG3NXq8YfGPO1J3QSAVjQak3n8rXjbcFMBNoANCy03VWJJuFoAgyxRwhW5a8E05MPhajF30vNTEUnYYOGhuu1Pb7yehINTcDcrkUeNMJ2nQ20lzpFJDh3f3YCXWeXAUHLWtXgevBiU0zqlyII9jM9QQyeH90J0MDT3gXqIeaCNyqh6w23vFDj0AQccvtW6a7Ec7XJY+u/xCfrdfFbkKD3oVJ7Z7bvbVOWbw8fDK/kHZN+pLjLZZfCbyle/Z5Zfn7u1/JvKZ0vieRIKAOLb4o6rq4TrkySVuYbmAvMPBU5TbW313bXDvoagdt4m0be6A9rBjJZ0gqY+kgb9TJC1KFTPlmSxZEcQ4jYgpxNsl1SxdU8HTBGKFlROMgxinaU0nLS5ZJB1mWFt8dwmBPhhld+fGOqFGHYQ6QYfvqtFaojrYTrTSzcjK/0wpbXDt43TSzZE9+rqq+WIp1RHmRE0BelKZkiy7xQASBBkqQRLEt4+iaoIrBvNZCVU+zovacJ4tSUCBUq+AtjN/GKn6Y3QLMMxhEGnrEhKU41xv1/vPj6wafhdZSv44XEdtkWaeR/SUPDtqzkP0N7h6ynr4nYsk20n2XbnzXRaA07EA7KNWgH1dAT2tAOQ29cO2Mq6tAO9sK+DIA3Ozpp4KUuh/mL7gAGxyWEBknK1pGv104kBnhv5P7Gzfb2lP88TORv1IhSOZYpYgRjKtnbUdZsyjfIYIXTVmnUY9MKddz9rI3Hd7Ous9kjijw8R5+DL5OL1SoWcquI7fooJ9rg3oSCrsPuSvagoa/qJ+PnqOifqO4kqJXimByg2/1CS+qUm6ssPZKIFMATLDgimXQ7ImjC/VqUQOOI7K3w2v4J+2NbQPtMYd5w/jd0V/aKD/EUtyBb9/8Ifjpi7o+j6g8/DptHKk+qqrOAOvPo1Ds/8B</diagram></mxfile>" onclick="(function(svg){var src=window.event.target||window.event.srcElement;while (src!=null&amp;&amp;src.nodeName.toLowerCase()!='a'){src=src.parentNode;}if(src==null){if(svg.wnd!=null&amp;&amp;!svg.wnd.closed){svg.wnd.focus();}else{var r=function(evt){if(evt.data=='ready'&amp;&amp;evt.source==svg.wnd){svg.wnd.postMessage(decodeURIComponent(svg.getAttribute('content')),'*');window.removeEventListener('message',r);}};window.addEventListener('message',r);svg.wnd=window.open('https://viewer.diagrams.net/?client=1&amp;edit=_blank');}}})(this);" style="cursor:pointer;max-width:100%;max-height:369px;"><defs></defs><g><path d="M 8 328 L 8 18.1" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="stroke"></path><path d="M 8 11.35 L 12.5 20.35 L 8 18.1 L 3.5 20.35 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"></path><path d="M 8 328 L 557.9 328" fill="none" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="stroke"></path><path d="M 564.65 328 L 555.65 332.5 L 557.9 328 L 555.65 323.5 Z" fill="#000000" stroke="#000000" stroke-width="3" stroke-miterlimit="10" pointer-events="all"></path><rect x="504" y="345" width="50" height="20" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 355px; margin-left: 529px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">Time </div></div></div></foreignObject><text x="529" y="359" fill="#000000" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Time </text></switch></g><a xlink:href="Check-lists-and-rules.html"><rect x="99" y="136" width="90" height="40" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 156px; margin-left: 144px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">Check-lists <br>and rules</div></div></div></foreignObject><text x="144" y="160" fill="#000000" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Check-lists...</text></switch></g></a><rect x="138" y="18" width="290" height="30" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 33px; margin-left: 283px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #F15C19; line-height: 1.2; pointer-events: all; white-space: nowrap; "><font style="font-size: 33px">Ecodesign toolbox</font></div></div></div></foreignObject><text x="283" y="37" fill="#F15C19" font-family="Helvetica" font-size="12px" text-anchor="middle">Ecodesign toolbox</text></switch></g><path d="M 8 298 Q 8 178 103 133 Q 198 88 568 88" fill="none" stroke="#4d45a4" stroke-width="5" stroke-miterlimit="10" pointer-events="stroke"></path><path d="M 8 38 Q 8 298 233 298 Q 458 298 568 298" fill="none" stroke="#f15c19" stroke-width="5" stroke-miterlimit="10" pointer-events="stroke"></path><rect x="433" y="278" width="140" height="20" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 288px; margin-left: 503px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #F15C19; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">Degree of freedom</div></div></div></foreignObject><text x="503" y="292" fill="#F15C19" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Degree of freedom</text></switch></g><rect x="418" y="38" width="170" height="40" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 58px; margin-left: 503px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #4D45A4; line-height: 1.2; pointer-events: all; white-space: nowrap; "><b>Cost of change<br> Environmental lock-in</b></div></div></div></foreignObject><text x="503" y="62" fill="#4D45A4" font-family="Helvetica" font-size="14px" text-anchor="middle">Cost of change...</text></switch></g><a xlink:href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.1/part1.html#/2"><rect x="438" y="95" width="40" height="20" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 105px; margin-left: 458px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #4D45A4; line-height: 1.2; pointer-events: all; white-space: nowrap; "><font color="#000000"><b>LCA</b></font></div></div></div></foreignObject><text x="458" y="109" fill="#4D45A4" font-family="Helvetica" font-size="14px" text-anchor="middle">LCA</text></switch></g></a><a xlink:href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.2/part1.html#/12"><rect x="163" y="198" width="60" height="20" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 208px; margin-left: 193px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #4D45A4; line-height: 1.2; pointer-events: all; white-space: nowrap; "><b><font color="#000000">Norms</font></b></div></div></div></foreignObject><text x="193" y="212" fill="#4D45A4" font-family="Helvetica" font-size="14px" text-anchor="middle">Norms</text></switch></g></a><rect x="7" y="286" width="130" height="40" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 306px; margin-left: 72px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: nowrap; ">Creative problem<br> solving</div></div></div></foreignObject><text x="72" y="310" fill="#000000" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Creative problem...</text></switch></g><rect x="8" y="105" width="90" height="40" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 125px; margin-left: 53px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; "><b>Ecodesign<br> software</b></div></div></div></foreignObject><text x="53" y="129" fill="#000000" font-family="Helvetica" font-size="14px" text-anchor="middle">Ecodesign...</text></switch></g><rect x="337" y="99" width="60" height="20" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 109px; margin-left: 367px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; "><b>SQALC</b></div></div></div></foreignObject><text x="367" y="113" fill="#000000" font-family="Helvetica" font-size="14px" text-anchor="middle">SQALC</text></switch></g><rect x="131" y="258" width="90" height="20" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 268px; margin-left: 176px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; "><b>Lid's wheel</b></div></div></div></foreignObject><text x="176" y="272" fill="#000000" font-family="Helvetica" font-size="14px" text-anchor="middle">Lid's wheel</text></switch></g><rect x="33" y="348" width="180" height="20" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 358px; margin-left: 123px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">Early development stages</div></div></div></foreignObject><text x="123" y="362" fill="#000000" font-family="Helvetica" font-size="14px" text-anchor="middle">Early development stages</text></switch></g><rect x="288" y="345" width="170" height="20" fill="none" stroke="none" pointer-events="all"></rect><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 355px; margin-left: 373px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: nowrap; ">Late development stages</div></div></div></foreignObject><text x="373" y="359" fill="#000000" font-family="Helvetica" font-size="14px" text-anchor="middle">Late development stages</text></switch></g></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"></g><a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text></a></switch></svg><h4><a name="comparison-of-packaging-from-an-environmental-point-of-view" class="md-header-anchor"></a><span>Comparison of packaging from an environmental point of view</span></h4><p><em><span>Some food packaging examples and LCA&#39;s related to them.</span></em></p><p><span>These examples are all issued from research articles and therefore not give an ideal solution to ecodesign a packaging but allow a better understanding of the environmental impacts a packaging can have and ways to optimize them.</span></p><h5><a name="advantages-and-inconvenients-of-lca-in-ecodesignadvantages-and-precautions-with-lcahtml" class="md-header-anchor"></a><a href='advantages-and-precautions-with-lca.html'><span>Advantages and Inconvenients of LCA in Ecodesign</span></a></h5><p><em><span>LCA is the most commonly used assessment method for ecodesign. Some elements are remembered here because they must to be known when reading the results of an LCA.</span></em></p><p>&nbsp;</p><p><strong><span>Case studies</span></strong></p><figure><table><thead><tr><th><span>Studied Packaging</span></th><th><span>Main problem</span></th></tr></thead><tbody><tr><td><a href='lca-packaging/lca-milk-packaging.html'><span>Milk</span></a></td><td><em><span>The interaction of short-supply chains and environmental impact of packaging</span></em></td></tr><tr><td><a href='lca-packaging/lca-beer-packaging.html'><span>Beer</span></a></td><td><em><span>Comparison of existing packaging and innovative packaging concepts</span></em></td></tr><tr><td><a href='lca-packaging/lca-beef-packaging.html'><span>Beef</span></a></td><td><em><span>Estimate the importance of the environmental footprint of packaging and its end-of-life treatment for high environmental impact food products</span></em></td></tr><tr><td><a href='lca-packaging/lca-of-biodegradable-packaging.html'><span>Biodegradable</span></a></td><td><em><span>Decrease of environmental impact by synergy in composting of food waste and packaging</span></em></td></tr></tbody></table></figure><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
+</body>
+</html>

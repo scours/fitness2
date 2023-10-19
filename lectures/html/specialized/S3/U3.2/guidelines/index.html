@@ -1,0 +1,790 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>index</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fff;
+    --control-text-color: #777;
+}
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+    color: #322289;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 40px 30px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+#write p {
+    /* text-indent: 2rem; */
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+}
+
+#write ol li {
+    padding-left: 0.5rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #c6392e;
+    font-weight: 600;
+    padding: 0px 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+h2 a,
+h3 a {
+    color: #322289;
+}
+
+h3 a:before {
+    content: '#';
+    color: #c6392e;
+    position: absolute;;
+    left: -0.7em;
+    margin-top: -0.05em;
+    padding-right: 0.5em;
+    font-size: 1.2em;
+    line-height: 1;
+    font-weight: bold;
+}
+
+h1 {
+    padding-bottom: .4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0px 15px 0px;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0px 7px 0px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 4px solid #c6392e;
+    padding: 10px 0px 10px 15px;
+    color: #777;
+    background-color: rgba(207, 111, 28, .1);
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #fafafa;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0px 1px 0 1px;
+}
+
+#write em {
+    padding: 0px 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: #f2f2f2;
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid #F4F4F4;
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0rem !important;
+    line-height: 1.43rem;
+    background-color: #F8F8F8 !important;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+#write code, tt {
+    margin: 0 2px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    background-color: #f8f8f8;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#write {
+  max-width: auto; /*adjust writing area position*/
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#typora-source .CodeMirror-lines {
+  max-width: auto; /*or 1000px*/
+}
+ :root {--mermaid-font-zoom:1.8em ;}  .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><section id="top"></section><p><span>◖</span><a href='../'><span>This lecture</span></a><span>◗ ◖</span><a href='../../../../'><span>All lectures</span></a><span>◗</span></p><h1><a name="☰-safety-of-food-contact-materials-☰" class="md-header-anchor"></a><span>☰ SAFETY OF FOOD CONTACT MATERIALS ☰</span></h1><p><span>📚Total number of documents: 20</span></p><hr style="width:100%; border:4px dashed #FAF0E8;"><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n154"><a class="md-toc-inner" href="#☰-safety-of-food-contact-materials-☰">☰ SAFETY OF FOOD CONTACT MATERIALS ☰</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n159"><a class="md-toc-inner" href="#128587foreword">🙋Foreword</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n193"><a class="md-toc-inner" href="#section-idbarrierssectionfunctional-barriers--🔥🚧">FUNCTIONAL BARRIERS | 🔥🚧 </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n199"><a class="md-toc-inner" href="#section-idplasticssectionplastic-materials--♳♴♵♶♷♸♹">PLASTIC MATERIALS | ♳♴♵♶♷♸♹ </a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n218"><a class="md-toc-inner" href="#section-idinksectionprinting-inks--✒️🖨️">PRINTING INKS | ✒️🖨️</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n236"><a class="md-toc-inner" href="#section-idgluesectionadhesives--sealants--♹🎰">ADHESIVES &amp; SEALANTS | ♹🎰</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n249"><a class="md-toc-inner" href="#section-idpapersectionpaper--board-materials--🌳📰">PAPER &amp; BOARD MATERIALS | 🌳📰</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n270"><a class="md-toc-inner" href="#section-idmetalssectionmetals--alloys--🥫">METALS &amp; ALLOYS | 🥫</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n277"><a class="md-toc-inner" href="#section-idniassectionnon-intentionally-added-substances-nias--❓☝️">NON-INTENTIONALLY ADDED SUBSTANCES (NIAS) | ❓☝️</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n285"><a class="md-toc-inner" href="#section-idactiasectionall-materials-together--🥤🍿🥫🇫🇷">ALL MATERIALS TOGETHER | 🥤🍿🥫🇫🇷</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n292"><a class="md-toc-inner" href="#✔️disclaimer">✔️Disclaimer</a></span></p></div><hr style="width:100%; border:4px dashed #FAF0E8;"><h2><a name="128587foreword" class="md-header-anchor"></a>&#128587;<span>Foreword</span></h2><p><span>The food safety of materials in contact with food is a long-standing concern that dates back to the use of lead for soldering cans in the 19th century. The first harmonized regulations were introduced in Europe in 1976.  The materials and uses have evolved a lot since then.  PVC has disappeared and has been replaced by PET for bottle use, LDPE for cling film, etc. Recycled materials, active and intelligent packaging have been authorized. The demand for </span><strong><span>recycled materials</span></strong><span>, </span><strong><span>biosourced</span></strong><span>, </span><strong><span>biodegradable</span></strong><span> polymer and additives has skyrocketed.  Some materials (paper, cardboard, adhesives, printing ink, etc.) are still not regulated at the European level.</span></p><p><span>This section lists the applicable and relevant guidance to manage the safety of the main groups of materials in contact with food (as enforced by the EU regulation). The documents are presented for </span><strong><span>RISK MANAGEMENT</span></strong><span> and NOT for </span><strong><span>RISK ASSESSMENT.</span></strong><span> Only the document about Non-Intentionally Added Substances (NIAS) recommends best practices for RISK ASSESSMENT. </span></p><blockquote><blockquote><p><span>📖</span><strong><span>LEGAL DOCUMENTS</span></strong></p></blockquote><p><span>Reference regulations for the EU and the US can be accessed on official websites (</span><mark><span>please note that only the texts published on Official Journals and on Code of Federal Rules have legal binding</span></mark><span>)</span></p><ul><li><span>🇪🇺 | ⚖  </span><a href='https://ec.europa.eu/food/safety/chemical_safety/food_contact_materials_en'><span>EU Regulation</span></a><span> | ⚖  The EU framework regulation </span><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02004R1935-20090807'><span>1935/2004/EC</span></a><span>, </span><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02006R2023-20080417'><span>2023/2006/EC</span></a><span> |  ⚖ Specific EU regulations :  </span><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0010'><span>Plastic materials</span></a><span>, </span><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R0450'><span>Active Intelligent materials</span></a><span>, </span><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0282'><span>Recycled plastic materials</span></a><span>, </span><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31984L0500'><span>Ceramics</span></a><span>, </span><a href='https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32007L0042'><span>Regenerated cellulose film</span></a><span>.</span></li></ul><ul><li><span>🇺🇸 | ⚖  </span><a href='https://www.fda.gov/food/food-ingredients-packaging/packaging-food-contact-substances-fcs'><span>US Regulation</span></a><span> | </span><a href='https://www.fda.gov/food/packaging-food-contact-substances-fcs/inventory-effective-food-contact-substance-fcs-notifications'><span>Inventory of Food Contact Substances</span></a><span> | </span><a href='https://www.fda.gov/indirect-additives-used-food-contact-substances'><span>List of Indirect Additives</span></a><span> | </span><a href='https://www.fda.gov/threshold-regulation-exemptions'><span>Threshold of regulation</span></a><span> | </span><a href='https://www.fda.gov/recycled-plastics'><span>Recycled materials</span></a><span>.</span></li></ul><blockquote><p><span>📖</span><strong><span>OTHER PUBLIC SOURCES</span></strong></p></blockquote><p><span>Some important materials (paper and board, rubbers) are not still covered by specific measures and guidance. Resolutions of </span><a href='http://www.edqm.eu/en/news/new-council-europe-resolution-strengthen-safety-food-contact-materials'><span>Council of Europe</span></a><span> (CoE) and recommendations from member states provide intermediate information. The situation of non-harmonized food contact materials has been reviewed by </span><a href='https://ec.europa.eu/jrc/en/publication/eur-scientific-and-technical-research-reports/non-harmonised-food-contact-materials-eu-regulatory-and-market-situation-baseline-study'><span>JRC</span></a><span> and the </span><a href='https://www.europarl.europa.eu/doceo/document/A-8-2016-0237_EN.pdf'><span>European Parliament</span></a><span>, based on the European Implementation Assessment&#39;s </span><a href='https://www.europarl.europa.eu/RegData/etudes/STUD/2016/581411/EPRS_STU%282016%29581411_EN.pdf'><span>report</span></a><span>.</span></p><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><strong><span>New Guidance</span></strong><span> provided CoE Resolution </span><a href='https://search.coe.int/cm/pages/result_details.aspx?objectid=09000016809fe04a'><span>CM/Res(2020)9</span></a><span> on the safety and quality of materials and articles for contact with food (adopted on Oct. 7</span><sup><span>th</span></sup><span>, 2020)</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><em><span>Paper &amp; board</span></em><span> (</span><a href='https://rm.coe.int/16804e4794'><span>CoE Policy statement</span></a><span>, draft of </span><a href='https://www.edqm.eu/sites/default/files/medias/fichiers/Food_contact_materials/food_contact_materials_technical_guide_on_paper_board_draft_text_for_consultation.pdf'><span>EU and CoE technical guidance</span></a><span>), recycled paper &amp; board (</span><a href='https://www.economie.gouv.fr/dgccrf/Papiers-et-cartons'><span>🇫🇷/DGCCRF</span></a><span>) ⁘ 🔥 hot topic evolving rapidly ⁘</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><em><span>Rubber</span></em><span> (</span><a href='https://rm.coe.int/09000016804e9fce'><span>CoE</span></a><span>, </span><a href='https://www.bfr.bund.de/cm/349/notes-on-applications-for-the-inclusion-of-substances.pdf'><span>🇩🇪/BfR</span></a><span>, </span><a href='https://www.economie.gouv.fr/dgccrf/Caoutchouc'><span>🇫🇷/DGCCRF</span></a><span>)</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><em><span>Metals and alloys</span></em><span> (</span><a href='https://search.coe.int/cm/Pages/result_details.aspx?ObjectID=09000016805c8066'><span>CoE</span></a><span>)</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>Expert </span><a href='https://ec.europa.eu/food/sites/food/files/safety/docs/cs_fcm_meeting-ind_20200623.pdf'><span>point of view</span></a><span> on plastic food contact materials and articles containing </span><em><span>ground bamboo or similar constituents</span></em><span> ⁘ 🔥 hot topic evolving rapidly ⁘</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>Documents on microplastics should be published soon and listed here.</span></p></li></ul><blockquote><p><span>📖</span><strong><span>ASSOCIATIONS</span></strong></p></blockquote><p><span>Consumer and industry associations (EuPia, Feica...) may provide also valuable information. Among them, the </span><a href='https://www.foodpackagingforum.org/'><span>Food Packaging Forum</span></a><span> provides a wealth of information, trends and news.  As a reader, we encourage you to engage a dialogue with all stakeholders and to read the scientific literature.</span></p></blockquote><hr style="width:100%; border:4px dashed #FAF0E8;"><h2><a name="section-idbarrierssectionfunctional-barriers--🔥🚧" class="md-header-anchor"></a><section id="barriers"></section><span>FUNCTIONAL BARRIERS | 🔥🚧 </span></h2><blockquote><p><span>Functional barriers 🚧 are thought as a possible solution for the use of non-evaluated substances and consequently of non recycled materials (plastics, paper, board). It is 🔥 topic with strong industrial demand.</span></p></blockquote><p><span>📚documents: 1 |📌</span><a href='#plastics'><span>plastic materials</span></a><span>, </span><a href='#paper'><span>paper &amp; board</span></a><span>, </span><a href='#ink'><span>printing inks</span></a><span>, </span><a href='#glue'><span>adhesives</span></a><span>, </span><a href='#barriers'><span>functional barriers</span></a><span>, </span><a href='#nias'><span>NIAS</span></a><span>, </span><a href='#metals'><span>metals</span></a><span>, </span><a href='#actia'><span>all materials</span></a><span> | </span><a href='#top'><span>🔝</span></a></p><table border="0px" style="width:100%; table-layout:fixed;"><tbody><tr><td>📙<b><big>Functional barriers against mineral oil from paper and cardboard packaging materials</big></b><br>  | 📄8 pages | 🏫DLG, 🇩🇪 | 🔉English | <br><br>🔖<i>Mineral oil components from paper and cardboard packaging materials have moved more strongly into the focus of surveillance authorities in recent years. Attention centres on saturated and unsaturated hydrocarbons that are designated MOSH and MOAH. The unsaturated substances (MOAH) are appraised as having mutagenic and carcinogenic potential. The aim is to reduce migration of such substances from the packaging to the foods as far as possible. In response to the question of how the transfer of mineral oil components from cardboard packagings to foods can be minimised, the German Federal Institute for Risk Assessment (BfR) points out that the transfer of mineral oil components is influenced not only by their content level in the packaging material, but also by the storage conditions and the nature of the food. <br>“It can be prevented by using virgin fibre-based board and printing inks free of mineral oils, as well as by integrating functional barriers in the packaging structure. Here not only the direct food packaging must be taken into account, but also the possibility of migration from secondary packagings”. According to the third draft.of the Mineral Oil Regulation, specific migration limits of 2 mg/kg for MOSH and 0.5 mg/kg for MOAH are planned. <br>Functional barriers are not all equally effective. Inner packagings made of paper or polyolefins delay migration (lag time), but do not prevent it.</i></td><td width="30%"><a href="./doc1.html" title="read the document" target="_readdoc"><img src=".\src_doc1\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc1.html" title="read the document" target="_readdoc"><img src=".\src_doc1\page2.svg" alt="page2" style="zoom:100%;"></a></td></tr></tbody></table><hr style="width:100%; border:4px dashed #FAF0E8;"><h2><a name="section-idplasticssectionplastic-materials--♳♴♵♶♷♸♹" class="md-header-anchor"></a><section id="plastics"></section><span>PLASTIC MATERIALS | ♳♴♵♶♷♸♹ </span></h2><blockquote><p><span>Functional barriers 🚧 are thought as a possible solution for the use of non-evaluated substances and consequently of non recycled materials (plastics, paper, board). It is 🔥 topic with string industrial demand.</span></p></blockquote><p><span>📚documents: 6 | 📌</span><a href='#barriers'><span>functional barriers</span></a><span>, </span><a href='#nias'><span>NIAS</span></a><span>, </span><a href='#ink'><span>printing inks</span></a><span>, </span><a href='#glue'><span>adhesives</span></a><span>, </span><a href='#actia'><span>all materials</span></a><span> | </span><a href='#top'><span>🔝</span></a></p><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📓</span><a href='#plast1'><span>Guidance on plastics regulation</span></a><span>⚖️</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📕</span><a href='#plast2'><span>Guidance for the identification of polymers</span></a><span>🎰</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📙</span><a href='#plast3'><span>Guidance on analytical methods</span></a><span>⚗️</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📘</span><a href='#plast4'><span>Guidance on migration modeling</span></a><span>📈</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📒</span><a href='#plast5'><span>Guidance on migration testing</span></a><span>🔬</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📔</span><a href='#plast6'><span>Guidance on active and intelligent packaging</span></a><span>✨</span></p></li></ul><table border="0px" style="width:100%; table-layout:fixed;"><tbody><tr><td><section id="plast1"></section>📓<b><big>Union Guidelines on Regulation (EU) No 10/2011 on plastic materials and articles intended to come into contact with food</big></b><br>  | 📄45 pages | 🏛️EU Commission, Brussels, 🇪🇺 | 🔉English | <a href="#plastics" title="section menu">⬆️</a><a href="#plast2">➡️</a><br><br>🔖<i>This Guidance document is part of a series of documents to provide guidance on application of Regulation (EU) No 10/20111 on plastic materials and articles intended to come into contact with food (the "Plastics Regulation"). The series covers the present general guidance, guidance on migration testing (in preparation), guidance on migration modelling2 and guidance on information in the supply chain.
+This Guidance document covers general aspects of the Plastics Regulation. It is structured in the same manner as the Plastics Regulation itself. It contains in particular:
+    <ul><li>explanations on what is covered by the Plastics Regulation and what is not,</li><li>definitions of terms that relevant in the context of food contact materials and articles,</li><li><b>function categories</b> of additives and polymer production aids,</li><li> explanations which substances are included in the <b>Union list</b>,</li><li>explanations why substances are exempted from inclusion in the Union list and applicable provisions for these substances,</li><li>status of biocides in plastic food contact materials and articles,</li><li>explanations on dual use additives and an indicative list of dual use additives,</li><li>explanations on the transitional provisions.</li></ul> The Plastics Regulation is a specific measure for plastic food contact materials and articles adopted pursuant Article 5 of Regulation (EC) No 1935/20044 on materials and articles intended to come into contact with food (the “Framework Regulation”). It consolidates the previous Directives on plastic food contact materials and articles into one Regulation and simplifies the rules applicable to them.</i></td><td width="30%"><a href="./doc7.html" title="read the document" target="_readdoc"><img src=".\src_doc7\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc7.html" title="read the document" target="_readdoc"></a><a href="./doc7.html" title="read the document" target="_readdoc"><img src=".\src_doc7\page2.svg" alt="page2" style="zoom:100%;"></a></td></tr>
+    <tr><td><section id="plast2"></section>📕<b><big>Guidance for the identification of polymers in multilayer films used in food contact materials.</big></b><br>  | 📄70 pages | 🏫EU Commission - JRC, Ispra, 🇮🇹 | 🔉English | <a href="#plast1">⬅️</a><a href="#plastics" title="section menu">⬆️</a><a href="#plast3">➡️</a><br><br>🔖<i>This guidance describes how to characterize the composition of a multilayer plastic film for food packaging, with respect to the consecutive order of the layers and their identity. It provides background information on the general composition of multilayer plastic packaging and it illustrates in detail the separation of layers for some examples. It also provides in annexes additional information related to the use of a microtome and of optical microscopy using one common instrument for illustrative purposes.</i></td><td width="30%"><a href="./doc3_part1.html" title="read the document" target="_readdoc"><img src=".\src_doc3\page1.svg" alt="page1" style="zoom:100%;"></a></td></tr>
+        <tr><td><section id="plast3"></section>📙<b><big>Guidelines for performance criteria and validation procedures of analytical methods used in controls of food contact materials.</big></b><br>  | 📄74 pages | 🏫EU Commission - JRC, Ispra, 🇮🇹 | 🔉English | <a href="#plast2">⬅️</a><a href="#plastics" title="section menu">⬆️</a><a href="#plast4">➡️</a><br><br>🔖<i>Test methods for materials and articles in contact with foodstuffs are required to determine the concentration of residues of monomers in the materials themselves or to determine the concentration of individual or groups of substances in food (or food simulants) which have migrated from the food contact materials.<br>
+The Community Reference Laboratory and National Reference Laboratories for food
+contact materials (FCM) prepared the present Guidelines to illustrate the required
+performance criteria for the analytical methods applied in the laboratories for FCM and
+provide procedures for method validation in order to estimate their performance
+characteristics. The scope of these guidelines is to provide rules for the performance of
+the analytical methods to be used in the verification of compliance with the migration
+limits defined in Directive 2002/72/EC,as amended, and in accordance with Directive
+82/711/EEC, as amended, and others defined in the European legislation, in order to
+ensure the quality and comparability of the analytical results. <br>
+The document presents 4 approaches, according to the different purpose of
+            performance assessment.</i></td><td width="30%"><a href="./doc2_part1.html" title="read the document" target="_readdoc"><img src=".\src_doc2\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc2_part1.html" title="read the document" target="_readdoc"><img src=".\src_doc2\page5.svg" alt="page5" style="zoom:100%;"></a></td></tr>
+        <tr><td><section id="plast4"></section>📘<b><big>Practical guidelines on the application of migration modelling for the estimation of specific migration. In support of Regulation (EU) No 10/2011 on plastic food contact materials.</big></b><br>  | 📄40 pages | 🏫EU Commission - JRC, Ispra, 🇮🇹 | 🔉English | <a href="#plast3">⬅️</a><a href="#plastics" title="section menu">⬆️</a><a href="#plast5">➡️</a><br><br>🔖<i>The aim of this document is to assist users of diffusion models to predict conservative, upper bound specific migration values from plastic food contact materials for compliance purposes by providing guidance on the relevant input parameters. This document replaces the previous version "Estimation of specific migration by generally recognised diffusion models in support of EU Directive 2002/72/EC" and updates to the current legal basis (Regulation (EU) No 10/2011) and enables the use of migration models for the estimation of specific migration from plastic multi-layers.<br>
+            This document represents the current validity of the model input parameters based on constant periodical evaluations of new experimental migration data performed by the Task Force on Migration Modelling chaired by the Joint Research Centre of the European Commission on behalf of Directorate General Health and Food Safety.</i></td><td width="30%"><a href="./doc4.html" title="read the document" target="_readdoc"><img src=".\src_doc4\page1.svg" alt="page1" style="zoom:100%;"></a></td></tr>
+            <tr><td><section id="plast5"></section>📒<b><big>Guidelines on testing conditions for articles in contact with foodstuffs. (with a focus on kitchenware).</big></b><br>  | 📄58 pages | 🏫EU Commission - JRC, Ispra, 🇮🇹 | 🔉English | <a href="#plast4">⬅️</a><a href="#plastics" title="section menu">⬆️</a><a href="#plast6">➡️</a><br><br>🔖<i>Comparability of results is an important feature of the measurements carried out for
+official controls purposes. The Community Reference Laboratory (CRL) and National Reference Laboratories (NRLs) for Food Contact Materials (FCM) have recognised that technical specifications (exposure test conditions) are not always described in sufficient detail in standards or legislative documents. In such cases differences in interpretation have resulted in gaps of harmonisation in how official controls are practically performed.<br>The aim of these guidelines is to ensure that all NRLs can  have the same interpretation of test conditions for specific materials and articles and consequently to give the same advice to National Authorities, Food Inspection services and private compliance laboratories for the practical implementation of official controls for FCM.These guidelines contain practical information that define the parameters that should be used to perform either an overall or a specific migration test according to the nature of the materials and articles to be tested, with a focus on kitchenware. Existing legislation for plastics states that migration test conditions should be selected according to the worst foreseeable conditions of use of the material or article to be tested. The focus on kitchenware was chosen because these articles are typically placed in contact with food in the home and thus the challenge is to define worst foreseeable  conditions of use.<br>These guidelines are intended as a dynamic document and they will  evolve and expand into further editions. This is the first edition. These guidelines have been endorsed by the European Union official Network of National Reference Laboratories and approved by the EU Commission competent service DG SANCO.</i></td><td width="30%"><a href="./doc5.html" title="read the document" target="_readdoc"><img src=".\src_doc5\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc5.html" title="read the document" target="_readdoc"><img src=".\src_doc5\page5.svg" alt="page5" style="zoom:100%;"></a></td></tr>
+	<tr><td><section id="plast6"></section>📔<b><big>EU Guidance to the Commission Regulation (EC) No 450/2009 of 29 May 2009 on active and intelligent materials and articles intended to come into contact with food.</big></b><br>  | 📄29 pages | 🏛️EU Commission, Brussels, 🇪🇺 | 🔉English | <a href="#plastics">⬆️</a><a href="#plast5">⬅️</a><br><br>🔖<i>Regulation (EC) No 450/2009 includes the following definitions:<ul><li><b>‘active materials and articles’</b> means materials and articles that are intended to extend the shelf-life or to maintain or improve the condition of packaged food; they are designed to deliberately incorporate components that would release or absorb substances into or from the packaged food or the environment surrounding the food;<ul><li><b>‘releasing active materials and articles’</b> are those active materials and articles designed to deliberately incorporate components that would release substances into or onto the packaged food or the environment surrounding the food;</li><li><b>‘released active substances’</b> are those substances intended to be released from releasing active materials and articles into or onto the packaged food or the environment surrounding the food and fulfilling a purpose in the food.</li></ul></li><li><b>‘component’</b> means an individual substance or a combination of individual substances which cause the active and/or intelligent function of a material or article, including the products of an in situ reaction of those substances; it does not include the passive parts1 such as the material they are added to or incorporated into.</li></ul>The component might be the individual active substance only. The component can also be a combination or group of substances that e.g. when the active or intelligent function implies interaction between different substances leading to an enhancement of the function or the generation of new substances responsible for the active and intelligent function.<br>
+Active packaging is a type of food packaging with an extra function, in addition to that of providing a protective barrier against external influence. Active packaging is intended to influence the packed food. The packaging absorbs food-related chemicals from the food or the environment within the packaging surrounding the food; or it releases
+substances into the food or the environment surrounding the food such as preservatives, antioxidants, flavourings, etc.</i></td><td width="30%"><a href="./doc6.html" title="read the document" target="_readdoc"><img src=".\src_doc6\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc6.html" title="read the document" target="_readdoc"><img src=".\src_doc6\page2.svg" alt="page2" style="zoom:100%;"></a><a href="./doc6.html" title="read the document" target="_readdoc"><img src=".\src_doc6\page3.svg" alt="page3" style="zoom:100%;"></a></td></tr></tbody></table>
+<hr style="width:100%; border:4px dashed #FAF0E8;"><h2><a name="section-idinksectionprinting-inks--✒️🖨️" class="md-header-anchor"></a><section id="ink"></section><span>PRINTING INKS | ✒️🖨️</span></h2><blockquote><p><span>There is no harmonized regulation for printing inks. Recommendations and good manufacturing practices have been stated by the European Printing Ink Association (</span><a href='https://www.eupia.org/about-us/membership/companies'><span>EuPIA</span></a><span>). The early guide produced by the </span><a href='https://www.norden.org/en/information/history-nordic-council'><span>Nordic  Council</span></a><span> is included.</span></p></blockquote><p><span>📚documents: 5 | 📌</span><a href='#plastics'><span>plastic materials</span></a><span>, </span><a href='#paper'><span>paper &amp; board</span></a><span>, </span><a href='#glue'><span>adhesives</span></a><span>, </span><a href='#barriers'><span>functional barriers</span></a><span>, </span><a href='#nias'><span>NIAS</span></a><span>, </span><a href='#metals'><span>metals</span></a><span>, </span><a href='#actia'><span>all materials</span></a><span> | </span><a href='#top'><span>🔝</span></a></p><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📕</span><a href='#ink1'><span>EuPIA guidelines</span></a><span>📜</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📙</span><a href='#ink2'><span>Exclusion list</span></a><span>📛</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📒</span><a href='#ink3'><span>Inventory list</span></a><span>📇</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📗</span><a href='#ink4'><span>List of photo-initiators with low migration</span></a><span>📉</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📘</span><a href='ink#5'><span>Check list for compliance</span></a><span>✔️</span></p></li></ul><table border="0px" style="width:100%; table-layout:fixed;"><tbody><tr><td><section id="ink1"></section>📕<b><big>EuPIA Guideline on Printing Inks applied to the non-food contact surface of food packaging materials and articles</big></b><br>  | 📄16 pages | 🏢EuPia, 🇧🇪 | 🔉English | <a href="#ink">⬆️</a><a href="#ink2">➡️</a><br><br>🔖<i>Having regard to the fact that there is a Framework Regulation applicable to all food packaging, but not yet any specific Community legislation concerning printing inks for food packaging, EuPIA have developed a Guideline for their members, based on current European legislation, which gives detailed recommendations as to how to formulate inks which will comply with this Regulation; this is in line with the EuPIA strategy in the field of packaging inks.<br>
+It also takes into account the work done in cooperation with the Council of Europe Committee of Experts on Food Contact Materials.</i></td><td width="30%"><a href="./doc8.html" title="read the document" target="_readdoc"><img src=".\src_doc8\page1.svg" alt="page1" style="zoom:100%;"></a></td></tr>
+    <tr><td><section id="ink2"></section>📙<b><big>Exclusion list for printing inks and related products</big></b><br>  | 📄4 pages | 🏢EuPia, 🇧🇪 | 🔉English | <a href="#ink1">⬅️</a><a href="#ink">⬆️</a><a href="#ink3">➡️</a><br><br>🔖<i>This exclusion list of materials has been based on health and safety matters in the day-to-day production and marketing of printing inks and associated products employing
+        Good Manufacturing Practices, wherever they are manufactured.<ul><li>Exclusion lists based on selection criteria and individual assessment have been widely used by printing ink manufacturers and their customers. Although they are recommendations and do not have legal obligations, the EuPIA Exclusion List has the full support of all of its printing ink manufacturer members.</li><li>The raw materials excluded by the present list are substances or preparations/mixtures previously used or relevant in the formulation of printing inks that must be avoided in consideration of the selection criteria (sections A to C) or the substances list (sections D to G) and which under normal established and foreseeable conditions of use in the manufacture and application of printing inks would cause a risk to health.</li><li>The majority of raw materials used in printing inks are produced under commercial industrial conditions and may contain unavoidable impurities, mostly in small quantities. As some of these impurities may be on the exclusion list, every effort is made to ensure that they are at a minimum level.</li></ul></i></td><td width="30%"><a href="./doc9.html" title="read the document" target="_readdoc"><img src=".\src_doc9\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc9.html" title="read the document" target="_readdoc"><img src=".\src_doc9\page2.svg" alt="page2" style="zoom:100%;"></a></td></tr>
+    <tr><td><section id="ink3"></section>📒<b><big>EuPIA Guideline on Printing Inks applied to the non-food contact surface of food packaging materials and articles</big></b><br>  | 📄154 pages | 🏢EuPia, 🇧🇪 | 🔉English | <a href="#ink2">⬅️</a><a href="#ink">⬆️</a><a href="#ink4">➡️</a><br><br>🔖<i>EuPIA had decided  to make publicly available a list of all the substances used in the manufacture of food packaging inks, with the aim of implementing a transparent tool for packaging converters and brand owners. At the same time the list is intended to become a reference for competent authorities.
+Since then, the Swiss Ordinance on Materials and Articles has been amended with provisions specific to food packaging inks. The core element of the new regulation is a list of permitted substances identifying the only substances to be used in the manufacture of food packaging inks marketed in Switzerland.<br>
+However, it is the intention of EuPIA to collate and develop its own inventory list, allowing for the most flexible way of providing update information such that the latest status of substances/raw materials used in food packaging inks is represented. <br>
+Printing inks and varnishes for food packaging are intended to be applied to a variety of substrates using different printing inks, such as:
+        <ul><li>Rotogravure and flexographic printing on flexible films, Aluminium foil, paper and cardboard.</li><li>Offset printing on paper, cardboard, rigid plastics and metal</li><li>Screen printing on rigid plastics, films, foil and metal</li><li>Roller coating on metal</li><li>Digital inks printed on paper, cardboard, flexible films and Aluminium foils</li><li>Jet inks printed on paper, flexible films, Aluminium foils and rigid plastics</li></ul>Depending on the field of application and their formulation, printing inks and variety of substrates using different printing techniques, such as:
+        varnishes have different drying mechanisms:<ul><li>Evaporation through hot air drying for water and solvent based systems</li><li>Penetration into substrate structures with or without oxidative polymerisation</li><li>Radical or cationic polymerisation induced by UV or EB irradiation.</li><li>High temperature drying by solvents evaporation and/or polymerisation using baking ovens.</li></ul></i></td><td width="30%"><a href="./doc10_part1.html" title="read the document" target="_readdoc"><img src=".\src_doc10\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc10_part1.html" title="read the document" target="_readdoc"><img src=".\src_doc10\page2.svg" alt="page2" style="zoom:100%;"></a><a href="./doc10_part3.html" title="read the document" target="_readdoc"><img src=".\src_doc10\page3.svg" alt="page1" style="zoom:100%;"></a></td></tr>
+<tr><td><section id="ink4"></section>📗<b><big>EuPIA suitability list of photo-initiators for low migration UV printing inks and varnishes</big></b><br>  | 📄5 pages | 🏢EuPia, 🇧🇪 | 🔉English | <a href="#ink3">⬅️</a><a href="#ink">⬆️</a><a href="#ink5">➡️</a><br><br>🔖<i>Some photo-initiators have both low migration potential and, by virtue of supportive toxicological data, an evaluated status with recognized migration thresholds. They are listed in Annex 6 of the Swiss Ordinance 817.023.21.<br>
+    Other photo-initiators which are not fully evaluated and, accordingly, are in the B list of the above Annex. Depending on the application and packaging structure compliance of the final package within the accepted migration limits can be achieved.</i></td><td width="30%"><a href="./doc11.html" title="read the document" target="_readdoc"><img src=".\src_doc11\page1.svg" alt="page1" style="zoom:100%;"></a></td></tr>
+    <tr><td><section id="ink5"></section>📕<b><big>Food contact materials and articles: Printing Inks Check lists for compliance in industry and trade and control by food inspection</big></b><br>  | 📄59 pages | 🏛️Norden, Copenhagen, 🇩🇰 | 🔉English | <a href="#ink4">⬅️</a><a href="#ink">⬆️</a><br><br>🔖<i>In-house control and the documentation of it is the basis for the assurance of compliance with legislation, both in the food area and in the area of food contact materials (called FCM). Safe FCM is a complicated area for printing inks, also due to the critical control points in the printing process. It is therefore useful to have more precise check lists on printing inks as guidance to industry and trade, both in the Nordic countries and in EU.One of the goals for this check list is to contribute to the development of more uniform control and requirements for in-house control of FCM, both for products produced in EU and for those in third countries producing FCM for import into EU. A further goal for the project was that check lists could be used as basic guidance for industry, trade and for the food inspectors in the Nordic Countries in their work in controlling in-house declaration of compliance of printing inks and printing processes. The legal requirements in EU with relevance for FCM are found in different regulations and directives. The legal basis for the requirements of declaration of compliance is covered by several part of the EU legislation, like the Food Law,3 the Control regulation,4 the Hygiene regulation5
+and the regulation on FCM. This includes the FCM framework regulation no. 1935/2004 and the GMP regulation no. 2023/2006 that covers all types of materials,6 and the production of them. Printing inks used in FCM are regulated by these general requirements and some uses are addressed more specifically, and as there is no specific legislation in the area in EU yet, the responsibility of compliance could benefit from more guidance and risk assessments. With this work on printing inks, the Nordic Food Authorities have continued previous work on elaboration of check lists with the minimum requirements for documentation, especially the declaration of compliance needed to comply with the legal requirements for the in-house documentation of industry and trade.<br>The report has a short introduction to printing processes and some of the critical points in these processes. Such knowledge is regarded as useful in the control and quality assurance.
+In-house documentation, including declarations of compliance with the legal requirements, supporting documentation for the declaration and request of other types of information, are based on the assumption, that each link in the chain ensures compliance. The links from producers of chemicals for FCM to the users of the final materials in the food industry and trade rely on each member of the supply chain taking responsibility for providing and communicating information critical to ensuring compliance of the final, packaged foodstuffs or the final material or article sold to the consumers. Furthermore, it is important for the food safety aspects that food industry and also consumers follow the instruction of use on the labels of the FCM sold directly to them. The check lists for the control of compliance for printing inks set a specific frame with minimum requirements to all relevant links in the chain from producers or importers of chemicals and raw materials like additives to the users of the final FCM in the food industry and trade, including intracommunity trade in the EU and import from third countries. The check lists are guidance with the aim to give a starting point for industry and trade when developing their in-house documentation and declaration of compliance. It can be used in present and future work on constructing in-house control documentation or work on improvements of the documentation in order to ensure compliance with the requirements in the legislation, especially the EU regulation no. 1935/2004. Industry and trade would in most cases face supplementary requirements to ensure the technical properties of the printed surfaces, but this type of requirements are not included in this report. It also takes into account the work done in cooperation with the Council of Europe Committee of Experts on Food Contact Materials.</i></td><td width="30%"><a href="./doc20.html" title="read the document" target="_readdoc"><img src=".\src_doc20\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc20.html" title="read the document" target="_readdoc"><img src=".\src_doc20\page7.svg" alt="page7" style="zoom:100%;"></a><a href="./doc20.html" title="read the document" target="_readdoc"><img src=".\src_doc20\page15.svg" alt="page15" style="zoom:100%;"></a><a href="./doc20.html" title="read the document" target="_readdoc"><img src=".\src_doc20\page23.svg" alt="page23" style="zoom:100%;"></a><a href="./doc20.html" title="read the document" target="_readdoc"><img src=".\src_doc20\page27.svg" alt="page27" style="zoom:100%;"></a></td></tr>
+</tbody></table>
+<hr style="width:100%; border:4px dashed #FAF0E8;"><h2><a name="section-idgluesectionadhesives--sealants--♹🎰" class="md-header-anchor"></a><section id="glue"></section><span>ADHESIVES &amp; SEALANTS | ♹🎰</span></h2><blockquote><p><span>There is no harmonized regulation for glues, adhesives and sealants used in food packaging. Recommendations and good manufacturing practices have been stated by the industry association of adhesive and sealant industry (</span><a href='https://www.feica.eu/about-feica/feica-brief'><span>FEICA</span></a><span>).</span></p></blockquote><p><span>📚documents: 3  | 📌</span><a href='#plastics'><span>plastic materials</span></a><span>, </span><a href='#paper'><span>paper &amp; board</span></a><span>, </span><a href='#barriers'><span>functional barriers</span></a><span>, </span><a href='#nias'><span>NIAS</span></a><span>, </span><a href='#metals'><span>metals</span></a><span>, </span><a href='#actia'><span>all materials</span></a><span> | </span><a href='#top'><span>🔝</span></a></p><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📕</span><a href='#glue1'><span>Good Manufacturing Practices</span></a><span>⚗️</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📙</span><a href='#glue2'><span>Migration testing</span></a><span>🔬</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📒</span><a href='#glue3'><span>Declaration [of compliance]</span></a><span>📑</span></p></li></ul><table border="0px" style="width:100%; table-layout:fixed;"><tbody><tr><td><section id="glue1"></section>📕<b><big>FEICA Guideline for Good Manufacturing Practice of food packaging adhesives in Reference to Regulation (EU) No 2023/2006</big></b><br>  | 📄7 pages | 🏢EuPia, 🇧🇪 | 🔉English | <a href="#glue">⬆️</a><a href="#glue2">➡️</a><br><br>🔖<i>This guidance aims to help the adhesives industry, customers and other stakeholders to understand how the Regulation (EC) No 2023/2006 “on good manufacturing practice for materials and articles intended to come into contact with food” (GMP Regulation) can be implemented by the adhesive industry. The Guidance paper covers general and detailed rules on good manufacturing practice. Originally, the intention of this Regulation was to cover especially those materials which are not yet regulated through EU regulations, e.g. printing inks, paper and adhesives. However, in reality it forces all actors in the food contact materials supply chain to make sure that the material or article of concern is processed, controlled and evaluated in such a way, that it is suitable for the intended purpose of food contact. The GMP Regulation can be considered as an implementation regulation to the requirements of Article 3 of the Framework Regulation (No 1935/2004).
+The GMP Regulation was published to ensure uniformity amongst Member States with regards to GMP for materials and articles intended to come into contact with food and build a frame for the different industry sector guidelines.<br>
+Although the regulation does not refer to any standards, the majority of requirements of the GMP regulation can already be covered through an established and implemented Quality Management System (such as ISO 9001 and equivalent procedures). Therefore, this guidance paper will mainly concentrate on requirements which are either adhesive industry specific or additionally needed to comply with the Regulation (EU) No. 2023/2006.</i></td><td width="30%"><a href="./doc12.html" title="read the document" target="_readdoc"><img src=".\src_doc12\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc12.html" title="read the document" target="_readdoc"><img src=".\src_doc12\page2.svg" alt="page2" style="zoom:100%;"></a></td></tr>
+    <tr><td><section id="glue2"></section>📙<b><big>Migration testing of adhesives intended for food contact materials</big></b><br>  | 📄12 pages | 🏢EuPia, 🇧🇪 | 🔉English | <a href="#glue1">⬅️</a><a href="#glue">⬆️</a><a href="#glue3">➡️</a><br><br>🔖<i>This chapter outlines specific guidelines for conformity testing of adhesives as components of food contact materials. Adhesives typically make up less than 5% of the packaging and, for most adhesive applications, direct food contact is not intended1. Depending on the adhesive and application, contact may occur unintentionally at seams and edges, or via migration through the packaging or gas phase due to volatile compounds (vapour phase transfer). Consequently, specific migration of individual compounds is of greater interest than overall migration, as the latter is only a measure of inertness and has no toxicological meaning.<br>Following the requirements of Regulation (EU) No. 1935/2004, the finished food contact material has to be tested and / or evaluated under real use conditions. Testing the adhesive alone can only be considered as a screening tool and should only be used in cases where the worst-case calculation fails or cannot be carried out due to missing information. For more details of how to select a suitable adhesive for application in food contact materials, please consult the FEICA Guidance for a food contact status declaration for adhesives<br>Tests according to the rules of the plastics regulation on the pure adhesive without substrate or the construction material will usually overestimate the migration of constituents into foodstuff, as contributing factors to real migration are not sufficiently considered. Contributing factors can be:<ul><li>Curing times and conditions</li><li>Interaction of adhesive with other FCM layers</li><li>Barrier properties of other FCM layers</li><li>Distribution of constituents within the FCM</li><li>Ratio of adhesive amount to filling good</li></ul></i></td><td width="30%"><a href="./doc13.html" title="read the document" target="_readdoc"><img src=".\src_doc13\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc13.html" title="read the document" target="_readdoc"><img src=".\src_doc13\page2.svg" alt="page2" style="zoom:100%;"></a><a href="./doc13.html" title="read the document" target="_readdoc"><img src=".\src_doc13\page3.svg" alt="page3" style="zoom:100%;"></a></td></tr>
+    <tr><td><section id="glue3"></section>📒<b><big>FEICA Guideline for Good Manufacturing Practice of food packaging adhesives in Reference to Regulation (EU) No 2023/2006</big></b><br>  | 📄19 pages | 🏢EuPia, 🇧🇪 | 🔉English | <a href="#glue2">⬅️</a><a href="#glue">⬆️</a><br><br>🔖<i>FEICA is committed to support the flow of information necessary to ensure the safety of our products in the supply chain, both upstream and downstream, and provides these guidelines especially to support member companies. This guide therefore contains tools, recommendations and answers as to which information needs to be collected from suppliers of raw materials for adhesives, to aid the decision whether a raw material is suitable for a food contact application or not, where to find the corresponding legal texts for further information and provides a decision tree for evaluating the suitability of adhesive for the intended application. FEICA successfully completed a project called ‘MIGRESIVES’ in 2010 to show that the migration of substances from adhesives can be modelled in a similar way than already demonstrated for plastics. The use of modelling can complement or even replace the more time consuming and costly migration testing without compromising the safety of food packaging. Finally this document explains what information needs to be provided on a food contact status paper so that adequate information is communicated to the next level in the supply chain. By following this guideline adhesives manufacturer should be able to demonstrate that their products fulfil the requirements of the framework regulation by using the various proposed tools.</i></td><td width="30%"><a href="./doc14.html" title="read the document" target="_readdoc"><img src=".\src_doc14\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc14.html" title="read the document" target="_readdoc"><img src=".\src_doc14\page12.svg" alt="page12" style="zoom:100%;"></a></td></tr>
+</tbody></table>
+<hr style="width:100%; border:4px dashed #FAF0E8;"><h2><a name="section-idpapersectionpaper--board-materials--🌳📰" class="md-header-anchor"></a><section id="paper"></section><span>PAPER &amp; BOARD MATERIALS | 🌳📰</span></h2><blockquote><p><span>The European assaciation of paper industry (</span><a href='https://www.cepi.org/about-cepi/organisation/'><span>CEPI</span></a><span>) uses the following arguments not to promote specific migration limits already set for plastics, printing inks, adhesives:</span></p><ul><li><em><span>&quot;[Paper &amp; board] has low consumer exposure due to the low proportion of all direct contact food packaging, where the main application is contact with dry food.&quot;</span></em></li><li><em><span>&quot;It has a completely different manufacturing process compared to plastics.&quot;</span></em></li><li><em><span>&quot;Its predominant base polymer is cellulose whose monomer, ß-glucose, has no known adverse health issues.&quot;</span></em></li><li><em><span>&quot;Standard migration test methods used for plastics are not easily applicable or not appropriate for control.&quot;</span></em></li></ul><p><strong>&#128587;<span>With the phase-out of single-use plastics and the generalization of recycled materials for primary and secondary packaging, these justifications are becoming more and more disputable</span></strong><span>. In particular, the application of specific rules of the 17 groups of materials is not consistent with the risk of cross-mass transfer between materials (cellulosic or not, recycled or not, ternary/secondary and primary layers) and with the risk of delayed food contamination. The guidelines of the  </span><a href='https://www.norden.org/en/information/history-nordic-council'><span>Nordic  Council</span></a><span> predate the mineral oil crisis and, without being obsolete, does not adequately address the risk of contamination for dry food and cross-contamination. </span></p></blockquote><p><span>📚documents: 2  | 📌</span><a href='#plastics'><span>plastic materials</span></a><span>, </span><a href='#ink'><span>printing inks</span></a><span>, </span><a href='#glue'><span>adhesives</span></a><span>, </span><a href='#barriers'><span>functional barriers</span></a><span>, </span><a href='#nias'><span>NIAS</span></a><span>, </span><a href='#metals'><span>metals</span></a><span>, </span><a href='#actia'><span>all materials</span></a><span> | </span><a href='#top'><span>🔝</span></a></p><ul><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📘</span><a href='#paper1'><span>Industry guidelines for compliance</span></a><span>📑</span></p></li><li class='md-task-list-item task-list-item task-list-not-done' ><input type='checkbox' /><p><span>📔</span><a href='#paper2'><span>Authority guidelines for compliance✔️</span></a></p></li></ul><table border="0px" style="width:100%; table-layout:fixed;"><tbody><tr><td><section id="paper1"></section>📘<b><big>Industry Guideline for the Compliance of Paper &amp; Board Materials and Articles for Food Contact</big></b><br>  | 📄36 pages | 🏢CEPI, 🇧🇪 | 🔉English | <a href="#paper">⬆️</a><a href="#paper2">➡️</a><br><br>🔖<i><h4>Objective</h4> This document is aimed at manufacturers of paper and board materials and articles intended for food contact and is designed to provide guidance for establishing compliance with Regulation (EC) No 1935/2004. Whilst it provides a methodology for the demonstration of the suitability of materials and articles for a variety of food contact applications, in itself it has no legal force. Its use is voluntary and it should be noted that other compliance mechanisms exist which may be used separately or in conjunction with this Guideline.<br> It is the intention that the contents of this document are not fixed and will be updated in accordance with evolving best practice and knowledge of food safety.<h4>Field of application</h4>Paper and board materials and articles are manufactured from cellulose-based natural fibres both bleached and unbleached, from primary and recycled sources. In addition paper and board may contain functional additives and synthetic fibres and also other treatment agents and polymeric binders for organic and inorganic pigments.<br>This Guideline applies to materials and articles constituted of paper and board (excluding non-wovens as defined by ISO 9092) which may comprise one or more layers of fibre and which in their finished state:<ul><li>are intended to be brought into contact with food, or</li><li>are already in contact with food and were intended for that purpose, or</li><li>can reasonably be expected to be brought into contact with food or to transfer their constituents to food under normal or foreseeable conditions of use.</li></ul>The two principal operations in the manufacture of paper and board materials and articles for food contact are normally papermaking and conversion. Most of the specific requirements given in this Guideline will apply at the papermaking stage and will be applicable to paper and board at the completion of that operation.Some requirements are relevant to the converting operation. <br>Paper and board includes mineral coated papers, and the components including polymeric binders in the coating formula are covered by the requirements of this Guideline.<br> This Guideline may also be applied to paper and board as it is used in other coated and laminated materials, including combinations with plastics, aluminium, and waxes. Specific sections of this Guideline deal with multi-material multi-layer materials involving combinations of paper and board and plastics, filtering and baking applications, and packaging not actually in food contact. </i></td><td width="30%"><a href="./doc17.html" title="read the document" target="_readdoc"><img src=".\src_doc17\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc17.html" title="read the document" target="_readdoc"><img src=".\src_doc17\page32.svg" alt="page32" style="zoom:100%;"></a><a href="./doc17.html" title="read the document" target="_readdoc"><img src=".\src_doc17\page33.svg" alt="page33" style="zoom:100%;"></a><a href="./doc17.html" title="read the document" target="_readdoc"><img src=".\src_doc17\page34.svg" alt="page34" style="zoom:100%;"></a></td></tr>
+    <tr><td><section id="paper2"></section>📔<b><big>Paper and Board Food Contact &lt; Materials and Articles for Food Contact</big></b><br>  | 📄52 pages | 🏛️Norden, Copenhagen, 🇩🇰 | 🔉English | <a href="#paper1">⬅️</a><a href="#paper">⬆️</a><br><br>🔖<i>This document is elaborated for, manufacturers, other business operators and interested parties in the production chain. The document should ensure that the end-product does not constitute a risk to health and by all other means are produced in accordance with Article 3 of Regulation (EC) No 1935/2004. This document may also provide a help to national enforcement authorities and laboratories. As long as it is not transposed into national legislation in the Nordic Countries, the fulfilment of the requirements in this document is not mandatory. The basis for this document is the Council of Europe Resolution on
+Paper and Board Materials and Articles intended to come into contact with foodstuffs AP (2002) 1. However, legislative, scientific and technological development has been considered after the publication of CoE resolution as well as other development followed in the EU/EEA-area and elsewhere.<br>
+<b>Requirements in this document on Good Manufacturing Practice (GMP), compliance declarations, documentation, traceability, active and intelligent materials and articles and functional barriers are harmonized with Regulation (EC) No 1935/2004, and existing measures given under the power of this regulation. According to this document substances used in the production of paper and board used for all food contact applications should have been evaluated by EFSA, BfR or FDA.</b> Specifications and conditions of use  must be respected.Substances may be used as long as they are evaluated
+for use in food contact materials or as direct food additives. However, special attention should be paid to Food Consumption Factors e.g. for infants and small children.<br>
+This document applies to materials and articles constituted of paper and board which may comprise one or more layer(s) of fibres and are intended to come into contact with or are placed in contact with foodstuffs. Any layer which is composed of paper and board must fulfil the requirements of this document, unless separated from the foodstuffs by a <b>functional barrier</b>.<br>
+The fibres of paper and board produced of Nordic tree types, as well as tree types from other parts of the world, are not necessarily toxicologically evaluated, but are in this context generally regarded as safe. Paper and board are manufactured from cellulose-based natural fibres from bleached and unbleached fibre material, including recycled fibres. In addition paper and board may contain several monomer or polymeric additives.<br>
+Detailed requirements to compliance declarations and documentation are essential elements in this document, specifying in detail what information shall be kept for inspection by national authorities and what information shall be provided in compliance declarations to the downstream user as a minimum. Requirements on compliance declarations are based on Directive 84/500/EEC including later amendments and Directive 2002/72/EC and amendments. Both are Directives operationalising the obligation in Article 16 of Regulation (EC) No 1935/2004 of issuing compliance declarations.<br>
+Specific restrictions are given on finished materials. For virgin fibres tests has to be carried out on heavy metals and PCP. More tests have to be carried out on products made from recycled fibres, dependent on which types of food the materials are intended for contact with. Until new biological tests have been fully accepted and validated for paper the specific requirements for recycled fibres in this document has to be checked
+for to ensure safe products.<br>
+Foods have been classified into three types, taking into account the nature of the food and the potential for migration in contact with paper and board. The classification laid down in EU Directive 85/572/EEC should be used to determine the food type for individual foodstuffs except where Chapter 6.4 indicates otherwise.<br>
+No specific process technologies in connection to the production of recycled fibres is required, only that end product testing is carried out, and restrictions given in relevant tables is respected. However, a short description from the producer of paper and board on which type of process technologies is used shall be included in the documentation.</i></td><td width="30%"><a href="./doc19.html" title="read the document" target="_readdoc"><img src=".\src_doc19\page3.svg" alt="page3" style="zoom:100%;"></a><a href="./doc19.html" title="read the document" target="_readdoc"><img src=".\src_doc19\page5.svg" alt="page5" style="zoom:100%;"></a><a href="./doc19.html" title="read the document" target="_readdoc"><img src=".\src_doc19\page27.svg" alt="page27" style="zoom:100%;"></a><a href="./doc19.html" title="read the document" target="_readdoc"><img src=".\src_doc19\page33.svg" alt="page33" style="zoom:100%;"></a><a href="./doc19.html" title="read the document" target="_readdoc"><img src=".\src_doc19\page34.svg" alt="page34" style="zoom:100%;"></a></td></tr>
+</tbody></table>
+<hr style="width:100%; border:4px dashed #FAF0E8;"><h2><a name="section-idmetalssectionmetals--alloys--🥫" class="md-header-anchor"></a><section id="metals"></section><span>METALS &amp; ALLOYS | 🥫</span></h2><blockquote><p><span>Metals can be released into foods and the risk needs to be minimized with a proper choice of materials, control of impurities and coating</span></p></blockquote><p><span>📚documents: 1 | 📌</span><a href='#plastics'><span>plastic materials</span></a><span>, </span><a href='#paper'><span>paper &amp; board</span></a><span>, </span><a href='#barriers'><span>functional barriers</span></a><span>, </span><a href='#actia'><span>all materials</span></a><span> | </span><a href='#top'><span>🔝</span></a></p><table border="0px" style="width:100%; table-layout:fixed;"><tbody><tr><td>📔<b><big>Food contact materials - metals and alloys</big></b><br>  | 📄66 pages | 🏛️Norden, Copenhagen, 🇩🇰 | 🔉English | <br><br>🔖<i>Metals and alloys are widely applied as food contact materials, <i>e.g.</i> as process equipment in the food industry and as household utensils. Therefore, they are a potential source of food contamination. Migration of substances from food contact materials to food must not occur in amounts that endanger human health. Relevant for food contact materials made from metals and alloys are the migration (release) of metals, both the main components and foreseen impurities. In-house control based on a declaration of compliance, DoC, and supporting
+documentation at the producers and importers are important prerequisites to limit this contamination and to ensure compliance with the legislation. This is considered a general part of quality assurance, even though the European legislation does not specifically require a DoC for metals and alloys used as food contact materials. This Nordic guideline gives a short overview of toxicology, analytical feasibility, legislation and guideline values for release of metals from food contact materials. Therefore, the guideline will be a useful tool for industry and official food inspectors.<br>
+The guideline is based on the work done by the Council of Europe, risk assessments from the European Food Safety Authority, EFSA, and by the WHO/FAO Joint Expert Committee on Food Additives, JECFA. Additional sources of information on metals in food are the plastic food contact material (EU regulation 10/2011) and the contaminants legislation
+(EU regulation 1881/2006).</i></td><td width="30%"><a href="./doc18_part1.html" title="read the document" target="_readdoc"><img src=".\src_doc18\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc1.html" title="read the document" target="_readdoc"><img src=".\src_doc18\page37.svg" alt="page37" style="zoom:100%;"></a></td></tr></tbody></table>
+<hr style="width:100%; border:4px dashed #FAF0E8;"><h2><a name="section-idniassectionnon-intentionally-added-substances-nias--❓☝️" class="md-header-anchor"></a><section id="nias"></section><span>NON-INTENTIONALLY ADDED SUBSTANCES (NIAS) | ❓☝️</span></h2><blockquote><p><span>The concept of NIAS is evolving progressively from substances &quot;not declared&quot; to &quot;</span><em><span>unknown migrating substance</span></em><span>&quot; or &quot;</span><em><span>substance with unknown origin</span></em><span>&quot;.  The complications with NIAS are numerous. Their presence may be certain, but their amount highly random due to the random occurrence and extent of impurities, cross-contamination, reactions of degradation/aging... Absolute identification and quantification requires standards, migration above the limits of detection. Hazard requires the substance to have been evaluated. These conditions are rarely met. As a rule of thumb, it is easier to avoid NIAS when the source is identified, whereas to determine whether the risk may be acceptable.</span></p><p><span>Several computational approaches have be developed to accelerate the identification of NIAS, the evaluation of risks/hazards based on hypothetical but reasonable chemical structures, the hierarchization of avoiding strategies. The generation of </span><strong><span>recycled materials</span></strong><span> makes the use of NIAS and undesirable substance management concepts indispensable. This field has evolved with new practices and tools (chemometrics, structure-activity relationships, molecular modeling of migration).</span></p></blockquote><p><span>📚documents: 1 | 📌</span><a href='#plastics'><span>plastic materials</span></a><span>, </span><a href='#paper'><span>paper &amp; board</span></a><span>, </span><a href='#ink'><span>printing inks</span></a><span>, </span><a href='#glue'><span>adhesives</span></a><span>, </span><a href='#barriers'><span>functional barriers</span></a><span>, </span><a href='#actia'><span>all materials</span></a><span> | </span><a href='#top'><span>🔝</span></a></p><table border="0px" style="width:100%; table-layout:fixed;"><tbody><tr><td>📓<b><big>Guidance on Best Practices on the Risk Assessment of Non-Intentionally Added Substances (NIAS) on Food Contact Materials and Articles</big></b><br>| 📄72 pages | 🏛️Norden, Copenhagen, 🇩🇰 | 🔉English | <br><br>🔖<h4> Conclusions</h4><i>The risk assessment of FCMs strongly depends on a proper exposure assessment. This is probably the most critical piece of information as the source to which exposure to NIAS occurs is an uncertain step in the risk assessment process. It should be noted, however, that this is an uncertainty which is not specific  for FCM. Accurate exposure information is difficult to obtain for most risk assessments
+due to a lack of data on the full production process and the different non-FCM sources of the NIAS.<br>
+A risk assessment is typically only performed on NIAS that exceed 10 μg/kg food. This is a regulatory defined LOD which is not based on analytical or toxicological facts. It finds limited use for the risk assessment of NIAS since many NIAS exceed this threshold making risk assessment difficult if not impossible and, on the other hand, a lower concentration of NIAS does not guarantee the absence of concern. A better and more realistic approach is to move to exposure driven risk assessment.<br>
+Combination toxicity where two or more substances are present below the LOI but which may have the same target organ or mechanism or mode of action, is in principle, not covered by the NIAS screening approaches. According to two literature studies (EU-SCENIHR, 2012; Boobis et al., 2011) and a publication by Leeman et al. (2013), the health relevance of possible cumulative effects at low (TTC) dose levels is considered to be so low that a need for a correction factor to cover possible cumulative effects is very low to absent. However, for endocrine active substances and genotoxic substances, possible cumulative effects at low dose cannot be excluded (Leeman et al., 2013). The latter can be covered by performing in-vitro bioassays on these end points.<br>
+Risk assessment of NIAS should ascertain that these do not contain a potential for genotoxicity. For nonidentified NIAS, it is not possible to determine whether these have a structural alert for genotoxicity. The alternative approach is to perform a genotoxicity in-vitro assay. However, the sensitivity of the applied assay has to be validated towards known FCM related genotoxic substances (e.g. certain primary aromatic amines) and be related to the FCM under investigation. Some promising in-vitro bioassays  are in development that will inform about the mechanism of action of substances (EFSA, 2011). Therefore, genotoxicity testing according to the current acceptable state-of-the-art is being advised.<br>
+Although some limitations are described, it should be noted that the risk assessment strategy for unidentified NIAS as described in this report is currently the only approach available for unknown chemicals. The approach should therefore be considered to be state-of-the-art until new and/or more sensitive methods become available. However, since no alternative is available to evaluate these unidentifiable substances, the best one can do today is that described in this guidance. Although some limitations are described, it should be noted that the risk assessment strategy for unidentified NIAS as described in this report is currently the only approach available for unknown chemicals. The approach should therefore be considered to be state-of-the-art until new and/or more sensitive  methods become available. However, since no alternative is available to evaluate these
+unidentifiable substances, the best one can do today is that described in this guidance.</i></td><td width="30%"><a href="./doc16_part1.html" title="read the document" target="_readdoc"><img src=".\src_doc16\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc16.html" title="read the document" target="_readdoc"><img src=".\src_doc16\page18.svg" alt="page18" style="zoom:100%;"></a><a href="./doc16_part1.html" title="read the document" target="_readdoc"><img src=".\src_doc16\page30.svg" alt="page30" style="zoom:100%;"></a><a href="./doc16_part1.html" title="read the document" target="_readdoc"><img src=".\src_doc16\page33.svg" alt="page33" style="zoom:100%;"></a><a href="./doc16_part1.html" title="read the document" target="_readdoc"><img src=".\src_doc16\page49.svg" alt="page49" style="zoom:100%;"></a></td></tr></tbody></table>
+<hr style="width:100%; border:4px dashed #FAF0E8;"><h2><a name="section-idactiasectionall-materials-together--🥤🍿🥫🇫🇷" class="md-header-anchor"></a><section id="actia"></section><span>ALL MATERIALS TOGETHER | 🥤🍿🥫🇫🇷</span></h2><blockquote><p><span>The guide from </span><a href='https://www.actia-asso.eu/en/presentation/'><span>ACTIA</span></a><span> (national federation of food technology institutes in France) is the only guide that deliberately takes the part of the food and not a specific material. </span></p><p><span>Migration phenomena are reviewed in this </span><a href="../../../../../../references/" title="Risk assessment of migration from packaging materials into food" title="_ref"><span>reference document</span></a><span>.</span></p></blockquote><p><span>📚documents: 1  | 📌</span><a href='#plastics'><span>plastic materials</span></a><span>, </span><a href='#paper'><span>paper &amp; board</span></a><span>,</span><a href='#ink'><span>printing inks</span></a><span>, </span><a href='#glue'><span>adhesives</span></a><span>, </span><a href='#barriers'><span>functional barriers</span></a><span>, </span><a href='#nias'><span>NIAS</span></a><span>, </span><a href='#metals'><span>metals</span></a><span> | </span><a href='#top'><span>🔝</span></a></p><table border="0px" style="width:100%; table-layout:fixed;"><tbody><tr><td>📙<b><big>Functional barriers against mineral oil from paper and cardboard packaging materials</big></b><br>  | 📄66 pages | 🏫ACTIA/PROPACK FOOD, 🇫🇷 | 🔉French | <br><br>🔖<i>Modern food packaging is made of different materials combined in parallel (laminated, glued, coated or lacquered) or placed side by side for all or part of the shelf life of the food. Few guides deal with materials or their use in combination. The result is a vision that privileges the material to the detriment of the food. The opposite point of view (defending the food) is at the heart of preventive food safety management methods such as HACCP, ISO 22000 and their variants.<br> The ACTIA guide (<i>in French</i>, not translated) tries to bring this global vision by starting from the phenomena (migration) and by looking at the means of action to minimize the effects according to the European and national (here France) obligations. The point of view addressed in the guide represents the point of view of the food industry, which is the marketer, and therefore responsible vis-à-vis the law. There is no consensus among the materials industry and processors, who invoke limited liability. The complex material flows of packaging materials subject to hazards, recycling cycles and varied supplies greatly complicate the demonstration of compliance. The management of traceability, the implementation of quality assurance procedures and crisis management procedures are essential. .</i></td><td width="30%"><a href="./doc15.html" title="read the document" target="_readdoc"><img src=".\src_doc15\page1.svg" alt="page1" style="zoom:100%;"></a><a href="./doc15.html" title="read the document" target="_readdoc"><img src=".\src_doc15\page9.svg" alt="page2" style="zoom:100%;"></a><a href="./doc15.html" title="read the document" target="_readdoc"><img src=".\src_doc15\page15.svg" alt="page2" style="zoom:100%;"></a></td></tr></tbody></table><hr style="width:100%; border:4px dashed #FAF0E8;"><h2><a name="✔️disclaimer" class="md-header-anchor"></a><span>✔️Disclaimer</span></h2><blockquote><p><span>The opinions expressed in the documents or in the introductive sections are those of the authors and not those of the institutions or authorities. The guides have been written in a variety of contexts, at different times and according to disparate logics. The material guides are most often intended for producers and processors of materials. The authorities&#39; guides are aimed at the applicability of the law and the ability to enforce it. The guides supported by the agro-food sector develop an overall vision and the need for quality management procedures. It is the responsibility of the reader to make the synthesis for his own case. Despite the quality of the documents presented cannot serve as the only source of information within the company.</span></p><p><span>Introductive sections were written by INRAE\Olivier Vitrac. The presented 🔖abstracts were extracted from the documents using the executive summary (preferred), the introduction (the text is truncated) or the conclusions (the text is truncated).</span></p><p><span>The content of the documents are made available unmodified through the platform for educational and training purposes.</span></p></blockquote><hr>
+<table><tbody><tr>
+<td width="256px"><img src="./Fitness-logo256x256.png" alt="FITNESS" referrerpolicy="no-referrer" width="128px"><br><img src="./PartnersCoutries.png" alt="FITNESS" referrerpolicy="no-referrer" width="256px"></td>
+<td><address><b>PROJECT FITNess</b> - funded by the European Union's <b>ERASMUS</b> programme <small>(contract 2017-1-FR01-KA202-037441)</small><br>
+<b>Food packaging open courseware for higher education and staff of companies</b><br>
+<small>Partners: Croatia (UZAG-PBF), France (ACTIA, LNE, AGROPARISTECH/INRA, AGROSUP DIJON), Germany (TUM), 
+Portugal (UCP), Spain (CSIC)</small><br>
+<span id="datetimestamp"></span>  -  <a href="mailto:olivier.vitrac@agroparistech.fr" title="email administrator">Report issues</a></address></td>
+</tr></tbody></table>
+<script>
+var dt = new Date();
+document.getElementById("datetimestamp").innerHTML = dt.toLocaleString('en-US');
+</script><p><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="14.969ex" height="2.092ex" viewBox="0 -730.5 6444.9 900.6" role="img" focusable="false" style="vertical-align: -0.395ex;"><defs><path stroke-width="0" id="E1-MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path stroke-width="0" id="E1-MJMAIN-30" d="M96 585Q152 666 249 666Q297 666 345 640T423 548Q460 465 460 320Q460 165 417 83Q397 41 362 16T301 -15T250 -22Q224 -22 198 -16T137 16T82 83Q39 165 39 320Q39 494 96 585ZM321 597Q291 629 250 629Q208 629 178 597Q153 571 145 525T137 333Q137 175 145 125T181 46Q209 16 250 16Q290 16 318 46Q347 76 354 130T362 333Q362 478 354 524T321 597Z"></path><path stroke-width="0" id="E1-MJMAIN-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path><path stroke-width="0" id="E1-MJMAIN-31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path stroke-width="0" id="E1-MJMAIN-38" d="M70 417T70 494T124 618T248 666Q319 666 374 624T429 515Q429 485 418 459T392 417T361 389T335 371T324 363L338 354Q352 344 366 334T382 323Q457 264 457 174Q457 95 399 37T249 -22Q159 -22 101 29T43 155Q43 263 172 335L154 348Q133 361 127 368Q70 417 70 494ZM286 386L292 390Q298 394 301 396T311 403T323 413T334 425T345 438T355 454T364 471T369 491T371 513Q371 556 342 586T275 624Q268 625 242 625Q201 625 165 599T128 534Q128 511 141 492T167 463T217 431Q224 426 228 424L286 386ZM250 21Q308 21 350 55T392 137Q392 154 387 169T375 194T353 216T330 234T301 253T274 270Q260 279 244 289T218 306L210 311Q204 311 181 294T133 239T107 157Q107 98 150 60T250 21Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E1-MJMAIN-32"></use><use xlink:href="#E1-MJMAIN-30" x="500" y="0"></use><use xlink:href="#E1-MJMAIN-32" x="1000" y="0"></use><use xlink:href="#E1-MJMAIN-30" x="1500" y="0"></use><use xlink:href="#E1-MJMAIN-2212" x="2222" y="0"></use><g transform="translate(3222,0)"><use xlink:href="#E1-MJMAIN-31"></use><use xlink:href="#E1-MJMAIN-32" x="500" y="0"></use></g><use xlink:href="#E1-MJMAIN-2212" x="4444" y="0"></use><g transform="translate(5444,0)"><use xlink:href="#E1-MJMAIN-32"></use><use xlink:href="#E1-MJMAIN-38" x="500" y="0"></use></g></g></svg></span><script type="math/tex"> 2020-12-28</script><span> ​</span></p><p>&nbsp;</p></div>
+</body>
+</html>

@@ -1,0 +1,831 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>doc2_part10</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fff;
+    --control-text-color: #777;
+}
+
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif !important;
+    color: #322289;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#write {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 30px 40px 30px;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+#write p {
+    /* text-indent: 2rem; */
+    line-height: 1.6rem;
+    word-spacing: .05rem;
+}
+
+#write ol li {
+    padding-left: 0.5rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #c6392e;
+    font-weight: 600;
+    padding: 0px 2px;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+
+h2 a,
+h3 a {
+    color: #322289;
+}
+
+h3 a:before {
+    content: '#';
+    color: #c6392e;
+    position: absolute;;
+    left: -0.7em;
+    margin-top: -0.05em;
+    padding-right: 0.5em;
+    font-size: 1.2em;
+    line-height: 1;
+    font-weight: bold;
+}
+
+h1 {
+    padding-bottom: .4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 1.225;
+    margin: 35px 0px 15px 0px;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.43;
+    margin: 20px 0px 7px 0px;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+    color: #777;
+}
+
+p,
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul,
+ol {
+    padding-left: 30px;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 4px solid #c6392e;
+    padding: 10px 0px 10px 15px;
+    color: #777;
+    background-color: rgba(207, 111, 28, .1);
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+}
+
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+
+table tr:nth-child(2n),
+thead {
+    background-color: #fafafa;
+}
+
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr td {
+    border: 1px solid #dfe2e5;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write strong {
+    padding: 0px 1px 0 1px;
+}
+
+#write em {
+    padding: 0px 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: #f2f2f2;
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid #F4F4F4;
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0rem !important;
+    line-height: 1.43rem;
+    background-color: #F8F8F8 !important;
+    border-radius: 2px;
+    font-family: Roboto Mono, Source Sans Pro, Monaco, courier, monospace !important;
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+#write code, tt {
+    margin: 0 2px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: Source Sans Pro, Roboto Mono, Monaco, courier, monospace !important;
+    font-size: 0.92rem;
+    color: #e96900;
+    background-color: #f8f8f8;
+}
+
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
+}
+
+/* heighlight. */
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+    background-color: #f8f8f8;
+}
+
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#write {
+  max-width: auto; /*adjust writing area position*/
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#typora-source .CodeMirror-lines {
+  max-width: auto; /*or 1000px*/
+}
+ :root {--mermaid-font-zoom:1.5em ;}  .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><p><span>◖</span><a href='./'><span>Guidelines</span></a><span>◗◖</span><a href='../casestudies/'><span>This lecture</span></a><span>◗ ◖</span><a href='../../../../'><span>All lectures</span></a><span>◗</span></p><hr>
+<table><tbody><tr>
+<td width="256px"><img src="./Fitness-logo256x256.png" alt="FITNESS" referrerpolicy="no-referrer" width="128px"><br><img src="./PartnersCoutries.png" alt="FITNESS" referrerpolicy="no-referrer" width="256px"></td>
+<td><address><b>PROJECT FITNess</b> - funded by the European Union's <b>ERASMUS</b> programme <small>(contract 2017-1-FR01-KA202-037441)</small><br>
+<b>Food packaging open courseware for higher education and staff of companies</b><br>
+<small>Partners: Croatia (UZAG-PBF), France (ACTIA, LNE, AGROPARISTECH/INRA, AGROSUP DIJON), Germany (TUM), 
+Portugal (UCP), Spain (CSIC)</small><br>
+<span id="datetimestamp"></span>  -  <a href="mailto:olivier.vitrac@agroparistech.fr" title="email administrator">Report issues</a></address></td>
+</tr></tbody></table>
+<script>
+var dt = new Date();
+document.getElementById("datetimestamp").innerHTML = dt.toLocaleString('en-US');
+</script>
+<section id="top"></section><p><code>The external document has been automatically converted on 2020-12-25.</code></p><h2><a name="ec--jrc-bat--iron--steel-2012--bsmallpart1011smallb" class="md-header-anchor"></a><span>EC | JRC BAT | Iron | Steel 2012 | </span><b><small><span>part10/11</span></small></b></h2><blockquote><p><span>|   </span>&#128196;<span>623 pages  |  </span>&#128217;<a href="./src_doc2/doc2.pdf" title="original document" target="_pdf"><span>PDF version</span></a><span>  | </span><mark><small><span>Large document split into </span><kbd><span>11</span></kbd><span> parts | Part </span><kbd><span>10</span></kbd><span> is displayed.</span></small></mark></p></blockquote><table border="0" style="width: 100%; table-layout: fixed;"><tbody><tr><td align="center"><a href="doc2_part1.html" title="part 1 of 11"><small><kbd>1</kbd></small></a></td><td align="center"><a href="doc2_part2.html" title="part 2 of 11"><small><kbd>2</kbd></small></a></td><td align="center"><a href="doc2_part3.html" title="part 3 of 11"><small><kbd>3</kbd></small></a></td><td align="center"><a href="doc2_part4.html" title="part 4 of 11"><small><kbd>4</kbd></small></a></td><td align="center"><a href="doc2_part5.html" title="part 5 of 11"><small><kbd>5</kbd></small></a></td><td align="center"><a href="doc2_part6.html" title="part 6 of 11"><small><kbd>6</kbd></small></a></td><td align="center"><a href="doc2_part7.html" title="part 7 of 11"><small><kbd>7</kbd></small></a></td><td align="center"><a href="doc2_part8.html" title="part 8 of 11"><small><kbd>8</kbd></small></a></td><td align="center"><a href="doc2_part9.html" title="part 9 of 11"><small><kbd>9</kbd></small></a></td><td align="center"><b>10</b></td><td align="center"><a href="doc2_part11.html" title="part 11 of 11"><small><kbd>11</kbd></small></a></td></tr></tbody></table><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n7"><a class="md-toc-inner" href="#ec--jrc-bat--iron--steel-2012--bsmallpart1011smallb">EC | JRC BAT | Iron | Steel 2012 | part10/11</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n15"><a class="md-toc-inner" href="#128196page-541-of-623">📄page 541 of 623</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n27"><a class="md-toc-inner" href="#128196page-551-of-623">📄page 551 of 623</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n39"><a class="md-toc-inner" href="#128196page-561-of-623">📄page 561 of 623</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n51"><a class="md-toc-inner" href="#128196page-571-of-623">📄page 571 of 623</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n63"><a class="md-toc-inner" href="#128196page-581-of-623">📄page 581 of 623</a></span><span role="listitem" class="md-toc-item md-toc-h6" data-ref="n75"><a class="md-toc-inner" href="#128196page-591-of-623">📄page 591 of 623</a></span></p></div><p>&nbsp;</p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small></p><h6><a name="128196page-541-of-623" class="md-header-anchor"></a>&#128196;<span>page 541 of 623</span></h6><p><img src="./src_doc2/page541.svg" alt="page541" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 542 of 623</span>
+<img src="./src_doc2/page542.svg" alt="page542" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 543 of 623</span>
+<img src="./src_doc2/page543.svg" alt="page543" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 544 of 623</span>
+<img src="./src_doc2/page544.svg" alt="page544" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 545 of 623</span>
+<img src="./src_doc2/page545.svg" alt="page545" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 546 of 623</span>
+<img src="./src_doc2/page546.svg" alt="page546" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 547 of 623</span>
+<img src="./src_doc2/page547.svg" alt="page547" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 548 of 623</span>
+<img src="./src_doc2/page548.svg" alt="page548" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 549 of 623</span>
+<img src="./src_doc2/page549.svg" alt="page549" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 550 of 623</span>
+<img src="./src_doc2/page550.svg" alt="page550" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small></p><h6><a name="128196page-551-of-623" class="md-header-anchor"></a>&#128196;<span>page 551 of 623</span></h6><p><img src="./src_doc2/page551.svg" alt="page551" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 552 of 623</span>
+<img src="./src_doc2/page552.svg" alt="page552" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 553 of 623</span>
+<img src="./src_doc2/page553.svg" alt="page553" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 554 of 623</span>
+<img src="./src_doc2/page554.svg" alt="page554" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 555 of 623</span>
+<img src="./src_doc2/page555.svg" alt="page555" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 556 of 623</span>
+<img src="./src_doc2/page556.svg" alt="page556" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 557 of 623</span>
+<img src="./src_doc2/page557.svg" alt="page557" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 558 of 623</span>
+<img src="./src_doc2/page558.svg" alt="page558" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 559 of 623</span>
+<img src="./src_doc2/page559.svg" alt="page559" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 560 of 623</span>
+<img src="./src_doc2/page560.svg" alt="page560" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small></p><h6><a name="128196page-561-of-623" class="md-header-anchor"></a>&#128196;<span>page 561 of 623</span></h6><p><img src="./src_doc2/page561.svg" alt="page561" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 562 of 623</span>
+<img src="./src_doc2/page562.svg" alt="page562" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 563 of 623</span>
+<img src="./src_doc2/page563.svg" alt="page563" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 564 of 623</span>
+<img src="./src_doc2/page564.svg" alt="page564" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 565 of 623</span>
+<img src="./src_doc2/page565.svg" alt="page565" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 566 of 623</span>
+<img src="./src_doc2/page566.svg" alt="page566" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 567 of 623</span>
+<img src="./src_doc2/page567.svg" alt="page567" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 568 of 623</span>
+<img src="./src_doc2/page568.svg" alt="page568" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 569 of 623</span>
+<img src="./src_doc2/page569.svg" alt="page569" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 570 of 623</span>
+<img src="./src_doc2/page570.svg" alt="page570" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small></p><h6><a name="128196page-571-of-623" class="md-header-anchor"></a>&#128196;<span>page 571 of 623</span></h6><p><img src="./src_doc2/page571.svg" alt="page571" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 572 of 623</span>
+<img src="./src_doc2/page572.svg" alt="page572" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 573 of 623</span>
+<img src="./src_doc2/page573.svg" alt="page573" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 574 of 623</span>
+<img src="./src_doc2/page574.svg" alt="page574" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 575 of 623</span>
+<img src="./src_doc2/page575.svg" alt="page575" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 576 of 623</span>
+<img src="./src_doc2/page576.svg" alt="page576" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 577 of 623</span>
+<img src="./src_doc2/page577.svg" alt="page577" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 578 of 623</span>
+<img src="./src_doc2/page578.svg" alt="page578" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 579 of 623</span>
+<img src="./src_doc2/page579.svg" alt="page579" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 580 of 623</span>
+<img src="./src_doc2/page580.svg" alt="page580" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small></p><h6><a name="128196page-581-of-623" class="md-header-anchor"></a>&#128196;<span>page 581 of 623</span></h6><p><img src="./src_doc2/page581.svg" alt="page581" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 582 of 623</span>
+<img src="./src_doc2/page582.svg" alt="page582" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 583 of 623</span>
+<img src="./src_doc2/page583.svg" alt="page583" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 584 of 623</span>
+<img src="./src_doc2/page584.svg" alt="page584" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 585 of 623</span>
+<img src="./src_doc2/page585.svg" alt="page585" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 586 of 623</span>
+<img src="./src_doc2/page586.svg" alt="page586" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 587 of 623</span>
+<img src="./src_doc2/page587.svg" alt="page587" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 588 of 623</span>
+<img src="./src_doc2/page588.svg" alt="page588" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 589 of 623</span>
+<img src="./src_doc2/page589.svg" alt="page589" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 590 of 623</span>
+<img src="./src_doc2/page590.svg" alt="page590" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small></p><h6><a name="128196page-591-of-623" class="md-header-anchor"></a>&#128196;<span>page 591 of 623</span></h6><p><img src="./src_doc2/page591.svg" alt="page591" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 592 of 623</span>
+<img src="./src_doc2/page592.svg" alt="page592" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 593 of 623</span>
+<img src="./src_doc2/page593.svg" alt="page593" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 594 of 623</span>
+<img src="./src_doc2/page594.svg" alt="page594" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 595 of 623</span>
+<img src="./src_doc2/page595.svg" alt="page595" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 596 of 623</span>
+<img src="./src_doc2/page596.svg" alt="page596" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 597 of 623</span>
+<img src="./src_doc2/page597.svg" alt="page597" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 598 of 623</span>
+<img src="./src_doc2/page598.svg" alt="page598" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 599 of 623</span>
+<img src="./src_doc2/page599.svg" alt="page599" width="100%" /></p><p><small><a href="#top" title="go to top">&#128285;</a></small><span> | </span><small><a href="#bottom" title="go to bottom">&#128282;</a></small>
+<span> </span>&#128196;<span>page 600 of 623</span>
+<img src="./src_doc2/page600.svg" alt="page600" width="100%" /></p><section id="bottom"></section>
+<hr><p><code>25-Dec-2020 23:41:47: generate_guidelines (v. 0.15) &lt; olivi@LX-Olivier2020:/home/olivi/Bulk/fitness2020/downloadWP3/outputs/www/guidelines/environment/EC-JRC_BAT-Iron-Steel_2012.pdf &gt;/home/olivi/Bulk/fitness2020/downloadWP3/outputs/www/guidelines/environment/guidelines/doc2_part10.md</code></p></div>
+</body>
+</html>

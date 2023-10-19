@@ -1,0 +1,109 @@
+<!--
+File: listOfLectures.html
+Contract: EU contract 2017-1-FR01-KA202-037441
+Project: FitNESS ERASMUS+
+File Created: Friday, 23rd October 2020
+Author: Steward OUADI
+-----
+Last Modified: Monday, 7th December 2020
+Modified By: Steward OUADI
+-----
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <div class="flex-vertical-center">
+      <img
+        src="../src/Fitness logo RVB.png"
+        referrerpolicy="no-referrer"
+        alt="FITNESS"
+        title="ERASMUS+ Project"
+        width="200px"
+        height="auto"
+      />
+      <div id="courses-list-group-container" class="container">
+        <div id="courses-list-group" class="list-group"></div>
+      </div>
+    </div>
+    <script>
+      let authorName = '';
+
+      // Get searchable content (which contains list of courses) from local storage.
+      const lectures = JSON.parse(localStorage.getItem('lectures'));
+
+      // Parse the URL to get author name
+      function getAuthorName() {
+        const sPageURL = decodeURI(window.location.href);
+        const parameter = sPageURL.split('?');
+        const nameToProcess = parameter[1].split('=')[1];
+        const quotationMark = /%22/gi;
+        const space = /%20/gi;
+
+        const removedQuotationMarks = nameToProcess.replace(quotationMark, '');
+        authorName = removedQuotationMarks.replace(space, ' ');
+      }
+
+      // In searchable content (which contains list of courses), get the courses for the author passed in URL.
+      // And dynamically create HTML content to render the courses
+      function createListOfCourses() {
+        const coursesListGroup = document.getElementById('courses-list-group');
+
+        let nbLectures = 0;
+        lectures.forEach((course) => {
+          if (course.author === authorName) {
+            nbLectures += 1;
+            const abstractSpan = document.createElement('SPAN');
+            abstractSpan.style.cssText = 'color: #d0701c';
+            abstractSpan.innerHTML = course.title;
+            const lineBreak = document.createElement('BR');
+            abstractSpan.appendChild(lineBreak);
+
+            const heading = document.createElement('H4');
+            heading.className = 'list-group-item-heading';
+            heading.appendChild(abstractSpan);
+
+            const levelSpan = document.createElement('SPAN');
+            levelSpan.style.cssText = 'color: #c73a2e';
+            levelSpan.innerHTML = `Level: ${course.level} | Section: ${course.section}`;
+            const lineBreak2 = document.createElement('BR');
+            levelSpan.appendChild(lineBreak2);
+
+            const shortInfo = document.createElement('SMALL');
+            shortInfo.innerHTML = ` Unit: ${course.unit} | Part: ${course.part} | Author: ${course.author} | Institution: ${course.institution}`;
+
+            const paragraph = document.createElement('P');
+            paragraph.className = 'list-group-item-text';
+            paragraph.appendChild(levelSpan);
+            paragraph.appendChild(shortInfo);
+
+            const a = document.createElement('a');
+            a.href = `modifyLecture?lecture=${course.idx}"`;
+            a.className = 'list-group-item';
+            a.appendChild(heading);
+            a.appendChild(paragraph);
+            coursesListGroup.appendChild(a);
+          }
+        });
+        const coursesListGroupContainer = document.getElementById(
+          'courses-list-group-container'
+        );
+        const strong = document.createElement('STRONG');
+        const em = document.createElement('EM');
+        em.innerHTML = ` Number of lectures: ${nbLectures}`;
+        strong.appendChild(em);
+        coursesListGroupContainer.prepend(strong);
+      }
+
+      getAuthorName();
+      createListOfCourses();
+    </script>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <script src="../assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/css.css" />
+  </body>
+</html>

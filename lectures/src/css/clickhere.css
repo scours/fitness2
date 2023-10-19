@@ -1,0 +1,37 @@
+/*
+ * File: clickhere.css
+ * Contract: EU contract 2017-1-FR01-KA202-037441
+ * Project: FitNESS ERASMUS+
+ * File Created: Tuesday, 12th December 2020
+ * Author: INRAE\Olivier Vitrac
+ * -----
+ * Last Modified
+ * Modified By: 
+ * -----
+ */
+
+.clickherecontainer {
+    position: relative;
+}
+
+.clickhereoverlay {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 30px;
+    right: 0;
+    height: 10%;
+    width: 10%;
+    opacity: 0.5;
+    transition: .3s ease;
+}
+
+.clickherecontainer:hover .clickhereoverlay {
+    opacity: 1;
+}
+
+.clickhereimage {
+    float: left;
+    width: 70%;
+    height: auto;
+}
