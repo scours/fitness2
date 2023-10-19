@@ -29,8 +29,8 @@ class Footer extends HTMLElement {
                 <h5 class="txt-orange-fitness">Host and coordination</h5>
                 <p class="nav-link p-0 text-muted">The FitNESS platform is hosted by <a
                         href="https://www.contactalimentaire.fr/fr/unite-recherche-developpement/projet-fitness-food-packaging-open-courseware-higher-education-and"
-                        title="show context (in French)" target="_blank">UMT 17.09 SafeMat</a></p>
-                <p class="nav-link p-0 text-muted">The FitNESS project was coordinated by <a
+                        title="show context (in French)" target="_blank">UMT Actia SafeMat</a></p>
+                <p class="nav-link p-0 text-muted">The FitNESS project is coordinated by <a
                         href="https://www.actia-asso.eu/en/projets/fitness/" title="administrative coordination"
                         target="_blank">ACTIA</a></p>
             </div>

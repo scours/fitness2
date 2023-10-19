@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 19th April 2023
+ * Last Modified: Tuesday, 28th February 2023
  * Modified By: Steward OUADI
  */
 
@@ -36,8 +36,7 @@ function contentToDisplayChildrenArrayEmpty(tocElement) {
 }
 
 const mainDropDownContainer = document.getElementById("dropdown-container-id");
-const mainContent = document.getElementById("main-id");
-let currentUserProvidedURLForLecture = "";
+const mainContent = document.getElementById("main-content");
 // Map in which we have a dropdown menu id and its corresponding lecture
 const lecturesContainer = new Map();
 
@@ -224,15 +223,9 @@ function createAElementForDropDownMenu(identifier) {
 
     // Course URL
     let courseUrlElement = document.createElement("a");
-    // courseUrlElement.href = lecture.userProvidedURLForLecture; // Get course URL
-    courseUrlElement.text = "Click here to read the lecture";
-    courseUrlElement.setAttribute("role", "link");
-    courseUrlElement.setAttribute("aria-disabled", "true");
-    courseUrlElement.setAttribute("style", "text-decoration-line: underline");
-    courseUrlElement.setAttribute("id", "course-url-element");
-    courseUrlElement.target = lecture.userProvidedURLForLecture;
-
-    currentUserProvidedURLForLecture = lecture.userProvidedURLForLecture;
+    courseUrlElement.href = lecture.userProvidedURLForLecture; // Get course URL
+    courseUrlElement.text = "Read the lecture";
+    courseUrlElement.target = "_blank";
 
     // Authors
     const authorsElement = document.createElement("p");
@@ -539,252 +532,5 @@ function closeNav() {
   document.getElementById("main-id").style.marginLeft = "0";
   // document.getElementById("open-menu-button").classList.toggle("hidden");
   document.getElementById("open-menu-button").style.visibility = "visible";
-}
-
-let htmlContent;
-
-document.addEventListener(`click`, (e) => {
-  const origin = e.target.closest(`a`);
-
-  if (origin) {
-    let href = origin.target;
-    console.log("origin beg");
-    console.log(origin);
-    console.log("origin end");
-    if (href === currentUserProvidedURLForLecture) {
-      // The current lecture link has been clicked.
-      // So we will change the current content to display the
-      // lecture content
-
-      /* const blobUrl = getBlobURL(
-        ` <!DOCTYPE html>
-      <html>
-      <body>
-
-      <h1>My First Heading</h1>
-      <p>My first paragraph.</p>
-
-      </body>
-      </html> `,
-        "text/html"
-      );
-
-      console.log("blobUrl beg");
-      console.log(blobUrl);
-      console.log("blobUrl end");
-      href = blobUrl; // This works*/
-      /*
-      href =
-        "http://127.0.0.1:5501/Plastics-Europe/Level-1-test/new_recycling_regulation_copy.html";*/ // this works
-
-      // Path to the folder containing the current lecture
-      // HTML filename of the current lecture
-      let splittedUrl = href.split(".html");
-      const [pathToHtmlFolder, htmlFileName] = splitLastOccurrence(
-        splittedUrl[0],
-        "/"
-      );
-
-      // Regular expression to get resources path for the lecture
-      const regExpForSources = /\(\.\/src/;
-
-      const response = httpGet(href);
-
-      console.log("showing click href");
-      console.log(href);
-      console.log("response beg");
-      console.log(response);
-      console.log(typeof response);
-      console.log("response end");
-      console.log("html content begin");
-
-      htmlContent = document.createElement("html");
-      htmlContent.innerHTML = response;
-
-      // htmlContentToDisplay will display only what we want
-      let htmlContentToDisplay = document.createElement("html");
-      htmlContentToDisplay.innerHTML = response;
-
-      console.log(htmlContent);
-      console.log("html content end");
-      let slidesFromResponse =
-        htmlContent.getElementsByClassName("slides")[0].children;
-
-      let slidesToDisplay = document.createElement("div");
-      slidesToDisplay.setAttribute("class", "slides");
-
-      for (i = 0; i < 5; i++) {
-        console.log("slide we want to append beg");
-        console.log(slidesFromResponse[i]);
-        console.log(slidesFromResponse[i].innerHTML);
-
-        var newSection = document.createElement("SECTION");
-        // The data-markdown will allow to create Markdown slide
-        // https://revealjs.com/markdown/
-        newSection.setAttribute("data-markdown", "");
-
-        newSection.innerHTML = slidesFromResponse[i].innerHTML.replace(
-          regExpForSources,
-          "(" + pathToHtmlFolder + "/src"
-        );
-        console.log(newSection);
-        console.log("slide we want to append end");
-        // "Java-Script"
-        //
-        // let slidesWithCorrectPathToResources =
-
-        slidesToDisplay.appendChild(newSection);
-      }
-
-      htmlContentToDisplay.getElementsByClassName("slides")[0].innerHTML =
-        slidesToDisplay.innerHTML;
-
-      console.log("displaying slides to display begin");
-      console.log(slidesFromResponse);
-      console.log(slidesToDisplay);
-      console.log(slidesToDisplay.children);
-      console.log("displaying slides to display end");
-
-      // mainContent.innerHTML =
-      //   htmlContent.getElementsByTagName("body")[0].innerHTML;
-      // mainContent.innerHTML =
-      // htmlContent.getElementsByClassName("slides")[0].innerHTML;
-      //       mainContent.innerHTML = `<style>
-      // img {
-      //   border: 1px solid #ddd;
-      //   border-radius: 4px;
-      //   padding: 5px;
-      //   width: 150px;
-      // }
-
-      // img:hover {
-      //   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-      // }
-      // </style>
-
-      // <a target="_blank" href="">
-      //   <img src="https://images.pexels.com/photos/296282/pexels-photo-296282.jpeg" alt="Forest" style="width:150px">
-      // </a>`;
-
-      //       document.getElementById("lecture-iframe").src = href;
-
-      // document.getElementById("main-id").innerHTML = lectureIframe.outerHTML;
-
-      /*var lectureIframe = document.createElement("iframe");
-      lectureIframe.setAttribute("src", href);
-      lectureIframe.setAttribute("class", "frame")
-      lectureIframe.style.width = "100%";
-      lectureIframe.style.height = screen.height * 1.02;
-      lectureIframe.style.border = "none";
-      mainContent.innerHTML = lectureIframe.outerHTML;*/ // This block is working fine
-
-      console.log("htmlContentToDisplay begin");
-      console.log(htmlContentToDisplay);
-      console.log("htmlContentToDisplay end");
-      var lectureIframe = document.createElement("iframe");
-      // lectureIframe.setAttribute("src", htmlContentToDisplay.innerHTML);
-
-      // const blobUrl = getBlobURL(htmlContentToDisplay.outerHTML, "text/html");
-
-      //             const blobUrl = getBlobURL(
-      //               ` <!DOCTYPE html>
-      // <html>
-      // <body>
-
-      // <h1>My First Heading</h1>
-      // <p>My first paragraph.</p>
-
-      // </body>
-      // </html> `,
-      //               "text/html"
-      //             );
-
-      //             console.log("blobUrl beg");
-      //             console.log(blobUrl);
-      //             console.log("blobUrl end");
-      //             lectureIframe.setAttribute("src", blobUrl); // does not work
-
-      // lectureIframe.setAttribute("srcdoc", htmlContentToDisplay.innerHTML);
-      // lectureIframe.setAttribute(
-      //   "src",
-      //   "http://127.0.0.1:5501/Plastics-Europe/Level-1-test/new_recycling_regulation.html"
-      // ); // it works
-      // lectureIframe.setAttribute("src", href); // it works
-
-      let modifiedA = document.createElement("html");
-      modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
-        `"../../../../`,
-        `"https://fitness.agroparistech.fr/fitness/lectures/`
-      );
-
-      let modifiedB = document.createElement("html");
-      modifiedB.innerHTML = modifiedA.innerHTML.replaceAll(
-        `"./../../../../../`,
-        `"https://fitness.agroparistech.fr/fitness/`
-      );
-
-      let modifiedC = document.createElement("html");
-      modifiedC.innerHTML = modifiedB.innerHTML.replaceAll(
-        `'../../../../`,
-        `'https://fitness.agroparistech.fr/fitness/lectures/`
-      );
-
-      let modifiedD = document.createElement("html");
-      modifiedD.innerHTML = modifiedC.innerHTML.replaceAll(
-        `'./../../../../../`,
-        `'https://fitness.agroparistech.fr/fitness/`
-      );
-
-      lectureIframe.setAttribute("srcdoc", modifiedD.outerHTML);
-      // lectureIframe.setAttribute("srcdoc", htmlContentToDisplay.outerHTML);
-      // lectureIframe.setAttribute("src", href);
-
-      lectureIframe.setAttribute("class", "frame");
-      lectureIframe.style.width = "100%";
-      lectureIframe.style.height = screen.height * 1.02;
-      lectureIframe.style.border = "none";
-      mainContent.innerHTML = lectureIframe.outerHTML;
-      // mainContent.innerHTML = htmlContentToDisplay.outerHTML;
-    }
-  }
-});
-
-const getBlobURL = (code, type) => {
-  const blob = new Blob([code], { type });
-  return URL.createObjectURL(blob);
-};
-
-function httpGet(theUrl) {
-  console.log("the url to manage");
-  console.log(theUrl);
-  let xmlhttp;
-  let responseText;
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp = new XMLHttpRequest();
-  } else {
-    // code for IE6, IE5
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange = function () {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-      responseText = xmlhttp.responseText;
-
-      return responseText;
-    }
-  };
-  xmlhttp.open("GET", theUrl, false);
-  xmlhttp.send();
-  return responseText;
-}
-
-function splitLastOccurrence(str, substring) {
-  const arr = str.split(substring);
-
-  const after = arr.pop();
-
-  const before = arr.join(substring);
-
-  return [before, after];
 }
 

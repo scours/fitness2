@@ -1,0 +1,13 @@
+**/modifyLectures/**.png
+**/modifyLectures/**.svg
+**/modifyLectures/**.jpg
+src_part*
+vide*
+src_doc*
+Slide*
+*.pdf
+*.mpg
+*.mp4
+*.webm
+*.avi
+*.gif

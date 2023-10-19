@@ -537,3 +537,4 @@ function closeNav() {
   // document.getElementById("open-menu-button").classList.toggle("hidden");
   document.getElementById("open-menu-button").style.visibility = "visible";
 }
+

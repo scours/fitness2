@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 19th April 2023
+ * Last Modified: Monday, 13th February 2023
  * Modified By: Steward OUADI
  */
 
@@ -22,9 +22,9 @@ const lecturesPaths = new Map();
  */
 function contentToDisplayChildrenArrayEmpty(tocElement) {
   // Children array is empty, so we will just display Unit title
-  // console.log("children is empty");
-  // console.log(tocElement.title);
-  // console.log(tocElement.userProvidedURLForLecture);
+  console.log("children is empty");
+  console.log(tocElement.title);
+  console.log(tocElement.userProvidedURLForLecture);
   let groupListLiElement = document.createElement("li");
   let groupListAElement = document.createElement("a");
   groupListAElement.href = tocElement.userProvidedURLForLecture; // Get course URL
@@ -36,8 +36,7 @@ function contentToDisplayChildrenArrayEmpty(tocElement) {
 }
 
 const mainDropDownContainer = document.getElementById("dropdown-container-id");
-const mainContent = document.getElementById("main-id");
-let currentUserProvidedURLForLecture = "";
+const mainContent = document.getElementById("main-content");
 // Map in which we have a dropdown menu id and its corresponding lecture
 const lecturesContainer = new Map();
 
@@ -57,6 +56,15 @@ function getDropdownButtonAndContainer(dropdownButtonName, id) {
   dropdownContainerDiv.id = "dropdown-container-" + id;
 
   return { dropdownButton, dropdownContainerDiv };
+
+  //   <button class="dropdown-btn">Dropdown
+  //   <i class="fa fa-caret-down"></i>
+  // </button>
+  // <div class="dropdown-container">
+  //   <a href="#">Link 1</a>
+  //   <a href="#">Link 2</a>
+  //   <a href="#">Link 3</a>
+  // </div>
 }
 
 function createDropDownMenuElements() {
@@ -74,10 +82,10 @@ function createDropDownMenuElements() {
         dropDownButtonAndContainerI.dropdownContainerDiv;
       mainDropDownContainer.appendChild(dropdownButtonI);
       mainDropDownContainer.appendChild(dropdownContainerDivI);
-      // console.log("we will loop through valueI.children");
+      console.log("we will loop through valueI.children");
       for (let [keyJ, valueJ] of valueI.children) {
         if (valueJ.children.size > 0) {
-          // console.log("we will loop through valueJ.children");
+          console.log("we will loop through valueJ.children");
           // Second level
           // If there are children
           const dropDownButtonAndContainerJ = getDropdownButtonAndContainer(
@@ -96,9 +104,9 @@ function createDropDownMenuElements() {
             const aElementK = createAElementForDropDownMenu(
               valueK.manifestPath
             );
-            // console.log("displaying eElementK beg");
-            // console.log(aElementK);
-            // console.log("displaying eElementK end");
+            console.log("displaying eElementK beg");
+            console.log(aElementK);
+            console.log("displaying eElementK end");
             dropdownContainerDivJ.appendChild(aElementK);
           }
         } else {
@@ -111,9 +119,9 @@ function createDropDownMenuElements() {
       mainDropDownContainer.appendChild(aElementI);
     }
   }
-  // console.log("showing main dropdown container beg");
-  // console.log(mainDropDownContainer.outerHTML);
-  // console.log("showing main dropdown container end");
+  console.log("showing main dropdown container beg");
+  console.log(mainDropDownContainer.outerHTML);
+  console.log("showing main dropdown container end");
 }
 
 function getStarElements(difficultyLevel) {
@@ -182,14 +190,14 @@ function createAElementForDropDownMenu(identifier) {
   aElement.id = identifier;
   aElement.setAttribute("class", "dropdown-container-class");
   aElement.addEventListener("click", (event) => {
-    // console.log("lecture from new drop down menu");
-    // console.log(event);
-    // console.log(identifier);
+    console.log("lecture from new drop down menu");
+    console.log(event);
+    console.log(identifier);
     const targetId = identifier;
-    // console.log(targetId);
+    console.log(targetId);
     const y = 0;
-    // console.log("showing y");
-    // console.log(y);
+    console.log("showing y");
+    console.log(y);
     // We will modify main view to display the content of the selected lecture
 
     // Let's get the lecture by using its id in the map
@@ -224,15 +232,9 @@ function createAElementForDropDownMenu(identifier) {
 
     // Course URL
     let courseUrlElement = document.createElement("a");
-    // courseUrlElement.href = lecture.userProvidedURLForLecture; // Get course URL
-    courseUrlElement.text = "Click here to read the lecture";
-    courseUrlElement.setAttribute("role", "link");
-    courseUrlElement.setAttribute("aria-disabled", "true");
-    courseUrlElement.setAttribute("style", "text-decoration-line: underline");
-    courseUrlElement.setAttribute("id", "course-url-element");
-    courseUrlElement.target = lecture.userProvidedURLForLecture;
-
-    currentUserProvidedURLForLecture = lecture.userProvidedURLForLecture;
+    courseUrlElement.href = lecture.userProvidedURLForLecture; // Get course URL
+    courseUrlElement.text = "Read the lecture";
+    courseUrlElement.target = "_blank";
 
     // Authors
     const authorsElement = document.createElement("p");
@@ -270,8 +272,8 @@ function addListenersToDropdownButtons() {
 
   for (i = 0; i < dropdown.length; i++) {
     dropdown[i].addEventListener("click", function () {
-      // console.log("clicked on a dropdown subfolder");
-      // console.log(this);
+      console.log("clicked on a dropdown subfolder");
+      console.log(this);
       this.classList.toggle("active");
       var dropdownContent = this.nextElementSibling;
       if (dropdownContent.style.display === "block") {
@@ -286,10 +288,10 @@ function addListenersToDropdownButtons() {
 /* Extract and store all lectures into a global array*/
 async function extractMetaData() {
   const pathSeparator = "/";
-  let basePath =
-    "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
-    pathSeparator;
-  // let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
+   let basePath =
+     "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
+     pathSeparator;
+  //let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
 
   // let basePath = "manifests" + pathSeparator;
   let fileExtension = ".manifest";
@@ -302,11 +304,11 @@ async function extractMetaData() {
   let rootFileName = basePath + "root" + fileExtension + textToForceRefresh;
 
   const res = await fetch(rootFileName); // fetch method will fetch JSON file
-  // console.log(res);
+  console.log(res);
   if (res.ok) {
     // tocElement, is table of content element, its an object that contains lectures information
     let tocElement = await res.json();
-    // console.log(tocElement);
+    console.log(tocElement);
 
     if (tocElement !== "undefined") {
       if (tocElement.children.length > 0) {
@@ -319,11 +321,11 @@ async function extractMetaData() {
             basePath + filePath + fileExtension
           );
 
-          // console.log(level1ChildRes);
+          console.log(level1ChildRes);
           if (level1ChildRes.ok) {
             // tocElementLevel1, is table of content element, its an object that contains lectures information
             let tocElementLevel1 = await level1ChildRes.json();
-            // console.log(tocElementLevel1);
+            console.log(tocElementLevel1);
 
             if (tocElementLevel1 !== "undefined") {
               const splitPath = filePath.split(pathSeparator);
@@ -480,29 +482,32 @@ async function extractMetaData() {
               }
             }
           } else {
-            // console.log("Can't read level 1 file");
+            console.log("Can't read level 1 file");
           }
         }
-        // console.log("lecturesPaths beg");
-        // console.log(lecturesPaths);
-        // console.log("lecturesPaths end");
+        console.log("lecturesPaths beg");
+        console.log(lecturesPaths);
+        console.log("lecturesPaths end");
         createDropDownMenuElements();
       } else {
         // Children array is empty, so we will just display title
-        // console.log("root level, children is empty");
-        // console.log(tocElement.title);
-        // console.log(tocElement.userProvidedURLForLecture);
+        console.log("root level, children is empty");
+        console.log(tocElement.title);
+        console.log(tocElement.userProvidedURLForLecture);
         englobingNavList.appendChild(
           contentToDisplayChildrenArrayEmpty(tocElement)
         );
       }
     }
   } else {
-    // console.log("Can't read root file");
+    console.log("Can't read root file");
   }
   addListenersToDropdownButtons();
 }
 extractMetaData();
+/*let myLectPath = new LecturePath("parentName", "Name", false, "children");
+console.log(myLectPath);
+console.log(myLectPath.parentName);*/
 
 function loadFile(filePath) {
   // Create a <script> tag, set its source
@@ -527,6 +532,20 @@ function loadFile(filePath) {
   document.getElementsByTagName("head")[0].appendChild(scriptTag);
 }
 
+// function openNav() {
+//   document.getElementById("sidebar-menu").style.width = "60%";
+//   document.getElementById("main-id").style.marginLeft = "60%";
+
+//   document.getElementById("open-menu-button").style.visibility = "hidden";
+// }
+
+// function closeNav() {
+//   document.getElementById("sidebar-menu").style.width = "0";
+//   document.getElementById("main-id").style.marginLeft = "0";
+
+//   document.getElementById("open-menu-button").style.visibility = "visible";
+// }
+
 function openNav() {
   document.getElementById("sidebar-menu").style.width = "60%";
   document.getElementById("main-id").style.marginLeft = "60%";
@@ -541,250 +560,21 @@ function closeNav() {
   document.getElementById("open-menu-button").style.visibility = "visible";
 }
 
-let htmlContent;
+// window.onload = function () {
+//   document
+//     .getElementById("open-menu-button")
+//     .addEventListener("click", openNav);
+//   document.getElementById("sidebar-menu").addEventListener("click", closeNav);
+// };
 
-document.addEventListener(`click`, (e) => {
-  const origin = e.target.closest(`a`);
+// function openNav() {
+//   document.getElementById("sidebar-menu").style.width = "60%";
+//   document.getElementById("reveal-global-div").style.marginLeft = "60%";
+//   document.getElementById("open-menu-button").style.visibility = "hidden";
+// }
 
-  if (origin) {
-    let href = origin.target;
-    console.log("origin beg");
-    console.log(origin);
-    console.log("origin end");
-    if (href === currentUserProvidedURLForLecture) {
-      // The current lecture link has been clicked.
-      // So we will change the current content to display the
-      // lecture content
-
-      /* const blobUrl = getBlobURL(
-        ` <!DOCTYPE html>
-      <html>
-      <body>
-
-      <h1>My First Heading</h1>
-      <p>My first paragraph.</p>
-
-      </body>
-      </html> `,
-        "text/html"
-      );
-
-      console.log("blobUrl beg");
-      console.log(blobUrl);
-      console.log("blobUrl end");
-      href = blobUrl; // This works*/
-      /*
-      href =
-        "http://127.0.0.1:5501/Plastics-Europe/Level-1-test/new_recycling_regulation_copy.html";*/ // this works
-
-      // Path to the folder containing the current lecture
-      // HTML filename of the current lecture
-      let splittedUrl = href.split(".html");
-      const [pathToHtmlFolder, htmlFileName] = splitLastOccurrence(
-        splittedUrl[0],
-        "/"
-      );
-
-      // Regular expression to get resources path for the lecture
-      const regExpForSources = /\(\.\/src/;
-
-      const response = httpGet(href);
-
-      console.log("showing click href");
-      console.log(href);
-      console.log("response beg");
-      console.log(response);
-      console.log(typeof response);
-      console.log("response end");
-      console.log("html content begin");
-
-      htmlContent = document.createElement("html");
-      htmlContent.innerHTML = response;
-
-      // htmlContentToDisplay will display only what we want
-      let htmlContentToDisplay = document.createElement("html");
-      htmlContentToDisplay.innerHTML = response;
-
-      console.log(htmlContent);
-      console.log("html content end");
-      let slidesFromResponse =
-        htmlContent.getElementsByClassName("slides")[0].children;
-
-      let slidesToDisplay = document.createElement("div");
-      slidesToDisplay.setAttribute("class", "slides");
-
-      for (i = 0; i < 5; i++) {
-        console.log("slide we want to append beg");
-        console.log(slidesFromResponse[i]);
-        console.log(slidesFromResponse[i].innerHTML);
-
-        var newSection = document.createElement("SECTION");
-        // The data-markdown will allow to create Markdown slide
-        // https://revealjs.com/markdown/
-        newSection.setAttribute("data-markdown", "");
-
-        newSection.innerHTML = slidesFromResponse[i].innerHTML.replace(
-          regExpForSources,
-          "(" + pathToHtmlFolder + "/src"
-        );
-        console.log(newSection);
-        console.log("slide we want to append end");
-        // "Java-Script"
-        //
-        // let slidesWithCorrectPathToResources =
-
-        slidesToDisplay.appendChild(newSection);
-      }
-
-      htmlContentToDisplay.getElementsByClassName("slides")[0].innerHTML =
-        slidesToDisplay.innerHTML;
-
-      console.log("displaying slides to display begin");
-      console.log(slidesFromResponse);
-      console.log(slidesToDisplay);
-      console.log(slidesToDisplay.children);
-      console.log("displaying slides to display end");
-
-      // mainContent.innerHTML =
-      //   htmlContent.getElementsByTagName("body")[0].innerHTML;
-      // mainContent.innerHTML =
-      // htmlContent.getElementsByClassName("slides")[0].innerHTML;
-      //       mainContent.innerHTML = `<style>
-      // img {
-      //   border: 1px solid #ddd;
-      //   border-radius: 4px;
-      //   padding: 5px;
-      //   width: 150px;
-      // }
-
-      // img:hover {
-      //   box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-      // }
-      // </style>
-
-      // <a target="_blank" href="">
-      //   <img src="https://images.pexels.com/photos/296282/pexels-photo-296282.jpeg" alt="Forest" style="width:150px">
-      // </a>`;
-
-      //       document.getElementById("lecture-iframe").src = href;
-
-      // document.getElementById("main-id").innerHTML = lectureIframe.outerHTML;
-
-      /*var lectureIframe = document.createElement("iframe");
-      lectureIframe.setAttribute("src", href);
-      lectureIframe.setAttribute("class", "frame")
-      lectureIframe.style.width = "100%";
-      lectureIframe.style.height = screen.height * 1.02;
-      lectureIframe.style.border = "none";
-      mainContent.innerHTML = lectureIframe.outerHTML;*/ // This block is working fine
-
-      console.log("htmlContentToDisplay begin");
-      console.log(htmlContentToDisplay);
-      console.log("htmlContentToDisplay end");
-      var lectureIframe = document.createElement("iframe");
-      // lectureIframe.setAttribute("src", htmlContentToDisplay.innerHTML);
-
-      // const blobUrl = getBlobURL(htmlContentToDisplay.outerHTML, "text/html");
-
-      //             const blobUrl = getBlobURL(
-      //               ` <!DOCTYPE html>
-      // <html>
-      // <body>
-
-      // <h1>My First Heading</h1>
-      // <p>My first paragraph.</p>
-
-      // </body>
-      // </html> `,
-      //               "text/html"
-      //             );
-
-      //             console.log("blobUrl beg");
-      //             console.log(blobUrl);
-      //             console.log("blobUrl end");
-      //             lectureIframe.setAttribute("src", blobUrl); // does not work
-
-      // lectureIframe.setAttribute("srcdoc", htmlContentToDisplay.innerHTML);
-      // lectureIframe.setAttribute(
-      //   "src",
-      //   "http://127.0.0.1:5501/Plastics-Europe/Level-1-test/new_recycling_regulation.html"
-      // ); // it works
-      // lectureIframe.setAttribute("src", href); // it works
-
-      let modifiedA = document.createElement("html");
-      modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
-        `"../../../../`,
-        `"https://fitness.agroparistech.fr/fitness/lectures/`
-      );
-
-      let modifiedB = document.createElement("html");
-      modifiedB.innerHTML = modifiedA.innerHTML.replaceAll(
-        `"./../../../../../`,
-        `"https://fitness.agroparistech.fr/fitness/`
-      );
-
-      let modifiedC = document.createElement("html");
-      modifiedC.innerHTML = modifiedB.innerHTML.replaceAll(
-        `'../../../../`,
-        `'https://fitness.agroparistech.fr/fitness/lectures/`
-      );
-
-      let modifiedD = document.createElement("html");
-      modifiedD.innerHTML = modifiedC.innerHTML.replaceAll(
-        `'./../../../../../`,
-        `'https://fitness.agroparistech.fr/fitness/`
-      );
-
-      lectureIframe.setAttribute("srcdoc", modifiedD.outerHTML);
-      // lectureIframe.setAttribute("srcdoc", htmlContentToDisplay.outerHTML);
-      // lectureIframe.setAttribute("src", href);
-
-      lectureIframe.setAttribute("class", "frame");
-      lectureIframe.style.width = "100%";
-      lectureIframe.style.height = screen.height * 1.02;
-      lectureIframe.style.border = "none";
-      mainContent.innerHTML = lectureIframe.outerHTML;
-      // mainContent.innerHTML = htmlContentToDisplay.outerHTML;
-    }
-  }
-});
-
-const getBlobURL = (code, type) => {
-  const blob = new Blob([code], { type });
-  return URL.createObjectURL(blob);
-};
-
-function httpGet(theUrl) {
-  console.log("the url to manage");
-  console.log(theUrl);
-  let xmlhttp;
-  let responseText;
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp = new XMLHttpRequest();
-  } else {
-    // code for IE6, IE5
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange = function () {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-      responseText = xmlhttp.responseText;
-
-      return responseText;
-    }
-  };
-  xmlhttp.open("GET", theUrl, false);
-  xmlhttp.send();
-  return responseText;
-}
-
-function splitLastOccurrence(str, substring) {
-  const arr = str.split(substring);
-
-  const after = arr.pop();
-
-  const before = arr.join(substring);
-
-  return [before, after];
-}
-
+// function closeNav() {
+//   document.getElementById("sidebar-menu").style.width = "0";
+//   document.getElementById("reveal-global-div").style.marginLeft = "0";
+//   document.getElementById("open-menu-button").style.visibility = "visible";
+// }
