@@ -1,0 +1,24 @@
+{
+  "idx": 340169,
+  "title": "Sensory science",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": "Author",
+  "institution": "",
+  "abstract": "Abstract",
+  "topic": [
+    "topic1",
+    "topic2",
+    "topic3"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/sensory-science-applied-to-food-and-food-packaging.html#/1"
+}
