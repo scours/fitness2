@@ -73,8 +73,6 @@ Modified By: Steward OUADI
 
   <!-- config.js: used to get configuration -->
   <!-- <script src="src/config.js"></script> -->
-
-  <script src="../../src/js/utils.js"></script>
   <script type="text/javascript" src="src/beginner.js"></script>
   <script type="text/javascript" src="src/markdownContentVars.js"></script>
 
@@ -99,17 +97,12 @@ Modified By: Steward OUADI
     const defaultSessionIdentifier = generateIdentifier();
 
     var markdownVariableToRead = window.location.hash.substring(1);
-    console.log("substr beg");
-    console.log(markdownVariableToRead);
-    console.log(markdownVariableToRead.trim() !== "");
-    console.log("substr end");
 
     function questionsFromURL() {
       // If variable is not empty, use it to read markdown
       if (markdownVariableToRead.trim() !== "") {
 
         var markdownContent = window[markdownVariableToRead];
-        console.log(testA);
         var lines = markdownContent.split('\n');
         // var lines = event.target.result.split('\n');
         processMarkdownContent(lines);
@@ -220,7 +213,6 @@ Modified By: Steward OUADI
       const configurationData = getConfigurationData(lines)
 
       const result = `const configurationData = ${JSON.stringify(configurationData, null, 2)};`;
-      console.log(result);
       const quizContainer = document.getElementById("quiz");
       quizContainer.innerHTML = "";
       allSlides = configurationData;

@@ -1183,7 +1183,7 @@ let canBeSentByEmail = false;
 document.onreadystatechange = async function () {
   if (document.readyState === "complete") {
     // configurationData is a variable from configuration file.
-    allSlides = configurationData;
+    // allSlides = configurationData;
     DoQuiz();
   }
 };
