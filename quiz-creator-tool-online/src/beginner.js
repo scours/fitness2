@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Monday, 16th October 2023
+ * Last Modified: Tuesday, 24th October 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -140,7 +140,7 @@ function getScoreForCheckboxesQuiz(
       nbCheckedAnswers++;
 
       // User has selected this answer, so push his answer in answer list.
-      userAnswers.push(allPossibleAnswers[i].id);
+      userAnswers.push(allPossibleAnswers[i].id.split(":")[1]);
     }
 
     if (
@@ -166,7 +166,7 @@ function getScoreForCheckboxesQuiz(
       nbCheckedAnswers++;
       nbExpectedCorrectAnswers++;
       // User has selected this answer, so push his answer in answer list.
-      userAnswers.push(allPossibleAnswers[i].id);
+      userAnswers.push(allPossibleAnswers[i].id.split(":")[1]);
     }
   }
   // userAnswersAndExpectedAnswers.push({ userAnswers });

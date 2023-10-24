@@ -5,7 +5,7 @@
  * File Created: Wednesday, 14th April 2021
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 10th October 2023
+ * Last Modified: Tuesday, 24th October 2023
  * Modified By: Steward OUADI
  */
 class CheckBoxButtonQuizSlide extends GlobalSlide {
@@ -31,7 +31,7 @@ class CheckBoxButtonQuizSlide extends GlobalSlide {
     input.type = this.type;
     input.name = `question${questionNumber}`;
     input.value = checkboxValue;
-    input.id = letter;
+    input.id = this.uid + ":" + letter;
 
     label.appendChild(input);
 
