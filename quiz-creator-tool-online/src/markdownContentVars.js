@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 27th September 2023
+ * Last Modified: Tuesday, 24th October 2023
  * Modified By: Steward OUADI
  */
 
@@ -149,3 +149,120 @@ var testB = `Q1: One of these statements is false:
     - [ ] A food packaging produced in A, can be filled in B and sold in C
 
     canBeSentByEmail:true`;
+
+var testC = `Q1: Which of these statements are generally true for professionals in your field?
+- [x] Able to interpret laws
+- [ ] All opinions on dangers are equally valid
+- [x] Can consult authorities for advice
+- [x] Committed to continuous learning
+- [x] Acts to preserve consumer and environmental safety
+
+Q2: How would you characterize the role of regulation in your industry?
+- [ ] A hindrance to trade
+- [x] An administrative necessity
+- [x] Transfers responsibility to society
+- [x] Establishes common-sense rules
+- [ ] Less effective than industry standards
+
+Q3: Which of the following statements about plastic waste and recycling are true?
+- [x] Plastic waste has doubled in the last 20 years
+- [ ] Current regulations encourage environmentally unfriendly practices
+- [x] Objectives for recyclability increase risks
+- [x] Some contaminants are nearly everlasting
+- [x] Recycled plastics often cost more than new materials
+
+Q4: Which of these statements are generally true regarding certification and compliance?
+- [x] Online certification is possible
+- [ ] Compliance certificates cannot usually be printed online
+- [x] Calculations can demonstrate packaging compliance
+- [x] Authorities organize product recalls in case of contamination
+- [x] Paper and cardboard have specific regulations at the EU level
+
+Q5: Which statements about chemical risks and packaging are true?
+- [ ] A preventive approach to chemical risks is common
+- [x] The migration of substances is usually invisible and odorless
+- [x] Thresholds for unknown substances are often immeasurable
+- [x] Many substances in recycled materials have not been toxicologically evaluated
+- [x] Packaging can be a significant source of polyaromatic hydrocarbons
+
+canBeSentByEmail:true`;
+
+var testD = `Q1: What is your stance on food packaging?
+- [ ] Favorable
+- [x] Neutral
+- [ ] Unfavorable
+
+Q2: How many key functions are typically served by packaging?
+- [ ] One (Example: Containment)
+- [ ] Three (Examples: Containment, Protection, Communication)
+- [x] Seven (Examples: Containment, Protection, Communication, Convenience, Portion Control, Freshness Preservation, Security)
+
+Q3: What roles does packaging assume in relation to food safety risks?
+- [x] Risk Mitigation
+- [x] Risk Introduction
+
+Q4: Identify the categories of food contact materials sanctioned in Europe.
+- [x] Plastics, Paper, Metals
+- [x] Glass, Ceramics
+- [x] Silicones, Paraffin waxes
+- [x] Elastomers and rubbers
+- [x] Timber
+
+Q5: Why do plastics predominate in food packaging?
+- [x] Consumer Acceptance
+- [x] Cost-Effectiveness
+- [x] Lightweight
+- [x] Recyclability
+- [ ] Biodegradability
+- [ ] Compostability
+
+Q6: What materials are suitable for hot filling (above 80°C)?
+- [ ] Paper
+- [ ] PET
+- [ ] PA6
+- [x] PS
+- [x] PP
+- [ ] HDPE
+
+Q7: What scope does European regulation encompass in the context of food packaging?
+- [ ] Materials exclusively
+- [ ] Substances exclusively
+- [x] Both materials and substances
+
+Q8: Which agencies primarily oversee food contact material safety?
+- [ ] ANSES (France)
+- [x] BfR (Germany)
+- [ ] CEN (EU)
+- [x] DGCCRF (France)
+- [ ] ECHA (EU)
+- [ ] EFSA (EU)
+- [ ] EPA (USA)
+- [x] FDA (USA)
+- [ ] Instituto di Sanita (Italy)
+- [ ] RASFF (EU)
+
+Q9: Which organizations are principally responsible for regulating food packaging waste?
+- [ ] ANSES (France)
+- [ ] BfR (Germany)
+- [ ] CEN (EU)
+- [ ] DGCCRF (France)
+- [x] ECHA (EU)
+- [ ] EFSA (EU)
+- [x] EPA (USA)
+- [ ] FDA (USA)
+- [ ] Instituto di Sanita (Italy)
+- [ ] RASFF (EU)
+
+Q10: What impending regulatory shifts are projected in France by 2025, potentially influencing EU policies?
+- [x] Advisories against plastic-packaged food for pregnant women
+- [x] Mandatory endocrine disruptor labeling
+- [x] Limitation on virgin material usage
+- [x] No reheating of children's cafeteria food in plastic containers
+- [ ] Increased reliance on computational methods for food safety
+- [ ] Varied guidelines for recycled paper and plastics
+- [x] Ban on mineral oils in print media
+- [ ] Restrictions on converting non-food containers to food containers
+- [x] Influence of recycled material quality on food shelf life
+- [x] Condition-based utilization of carcinogenic substances for food contact
+
+canBeSentByEmail:true`;

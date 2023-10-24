@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Wednesday, 11th October 2023
+Last Modified: Tuesday, 24th October 2023
 Modified By: Steward OUADI
 -----
 -->
@@ -135,60 +135,92 @@ Modified By: Steward OUADI
       reader.readAsText(file);
     }
 
-    function processMarkdownContent(lines) {
+    function getConfigurationData(lines) {
+      let isMultiChoice = false;
+      let isEmail = false;
+      // const lines = content.trim().split('\n');
 
       const configurationData = [];
 
-      const globalSlide = {
-        id: "global",
+      // Add the global configuration at the beginning
+      configurationData.push({
+        id: 'global',
         shuffleAnswers: false,
         currentScore: 0,
-      };
-
-      configurationData.push(globalSlide);
+      });
 
       let currentQuestion = null;
       let answerIndex = 'a';
+      let correctAnswer = []; // Initialize the correctAnswer array
 
       lines.forEach((line) => {
-        line = line.trim();
+        const trimmedLine = line.trim();
 
-        if (line.startsWith('Q')) {
-          if (currentQuestion !== null) {
-            configurationData.push(currentQuestion);
+        if (line.startsWith('canBeSentByEmail')) {
+          canBeSentByEmail = line.split(':')[1].trim();
+        } else if (trimmedLine.startsWith('Q')) {
+          if (isMultiChoice) {
+            // Only include the correctAnswer array if there are correct answers
+            if (correctAnswer.length > 0) {
+              currentQuestion.correctAnswer = correctAnswer;
+              configurationData.push(currentQuestion);
+            }
           }
+
+          isMultiChoice = true;
+          const questionText = trimmedLine.split(': ')[1]; // Extract the question text
           currentQuestion = {
-            id: line.split(':')[0].trim(),
+            id: 'quest-' + (configurationData.length),
             question: {
-              text: line.split(':')[1].trim(),
+              text: `${trimmedLine}: ${questionText}`, // Include "QX" in question.text
             },
             answers: {},
+            minimumPassedScore: 0,
             pointsIfCorrectAnswer: 1,
             pointsIfWrongAnswer: 0,
           };
-          answerIndex = 'a';
-        } else if (line.startsWith('-')) {
-          const isCorrect = line.startsWith('- [x]');
-          // const answerText = line.slice(5).trim();
-          const answerText = line.split(']')[1].trim();
-
-          currentQuestion.answers[answerIndex] = {
-            text: answerText
-          };
-          if (isCorrect) {
-            currentQuestion.correctAnswer = answerIndex;
+          answerIndex = 'a'; // Initialize answerIndex
+          correctAnswer = []; // Initialize correctAnswer array
+        } else if (trimmedLine.startsWith('- [x]')) {
+          if (!isMultiChoice) {
+            return;
           }
+          const answerText = trimmedLine.replace('- [x]', '').trim();
+          currentQuestion.answers[answerIndex] = {
+            text: answerText,
+          };
+          correctAnswer.push(answerIndex); // Add to correctAnswer array
           answerIndex = String.fromCharCode(answerIndex.charCodeAt(0) + 1);
-        } else if (line.startsWith('canBeSentByEmail')) {
-          canBeSentByEmail = line.split(':')[1].trim();
+        } else if (trimmedLine.startsWith('- [ ]')) {
+          if (!isMultiChoice) {
+            return;
+          }
+          const answerText = trimmedLine.replace('- [ ]', '').trim();
+          currentQuestion.answers[answerIndex] = {
+            text: answerText,
+          };
+          answerIndex = String.fromCharCode(answerIndex.charCodeAt(0) + 1);
         }
       });
 
-      if (currentQuestion !== null) {
-        configurationData.push(currentQuestion);
+      if (isMultiChoice) {
+        // Only include the correctAnswer array if there are correct answers
+        if (correctAnswer.length > 0) {
+          currentQuestion.correctAnswer = correctAnswer;
+          configurationData.push(currentQuestion);
+        }
       }
 
+      return configurationData;
+
+    }
+
+    function processMarkdownContent(lines) {
+
+      const configurationData = getConfigurationData(lines)
+
       const result = `const configurationData = ${JSON.stringify(configurationData, null, 2)};`;
+      console.log(result);
       const quizContainer = document.getElementById("quiz");
       quizContainer.innerHTML = "";
       allSlides = configurationData;
