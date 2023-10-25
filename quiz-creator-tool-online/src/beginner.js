@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Tuesday, 24th October 2023
+ * Last Modified: Wednesday, 25th October 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -1183,7 +1183,7 @@ let canBeSentByEmail = false;
 document.onreadystatechange = async function () {
   if (document.readyState === "complete") {
     // configurationData is a variable from configuration file.
-    // allSlides = configurationData;
+    allSlides = configurationData;
     DoQuiz();
   }
 };
