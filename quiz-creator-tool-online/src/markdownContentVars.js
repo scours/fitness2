@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 24th October 2023
+ * Last Modified: Wednesday, 25th October 2023
  * Modified By: Steward OUADI
  */
 
@@ -264,5 +264,134 @@ Q10: What impending regulatory shifts are projected in France by 2025, potential
 - [ ] Restrictions on converting non-food containers to food containers
 - [x] Influence of recycled material quality on food shelf life
 - [x] Condition-based utilization of carcinogenic substances for food contact
+
+canBeSentByEmail:true`;
+
+var materialGlass = `Q1: Migration from glass packaging is a safety concern. 
+- [ ] True	
+- [x] False
+
+Q2: The major raw-materials for glass bottles production are silica, sodium and calcium. 
+- [x] True	
+- [ ] False
+
+Q3: Incorporation of cullet is important because it allow for reduction of the energy required. 
+- [x] True	
+- [ ] False
+
+Q4: In the glass packaging, cylindrical formats are easier to produce but are more difficult to handle in the filling lines. 
+- [ ] True	
+- [x] False
+
+Q5: The weight reduction of glass bottles has occurred due to new labelling techniques. 
+- [ ] True	
+- [x] False
+
+canBeSentByEmail:true
+`;
+
+var materialMetal = `
+Q1: Tinplate and aluminium are metallic materials used to produce 3-pieces cans. 
+- [ ] True	
+- [x] False
+
+Q2: Tin free steel (or chromium coated steel) has low resistance to sulphide staining. 
+- [ ] True	
+- [x] False
+
+Q3: Double seam is the process to close the can, joining together the lid and the can body and is performed in 3 steps. 
+- [ ] True	
+- [x] False
+
+Q4: The reduction of metal weight can has not occurred because it is required a thick sheet to maintain the mechanical resistance during the sterilization process. 
+- [ ] True	
+- [x] False
+
+Q5: The staking of metal cans (stable sets of staked cans) is due to expertise of operator in handling the cans. 
+- [ ] True	
+- [x] False
+
+canBeSentByEmail:true
+`;
+
+var materialPlastics = `
+Q1: High density polyethylene has good barrier to moisture while the low-density polyethylene has not. 
+- [ ] True	
+- [x] False
+
+Q2: The plastics with very good barrier to oxygen are Poly(vinylidene dichloride) and the co-polymer ethylene-vinyl alcohol. 
+- [x] True	
+- [ ] False
+
+Q3: The majority of packages for butter is in polypropylene while one of the major applications to PET is bottles of mineral water. 
+- [x] True	
+- [ ] False
+
+Q4: Polyethylene low density has better performance, regarding thermosealing, that the co-polymer ethylene vinyl acetate. 
+- [ ] True	
+- [x] False
+
+Q5: In general, one can say that plastic materials good barrier to moisture are not good barrier to oxygen. 
+- [x] True	
+- [ ] False
+
+Q6: The barrier to oxygen offered by the copolymer ethylene-vinyl alcohol decreases with the increase with ambient relative humidity.
+- [x] True	
+- [ ] False
+
+Q7: Differential scanning calorimetry and infrared spectroscopy are techniques that can be used to identify plastics. 
+- [x] True	
+- [ ] False
+
+Q8: The water vapour transmission rate of 3g/day.m2 corresponds to a permeability value of 17.24 g µ/day.m2.mmHg for a film with a 50 micron thickness, when tested at 20 °C and 50 % relative humidity. The saturation vapour pressure at 20 °C is 17.4 mmHg.
+- [x] True	
+- [ ] False
+
+
+canBeSentByEmail:true`;
+
+var materialPaperAndBoard = `
+Q1: Fluting, liner and glue are the components of the corrugated board structure. The liner is the component that gives chock absorption and resistance to compression. 
+- [ ] True	
+- [x] False
+
+Q2: Mechanical properties of paper and paperboard packaging materials are sensitive to moisture. 
+- [x] True	
+- [ ] False
+
+Q3: The design of board boxes is independent of the filing operation. 
+- [ ] True	
+- [x] False
+
+Q4: Box compression (BCT) can also be calculated using a formula known as the McKee. This formula has only the parameters ECT (edge crust test) and thickness of the board to predict box compression. 
+- [ ] True	
+- [x] False
+
+Q5: If the contents inside a box is not resistant to compression, the final resistance to compression should be a combined resistance (box + contents) and so the space between the top of the contents and the top of the box should be minimum or inexistent. 
+- [ ] True	
+- [x] False
+
+Q6: The box compression test (BCT) measures the box compressive strength and it usually provides a plot of deformation vs compressive force. The box resistance is defined as the load at peak of the plot. 
+- [ ] True	
+- [x] False
+
+canBeSentByEmail:true`;
+
+var materialBioBased = `
+Q1: Biobased polymers can be directly extracted from biomass, or synthetized from bioderived monomers, or produced directly from organisms. 
+- [x] True	
+- [ ] False
+
+Q2: All biodegradable polymers are biobased. 
+- [ ] True	
+- [x] False
+
+Q3: Poly-lactic acid is bio based polymer synthetized form from bioderived monomers. 
+- [x] True	
+- [ ] False
+
+Q4: Today there are in the market bioPET and bioPE. These are chemically identical to their counterparts of fossil base. 
+- [x] True	
+- [ ] False
 
 canBeSentByEmail:true`;
