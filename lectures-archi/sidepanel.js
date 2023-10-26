@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 12th June 2023
+ * Last Modified: Thursday, 26th October 2023
  * Modified By: Steward OUADI
  */
 
@@ -176,6 +176,22 @@ function createAElementForDropDownMenu(identifier) {
   // We have a child, so we will insert it in the dropdown menu
   let aElement = document.createElement("a");
 
+  let backgroundColor = "#ec6807";
+
+  // Course URL
+  let courseButtonElement = document.createElement("button");
+  courseButtonElement.classList.add("btn", "btn-primary");
+  courseButtonElement.textContent = "Read the lecture";
+  // Apply the background color using the style attribute
+  courseButtonElement.style.backgroundColor = backgroundColor;
+  courseButtonElement.style.borderColor = backgroundColor;
+  // Apply the margin in percentage to create space below the button
+  courseButtonElement.style.marginBottom = "2%";
+
+  courseButtonElement.addEventListener("click", function () {
+    window.open(lecture.userProvidedURLForLecture, "_blank");
+  });
+
   aElement.href = "#" + identifier;
   aElement.text = lecture.title;
   aElement.id = identifier;
@@ -189,6 +205,10 @@ function createAElementForDropDownMenu(identifier) {
     const y = 0;
     // console.log("showing y");
     // console.log(y);
+
+    const qAndABaseURL =
+      "https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#";
+
     // We will modify main view to display the content of the selected lecture
 
     // Let's get the lecture by using its id in the map
@@ -201,45 +221,84 @@ function createAElementForDropDownMenu(identifier) {
     titleElement.innerHTML = lecture.title;
 
     // Difficulty level
+    const difficultyLevelHeader = document.createElement("h4");
+    difficultyLevelHeader.innerHTML = "Difficulty level";
     const difficultyLevelElement = document.createElement("p");
     const difficultyLevelNode = document.createTextNode(
-      "Difficulty level: " + lecture.difficultyLevel
+      lecture.difficultyLevel
     );
     difficultyLevelElement.appendChild(difficultyLevelNode);
 
     addStarsToElement(lecture, difficultyLevelElement);
 
     // Topics
+    const topicsHeader = document.createElement("h4");
+    topicsHeader.innerHTML = "Topics";
     const topicsElement = document.createElement("p");
-    const topicsNode = document.createTextNode("Topics: " + lecture.topic);
+    const topicsNode = document.createTextNode(lecture.topic);
     topicsElement.appendChild(topicsNode);
 
     // Abstract
+    const abstractHeader = document.createElement("h4");
+    abstractHeader.innerHTML = "Abstract";
     const abstractElement = document.createElement("p");
-    const abstractNode = document.createTextNode(
-      "Abstract: " + lecture.abstract
-    );
+    const abstractNode = document.createTextNode(lecture.abstract);
     abstractElement.appendChild(abstractNode);
 
-    // Course URL
-    let courseUrlElement = document.createElement("a");
-    courseUrlElement.href = lecture.userProvidedURLForLecture; // Get course URL
-    courseUrlElement.text = "Read the lecture";
-    courseUrlElement.target = "_blank";
-
     // Authors
-    const authorsElement = document.createElement("p");
-    const authorsNode = document.createTextNode("Authors: " + lecture.author);
-    authorsElement.appendChild(authorsNode);
+    const authorsHeader = document.createElement("h4");
+    authorsHeader.innerHTML = "Authors";
+    const authorsElement = document.createElement("ul"); // Use a <ul> for the list
+
+    // Check if lecture.author is a string or an array
+    if (Array.isArray(lecture.author)) {
+      // If it's an array, iterate through authors
+      lecture.author.forEach((author) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = author.trim();
+        authorsElement.appendChild(listItem);
+      });
+    } else if (typeof lecture.author === "string") {
+      // If it's a string, split it by commas
+      const authors = lecture.author.split(",");
+      authors.forEach((author) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = author.trim();
+        authorsElement.appendChild(listItem);
+      });
+    }
 
     mainDiv.appendChild(titleElement);
+    mainDiv.appendChild(difficultyLevelHeader);
     mainDiv.appendChild(difficultyLevelElement);
+    mainDiv.appendChild(topicsHeader);
     mainDiv.appendChild(topicsElement);
+    mainDiv.appendChild(abstractHeader);
     mainDiv.appendChild(abstractElement);
-    mainDiv.appendChild(courseUrlElement);
+    mainDiv.appendChild(courseButtonElement);
+
+    console.log(lecture.qAndAVariables !== undefined);
+    if (lecture.qAndAVariables !== undefined) {
+      const qAndAHeader = document.createElement("h4");
+      qAndAHeader.innerHTML = "Assessments";
+
+      const qAndAPar = document.createElement("p");
+      // Question and answers URL
+      let qAndAURL = document.createElement("a");
+      qAndAURL.href = qAndABaseURL + lecture.qAndAVariables;
+      qAndAURL.text = "Access Q/A number 1";
+      qAndAURL.target = "_blank";
+      qAndAPar.appendChild(qAndAURL);
+      // qAndAHeader.appendChild(qAndAPar);
+      mainDiv.appendChild(qAndAHeader);
+      mainDiv.appendChild(qAndAPar);
+    }
+    mainDiv.appendChild(authorsHeader);
     mainDiv.appendChild(authorsElement);
 
-    mainContent.innerHTML = mainDiv.outerHTML;
+    // use append instead of adding it directly with innerHTML because was preventing us to click on the button to read the lecture
+    mainContent.innerHTML = ""; // Clear the existing content
+    mainContent.appendChild(mainDiv);
   });
 
   addStarsToElement(lecture, aElement);
@@ -282,7 +341,7 @@ async function extractMetaData() {
   let basePath =
     "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
     pathSeparator;
-  // let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
+  // let basePath = "http://127.0.0.1:5502/manifests" + pathSeparator;
 
   // let basePath = "manifests" + pathSeparator;
   let fileExtension = ".manifest";
@@ -537,4 +596,3 @@ function closeNav() {
   // document.getElementById("open-menu-button").classList.toggle("hidden");
   document.getElementById("open-menu-button").style.visibility = "visible";
 }
-
