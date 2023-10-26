@@ -22,9 +22,6 @@ const lecturesPaths = new Map();
  */
 function contentToDisplayChildrenArrayEmpty(tocElement) {
   // Children array is empty, so we will just display Unit title
-  // console.log("children is empty");
-  // console.log(tocElement.title);
-  // console.log(tocElement.userProvidedURLForLecture);
   let groupListLiElement = document.createElement("li");
   let groupListAElement = document.createElement("a");
   groupListAElement.href = tocElement.userProvidedURLForLecture; // Get course URL
@@ -95,9 +92,6 @@ function createDropDownMenuElements() {
             const aElementK = createAElementForDropDownMenu(
               valueK.manifestPath
             );
-            // console.log("displaying eElementK beg");
-            // console.log(aElementK);
-            // console.log("displaying eElementK end");
             dropdownContainerDivJ.appendChild(aElementK);
           }
         } else {
@@ -110,9 +104,6 @@ function createDropDownMenuElements() {
       mainDropDownContainer.appendChild(aElementI);
     }
   }
-  // console.log("showing main dropdown container beg");
-  // console.log(mainDropDownContainer.outerHTML);
-  // console.log("showing main dropdown container end");
 }
 
 function getStarElements(difficultyLevel) {
@@ -473,43 +464,6 @@ async function extractMetaData() {
                       // And add it inside the lecturesPaths
                       // lecturesPaths.set(splitPath[1], folder2LecturePath);
                     }
-
-                    // // Search in lecturesPaths if the folder 1 already exists
-                    // if (lecturesPaths.has(splitPath[0])) {
-                    //   // If it exists, we will get it
-                    //   const folder1LecturePath = lecturesPaths.get(
-                    //     splitPath[0]
-                    //   );
-
-                    //   // Search in folder1LecturePath if the folder 2 already exists
-                    //   if (folder1LecturePath.children.has(splitPath[1])) {
-                    //     // If it exists, we will add a new entry: this file as a children of folder 2
-                    //     const folder2LecturePath = lecturesPaths.get(
-                    //       splitPath[1]
-                    //     );
-                    //     folder2LecturePath.addChild(fileLecturePath);
-                    //   } else {
-                    //     // We will create a LecturePath for the folder 2
-                    //     const folder2LecturePath = new LecturePath(
-                    //       splitPath[0],
-                    //       splitPath[1],
-                    //       false,
-                    //       fileLecturePath
-                    //     );
-                    //     // And add it inside the lecturesPaths
-                    //     lecturesPaths.set(splitPath[1], folder2LecturePath);
-                    //   }
-                    // } else {
-                    //   // We will create a LecturePath for the folder 1
-                    //   const folder1LecturePath = new LecturePath(
-                    //     undefined,
-                    //     splitPath[0],
-                    //     false,
-                    //     fileLecturePath
-                    //   );
-                    //   // And add it inside the lecturesPaths
-                    //   lecturesPaths.set(splitPath[0], folder1LecturePath);
-                    // }
                   }
 
                   // We will insert the lecture into a map
@@ -535,15 +489,9 @@ async function extractMetaData() {
             // console.log("Can't read level 1 file");
           }
         }
-        // console.log("lecturesPaths beg");
-        // console.log(lecturesPaths);
-        // console.log("lecturesPaths end");
         createDropDownMenuElements();
       } else {
         // Children array is empty, so we will just display title
-        // console.log("root level, children is empty");
-        // console.log(tocElement.title);
-        // console.log(tocElement.userProvidedURLForLecture);
         englobingNavList.appendChild(
           contentToDisplayChildrenArrayEmpty(tocElement)
         );
@@ -570,13 +518,8 @@ function loadFile(filePath) {
     handleEvent();
   };
 
-  // Make sure this file actually loads instead of a cached version
-  // Add a timestamp onto the URL (i.e. file.js?bust=12345678)
-  let cacheBuster = "?bust=" + new Date().getTime();
-
   // Set the type of file and where it can be found
   scriptTag.type = "text/javascript";
-  // scriptTag.src = filePath + cacheBuster;
   scriptTag.src = filePath;
 
   // Finally add it to the <head>
@@ -586,13 +529,11 @@ function loadFile(filePath) {
 function openNav() {
   document.getElementById("sidebar-menu").style.width = "60%";
   document.getElementById("main-id").style.marginLeft = "60%";
-  // document.getElementById("open-menu-button").classList.toggle("hidden");
   document.getElementById("open-menu-button").style.visibility = "hidden";
 }
 
 function closeNav() {
   document.getElementById("sidebar-menu").style.width = "0";
   document.getElementById("main-id").style.marginLeft = "0";
-  // document.getElementById("open-menu-button").classList.toggle("hidden");
   document.getElementById("open-menu-button").style.visibility = "visible";
 }
