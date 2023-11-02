@@ -574,10 +574,29 @@ async function extractMetaData() {
   loader.style.display = "none"; // Hide the loader
 }
 
+function readLectureFromUrl() {
+  // If there is an URL with lecture identifier,
+  // get identifier and display lectures details.
+
+  // Get the full URL
+  const fullURL = window.location.href;
+
+  // Split the URL by the hash (#) character
+  const parts = fullURL.split("#");
+
+  // Check if there's a hash part
+  if (parts.length === 2) {
+    // The part after the hash is what we want to display
+    const identifier = decodeURIComponent(parts[1]);
+    lectureToDisplay(identifier);
+  }
+}
+
 // Display loader as soon as the page is loaded
 loader.style.display = "block";
 console.time("extractMetaData");
 extractMetaData();
+readLectureFromUrl();
 console.timeEnd("extractMetaData");
 
 function loadFile(filePath) {
