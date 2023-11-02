@@ -356,6 +356,17 @@ function addListenersToDropdownButtons() {
 
 /* Extract and store all lectures into a global array*/
 async function extractMetaData() {
+  console.time("createDropDownMenuElements");
+  createDropDownMenuElements();
+  // createDropDownMenuElementsToPrint();
+  console.log(mainContent.innerHTML);
+  console.timeEnd("createDropDownMenuElements");
+  addListenersToDropdownButtons();
+  loader.style.display = "none"; // Hide the loader
+}
+
+/* Extract and store all lectures into a global array*/
+async function extractMetaDataOri() {
   const pathSeparator = "/";
   let basePath =
     "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
@@ -573,7 +584,6 @@ async function extractMetaData() {
   addListenersToDropdownButtons();
   loader.style.display = "none"; // Hide the loader
 }
-
 function readLectureFromUrl() {
   // If there is an URL with lecture identifier,
   // get identifier and display lectures details.
