@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 31st October 2023
+ * Last Modified: Thursday, 2nd November 2023
  * Modified By: Steward OUADI
  */
 
@@ -203,7 +203,7 @@ function createAElementForDropDownMenuToPrint(identifier) {
   aElement.text = lecture.title;
   aElement.id = identifier;
   aElement.setAttribute("class", "dropdown-container-class");
-  aElement.setAttribute("onclick", "lectureToDisplay(this.id); return false;");
+  aElement.setAttribute("onclick", "lectureToDisplay(this.id)");
 
   // console.log("lecture from new drop down menu");
   // console.log(event);
