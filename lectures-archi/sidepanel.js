@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 26th October 2023
+ * Last Modified: Tuesday, 31st October 2023
  * Modified By: Steward OUADI
  */
 
@@ -56,54 +56,60 @@ function getDropdownButtonAndContainer(dropdownButtonName, id) {
 }
 
 function createDropDownMenuElements() {
+  const div = document.createElement("div");
+
+  div.innerHTML = dropDownMenuContent;
+  mainDropDownContainer.appendChild(div);
+  console.log(mainDropDownContainer.innerHTML);
+}
+
+function createDropDownMenuElementsToPrint() {
+  console.log("createDropDownMenuElementsToPrint beg");
+  // Create a document fragment to hold the dropdown menu
+  const dropdownFragment = document.createDocumentFragment();
+
   for (let [keyI, valueI] of lecturesPaths) {
-    if (valueI.children.size > 0) {
-      // First level
-      // If there are children
-      const dropDownButtonAndContainerI = getDropdownButtonAndContainer(
-        valueI.name,
-        keyI
+    const dropdownButtonAndContainerI = getDropdownButtonAndContainer(
+      valueI.name,
+      keyI
+    );
+    const dropdownButtonI = dropdownButtonAndContainerI.dropdownButton;
+    const dropdownContainerDivI =
+      dropdownButtonAndContainerI.dropdownContainerDiv;
+
+    for (let [keyJ, valueJ] of valueI.children) {
+      const dropdownButtonAndContainerJ = getDropdownButtonAndContainer(
+        valueJ.name,
+        keyJ
       );
-      const dropdownButtonI = dropDownButtonAndContainerI.dropdownButton;
+      const dropdownButtonJ = dropdownButtonAndContainerJ.dropdownButton;
+      const dropdownContainerDivJ =
+        dropdownButtonAndContainerJ.dropdownContainerDiv;
 
-      const dropdownContainerDivI =
-        dropDownButtonAndContainerI.dropdownContainerDiv;
-      mainDropDownContainer.appendChild(dropdownButtonI);
-      mainDropDownContainer.appendChild(dropdownContainerDivI);
-      // console.log("we will loop through valueI.children");
-      for (let [keyJ, valueJ] of valueI.children) {
-        if (valueJ.children.size > 0) {
-          // console.log("we will loop through valueJ.children");
-          // Second level
-          // If there are children
-          const dropDownButtonAndContainerJ = getDropdownButtonAndContainer(
-            valueJ.name,
-            keyJ
-          );
-          const dropdownButtonJ = dropDownButtonAndContainerJ.dropdownButton;
-
-          const dropdownContainerDivJ =
-            dropDownButtonAndContainerJ.dropdownContainerDiv;
-          dropdownContainerDivI.appendChild(dropdownButtonJ);
-          dropdownContainerDivI.appendChild(dropdownContainerDivJ);
-
-          for (let [keyK, valueK] of valueJ.children) {
-            // Third level
-            const aElementK = createAElementForDropDownMenu(
-              valueK.manifestPath
-            );
-            dropdownContainerDivJ.appendChild(aElementK);
-          }
-        } else {
-          const aElementJ = createAElementForDropDownMenu(valueJ.manifestPath);
-          dropdownContainerDivI.appendChild(aElementJ);
-        }
+      for (let [keyK, valueK] of valueJ.children) {
+        const aElementK = createAElementForDropDownMenuToPrint(
+          valueK.manifestPath
+        );
+        dropdownContainerDivJ.appendChild(aElementK);
       }
-    } else {
-      const aElementI = createAElementForDropDownMenu(valueI.manifestPath);
-      mainDropDownContainer.appendChild(aElementI);
+
+      dropdownContainerDivI.appendChild(dropdownButtonJ);
+      dropdownContainerDivI.appendChild(dropdownContainerDivJ);
     }
+
+    const aElementI = createAElementForDropDownMenuToPrint(valueI.manifestPath);
+    dropdownContainerDivI.appendChild(aElementI);
+    dropdownFragment.appendChild(dropdownButtonI);
+    dropdownFragment.appendChild(dropdownContainerDivI);
   }
+
+  mainDropDownContainer.innerHTML = "";
+
+  // Append the entire dropdown menu at once
+  mainDropDownContainer.appendChild(dropdownFragment);
+
+  console.log(mainDropDownContainer.innerHTML);
+  console.log("createDropDownMenuElementsToPrint end");
 }
 
 function getStarElements(difficultyLevel) {
@@ -162,7 +168,8 @@ function makeid(length) {
   return result;
 }
 
-function createAElementForDropDownMenu(identifier) {
+function createAElementForDropDownMenuToPrint(identifier) {
+  // console.log("createAElementForDropDownMenuToPrint beg");
   const lecture = lecturesContainer.get(identifier);
   // We have a child, so we will insert it in the dropdown menu
   let aElement = document.createElement("a");
@@ -170,7 +177,8 @@ function createAElementForDropDownMenu(identifier) {
   let backgroundColor = "#ec6807";
 
   // Course URL
-  let courseButtonElement = document.createElement("button");
+  let courseButtonElement = document.createElement("a"); // Use an anchor tag instead of a button
+  courseButtonElement.target = "_blank";
   courseButtonElement.classList.add("btn", "btn-primary");
   courseButtonElement.textContent = "Read the lecture";
   // Apply the background color using the style attribute
@@ -179,121 +187,141 @@ function createAElementForDropDownMenu(identifier) {
   // Apply the margin in percentage to create space below the button
   courseButtonElement.style.marginBottom = "2%";
 
-  courseButtonElement.addEventListener("click", function () {
-    window.open(lecture.userProvidedURLForLecture, "_blank");
-  });
+  // Split the identifier string by '/'
+  let parts = identifier.split("/");
+
+  // Get the last part of the string
+  let lastPart = parts[parts.length - 1];
+
+  // Create the href attribute
+  courseButtonElement.href = lecture.userProvidedURLForLecture;
+
+  // You can keep the "id" for further styling or scripting, if needed
+  courseButtonElement.id = "lecture-button-" + lastPart;
 
   aElement.href = "#" + identifier;
   aElement.text = lecture.title;
   aElement.id = identifier;
   aElement.setAttribute("class", "dropdown-container-class");
-  aElement.addEventListener("click", (event) => {
-    // console.log("lecture from new drop down menu");
-    // console.log(event);
-    // console.log(identifier);
-    const targetId = identifier;
-    // console.log(targetId);
-    const y = 0;
-    // console.log("showing y");
-    // console.log(y);
+  aElement.setAttribute("onclick", "lectureToDisplay(this.id); return false;");
 
-    const qAndABaseURL =
-      "https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#";
+  // console.log("lecture from new drop down menu");
+  // console.log(event);
+  // console.log(identifier);
+  const targetId = identifier;
+  // console.log(targetId);
+  const y = 0;
+  // console.log("showing y");
+  // console.log(y);
 
-    // We will modify main view to display the content of the selected lecture
+  const qAndABaseURL =
+    "https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#";
 
-    // Let's get the lecture by using its id in the map
-    const mainDiv = document.createElement("div");
+  // We will modify main view to display the content of the selected lecture
 
-    const lecture = lecturesContainer.get(identifier);
+  // Let's get the lecture by using its id in the map
+  const mainDiv = document.createElement("div");
 
-    // Title
-    const titleElement = document.createElement("h1");
-    titleElement.innerHTML = lecture.title;
+  // const lecture = lecturesContainer.get(identifier);
 
-    // Difficulty level
-    const difficultyLevelHeader = document.createElement("h4");
-    difficultyLevelHeader.innerHTML = "Difficulty level";
-    const difficultyLevelElement = document.createElement("p");
-    const difficultyLevelNode = document.createTextNode(
-      lecture.difficultyLevel
-    );
-    difficultyLevelElement.appendChild(difficultyLevelNode);
+  // Title
+  const titleElement = document.createElement("h1");
+  titleElement.innerHTML = lecture.title;
 
-    addStarsToElement(lecture, difficultyLevelElement);
+  // Difficulty level
+  const difficultyLevelHeader = document.createElement("h4");
+  difficultyLevelHeader.innerHTML = "Difficulty level";
+  const difficultyLevelElement = document.createElement("p");
+  const difficultyLevelNode = document.createTextNode(lecture.difficultyLevel);
+  difficultyLevelElement.appendChild(difficultyLevelNode);
 
-    // Topics
-    const topicsHeader = document.createElement("h4");
-    topicsHeader.innerHTML = "Topics";
-    const topicsElement = document.createElement("p");
-    const topicsNode = document.createTextNode(lecture.topic);
-    topicsElement.appendChild(topicsNode);
+  addStarsToElement(lecture, difficultyLevelElement);
 
-    // Abstract
-    const abstractHeader = document.createElement("h4");
-    abstractHeader.innerHTML = "Abstract";
-    const abstractElement = document.createElement("p");
-    const abstractNode = document.createTextNode(lecture.abstract);
-    abstractElement.appendChild(abstractNode);
+  // Topics
+  const topicsHeader = document.createElement("h4");
+  topicsHeader.innerHTML = "Topics";
+  const topicsElement = document.createElement("p");
+  const topicsNode = document.createTextNode(lecture.topic);
+  topicsElement.appendChild(topicsNode);
 
-    // Authors
-    const authorsHeader = document.createElement("h4");
-    authorsHeader.innerHTML = "Authors";
-    const authorsElement = document.createElement("ul"); // Use a <ul> for the list
+  // Abstract
+  const abstractHeader = document.createElement("h4");
+  abstractHeader.innerHTML = "Abstract";
+  const abstractElement = document.createElement("p");
+  const abstractNode = document.createTextNode(lecture.abstract);
+  abstractElement.appendChild(abstractNode);
 
-    // Check if lecture.author is a string or an array
-    if (Array.isArray(lecture.author)) {
-      // If it's an array, iterate through authors
-      lecture.author.forEach((author) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = author.trim();
-        authorsElement.appendChild(listItem);
-      });
-    } else if (typeof lecture.author === "string") {
-      // If it's a string, split it by commas
-      const authors = lecture.author.split(",");
-      authors.forEach((author) => {
-        const listItem = document.createElement("li");
-        listItem.textContent = author.trim();
-        authorsElement.appendChild(listItem);
-      });
-    }
+  // Authors
+  const authorsHeader = document.createElement("h4");
+  authorsHeader.innerHTML = "Authors";
+  const authorsElement = document.createElement("ul"); // Use a <ul> for the list
 
-    mainDiv.appendChild(titleElement);
-    mainDiv.appendChild(difficultyLevelHeader);
-    mainDiv.appendChild(difficultyLevelElement);
-    mainDiv.appendChild(topicsHeader);
-    mainDiv.appendChild(topicsElement);
-    mainDiv.appendChild(abstractHeader);
-    mainDiv.appendChild(abstractElement);
-    mainDiv.appendChild(courseButtonElement);
+  // Check if lecture.author is a string or an array
+  if (Array.isArray(lecture.author)) {
+    // If it's an array, iterate through authors
+    lecture.author.forEach((author) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = author.trim();
+      authorsElement.appendChild(listItem);
+    });
+  } else if (typeof lecture.author === "string") {
+    // If it's a string, split it by commas
+    const authors = lecture.author.split(",");
+    authors.forEach((author) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = author.trim();
+      authorsElement.appendChild(listItem);
+    });
+  }
 
-    console.log(lecture.qAndAVariables !== undefined);
-    if (lecture.qAndAVariables !== undefined) {
-      const qAndAHeader = document.createElement("h4");
-      qAndAHeader.innerHTML = "Assessments";
+  mainDiv.appendChild(titleElement);
+  mainDiv.appendChild(difficultyLevelHeader);
+  mainDiv.appendChild(difficultyLevelElement);
+  mainDiv.appendChild(topicsHeader);
+  mainDiv.appendChild(topicsElement);
+  mainDiv.appendChild(abstractHeader);
+  mainDiv.appendChild(abstractElement);
+  mainDiv.appendChild(courseButtonElement);
 
-      const qAndAPar = document.createElement("p");
-      // Question and answers URL
-      let qAndAURL = document.createElement("a");
-      qAndAURL.href = qAndABaseURL + lecture.qAndAVariables;
-      qAndAURL.text = "Access Q/A number 1";
-      qAndAURL.target = "_blank";
-      qAndAPar.appendChild(qAndAURL);
-      // qAndAHeader.appendChild(qAndAPar);
-      mainDiv.appendChild(qAndAHeader);
-      mainDiv.appendChild(qAndAPar);
-    }
-    mainDiv.appendChild(authorsHeader);
-    mainDiv.appendChild(authorsElement);
+  // console.log(lecture.qAndAVariables !== undefined);
+  if (lecture.qAndAVariables !== undefined) {
+    const qAndAHeader = document.createElement("h4");
+    qAndAHeader.innerHTML = "Assessments";
 
-    // use append instead of adding it directly with innerHTML because was preventing us to click on the button to read the lecture
-    mainContent.innerHTML = ""; // Clear the existing content
-    mainContent.appendChild(mainDiv);
-  });
+    const qAndAPar = document.createElement("p");
+    // Question and answers URL
+    let qAndAURL = document.createElement("a");
+    qAndAURL.href = qAndABaseURL + lecture.qAndAVariables;
+    qAndAURL.text = "Access Q/A number 1";
+    qAndAURL.target = "_blank";
+    qAndAPar.appendChild(qAndAURL);
+    // qAndAHeader.appendChild(qAndAPar);
+    mainDiv.appendChild(qAndAHeader);
+    mainDiv.appendChild(qAndAPar);
+  }
+  mainDiv.appendChild(authorsHeader);
+  mainDiv.appendChild(authorsElement);
+
+  // use append instead of adding it directly with innerHTML because was preventing us to click on the button to read the lecture
+  mainContent.innerHTML = ""; // Clear the existing content
+  mainContent.appendChild(mainDiv);
+  console.log(
+    "lecturesDetails.set('" + identifier + "',`" + mainDiv.innerHTML + "`);"
+  );
 
   addStarsToElement(lecture, aElement);
+  // console.log("createAElementForDropDownMenuToPrint end");
   return aElement;
+}
+
+function lectureToDisplay(identifier) {
+  console.log("lectureToDisplay" + identifier);
+  // use append instead of adding it directly with innerHTML because was preventing us to click on the button to read the lecture
+  mainContent.innerHTML = ""; // Clear the existing content
+
+  const currentLectureDiv = document.createElement("div");
+  currentLectureDiv.innerHTML = lecturesDetails.get(identifier);
+  mainContent.appendChild(currentLectureDiv);
 }
 
 function addStarsToElement(lecture, element) {
@@ -345,6 +373,42 @@ async function extractMetaData() {
   let rootFileName = basePath + "root" + fileExtension + textToForceRefresh;
 
   const res = await fetch(rootFileName); // fetch method will fetch JSON file
+  const lastModified = res.headers.get("Last-Modified");
+
+  if (lastModified) {
+    const lastModifiedDate = new Date(lastModified);
+    console.log("Last Modified Date:", lastModifiedDate);
+  } else {
+    console.log("Last Modified Date not available.");
+  }
+
+  const owner = "scours";
+  const repo = "fitness2";
+  const filePath = "manifests/root.manifest"; // Replace with the actual file path
+  const branchName = "wip"; // Replace with the desired branch name
+
+  // Construct the API URL to get the commit history of the file
+  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&sha=${branchName}`;
+
+  const response = await fetch(apiUrl, {
+    headers: {
+      Accept: "application/vnd.github.json",
+    },
+  });
+
+  if (response.status === 200) {
+    const commitData = await response.json();
+    if (commitData.length > 0) {
+      // Get the last commit's timestamp
+      const lastModified = new Date(commitData[0].commit.author.date);
+      console.log("TT:Last Modified Date:", lastModified);
+    } else {
+      console.error("No commit history found for the file.");
+    }
+  } else {
+    console.error("Error fetching commit history");
+  }
+
   // console.log(res);
   if (res.ok) {
     // tocElement, is table of content element, its an object that contains lectures information
@@ -489,12 +553,18 @@ async function extractMetaData() {
             // console.log("Can't read level 1 file");
           }
         }
+        console.time("createDropDownMenuElements");
         createDropDownMenuElements();
+        // createDropDownMenuElementsToPrint();
+        console.log(mainContent.innerHTML);
+        console.timeEnd("createDropDownMenuElements");
       } else {
         // Children array is empty, so we will just display title
+        console.time("contentToDisplayChildrenArrayEmpty");
         englobingNavList.appendChild(
           contentToDisplayChildrenArrayEmpty(tocElement)
         );
+        console.timeEnd("contentToDisplayChildrenArrayEmpty");
       }
     }
   } else {
@@ -506,7 +576,9 @@ async function extractMetaData() {
 
 // Display loader as soon as the page is loaded
 loader.style.display = "block";
+console.time("extractMetaData");
 extractMetaData();
+console.timeEnd("extractMetaData");
 
 function loadFile(filePath) {
   // Create a <script> tag, set its source
