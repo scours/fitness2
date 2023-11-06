@@ -29,5 +29,6 @@
     "temperature",
     "type"
   ],
-  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part1.html#/2"
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part1.html#/2",
+  "qAndAVariables":"materialGlass"
 }

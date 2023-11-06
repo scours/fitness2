@@ -30,5 +30,6 @@
     "testing",
     "tube"
   ],
-  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part5.html#/2"
+  "userProvidedURLForLecture": "https://mol12.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part5.html#/2",
+  "qAndAVariables":"materialPlastics"
 }
