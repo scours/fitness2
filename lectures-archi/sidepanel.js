@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 2nd November 2023
+ * Last Modified: Monday, 6th November 2023
  * Modified By: Steward OUADI
  */
 
@@ -14,6 +14,20 @@ englobingNavList.className = "nav__list";
 
 // Map to store LecturePath objects
 const lecturesPaths = new Map();
+
+const refreshLecturesPrefetch = false;
+let lecturesPrefetchContent =
+  "let dropDownMenuContent; let lecturesDetails = new Map();";
+launchRefreshLecturesPrefetch();
+
+async function launchRefreshLecturesPrefetch() {
+  if (refreshLecturesPrefetch === true) {
+    await extractMetaDataOri();
+    console.log("lecturesPrefetchContent beg");
+    console.log(lecturesPrefetchContent);
+    console.log("lecturesPrefetchContent end");
+  }
+}
 
 /**
  * Content to display when children array is empty
@@ -109,6 +123,14 @@ function createDropDownMenuElementsToPrint() {
   mainDropDownContainer.appendChild(dropdownFragment);
 
   console.log(mainDropDownContainer.innerHTML);
+  lecturesPrefetchContent +=
+    "dropDownMenuContent = `" + mainDropDownContainer.outerHTML + "`;";
+
+  // lecturesPrefetchContent = lecturesPrefetchContent.concat(
+  //   "let dropDownMenuContent = `" +
+  //     mainDropDownContainer.innerHTML +
+  //     "`; let lecturesDetails = new Map();"
+  // );
   console.log("createDropDownMenuElementsToPrint end");
 }
 
@@ -308,7 +330,11 @@ function createAElementForDropDownMenuToPrint(identifier) {
   console.log(
     "lecturesDetails.set('" + identifier + "',`" + mainDiv.innerHTML + "`);"
   );
-
+  lecturesPrefetchContent +=
+    "lecturesDetails.set('" + identifier + "',`" + mainDiv.innerHTML + "`);";
+  // lecturesPrefetchContent = lecturesPrefetchContent.concat(
+  //   "lecturesDetails.set('" + identifier + "',`" + mainDiv.innerHTML + "`);"
+  // );
   addStarsToElement(lecture, aElement);
   // console.log("createAElementForDropDownMenuToPrint end");
   return aElement;
@@ -355,7 +381,7 @@ function addListenersToDropdownButtons() {
 }
 
 /* Extract and store all lectures into a global array*/
-async function extractMetaData() {
+function extractMetaData() {
   console.time("createDropDownMenuElements");
   createDropDownMenuElements();
   // createDropDownMenuElementsToPrint();
@@ -565,7 +591,7 @@ async function extractMetaDataOri() {
           }
         }
         console.time("createDropDownMenuElements");
-        createDropDownMenuElements();
+        createDropDownMenuElementsToPrint();
         // createDropDownMenuElementsToPrint();
         console.log(mainContent.innerHTML);
         console.timeEnd("createDropDownMenuElements");
