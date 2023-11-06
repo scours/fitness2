@@ -124,7 +124,7 @@ function createDropDownMenuElementsToPrint() {
 
   console.log(mainDropDownContainer.innerHTML);
   lecturesPrefetchContent +=
-    "dropDownMenuContent = `" + mainDropDownContainer.outerHTML + "`;";
+    "dropDownMenuContent = `" + mainDropDownContainer.innerHTML + "`;";
 
   // lecturesPrefetchContent = lecturesPrefetchContent.concat(
   //   "let dropDownMenuContent = `" +
@@ -325,8 +325,8 @@ function createAElementForDropDownMenuToPrint(identifier) {
   mainDiv.appendChild(authorsElement);
 
   // use append instead of adding it directly with innerHTML because was preventing us to click on the button to read the lecture
-  mainContent.innerHTML = ""; // Clear the existing content
-  mainContent.appendChild(mainDiv);
+  // mainContent.innerHTML = ""; // Clear the existing content
+  // mainContent.appendChild(mainDiv);
   console.log(
     "lecturesDetails.set('" + identifier + "',`" + mainDiv.innerHTML + "`);"
   );
@@ -607,7 +607,7 @@ async function extractMetaDataOri() {
   } else {
     // console.log("Can't read root file");
   }
-  addListenersToDropdownButtons();
+  // addListenersToDropdownButtons();
   loader.style.display = "none"; // Hide the loader
 }
 function readLectureFromUrl() {
