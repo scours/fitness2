@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Wednesday, 25th October 2023
+ * Last Modified: Monday, 13th November 2023
  * Modified By: Steward OUADI
  * -----
  */
@@ -752,7 +752,7 @@ function showNumberOfAnswersOutOfTotal() {
          correct answers out of <b>${
            visitedQuestions.size
          }</b> questions | <font size="0.4rem">${dt.toLocaleString()}</font>
-         <hr class="fitness" /><br /><a href="/fitness/lectures/html/">See all FitNESS lectures</a>`;
+         <hr class="fitness" /><br /><a href="/fitness2/wip/lectures-archi/sidepanel.html">See all FitNESS lectures</a>`;
 }
 
 function showResults() {
