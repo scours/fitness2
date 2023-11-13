@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Monday, 16th October 2023
 Author: Steward OUADI
 -----
-Last Modified: Monday, 16th October 2023
+Last Modified: Monday, 23rd October 2023
 Modified By: Steward OUADI
 -->
 
@@ -355,6 +355,71 @@ Modified By: Steward OUADI
       DoQuiz();
       // document.getElementById('output').textContent = result;
     }
+
+
+    function processMarkdownContent2(content) {
+      let isMultiChoice = false;
+      let isEmail = false;
+      const lines = content.trim().split('\n');
+
+      const configurationData = [];
+
+      lines.forEach((line) => {
+        const trimmedLine = line.trim();
+
+        if (trimmedLine === 'canBeSentByEmail:true') {
+          isEmail = true;
+        } else if (trimmedLine.startsWith('Q')) {
+          if (isMultiChoice) {
+            configurationData.push(currentQuestion);
+          }
+
+          isMultiChoice = true;
+          currentQuestion = {
+            id: 'quest-' + (configurationData.length + 1),
+            question: {
+              text: trimmedLine.split(': ')[1],
+            },
+            answers: {},
+            correctAnswer: [],
+            minimumPassedScore: [0],
+            pointsIfCorrectAnswer: [1],
+            pointsIfWrongAnswer: [0],
+            next: {
+              specific: 'quest-' + (configurationData.length + 2),
+            },
+          };
+        } else if (trimmedLine.startsWith('- [x]')) {
+          if (!isMultiChoice) {
+            return;
+          }
+          const answerText = trimmedLine.replace('- [x]', '').trim();
+          currentQuestion.answers[answerIndex] = {
+            text: answerText,
+          };
+          currentQuestion.correctAnswer.push(answerIndex);
+          answerIndex = String.fromCharCode(answerIndex.charCodeAt(0) + 1);
+        }
+      });
+
+      if (isMultiChoice) {
+        configurationData.push(currentQuestion);
+      }
+
+      if (isEmail) {
+        // Handle email-specific data if needed.
+      }
+
+      return configurationData;
+    }
+
+    const sortieA = processMarkdownContent2(testA);
+    const sortieB = processMarkdownContent2(testC);
+
+    console.log("sorties A et B beg")
+    console.log(sortieA); // Converted data for entreeA
+    console.log(sortieB); // Converted data for entreeB
+    console.log("sorties A et B end")
 
     questionsFromURL();
     document.getElementById("submit-results").addEventListener("click", function () {

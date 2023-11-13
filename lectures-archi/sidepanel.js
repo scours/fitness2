@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 6th November 2023
+ * Last Modified: Monday, 13th November 2023
  * Modified By: Steward OUADI
  */
 
@@ -248,7 +248,7 @@ function createAElementForDropDownMenuToPrint(identifier) {
 
   // Title
   const titleElement = document.createElement("h1");
-  titleElement.innerHTML = lecture.title;
+  titleElement.innerHTML = lecture.title.trim();
 
   // Difficulty level
   const difficultyLevelHeader = document.createElement("h4");
@@ -310,17 +310,27 @@ function createAElementForDropDownMenuToPrint(identifier) {
     const qAndAHeader = document.createElement("h4");
     qAndAHeader.innerHTML = "Assessments";
 
-    const qAndAPar = document.createElement("p");
-    // Question and answers URL
-    let qAndAURL = document.createElement("a");
-    qAndAURL.href = qAndABaseURL + lecture.qAndAVariables;
-    qAndAURL.text = "Access Q/A number 1";
-    qAndAURL.target = "_blank";
-    qAndAPar.appendChild(qAndAURL);
-    // qAndAHeader.appendChild(qAndAPar);
     mainDiv.appendChild(qAndAHeader);
-    mainDiv.appendChild(qAndAPar);
+    for (let i = 0; i < lecture.qAndAVariables.length; i++) {
+      const qAndAPar = document.createElement("p");
+      var qAndAVariablesSplitted = lecture.qAndAVariables[i].split("/");
+      const title = qAndAVariablesSplitted[0]; // Get the title
+      const qAndAVariableContent = qAndAVariablesSplitted[1];
+      const qAndAURL = document.createElement("a");
+
+      if (title.trim() === "") {
+        // If the title is empty, replace it with "Access Q/A number x"
+        title = "Access Q&A number " + (i + 1);
+      }
+
+      qAndAURL.href = qAndABaseURL + qAndAVariableContent;
+      qAndAURL.text = title;
+      qAndAURL.target = "_blank";
+      qAndAPar.appendChild(qAndAURL);
+      mainDiv.appendChild(qAndAPar);
+    }
   }
+
   mainDiv.appendChild(authorsHeader);
   mainDiv.appendChild(authorsElement);
 
@@ -394,10 +404,10 @@ function extractMetaData() {
 /* Extract and store all lectures into a global array*/
 async function extractMetaDataOri() {
   const pathSeparator = "/";
-  let basePath =
-    "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
-    pathSeparator;
-  // let basePath = "http://127.0.0.1:5502/manifests" + pathSeparator;
+  // let basePath =
+  //   "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
+  //   pathSeparator;
+  let basePath = "http://127.0.0.1:5502/manifests" + pathSeparator;
 
   // let basePath = "manifests" + pathSeparator;
   let fileExtension = ".manifest";
