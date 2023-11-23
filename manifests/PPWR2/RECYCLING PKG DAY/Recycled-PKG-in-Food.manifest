@@ -1,6 +1,6 @@
 {
   "idx": 733377,
-  "title": "The contamination of food by recycled paper and board packaging starts at the scale of fibers.",
+  "title": "Recycled PKG in Food",
   "level": "",
   "section": "",
   "unit": "",
@@ -14,7 +14,7 @@
     "Olivier Vitrac"
   ],
   "institution": "INRAE",
-  "abstract": "Food packaging contamination has become a significant concern due to implementing circular\neconomy practices, including the increased use of recycled materials. Although the\ncontamination of paper and board is widely studied, the current techniques show limitations in\naccurately quantifying and characterizing certain types of contaminants (e.g., mineral oil\nhydrocarbons). Moreover, very few studies have targeted the causes and effects of this\ncontamination. This study uses chemical imaging as a novel method to investigate the\ncontamination of food packaging materials made of recycled paper and board at the\nmicroscopic scale. The contamination of commercial packaging is explored, while reference\nmaterials and model solutes are used to develop the method that provides a heat map of\ncontaminants distribution at the fibers’ scale. The main findings highlight the heterogeneous\ndistribution of contaminants within the paper matrix, with variations influenced by the nature of\nthe contaminant and solvent used. This research emphasizes the need to develop analytical\nmethods to enhance their accuracy and reliability. By exploring the root causes of\ncontamination, this work contributes to improving the safety and quality of food packaging\nmaterials in a circular economy.",
+  "abstract": "The contamination of food by recycled paper and board packaging starts at the scale of fibers.\nFood packaging contamination has become a significant concern due to implementing circular\neconomy practices, including the increased use of recycled materials. Although the\ncontamination of paper and board is widely studied, the current techniques show limitations in\naccurately quantifying and characterizing certain types of contaminants (e.g., mineral oil\nhydrocarbons). Moreover, very few studies have targeted the causes and effects of this\ncontamination. This study uses chemical imaging as a novel method to investigate the\ncontamination of food packaging materials made of recycled paper and board at the\nmicroscopic scale. The contamination of commercial packaging is explored, while reference\nmaterials and model solutes are used to develop the method that provides a heat map of\ncontaminants distribution at the fibers’ scale. The main findings highlight the heterogeneous\ndistribution of contaminants within the paper matrix, with variations influenced by the nature of\nthe contaminant and solvent used. This research emphasizes the need to develop analytical\nmethods to enhance their accuracy and reliability. By exploring the root causes of\ncontamination, this work contributes to improving the safety and quality of food packaging\nmaterials in a circular economy.",
   "topic": [
     "ppwr2",
     "ppwr"
@@ -28,5 +28,5 @@
     "chemical imaging",
     "microscopic scale"
   ],
-  "userProvidedURLForLecture": ""
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/PPWR2/Recycled-PKG-in-Food.html#/1"
 }
