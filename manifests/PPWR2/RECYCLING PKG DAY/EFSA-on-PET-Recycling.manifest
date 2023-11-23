@@ -1,0 +1,33 @@
+{
+  "idx": 652374,
+  "title": "EFSA safety evaluation of mechanical recycling processes used to produce\npolyethylene terephthalate (PET) intended for food contact applications",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Intermediate",
+  "part": "",
+  "author": "Eric BARTHÉLÉMY",
+  "institution": "",
+  "abstract": "The development of a scheme for the safety evaluation of mechanical recycling processes for\npolyethylene terephthalate (PET) is described. The starting point is the adoption of a threshold of\ntoxicological concern such that migration from the recycled PET should not give rise to a dietary\nexposure exceeding 0.0025 μg kg –1 bw day –1 , the exposure threshold value for chemicals with\nstructural alerts raising concern for potential genotoxicity, below which the risk to human health\nwould be negligible. It is practically impossible to test every batch of incoming recovered PET\nand every production batch of recycled PET for all the different chemical contaminants that\ncould theoretically arise. Consequently, the principle of the safety evaluation is to measure the\ncleaning efficiency of a recycling process by using a challenge test with surrogate contaminants.\nThis cleaning efficiency is then applied to reduce a reference contamination level for post-\nconsumer PET, conservatively set at 3 mg kg –1 PET for a contaminant resulting from possible\nmisuse by consumers. The resulting residual concentration of each contaminant in recycled PET\nis used in conservative migration models to calculate migration levels, which are then used along\nwith food consumption data to give estimates of potential dietary exposure.",
+  "topic": [
+    "ppwr2",
+    "ppwr"
+  ],
+  "license": "",
+  "keywords": [
+    "safety evaluation",
+    "mechanical recycling processes",
+    "polyethylene terephthalate (PET)",
+    "threshold of toxicological concern",
+    "migration",
+    "dietary exposure",
+    "structural alerts",
+    "genotoxicity",
+    "risk to human health",
+    "recovered PET",
+    "production batch",
+    "chemical contaminants",
+    "cleaning efficiency"
+  ],
+  "userProvidedURLForLecture": ""
+}

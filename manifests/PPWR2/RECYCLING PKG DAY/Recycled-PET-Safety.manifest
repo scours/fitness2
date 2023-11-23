@@ -1,0 +1,28 @@
+{
+  "idx": 734729,
+  "title": "Safety issues for recycled PET and beyond:",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Intermediate",
+  "part": "",
+  "author": "Olivier VITRAC",
+  "institution": "",
+  "abstract": "The rapid adoption of recycled materials-from plastics to cellulosic substances-has out-\npaced policymakers’ and industry leaders’ consideration of potential consequences. This\npresentation tackles the critical issue of quantifying and managing the inherent risks of un-\nknown chemicals in recycled materials. We examine the challenges of ensuring the safety\nof recycled materials, such as recycled polyethylene terephthalate (rPET), in applications\ndemanding the same level of safety as virgin materials, including food-contact packaging\nwithout functional barriers and hot-fill processes.\nAddressing the unknown necessitates innovative methodologies; we employ information the-\nory as a transformative lens. This approach extends thermodynamics principles, allowing us\nto harness analytical chemistry and spectroscopic data into a ’chemical genetic code.’ This\nencodes the observable chemical information-regardless of its immediate interpretability-and\nenables the quantification of information entropy, an extensive property adhering to algebraic\noperations. This facilitates the isolation, tracking, and comparison of unique contamination\nfingerprints.\nWe will showcase several examples where over 150 streams from four continents have been\nencoded and evaluated against virgin polymers, using Euclidean distance as a measure of\npurity. This novel metric translates into a quantifiable number of chemicals, offering insights\ninto the mutual contamination across materials, packaging components, and the food supply\nchain and the efficacy of contamination removal during recycling. These findings lay the\ngroundwork for a collaborative research project to fortify the recycling loop and safeguard\nthe journey from waste to future packaging.",
+  "topic": [
+    "ppwr2",
+    "ppwr"
+  ],
+  "license": "",
+  "keywords": [
+    "food packaging",
+    "recycling",
+    "risk assessment",
+    "fingerprint",
+    "information theory",
+    "decision\ntheory",
+    "analytical chemistry",
+    "spectroscopy"
+  ],
+  "userProvidedURLForLecture": ""
+}
