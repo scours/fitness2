@@ -5,35 +5,12 @@
  * File Created: Tuesday, 31st October 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 23rd November 2023
+ * Last Modified: Friday, 24th November 2023
  * Modified By: Steward OUADI
  */
 
 let dropDownMenuContent;
 let lecturesDetails = new Map();
-lecturesDetails.set(
-  "PPWR2/RECYCLING PKG DAY/Food-Waste-Prevention",
-  `<h1>Food Waste Prevention</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Packaging development to stop food waste.
-Well-designed packaging, crucial for a welfare state, support for food preservation and transport
-over time and long distances. However, its reputation has declined due to environmental
-concerns, especially plastic pollution in oceans. While packaging is criticized for its
-environmental impact, the real climate threat lies in food production, a major contributor to
-climate change, freshwater depletion, species extinction, and eutrophication. The future of
-packaging development should, to a much greater extent, ensure that food waste can be reduced.
-In our research, we've explored the complex link between food packaging and waste reduction.
-Prevailing business models prioritize economics and sales, sometimes hindering the
-responsibility of ensuring food reaches consumers without waste. Balancing packaging's
-environmental impact with its role in limiting food waste and climate effects is a challenging
-task, complicated by differing food footprints, consumer behavior, and packaging recyclability
-uncertainties. Different functions of packaging can influence food waste and we know that food
-quantity in packaging greatly influences waste, driven by producers' sales focus and consumer
-price comparisons. Misunderstanding of "best before" labels also contributes to waste. Food
-producers should educate consumers to reduce this unnecessary waste.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Food-Waste-Prevention.html#/1" id="lecture-button-Food-Waste-Prevention" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Helén Williams</li></ul>`
-);
-lecturesDetails.set(
-  "PPWR2/RECYCLING PKG DAY/Recycling-Risk-Assessment-in-CN",
-  `<h1>Risk assessment of recycling plastics for food contact purposes in China</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Recycling-Risk-Assessment-in-CN" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Xining XIA</li></ul>`
-);
 lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules",
   `<h1>EU Packaging Rules</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>The revised EU rules on packaging and packaging waste - will they bring the much needed
@@ -59,8 +36,32 @@ To conclude, although the proposal is going in the right direction, it needs to 
 if the EU is willing to achieve the EU Green Deal goals.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/EU-Packaging-Rules.html#/1" id="lecture-button-EU-Packaging-Rules" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Dorota Napierska</li></ul>`
 );
 lecturesDetails.set(
+  "PPWR2/RECYCLING PKG DAY/Food-Waste-Prevention",
+  `<h1>Food Waste Prevention</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Packaging development to stop food waste.
+Well-designed packaging, crucial for a welfare state, support for food preservation and transport
+over time and long distances. However, its reputation has declined due to environmental
+concerns, especially plastic pollution in oceans. While packaging is criticized for its
+environmental impact, the real climate threat lies in food production, a major contributor to
+climate change, freshwater depletion, species extinction, and eutrophication. The future of
+packaging development should, to a much greater extent, ensure that food waste can be reduced.
+In our research, we've explored the complex link between food packaging and waste reduction.
+Prevailing business models prioritize economics and sales, sometimes hindering the
+responsibility of ensuring food reaches consumers without waste. Balancing packaging's
+environmental impact with its role in limiting food waste and climate effects is a challenging
+task, complicated by differing food footprints, consumer behavior, and packaging recyclability
+uncertainties. Different functions of packaging can influence food waste and we know that food
+quantity in packaging greatly influences waste, driven by producers' sales focus and consumer
+price comparisons. Misunderstanding of "best before" labels also contributes to waste. Food
+producers should educate consumers to reduce this unnecessary waste.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Food-Waste-Prevention.html#/1" id="lecture-button-Food-Waste-Prevention" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Helén Williams</li></ul>`
+);
+lecturesDetails.set(
+  "PPWR2/RECYCLING PKG DAY/Recycling-Risk-Assessment-in-CN",
+  `<h1>Recycling Risk Assessment in CN</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Risk assessment of recycling plastics for food contact purposes in China</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Recycling-Risk-Assessment-in-CN" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Xining XIA</li></ul>`
+);
+lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/PKG-Recycling-in-CN",
-  `<h1>Status and Prospects of Packaging Plastics and Cardboard Recycling in China</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Recycling plastics for food packaging products is the future development trend, China currently
+  `<h1>PKG Recycling in CN</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Status and Prospects of Packaging Plastics and Cardboard Recycling in China.
+Recycling plastics for food packaging products is the future development trend, China currently
 has no clear legal provisions for food recycling packaging products. This presentation will
 introduce China's food packaging materials regulations and development history. The existing
 plastic and cardboard recycling industry, the future demand for food packaging materials
@@ -75,7 +76,8 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/Sustainable-PKG-in-US",
-  `<h1>Top Down or Patchwork? Emerging Sustainable Packaging Regulations in North America</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Environment Climate Change Canada (ECCC) recently published a national Framework Paper
+  `<h1>Sustainable PKG in US</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Top Down or Patchwork? Emerging Sustainable Packaging Regulations in North America.
+Environment Climate Change Canada (ECCC) recently published a national Framework Paper
 on recycled content and labeling rules for plastics as well as a draft pollution prevention (P2)
 planning notice for primary food plastic packaging that would require the largest retailers to
 require 10% minimum recycled content (MRC) for food and beverage packaging and eliminate
@@ -117,8 +119,9 @@ use, and some of the challenges we face.</p><a target="_blank" class="btn btn-pr
 );
 lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/EFSA-on-PET-Recycling",
-  `<h1>EFSA safety evaluation of mechanical recycling processes used to produce
-polyethylene terephthalate (PET) intended for food contact applications</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>The development of a scheme for the safety evaluation of mechanical recycling processes for
+  `<h1>EFSA on PET Recycling</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>EFSA safety evaluation of mechanical recycling processes used to produce
+polyethylene terephthalate (PET) intended for food contact applications.
+The development of a scheme for the safety evaluation of mechanical recycling processes for
 polyethylene terephthalate (PET) is described. The starting point is the adoption of a threshold of
 toxicological concern such that migration from the recycled PET should not give rise to a dietary
 exposure exceeding 0.0025 μg kg –1 bw day –1 , the exposure threshold value for chemicals with
@@ -134,17 +137,14 @@ is used in conservative migration models to calculate migration levels, which ar
 with food consumption data to give estimates of potential dietary exposure.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-EFSA-on-PET-Recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Eric BARTHÉLÉMY</li></ul>`
 );
 lecturesDetails.set(
-  "PPWR2/RECYCLING PKG DAY/PKG-Recycling-Discussion",
-  `<h1>Packaging Recycling</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-PKG-Recycling-Discussion" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Rafael AURAS</li></ul>`
-);
-lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/APR-&-RecyClass",
   `<h1>APR-RecyClass</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>APR and RecyClass - Different Geographies, Common Purpose: The Association of Plastics Recyclers (APR) and RecyClass have forged a pioneering collaboration to advance plastic recycling efforts. This strategic partnership, which holds immense promise for the global sustainability landscape, aims to revolutionize the recycling industry across our two geographies. With our extensive expertise in design for recycling and testing protocols for the European and North American markets, RecyClass and APR have joined forces to advance harmonized recyclability design and assessment protocols, fostering innovation and promoting the plastic packaging circular economy.
 The RecyClass – APR partnership exemplifies the power of collaboration in driving positive change and accelerates the transition towards a more sustainable and circular plastic economy, reducing waste, conserving resources, and mitigating environmental impact.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/APR-RecyClass.html#/1" id="lecture-button-APR-&amp;-RecyClass" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Curt Cozart</li><li>Fabrizio Di Gregorio</li><li>Scott Trenor</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/Recycled-Polyolefins-Safety",
-  `<h1>Safety of Recycled Polyolefins</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Recycled plastic for packaging applications in consumers good industry is expected to increase
+  `<h1>Recycled Polyolefins Safety</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Safety of Recycled Polyolefins.
+Recycled plastic for packaging applications in consumers good industry is expected to increase
 fivefold over the next five years to well over one million tons per year. The biggest obstacle to
 meeting this demand and a rapid introduction of recycled plastics in packaging in this industry is the
 lack of qualitatively acceptable recyclates.
@@ -215,15 +215,17 @@ materials in a circular economy.</p><a target="_blank" class="btn btn-primary" h
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/Reusable-PKG-in-EU",
-  `<h1>Reusable consumer packaging: status quo, challenges &amp; opportunities in Europe</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Reusable-PKG-in-EU" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Marcel KEUENHOF</li></ul>`
+  `<h1>Reusable PKG in EU</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Reusable consumer packaging: status quo, challenges &amp; opportunities in Europe</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Reusable-PKG-in-EU" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Marcel KEUENHOF</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/PR3-Standards",
-  `<h1>How PR3 standards for reusable packaging can reduce costs, ensure performance, and lead to scale</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p> Single-use packaging is a primary cause of the plastic crisis and a major contributor to the climate crisis. Reuse is the most effective solution. PR3’s mission is to empower and accelerate reuse systems around the world. Over the past 4 years, PR3 began convening a balanced set of stakeholders from across the value chain, including packaging manufacturers, brand owners, retailers, service providers, waste workers, public health experts, and activists, to develop standards for reusable packaging systems. The standards set minimum requirements to ensure interoperability between businesses and communities, enabling shared return points, logistics, and wash hubs. The standards include safety, durability, and labeling requirements, and require a minimum number of use-cycles and return rates to ensure environmental performance. PR3’s standards are the only global standards for reuse and are in the process of being accredited by the American National Standards Institute and other international standards bodies.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-PR3-Standards" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Claudette JUSKA</li></ul>`
+  `<h1>PR3 Standards</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p> How PR3 standards for reusable packaging can reduce costs, ensure performance, and lead to scale.
+Single-use packaging is a primary cause of the plastic crisis and a major contributor to the climate crisis. Reuse is the most effective solution. PR3’s mission is to empower and accelerate reuse systems around the world. Over the past 4 years, PR3 began convening a balanced set of stakeholders from across the value chain, including packaging manufacturers, brand owners, retailers, service providers, waste workers, public health experts, and activists, to develop standards for reusable packaging systems. The standards set minimum requirements to ensure interoperability between businesses and communities, enabling shared return points, logistics, and wash hubs. The standards include safety, durability, and labeling requirements, and require a minimum number of use-cycles and return rates to ensure environmental performance. PR3’s standards are the only global standards for reuse and are in the process of being accredited by the American National Standards Institute and other international standards bodies.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-PR3-Standards" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Claudette JUSKA</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/Industrializing-PKG-Reuse",
-  `<h1>How to industrialize packaging reuse?</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>For 30 years, ETERNITY Systems has helped to reduce the single use of packaging through its expertise in
+  `<h1>Industrializing PKG Reuse</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>How to industrialize packaging reuse?
+For 30 years, ETERNITY Systems has helped to reduce the single use of packaging through its expertise in
 the industrial circularity of collecting, transporting, repairing, washing, and storing reusable packaging
 for logistics (crates, bins, boxes, pallets) and mass consumption (cups, pots, jars, trays, gastronomy
 containers) in Europe and North America. Packaging reuse has existed on a large scale, for more than 30
@@ -231,7 +233,8 @@ years, with the "washer-pooler" model,... Find out more at this presentation.</p
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/Secondary-PKG-Reuse",
-  `<h1>Ecological and economic assessment of reusable packaging in a refrigerated supply chain</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>In alignment with the objectives of the French anti-waste law for the circular economy,
+  `<h1>Secondary PKG Reuse</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Ecological and economic assessment of reusable packaging in a refrigerated supply chain.
+In alignment with the objectives of the French anti-waste law for the circular economy,
 particularly the 3R decree, the Chaire CoPack launched a research project to assess the im-
 plications of transitioning from a linear economy to a circular economy through the adoption
 of reusable packaging. Data collection in the field enabled the research team to conduct an
@@ -268,11 +271,12 @@ cycle. Cleaning technologies will be optimised and integrated in a cleaning pilo
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/Education-in-Responsible-PKG",
-  `<h1>Education in Responsible PKG</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Education-in-Responsible-PKG" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Sandra DOMENEK</li></ul>`
+  `<h1>Education in Responsible PKG</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Education in Responsible PKG</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Education-in-Responsible-PKG" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Sandra DOMENEK</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/FitNESS-Platform",
-  `<h1>FitNESS: Open Courseware for Responsible Food Packaging and Supply Chain Education</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>The ecological transition imposes a revision of the logic of transformation and distribution of
+  `<h1>FitNESS Platform</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>FitNESS: Open Courseware for Responsible Food Packaging and Supply Chain Education.
+The ecological transition imposes a revision of the logic of transformation and distribution of
 food including ingredients and packaging to avoid it travels thousands of kilometers before
 reaching consumers' plates. The solutions will come through innovation within our industries
 and the education of the coming generation; the Fitness projects contribute to this evolution.
@@ -284,7 +288,8 @@ detailing the different technical and scientific aspects of food packaging witho
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/Virtual-Labs-in-Food-Science",
-  `<h1>Development of Virtual and Remote Teaching Laboratories for Food Science and Engineering Students</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>COVID-19 forced many universities to cancel in-person instructions and to substitute virtual
+  `<h1>Virtual Labs in Food Science</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Development of Virtual and Remote Teaching Laboratories for Food Science and Engineering Students.
+COVID-19 forced many universities to cancel in-person instructions and to substitute virtual
 course presentations instead. This created problems for courses that required laboratory sessions
 which served as tools for efficient understanding of certain concepts. To meet this unexpected
 need, researchers from the universities above designed virtual laboratory exercises to meet the
@@ -295,26 +300,31 @@ used to improve the kits before distributing them to other United States univers
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/PKG-Education-in-the-US",
-  `<h1>Packaging education in the U.S. and the SoP @ MSU</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-PKG-Education-in-the-US" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Rafael AURAS</li></ul>`
+  `<h1>PKG Education in the US</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Packaging education in the U.S. and the SoP @ MSU</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-PKG-Education-in-the-US" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Rafael AURAS</li></ul>`
 );
 lecturesDetails.set(
-  "PPWR2/RECYCLING PKG DAY/Food-Waste-Prevention",
-  `<h1>Food Waste Prevention</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Packaging development to stop food waste.
-Well-designed packaging, crucial for a welfare state, support for food preservation and transport
-over time and long distances. However, its reputation has declined due to environmental
-concerns, especially plastic pollution in oceans. While packaging is criticized for its
-environmental impact, the real climate threat lies in food production, a major contributor to
-climate change, freshwater depletion, species extinction, and eutrophication. The future of
-packaging development should, to a much greater extent, ensure that food waste can be reduced.
-In our research, we've explored the complex link between food packaging and waste reduction.
-Prevailing business models prioritize economics and sales, sometimes hindering the
-responsibility of ensuring food reaches consumers without waste. Balancing packaging's
-environmental impact with its role in limiting food waste and climate effects is a challenging
-task, complicated by differing food footprints, consumer behavior, and packaging recyclability
-uncertainties. Different functions of packaging can influence food waste and we know that food
-quantity in packaging greatly influences waste, driven by producers' sales focus and consumer
-price comparisons. Misunderstanding of "best before" labels also contributes to waste. Food
-producers should educate consumers to reduce this unnecessary waste.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Food-Waste-Prevention.html#/1" id="lecture-button-Food-Waste-Prevention" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Helén Williams</li></ul>`
+  "PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules",
+  `<h1>EU Packaging Rules</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>The revised EU rules on packaging and packaging waste - will they bring the much needed
+focus on prevention?
+There is a need to address the boundaries of resource use regarding all packaging materials - as
+all these materials come with their respective impacts. Our current production and
+unsustainable consumption patterns are clearly reflecting the linear economy model which
+creates continuous demand for virgin raw materials and endless waste. Packaging is one of the
+main users of virgin materials (40% of plastics and 50% of paper used in the EU is destined for
+packaging) and accounts for 36 % of municipal solid waste.
+The proposal of revised EU rules on packaging and packaging waste cover both packaging
+design and packaging waste management. The waste prevention targets in the Commission's
+proposal are however still too low considering that packaging volumes have increased by 20%
+over the last decade. While EU rules on packaging cover all types of packaging and packaging
+waste placed on the European market, some measures in the proposal address plastic only. On
+the positive side, the PPWR as proposed by the European Commission, shows for the first time
+a good overall ambition to encourage prevention through mandatory reuse targets for a wide
+range of packaging types, in line with the waste hierarchy.
+Finally, in order for packaging to be truly sustainable, it needs to be safe for both human and
+environmental health, and the PPWR should therefore carefully consider consumer safety in
+the context of the proposal.
+To conclude, although the proposal is going in the right direction, it needs to be more ambitious
+if the EU is willing to achieve the EU Green Deal goals.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/EU-Packaging-Rules.html#/1" id="lecture-button-EU-Packaging-Rules" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Dorota Napierska</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/Introduction/panorama-of-food-packaging-part-1",
@@ -696,6 +706,11 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
 <div class="dropdown-container" id="dropdown-container-PPWR2"><button class="dropdown-btn"
         id="dropdown-btn-RECYCLING PKG DAY">RECYCLING PKG DAY<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-RECYCLING PKG DAY"><a
+            href="#PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules" id="PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">EU Packaging Rules<i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/RECYCLING PKG DAY/Food-Waste-Prevention" id="PPWR2/RECYCLING PKG DAY/Food-Waste-Prevention"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Food Waste Prevention<i
                 class="fa fa-star star-color-yellow little-space"></i><i
@@ -703,18 +718,13 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/RECYCLING PKG DAY/Recycling-Risk-Assessment-in-CN"
             id="PPWR2/RECYCLING PKG DAY/Recycling-Risk-Assessment-in-CN" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Risk assessment of recycling plastics for food contact purposes in
-            China<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules" id="PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">EU Packaging Rules<i
+            onclick="lectureToDisplay(this.id)">Recycling Risk Assessment in CN<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/RECYCLING PKG DAY/PKG-Recycling-in-CN" id="PPWR2/RECYCLING PKG DAY/PKG-Recycling-in-CN"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Status and Prospects of Packaging
-            Plastics and Cardboard Recycling in China<i class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">PKG Recycling in CN<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/RECYCLING PKG DAY/Food-PKG-Regulation-in-CL"
@@ -724,8 +734,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/RECYCLING PKG DAY/Sustainable-PKG-in-US" id="PPWR2/RECYCLING PKG DAY/Sustainable-PKG-in-US"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Top Down or Patchwork? Emerging
-            Sustainable Packaging Regulations in North America<i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Sustainable PKG in US<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
@@ -741,15 +750,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/RECYCLING PKG DAY/EFSA-on-PET-Recycling" id="PPWR2/RECYCLING PKG DAY/EFSA-on-PET-Recycling"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">EFSA safety evaluation of mechanical
-            recycling processes used to produce
-            polyethylene terephthalate (PET) intended for food contact applications<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#PPWR2/RECYCLING PKG DAY/PKG-Recycling-Discussion"
-            id="PPWR2/RECYCLING PKG DAY/PKG-Recycling-Discussion" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Packaging Recycling<i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">EFSA on PET Recycling<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
@@ -760,7 +761,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/RECYCLING PKG DAY/Recycled-Polyolefins-Safety"
             id="PPWR2/RECYCLING PKG DAY/Recycled-Polyolefins-Safety" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Safety of Recycled Polyolefins<i
+            onclick="lectureToDisplay(this.id)">Recycled Polyolefins Safety<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
@@ -777,23 +778,22 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
         id="dropdown-btn-REUSE PKG DAY">REUSE PKG DAY<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-REUSE PKG DAY"><a
             href="#PPWR2/REUSE PKG DAY/Reusable-PKG-in-EU" id="PPWR2/REUSE PKG DAY/Reusable-PKG-in-EU"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Reusable consumer packaging: status
-            quo, challenges &amp; opportunities in Europe<i class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Reusable PKG in EU<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a href="#PPWR2/REUSE PKG DAY/PR3-Standards"
             id="PPWR2/REUSE PKG DAY/PR3-Standards" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">How PR3 standards for reusable packaging can reduce costs, ensure
-            performance, and lead to scale<i class="fa fa-star star-color-yellow little-space"></i><i
+            onclick="lectureToDisplay(this.id)">PR3 Standards<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/REUSE PKG DAY/Industrializing-PKG-Reuse" id="PPWR2/REUSE PKG DAY/Industrializing-PKG-Reuse"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">How to industrialize packaging reuse?<i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Industrializing PKG Reuse<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/REUSE PKG DAY/Secondary-PKG-Reuse" id="PPWR2/REUSE PKG DAY/Secondary-PKG-Reuse"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Ecological and economic assessment of
-            reusable packaging in a refrigerated supply chain<i class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Secondary PKG Reuse<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/REUSE PKG DAY/Buddie-Pack-Project" id="PPWR2/REUSE PKG DAY/Buddie-Pack-Project"
@@ -808,24 +808,23 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/REUSE PKG DAY/FitNESS-Platform" id="PPWR2/REUSE PKG DAY/FitNESS-Platform"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">FitNESS: Open Courseware for
-            Responsible Food Packaging and Supply Chain Education<i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">FitNESS Platform<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/REUSE PKG DAY/Virtual-Labs-in-Food-Science"
             id="PPWR2/REUSE PKG DAY/Virtual-Labs-in-Food-Science" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Development of Virtual and Remote Teaching Laboratories for Food Science
-            and Engineering Students<i class="fa fa-star star-color-yellow little-space"></i><i
+            onclick="lectureToDisplay(this.id)">Virtual Labs in Food Science<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/REUSE PKG DAY/PKG-Education-in-the-US" id="PPWR2/REUSE PKG DAY/PKG-Education-in-the-US"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Packaging education in the U.S. and the
-            SoP @ MSU<i class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">PKG Education in the US<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><a
-        href="#PPWR2/RECYCLING PKG DAY/Food-Waste-Prevention" id="PPWR2/RECYCLING PKG DAY/Food-Waste-Prevention"
-        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Food Waste Prevention<i
+        href="#PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules" id="PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules"
+        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">EU Packaging Rules<i
             class="fa fa-star star-color-yellow little-space"></i><i
             class="fa fa-star star-color-yellow little-space"></i><i
             class="fa fa-star-o star-color-yellow little-space"></i></a>
