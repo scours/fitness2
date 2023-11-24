@@ -12,6 +12,18 @@
 let dropDownMenuContent;
 let lecturesDetails = new Map();
 lecturesDetails.set(
+  "PPWR2/RECYCLING PKG DAY/Industrial-Point-of-View",
+  `<h1>Industrial Point of View</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Consequences of the PPWR on the corrugated industry.
+The packaging and packaging waste directive is a founding text for the packaging sector, particularly for
+cardboard paper, which operates in a closed loop of reuse of its raw material, integrating on average 80% of
+recycled material.
+The draft European regulation which is to replace this directive proposes major changes for this sector,
+despite its good results in terms of the circular economy: reuse objectives, high-quality recycling, European
+harmonization of labeling, etc.
+There are many challenges to overcome to continue improving the efficiency of our loop. But we also see in
+this text some pitfalls which could produce results different from those expected.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Industrial-Point-of-View.html#/1" id="lecture-button-Industrial-Point-of-View" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Kareen DESBOUIS</li></ul>`
+);
+lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules",
   `<h1>EU Packaging Rules</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>The revised EU rules on packaging and packaging waste - will they bring the much needed
 focus on prevention?
@@ -68,7 +80,7 @@ plastic and cardboard recycling industry, the future demand for food packaging m
 recycling, and the development trend of laws and regulations are discussed. In order to take
 food safety as the center, take into account environmental protection, circular economy and
 green consumption, promote the development of food packaging recycling industry, but also
-promote waste plastic treatment and environmental protection.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-PKG-Recycling-in-CN" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Song XIAOWEI</li></ul>`
+promote waste plastic treatment and environmental protection.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/PKG-Recycling-in-CN.pdf" id="lecture-button-PKG-Recycling-in-CN" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Song XIAOWEI</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/Food-PKG-Regulation-in-CL",
@@ -87,7 +99,7 @@ and recyclability labeling. Several other states are considering similar legisla
 differences in each of these enacted and proposed laws may create a complex patchwork of
 sustainability regulation in the United States and between Canada and the U.S. What challenges
 and opportunities will producers encounter as they navigate this patchwork of emerging
-regulations?</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Sustainable-PKG-in-US" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Andrew STEPHENS</li></ul>`
+regulations?</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Sustainable-PKG-in-US.html#/1" id="lecture-button-Sustainable-PKG-in-US" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Andrew STEPHENS</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/EU-PKG-Approval-History",
@@ -134,7 +146,7 @@ This cleaning efficiency is then applied to reduce a reference contamination lev
 consumer PET, conservatively set at 3 mg kg –1 PET for a contaminant resulting from possible
 misuse by consumers. The resulting residual concentration of each contaminant in recycled PET
 is used in conservative migration models to calculate migration levels, which are then used along
-with food consumption data to give estimates of potential dietary exposure.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-EFSA-on-PET-Recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Eric BARTHÉLÉMY</li></ul>`
+with food consumption data to give estimates of potential dietary exposure.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/EFSA-on-PET-Recycling.pdf" id="lecture-button-EFSA-on-PET-Recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Eric BARTHÉLÉMY</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/APR-&-RecyClass",
@@ -167,7 +179,7 @@ been conducted by CosPaTox as for this material, a much larger number of food co
 grades already exists.
 The CosPaTox consortium’s approach is technology-neutral and does not take into account any
 particular recycling technology, but only the quality of the recycled materials. The project aims to
-finalize its work by end of 2023 and publish its findings in 2024.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Recycled-Polyolefins-Safety" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Celine ABAD</li></ul>`
+finalize its work by end of 2023 and publish its findings in 2024.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Recycled-Polyolefins-Safety.html#/1" id="lecture-button-Recycled-Polyolefins-Safety" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Celine ABAD</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/Recycled-PET-Safety",
@@ -215,12 +227,12 @@ materials in a circular economy.</p><a target="_blank" class="btn btn-primary" h
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/Reusable-PKG-in-EU",
-  `<h1>Reusable PKG in EU</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Reusable consumer packaging: status quo, challenges &amp; opportunities in Europe</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Reusable-PKG-in-EU" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Marcel KEUENHOF</li></ul>`
+  `<h1>Reusable PKG in EU</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Reusable consumer packaging: status quo, challenges &amp; opportunities in Europe</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Reusable-PKG-in-EU.html#/1" id="lecture-button-Reusable-PKG-in-EU" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Marcel KEUENHOF</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/PR3-Standards",
   `<h1>PR3 Standards</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p> How PR3 standards for reusable packaging can reduce costs, ensure performance, and lead to scale.
-Single-use packaging is a primary cause of the plastic crisis and a major contributor to the climate crisis. Reuse is the most effective solution. PR3’s mission is to empower and accelerate reuse systems around the world. Over the past 4 years, PR3 began convening a balanced set of stakeholders from across the value chain, including packaging manufacturers, brand owners, retailers, service providers, waste workers, public health experts, and activists, to develop standards for reusable packaging systems. The standards set minimum requirements to ensure interoperability between businesses and communities, enabling shared return points, logistics, and wash hubs. The standards include safety, durability, and labeling requirements, and require a minimum number of use-cycles and return rates to ensure environmental performance. PR3’s standards are the only global standards for reuse and are in the process of being accredited by the American National Standards Institute and other international standards bodies.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-PR3-Standards" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Claudette JUSKA</li></ul>`
+Single-use packaging is a primary cause of the plastic crisis and a major contributor to the climate crisis. Reuse is the most effective solution. PR3’s mission is to empower and accelerate reuse systems around the world. Over the past 4 years, PR3 began convening a balanced set of stakeholders from across the value chain, including packaging manufacturers, brand owners, retailers, service providers, waste workers, public health experts, and activists, to develop standards for reusable packaging systems. The standards set minimum requirements to ensure interoperability between businesses and communities, enabling shared return points, logistics, and wash hubs. The standards include safety, durability, and labeling requirements, and require a minimum number of use-cycles and return rates to ensure environmental performance. PR3’s standards are the only global standards for reuse and are in the process of being accredited by the American National Standards Institute and other international standards bodies.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/PR3-Standards.pdf" id="lecture-button-PR3-Standards" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Claudette JUSKA</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/Industrializing-PKG-Reuse",
@@ -229,7 +241,7 @@ For 30 years, ETERNITY Systems has helped to reduce the single use of packaging 
 the industrial circularity of collecting, transporting, repairing, washing, and storing reusable packaging
 for logistics (crates, bins, boxes, pallets) and mass consumption (cups, pots, jars, trays, gastronomy
 containers) in Europe and North America. Packaging reuse has existed on a large scale, for more than 30
-years, with the "washer-pooler" model,... Find out more at this presentation.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Industrializing-PKG-Reuse" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Eléonore BLONDEAU</li></ul>`
+years, with the "washer-pooler" model,... Find out more at this presentation.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Industrializing-PKG-Reuse.pdf" id="lecture-button-Industrializing-PKG-Reuse" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Eléonore BLONDEAU</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/Secondary-PKG-Reuse",
@@ -249,7 +261,7 @@ frequency of cleaning increases, the environmental benefits of reusing packaging
 primarily due to heightened energy consumption associated with heating the cleaning water.
 The preliminary findings from this study will be complemented with industry feedback to
 gain insights into the challenges and opportunities surrounding the transition to reusable
-packaging, considering the technical and economic challenges of this shift.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Secondary-PKG-Reuse" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Alice JOLY</li></ul>`
+packaging, considering the technical and economic challenges of this shift.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Secondary-PKG-Reuse.html#/1" id="lecture-button-Secondary-PKG-Reuse" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Alice JOLY</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/Buddie-Pack-Project",
@@ -284,7 +296,7 @@ The two consecutive projects, FitNESS for "Food packaging open courseware for hi
 education and staff of companies" and funded by the Erasmus+ Program of the European
 Union, have been designed to imagine future responsible food packaging and supply chains by
 detailing the different technical and scientific aspects of food packaging without taking sides.
-(www.fitness-foodpackaging.com)</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-FitNESS-Platform" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Christophe COTILLON</li></ul>`
+(www.fitness-foodpackaging.com)</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/FitNESS-Platform.pdf" id="lecture-button-FitNESS-Platform" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Christophe COTILLON</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/Virtual-Labs-in-Food-Science",
@@ -296,35 +308,23 @@ need, researchers from the universities above designed virtual laboratory exerci
 academic needs of food science and engineering students. To accomplish this, protype kits of
 selected assignments were developed and distributed, first to the collaborators’ universities, where
 students enrolled in related courses provided constructive critiques of the kits. These critiques were
-used to improve the kits before distributing them to other United States universities.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-Virtual-Labs-in-Food-Science" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Melvin Pascall</li><li>Shyam Sablani</li><li>Julie Goddard</li><li>Olive Li</li><li>Kit Yam</li></ul>`
+used to improve the kits before distributing them to other United States universities.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Virtual-Labs-in-Food-Science.html#/1" id="lecture-button-Virtual-Labs-in-Food-Science" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Melvin Pascall</li><li>Shyam Sablani</li><li>Julie Goddard</li><li>Olive Li</li><li>Kit Yam</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/REUSE PKG DAY/PKG-Education-in-the-US",
   `<h1>PKG Education in the US</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Packaging education in the U.S. and the SoP @ MSU</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-PKG-Education-in-the-US" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Rafael AURAS</li></ul>`
 );
 lecturesDetails.set(
-  "PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules",
-  `<h1>EU Packaging Rules</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>The revised EU rules on packaging and packaging waste - will they bring the much needed
-focus on prevention?
-There is a need to address the boundaries of resource use regarding all packaging materials - as
-all these materials come with their respective impacts. Our current production and
-unsustainable consumption patterns are clearly reflecting the linear economy model which
-creates continuous demand for virgin raw materials and endless waste. Packaging is one of the
-main users of virgin materials (40% of plastics and 50% of paper used in the EU is destined for
-packaging) and accounts for 36 % of municipal solid waste.
-The proposal of revised EU rules on packaging and packaging waste cover both packaging
-design and packaging waste management. The waste prevention targets in the Commission's
-proposal are however still too low considering that packaging volumes have increased by 20%
-over the last decade. While EU rules on packaging cover all types of packaging and packaging
-waste placed on the European market, some measures in the proposal address plastic only. On
-the positive side, the PPWR as proposed by the European Commission, shows for the first time
-a good overall ambition to encourage prevention through mandatory reuse targets for a wide
-range of packaging types, in line with the waste hierarchy.
-Finally, in order for packaging to be truly sustainable, it needs to be safe for both human and
-environmental health, and the PPWR should therefore carefully consider consumer safety in
-the context of the proposal.
-To conclude, although the proposal is going in the right direction, it needs to be more ambitious
-if the EU is willing to achieve the EU Green Deal goals.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/EU-Packaging-Rules.html#/1" id="lecture-button-EU-Packaging-Rules" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Dorota Napierska</li></ul>`
+  "PPWR2/RECYCLING PKG DAY/Industrial-Point-of-View",
+  `<h1>Industrial Point of View</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Consequences of the PPWR on the corrugated industry.
+The packaging and packaging waste directive is a founding text for the packaging sector, particularly for
+cardboard paper, which operates in a closed loop of reuse of its raw material, integrating on average 80% of
+recycled material.
+The draft European regulation which is to replace this directive proposes major changes for this sector,
+despite its good results in terms of the circular economy: reuse objectives, high-quality recycling, European
+harmonization of labeling, etc.
+There are many challenges to overcome to continue improving the efficiency of our loop. But we also see in
+this text some pitfalls which could produce results different from those expected.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Industrial-Point-of-View.html#/1" id="lecture-button-Industrial-Point-of-View" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Kareen DESBOUIS</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/Introduction/panorama-of-food-packaging-part-1",
@@ -706,6 +706,12 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
 <div class="dropdown-container" id="dropdown-container-PPWR2"><button class="dropdown-btn"
         id="dropdown-btn-RECYCLING PKG DAY">RECYCLING PKG DAY<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-RECYCLING PKG DAY"><a
+            href="#PPWR2/RECYCLING PKG DAY/Industrial-Point-of-View"
+            id="PPWR2/RECYCLING PKG DAY/Industrial-Point-of-View" class="dropdown-container-class"
+            onclick="lectureToDisplay(this.id)">Industrial Point of View<i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules" id="PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">EU Packaging Rules<i
                 class="fa fa-star star-color-yellow little-space"></i><i
@@ -823,8 +829,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><a
-        href="#PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules" id="PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules"
-        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">EU Packaging Rules<i
+        href="#PPWR2/RECYCLING PKG DAY/Industrial-Point-of-View" id="PPWR2/RECYCLING PKG DAY/Industrial-Point-of-View"
+        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Industrial Point of View<i
             class="fa fa-star star-color-yellow little-space"></i><i
             class="fa fa-star star-color-yellow little-space"></i><i
             class="fa fa-star-o star-color-yellow little-space"></i></a>
