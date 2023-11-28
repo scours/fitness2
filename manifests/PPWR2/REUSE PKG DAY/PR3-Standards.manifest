@@ -7,7 +7,7 @@
   "difficultyLevel": "Intermediate",
   "part": "",
   "author": "Claudette JUSKA",
-  "institution": "",
+  "institution": "Resolve",
   "abstract": " How PR3 standards for reusable packaging can reduce costs, ensure performance, and lead to scale.\nSingle-use packaging is a primary cause of the plastic crisis and a major contributor to the climate crisis. Reuse is the most effective solution. PR3’s mission is to empower and accelerate reuse systems around the world. Over the past 4 years, PR3 began convening a balanced set of stakeholders from across the value chain, including packaging manufacturers, brand owners, retailers, service providers, waste workers, public health experts, and activists, to develop standards for reusable packaging systems. The standards set minimum requirements to ensure interoperability between businesses and communities, enabling shared return points, logistics, and wash hubs. The standards include safety, durability, and labeling requirements, and require a minimum number of use-cycles and return rates to ensure environmental performance. PR3’s standards are the only global standards for reuse and are in the process of being accredited by the American National Standards Institute and other international standards bodies.",
   "topic": [
     "ppwr2",
@@ -23,5 +23,6 @@
     "reusable packaging systems",
     "environmental performance."
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/PPWR2/PR3-Standards.pdf"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/PPWR2/PR3-Standards.pdf",
+  "video": "https://cdnsecakmi.kaltura.com/s/p/811482/sp/81148200/serveFlavor/entryId/1_9usb7p5e/v/1/ev/5/flavorId/1_6ik56e8o/fileName/17_Juska_PR3_(Basic_Small_-_WEB_MBL_(H264_400)).mp4/name/a.mp4?aeauth=1701255265_4bbc22ef13f9c7c3aabf8260c05edab5"
 }

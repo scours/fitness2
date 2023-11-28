@@ -7,7 +7,7 @@
   "difficultyLevel": "Intermediate",
   "part": "",
   "author": "Alice JOLY",
-  "institution": "",
+  "institution": "STEF",
   "abstract": "Ecological and economic assessment of reusable packaging in a refrigerated supply chain.\nIn alignment with the objectives of the French anti-waste law for the circular economy,\nparticularly the 3R decree, the Chaire CoPack launched a research project to assess the im-\nplications of transitioning from a linear economy to a circular economy through the adoption\nof reusable packaging. Data collection in the field enabled the research team to conduct an\ninitial study comparing the environmental impacts of various approaches to product distribu-\ntion, with a specific focus on the bread supply chain, involving both reusable and single-use\npackaging.\nLife Cycle Assessment (LCA) was employed for analysis, revealing that employing reusable\npackaging could present an environmental advantage when cleaned after approximately four\nusage cycles. The technical and economic evaluation demonstrated a marginal advantage\nover single-use packaging, albeit with increased operational complexity. However, as the\nfrequency of cleaning increases, the environmental benefits of reusing packaging diminish,\nprimarily due to heightened energy consumption associated with heating the cleaning water.\nThe preliminary findings from this study will be complemented with industry feedback to\ngain insights into the challenges and opportunities surrounding the transition to reusable\npackaging, considering the technical and economic challenges of this shift.",
   "topic": [
     "ppwr2",
@@ -22,5 +22,6 @@
     "Life Cycle Assessment (LCA)",
     "logistics"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/PPWR2/Secondary-PKG-Reuse.html#/1"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/PPWR2/Secondary-PKG-Reuse.html#/1",
+  "video": "https://cdnsecakmi.kaltura.com/s/p/811482/sp/81148200/serveFlavor/entryId/1_5j6ipwpn/v/1/ev/5/flavorId/1_srjy84ig/fileName/19_Yannou-Le_Bris_Challenges_and_levers_for_using_reusable_secondary_pkg_in_logistics_circuits_(Basic_Small_-_WEB_MBL_(H264_400)).mp4/name/a.mp4?aeauth=1701255262_934535395c0283e94e460717427f05c8"
 }

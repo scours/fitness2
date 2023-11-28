@@ -7,7 +7,7 @@
   "difficultyLevel": "Intermediate",
   "part": "",
   "author": "Christophe COTILLON",
-  "institution": "",
+  "institution": "ACTIA",
   "abstract": "FitNESS: Open Courseware for Responsible Food Packaging and Supply Chain Education.\nThe ecological transition imposes a revision of the logic of transformation and distribution of\nfood including ingredients and packaging to avoid it travels thousands of kilometers before\nreaching consumers' plates. The solutions will come through innovation within our industries\nand the education of the coming generation; the Fitness projects contribute to this evolution.\nThe two consecutive projects, FitNESS for \"Food packaging open courseware for higher\neducation and staff of companies\" and funded by the Erasmus+ Program of the European\nUnion, have been designed to imagine future responsible food packaging and supply chains by\ndetailing the different technical and scientific aspects of food packaging without taking sides.\n(www.fitness-foodpackaging.com)",
   "topic": [
     "ppwr2",
@@ -20,5 +20,7 @@
     "open courseware",
     "responsible food packaging"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/PPWR2/FitNESS-Platform.pdf"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/PPWR2/FitNESS-Platform.pdf",
+  "video": "https://cdnsecakmi.kaltura.com/s/p/811482/sp/81148200/serveFlavor/entryId/1_y1euchb0/v/1/ev/5/flavorId/1_ix1286pe/fileName/21_Cotillon_FitNESS_Platform_(Basic_Small_-_WEB_MBL_(H264_400)).mp4/name/a.mp4?aeauth=1701255259_253035d6d72a7b9522ea7bde2bc8e31b"
+
 }

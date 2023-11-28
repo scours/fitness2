@@ -7,7 +7,7 @@
   "difficultyLevel": "Intermediate",
   "part": "",
   "author": " Xining XIA",
-  "institution": "",
+  "institution": "Institute of Quality Standard and Testing Technology for Agro-products, Chinese Academy of Agricultural Sciences, Beijing, China",
   "abstract": "Risk assessment of recycling plastics for food contact purposes in China",
   "topic": [
     "ppwr2",
@@ -19,5 +19,6 @@
     "keyword2",
     "keyword3"
   ],
-  "userProvidedURLForLecture": ""
+  "userProvidedURLForLecture": "", 
+  "video": "https://cdnsecakmi.kaltura.com/s/p/811482/sp/81148200/serveFlavor/entryId/1_ecxvqgqe/v/1/ev/6/flavorId/1_0tbh2abe/fileName/05_Xia_Current_Status_of_Recycling_Plastics_for_Food_Contact_in_China_(Basic_Small_-_WEB_MBL_(H264_400)).mp4/name/a.mp4?aeauth=1701255284_020c5ed3e03bb55e5cc4396c9112567f"
 }
