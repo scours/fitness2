@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Friday, 24th November 2023
+ * Last Modified: Wednesday, 29th November 2023
  * Modified By: Steward OUADI
  */
 
@@ -202,7 +202,7 @@ function createAElementForDropDownMenuToPrint(identifier) {
   let courseButtonElement = document.createElement("a"); // Use an anchor tag instead of a button
   courseButtonElement.target = "_blank";
   courseButtonElement.classList.add("btn", "btn-primary");
-  courseButtonElement.textContent = "Read the lecture";
+  courseButtonElement.textContent = "Enlarge Lecture View";
   // Apply the background color using the style attribute
   courseButtonElement.style.backgroundColor = backgroundColor;
   courseButtonElement.style.borderColor = backgroundColor;
@@ -303,7 +303,50 @@ function createAElementForDropDownMenuToPrint(identifier) {
   mainDiv.appendChild(topicsElement);
   mainDiv.appendChild(abstractHeader);
   mainDiv.appendChild(abstractElement);
+
+  // Lecture
+  const lectureHeader = document.createElement("h4");
+  lectureHeader.innerHTML = "Lecture";
+  // // Create the iframe element
+  // var iframeElement = document.createElement("iframe");
+
+  // // Set attributes for the iframe
+  // iframeElement.src =
+  //   "https://fitness.agroparistech.fr/fitness2/online/PPWR2/Industrial-Point-of-View.html#/1";
+  // iframeElement.src = lecture.userProvidedURLForLecture;
+
+  mainDiv.appendChild(lectureHeader);
+  // mainDiv.appendChild(iframeElement);
   mainDiv.appendChild(courseButtonElement);
+
+  // Video
+  if (lecture.video !== undefined) {
+    const videoHeader = document.createElement("h4");
+    videoHeader.innerHTML = "Video";
+
+    // Create the video element
+    var videoElement = document.createElement("video");
+    videoElement.width = 640;
+    videoElement.height = 360;
+    videoElement.controls = true;
+
+    // Create the source element and set its attributes
+    var sourceElement = document.createElement("source");
+    sourceElement.src = lecture.video;
+    sourceElement.type = "video/mp4";
+
+    // Create a text node for the content inside the video element
+    var textNode = document.createTextNode(
+      "Your browser does not support the video tag."
+    );
+
+    // Append the source element and text node to the video element
+    videoElement.appendChild(sourceElement);
+    videoElement.appendChild(textNode);
+
+    mainDiv.appendChild(videoHeader);
+    mainDiv.appendChild(videoElement);
+  }
 
   // console.log(lecture.qAndAVariables !== undefined);
   if (lecture.qAndAVariables !== undefined) {
@@ -350,6 +393,8 @@ function createAElementForDropDownMenuToPrint(identifier) {
   return aElement;
 }
 
+/* Display current lecture (identifier) information (title, abstract, authors, etc.)
+ */
 function lectureToDisplay(identifier) {
   console.log("lectureToDisplay" + identifier);
   // use append instead of adding it directly with innerHTML because was preventing us to click on the button to read the lecture
@@ -398,6 +443,7 @@ function extractMetaData() {
   console.log(mainContent.innerHTML);
   console.timeEnd("createDropDownMenuElements");
   addListenersToDropdownButtons();
+  showLecture();
   loader.style.display = "none"; // Hide the loader
 }
 
@@ -620,7 +666,9 @@ async function extractMetaDataOri() {
   // addListenersToDropdownButtons();
   loader.style.display = "none"; // Hide the loader
 }
-function readLectureFromUrl() {
+
+function getIdentifierFromUrl() {
+  let identifier;
   // If there is an URL with lecture identifier,
   // get identifier and display lectures details.
 
@@ -633,8 +681,62 @@ function readLectureFromUrl() {
   // Check if there's a hash part
   if (parts.length === 2) {
     // The part after the hash is what we want to display
-    const identifier = decodeURIComponent(parts[1]);
-    lectureToDisplay(identifier);
+    identifier = decodeURIComponent(parts[1]);
+  }
+  return identifier;
+}
+
+function readLectureFromUrl() {
+  lectureToDisplay(getIdentifierFromUrl());
+  showLecture();
+}
+
+/**Show the current lecture (slides) so that the user can see it */
+function showLecture() {
+  const identifier = getIdentifierFromUrl();
+
+  if (identifier !== undefined) {
+    let lastPart;
+    // Split the URL by the hash (#) character
+    const parts = identifier.split("/");
+
+    // Check if there's a hash part
+    if (parts.length === 2) {
+      // The part after the hash is what we want to display
+      lastPart = parts[1];
+    }
+
+    // Check if there's a hash part
+    if (parts.length === 3) {
+      // The part after the hash is what we want to display
+      lastPart = parts[2];
+    }
+    console.log("showing identifier begin");
+    console.log(lastPart);
+    console.log("showing identifier end");
+    if (lastPart !== undefined) {
+      const courseButtonElement = document.getElementById(
+        "lecture-button-" + lastPart
+      );
+
+      console.log("showing courseButtonElement begin");
+      console.log(courseButtonElement);
+      console.log(courseButtonElement == undefined);
+      console.log("showing courseButtonElement end");
+
+      if (courseButtonElement != undefined) {
+        // lectureHeader.innerHTML = "Lecture";
+        // Create the iframe element
+        var iframeElement = document.createElement("iframe");
+
+        // cons;
+        // Set attributes for the iframe
+        iframeElement.src = courseButtonElement.href;
+        // iframeElement.src = lecture.userProvidedURLForLecture;
+
+        courseButtonElement.insertAdjacentElement("beforebegin", iframeElement);
+      }
+    }
   }
 }
 

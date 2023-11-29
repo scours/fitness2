@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Tuesday, 6th September 2022
 Author: Steward OUADI
 -----
-Last Modified: Tuesday, 31st October 2023
+Last Modified: Tuesday, 28th November 2023
 Modified By: Steward OUADI
 -->
 
@@ -218,6 +218,31 @@ Modified By: Steward OUADI
             100% {
                 transform: rotate(360deg);
             }
+        }
+
+        video {
+            width: 80%;
+            /* Make the video width based on its containers width */
+            height: auto;
+            /* Maintain the video's aspect ratio */
+        }
+
+        @media screen and (min-width: 600px) {
+
+            /* Adjust styles for screens with a minimum width of 600px */
+            video {
+                max-width: 600px;
+                /* Limit the video player's width on larger screens */
+                margin: 0 auto;
+                /* Center the video player */
+            }
+        }
+
+        iframe {
+            width: 80%;
+            height: 0;
+            padding-bottom: 75%;
+            /* Value to control the aspect ratio (height/width) */
         }
     </style>
 </head>
