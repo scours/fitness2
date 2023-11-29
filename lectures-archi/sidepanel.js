@@ -202,7 +202,7 @@ function createAElementForDropDownMenuToPrint(identifier) {
   let courseButtonElement = document.createElement("a"); // Use an anchor tag instead of a button
   courseButtonElement.target = "_blank";
   courseButtonElement.classList.add("btn", "btn-primary");
-  courseButtonElement.textContent = "Enlarge Lecture View";
+  courseButtonElement.textContent = "Read the lecture";
   // Apply the background color using the style attribute
   courseButtonElement.style.backgroundColor = backgroundColor;
   courseButtonElement.style.borderColor = backgroundColor;
@@ -303,20 +303,6 @@ function createAElementForDropDownMenuToPrint(identifier) {
   mainDiv.appendChild(topicsElement);
   mainDiv.appendChild(abstractHeader);
   mainDiv.appendChild(abstractElement);
-
-  // Lecture
-  const lectureHeader = document.createElement("h4");
-  lectureHeader.innerHTML = "Lecture";
-  // // Create the iframe element
-  // var iframeElement = document.createElement("iframe");
-
-  // // Set attributes for the iframe
-  // iframeElement.src =
-  //   "https://fitness.agroparistech.fr/fitness2/online/PPWR2/Industrial-Point-of-View.html#/1";
-  // iframeElement.src = lecture.userProvidedURLForLecture;
-
-  mainDiv.appendChild(lectureHeader);
-  // mainDiv.appendChild(iframeElement);
   mainDiv.appendChild(courseButtonElement);
 
   // Video
@@ -393,8 +379,6 @@ function createAElementForDropDownMenuToPrint(identifier) {
   return aElement;
 }
 
-/* Display current lecture (identifier) information (title, abstract, authors, etc.)
- */
 function lectureToDisplay(identifier) {
   console.log("lectureToDisplay" + identifier);
   // use append instead of adding it directly with innerHTML because was preventing us to click on the button to read the lecture
@@ -443,7 +427,6 @@ function extractMetaData() {
   console.log(mainContent.innerHTML);
   console.timeEnd("createDropDownMenuElements");
   addListenersToDropdownButtons();
-  showLecture();
   loader.style.display = "none"; // Hide the loader
 }
 
@@ -666,9 +649,7 @@ async function extractMetaDataOri() {
   // addListenersToDropdownButtons();
   loader.style.display = "none"; // Hide the loader
 }
-
-function getIdentifierFromUrl() {
-  let identifier;
+function readLectureFromUrl() {
   // If there is an URL with lecture identifier,
   // get identifier and display lectures details.
 
@@ -681,62 +662,8 @@ function getIdentifierFromUrl() {
   // Check if there's a hash part
   if (parts.length === 2) {
     // The part after the hash is what we want to display
-    identifier = decodeURIComponent(parts[1]);
-  }
-  return identifier;
-}
-
-function readLectureFromUrl() {
-  lectureToDisplay(getIdentifierFromUrl());
-  showLecture();
-}
-
-/**Show the current lecture (slides) so that the user can see it */
-function showLecture() {
-  const identifier = getIdentifierFromUrl();
-
-  if (identifier !== undefined) {
-    let lastPart;
-    // Split the URL by the hash (#) character
-    const parts = identifier.split("/");
-
-    // Check if there's a hash part
-    if (parts.length === 2) {
-      // The part after the hash is what we want to display
-      lastPart = parts[1];
-    }
-
-    // Check if there's a hash part
-    if (parts.length === 3) {
-      // The part after the hash is what we want to display
-      lastPart = parts[2];
-    }
-    console.log("showing identifier begin");
-    console.log(lastPart);
-    console.log("showing identifier end");
-    if (lastPart !== undefined) {
-      const courseButtonElement = document.getElementById(
-        "lecture-button-" + lastPart
-      );
-
-      console.log("showing courseButtonElement begin");
-      console.log(courseButtonElement);
-      console.log(courseButtonElement == undefined);
-      console.log("showing courseButtonElement end");
-
-      if (courseButtonElement != undefined) {
-        // lectureHeader.innerHTML = "Lecture";
-        // Create the iframe element
-        var iframeElement = document.createElement("iframe");
-
-        // cons;
-        // Set attributes for the iframe
-        iframeElement.src = courseButtonElement.href;
-        // iframeElement.src = lecture.userProvidedURLForLecture;
-
-        courseButtonElement.insertAdjacentElement("beforebegin", iframeElement);
-      }
-    }
+    const identifier = decodeURIComponent(parts[1]);
+    lectureToDisplay(identifier);
   }
 }
 
