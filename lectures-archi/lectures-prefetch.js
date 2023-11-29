@@ -315,18 +315,6 @@ lecturesDetails.set(
   `<h1>PKG Education in the US</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Packaging education in the U.S. and the SoP @ MSU</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-PKG-Education-in-the-US" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Rafael AURAS</li></ul>`
 );
 lecturesDetails.set(
-  "PPWR2/RECYCLING PKG DAY/Industrial-Point-of-View",
-  `<h1>Industrial Point of View</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>ppwr2,ppwr</p><h4>Abstract</h4><p>Consequences of the PPWR on the corrugated industry.
-The packaging and packaging waste directive is a founding text for the packaging sector, particularly for
-cardboard paper, which operates in a closed loop of reuse of its raw material, integrating on average 80% of
-recycled material.
-The draft European regulation which is to replace this directive proposes major changes for this sector,
-despite its good results in terms of the circular economy: reuse objectives, high-quality recycling, European
-harmonization of labeling, etc.
-There are many challenges to overcome to continue improving the efficiency of our loop. But we also see in
-this text some pitfalls which could produce results different from those expected.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Industrial-Point-of-View.html#/1" id="lecture-button-Industrial-Point-of-View" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Video</h4><video width="640" height="360" controls=""><source src="https://cdnsecakmi.kaltura.com/s/p/811482/sp/81148200/serveFlavor/entryId/1_forttwpx/v/1/ev/5/flavorId/1_n4zhkmr2/fileName/01_Kareen_Desbouis_-_Consequences_of_the_PPWR_on_the_Corrugated_Industry_(Basic_Small_-_WEB_MBL_(H264_400)).mp4/name/a.mp4?aeauth=1701255291_53f8e7106d79fc6f9bc447084b874344" type="video/mp4">Your browser does not support the video tag.</video><h4>Authors</h4><ul><li>Kareen DESBOUIS</li></ul>`
-);
-lecturesDetails.set(
   "Packaging materials/Introduction/panorama-of-food-packaging-part-1",
   `<h1>Panorama of food packaging</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>history,overview,plastics,polymer,challenges,waste,environment,function</p><h4>Abstract</h4><p>This course is an introduction to the entire content of the FITNess project. The history of plastics is quickly summarized through the past centuries as well as the current challenges for the environment and society. Food packaging has developed at the interface of food needs (safety, preservation), technological possibilities and consumer expectations. The science of packaging combines food process engineering, materials science, toxicology, microbiology, regulations...). This course introduces the seven functions of packaging: preserving food quality; preventing microbiological risk; preserving the integrity of the packaging and its contents; preventing chemical risk; preserving the environment; meeting the technical and economic requirements of the manufacturer and the user of the packaging; interacting and communicating with the consumer.</p><a target="_blank" class="btn btn-primary" href="http://fitness.pbf.hr/fitness/lectures/html/common/S1/U1.1/part1.html#/1" id="lecture-button-panorama-of-food-packaging-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
@@ -373,14 +361,6 @@ lecturesDetails.set(
 lecturesDetails.set(
   "Packaging materials/Basic legal framework/legal-framework-overview",
   `<h1>Basic legal framework (chemicals, contact material, environment, consumer safety)</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>regulation,plastics,europe</p><h4>Abstract</h4><p>Food packaging must comply with several obligations and legislations on chemicals, contact material, environment, consumer safety. - level basic</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.3/part1.html#/2" id="lecture-button-legal-framework-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Catherine Loriot</li></ul>`
-);
-lecturesDetails.set(
-  "Packaging materials/Introduction/panorama-of-food-packaging-part-1",
-  `<h1>Panorama of food packaging</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>history,overview,plastics,polymer,challenges,waste,environment,function</p><h4>Abstract</h4><p>This course is an introduction to the entire content of the FITNess project. The history of plastics is quickly summarized through the past centuries as well as the current challenges for the environment and society. Food packaging has developed at the interface of food needs (safety, preservation), technological possibilities and consumer expectations. The science of packaging combines food process engineering, materials science, toxicology, microbiology, regulations...). This course introduces the seven functions of packaging: preserving food quality; preventing microbiological risk; preserving the integrity of the packaging and its contents; preventing chemical risk; preserving the environment; meeting the technical and economic requirements of the manufacturer and the user of the packaging; interacting and communicating with the consumer.</p><a target="_blank" class="btn btn-primary" href="http://fitness.pbf.hr/fitness/lectures/html/common/S1/U1.1/part1.html#/1" id="lecture-button-panorama-of-food-packaging-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
-);
-lecturesDetails.set(
-  "Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer",
-  `<h1>Mechanical design of packaging: an introduction</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>properties,mechanical</p><h4>Abstract</h4><p>Mechanical engineering of food packaging  (please read §2.1 and §2.2 before) - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.4/part1.html#/2" id="lecture-button-the-basics-of-mechanical-engineering-for-packaging-designer" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Murielle Hayert</li></ul>`
 );
 lecturesDetails.set(
   "Packaging properties/Thermal, mechanical and barrier properties/thermal-properties",
@@ -454,14 +434,6 @@ lecturesDetails.set(
   `<h1>Micro holes and leaks in packaging – measurement and modeling</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>defects,holes,permeation,shelf-life,modeling,oxygen</p><h4>Abstract</h4><p>Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them? measure and simulate their effects. -  level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.6/part1.html#/2" id="lecture-button-measurement-and-modeling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Frederic Debeaufort</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/Thermal, mechanical and barrier properties/thermal-properties",
-  `<h1>Thermal properties: methods and standards</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,properties,thermal</p><h4>Abstract</h4><p>The objective of this unit is to gain basic knowledge about the properties of food packaging materials that play a key in their processing and use. This gives the basics to read and understand a technical datasheet, as well as to better select a packaging material according to the shelf-life of the food.
-
-The unit is divided into five sections. Each one is related to a specific property in which are discussed influencing factors, physical parameters of importance and analysis tools. 
-
-The first section describes the thermal properties of packaging materials related to their structure. The second section is dedicated to mechanical properties, the third one to mass transfer properties, the fourth one to electromagnetic properties and the last one to surface properties. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part1.html#/2" id="lecture-button-thermal-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
-);
-lecturesDetails.set(
   "Packaging processes/Forming/plastic-forming",
   `<h1>Plastics forming</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>forming,thermoforming,erecting,line,process</p><h4>Abstract</h4><p>This lecture describes plastics forming processes that can be directly integrated into a packaging line: thermoforming, cold forming, erecting.     - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.2/part1.html#/2" id="lecture-button-plastic-forming" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
@@ -502,10 +474,6 @@ lecturesDetails.set(
   `<h1>Hygienic design</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-hygienic-design" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Author</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging processes/introduction-to-mechanical-processes",
-  `<h1>Introduction into mechanical processes in packaging</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>forming,filling,sealing,process,design,optimization</p><h4>Abstract</h4><p>The most important factors for a company: i) Product quality from the customer's point of view, ii) Compliance with legal requirements, iii) Profitability: costs vs. revenue. These factors are essentially determined by the packaging material and the packaging process. This lecture is an introduction to U8.2-U8.6.    - level basic, intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.1/part1.html#/2" id="lecture-button-introduction-to-mechanical-processes" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
-);
-lecturesDetails.set(
   "Shelf-life/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies",
   `<h1>Introduction to preservation and packaging technologies</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>process,aseptic,modified atmosphere,thermal</p><h4>Abstract</h4><p>Introduction to preservation and packaging technologies: thermal processing, modified atmosphere, aseptic packaging.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.2/part1.html#/2" id="lecture-button-introduction-to-preservation-and-packaging-technologies" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
@@ -533,10 +501,6 @@ lecturesDetails.set(
 The unit is divided into four sections. In the first section shelf life definitions and related regulation aspects are discussed. The second section is focused on factors influencing the shelf life, such as product characteristics, food packaging and environment. The third section introduces accelerated shelf life testing. The last section gives the tools for the prediction of shelf life of packaged foods.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part4.html#/2" id="lecture-button-predict-shelf-life" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies",
-  `<h1>Introduction to preservation and packaging technologies</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>process,aseptic,modified atmosphere,thermal</p><h4>Abstract</h4><p>Introduction to preservation and packaging technologies: thermal processing, modified atmosphere, aseptic packaging.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.2/part1.html#/2" id="lecture-button-introduction-to-preservation-and-packaging-technologies" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
-);
-lecturesDetails.set(
   "Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging",
   `<h1>Sustainability and Packaging - What is suistainability? (part 1/2)</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>sustainability,environment,ecodesign,LCA,bottles</p><h4>Abstract</h4><p>Food Packaging needs to be sustainable. What does it mean? How to use Life Cycle Analysis (LCA) to evaluate the impact of food packaging and to $eco-design$ new food packaging.       -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.1/part1.html#/2" id="lecture-button-sustainability-and-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
@@ -551,14 +515,6 @@ lecturesDetails.set(
 lecturesDetails.set(
   "Environmental pollution/Biodegradation and microplastics/overview",
   `<h1>Overview</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>biodegradable,pollution,regulation,renewable,environment,bottles</p><h4>Abstract</h4><p>Food packaging accounts for approximately 40% of the uses of plastics, but accounts for more than half of plastic waste. Non-food uses are more durable, while the lifespan of plastic packaging usually does not exceed half a year. The fragmentation of uncollected plastics and their reuse as recycled textile fibers is the main source of microplastics and marine litter. The understanding of biodegradation phenomena is essential to appreciate the impact of plastics on the environment, whether they are biodegradable or not.     - Level basic, intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.3/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
-);
-lecturesDetails.set(
-  "Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging",
-  `<h1>Sustainability and Packaging - What is suistainability? (part 1/2)</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>sustainability,environment,ecodesign,LCA,bottles</p><h4>Abstract</h4><p>Food Packaging needs to be sustainable. What does it mean? How to use Life Cycle Analysis (LCA) to evaluate the impact of food packaging and to $eco-design$ new food packaging.       -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.1/part1.html#/2" id="lecture-button-sustainability-and-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
-);
-lecturesDetails.set(
-  "Marketing and design/Sensory science/sensory-science",
-  `<h1>Sensory science</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/sensory-science-applied-to-food-and-food-packaging.html#/1" id="lecture-button-sensory-science" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#factorsShelfLifeGeneral" target="_blank">General questions for introductory assessment</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#sensoryAnalyticsOfFoodProducts" target="_blank">Sensory analytics of food products</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#instrumentalAnalyticsCoupledToSensoryEvaluation" target="_blank">Instrumental analytics coupled to sensory evaluation</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#sensoryEvaluationInShelfLifeTestingOfPackedFood" target="_blank">Sensory evaluation in shelf life testing of packed food</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#instrumentalAnalyticsCoupledToSensoryEvaluation" target="_blank">Sensory investigations of packaging materials</a></p><h4>Authors</h4><ul><li>Author</li></ul>`
 );
 lecturesDetails.set(
   "Marketing and design/Sensory science/sensory-science",
@@ -601,10 +557,6 @@ lecturesDetails.set(
   `<h1>Modified atmosphere packaging</h1><h4>Difficulty level</h4><p>Advanced<i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i></p><h4>Topics</h4><p>fresh product,shelf life,packaging methods</p><h4>Abstract</h4><p>Modified atmosphere packaging is a preservation method where the surrounding atmosphere of the product is replaced typically with an inert gas, such as nitrogen combined with an antimicrobially active carbon dioxide, and oxygen in exact amounts, to extend its shelf life. Control of water loss, protection from skin abrasion and softening, reduced contamination of the produce during handling, and delayed ripening and slow various compositional changes associated with ripening are only some benefits of using MAP. Gases used, product and storage factors to be taken into account, packaging materials, and mathematical principles are well described in this presentation. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/modified-atmosphere-packaging.html#/1" id="lecture-button-modified-atmosphere-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Mario Ščetar</li><li>Mia Kurek</li><li>Kata Galić</li></ul>`
 );
 lecturesDetails.set(
-  "Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics",
-  `<h1>Part 1</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>biodegradable,renewable,environment,starch,polysaccharides,proteins</p><h4>Abstract</h4><p>Biobased and biodegradable materials: from polymers to bioplastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.1/part1.html#/2" id="lecture-button-from-polymers-to-bioplastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
-);
-lecturesDetails.set(
   "Recoverability/Environmental impact of plastics and recycling/overview",
   `<h1>Overview</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>environment,recycling,wastes,microplastics,LCA,ecodesign</p><h4>Abstract</h4><p>There is no doubt plastics have changed our society and its habits since their use in the 1950s. Thanks to their versatility and workability, plastics have been used to meet all the needs of human beings, from physiological needs, safety, social belonging, esteem, and self-actualization. Today, pollution by plastics, due to mismanagement of the collection system, is one of the most important global issue facing our society.
 The first part of this unit is devoted to the environmental impact of plastics. Global data on plastics for food packaging are presented as well as the health risk associated with microplastics in soils and oceans.
@@ -614,13 +566,6 @@ The second part of this unit is dedicated to the recycling of plastics. In this 
 lecturesDetails.set(
   "Recoverability/Safety assessment of recycling processes/overview",
   `<h1>Overview</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>recycling,process,pet,bottles,risk</p><h4>Abstract</h4><p>The directive (EU) 2019/904 requires the phase out of single-use plastics, the generalization of recycling and the reuse of materials in contact with food. The recycling of materials for food contact is authorized in Europe and the USA but under certain conditions. These include the control of deposits, cleaning of polymers, mechanical or chemical recycling, and the implementation of good industrial practices within the framework of regulation (EU) 2023/2006. For health safety reasons, only mechanical recycling of PET is now widespread and complies with clearly defended standards (regulation (EU) 282/2008). This course explains the conditions for the evaluation of recycled PET (rPET): validation of a recycling process and of the utilization of the recycled material.    Level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.5/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
-);
-lecturesDetails.set(
-  "Recoverability/Environmental impact of plastics and recycling/overview",
-  `<h1>Overview</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>environment,recycling,wastes,microplastics,LCA,ecodesign</p><h4>Abstract</h4><p>There is no doubt plastics have changed our society and its habits since their use in the 1950s. Thanks to their versatility and workability, plastics have been used to meet all the needs of human beings, from physiological needs, safety, social belonging, esteem, and self-actualization. Today, pollution by plastics, due to mismanagement of the collection system, is one of the most important global issue facing our society.
-The first part of this unit is devoted to the environmental impact of plastics. Global data on plastics for food packaging are presented as well as the health risk associated with microplastics in soils and oceans.
-The second part of this unit is dedicated to the recycling of plastics. In this section, the actors in the recycling chain and the regulations related to the recycling process, materials and labels are discussed. Next, the concept of recyclability and the differences in recycling terminology (recyclable, renewable, biodegradable, compostable…) are explained. Finally, the main differences between mechanical and chemical recycling are explained.
-</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.4/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
   "Legislation/EU, US others regulations/regulatory-framework",
@@ -649,10 +594,6 @@ lecturesDetails.set(
 lecturesDetails.set(
   "Legislation/Risk assessment tools/risk-assessment-tools",
   `<h1>Risk assessment tools</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>hazard assessment,hazard characterization,food toxicology,predictive tools,risk assessment agencies,migration,exposure assessment,risk characterization,in silico,in vitro,in vivo studies,TTC</p><h4>Abstract</h4><p>The Unit called “Risk assessment pragmatic tools, FCM specificities and NIAS issues” introduces the Threshold of Toxicological Concern (TTC) approach as a useful tool to predict the risk assessment of a substance at low level in food when toxicological data are missing. Then, the risk assessment of Food Contact Materials (FCM) is also discussed. Finally, since NIAS are the major source of alerts regards to food contact materials, the last section is dedicated to the risk assessment of Non-Intentionally Added Substance (NIAS) and strategies to help industries to manage the risk linked to NIAS. Regards to FCM, to going further see units : basic legal framework and unit : EU, US and others regulations.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/Institut-Agro-Dijon/risk-assessment-tools.html#/" id="lecture-button-risk-assessment-tools" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Marie-Christine Chagnon</li></ul>`
-);
-lecturesDetails.set(
-  "Legislation/EU, US others regulations/regulatory-framework",
-  `<h1>Regulatory framework in the EU and the US</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>materials,regulation,plastics,EU,US,FCM,compliance,testing</p><h4>Abstract</h4><p>Since 1976, the regulation of food contact materials, including food packaging, is managed at the European level. However, not all of 17 groups of materials benefit from harmonized regulations. This lecture provides an overview of applicable regulations and of their principles. They obey to the same aim protecting consumers.    - level intermediate*</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S3/U3.1/part1.html#/2" id="lecture-button-regulatory-framework" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Catherine Loriot</li></ul>`
 );
 lecturesDetails.set(
   "Modeling tools/Migration modeling for monomaterials/mass-transfer-modeling",
@@ -697,10 +638,6 @@ lecturesDetails.set(
 lecturesDetails.set(
   "Modeling tools/Calculations using fluctuation theorems/overview",
   `<h1>Overview</h1><h4>Difficulty level</h4><p>Advanced<i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i></p><h4>Topics</h4><p>molecular,diffusion,partition,affinity,solubility,modeling,thermodynamics</p><h4>Abstract</h4><p>Properties related to free-energies (solubilities, activity coefficients, miscibility...) can be calculated by brute force calculations at atomistic scale assuming a disordered mixture at molecule scale.    -   level advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S6/U6.3/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Olivier Vitrac</li></ul>`
-);
-lecturesDetails.set(
-  "Modeling tools/Migration modeling for monomaterials/mass-transfer-modeling",
-  `<h1>Theory and case studies</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>diffusion,migration,modeling,partition,plastics,regulation,compliance,risk</p><h4>Abstract</h4><p>Desorption of substances from materials in direct contact with food (of finite volume $V_F$) is coined migration. This mass transfer is full described in a simple case by the a dimensionless time Fo=D_Pxt/l_p^2 , the packaging-to-food volume ratio L_PF=V_P/V_F and the partition coefficient K_FP=C_P^eq/C_Peq. This lecture will explain why the migration is so different between fatty and aqueous food products, between a rubber and a glassy material, between a small and large migrant...  - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.2/part1.html#/2" id="lecture-button-mass-transfer-modeling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Olivier Vitrac</li></ul>`
 );
 dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR2<i class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-PPWR2"><button class="dropdown-btn"
@@ -828,12 +765,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">PKG Education in the US<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><a
-        href="#PPWR2/RECYCLING PKG DAY/Industrial-Point-of-View" id="PPWR2/RECYCLING PKG DAY/Industrial-Point-of-View"
-        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Industrial Point of View<i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star-o star-color-yellow little-space"></i></a>
+                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Packaging materials">Packaging materials<i
         class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Packaging materials"><button class="dropdown-btn"
@@ -915,25 +847,14 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             onclick="lectureToDisplay(this.id)">Basic legal framework (chemicals, contact material, environment,
             consumer safety)<i class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><a
-        href="#Packaging materials/Introduction/panorama-of-food-packaging-part-1"
-        id="Packaging materials/Introduction/panorama-of-food-packaging-part-1" class="dropdown-container-class"
-        onclick="lectureToDisplay(this.id)"> Panorama of food packaging<i
-            class="fa fa-star star-color-green little-space"></i><i
-            class="fa fa-star-o star-color-green little-space"></i><i
-            class="fa fa-star-o star-color-green little-space"></i></a>
+                class="fa fa-star-o star-color-green little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Packaging design">Packaging design<i
         class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Packaging design"><button class="dropdown-btn"
         id="dropdown-btn-the-basics-of-mechanical-engineering-for-packaging-designer">the-basics-of-mechanical-engineering-for-packaging-designer<i
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-the-basics-of-mechanical-engineering-for-packaging-designer">
-    </div><a href="#Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
-        id="Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
-        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mechanical design of packaging: an
-        introduction<i class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star-o star-color-yellow little-space"></i></a>
+    </div>
 </div><button class="dropdown-btn" id="dropdown-btn-Packaging properties">Packaging properties<i
         class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Packaging properties"><button class="dropdown-btn"
@@ -1026,13 +947,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Micro holes and leaks in packaging –
             measurement and modeling<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><a
-        href="#Packaging properties/Thermal, mechanical and barrier properties/thermal-properties"
-        id="Packaging properties/Thermal, mechanical and barrier properties/thermal-properties"
-        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Thermal properties: methods and standards<i
-            class="fa fa-star star-color-green little-space"></i><i
-            class="fa fa-star-o star-color-green little-space"></i><i
-            class="fa fa-star-o star-color-green little-space"></i></a>
+                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Packaging processes">Packaging processes<i
         class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Packaging processes"><button class="dropdown-btn"
@@ -1110,13 +1025,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             onclick="lectureToDisplay(this.id)">Hygienic design<i
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><a
-        href="#Packaging processes/introduction-to-mechanical-processes"
-        id="Packaging processes/introduction-to-mechanical-processes" class="dropdown-container-class"
-        onclick="lectureToDisplay(this.id)">Introduction into mechanical processes in packaging<i
-            class="fa fa-star star-color-green little-space"></i><i
-            class="fa fa-star-o star-color-green little-space"></i><i
-            class="fa fa-star-o star-color-green little-space"></i></a>
+                class="fa fa-star-o star-color-green little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Shelf-life">Shelf-life<i class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Shelf-life"><button class="dropdown-btn"
         id="dropdown-btn-Food preservation technology and packaging">Food preservation technology and packaging<i
@@ -1163,13 +1072,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             onclick="lectureToDisplay(this.id)">How to calculate/predict shelf-life<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><a
-        href="#Shelf-life/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies"
-        id="Shelf-life/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies"
-        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction to preservation and packaging
-        technologies<i class="fa fa-star star-color-green little-space"></i><i
-            class="fa fa-star-o star-color-green little-space"></i><i
-            class="fa fa-star-o star-color-green little-space"></i></a>
+                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Environmental pollution">Environmental pollution<i
         class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Environmental pollution"><button class="dropdown-btn"
@@ -1204,13 +1107,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             id="Environmental pollution/Biodegradation and microplastics/overview" class="dropdown-container-class"
             onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><a
-        href="#Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging"
-        id="Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging"
-        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Sustainability and Packaging - What is
-        suistainability? (part 1/2)<i class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star-o star-color-yellow little-space"></i></a>
+                class="fa fa-star-o star-color-green little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Marketing and design">Marketing and design<i
         class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Marketing and design"><button class="dropdown-btn"
@@ -1221,12 +1118,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             onclick="lectureToDisplay(this.id)">Sensory science<i
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><a
-        href="#Marketing and design/Sensory science/sensory-science"
-        id="Marketing and design/Sensory science/sensory-science" class="dropdown-container-class"
-        onclick="lectureToDisplay(this.id)">Sensory science<i class="fa fa-star star-color-green little-space"></i><i
-            class="fa fa-star-o star-color-green little-space"></i><i
-            class="fa fa-star-o star-color-green little-space"></i></a>
+                class="fa fa-star-o star-color-green little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Innovations">Innovations<i class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Innovations"><button class="dropdown-btn"
         id="dropdown-btn-Biobased and biodegradable materials">Biobased and biodegradable materials<i
@@ -1295,13 +1187,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Modified atmosphere packaging <i
                 class="fa fa-star star-color-red little-space"></i><i
                 class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div><a
-        href="#Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics"
-        id="Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics"
-        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Part 1<i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star-o star-color-yellow little-space"></i></a>
+                class="fa fa-star star-color-red little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Recoverability">Recoverability<i
         class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Recoverability"><button class="dropdown-btn"
@@ -1320,12 +1206,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             id="Recoverability/Safety assessment of recycling processes/overview" class="dropdown-container-class"
             onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><a
-        href="#Recoverability/Environmental impact of plastics and recycling/overview"
-        id="Recoverability/Environmental impact of plastics and recycling/overview" class="dropdown-container-class"
-        onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star-o star-color-yellow little-space"></i></a>
+                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Legislation">Legislation<i class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Legislation"><button class="dropdown-btn"
         id="dropdown-btn-EU, US others regulations">EU, US others regulations<i class="fa fa-caret-down"></i></button>
@@ -1381,13 +1262,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             onclick="lectureToDisplay(this.id)">Risk assessment tools<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><a
-        href="#Legislation/EU, US others regulations/regulatory-framework"
-        id="Legislation/EU, US others regulations/regulatory-framework" class="dropdown-container-class"
-        onclick="lectureToDisplay(this.id)">Regulatory framework in the EU and the US<i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star-o star-color-yellow little-space"></i></a>
+                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Modeling tools">Modeling tools<i
         class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Modeling tools"><button class="dropdown-btn"
@@ -1488,11 +1363,5 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
             id="Modeling tools/Calculations using fluctuation theorems/overview" class="dropdown-container-class"
             onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-red little-space"></i><i
                 class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div><a
-        href="#Modeling tools/Migration modeling for monomaterials/mass-transfer-modeling"
-        id="Modeling tools/Migration modeling for monomaterials/mass-transfer-modeling" class="dropdown-container-class"
-        onclick="lectureToDisplay(this.id)">Theory and case studies<i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star star-color-yellow little-space"></i><i
-            class="fa fa-star-o star-color-yellow little-space"></i></a>
+                class="fa fa-star star-color-red little-space"></i></a></div>
 </div>`;

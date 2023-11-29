@@ -111,8 +111,6 @@ function createDropDownMenuElementsToPrint() {
       dropdownContainerDivI.appendChild(dropdownContainerDivJ);
     }
 
-    const aElementI = createAElementForDropDownMenuToPrint(valueI.manifestPath);
-    dropdownContainerDivI.appendChild(aElementI);
     dropdownFragment.appendChild(dropdownButtonI);
     dropdownFragment.appendChild(dropdownContainerDivI);
   }
@@ -125,12 +123,6 @@ function createDropDownMenuElementsToPrint() {
   console.log(mainDropDownContainer.innerHTML);
   lecturesPrefetchContent +=
     "dropDownMenuContent = `" + mainDropDownContainer.innerHTML + "`;";
-
-  // lecturesPrefetchContent = lecturesPrefetchContent.concat(
-  //   "let dropDownMenuContent = `" +
-  //     mainDropDownContainer.innerHTML +
-  //     "`; let lecturesDetails = new Map();"
-  // );
   console.log("createDropDownMenuElementsToPrint end");
 }
 
@@ -371,9 +363,6 @@ function createAElementForDropDownMenuToPrint(identifier) {
   );
   lecturesPrefetchContent +=
     "lecturesDetails.set('" + identifier + "',`" + mainDiv.innerHTML + "`);";
-  // lecturesPrefetchContent = lecturesPrefetchContent.concat(
-  //   "lecturesDetails.set('" + identifier + "',`" + mainDiv.innerHTML + "`);"
-  // );
   addStarsToElement(lecture, aElement);
   // console.log("createAElementForDropDownMenuToPrint end");
   return aElement;
