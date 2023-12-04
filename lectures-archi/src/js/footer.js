@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 21st February 2023
+ * Last Modified: Monday, 4th December 2023
  * Modified By: Steward OUADI
  */
 
@@ -86,7 +86,7 @@ class Footer extends HTMLElement {
                     <li class="nav-item mb-2"><a href="https://youtu.be/amMn8yz8eLg" target="_blank"
                             title="Time-lapse of the site (YouTube)" class="nav-link p-0 text-muted">&#127902;
                             Video teaser</a></li>
-                    <li class="nav-item mb-2"><a href="https://mol12.agroparistech.fr/fitness2/webinar/index.html"
+                    <li class="nav-item mb-2"><a href="https://fitness.agroparistech.fr/fitness2/webinar/index.html"
                             target="_blank" title="Webinar presentation" class="nav-link p-0 text-muted">Webinar</a>
                     </li>
                     <li class="nav-item mb-2"><a

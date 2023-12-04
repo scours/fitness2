@@ -1,0 +1,112 @@
+<!--
+File: select-objective-2.html
+Contract: EU contract 2022-FR01-KA220-HED-000023509
+Project: FitNESS 2 ERASMUS+
+File Created: Thursday, 30th November 2023
+Author: Steward OUADI
+-----
+Last Modified: Thursday, 30th November 2023
+Modified By: Steward OUADI
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Objective</title>
+    <link rel="stylesheet" href="modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/font-awesome-4-7-0.min.css">
+    <link href="src/css/fitness.css" rel="stylesheet">
+    <style>
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin: 10%;
+        }
+
+        .card {
+            width: calc(33% - 5%);
+            margin: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 66.66%;
+            object-fit: cover;
+        }
+
+        .card-text {
+            padding: 10px;
+            text-align: center;
+            background-color: #f2f2f2;
+            height: 33.33%;
+        }
+
+        .card-text h1 {
+            font-size: 1.5em;
+            /* Adjust the font size as needed */
+        }
+
+        .center-text {
+            text-align: center;
+            /* Center-align the text */
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: calc(90% - 10%);
+            }
+        }
+    </style>
+</head>
+
+<body class="center-text">
+    <main-header></main-header>
+
+    <h1>Select your objective</h1>
+
+
+    <div class="card-container">
+
+        <div class="card" onclick="window.location.href='#'">
+            <img src="Innovations-Pdagogiques-peu-Coteuses-1200x789.jpg" alt="Learn">
+            <div class="card-text">
+                <h1>Learn</h1>
+            </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='#'">
+            <img src="Update-Training-Content-Main-Image-1.jpg" alt="Upgrade teaching material">
+            <div class="card-text">
+                <h1>Upgrade teaching material</h1>
+            </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='#'">
+            <img src="1000_F_97231761_XisUGIE5cldcWXixEaGBS4evG5ooS2Dq.jpg" alt="Contribute">
+            <div class="card-text">
+                <h1>Contribute</h1>
+            </div>
+        </div>
+    </div>
+
+    <main-footer></main-footer>
+    <link rel="stylesheet" href="modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
+    <script src="src/js/header.js"></script>
+    <script src="src/js/footer.js"></script>
+</body>
+
+</html>

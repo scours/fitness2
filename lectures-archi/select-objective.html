@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Monday, 13th November 2023
 Author: Steward OUADI
 -----
-Last Modified: Monday, 13th November 2023
+Last Modified: Wednesday, 29th November 2023
 Modified By: Steward OUADI
 -->
 <!DOCTYPE html>
@@ -15,10 +15,7 @@ Modified By: Steward OUADI
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select Your Objective</title>
-    <!-- Include Bootstrap CSS -->
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -32,21 +29,55 @@ Modified By: Steward OUADI
 
         .button-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
+            flex-wrap: wrap;
+            /* Allow buttons to wrap to the next line on smaller screens */
+            justify-content: space-between;
         }
 
         .button {
-            margin: 10px;
+            position: relative;
+            display: inline-block;
             padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            width: 40%;
-            background-color: #ec6807;
-            border-color: #ec6807;
+            color: white;
+            text-align: center;
             text-decoration: none;
-            /* Remove hyperlink underline */
+            background-size: cover;
+            overflow: hidden;
+            /* Ensure the pseudo-element overlay doesn't overflow */
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Adjust the alpha value for darkness */
+            z-index: -1;
+        }
+
+        .button:nth-child(1) {
+            background-image: url('https://digital-learning-academy.com/wp-content/uploads/2019/10/Innovations-Pdagogiques-peu-Coteuses-1200x789.jpg');
+        }
+
+        .button:nth-child(2) {
+            background-image: url('https://www.mimeo.com/wp-content/uploads/2022/03/Update-Training-Content-Main-Image-1.jpg');
+        }
+
+        .button:nth-child(3) {
+            background-image: url('https://as2.ftcdn.net/v2/jpg/00/97/23/17/1000_F_97231761_XisUGIE5cldcWXixEaGBS4evG5ooS2Dq.jpg');
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 767px) {
+            .button {
+                width: 100%;
+                /* Make buttons take full width on smaller screens */
+                margin-bottom: 10px;
+                /* Add some spacing between stacked buttons */
+            }
         }
     </style>
 </head>
@@ -63,11 +94,6 @@ Modified By: Steward OUADI
     </div>
 
     <main-footer></main-footer>
-    <!-- Include Bootstrap JS and Popper.js (Optional) -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
-
 
     <script src="src/js/header.js"></script>
     <script src="src/js/footer.js"></script>
