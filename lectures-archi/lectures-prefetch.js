@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 29th November 2023
+ * Last Modified: Wednesday, 6th December 2023
  * Modified By: Steward OUADI
  */
 
@@ -21,7 +21,7 @@ The draft European regulation which is to replace this directive proposes major 
 despite its good results in terms of the circular economy: reuse objectives, high-quality recycling, European
 harmonization of labeling, etc.
 There are many challenges to overcome to continue improving the efficiency of our loop. But we also see in
-this text some pitfalls which could produce results different from those expected.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Industrial-Point-of-View.html#/1" id="lecture-button-Industrial-Point-of-View" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Video</h4><video width="640" height="360" controls=""><source src="https://cdnsecakmi.kaltura.com/s/p/811482/sp/81148200/serveFlavor/entryId/1_forttwpx/v/1/ev/5/flavorId/1_n4zhkmr2/fileName/01_Kareen_Desbouis_-_Consequences_of_the_PPWR_on_the_Corrugated_Industry_(Basic_Small_-_WEB_MBL_(H264_400)).mp4/name/a.mp4?aeauth=1701255291_53f8e7106d79fc6f9bc447084b874344" type="video/mp4">Your browser does not support the video tag.</video><h4>Authors</h4><ul><li>Kareen DESBOUIS</li></ul>`
+this text some pitfalls which could produce results different from those expected.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/PPWR2/Industrial-Point-of-View.html#/1" id="lecture-button-Industrial-Point-of-View" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Video</h4><video width="640" height="360" controls=""><source src="https://fitness.agroparistech.fr/fitness2/online/PPWR2/videos/industrial-point-of-view.mp4" type="video/mp4">Your browser does not support the video tag.</video><h4>Authors</h4><ul><li>Kareen DESBOUIS</li></ul>`
 );
 lecturesDetails.set(
   "PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules",
