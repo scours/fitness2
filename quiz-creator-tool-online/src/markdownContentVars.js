@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 13th November 2023
+ * Last Modified: Tuesday, 12th December 2023
  * Modified By: Steward OUADI
  */
 
@@ -582,6 +582,127 @@ Q4. The transfer of sensory relevant substances from packaging into a food is no
 - [ ] The panel should be an untrained panel
 - [x] Conformity of the packaging with the European regulations on direct food contact can be denied if the change of the food properties caused by the substance transfer is too high
 - [ ] Conformity assessment can only be performed when direct contact is made in the test between the food and the packaging
+
+canBeSentByEmail:true
+`;
+
+var cellulose = `Q1: Which of the following is derived from plant cell walls and is commonly used as an eco-friendly alternative to traditional packaging materials?
+
+- [x] Cellulose packaging
+- [ ] Nanocellulose
+- [ ] Microfibrillated cellulose
+
+Q2: In which industry is nanocellulose primarily utilized due to its unique properties at the nanoscale?
+- [x] Packaging
+- [ ]  Textiles
+- [ ] Biomedical engineering
+
+Q3: What is another term for nanocellulose that emphasizes its fibrous structure at the microscopic level?
+- [ ] Cellulose packaging
+- [x] Microfibrillated cellulose
+- [ ] Nanofibrous cellulose
+
+Q4: Which cellulose derivative contributes to reducing the environmental impact of packaging by being biodegradable and derived from renewable resources?
+- [x] Cellulose packaging
+- [ ] Nanocellulose
+- [ ] Microfibrillated cellulose
+
+Q5: In the field of packaging, what role does cellulose play in improving sustainability?
+- [ ]  Enhancing color
+- [ ]  Increasing weight
+- [x]  Providing biodegradability
+
+Q6: What type of cellulose is known for its nanoscale dimensions and is often used to enhance the properties of various materials, including packaging?
+- [x] Nanocellulose
+- [ ]  Cellulose packaging
+- [ ]  Microfibrillated cellulose
+
+Q7: How does the incorporation of cellulose in packaging contribute to its environmental impact?
+- [ ]  Increases pollution
+- [ ]  Reduces recyclability
+- [x] Enhances sustainability
+
+Q8: Which cellulose derivative is known for its fine fibrillar structure and is often used to improve the strength and barrier properties of packaging materials?
+- [x]  MFC (Microfibrillated Cellulose)
+- [ ]  NCF (Nanofiber Cellulose)
+- [ ]  Cellulose Packaging
+
+canBeSentByEmail:true
+`;
+
+var bacterialPolyester = `
+Q1: Which bacteria are known to produce bacterial polyesters?
+
+- [ ]    Escherichia coli
+- [x]  Pseudomonas putida
+- [ ] Bacillus subtilis
+- [ ] All of the above
+
+
+Q2: What is the primary monomer unit of bacterial polyesters?
+
+- [ ]  Glucose
+- [ ]  Lactic acid
+- [x] Hydroxybutyrate
+- [ ] Ethylene glycol
+
+
+Q3: In which industry are bacterial polyesters commonly used?
+
+- [ ] Textile
+- [x] Food packaging
+- [ ] Electronics
+- [ ] None of the above
+
+
+Q4: What type of bonds are involved in the polymerization of bacterial polyesters?
+
+- [ ] Peptide bonds
+- [x] Ester bonds
+- [ ] Glycosidic bonbds
+- [ ] Ionic bonds
+
+Q5: Are bacterial polyesters generally considered to be:
+
+- [ ]  Non-biodegradable
+- [x]  Biodegradable
+- [ ]  Radioactive
+- [ ]  Conductive
+
+Q6: What are polyhydroxyalkanoates (PHAs)?
+
+- [ ]  Synthetic polymers
+- [x]  Naturally occurring biopolymers
+- [ ]  Radioactive mateirals
+- [ ]  Metal alloys
+
+Q7: Which microorganisms are known to produce polyhydroxyalkanoates?
+
+- [ ]  Fungi
+- [x] Bacteria
+- [ ]  Viruses
+- [ ]  Archaea
+
+Q8: What is the primary function of polyhydroxyalkanoates in bacteria?
+
+- [x]  Energy storage
+- [ ] Structural support
+- [ ]  Antibiotic production
+- [ ]  Heat resistance
+
+Q9: In the context of PHAs, what does the term "alkanoate" refer to ?
+
+- [x]  Hydroxycarbon chains
+- [ ] Aminoacids
+- [ ]  Phosphoric acid
+- [ ]  Sugar molecules
+
+Q10: Which applications are polyhydroxyalkanoates commonly used for?
+
+- [ ]  Water purification
+- [x] Biodegradable plastics
+- [ ]  Electronic manufacturing 
+- [ ]  Nuclear energy production
 
 canBeSentByEmail:true
 `;

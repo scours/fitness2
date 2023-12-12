@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 6th December 2023
+ * Last Modified: Tuesday, 12th December 2023
  * Modified By: Steward OUADI
  */
 
@@ -510,11 +510,11 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics",
-  `<h1>Part 1</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>biodegradable,renewable,environment,starch,polysaccharides,proteins</p><h4>Abstract</h4><p>Biobased and biodegradable materials: from polymers to bioplastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.1/part1.html#/2" id="lecture-button-from-polymers-to-bioplastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
+  `<h1>Part 1</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>biodegradable,renewable,environment,starch,polysaccharides,proteins</p><h4>Abstract</h4><p>Biobased and biodegradable materials: from polymers to bioplastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.1/part1.html#/2" id="lecture-button-from-polymers-to-bioplastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#cellulose" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Biobased and biodegradable materials/cellulose-derivates",
-  `<h1>Part 2</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>biodegradable,renewable,environment,cellulose,PLA,PHA</p><h4>Abstract</h4><p>Biobased and biodegradable materials: cellulose derivates, polylactic acid, polyhydroxyalkanoates</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.1/part2.html#/2" id="lecture-button-cellulose-derivates" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
+  `<h1>Part 2</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>biodegradable,renewable,environment,cellulose,PLA,PHA</p><h4>Abstract</h4><p>Biobased and biodegradable materials: cellulose derivates, polylactic acid, polyhydroxyalkanoates</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.1/part2.html#/2" id="lecture-button-cellulose-derivates" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#cellulose" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Active packaging/overview",
@@ -534,7 +534,7 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Innovations/Bacterial polyesters/bacterial-polyesters",
-  `<h1>Bacterial polyesters</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-bacterial-polyesters" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Author</li></ul>`
+  `<h1>Bacterial polyesters</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-bacterial-polyesters" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#bacterialPolyester" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Author</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Advanced cellulosic materials/advanced-cellulosic-materials-for-food-packaging",

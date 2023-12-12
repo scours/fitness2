@@ -32,5 +32,6 @@
     "unit",
     "water"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.1/part2.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.1/part2.html#/2",
+  "qAndAVariables":["Access Q&A number 1/cellulose"]
 }
