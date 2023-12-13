@@ -1,6 +1,6 @@
 {
   "idx": 19,
-  "title": "Part 1",
+  "title": "Food packaging interaction",
   "level": "common",
   "section": "S2",
   "unit": "U2.3",
@@ -8,7 +8,7 @@
   "part": "part1",
   "author": "Mario Scetar",
   "institution": "UNIZG",
-  "abstract": "Chemical and physical stability of packaging materials (please read §2.1 and §2.2 before)  - level intermediate",
+  "abstract": "Chemical and physical stability of packaging materials",
   "topic": [
     "interactions",
     "permeation",
@@ -32,5 +32,5 @@
     "sulphide",
     "uv"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.3/part1.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/UNIZG/food-packaging-interaction.html#/2"
 }

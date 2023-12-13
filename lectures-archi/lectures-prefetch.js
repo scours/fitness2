@@ -382,20 +382,12 @@ The first section describes the thermal properties of packaging materials relate
 </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part5.html#/2" id="lecture-button-surface-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/Chemical and physical/food-packaging-interactions",
-  `<h1>Part 1</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>interactions,permeation,migration,corrosion,metal,cans</p><h4>Abstract</h4><p>Chemical and physical stability of packaging materials (please read §2.1 and §2.2 before)  - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.3/part1.html#/2" id="lecture-button-food-packaging-interactions" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Mario Scetar</li></ul>`
+  "Packaging properties/Chemical and physical/food-packaging-interaction",
+  `<h1>Food packaging interaction</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>interactions,permeation,migration,corrosion,metal,cans</p><h4>Abstract</h4><p>Chemical and physical stability of packaging materials</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/food-packaging-interaction.html#/2" id="lecture-button-food-packaging-interaction" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Mario Scetar</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/Chemical and physical/strategies-to-reduce-food-packaging-interactions",
-  `<h1>Part 2</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>interactions,permeation,migration,corrosion,metal,cans</p><h4>Abstract</h4><p>Chemical and physical stability of packaging materials (please read §2.1 and §2.2 before)  - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.3/part2.html#/2" id="lecture-button-strategies-to-reduce-food-packaging-interactions" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Mario Scetar</li></ul>`
-);
-lecturesDetails.set(
-  "Packaging properties/Principles of mass transfer/principles-part-1",
-  `<h1>Principles of mass transfer - Mass transfer in food packaging 1/2</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>permeation,migration,diffusion,sorption,desorption,partition,modeling</p><h4>Abstract</h4><p>Understanding mass transfer (diffusion, sorption/desorption, permeation, migration) is essential to the packaging designer, food and process engineer, risk assessor: Which material to choose (alone or in association)? Which thickness to reach a prescribed thickness? Are my specific migration levels acceptable? The considered solute/migrant/permeant can be a gas or an organic chemical.  -  level intermediate </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.1/part1.html#/2" id="lecture-button-principles-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Mia Kurek</li></ul>`
-);
-lecturesDetails.set(
-  "Packaging properties/Principles of mass transfer/principles-part-2",
-  `<h1>Principles of mass transfer - Mass transfer in food packaging 2/2</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>permeation,migration,diffusion,sorption,desorption,partition,modeling</p><h4>Abstract</h4><p>Understanding mass transfer (diffusion, sorption/desorption, permeation, migration) is essential to the packaging designer, food and process engineer, risk assessor: Which material to choose (alone or in association)? Which thickness to reach a prescribed thickness? Are my specific migration levels acceptable? The considered solute/migrant/permeant can be a gas or an organic chemical.  -  level intermediate </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.1/part2.html#/2" id="lecture-button-principles-part-2" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Mia Kurek</li></ul>`
+  "Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging",
+  `<h1>Principles of mass transfer - Mass transfer in food packaging</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>permeation,migration,diffusion,sorption,desorption,partition,modeling</p><h4>Abstract</h4><p>Understanding mass transfer (diffusion, sorption/desorption, permeation, migration) is essential to the packaging designer, food and process engineer, risk assessor: Which material to choose (alone or in association)? Which thickness to reach a prescribed thickness? Are my specific migration levels acceptable? The considered solute/migrant/permeant can be a gas or an organic chemical. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/advanced-principles-of-mass-transfer-in-food-packaging.html#/2" id="lecture-button-advanced-principles-of-mass-transfer-in-food-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Mia Kurek</li></ul>`
 );
 lecturesDetails.set(
   "Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials",
@@ -846,30 +838,19 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
                 class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Chemical and physical">Chemical and physical<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Chemical and physical"><a
-            href="#Packaging properties/Chemical and physical/food-packaging-interactions"
-            id="Packaging properties/Chemical and physical/food-packaging-interactions" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Part 1<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Packaging properties/Chemical and physical/strategies-to-reduce-food-packaging-interactions"
-            id="Packaging properties/Chemical and physical/strategies-to-reduce-food-packaging-interactions"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Part 2<i
+            href="#Packaging properties/Chemical and physical/food-packaging-interaction"
+            id="Packaging properties/Chemical and physical/food-packaging-interaction" class="dropdown-container-class"
+            onclick="lectureToDisplay(this.id)">Food packaging interaction<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Principles of mass transfer">Principles of mass transfer<i
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Principles of mass transfer"><a
-            href="#Packaging properties/Principles of mass transfer/principles-part-1"
-            id="Packaging properties/Principles of mass transfer/principles-part-1" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Principles of mass transfer - Mass transfer in food packaging 1/2<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Packaging properties/Principles of mass transfer/principles-part-2"
-            id="Packaging properties/Principles of mass transfer/principles-part-2" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Principles of mass transfer - Mass transfer in food packaging 2/2<i
-                class="fa fa-star star-color-yellow little-space"></i><i
+            href="#Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
+            id="Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Principles of mass transfer - Mass
+            transfer in food packaging<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Calculation of permeability in composite systems">Calculation of permeability in composite
