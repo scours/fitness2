@@ -1,6 +1,6 @@
 {
   "idx": 2,
-  "title": "Glass - Part 1",
+  "title": "Glass",
   "level": "common",
   "section": "S1",
   "unit": "U1.2",
@@ -8,7 +8,7 @@
   "part": "part1",
   "author": "Fátima Poças",
   "institution": "UCP",
-  "abstract": "Packaging systems can be made from various materials: glass materials (1/2)",
+  "abstract": "Packaging systems can be made from various materials: glass materials",
   "topic": [
     "materials",
     "glass",
@@ -27,8 +27,17 @@
     "silica",
     "surface",
     "temperature",
-    "type"
+    "type",
+    "filling",
+    "impact",
+    "internal",
+    "kg",
+    "oxides",
+    "properties",
+    "sudden",
+    "thermal",
+    "weight"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part1.html#/2",
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/UCP/Glass.html#/2",
   "qAndAVariables":["Access Q&A number 1/materialGlass"]
 }

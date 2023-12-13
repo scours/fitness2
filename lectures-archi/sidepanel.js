@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 29th November 2023
+ * Last Modified: Wednesday, 13th December 2023
  * Modified By: Steward OUADI
  */
 
@@ -14,6 +14,9 @@ englobingNavList.className = "nav__list";
 
 // Map to store LecturePath objects
 const lecturesPaths = new Map();
+
+// Map of URLs to redirect, key is old URL, value is new URL
+const urlsToRedirect = new Map();
 
 const refreshLecturesPrefetch = false;
 let lecturesPrefetchContent =
@@ -447,33 +450,6 @@ async function extractMetaDataOri() {
     console.log("Last Modified Date not available.");
   }
 
-  const owner = "scours";
-  const repo = "fitness2";
-  const filePath = "manifests/root.manifest"; // Replace with the actual file path
-  const branchName = "wip"; // Replace with the desired branch name
-
-  // Construct the API URL to get the commit history of the file
-  const apiUrl = `https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&sha=${branchName}`;
-
-  const response = await fetch(apiUrl, {
-    headers: {
-      Accept: "application/vnd.github.json",
-    },
-  });
-
-  if (response.status === 200) {
-    const commitData = await response.json();
-    if (commitData.length > 0) {
-      // Get the last commit's timestamp
-      const lastModified = new Date(commitData[0].commit.author.date);
-      console.log("TT:Last Modified Date:", lastModified);
-    } else {
-      console.error("No commit history found for the file.");
-    }
-  } else {
-    console.error("Error fetching commit history");
-  }
-
   // console.log(res);
   if (res.ok) {
     // tocElement, is table of content element, its an object that contains lectures information
@@ -653,6 +629,67 @@ function readLectureFromUrl() {
     // The part after the hash is what we want to display
     const identifier = decodeURIComponent(parts[1]);
     lectureToDisplay(identifier);
+    // redirectURLs(identifier, parts[0]);
+  }
+}
+
+function setUrlsToRedirect() {
+  urlsToRedirect.set(
+    "Packaging materials/Packaging materials and shaping process/plastic-packaging-part-1",
+    "Packaging materials/Packaging materials and shaping process/plastic-packaging"
+  );
+  urlsToRedirect.set(
+    "Packaging materials/Packaging materials and shaping process/plastic-packaging-part-2",
+    "Packaging materials/Packaging materials and shaping process/plastic-packaging"
+  );
+
+  urlsToRedirect.set(
+    "Packaging materials/Packaging materials and shaping process/glass-packaging-part-1",
+    "Packaging materials/Packaging materials and shaping process/glass-packaging"
+  );
+  urlsToRedirect.set(
+    "Packaging materials/Packaging materials and shaping process/glass-packaging-part-2",
+    "Packaging materials/Packaging materials and shaping process/glass-packaging"
+  );
+
+  urlsToRedirect.set(
+    "Packaging materials/Packaging materials and shaping process/paper-and-paperboard-part-1",
+    "Packaging materials/Packaging materials and shaping process/paper-and-paperboard"
+  );
+  urlsToRedirect.set(
+    "Packaging materials/Packaging materials and shaping process/paper-and-paperboard-part-2",
+    "Packaging materials/Packaging materials and shaping process/paper-and-paperboard"
+  );
+
+  urlsToRedirect.set(
+    "Packaging properties/Chemical and physical/food-packaging-interactions",
+    "Packaging properties/Chemical and physical/food-packaging-interaction"
+  );
+
+  urlsToRedirect.set(
+    "Packaging properties/Chemical and physical/strategies-to-reduce-food-packaging-interactions",
+    "Packaging properties/Chemical and physical/food-packaging-interactions"
+  );
+
+  urlsToRedirect.set(
+    "Packaging properties/Principles of mass transfer/principles-part-1",
+    "Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
+  );
+
+  urlsToRedirect.set(
+    "Packaging properties/Principles of mass transfer/principles-part-2",
+    "Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
+  );
+}
+
+function redirectURLs(identifier, baseURL) {
+  // If the current url does not exist anymore, replace by new existing url
+
+  if (urlsToRedirect.has(identifier)) {
+    window.location.href = baseURL + "#" + urlsToRedirect.get(identifier);
+
+    // Reload the page
+    window.location.reload();
   }
 }
 
@@ -660,6 +697,7 @@ function readLectureFromUrl() {
 loader.style.display = "block";
 console.time("extractMetaData");
 extractMetaData();
+setUrlsToRedirect();
 readLectureFromUrl();
 console.timeEnd("extractMetaData");
 

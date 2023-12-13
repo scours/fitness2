@@ -1,14 +1,14 @@
 {
-  "idx": 8,
-  "title": "Paper and paperboard - Part 2",
+  "idx": 7,
+  "title": "Paper and paperboard",
   "level": "common",
   "section": "S1",
   "unit": "U1.2",
   "difficultyLevel": "Novice",
-  "part": "part7",
+  "part": "part6",
   "author": "Fátima Poças",
   "institution": "UCP",
-  "abstract": "Packaging systems can be made from various materials: paper and paperboard (2/2)",
+  "abstract": "Packaging systems can be made from various materials: paper and paperboard",
   "topic": [
     "materials",
     "paper",
@@ -19,6 +19,17 @@
   "license": "BY-SA-ND",
   "keywords": [
     "board",
+    "carton",
+    "chlorine",
+    "composition",
+    "direction",
+    "group",
+    "low",
+    "pulp",
+    "type",
+    "types",
+    "unit",
+    "yield",
     "boxe",
     "bursting",
     "corrugated",
@@ -28,9 +39,8 @@
     "structure",
     "test",
     "thickness",
-    "unit",
     "wall"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part7.html#/2",
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/UCP/Paper-and-paperboard.html#/2",
   "qAndAVariables":["Access Q&A number 1/materialPaperAndBoard"]
 }

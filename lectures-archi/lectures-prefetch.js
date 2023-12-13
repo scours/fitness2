@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 12th December 2023
+ * Last Modified: Wednesday, 13th December 2023
  * Modified By: Steward OUADI
  */
 
@@ -307,32 +307,20 @@ lecturesDetails.set(
   `<h1>Panorama of food packaging</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>history,overview,plastics,polymer,challenges,waste,environment,function</p><h4>Abstract</h4><p>This course is an introduction to the entire content of the FITNess project. The history of plastics is quickly summarized through the past centuries as well as the current challenges for the environment and society. Food packaging has developed at the interface of food needs (safety, preservation), technological possibilities and consumer expectations. The science of packaging combines food process engineering, materials science, toxicology, microbiology, regulations...). This course introduces the seven functions of packaging: preserving food quality; preventing microbiological risk; preserving the integrity of the packaging and its contents; preventing chemical risk; preserving the environment; meeting the technical and economic requirements of the manufacturer and the user of the packaging; interacting and communicating with the consumer.</p><a target="_blank" class="btn btn-primary" href="http://fitness.pbf.hr/fitness/lectures/html/common/S1/U1.1/part1.html#/1" id="lecture-button-panorama-of-food-packaging-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging materials/Packaging materials and shaping process/glass-packaging-part-1",
-  `<h1>Glass - Part 1</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,glass,bottles</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: glass materials (1/2)</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part1.html#/2" id="lecture-button-glass-packaging-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#materialGlass" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
-);
-lecturesDetails.set(
-  "Packaging materials/Packaging materials and shaping process/glass-packaging-part-2",
-  `<h1>Glass - Part 2</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,glass,bottles</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: glass materials (2/2)</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part2.html#/2" id="lecture-button-glass-packaging-part-2" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">m</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">a</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">t</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">e</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">r</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">i</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">a</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">l</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">G</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">l</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">a</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">s</a></p><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#undefined" target="_blank">s</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  "Packaging materials/Packaging materials and shaping process/glass-packaging",
+  `<h1>Glass</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,glass,bottles</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: glass materials</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UCP/Glass.html#/2" id="lecture-button-glass-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#materialGlass" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/Packaging materials and shaping process/metal-packaging",
   `<h1>Metal</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,metal,cans,corrosion,interactions,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: Metal Packaging</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part3.html#/2" id="lecture-button-metal-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#materialMetal" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging materials/Packaging materials and shaping process/plastic-packaging-part-1",
-  `<h1>Plastic - Part 1</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,plastics,polymers,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: plastics (1/2)</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part4.html#/2" id="lecture-button-plastic-packaging-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#materialPlastics" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  "Packaging materials/Packaging materials and shaping process/plastic-packaging",
+  `<h1>Plastic</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,plastics,polymers,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: plastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UCP/Plastics.html#/2" id="lecture-button-plastic-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#materialPlastics" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging materials/Packaging materials and shaping process/plastic-packaging-part-2",
-  `<h1>Plastic - Part 2</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,plastics,polymers,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: plastics (2/2)</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part5.html#/2" id="lecture-button-plastic-packaging-part-2" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#materialPlastics" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
-);
-lecturesDetails.set(
-  "Packaging materials/Packaging materials and shaping process/paper-and-paperboard-part-1",
-  `<h1>Paper and paperboard - Part 1</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,paper,board,paperboard,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: paper and paperboard (1/2)</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part6.html#/2" id="lecture-button-paper-and-paperboard-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#materialPaperAndBoard" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
-);
-lecturesDetails.set(
-  "Packaging materials/Packaging materials and shaping process/paper-and-paperboard-part-2",
-  `<h1>Paper and paperboard - Part 2</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,paper,board,paperboard,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: paper and paperboard (2/2)</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part7.html#/2" id="lecture-button-paper-and-paperboard-part-2" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#materialPaperAndBoard" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  "Packaging materials/Packaging materials and shaping process/paper-and-paperboard",
+  `<h1>Paper and paperboard</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>materials,paper,board,paperboard,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: paper and paperboard</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UCP/Paper-and-paperboard.html#/2" id="lecture-button-paper-and-paperboard" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#materialPaperAndBoard" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/Packaging materials and shaping process/bio-based-materials",
@@ -763,15 +751,9 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
         id="dropdown-btn-Packaging materials and shaping process">Packaging materials and shaping process<i
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Packaging materials and shaping process"><a
-            href="#Packaging materials/Packaging materials and shaping process/glass-packaging-part-1"
-            id="Packaging materials/Packaging materials and shaping process/glass-packaging-part-1"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Glass - Part 1<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/glass-packaging-part-2"
-            id="Packaging materials/Packaging materials and shaping process/glass-packaging-part-2"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Glass - Part 2<i
+            href="#Packaging materials/Packaging materials and shaping process/glass-packaging"
+            id="Packaging materials/Packaging materials and shaping process/glass-packaging"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Glass<i
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a><a
@@ -781,27 +763,15 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/plastic-packaging-part-1"
-            id="Packaging materials/Packaging materials and shaping process/plastic-packaging-part-1"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Plastic - Part 1<i
+            href="#Packaging materials/Packaging materials and shaping process/plastic-packaging"
+            id="Packaging materials/Packaging materials and shaping process/plastic-packaging"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Plastic<i
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/plastic-packaging-part-2"
-            id="Packaging materials/Packaging materials and shaping process/plastic-packaging-part-2"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Plastic - Part 2<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/paper-and-paperboard-part-1"
-            id="Packaging materials/Packaging materials and shaping process/paper-and-paperboard-part-1"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Paper and paperboard - Part 1<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/paper-and-paperboard-part-2"
-            id="Packaging materials/Packaging materials and shaping process/paper-and-paperboard-part-2"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Paper and paperboard - Part 2<i
+            href="#Packaging materials/Packaging materials and shaping process/paper-and-paperboard"
+            id="Packaging materials/Packaging materials and shaping process/paper-and-paperboard"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Paper and paperboard<i
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a><a
