@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 13th December 2023
+ * Last Modified: Tuesday, 19th December 2023
  * Modified By: Steward OUADI
  */
 
@@ -679,6 +679,16 @@ function setUrlsToRedirect() {
   urlsToRedirect.set(
     "Packaging properties/Principles of mass transfer/principles-part-2",
     "Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
+  );
+
+  urlsToRedirect.set(
+    "Innovations/Biobased and biodegradable materials/cellulose-derivates",
+    "Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics"
+  );
+
+  urlsToRedirect.set(
+    "Innovations/Active packaging/humidity-control",
+    "Innovations/Active packaging/overview"
   );
 }
 
