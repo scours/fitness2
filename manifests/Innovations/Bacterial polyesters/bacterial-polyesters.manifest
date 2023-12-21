@@ -1,24 +1,34 @@
 {
   "idx": 806889,
-  "title": "Bacterial polyesters",
-  "level": "",
-  "section": "",
-  "unit": "",
-  "difficultyLevel": "Novice",
+  "title": "Bacterial Polyesters",
+  "level": "specialized",
+  "section": "S6",
+  "unit": "U6.2",
+  "difficultyLevel": "Intermediate",
   "part": "part1",
-  "author": "Author",
-  "institution": "CSIC",
-  "abstract": "Abstract",
-  "topic": [
-    "topic1",
-    "topic2",
-    "topic3"
+  "author": [
+    "María José Fabra",
+    "Eugenia Núñez-Calzado",
+    "Cristina Campano",
+    "Amparo López-Rubio"
   ],
-  "license": "BY-SA-ND",
+  "institution": "CSIC",
+  "abstract": "Among the biobased materials, the ones synthesized by microorganisms are of great interest in the sense that thanks to the metabolic engineering of those microorganisms, it is possible to adjust the physicochemical properties of such biobased polymers together with the possibilities to introduce repeating units of a different nature in the macromolecular backbone by feeding the microorgansisms with various carbon sources.\nThis unit provides an overview of: i) the classification and structures of PHAs, ii) the established methods for the synthesis of PHAs and their copolymers by microorganisms, iii) the main properties of such biobased polymers and iv) their major applications.",
+  "topic": [
+    "PHB",
+    "bioplastic",
+    "PHBV",
+    "properties",
+    "packaging"
+  ],
+  "license": "CC-BY-NC-SA 4.0",
   "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
+    "PHA",
+    "PHB",
+    "PHBV",
+    "Synthesis",
+    "barrier properties",
+    "mechanical properties"
   ],
   "userProvidedURLForLecture": "",
   "qAndAVariables":["Access Q&A number 1/bacterialPolyester"]

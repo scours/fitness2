@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 19th December 2023
+ * Last Modified: Thursday, 21st December 2023
  * Modified By: Steward OUADI
  */
 
@@ -506,7 +506,8 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Innovations/Bacterial polyesters/bacterial-polyesters",
-  `<h1>Bacterial polyesters</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-bacterial-polyesters" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#bacterialPolyester" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>Author</li></ul>`
+  `<h1>Bacterial Polyesters</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>PHB,bioplastic,PHBV,properties,packaging</p><h4>Abstract</h4><p>Among the biobased materials, the ones synthesized by microorganisms are of great interest in the sense that thanks to the metabolic engineering of those microorganisms, it is possible to adjust the physicochemical properties of such biobased polymers together with the possibilities to introduce repeating units of a different nature in the macromolecular backbone by feeding the microorgansisms with various carbon sources.
+This unit provides an overview of: i) the classification and structures of PHAs, ii) the established methods for the synthesis of PHAs and their copolymers by microorganisms, iii) the main properties of such biobased polymers and iv) their major applications.</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-bacterial-polyesters" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#bacterialPolyester" target="_blank">Access Q&amp;A number 1</a></p><h4>Authors</h4><ul><li>María José Fabra</li><li>Eugenia Núñez-Calzado</li><li>Cristina Campano</li><li>Amparo López-Rubio</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Advanced cellulosic materials/advanced-cellulosic-materials-for-food-packaging",
@@ -1082,10 +1083,10 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-PPWR2">PPWR
     <div class="dropdown-container" id="dropdown-container-Bacterial polyesters"><a
             href="#Innovations/Bacterial polyesters/bacterial-polyesters"
             id="Innovations/Bacterial polyesters/bacterial-polyesters" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Bacterial polyesters<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            onclick="lectureToDisplay(this.id)">Bacterial Polyesters<i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Advanced cellulosic materials">Advanced cellulosic materials<i
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Advanced cellulosic materials"><a
