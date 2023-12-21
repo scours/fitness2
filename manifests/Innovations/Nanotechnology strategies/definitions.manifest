@@ -30,5 +30,6 @@
     "unit",
     "usd"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.4/part1.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.4/part1.html#/2",
+  "qAndAVariables":["Access Q&A number 1/nanomaterials"]
 }

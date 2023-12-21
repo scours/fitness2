@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 12th December 2023
+ * Last Modified: Thursday, 21st December 2023
  * Modified By: Steward OUADI
  */
 
@@ -378,86 +378,66 @@ Q6: The box compression test (BCT) measures the box compressive strength and it 
 canBeSentByEmail:true`;
 
 var materialBioBased = `
-Q1: Biobased polymers can be directly extracted from biomass, or synthetized from bioderived monomers, or produced directly from organisms. 
-- [x] True	
-- [ ] False
+Q1:  What is the primary source of raw materials for the production of biobased materials?
 
-Q2: All biodegradable polymers are biobased. 
-- [ ] True	
-- [x] False
+- [ ] Fossil fuels
+- [ ] Minerals
+- [x] Renewable biological resources
 
-Q3: Poly-lactic acid is bio based polymer synthetized form from bioderived monomers. 
-- [x] True	
-- [ ] False
+Q2: How do biobased materials contribute to reducing carbon emissions compared to conventional materials?
+- [ ] They increase carbon emissions
+- [ ]  They have no impact on carbon emissions
+- [x] They decrease carbon emissions
 
-Q4: Today there are in the market bioPET and bioPE. These are chemically identical to their counterparts of fossil base. 
-- [x] True	
-- [ ] False
+Q3: In the context of packaging, what is a key advantage of using biobased materials?
+- [ ] Higher cost
+- [ ] Limited availability
+- [x] Biodegradability
 
-canBeSentByEmail:true`;
+Q4: What role do biobased materials play in the development of a more sustainable and circular economy?
+- [ ] They hinder sustainability efforts
+- [ ] They have no impact on the economy
+- [x] They promote sustainability and circularity
 
-var factorsShelfLifeGeneral = `Q1. Microbial spoilage of food depends on: 
+Q5: Which term refers to materials that are derived from living organisms and are used as alternatives to traditional, non-renewable materials?
+- [ ]  Non-biodegradable materials
+- [x]  Biobased materials
+- [ ] Synthetic materials
 
-- [x] Type of food
-- [x] Initial level of microorganisms in food
-- [x] Storage and handling conditions
-- [x] Temperature
+Q6: In what ways can bioplastic materials be disposed of at the end of their life cycle?
+- [ ] Landfill only
+- [ ] Incineration only
+- [x]  Composting, recycling, or biodegradation
 
-Q2. Which is the correct term for the end of food shelf-life in Europe for microbiologically sensitive products? 
+Q7: How do the mechanical properties of bioplastic materials compare to traditional plastics?
+- [x]  Inferior
+- [ ]  Identical
+- [ ] Superior
 
-- [x] Use by
-- [ ] Sell by
-- [ ] Best before
-- [ ] Eat before
+Q8: What are some challenges associated with the widespread adoption of bioplastic materials?
+- [ ]  Low production costs
+- [x]  Limited availability of feedstocks
+- [ ]  Enhanced recyclability
 
-Q3. The shelf-life of food is related to: 
+Q9: What is the significance of chitosan among biopolymers?
+- [ ]  It is a plant-based polymer
+- [x]  It is antimicrobial and biocompatible
+- [ ]  It is derived from petroleum
 
-- [ ] Quality of food
-- [ ] Decomposition of food
-- [ ] Freshness of food
-- [x] Time limit for which food can be used
+Q10: In the context of biopolymers, what does the term "PHA" stand for?
+- [ ]  Polymerized Hydrocarbon Amino
+- [x]  Polyhydroxyalkanoates
+- [ ]  Phosphoric Acid
 
-Q4. The shelf-life is determined by: 
+Q11: Which biopolymer is the main component of plant cell walls?
+- [ ]  Chitin
+- [ ]  Starch
+- [x]  Cellulose
 
-- [x] Sensory, physico-chemical and microbiological deterioration of food
-- [ ] Sensory and microbiological deterioration of food
-- [ ] Physico-chemical deterioration of food
-- [ ] Sensory deterioration of food
-
-Q5. What is the direct shelf-life testing method? 
-
-- [x] Food assessment in a real time study
-- [ ] Accelerated shelf-life testing
-- [ ] Predictive modelling
-- [ ] Challenge testing
-
-Q6. Indirect methods for shelf-life determination are: 
-
-- [ ] Real time shelf-life monitoring
-- [x] Accelerated storage
-- [x] Predictive microbiological modelling
-- [x] Challenge testing
-
-Q7. What are examples for accelerated storage methods? 
-
-- [ ] Food storage at freezing conditions 
-- [x] Food storage at elevated temperature conditions
-- [ ] Food storage at refrigerator conditions
-- [x] Food storage in oxygen-enriched atmosphere
-
-Q8. What is a correct example of predictive modelling? 
-
-- [ ] Procedure to predict food sales on the market 
-- [ ] Procedure to predict consumers acceptance of new food on the market
-- [x] Procedure to assess the growth of a microorganism under defined conditions
-- [ ] Procedure to predict food price fluctuation on the market
-
-Q9. What are the possible orders of the kinetics of microbiological or biochemical reactions? 
-
-- [x] zero order
-- [x] first order
-- [x] second order
-- [x] transitions between kinetics of different orders are possible
+Q12: Which of the following is an example of a protein-based biopolymer?
+- [ ]  Polycarbonate
+- [ ]  Polyurethane
+- [x]  Collagen
 
 canBeSentByEmail:true`;
 
@@ -703,6 +683,139 @@ Q10: Which applications are polyhydroxyalkanoates commonly used for?
 - [x] Biodegradable plastics
 - [ ]  Electronic manufacturing 
 - [ ]  Nuclear energy production
+
+canBeSentByEmail:true
+`;
+
+var smartPackaging = `
+Q1:  Which of the following technologies is commonly integrated into smart packaging for real-time monitoring?
+
+- [x] RFID (Radio-Frequency Identification)
+- [ ] Static cling labels
+- [ ] Newspaper print
+- [ ] Wax coatings
+
+Q2: What is the primary purpose of temperature-sensitive indicators in smart packaging?
+- [ ] To enhance packaging transparency
+- [x] To provide a visual display of temperature changes
+- [ ] To increase shelf life
+- [ ] To make the packaging rigid
+
+Q3: How can smart packaging contribute to reducing food waste?
+- [ ] By increasing spoilage
+- [ ] By hindering real-time tracking
+- [x] By providing information on product freshness and expiration
+- [ ] By making packaging harder to recycle
+
+Q4: What is the purpose of using QR codes or barcodes in smart packaging?
+- [ ] To decrease traceability
+- [ ] To add unnecessary weight
+- [ ] To hinder consumer engagement
+- [x] To provide easy access to product information
+
+Q5: How do freshness indicators in smart packaging benefit consumers?
+- [ ]  By reducing the visibility of product information
+- [ ] By making packaging materials less transparent
+- [x] By providing real-time information on product quality
+- [ ] By releasing odors into the packaged product
+
+canBeSentByEmail:true
+`;
+
+var nanomaterials = `
+Q1:  What is a primary advantage of using nanomaterials in food packaging?
+
+- [x] Improved barrier properties 
+- [ ] Increased food waste 
+- [ ] Higher packaging costs
+
+Q2: How do nanomaterials differ from conventional materials in terms of particle size?
+- [ ] Larger particle size
+- [x] Smaller particle size at the nanoscale
+- [ ]  Same particle size
+
+Q3: What unique properties emerge in nanomaterials due to their nanoscale dimensions?
+- [ ] Reduced toxicity
+- [ ] No change in properties
+- [x] Enhanced or altered properties 
+
+Q4: In what industries are nanomaterials commonly applied due to their unique properties?
+- [ ] Only in agriculture
+- [ ] Limited to electronics
+- [x] Across various industries, including electronics, medicine, and materials science
+
+Q5: What is a potential concern associated with the use of nanomaterials?
+- [x]  Potential environmental and health impacts
+- [ ] Limited applications
+- [ ] Increased stability
+
+Q6: How does the high surface area-to-volume ratio of nanomaterials affect their reactivity?
+- [ ] Reduces reactivity
+- [x] Increases reactivity
+- [ ]  Has no impact on reactivity
+
+Q7: What role do nanomaterials play in preventing the growth of bacteria and pathogens in food packaging?
+- [ ] They promote bacterial growth
+- [ ] They have no effect on bacteria
+- [x] They exhibit antimicrobial properties, preventing bacterial growth
+
+Q8: How do nanomaterials in food packaging contribute to reducing food waste?
+- [x]  They enhance food preservation and reduce spoilage, thus reducing food waste
+- [ ] They increase food waste
+- [ ] They have no impact on food waste
+
+canBeSentByEmail:true
+`;
+
+var activePackaging = `
+Q1:  Which of the following is a common active feature in biobased packaging?
+
+- [ ] Increased rigidity
+- [x] Oxygen scavenging
+- [ ] Reduced flexibility
+- [ ] Higher transparency
+
+Q2: How does oxygen scavenging in active biobased packaging benefit food products?
+- [x] Extends the shelf life by reducing oxygen exposure
+- [ ]  Increases oxygen content in the package
+- [ ] Enhances the flavor of the food
+- [ ] Causes food spoilage
+
+Q3: What role do moisture-absorbing agents play in active biobased packaging?
+- [ ] They increase moisture content in the package
+- [x] They reduce moisture exposure to enhance product freshness
+- [ ] They make packaging materials rigid
+- [ ] They release odors into the packaged product
+
+Q4: In which industry is active biobased packaging gaining significant attention?
+- [ ] Oil and Gas
+- [ ] Automotive
+- [x] Food and Beverage
+- [ ] Electronics
+
+Q5: How does active biobased packaging contribute to reducing food waste?
+- [ ]  By increasing spoilage
+- [ ]  By making packaging materials harder to recycle
+- [x] By preventing microbial growth and extending shelf life
+- [ ]  By adding unnecessary weight to the packaging
+
+Q6: What is active packaging?
+- [ ] Packaging that remains static
+- [x] Packaging with interactive features
+- [ ]  Packaging for heavy-duty items
+- [ ] Packaging made from non-renewable materials
+
+Q7: Which environmental benefit is associated with active packaging?
+- [ ]  Increased waste generation
+- [ ]  Enhanced recyclability
+- [x] Reduced use of renewable resources
+- [ ] Higher dependence on fossil fuels
+
+Q8: Which type of active packaging is designed to control and adjust the internal atmosphere of the package?
+- [ ]  Release films
+- [ ]  Barrier coatings
+- [ ]  Moisture absorbers
+- [x]  Modified atmosphere packaging (MAP)
 
 canBeSentByEmail:true
 `;
