@@ -4,6 +4,10 @@ Below are the different presentations of the FITNESS 2 platforms.
 
 ### Online meeting with FITNESS partners
 
+[January 2024](https://fitness.agroparistech.fr/fitness2/presentations/fit2-on-meet/fitness-2-progress-jan-24.html)
+
+[december 2023](https://fitness.agroparistech.fr/fitness2/presentations/fit2-on-meet/fitness-2-progress-dec-23.html)
+
 [november 2023](https://fitness.agroparistech.fr/fitness2/presentations/fit2-on-meet/fitness-2-progress-nov-23.html)
 
 [october 2023](https://fitness.agroparistech.fr/fitness2/presentations/fit2-on-meet/fitness-2-progress-oct-23.html#/title-slide)
