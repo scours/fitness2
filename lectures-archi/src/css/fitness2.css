@@ -1,0 +1,222 @@
+/*
+ * File: fitness2.css
+ * Contract: EU contract 2022-FR01-KA220-HED-000023509
+ * Project: FitNESS 2 ERASMUS+
+ * File Created: Tuesday, 16th January 2024
+ * Author: Steward OUADI
+ * -----
+ * Last Modified: Tuesday, 16th January 2024
+ * Modified By: Steward OUADI
+ */
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  height: 95%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ec6807;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidebar a,
+.dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  border: none;
+  background: none;
+  /* width: 100%; */
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.dropdown-btn:hover {
+  color: #cab6b6;
+  /* font-size: 22px; */
+}
+
+/* Main content */
+.main {
+  /* margin-left: 30%; */
+  /* Same as the width of the sidenav */
+  /* font-size: 20px; */
+  /* Increased text to enable scrolling */
+  /* padding: 0px 10px; */
+  /* padding-left: 10%; */
+  transition: margin-left 0.5s;
+  padding: 3% 15%;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #c06332;
+  color: white;
+}
+
+.lecture-button-in-text {
+  background-color: #ec6807;
+  color: white;
+  padding: 1%;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to
+          change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #c06332;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 1.5em;
+  position: absolute;
+  cursor: pointer;
+  background-color: #ec6807;
+  color: white;
+  /* padding: 10px 15px; */
+  padding: 1%;
+  /* margin: 1% 2%; */
+  border: none;
+  z-index: 5;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a
+        smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
+
+  .main {
+    padding: 5% 20%;
+  }
+}
+
+.flex-vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+/* .footer {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            /* padding-top: 2%; */
+/* padding: 5%; */
+/* Set the fixed height of the footer here */
+/* To complement the .sidebar height and reach 100%. */
+/* height: 5%; */
+/* Vertically center the text there */
+/* line-height: 60px; */
+/* background-color: #f5f5f5; */
+/* } */
+
+*/ .little-space {
+  margin-left: 1%;
+}
+
+.star-color-green {
+  color: green;
+}
+
+.star-color-yellow {
+  color: goldenrod;
+}
+
+.star-color-red {
+  color: darkred;
+}
+
+#loader {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+#loader .loader-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #d06f1c;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-top: 25%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+video {
+  width: 80%;
+  /* Make the video width based on its containers width */
+  height: auto;
+  /* Maintain the video's aspect ratio */
+}
+
+@media screen and (min-width: 600px) {
+  /* Adjust styles for screens with a minimum width of 600px */
+  video {
+    max-width: 600px;
+    /* Limit the video player's width on larger screens */
+    margin: 0 auto;
+    /* Center the video player */
+  }
+}

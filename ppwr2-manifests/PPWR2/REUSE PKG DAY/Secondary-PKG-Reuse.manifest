@@ -1,0 +1,27 @@
+{
+  "idx": 102097,
+  "title": "Secondary PKG Reuse",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Intermediate",
+  "part": "",
+  "author": "Alice JOLY",
+  "institution": "STEF",
+  "abstract": "Ecological and economic assessment of reusable packaging in a refrigerated supply chain.\nIn alignment with the objectives of the French anti-waste law for the circular economy,\nparticularly the 3R decree, the Chaire CoPack launched a research project to assess the im-\nplications of transitioning from a linear economy to a circular economy through the adoption\nof reusable packaging. Data collection in the field enabled the research team to conduct an\ninitial study comparing the environmental impacts of various approaches to product distribu-\ntion, with a specific focus on the bread supply chain, involving both reusable and single-use\npackaging.\nLife Cycle Assessment (LCA) was employed for analysis, revealing that employing reusable\npackaging could present an environmental advantage when cleaned after approximately four\nusage cycles. The technical and economic evaluation demonstrated a marginal advantage\nover single-use packaging, albeit with increased operational complexity. However, as the\nfrequency of cleaning increases, the environmental benefits of reusing packaging diminish,\nprimarily due to heightened energy consumption associated with heating the cleaning water.\nThe preliminary findings from this study will be complemented with industry feedback to\ngain insights into the challenges and opportunities surrounding the transition to reusable\npackaging, considering the technical and economic challenges of this shift.",
+  "topic": [
+    "ppwr2",
+    "ppwr"
+  ],
+  "license": "",
+  "keywords": [
+    "circular economy",
+    "Chaire CoPack",
+    "reusable packaging",
+    "single-use packaging",
+    "Life Cycle Assessment (LCA)",
+    "logistics"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/PPWR2/Secondary-PKG-Reuse.html#/1",
+  "video": "https://fitness.agroparistech.fr/fitness2/online/PPWR2/videos/Secondary-PKG-Reuse.mp4"
+}
