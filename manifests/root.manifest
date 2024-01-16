@@ -1,31 +1,6 @@
 {
   "children": [
-    "PPWR2/RECYCLING PKG DAY/Industrial-Point-of-View",
-    "PPWR2/RECYCLING PKG DAY/EU-Packaging-Rules",
-    "PPWR2/RECYCLING PKG DAY/Food-Waste-Prevention",
-    "PPWR2/RECYCLING PKG DAY/Recycling-Risk-Assessment-in-CN",
-    "PPWR2/RECYCLING PKG DAY/PKG-Recycling-in-CN",
-    "PPWR2/RECYCLING PKG DAY/Food-PKG-Regulation-in-CL",
-    "PPWR2/RECYCLING PKG DAY/Sustainable-PKG-in-US",
-    "PPWR2/RECYCLING PKG DAY/EU-PKG-Approval-History",
-    "PPWR2/RECYCLING PKG DAY/FDA-on-Recycled-Plastics",
-    "PPWR2/RECYCLING PKG DAY/EFSA-on-PET-Recycling",
-    "PPWR2/RECYCLING PKG DAY/APR-&-RecyClass",
-    "PPWR2/RECYCLING PKG DAY/Recycled-Polyolefins-Safety",
-    "PPWR2/RECYCLING PKG DAY/Recycled-PET-Safety",
-    "PPWR2/RECYCLING PKG DAY/Recycled-PKG-in-Food",
-    "PPWR2/REUSE PKG DAY/Reusable-PKG-in-EU",
-    "PPWR2/REUSE PKG DAY/PR3-Standards",
-    "PPWR2/REUSE PKG DAY/Industrializing-PKG-Reuse",
-    "PPWR2/REUSE PKG DAY/Secondary-PKG-Reuse",
-    "PPWR2/REUSE PKG DAY/Buddie-Pack-Project",
-    "PPWR2/REUSE PKG DAY/Education-in-Responsible-PKG",
-    "PPWR2/REUSE PKG DAY/FitNESS-Platform",
-    "PPWR2/REUSE PKG DAY/Virtual-Labs-in-Food-Science",
-    "PPWR2/REUSE PKG DAY/PKG-Education-in-the-US",
-
-
-
+    
     "Packaging materials/Introduction/panorama-of-food-packaging-part-1",
     "Packaging materials/Packaging materials and shaping process/glass-packaging",
     "Packaging materials/Packaging materials and shaping process/metal-packaging",
