@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 30th November 2023
 Author: Steward OUADI
 -----
-Last Modified: Tuesday, 16th January 2024
+Last Modified: Wednesday, 17th January 2024
 Modified By: Steward OUADI
 -->
 <!DOCTYPE html>
@@ -40,6 +40,14 @@ Modified By: Steward OUADI
 
         .card:hover {
             transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* subtle shadow for depth */
+
+        }
+
+        .small-card:hover {
+            transform: scale(1.1);
+            /* slightly larger scale for smaller cards */
         }
 
         .card img {
@@ -65,9 +73,20 @@ Modified By: Steward OUADI
             /* Center-align the text */
         }
 
+        .small-card {
+            width: calc(16.5% - 2.5%);
+            /* Half the width of the original cards */
+            /* Add any additional styling needed for the smaller cards */
+        }
+
         @media (max-width: 768px) {
             .card {
                 width: calc(90% - 10%);
+            }
+
+            .small-card {
+                width: calc(45% - 5%);
+                /* Adjust for smaller screens */
             }
         }
     </style>
@@ -136,7 +155,7 @@ Modified By: Steward OUADI
                 <h1>PPWR</h1>
             </div>
         </div>
-        <div class="card" onclick='window.location.href=`#` '>
+        <div class="card small-card" onclick='window.location.href=`#` '>
             <img src="https://fitness.agroparistech.fr/fitness2/wip/media/img-select-objective/FitnessInfo.png"
                 alt="FITNESS Information">
             <div class="card-text">
@@ -144,14 +163,14 @@ Modified By: Steward OUADI
             </div>
         </div>
 
-        <div class="card" onclick='window.location.href=`#` '>
+        <div class="card small-card" onclick='window.location.href=`#` '>
             <img src="https://fitness.agroparistech.fr/fitness2/wip/media/img-select-objective/conferences.png"
                 alt="Conferences">
             <div class="card-text">
                 <h1>Conferences</h1>
             </div>
         </div>
-        <div class="card" onclick='window.location.href=`#` '>
+        <div class="card small-card" onclick='window.location.href=`#` '>
             <img src="https://fitness.agroparistech.fr/fitness2/wip/media/img-select-objective/simulations.png"
                 alt="Simulations">
             <div class="card-text">
@@ -159,21 +178,21 @@ Modified By: Steward OUADI
             </div>
         </div>
 
-        <div class="card" onclick='window.location.href=`#` '>
+        <div class="card small-card" onclick='window.location.href=`#` '>
             <img src="https://fitness.agroparistech.fr/fitness2/wip/media/img-select-objective/safemat.png"
                 alt="Research Group SAFEMAT">
             <div class="card-text">
                 <h1>Research Group SAFEMAT</h1>
             </div>
         </div>
-        <div class="card" onclick='window.location.href=`#` '>
+        <div class="card small-card" onclick='window.location.href=`#` '>
             <img src="https://fitness.agroparistech.fr/fitness2/wip/media/img-select-objective/contact.png"
                 alt="Contact">
             <div class="card-text">
                 <h1>Contact</h1>
             </div>
         </div>
-        <div class="card"
+        <div class="card small-card"
             onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/wip/lectures-archi/disclaimer.html` '>
             <img src="https://fitness.agroparistech.fr/fitness2/wip/media/img-select-objective/disclaimer.png"
                 alt="Disclaimer">
