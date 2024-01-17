@@ -79,6 +79,16 @@ Modified By: Steward OUADI
             /* Add any additional styling needed for the smaller cards */
         }
 
+        .card-separator {
+            width: 100%;
+            height: 30px;
+            /* Adjust as needed */
+            background-color: #f2f2f2;
+            /* Or any color that fits the design */
+            margin: 20px 0;
+            /* Spacing around the separator */
+        }
+
         @media (max-width: 768px) {
             .card {
                 width: calc(90% - 10%);
@@ -87,6 +97,11 @@ Modified By: Steward OUADI
             .small-card {
                 width: calc(45% - 5%);
                 /* Adjust for smaller screens */
+            }
+
+            .card-separator {
+                height: 15px;
+                /* Smaller height for mobile */
             }
         }
     </style>
@@ -155,6 +170,9 @@ Modified By: Steward OUADI
                 <h1>PPWR</h1>
             </div>
         </div>
+
+        <div class="card-separator"></div>
+
         <div class="card small-card" onclick='window.location.href=`#` '>
             <img src="https://fitness.agroparistech.fr/fitness2/wip/media/img-select-objective/FitnessInfo.png"
                 alt="FITNESS Information">
