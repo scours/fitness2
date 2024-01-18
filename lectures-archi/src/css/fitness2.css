@@ -5,7 +5,7 @@
  * File Created: Tuesday, 16th January 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 16th January 2024
+ * Last Modified: Thursday, 18th January 2024
  * Modified By: Steward OUADI
  */
 
@@ -29,7 +29,7 @@ body {
 /* Style the sidenav links and the dropdown button */
 .sidebar a,
 .dropdown-btn {
-  padding: 6px 8px 6px 16px;
+  /* padding: 6px 8px 6px 16px; */
   text-decoration: none;
   font-size: 20px;
   color: #f1f1f1;
@@ -41,6 +41,8 @@ body {
   cursor: pointer;
   outline: none;
   transition: 0.3s;
+  background-color: #d0743c; /* Base color for top-level */
+  padding-left: 16px; /* Base left padding */
 }
 
 .sidebar a:hover {
@@ -50,6 +52,39 @@ body {
 .dropdown-btn:hover {
   color: #cab6b6;
   /* font-size: 22px; */
+}
+
+/* Enhanced CSS for .dropdown-btn.active with rounded borders */
+.dropdown-btn.active {
+  background-color: #d0743c; /* Slightly lighter orange for contrast */
+  color: #ffffff; /* Keep the text color white for readability */
+  font-weight: bold; /* Make the font bold */
+  border: 2px solid #f2f2f2; /* Add a light border for prominence */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Styles for first-level child */
+.dropdown-container .dropdown-btn {
+  background-color: #c06332; /* Slightly darker for first-level child */
+  padding-left: 32px; /* Increased padding for first-level child */
+}
+
+/* Styles for second-level child */
+.dropdown-container .dropdown-container .dropdown-btn {
+  background-color: #a95222; /* Even darker for second-level child */
+  padding-left: 48px; /* Further increased padding for second-level child */
+}
+
+/* Optional: Change the icon color for active state */
+.dropdown-btn.active i.fa {
+  color: #f2f2f2; /* Light color for the icon */
+}
+
+/* Adjusting the dropdown-container for better visual hierarchy */
+.dropdown-container {
+  background-color: #b25222; /* Even darker shade for dropdown container */
+  padding-left: 15px; /* Padding to create visual hierarchy */
 }
 
 /* Main content */
