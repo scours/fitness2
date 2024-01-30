@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 4th December 2023
+ * Last Modified: Tuesday, 30th January 2024
  * Modified By: Steward OUADI
  */
 
@@ -46,8 +46,7 @@ class Footer extends HTMLElement {
                                 <small>olivier.vitrac@agroparistech.fr</small></a><br /><a
                                 href="mailto:olivier.vitrac@agroparistech.fr"
                                 title="contact the Administrator">&#128222;
-                                <small>+33 169
-                                    935 063</small></a>
+                                <small>+33 (0)1 89 10 11 85</small></a>
                         </p>
                     </li>
                 </ul>
