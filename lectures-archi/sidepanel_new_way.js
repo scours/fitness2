@@ -1,11 +1,11 @@
 /*
- * File: sidepanel.js
+ * File: sidepanel_new_way.js
  * Contract: EU contract 2022-FR01-KA220-HED-000023509
  * Project: FitNESS 2 ERASMUS+
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 19th April 2023
+ * Last Modified: Tuesday, 30th January 2024
  * Modified By: Steward OUADI
  */
 
@@ -787,4 +787,3 @@ function splitLastOccurrence(str, substring) {
 
   return [before, after];
 }
-

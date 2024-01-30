@@ -1,11 +1,11 @@
 /*
- * File: sidepanel.js
+ * File: sidepanel2.js
  * Contract: EU contract 2022-FR01-KA220-HED-000023509
  * Project: FitNESS 2 ERASMUS+
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 13th February 2023
+ * Last Modified: Tuesday, 30th January 2024
  * Modified By: Steward OUADI
  */
 
@@ -288,9 +288,9 @@ function addListenersToDropdownButtons() {
 /* Extract and store all lectures into a global array*/
 async function extractMetaData() {
   const pathSeparator = "/";
-   let basePath =
-     "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
-     pathSeparator;
+  let basePath =
+    "https://raw.githubusercontent.com/scours/fitness2/wip/manifests" +
+    pathSeparator;
   //let basePath = "http://127.0.0.1:5501/manifests" + pathSeparator;
 
   // let basePath = "manifests" + pathSeparator;

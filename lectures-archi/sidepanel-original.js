@@ -1,11 +1,11 @@
 /*
- * File: sidepanel.js
+ * File: sidepanel-original.js
  * Contract: EU contract 2022-FR01-KA220-HED-000023509
  * Project: FitNESS 2 ERASMUS+
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 28th February 2023
+ * Last Modified: Tuesday, 30th January 2024
  * Modified By: Steward OUADI
  */
 
@@ -533,4 +533,3 @@ function closeNav() {
   // document.getElementById("open-menu-button").classList.toggle("hidden");
   document.getElementById("open-menu-button").style.visibility = "visible";
 }
-
