@@ -34,5 +34,6 @@
     "supplier",
     "thickness"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.2/part1.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.2/part1.html#/2",
+  "qAndAVariables":["Access the assessment = https://fitness.agroparistech.fr/fitness2/online/LNE/assessments/migration-modeling-for-monomaterials/index.html"]
 }

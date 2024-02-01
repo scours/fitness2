@@ -21,5 +21,5 @@
     "keyword3"
   ],
   "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/sensory-science-applied-to-food-and-food-packaging.html#/1",
-  "qAndAVariables":["General questions for introductory assessment/factorsShelfLifeGeneral", "Sensory analytics of food products/sensoryAnalyticsOfFoodProducts", "Instrumental analytics coupled to sensory evaluation/instrumentalAnalyticsCoupledToSensoryEvaluation", "Sensory evaluation in shelf life testing of packed food/sensoryEvaluationInShelfLifeTestingOfPackedFood", "Sensory investigations of packaging materials/instrumentalAnalyticsCoupledToSensoryEvaluation"]
+  "qAndAVariables":["General questions for introductory assessment = factorsShelfLifeGeneral", "Sensory analytics of food products = sensoryAnalyticsOfFoodProducts", "Instrumental analytics coupled to sensory evaluation = instrumentalAnalyticsCoupledToSensoryEvaluation", "Sensory evaluation in shelf life testing of packed food = sensoryEvaluationInShelfLifeTestingOfPackedFood", "Sensory investigations of packaging materials = instrumentalAnalyticsCoupledToSensoryEvaluation"]
 }

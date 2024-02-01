@@ -31,5 +31,6 @@
     "safety",
     "unit"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/LNE/gmp-and-quality-assurance-standards.html"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/LNE/gmp-and-quality-assurance-standards.html",
+  "qAndAVariables":["Access the assessment = https://fitness.agroparistech.fr/fitness2/online/LNE/assessments/gmp-and-quality-assurance-standards/index.html"]
 }

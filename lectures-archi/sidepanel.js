@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 16th January 2024
+ * Last Modified: Thursday, 1st February 2024
  * Modified By: Steward OUADI
  */
 
@@ -337,17 +337,23 @@ function createAElementForDropDownMenuToPrint(identifier) {
     mainDiv.appendChild(qAndAHeader);
     for (let i = 0; i < lecture.qAndAVariables.length; i++) {
       const qAndAPar = document.createElement("p");
-      var qAndAVariablesSplitted = lecture.qAndAVariables[i].split("/");
-      const title = qAndAVariablesSplitted[0]; // Get the title
-      const qAndAVariableContent = qAndAVariablesSplitted[1];
+      var qAndAVariablesSplitted = lecture.qAndAVariables[i].split("=");
+      const title = qAndAVariablesSplitted[0].trim(); // Get the title
+      const qAndAVariableContent = qAndAVariablesSplitted[1].trim();
       const qAndAURL = document.createElement("a");
 
-      if (title.trim() === "") {
+      if (title === "") {
         // If the title is empty, replace it with "Access Q/A number x"
-        title = "Access Q&A number " + (i + 1);
+        title = "Access the assessment number " + (i + 1);
       }
 
-      qAndAURL.href = qAndABaseURL + qAndAVariableContent;
+      if (qAndAVariableContent.startsWith("https")) {
+        // It is an URL, so we can point to it directly
+        qAndAURL.href = qAndAVariableContent;
+      } else {
+        // It is a variable
+        qAndAURL.href = qAndABaseURL + qAndAVariableContent;
+      }
       qAndAURL.text = title;
       qAndAURL.target = "_blank";
       qAndAPar.appendChild(qAndAURL);

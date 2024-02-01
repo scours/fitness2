@@ -34,5 +34,7 @@
     "substances",
     "unit"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S3/U3.1/part1.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S3/U3.1/part1.html#/2",
+  "qAndAVariables":["Access the assessment = https://fitness.agroparistech.fr/fitness2/online/LNE/assessments/regulatory-context-EU-and-US/index.html"]
+
 }
