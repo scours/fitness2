@@ -232,7 +232,7 @@ function createAElementForDropDownMenuToPrint(identifier) {
   // console.log(y);
 
   const qAndABaseURL =
-    "https://fitness.agroparistech.fr/fitness2/wip/quiz-creator-tool-online/index.html#";
+    "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#";
 
   // We will modify main view to display the content of the selected lecture
 
