@@ -11,7 +11,7 @@ https://fitness.agroparistech.fr
 
 <a href="https://github.com/scours/fitness2/tree/wip" target="_blank">Click on this GitHub repository</a>, then click on the `Code` button on the right and on "Download ZIP".
 
-Once you have downloaded the file, unzip it and open the **lectures-archi/sidepanel.html** file. You should see an interface like this one:
+Once you have downloaded the file, unzip it and open the **lectures-archi/lectures.html** file. You should see an interface like this one:
 
 ![main-page](img/main-page.PNG)
 
@@ -157,7 +157,7 @@ In the file “lectures-archi/sidepanel.js”, to generate the new static conten
 
 Then in a web browser:
 
-1. open on a local web server, for example http://127.0.0.1:5502/lectures-archi/sidepanel.html
+1. open on a local web server, for example http://127.0.0.1:5502/lectures-archi/lectures.html
    1. The web browsers used for this procedure are chrome and firefox.
 
 The static content has been generated and is available in the logs tab
@@ -182,7 +182,7 @@ cd server/Bulk/fitnessII/fitness-github-repo
 
 ./update-content-on-server.sh
 
-Modifications can now be seen on https://fitness.agroparistech.fr/fitness2/lectures/sidepanel.html
+Modifications can now be seen on https://fitness.agroparistech.fr/fitness2/lectures/lectures.html
 
 ## All FITNESS presentations
 
@@ -208,9 +208,9 @@ Excalidraw generated contents are [shared in this folder](https://drive.google.c
 
 We will create a “ppwr2” syllabus so you can follow the same steps to create your own.
 
-1. Create new web page “ppwr2.html” (you can copy lectures-archi/sidepanel.html)
+1. Create new web page “ppwr2.html” (you can copy lectures-archi/lectures.html)
    1. In ppwr2.html, point to ppwr2.js, instead of “sidepanel.js”
-2. Create new .js file “ppwr2.js” (you can copy lectures-archi/sidepanel.js)
+2. Create new .js file “ppwr2.js” (you can copy lectures-archi/lectures.js)
    1. In “ppwr2.js, point to “ppwr2-manifests”, instead of “manifests”
 3. Create new manifests folder “ppwr2-manifests” (you can copy the content of “manifests”)
    1. keep only necessary files to create your syllabus. Or follow files and folders structure to create your own. Update root.manifest accordingly.

@@ -752,7 +752,7 @@ function showNumberOfAnswersOutOfTotal() {
          correct answers out of <b>${
            visitedQuestions.size
          }</b> questions | <font size="0.4rem">${dt.toLocaleString()}</font>
-         <hr class="fitness" /><br /><a href="/fitness2/lectures/sidepanel.html">See all FitNESS lectures</a>`;
+         <hr class="fitness" /><br /><a href="/fitness2/lectures/lectures.html">See all FitNESS lectures</a>`;
 }
 
 function showResults() {
