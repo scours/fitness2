@@ -12,7 +12,7 @@ class Header extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
     <div class="topnav" id="topNavId1">
-        <a href="https://fitness.agroparistech.fr/fitness2/wip/lectures-archi/" >Home</a>
+        <a href="https://fitness.agroparistech.fr/fitness2/lectures/" >Home</a>
         <a href="javascript:void(0);" class="icon" onclick="topNavOnClick()">
             <i class="fa fa-bars"></i>
         </a>

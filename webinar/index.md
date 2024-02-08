@@ -165,7 +165,7 @@ FitNESS stands for "_Food packaging open courseware for higher education and sta
 
 # FitNESS 2 new features
 
-- Multiple mirrors: <a href="https://mol12.agroparistech.fr/fitness/lectures/" target="_blank">FITNESS 1</a> (AgroParisTech), <a href="http://fitness.pbf.hr/fitness/lectures/" target="_blank">FITNESS 1</a> (Zagreb University), <a href="https://mol12.agroparistech.fr/fitness2/wip/lectures-archi/sidepanel.html" target="_blank">FITNESS 2</a> (AgroParisTech, work in progress). Others in discussion: Agro Dijon Institute, Michigan State University
+- Multiple mirrors: <a href="https://mol12.agroparistech.fr/fitness/lectures/" target="_blank">FITNESS 1</a> (AgroParisTech), <a href="http://fitness.pbf.hr/fitness/lectures/" target="_blank">FITNESS 1</a> (Zagreb University), <a href="https://mol12.agroparistech.fr/fitness2/lectures/sidepanel.html" target="_blank">FITNESS 2</a> (AgroParisTech, work in progress). Others in discussion: Agro Dijon Institute, Michigan State University
 
 - Non linear training / learning: slides are based on your preferences and answers e.g : <a href="https://mol12.agroparistech.fr/fitness2/train-the-trainers/session-2/quiz-creator-tool/example-1.html" target="_blank">example 1</a>, <a href="https://mol12.agroparistech.fr/fitness2/train-the-trainers/session-2/quiz-creator-tool/example-2.html" target="_blank">example 2</a>, <a href="https://mol12.agroparistech.fr/fitness2/train-the-trainers/session-2/quiz-creator-tool/index.html" target="_blank">example 3</a>
 

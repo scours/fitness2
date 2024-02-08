@@ -214,11 +214,11 @@ cd server/Bulk/fitnessII/fitness-github-repo
 
 ./update-content-on-server.sh
 
-Modifications can now be seen on https://fitness.agroparistech.fr/fitness2/wip/lectures-archi/sidepanel.html 
+Modifications can now be seen on https://fitness.agroparistech.fr/fitness2/lectures/sidepanel.html 
 
 ## All FITNESS presentations
 
-all the presentations created for FITNESS [are listed here](https://fitness.agroparistech.fr/fitness2/wip/lectures-archi/fitness2-presentations.html)
+all the presentations created for FITNESS [are listed here](https://fitness.agroparistech.fr/fitness2/lectures/fitness2-presentations.html)
 
 ## Media files on server
 

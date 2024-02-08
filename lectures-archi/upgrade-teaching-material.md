@@ -1,12 +1,8 @@
 # Upgrade teaching material
 
-
-
 ## Manifest editor
 
-[The form will help you modify the metadata of your lectures](https://fitness.agroparistech.fr/fitness2/wip/lectures-archi/modifyLectures/modifyLecture.html). The metadata is used to find your lecture when a search is performed on the [FITNESS 2 platform](https://fitness.agroparistech.fr/fitness2/wip/lectures-archi/).
-
-
+[The form will help you modify the metadata of your lectures](https://fitness.agroparistech.fr/fitness2/lectures/modifyLectures/modifyLecture.html). The metadata is used to find your lecture when a search is performed on the [FITNESS 2 platform](https://fitness.agroparistech.fr/fitness2/lectures/).
 
 ## Quizzes creation
 
