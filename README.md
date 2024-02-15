@@ -198,7 +198,7 @@ server/Bulk/fitnessII/www/wip/media
 
 You can view the content through the internet:
 
-https://fitness.agroparistech.fr/fitness2/wip/media/
+https://fitness.agroparistech.fr/fitness2/lectures/media/
 
 ## Excalidraw content
 
