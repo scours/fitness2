@@ -1,0 +1,15 @@
+/*
+ * File: manifest2.txt
+ * Contract: EU contract 2022-FR01-KA220-HED-000023509
+ * Project: FitNESS 2 ERASMUS+
+ * File Created: Tuesday, 20th February 2024
+ * Author: Steward OUADI
+ * -----
+ * Last Modified: Tuesday, 20th February 2024
+ * Modified By: Steward OUADI
+ */
+
+
+// Syntax: slide URL slidesToShow
+slide https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html [8:10]
+slide https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part5.html [8:15] // s’il n’y à pas de 3eme arg, on charge tout.

@@ -1,0 +1,81 @@
+/*
+ * File: manifest.txt
+ * Contract: EU contract 2022-FR01-KA220-HED-000023509
+ * Project: FitNESS 2 ERASMUS+
+ * File Created: Friday, 16th February 2024
+ * Author: Steward OUADI
+ * -----
+ * Last Modified: Friday, 16th February 2024
+ * Modified By: Steward OUADI
+ */
+
+ASSIGNATION
+set user.prop3 = user.prop1 * user.prop 2 // si prop1 et prop2 non définis, comment faire? Toute propriété non définie à l’avance est mise à 0
+set user.prop4 = user.prop1 > user.prop2 ? 1 : -1
+set user.prop5 = [1,2] * user.prop2
+set user.prop6 = (1:2)*3
+set user.prop7 = 1./(1:2) 
+set user.prop8 = [1,2].*[3,4] 
+
+set session.clientType = Tablet
+set session.resolution = 1920x1080
+
+global.viewerVersion // to be set
+
+
+
+TESTS
+// jump to labels if needed
+goto :label1: if test expression 
+goto :label1:
+goto :label2:
+
+
+:label1:
+slide URL [1:10]//[1,4,5] // URL du fichier markdown. si html, récupérer partie markdown
+slide URL [2:5] // s’il n’y à pas de 3eme arg, on charge tout.
+
+:label2:
+manifest URL “lecture Title” // lecture title optional. Créer slide dynamique, pour lui demander s’il veut quitter le cours actuel, pour aller vers le nouveau
+
+
+slide :labelSlide1: // Slide #hashLabelSlide1
+slide :labelSlide2:
+
+
+
+defslide labelSlide1 { 
+line1 
+line2 
+} 
+
+
+defslide labelSlide2 { 
+line1 
+line2 
+} 
+
+
+QCM/TESTS
+:Tests1:
+test URL [1:10]//[1,4,5] // URL du fichier markdown. si html, récupérer partie markdown
+test URL [2:5] // s’il n’y à pas de 3eme arg, on charge tout.
+
+test :labelTest1:
+test :labelTest2:
+
+deftest labelTest1 { 
+line1 
+line2 
+} 
+
+deftest labelTest2 { 
+line1 
+line2 
+} 
+
+VALIDATE
+// Show user a validation slides
+validate slide5 // validate after slide 5
+validate slide10
+validate each 5
