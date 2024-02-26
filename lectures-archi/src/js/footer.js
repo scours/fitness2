@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 30th January 2024
+ * Last Modified: Monday, 26th February 2024
  * Modified By: Steward OUADI
  */
 
@@ -30,9 +30,11 @@ class Footer extends HTMLElement {
                 <p class="nav-link p-0 text-muted">The FitNESS platform is hosted by <a
                         href="https://www.contactalimentaire.fr/fr/unite-recherche-developpement/projet-fitness-food-packaging-open-courseware-higher-education-and"
                         title="show context (in French)" target="_blank">UMT Actia SafeMat</a></p>
-                <p class="nav-link p-0 text-muted">The FitNESS project is coordinated by <a
-                        href="https://www.actia-asso.eu/en/projets/fitness/" title="administrative coordination"
-                        target="_blank">ACTIA</a></p>
+                <p class="nav-link p-0 text-muted">The FitNESS project is administratively coordinated by <a
+                        href="https://www.actia-asso.eu/en/projets/fitness/" title="administrative coordination ACTIA"
+                        target="_blank">ACTIA</a> and <a
+                        href="https://www.lne.fr/fr" title="administrative coordination LNE"
+                        target="_blank">LNE</a> </p>
             </div>
 
             <div class="col mb-3">
