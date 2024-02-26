@@ -5,9 +5,42 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 21st February 2024
+ * Last Modified: Monday, 26th February 2024
  * Modified By: Steward OUADI
  */
+
+/**
+ * Removes inline comments from a given line of text.
+ * Inline comments are assumed to start with "//" outside of URLs.
+ *
+ * @param {string} line - The line of text from which to remove the comment.
+ * @return {string} - The line of text without the inline comment.
+ */
+function removeInlineComment(line) {
+  // Find the index of "//" that appears outside of URLs. Assuming URLs start with "http".
+  // This simplistic approach looks for "//" that is not immediately preceded by ":".
+  const commentIndex = line.search(/(?<!:)\s*\/\//);
+
+  // If "//" is found and it's not part of a URL, trim from the comment start to the line's end.
+  if (commentIndex !== -1) {
+    return line.substring(0, commentIndex).trim();
+  }
+
+  // If no inline comment is found, or it's part of a URL, return the line unchanged.
+  return line;
+}
+
+function evaluateWithMathJs(expression) {
+  let resultToReturn;
+
+  resultToReturn = math.evaluate(expression);
+  if (resultToReturn["_data"] !== undefined) {
+    resultToReturn = resultToReturn["_data"];
+  }
+  // evaluateResult = math.evaluate(slideNumberIfAny)["_data"];
+
+  return resultToReturn;
+}
 
 /**
  * Asynchronously parses the manifest content, creating Slide objects for each valid line.
@@ -27,37 +60,35 @@ async function parseManifest(manifestContent) {
     // Skip processing if the line does not start with "slide".
     if (!line.trim().startsWith("slide")) continue;
 
+    // Remove any inline comment from the line
+    line = removeInlineComment(line);
     // Regular expression to match valid slide entries, excluding inline comments.
-    const regex = /^slide\s+([^\s]+)\s*(\[\d+(:\d+)?\]|(\d+))?(?=\s+\/\/|$)/;
-    const matches = line.match(regex);
+    const regex = /^(slide)\s+([^\s]+)\s*(.*)$/;
+    const match = line.match(regex);
 
-    if (matches) {
-      const [, link, slideNumberIfAny] = matches; // Destructure the URL and slide number or range from the matches.
+    if (match) {
+      const [, , link, slideNumberIfAny] = match; // Destructure the URL and slide number or range from the match.
 
       // Check if there's a specified slide number or range.
       if (slideNumberIfAny) {
-        if (slideNumberIfAny.startsWith("[")) {
-          // Handle slide ranges, e.g., [1:4].
-          const rangeMatch = slideNumberIfAny.match(/\[(\d+)(?::(\d+))?\]/);
-          if (rangeMatch) {
-            const start = parseInt(rangeMatch[1], 10); // Start of the range.
-            const end = rangeMatch[2] ? parseInt(rangeMatch[2], 10) : start; // End of the range, defaulting to start if not specified.
-            for (let i = start; i <= end; i++) {
-              // Generate a hash for each slide within the range.
-              const hash = await generateHash(index, line, i);
-              // Create and add a new Slide object for each slide number within the range.
-              slides.push(new Slide(hash, line, link, i));
-            }
+        try {
+          // let result = math.evaluate(slideNumberIfAny)["_data"];
+          let result = evaluateWithMathJs(slideNumberIfAny);
+
+          if (!Array.isArray(result)) {
+            result = [result];
           }
-        } else {
-          // Handle single slide numbers.
-          const hash = await generateHash(
-            index,
-            line,
-            parseInt(slideNumberIfAny, 10)
-          );
-          slides.push(
-            new Slide(hash, line, link, parseInt(slideNumberIfAny, 10))
+
+          // Flatten the result to handle any nested arrays
+          result = result.flat();
+
+          for (let num of result) {
+            const hash = await generateHash(index, line, num);
+            slides.push(new Slide(hash, line, link, num));
+          }
+        } catch (error) {
+          console.error(
+            `Error evaluating slideNumberIfAny '${slideNumberIfAny}': ${error}`
           );
         }
       } else {

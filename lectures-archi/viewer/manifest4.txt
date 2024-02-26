@@ -14,6 +14,3 @@
 // Syntax: slide URL slidesToShow
 slide "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html" [1:4]  // comment
 slide "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part5.html" [5:9] // s’il n’y à pas de 3eme arg, on charge tout.
-slide "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.3/part1.html" [14:22] // s’il n’y à pas de 3eme arg, on charge tout.
-slide "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.3/part1.html" 9 // comment
-slide "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.6/part1.html" [1,18,20] // comment
