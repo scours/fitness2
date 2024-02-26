@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 30th November 2023
 Author: Steward OUADI
 -----
-Last Modified: Tuesday, 23rd January 2024
+Last Modified: Monday, 26th February 2024
 Modified By: Steward OUADI
 -->
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ Modified By: Steward OUADI
         }
 
         .card {
-            width: calc(20% - 5%);
+            width: calc(30% - 5%);
             margin: 10px;
             box-sizing: border-box;
             overflow: hidden;
@@ -45,10 +45,6 @@ Modified By: Steward OUADI
 
         }
 
-        .small-card:hover {
-            transform: scale(1.1);
-            /* slightly larger scale for smaller cards */
-        }
 
         .card img {
             width: 100%;
@@ -57,14 +53,14 @@ Modified By: Steward OUADI
         }
 
         .card-text {
-            padding: 10px;
+            /* padding: 20px; */
             text-align: center;
             background-color: #f2f2f2;
-            height: 33.33%;
+            /* height: 33.33%; */
         }
 
         .card-text h1 {
-            font-size: 1.5em;
+            font-size: 1.2em;
             /* Adjust the font size as needed */
         }
 
@@ -73,36 +69,47 @@ Modified By: Steward OUADI
             /* Center-align the text */
         }
 
-        .small-card {
-            width: calc(15% - 2.5%);
-            /* Half the width of the original cards */
-            /* Add any additional styling needed for the smaller cards */
-        }
 
-        .card-separator {
-            width: 100%;
-            height: 30px;
-            /* Adjust as needed */
-            background-color: #f2f2f2;
-            /* Or any color that fits the design */
-            margin: 20px 0;
-            /* Spacing around the separator */
+        .standout {
+            /* Bootstrap primary color for emphasis */
+            box-shadow: 2px 6px 10px #ec6807;
+            /* Soft glow effect */
         }
 
         @media (max-width: 768px) {
+            .objective-section {
+                margin-bottom: 20px;
+                /* Smaller margin for smaller screens */
+                padding: 10px;
+                /* Smaller padding for smaller screens */
+            }
+
+            .card-container {
+                justify-content: center;
+                /* Center cards on smaller screens */
+            }
+
             .card {
                 width: calc(60% - 10%);
             }
 
-            .small-card {
-                width: calc(40% - 5%);
-                /* Adjust for smaller screens */
-            }
 
-            .card-separator {
-                height: 15px;
-                /* Smaller height for mobile */
-            }
+
+        }
+
+        .objective-section {
+            width: 80%;
+            /* Set the width of each section to 80% of its container's width */
+            margin: 20px auto 40px;
+            /* Center the section and add vertical spacing */
+            padding: 20px;
+            /* Adds padding inside each section for spacing */
+            border-radius: 8px;
+            /* Optional: Adds rounded corners to each section */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Optional: Adds a subtle shadow for depth */
+            background-color: #dfdcdc;
+            /* Light background color for the section */
         }
     </style>
 </head>
@@ -110,120 +117,143 @@ Modified By: Steward OUADI
 <body class="center-text">
     <main-header></main-header>
 
-    <h1>Select your objective</h1>
+    <section class="objective-section">
+        <h2>I want to learn</h2>
+        <div class="card-container">
 
+            <div class="card standout"
+                onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/lectures.html`'>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Learn.png"
+                    alt="Learn">
+                <div class="card-text">
+                    <h1>with FITNESS2 (new)</h1>
+                </div>
+            </div>
 
-    <div class="card-container">
+            <div class="card" onclick='window.location.href=`https://fitness.agroparistech.fr/fitness/lectures/html/` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Legacy.png"
+                    alt="FITNESS 1">
+                <div class="card-text">
+                    <h1>with FITNESS1</h1>
+                </div>
+            </div>
 
-        <div class="card"
-            onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/lectures.html`'>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Learn.png"
-                alt="Learn">
-            <div class="card-text">
-                <h1>Learn</h1>
+            <div class="card" onclick='window.location.href=`#` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/quiz.png"
+                    alt="QUIZZ">
+                <div class="card-text">
+                    <h1>QUIZZ</h1>
+                </div>
+            </div>
+
+            <div class="card"
+                onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/ppwr2.html` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/PPWR2.png"
+                    alt="PPWR">
+                <div class="card-text">
+                    <h1>PPWR</h1>
+                </div>
+            </div>
+
+            <div class="card" onclick='window.location.href=`#` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/hot.png"
+                    alt="Hot Topics">
+                <div class="card-text">
+                    <h1>Hot Topics</h1>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="card"
-            onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/upgrade-teaching-material.html`  '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/upgrade.png"
-                alt="Upgrade teaching material">
-            <div class="card-text">
-                <h1>Upgrade Teaching Material</h1>
-            </div>
-        </div>
+    <section class="objective-section">
+        <h2>I want to contribute</h2>
+        <div class="card-container">
 
-        <div class="card"
-            onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/contribute.html` '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/contribute.png"
-                alt="Contribute">
-            <div class="card-text">
-                <h1>Contribute</h1>
+            <div class="card"
+                onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/upgrade-teaching-material.html`  '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/upgrade.png"
+                    alt="Upgrade teaching material">
+                <div class="card-text">
+                    <h1>Upgrade Teaching Material</h1>
+                </div>
             </div>
-        </div>
 
-        <div class="card" onclick='window.location.href=`#` '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/hot.png"
-                alt="Hot Topics">
-            <div class="card-text">
-                <h1>Hot Topics</h1>
+            <div class="card"
+                onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/contribute.html` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/contribute.png"
+                    alt="Contribute">
+                <div class="card-text">
+                    <h1>Contribute</h1>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="card" onclick='window.location.href=`https://fitness.agroparistech.fr/fitness/lectures/html/` '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Legacy.png"
-                alt="FITNESS 1">
-            <div class="card-text">
-                <h1>FITNESS 1</h1>
-            </div>
-        </div>
-        <div class="card" onclick='window.location.href=`#` '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/quiz.png"
-                alt="QUIZZ">
-            <div class="card-text">
-                <h1>QUIZZ</h1>
-            </div>
-        </div>
 
-        <div class="card"
-            onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/ppwr2.html` '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/PPWR2.png"
-                alt="PPWR">
-            <div class="card-text">
-                <h1>PPWR</h1>
-            </div>
-        </div>
 
-        <div class="card-separator"></div>
 
-        <div class="card small-card"
-            onclick="window.open(`https://htmlpreview.github.io/?https://github.com/scours/fitness2/blob/wip/README.html`, '_blank')">
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/FitnessInfo.png"
-                alt="FITNESS Information">
-            <div class="card-text">
-                <h1>FITNESS Information</h1>
-            </div>
-        </div>
 
-        <div class="card small-card" onclick='window.location.href=`#` '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/conferences.png"
-                alt="Conferences">
-            <div class="card-text">
-                <h1>Conferences</h1>
-            </div>
-        </div>
-        <div class="card small-card" onclick='window.location.href=`#` '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/simulations.png"
-                alt="Simulations">
-            <div class="card-text">
-                <h1>Simulations</h1>
-            </div>
-        </div>
 
-        <div class="card small-card" onclick='window.location.href=`#` '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/safemat.png"
-                alt="Research Group SAFEMAT">
-            <div class="card-text">
-                <h1>Research Group SAFEMAT</h1>
-            </div>
-        </div>
-        <div class="card small-card" onclick='window.location.href=`#` '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/contact.png"
-                alt="Contact">
-            <div class="card-text">
-                <h1>Contact</h1>
-            </div>
-        </div>
-        <div class="card small-card"
-            onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/disclaimer.html` '>
-            <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/disclaimer.png"
-                alt="Disclaimer">
-            <div class="card-text">
-                <h1>Disclaimer</h1>
-            </div>
-        </div>
 
-    </div>
+
+
+
+
+    <section class="objective-section">
+        <h2>I want to know more</h2>
+        <div class="card-container">
+
+
+            <div class="card"
+                onclick="window.open(`https://htmlpreview.github.io/?https://github.com/scours/fitness2/blob/wip/README.html`, '_blank')">
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/FitnessInfo.png"
+                    alt="FITNESS Information">
+                <div class="card-text">
+                    <h1>FITNESS Information</h1>
+                </div>
+            </div>
+
+            <div class="card" onclick='window.location.href=`#` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/conferences.png"
+                    alt="Conferences">
+                <div class="card-text">
+                    <h1>Conferences</h1>
+                </div>
+            </div>
+            <div class="card" onclick='window.location.href=`#` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/simulations.png"
+                    alt="Simulations">
+                <div class="card-text">
+                    <h1>Simulations</h1>
+                </div>
+            </div>
+
+            <div class="card" onclick='window.location.href=`#` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/safemat.png"
+                    alt="Research Group SAFEMAT">
+                <div class="card-text">
+                    <h1>Research Group SAFEMAT</h1>
+                </div>
+            </div>
+            <div class="card" onclick='window.location.href=`#` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/contact.png"
+                    alt="Contact">
+                <div class="card-text">
+                    <h1>Contact</h1>
+                </div>
+            </div>
+            <div class="card"
+                onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/disclaimer.html` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/disclaimer.png"
+                    alt="Disclaimer">
+                <div class="card-text">
+                    <h1>Disclaimer</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <main-footer></main-footer>
     <link rel="stylesheet" href="modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
