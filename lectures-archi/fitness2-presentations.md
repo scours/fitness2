@@ -30,7 +30,7 @@ Below are the different presentations of the FITNESS 2 platforms.
 
 ### ICEF
 
-[icef presentation, june 2023](https://fitness.agroparistech.fr/fitness2/webinar/icef14.html)
+[icef presentation, june 2023](https://fitness.agroparistech.fr/fitness2/webinar/icef14-light.html)
 
 ### UMT SAFEMAT, Steering committee
 
