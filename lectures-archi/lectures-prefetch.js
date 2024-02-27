@@ -190,6 +190,10 @@ lecturesDetails.set(
 The unit is divided into four sections. In the first section shelf life definitions and related regulation aspects are discussed. The second section is focused on factors influencing the shelf life, such as product characteristics, food packaging and environment. The third section introduces accelerated shelf life testing. The last section gives the tools for the prediction of shelf life of packaged foods.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part4.html#/2" id="lecture-button-predict-shelf-life" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
+  "Shelf-life/interaction",
+  `<h1>Interaction</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p></p><h4>Abstract</h4><p>Food packaging interaction</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/food-packaging-interaction.html#/2" id="lecture-button-interaction" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Mario Scetar</li></ul>`
+);
+lecturesDetails.set(
   "Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging",
   `<h1>Sustainability and Packaging - What is suistainability? (part 1/2)</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>sustainability,environment,ecodesign,LCA,bottles</p><h4>Abstract</h4><p>Food Packaging needs to be sustainable. What does it mean? How to use Life Cycle Analysis (LCA) to evaluate the impact of food packaging and to $eco-design$ new food packaging.       -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.1/part1.html#/2" id="lecture-button-sustainability-and-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
@@ -615,7 +619,13 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
             onclick="lectureToDisplay(this.id)">How to calculate/predict shelf-life<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
+                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+        id="dropdown-btn-interaction">interaction<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container" id="dropdown-container-interaction"><a href="#Shelf-life/interaction"
+            id="Shelf-life/interaction" class="dropdown-container-class"
+            onclick="lectureToDisplay(this.id)">Interaction<i class="fa fa-star star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Environmental pollution">Environmental pollution<i
         class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Environmental pollution"><button class="dropdown-btn"
