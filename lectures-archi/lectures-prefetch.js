@@ -3,9 +3,9 @@
  * Contract: EU contract 2022-FR01-KA220-HED-000023509
  * Project: FitNESS 2 ERASMUS+
  * File Created: Tuesday, 31st October 2023
- * Author: Steward OUADI
+ * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 1st February 2024
+ * Last Modified: Tuesday, 27th February 2024
  * Modified By: Steward OUADI
  */
 
@@ -46,6 +46,10 @@ lecturesDetails.set(
 lecturesDetails.set(
   "Packaging materials/Basic legal framework/legal-framework-overview",
   `<h1>Basic legal framework (chemicals, contact material, environment, consumer safety)</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>regulation,plastics,europe</p><h4>Abstract</h4><p>Food packaging must comply with several obligations and legislations on chemicals, contact material, environment, consumer safety. - level basic</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.3/part1.html#/2" id="lecture-button-legal-framework-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Catherine Loriot</li></ul>`
+);
+lecturesDetails.set(
+  "Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer",
+  `<h1>Mechanical design of packaging: an introduction</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>properties,mechanical</p><h4>Abstract</h4><p>Mechanical engineering of food packaging  (please read §2.1 and §2.2 before) - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.4/part1.html#/2" id="lecture-button-the-basics-of-mechanical-engineering-for-packaging-designer" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Murielle Hayert</li></ul>`
 );
 lecturesDetails.set(
   "Packaging properties/Thermal, mechanical and barrier properties/thermal-properties",
@@ -111,6 +115,10 @@ lecturesDetails.set(
   `<h1>Micro holes and leaks in packaging – measurement and modeling</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>defects,holes,permeation,shelf-life,modeling,oxygen</p><h4>Abstract</h4><p>Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them? measure and simulate their effects. -  level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.6/part1.html#/2" id="lecture-button-measurement-and-modeling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Frederic Debeaufort</li></ul>`
 );
 lecturesDetails.set(
+  "Packaging processes/introduction-to-mechanical-processes",
+  `<h1>Introduction into mechanical processes in packaging</h1><h4>Difficulty level</h4><p>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></p><h4>Topics</h4><p>forming,filling,sealing,process,design,optimization</p><h4>Abstract</h4><p>The most important factors for a company: i) Product quality from the customer's point of view, ii) Compliance with legal requirements, iii) Profitability: costs vs. revenue. These factors are essentially determined by the packaging material and the packaging process. This lecture is an introduction to U8.2-U8.6.    - level basic, intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.1/part1.html#/2" id="lecture-button-introduction-to-mechanical-processes" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+);
+lecturesDetails.set(
   "Packaging processes/Forming/plastic-forming",
   `<h1>Plastics forming</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>forming,thermoforming,erecting,line,process</p><h4>Abstract</h4><p>This lecture describes plastics forming processes that can be directly integrated into a packaging line: thermoforming, cold forming, erecting.     - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.2/part1.html#/2" id="lecture-button-plastic-forming" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
@@ -133,6 +141,10 @@ lecturesDetails.set(
 lecturesDetails.set(
   "Packaging processes/Sealing/overview",
   `<h1>Closing, hot/cold sealing, welding, sealed seams and packages</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>sealing,bag,blister,glue,adhesion,leaks,holes,adhesive</p><h4>Abstract</h4><p>The safety and wholesomeness of industrially processed food cannot be considered without a good seal. There is no point in paying for a barrier package if the closure is porous and allows gases (oxygen, water vapour) to pass through. This lecture details the systems of closing, sealing, sealing, gluing. Please refer to §4.6 for the defect analysis.      - level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.4/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+);
+lecturesDetails.set(
+  "Packaging processes/surface-treatments-and-coatings",
+  `<h1>Surface treatment and coating principles and technologies.</h1><h4>Difficulty level</h4><p>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></p><h4>Topics</h4><p>coating,surface,process,materials,permeation,migration,recycling</p><h4>Abstract</h4><p>Surface treatments increase the surface energy of the packaging surface in order to maximize the contact surface area and the adhesion of adhesives, inks and coatings. Principles and available technologies are reviewed in this lecture.  -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.7/part1.html#/2" id="lecture-button-surface-treatments-and-coatings" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Mia Kurek</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/Printing and labelling processes/overview",
@@ -379,7 +391,12 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
         id="dropdown-btn-the-basics-of-mechanical-engineering-for-packaging-designer">the-basics-of-mechanical-engineering-for-packaging-designer<i
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-the-basics-of-mechanical-engineering-for-packaging-designer">
-    </div>
+        <a href="#Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
+            id="Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mechanical design of packaging: an
+            introduction<i class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Packaging properties">Packaging properties<i
         class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Packaging properties"><button class="dropdown-btn"
@@ -467,8 +484,14 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
 <div class="dropdown-container" id="dropdown-container-Packaging processes"><button class="dropdown-btn"
         id="dropdown-btn-introduction-to-mechanical-processes">introduction-to-mechanical-processes<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-introduction-to-mechanical-processes"></div><button
-        class="dropdown-btn" id="dropdown-btn-Forming">Forming<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container" id="dropdown-container-introduction-to-mechanical-processes"><a
+            href="#Packaging processes/introduction-to-mechanical-processes"
+            id="Packaging processes/introduction-to-mechanical-processes" class="dropdown-container-class"
+            onclick="lectureToDisplay(this.id)">Introduction into mechanical processes in packaging<i
+                class="fa fa-star star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+        id="dropdown-btn-Forming">Forming<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Forming"><a
             href="#Packaging processes/Forming/plastic-forming" id="Packaging processes/Forming/plastic-forming"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Plastics forming<i
@@ -508,8 +531,14 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-surface-treatments-and-coatings">surface-treatments-and-coatings<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-surface-treatments-and-coatings"></div><button
-        class="dropdown-btn" id="dropdown-btn-Printing and labelling processes">Printing and labelling processes<i
+    <div class="dropdown-container" id="dropdown-container-surface-treatments-and-coatings"><a
+            href="#Packaging processes/surface-treatments-and-coatings"
+            id="Packaging processes/surface-treatments-and-coatings" class="dropdown-container-class"
+            onclick="lectureToDisplay(this.id)">Surface treatment and coating principles and technologies.<i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+        id="dropdown-btn-Printing and labelling processes">Printing and labelling processes<i
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Printing and labelling processes"><a
             href="#Packaging processes/Printing and labelling processes/overview"

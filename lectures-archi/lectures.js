@@ -3,9 +3,9 @@
  * Contract: EU contract 2022-FR01-KA220-HED-000023509
  * Project: FitNESS 2 ERASMUS+
  * File Created: Tuesday, 6th September 2022
- * Author: Steward OUADI
+ * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 1st February 2024
+ * Last Modified: Tuesday, 27th February 2024
  * Modified By: Steward OUADI
  */
 
@@ -94,24 +94,45 @@ function createDropDownMenuElementsToPrint() {
     const dropdownContainerDivI =
       dropdownButtonAndContainerI.dropdownContainerDiv;
 
-    for (let [keyJ, valueJ] of valueI.children) {
-      const dropdownButtonAndContainerJ = getDropdownButtonAndContainer(
-        valueJ.name,
-        keyJ
-      );
-      const dropdownButtonJ = dropdownButtonAndContainerJ.dropdownButton;
-      const dropdownContainerDivJ =
-        dropdownButtonAndContainerJ.dropdownContainerDiv;
-
-      for (let [keyK, valueK] of valueJ.children) {
-        const aElementK = createAElementForDropDownMenuToPrint(
-          valueK.manifestPath
+    if (valueI.children.size > 0) {
+      for (let [keyJ, valueJ] of valueI.children) {
+        const dropdownButtonAndContainerJ = getDropdownButtonAndContainer(
+          valueJ.name,
+          keyJ
         );
-        dropdownContainerDivJ.appendChild(aElementK);
-      }
+        const dropdownButtonJ = dropdownButtonAndContainerJ.dropdownButton;
+        const dropdownContainerDivJ =
+          dropdownButtonAndContainerJ.dropdownContainerDiv;
 
-      dropdownContainerDivI.appendChild(dropdownButtonJ);
-      dropdownContainerDivI.appendChild(dropdownContainerDivJ);
+        if (valueJ.children.size > 0) {
+          for (let [keyK, valueK] of valueJ.children) {
+            // It is a third level lecture
+            const aElementK = createAElementForDropDownMenuToPrint(
+              valueK.manifestPath
+            );
+            dropdownContainerDivJ.appendChild(aElementK);
+          }
+        } else {
+          if (valueJ.manifestPath !== null) {
+            // It is a second level lecture
+            const aElementJ = createAElementForDropDownMenuToPrint(
+              valueJ.manifestPath
+            );
+            dropdownContainerDivJ.appendChild(aElementJ);
+          }
+        }
+
+        dropdownContainerDivI.appendChild(dropdownButtonJ);
+        dropdownContainerDivI.appendChild(dropdownContainerDivJ);
+      }
+    } else {
+      if (valueI.manifestPath !== null) {
+        // It is a first level lecture
+        const aElementI = createAElementForDropDownMenuToPrint(
+          valueI.manifestPath
+        );
+        dropdownContainerDivI.appendChild(aElementI);
+      }
     }
 
     dropdownFragment.appendChild(dropdownButtonI);
