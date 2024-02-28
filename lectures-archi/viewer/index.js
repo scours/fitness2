@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 26th February 2024
+ * Last Modified: Wednesday, 28th February 2024
  * Modified By: Steward OUADI
  */
 
@@ -30,6 +30,46 @@ function removeInlineComment(line) {
   return line;
 }
 
+function lineFormatChecker(line, regex, args, lineNumber) {
+  // Base error message that includes the common phrase.
+  const baseErrorMsg = `At line ${lineNumber}:the format is "${args.join(
+    " "
+  )}"`;
+
+  // Trim the line and split it by one or more spaces to analyze its parts.
+  const parts = line.trim().split(/\s+/);
+
+  // Check if the actual parts length matches the expected args length.
+  if (parts.length !== args.length) {
+    // If they don't match, return an error indicating a mismatch in the number of parts.
+    return `${baseErrorMsg}. The number of arguments (${parts.length}) does not match the expected number (${args.length}). Please check your format.`;
+  }
+
+  // Directly check if the line starts with the expected "slide" keyword
+  if (parts[0].trim().toLowerCase() !== args[0].trim().toLowerCase()) {
+    const errorMsg = `${baseErrorMsg}. We are not able to understand your "${args[0]}" format. Please check your format.`;
+    return errorMsg;
+  }
+
+  // Proceed with regex matching to check the rest of the format
+  const match = line.match(regex);
+  if (!match) {
+    // Since the line starts with "slide", the error is with other parts
+    // Attempt to further diagnose the issue
+    if (!line.includes("http")) {
+      // Likely the "link" part is missing or incorrect
+      const errorMsg = `${baseErrorMsg}. We are not able to understand your "${args[1]}" format. Please check your format.`;
+      return errorMsg;
+    } else {
+      // Assume the issue is with "slideNumberIfAny" if the "slide" and "link" seem correct
+      const errorMsg = `${baseErrorMsg}. We are not able to understand your "${args[2]}" format. Please check your format.`;
+      return errorMsg;
+    }
+  }
+  // If the regex matches, the format is correct; no error message is needed
+  return null;
+}
+
 function evaluateWithMathJs(expression) {
   let resultToReturn;
 
@@ -40,6 +80,29 @@ function evaluateWithMathJs(expression) {
   // evaluateResult = math.evaluate(slideNumberIfAny)["_data"];
 
   return resultToReturn;
+}
+
+function displayErrorText(errorText) {
+  // Find the error message container by its ID
+  const errorMessageDiv = document.getElementById("errorMessage");
+
+  // Check if the unordered list already exists inside the error message container
+  let ul = errorMessageDiv.querySelector("ul");
+  if (!ul) {
+    // If the unordered list doesn't exist, create it and append it to the errorMessageDiv
+    ul = document.createElement("ul");
+    errorMessageDiv.appendChild(ul);
+  }
+
+  // Create a new list item for the error message
+  const li = document.createElement("li");
+  li.textContent = errorText; // Set the text of the list item to the error message
+
+  // Append the list item to the unordered list
+  ul.appendChild(li);
+
+  // Make the error message container visible
+  errorMessageDiv.style.display = "block";
 }
 
 /**
@@ -66,7 +129,11 @@ async function parseManifest(manifestContent) {
     const regex = /^(slide)\s+([^\s]+)\s*(.*)$/;
     const match = line.match(regex);
 
-    if (match) {
+    const args = ["slide", "link", "slideNumberIfAny"];
+    const errorText = lineFormatChecker(line, regex, args, index + 1);
+    if (errorText) {
+      displayErrorText(errorText);
+    } else {
       const [, , link, slideNumberIfAny] = match; // Destructure the URL and slide number or range from the match.
 
       // Check if there's a specified slide number or range.
@@ -90,6 +157,8 @@ async function parseManifest(manifestContent) {
           console.error(
             `Error evaluating slideNumberIfAny '${slideNumberIfAny}': ${error}`
           );
+          const errorText = "At line " + (index + 1) + ":" + error.message;
+          displayErrorText(errorText);
         }
       } else {
         // Handle lines without a specific slide number or range.
@@ -142,10 +211,18 @@ function saveOutput(slides) {
   document.body.removeChild(downloadLink); // Remove the link from the document.
 }
 
+function clearErrorText() {
+  const errorMessageDiv = document.getElementById("errorMessage");
+  errorMessageDiv.innerHTML = ""; // Clear the error message
+  errorMessageDiv.style.display = "none"; // Hide the container
+}
+
 /**
  * Sets up an event listener to process the manifest file when the user selects a file and clicks the "Process" button.
  */
 document.addEventListener("DOMContentLoaded", function () {
+  // Clear message on page load
+  clearErrorText();
   document
     .getElementById("processButton")
     .addEventListener("click", async function () {

@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Wednesday, 21st February 2024
 Author: Steward OUADI
 -----
-Last Modified: Monday, 26th February 2024
+Last Modified: Wednesday, 28th February 2024
 Modified By: Steward OUADI
 -->
 <!DOCTYPE html>
@@ -15,10 +15,22 @@ Modified By: Steward OUADI
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Manifest File Processor</title>
+  <style>
+    #errorMessage {
+      display: none;
+      /* Hidden by default */
+      color: red;
+      /* Error message color */
+      margin-top: 20px;
+      /* Space above the error message */
+    }
+  </style>
 </head>
 
 <body>
   <h2>Select a Manifest File</h2>
+  <!-- Error message container, hidden by default -->
+  <p id="errorMessage"></p>
   <input type="file" id="fileInput" />
   <button id="processButton">Process Manifest</button>
   <div id="output"></div>
