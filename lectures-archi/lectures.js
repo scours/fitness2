@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Tuesday, 27th February 2024
+ * Last Modified: Thursday, 29th February 2024
  * Modified By: Steward OUADI
  */
 
@@ -269,7 +269,7 @@ function createAElementForDropDownMenuToPrint(identifier) {
   // Difficulty level
   const difficultyLevelHeader = document.createElement("h4");
   difficultyLevelHeader.innerHTML = "Difficulty level";
-  const difficultyLevelElement = document.createElement("p");
+  const difficultyLevelElement = document.createElement("span");
   const difficultyLevelNode = document.createTextNode(lecture.difficultyLevel);
   difficultyLevelElement.appendChild(difficultyLevelNode);
 
@@ -403,9 +403,7 @@ function lectureToDisplay(identifier) {
   // use append instead of adding it directly with innerHTML because was preventing us to click on the button to read the lecture
   mainContent.innerHTML = ""; // Clear the existing content
 
-  const currentLectureDiv = document.createElement("div");
-  currentLectureDiv.innerHTML = lecturesDetails.get(identifier);
-  mainContent.appendChild(currentLectureDiv);
+  mainContent.innerHTML = lecturesDetails.get(identifier);
 }
 
 function addStarsToElement(lecture, element) {

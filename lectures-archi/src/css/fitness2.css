@@ -3,9 +3,9 @@
  * Contract: EU contract 2022-FR01-KA220-HED-000023509
  * Project: FitNESS 2 ERASMUS+
  * File Created: Tuesday, 16th January 2024
- * Author: Steward OUADI
+ * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 18th January 2024
+ * Last Modified: Thursday, 29th February 2024
  * Modified By: Steward OUADI
  */
 
@@ -253,5 +253,26 @@ video {
     /* Limit the video player's width on larger screens */
     margin: 0 auto;
     /* Center the video player */
+  }
+}
+
+#main-content h1,
+#main-content h2,
+#main-content h3,
+#main-content h4,
+#main-content h5,
+#main-content h6,
+#main-content p,
+#main-content ul {
+  display: flex; /* Use flexbox to enable easy centering */
+  flex-direction: column; /* Stack children vertically */
+  max-width: 90%; /* Max width to prevent stretching on very wide screens */
+  word-wrap: break-word; /* Allow long words to be broken and wrap onto the next line */
+  overflow-wrap: break-word; /* Standard CSS property, equivalent to word-wrap */
+}
+
+@media (max-width: 768px) {
+  #main-content {
+    max-width: 95%; /* Allow content to use more width on small screens */
   }
 }
