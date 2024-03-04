@@ -61,7 +61,8 @@ class Assignation {
       -hash
       -lineContent
       -link
-      -slideToShow
+      -slideNumberToDisplay
+      -markdownContent
     }
 
     class VirtualSlide {

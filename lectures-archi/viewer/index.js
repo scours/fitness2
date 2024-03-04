@@ -5,10 +5,12 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 28th February 2024
+ * Last Modified: Monday, 4th March 2024
  * Modified By: Steward OUADI
  */
 
+const finalLecture = new Map();
+let referenceURL = null;
 /**
  * Removes inline comments from a given line of text.
  * Inline comments are assumed to start with "//" outside of URLs.
@@ -28,6 +30,113 @@ function removeInlineComment(line) {
 
   // If no inline comment is found, or it's part of a URL, return the line unchanged.
   return line;
+}
+
+function splitLastOccurrence(str, substring) {
+  const arr = str.split(substring);
+
+  const after = arr.pop();
+
+  const before = arr.join(substring);
+
+  return [before, after];
+}
+
+// Number of slides before the "FITNESS 2" project slide
+const numberOfSyllabusSlide = 6;
+
+function cleanUrl(url) {
+  // Check if the character just before "http" is not a space
+  const httpPos = url.indexOf("http");
+  if (httpPos > 0 && url[httpPos - 1] !== " ") {
+    // It's an enclosing char, remove the first and last char of the string
+    return url.substring(1, url.length - 1);
+  }
+  // If the condition is not met, return the original URL
+  return url;
+}
+
+const markDownSlides = new Map();
+
+function updateMarkdownSlides(URL) {
+  const response = httpGet(URL);
+
+  console.log("showing click URL");
+  console.log(URL);
+  console.log("response beg");
+  console.log(response);
+  console.log(typeof response);
+  console.log("response end");
+  console.log("html content begin");
+
+  htmlContent = document.createElement("html");
+  htmlContent.innerHTML = response;
+
+  // htmlContentToDisplay will display only what we want
+  let htmlContentToDisplay = document.createElement("html");
+  htmlContentToDisplay.innerHTML = response;
+
+  console.log(htmlContent);
+  console.log("html content end");
+  let slidesFromResponse =
+    htmlContent.getElementsByClassName("slides")[0].children;
+
+  markDownSlides.set(URL, slidesFromResponse);
+}
+
+function httpGet(theUrl) {
+  console.log("the url to manage");
+  console.log(theUrl);
+  let xmlhttp;
+  let responseText;
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    // code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      responseText = xmlhttp.responseText;
+
+      return responseText;
+    }
+  };
+  xmlhttp.open("GET", theUrl, false);
+  xmlhttp.send();
+  return responseText;
+}
+
+function displayFinalContent(element) {
+  // Path to the folder containing the current lecture
+  // HTML filename of the current lecture
+  let splittedUrl = element.link.split(".html");
+  const [pathToHtmlFolder, htmlFileName] = splitLastOccurrence(
+    splittedUrl[0],
+    "/"
+  );
+
+  // Regular expression to get resources path for the lecture
+  const regExpForSources = /\(\.\/src/;
+
+  console.log("slide we want to append beg");
+  console.log(element.markdownContent);
+  console.log(element.markdownContent.innerHTML);
+
+  var newSection = document.createElement("SECTION");
+  // The data-markdown will allow to create Markdown slide
+  // https://revealjs.com/markdown/
+  newSection.setAttribute("data-markdown", "");
+
+  newSection.innerHTML = element.markdownContent.innerHTML.replace(
+    regExpForSources,
+    "(" + pathToHtmlFolder + "/src"
+  );
+  console.log(newSection);
+  console.log("slide we want to append end");
+
+  return newSection;
 }
 
 function lineFormatChecker(line, regex, args, lineNumber) {
@@ -134,7 +243,15 @@ async function parseManifest(manifestContent) {
     if (errorText) {
       displayErrorText(errorText);
     } else {
-      const [, , link, slideNumberIfAny] = match; // Destructure the URL and slide number or range from the match.
+      let [, , link, slideNumberIfAny] = match; // Destructure the URL and slide number or range from the match.
+
+      link = cleanUrl(link);
+      if (referenceURL === null) {
+        // Set reference URL to be the first encountered URL
+        referenceURL = link;
+      }
+
+      updateMarkdownSlides(link);
 
       // Check if there's a specified slide number or range.
       if (slideNumberIfAny) {
@@ -151,7 +268,14 @@ async function parseManifest(manifestContent) {
 
           for (let num of result) {
             const hash = await generateHash(index, line, num);
-            slides.push(new Slide(hash, line, link, num));
+            // Compute slide number: in the URLs from FITNESS 1, there are slides before the
+            // "FITNESS 2" project slide, se we would not take those slides into account.
+            // And the slide number the teacher is seeing on FITNESS 1 takes those "syllabus" slides into account.
+            // So we make a computation so that we can get the exact slide the user is referring to on FITNESS 1 (using FITNESS 1 numbering patterns)
+            const slideNumber = num - numberOfSyllabusSlide;
+            const currentMarkDownSlide = markDownSlides.get(link)[slideNumber];
+            slides.push(new Slide(hash, line, link, num, currentMarkDownSlide));
+            finalLecture.set(hash, currentMarkDownSlide);
           }
         } catch (error) {
           console.error(
@@ -163,7 +287,8 @@ async function parseManifest(manifestContent) {
       } else {
         // Handle lines without a specific slide number or range.
         const hash = await generateHash(index, line, "");
-        slides.push(new Slide(hash, line, link, ""));
+        slides.push(new Slide(hash, line, link, "", ""));
+        // TODO: add into finalLecture all the slides for this URL
       }
     }
   }
@@ -234,6 +359,66 @@ document.addEventListener("DOMContentLoaded", function () {
           const content = e.target.result; // Read the content of the file.
           const slides = await parseManifest(content); // Parse the manifest content to create Slide objects.
           saveOutput(slides); // Save the output to a file.
+
+          const response = httpGet(referenceURL);
+          // htmlContentToDisplay will display only what we want
+          let htmlContentToDisplay = document.createElement("html");
+          htmlContentToDisplay.innerHTML = response;
+
+          let slidesToDisplay = document.createElement("div");
+          slidesToDisplay.setAttribute("class", "slides");
+
+          slides.forEach((element) => {
+            slidesToDisplay.appendChild(displayFinalContent(element));
+          });
+
+          htmlContentToDisplay.getElementsByClassName("slides")[0].innerHTML =
+            slidesToDisplay.innerHTML;
+
+          console.log("displaying slides to display begin");
+          console.log(slidesToDisplay);
+          console.log(slidesToDisplay.children);
+          console.log("displaying slides to display end");
+
+          console.log("htmlContentToDisplay begin");
+          console.log(htmlContentToDisplay);
+          console.log("htmlContentToDisplay end");
+          var lectureIframe = document.createElement("iframe");
+
+          let modifiedA = document.createElement("html");
+          modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
+            `"../../../../`,
+            `"https://fitness.agroparistech.fr/fitness/lectures/`
+          );
+
+          let modifiedB = document.createElement("html");
+          modifiedB.innerHTML = modifiedA.innerHTML.replaceAll(
+            `"./../../../../../`,
+            `"https://fitness.agroparistech.fr/fitness/`
+          );
+
+          let modifiedC = document.createElement("html");
+          modifiedC.innerHTML = modifiedB.innerHTML.replaceAll(
+            `'../../../../`,
+            `'https://fitness.agroparistech.fr/fitness/lectures/`
+          );
+
+          let modifiedD = document.createElement("html");
+          modifiedD.innerHTML = modifiedC.innerHTML.replaceAll(
+            `'./../../../../../`,
+            `'https://fitness.agroparistech.fr/fitness/`
+          );
+
+          lectureIframe.setAttribute("srcdoc", modifiedD.outerHTML);
+
+          lectureIframe.setAttribute("class", "frame");
+          lectureIframe.style.width = "100%";
+          // lectureIframe.style.height = screen.height * 0.7 + "px";
+          lectureIframe.style.height = "900px";
+          lectureIframe.style.border = "none";
+
+          const mainContent = document.getElementById("main-content");
+          mainContent.innerHTML = lectureIframe.outerHTML;
         };
         reader.readAsText(file); // Read the file as text.
       }
