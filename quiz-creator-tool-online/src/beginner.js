@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Monday, 13th November 2023
+ * Last Modified: Tuesday, 26th March 2024
  * Modified By: Steward OUADI
  * -----
  */
@@ -1096,7 +1096,8 @@ function createMenuBasedOnLearnerAnswers() {
 }
 
 // main
-function DoQuiz() {
+function DoQuiz(canBeSentByEmailFromConfig) {
+  canBeSentByEmail = canBeSentByEmailFromConfig;
   for (let i = 0; i < allSlides.length; i++) {
     // If correct answer is of type array and there is only one correct answer,
     // then transform that array into a string
@@ -1177,13 +1178,22 @@ let questionsAndUserAnswers = [];
 
 // indicates whether the result of the questionnaire is to be sent by e-mail or not. If so, a button allows you to
 // do so, once you have clicked on the button that allows to view the results.
-let canBeSentByEmail = false;
+let canBeSentByEmail;
+// function setCanBeSentByEmailVariable() {
+//   // indicates whether the result of the questionnaire is to be sent by e-mail or not. If so, a button allows you to
+//   // do so, once you have clicked on the button that allows to view the results.
+//   if (canBeSentByEmail === undefined) {
+//     // The variable has not been set by calling script yet, so set it to false by default
+//     canBeSentByEmail = false;
+//   }
+// }
 
 // Read data when state is ready
-document.onreadystatechange = async function () {
-  if (document.readyState === "complete") {
-    // configurationData is a variable from configuration file.
-    allSlides = configurationData;
-    DoQuiz();
-  }
-};
+// document.onreadystatechange = async function () {
+//   if (document.readyState === "complete") {
+//     setCanBeSentByEmailVariable();
+//     // configurationData is a variable from configuration file.
+//     allSlides = configurationData;
+//     DoQuiz();
+//   }
+// };

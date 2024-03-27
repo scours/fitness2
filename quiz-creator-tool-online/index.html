@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Thursday, 16th November 2023
+Last Modified: Wednesday, 27th March 2024
 Modified By: Steward OUADI
 -----
 -->
@@ -20,12 +20,10 @@ Modified By: Steward OUADI
 </head>
 
 <body>
-  <div id="submit-results-proposal">
-    <button id="submit-results">Submit results by email</button>
-    <p>By clicking on the button above, you will send your answers to the creator of this quiz.</p>
+  <div id="import-questions-div">
+    <label for="fileInput" class="custom-file-label">Import questions</label>
+    <input type="file" id="fileInput" accept=".md" onchange="convertQuestions()">
   </div>
-  <label for="fileInput" class="custom-file-label">Import questions</label>
-  <input type="file" id="fileInput" accept=".md" onchange="convertQuestions()">
 
 
 
@@ -47,7 +45,11 @@ Modified By: Steward OUADI
     <button id="next"></button>
     <button id="submit"></button>
   </div>
-  <div id="results"></div>
+  <div id="results">
+  </div>
+  <div id="submit-results-proposal">
+    <a href="#" id="submit-results">See form to submit results by email</a>
+  </div>
   <div class="quiz-container">
     <div id="quiz">
       <p>Click on the "Browse" button to import the Markdown file containing your questions and display them using the
@@ -101,6 +103,12 @@ Modified By: Steward OUADI
     function questionsFromURL() {
       // If variable is not empty, use it to read markdown
       if (markdownVariableToRead.trim() !== "") {
+
+        // Hide import questions div, as we won't need it
+        var div = document.getElementById("import-questions-div");
+        if (div) {
+          div.style.display = "none";
+        }
 
         var markdownContent = window[markdownVariableToRead];
         var lines = markdownContent.split('\n');
@@ -205,7 +213,11 @@ Modified By: Steward OUADI
         }
       }
 
-      return configurationData;
+      // return configurationData;
+      return {
+        'configurationData': configurationData,
+        'canBeSentByEmail': canBeSentByEmail
+      }
     }
 
 
@@ -214,67 +226,98 @@ Modified By: Steward OUADI
 
     function processMarkdownContent(lines) {
 
-      const configurationData = getConfigurationData(lines)
+      const getConfigResults = getConfigurationData(lines);
+      const configurationData = getConfigResults.configurationData;
+      let canBeSentByEmail = getConfigResults.canBeSentByEmail;
 
       const result = `const configurationData = ${JSON.stringify(configurationData, null, 2)};`;
       const quizContainer = document.getElementById("quiz");
       quizContainer.innerHTML = "";
       allSlides = configurationData;
-      DoQuiz();
+      DoQuiz(canBeSentByEmail);
       // document.getElementById('output').textContent = result;
     }
 
     questionsFromURL();
     document.getElementById("submit-results").addEventListener("click", function () {
-      var popup = window.open("", "popup", "width=400,height=300");
+      console.log("button clicked")
+      // Define variables
+      var recipient1 = "olivier.vitrac@agroparistech.fr";
+      var recipient2 = "steward.ouadi@agroparistech.fr";
+      var title = markdownVariableToRead;
+      var identifier = defaultSessionIdentifier;
+      var subject = encodeURIComponent(title + "__" + identifier);
+      var content = encodeURIComponent(JSON.stringify(questionsAndUserAnswers, undefined, 2));
 
-      var popupContent = "<h2>Send results by email</h2>" +
-        "<label for='input-id'>Pseudonym or first/last name: (you can change it to write your own)</label>" +
-        "<input type='text' id='input-id' value='" + defaultSessionIdentifier + "'>" +
-        "<button id='btn-send'>Send</button>";
+      // Create the div and input elements dynamically
+      var contentDiv = document.createElement("div");
+      var inputLabel = document.createElement("label");
+      inputLabel.setAttribute("for", "input-id");
+      inputLabel.innerHTML = "Pseudonym or first/last name: (you can change it to write your own)";
 
-      popup.document.write(popupContent);
+      var inputField = document.createElement("input");
+      inputField.type = "text";
+      inputField.id = "input-id";
+      inputField.value = defaultSessionIdentifier;
 
-      // popup.document.getElementsByTagName("form")[0].addEventListener("submit", function (event) {
-      //   event.preventDefault();
-      // });
-      var btnSend = popup.document.getElementById("btn-send");
-      popup.document.getElementById("btn-send").addEventListener("click", function () {
-        var sessionIdentifier = popup.document.getElementById("input-id").value;
-        // Perform necessary actions to send the results via email
+      // Make the input field bigger
+      inputField.style.fontSize = '1.5em'; // Increases the font size
+      // inputField.style.height = '50px'; // Sets a specific height
+      inputField.style.width = '60%'; // Sets the width to 100% of its container
+      inputField.style.padding = '10px'; // Adds some padding inside the input box for better text visibility
 
-        var recipient1 = "olivier.vitrac@agroparistech.fr";
-        var recipient2 = "steward.ouadi@agroparistech.fr";
-        var title = markdownVariableToRead;
-        var identifier = sessionIdentifier;
-        var subject = encodeURIComponent(title + "|" + identifier);
-        var content = encodeURIComponent(JSON.stringify(questionsAndUserAnswers, undefined, 2));
+      var sendButton = document.createElement("button");
+      sendButton.id = "btn-send";
+      sendButton.textContent = "Send";
 
-        var mailtoLink = "mailto:" + recipient1 + "," + recipient2 + "?subject=" + subject +
-          "&body=" +
-          content;
+      var downloadText = document.createElement("p");
+      downloadText.innerHTML =
+        "If the button above does not send your email, <a href='#' id='download-link'>click here to download the file </a> and send it by email on your own.";
+      var sendButtonExplainer = document.createElement("p");
+      sendButtonExplainer.innerHTML =
+        "By clicking on 'Send', depending on the configuration of your device, your mail manager will open with a pre-filled mail content and recipient (creator of this quiz). Then you'll just have to send your email.";
 
-        // var mailtoLink = "mailto:" + recipient2 + "?subject=" + subject +
-        //   "&body=" +
-        //   content;
-        // var mailtoLink = "mailto:" + recipient + "?subject=" + subject + "&body=" + content;
+      // Append elements to the contentDiv
+      contentDiv.appendChild(inputLabel);
+      contentDiv.appendChild(inputField);
+      contentDiv.appendChild(sendButton);
+      contentDiv.appendChild(sendButtonExplainer);
+      contentDiv.appendChild(downloadText);
 
+      // Append contentDiv to the document, just after the submit-results button
+      var submitButton = document.getElementById("submit-results");
+      submitButton.parentNode.insertBefore(contentDiv, submitButton.nextSibling);
 
+      // Add click event listener to the send button
+      sendButton.addEventListener("click", function () {
+        var sessionIdentifier = inputField.value;
+        var mailtoLink = "mailto:" + recipient1 + "," + recipient2 + "?subject=" + subject + "&body=" + content;
         window.location.href = mailtoLink;
-
-
-        popup.close();
       });
 
+      // Add click event listener to the download link
+      document.getElementById("download-link").addEventListener("click", function (e) {
+        e.preventDefault();
 
+        // Sanitize the subject to make it a valid filename.
+        // This basic example replaces characters not typically allowed or recommended in filenames.
+        let filename = subject.replace(/[<>:"\/\\|?*\x00-\x1F]/g, '_') + ".txt";
 
-      // Prevent the default form submission behavior when pressing Enter
-      popup.document.onkeydown = function (event) {
-        if (event.key === "Enter") {
-          event.preventDefault();
-          return false;
-        }
-      };
+        download(filename, decodeURIComponent(content));
+      });
+
+      function download(filename, text) {
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+        element.setAttribute('download', filename);
+
+        element.style.display = 'none';
+        document.body.appendChild(element);
+
+        element.click();
+
+        document.body.removeChild(element);
+      }
     });
   </script>
 
