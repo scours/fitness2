@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 21st December 2023
+ * Last Modified: Wednesday, 27th March 2024
  * Modified By: Steward OUADI
  */
 
@@ -438,6 +438,70 @@ Q12: Which of the following is an example of a protein-based biopolymer?
 - [ ]  Polycarbonate
 - [ ]  Polyurethane
 - [x]  Collagen
+
+canBeSentByEmail:true`;
+
+var factorsShelfLifeGeneral = `Q1. Microbial spoilage of food depends on: 
+- [x] Type of food
+- [x] Initial level of microorganisms in food
+- [x] Storage and handling conditions
+- [x] Temperature
+
+
+Q2. Which is the correct term for the end of food shelf-life in Europe for microbiologically sensitive products? 
+- [x] Use by
+- [ ] Sell by
+- [ ] Best before
+- [ ] Eat before
+
+Q3. The shelf-life of food is related to: 
+- [ ] Quality of food
+- [ ] Decomposition of food
+- [ ] Freshness of food
+- [x] Time limit for which food can be used
+
+
+Q4. The shelf-life is determined by: 
+- [x] Sensory, physico-chemical and microbiological deterioration of food
+- [ ] Sensory and microbiological deterioration of food
+- [ ] Physico-chemical deterioration of food
+- [ ] Sensory deterioration of food
+
+
+Q5. What is the direct shelf-life testing method? 
+- [x] Food assessment in a real time study
+- [ ] Accelerated shelf-life testing
+- [ ] Predictive modelling
+- [ ] Challenge testing
+
+
+Q6. Indirect methods for shelf-life determination are: 
+- [ ] Real time shelf-life monitoring
+- [x] Accelerated storage
+- [x] Predictive microbiological modelling
+- [x] Challenge testing
+
+
+Q7. What are examples for accelerated storage methods? 
+- [ ] Food storage at freezing conditions 
+- [x] Food storage at elevated temperature conditions
+- [ ] Food storage at refrigerator conditions
+- [x] Food storage in oxygen-enriched atmosphere
+
+
+Q8. What is a correct example of predictive modelling? 
+- [ ] Procedure to predict food sales on the market 
+- [ ] Procedure to predict consumers acceptance of new food on the market
+- [x] Procedure to assess the growth of a microorganism under defined conditions
+- [ ] Procedure to predict food price fluctuation on the market
+
+
+Q9. What are the possible orders of the kinetics of microbiological or biochemical reactions? 
+- [x] zero order
+- [x] first order
+- [x] second order
+- [x] transitions between kinetics of different orders are possible
+
 
 canBeSentByEmail:true`;
 
