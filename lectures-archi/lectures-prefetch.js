@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 29th February 2024
+ * Last Modified: Tuesday, 2nd April 2024
  * Modified By: Steward OUADI
  */
 
@@ -206,6 +206,14 @@ lecturesDetails.set(
   `<h1>Overview</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>environment,ecodesign,LCA,design</p><h4>Abstract</h4><p>Eco-design of Packaging - Overview - Why eco-design? – Introduction and definitions General design process Tools of eco-design Case studies Advances and limits of LCA analysis - Evaluation of food/packaging systems through the supply chain</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.2/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
 );
 lecturesDetails.set(
+  "Environmental pollution/Glass food contact material recycling/glass-food-contact-material-recycling",
+  `<h1>Glass food contact material recycling</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>glass,recycling</p><h4>Abstract</h4><p>This lecture provides an overview of the recycling process for food contact glass. The composition and production of glass for food contact applications are explored, with a particular focus on glass cullet and its pivotal role in glass recycling. Key stages in the glass recycling process are introduced including collection, separation and cleaning, sorting, melting, as well as molding and annealing. Environmental implications are analyzed, highlighting the efficiency gains and emission reductions stemming from recycled glass compared to primary production. Links to explanatory videos and further reading are provided that offer more information on individual processing steps and concepts.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/glass-food-contact-material-recycling.html" id="lecture-button-glass-food-contact-material-recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/online/FPF/assessments/glass-food-contact-material-recycling-quiz.html" target="_blank">Access the assessment</a></p><h4>Authors</h4><ul><li>Joel Scheuchzer</li><li>Justin Boucher</li><li>Lindsey Parkinson</li></ul>`
+);
+lecturesDetails.set(
+  "Environmental pollution/Metal food contact material recycling/metal-food-contact-material-recycling",
+  `<h1>Metal food contact material recycling</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>metal,recycling</p><h4>Abstract</h4><p>This lecture provides an overview of the recycling process for food contact metals with a focus on aluminum and steel. It introduces existing collection methods including curbside collection, bring banks, and container deposit systems. The basic processing steps for recycling each metal type are summarized along with photos, explanatory videos, and links to publications that provide more detail. Key environmental benefits from recycling, as well as impacts stemming from the recycling processes are also reviewed along with European regulations pertinent to metal recycling.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/metal-food-contact-material-recycling.html" id="lecture-button-metal-food-contact-material-recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/online/FPF/assessments/metal-food-contact-material-recycling-quiz.html" target="_blank">Access the assessment</a></p><h4>Authors</h4><ul><li>Lindsey Parkinson</li><li>Justin Boucher</li><li>Joel Scheuchzer</li></ul>`
+);
+lecturesDetails.set(
   "Environmental pollution/Biodegradation and microplastics/overview",
   `<h1>Overview</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>biodegradable,pollution,regulation,renewable,environment,bottles</p><h4>Abstract</h4><p>Food packaging accounts for approximately 40% of the uses of plastics, but accounts for more than half of plastic waste. Non-food uses are more durable, while the lifespan of plastic packaging usually does not exceed half a year. The fragmentation of uncollected plastics and their reuse as recycled textile fibers is the main source of microplastics and marine litter. The understanding of biodegradation phenomena is essential to appreciate the impact of plastics on the environment, whether they are biodegradable or not.     - Level basic, intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.3/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
 );
@@ -260,6 +268,10 @@ lecturesDetails.set(
 lecturesDetails.set(
   "Legislation/GMP and quality assurance standards/safety-and-quality-management-system",
   `<h1>GMP, Safety, Quality management system, Responsibilities and Certification</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>regulation,GMP,safety,compliance,FCM</p><h4>Abstract</h4><p>Food contact materials need to be produced and recycled according to Good Manufacturing Practices (GMP), Safety &amp;amp; Quality management systems. The responsibilities and and the possible certification systems are presented in this lecture.   - level intermediate </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/LNE/gmp-and-quality-assurance-standards.html" id="lecture-button-safety-and-quality-management-system" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/online/LNE/assessments/gmp-and-quality-assurance-standards/index.html" target="_blank">Access the assessment</a></p><h4>Authors</h4><ul><li>Catherine Loriot</li></ul>`
+);
+lecturesDetails.set(
+  "Legislation/Universe of food contact chemicals/universe-of-food-contact-chemicals",
+  `<h1>Universe of food contact chemicals</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>chemicals,recycling,reuse,food contact chemicals</p><h4>Abstract</h4><p>Foodware and food packaging products can contain thousands of different chemicals, many of which can migrate from the materials into food and have hazardous properties that harm health. This lecture introduces the currently known universe of the thousands of different chemicals that can be present in food contact materials. It explains fundamental concepts such as the waste hierarchy including reuse and recycling, specifically in the context of food contact chemicals. The chemical diversity and migration potential of different food contact materials is explored including the fundamental distinction between permanent and non-permanent materials. Learners gain insights into both the knowns and known unknowns about the chemicals present in food contact materials with references to additional resources that dive deeper into the topic. Furthermore, the chemical complexities and limitations associated with "bio-based" or "biodegradable" materials are addressed. Upon completion, learners will be better equipped to navigate scientific and policy discussions surrounding the chemical safety of food contact materials, especially concerning reuse and recycling.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/universe-of-food-contact-chemicals.html" id="lecture-button-universe-of-food-contact-chemicals" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Assessments</h4><p><a href="https://fitness.agroparistech.fr/fitness2/online/FPF/assessments/universe-of-food-contact-chemicals-quiz.html" target="_blank">Access the assessment</a></p><h4>Authors</h4><ul><li>Justin Boucher</li><li>Lisa Zimmermann</li><li>Birgit Geueke</li><li>Joel Scheuchzer</li><li>Lindsey Parkinson</li><li>Jane Muncke</li></ul>`
 );
 lecturesDetails.set(
   "Legislation/Hazard identification and characterization/introduction",
@@ -653,6 +665,24 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+        id="dropdown-btn-Glass food contact material recycling">Glass food contact material recycling<i
+            class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container" id="dropdown-container-Glass food contact material recycling"><a
+            href="#Environmental pollution/Glass food contact material recycling/glass-food-contact-material-recycling"
+            id="Environmental pollution/Glass food contact material recycling/glass-food-contact-material-recycling"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Glass food contact material recycling<i
+                class="fa fa-star star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+        id="dropdown-btn-Metal food contact material recycling">Metal food contact material recycling<i
+            class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container" id="dropdown-container-Metal food contact material recycling"><a
+            href="#Environmental pollution/Metal food contact material recycling/metal-food-contact-material-recycling"
+            id="Environmental pollution/Metal food contact material recycling/metal-food-contact-material-recycling"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Metal food contact material recycling<i
+                class="fa fa-star star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Biodegradation and microplastics">Biodegradation and microplastics<i
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Biodegradation and microplastics"><a
@@ -767,6 +797,15 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
             id="Legislation/GMP and quality assurance standards/safety-and-quality-management-system"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">GMP, Safety, Quality management system,
             Responsibilities and Certification<i class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+        id="dropdown-btn-Universe of food contact chemicals">Universe of food contact chemicals<i
+            class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container" id="dropdown-container-Universe of food contact chemicals"><a
+            href="#Legislation/Universe of food contact chemicals/universe-of-food-contact-chemicals"
+            id="Legislation/Universe of food contact chemicals/universe-of-food-contact-chemicals"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Universe of food contact chemicals<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Hazard identification and characterization">Hazard identification and characterization<i

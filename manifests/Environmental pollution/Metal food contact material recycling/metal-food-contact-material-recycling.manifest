@@ -1,0 +1,31 @@
+{
+  "idx": 310115,
+  "title": "Metal food contact material recycling",
+  "level": "common",
+  "section": "S7",
+  "unit": "U7.7",
+  "difficultyLevel": "Novice",
+  "part": "",
+  "author": [
+    "Lindsey Parkinson",
+    "Justin Boucher",
+    "Joel Scheuchzer"
+  ],
+  "institution": "FPF",
+  "abstract": "This lecture provides an overview of the recycling process for food contact metals with a focus on aluminum and steel. It introduces existing collection methods including curbside collection, bring banks, and container deposit systems. The basic processing steps for recycling each metal type are summarized along with photos, explanatory videos, and links to publications that provide more detail. Key environmental benefits from recycling, as well as impacts stemming from the recycling processes are also reviewed along with European regulations pertinent to metal recycling.",
+  "topic": [
+    "metal",
+    "recycling"
+  ],
+  "license": "CC BY 4.0",
+  "keywords": [
+    "metal",
+    "recycling",
+    "aluminum",
+    "steel",
+    "waste",
+    "resource management"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FPF/metal-food-contact-material-recycling.html",
+  "qAndAVariables":["Access the assessment = https://fitness.agroparistech.fr/fitness2/online/FPF/assessments/metal-food-contact-material-recycling-quiz.html"]
+}

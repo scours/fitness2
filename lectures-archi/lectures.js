@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 29th February 2024
+ * Last Modified: Tuesday, 2nd April 2024
  * Modified By: Steward OUADI
  */
 
@@ -349,15 +349,18 @@ function createAElementForDropDownMenuToPrint(identifier) {
     mainDiv.appendChild(videoHeader);
     mainDiv.appendChild(videoElement);
   }
+  const qAndAHeader = document.createElement("h4");
+  qAndAHeader.innerHTML = "Test your knowledge";
+
+  mainDiv.appendChild(qAndAHeader);
+
+  const qAndAPar = document.createElement("p");
+  qAndAPar.textContent = "There is no assessment for this lecture.";
 
   // console.log(lecture.qAndAVariables !== undefined);
   if (lecture.qAndAVariables !== undefined) {
-    const qAndAHeader = document.createElement("h4");
-    qAndAHeader.innerHTML = "Assessments";
-
-    mainDiv.appendChild(qAndAHeader);
+    qAndAPar.textContent = ""; // As there are assessments, remove default assessment text
     for (let i = 0; i < lecture.qAndAVariables.length; i++) {
-      const qAndAPar = document.createElement("p");
       var qAndAVariablesSplitted = lecture.qAndAVariables[i].split("=");
       const title = qAndAVariablesSplitted[0].trim(); // Get the title
       const qAndAVariableContent = qAndAVariablesSplitted[1].trim();
@@ -378,9 +381,9 @@ function createAElementForDropDownMenuToPrint(identifier) {
       qAndAURL.text = title;
       qAndAURL.target = "_blank";
       qAndAPar.appendChild(qAndAURL);
-      mainDiv.appendChild(qAndAPar);
     }
   }
+  mainDiv.appendChild(qAndAPar);
 
   mainDiv.appendChild(authorsHeader);
   mainDiv.appendChild(authorsElement);

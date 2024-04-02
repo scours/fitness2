@@ -1,0 +1,44 @@
+{
+  "idx": 741257,
+  "title": "Universe of food contact chemicals",
+  "level": "common",
+  "section": "S8",
+  "unit": "U8.5",
+  "difficultyLevel": "Intermediate",
+  "part": "",
+  "author": [
+    "Justin Boucher",
+    "Lisa Zimmermann",
+    "Birgit Geueke",
+    "Joel Scheuchzer",
+    "Lindsey Parkinson",
+    "Jane Muncke"
+  ],
+  "institution": "FPF",
+  "abstract": "Foodware and food packaging products can contain thousands of different chemicals, many of which can migrate from the materials into food and have hazardous properties that harm health. This lecture introduces the currently known universe of the thousands of different chemicals that can be present in food contact materials. It explains fundamental concepts such as the waste hierarchy including reuse and recycling, specifically in the context of food contact chemicals. The chemical diversity and migration potential of different food contact materials is explored including the fundamental distinction between permanent and non-permanent materials. Learners gain insights into both the knowns and known unknowns about the chemicals present in food contact materials with references to additional resources that dive deeper into the topic. Furthermore, the chemical complexities and limitations associated with \"bio-based\" or \"biodegradable\" materials are addressed. Upon completion, learners will be better equipped to navigate scientific and policy discussions surrounding the chemical safety of food contact materials, especially concerning reuse and recycling.",
+  "topic": [
+    "chemicals",
+    "recycling",
+    "reuse",
+    "food contact chemicals"
+  ],
+  "license": "CC BY 4.0",
+  "keywords": [
+    "chemicals",
+    "recycling",
+    "reuse",
+    "hazardous chemicals",
+    "food contact chemicals",
+    "waste hierarchy",
+    "migration",
+    "food safety",
+    "hazard assessment",
+    "risk assessment",
+    "exposure assessment",
+    "environmental health",
+    "bio-based",
+    "biodegradable"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FPF/universe-of-food-contact-chemicals.html",
+  "qAndAVariables":["Access the assessment = https://fitness.agroparistech.fr/fitness2/online/FPF/assessments/universe-of-food-contact-chemicals-quiz.html"]
+}

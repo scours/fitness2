@@ -1,0 +1,29 @@
+{
+  "idx": 288111,
+  "title": "Glass food contact material recycling",
+  "level": "common",
+  "section": "S7",
+  "unit": "U7.6",
+  "difficultyLevel": "Novice",
+  "part": "",
+  "author": [
+    "Joel Scheuchzer",
+    "Justin Boucher",
+    "Lindsey Parkinson"
+  ],
+  "institution": "FPF",
+  "abstract": "This lecture provides an overview of the recycling process for food contact glass. The composition and production of glass for food contact applications are explored, with a particular focus on glass cullet and its pivotal role in glass recycling. Key stages in the glass recycling process are introduced including collection, separation and cleaning, sorting, melting, as well as molding and annealing. Environmental implications are analyzed, highlighting the efficiency gains and emission reductions stemming from recycled glass compared to primary production. Links to explanatory videos and further reading are provided that offer more information on individual processing steps and concepts.",
+  "topic": [
+    "glass",
+    "recycling"
+  ],
+  "license": "CC BY 4.0",
+  "keywords": [
+    "glass",
+    "recycling",
+    "cullet",
+    "waste"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FPF/glass-food-contact-material-recycling.html",
+  "qAndAVariables":["Access the assessment = https://fitness.agroparistech.fr/fitness2/online/FPF/assessments/glass-food-contact-material-recycling-quiz.html"]
+}
