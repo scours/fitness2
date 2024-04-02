@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 27th March 2024
+ * Last Modified: Tuesday, 2nd April 2024
  * Modified By: Steward OUADI
  */
 
@@ -880,6 +880,221 @@ Q8: Which type of active packaging is designed to control and adjust the interna
 - [ ]  Barrier coatings
 - [ ]  Moisture absorbers
 - [x]  Modified atmosphere packaging (MAP)
+
+canBeSentByEmail:true
+`;
+
+var glassFoodContactMaterialRecycling = `
+Q1: Glass is an inorganic amorphous substance with an internal crystalline structure. True or false?
+
+- [ ] True
+- [x] False
+
+Q2: Glasses form when a melt is cooled down relatively quickly. How does this cooling process affect their structure?
+
+- [ ] Forms a repeating crystalline structure
+- [x] Forms an irregular amorphous substance
+- [ ] Forms a layered structure
+- [ ] Forms a linear chain structure
+
+Q3: What is "cullet" in the context of glass recycling?
+
+- [ ] A type of mineral used in glass production
+- [x] Broken or waste glass used in glass recycling
+- [ ] A method of glass molding
+- [ ] A type of glass furnace
+
+Q4: Household glass meant for food contact, such as wine and drinking glasses, cannot be recycled due to their different melting temperatures. True or false?
+
+- [x] True
+- [ ] False
+
+Q5: What methods are used to remove contaminants from glass during the separation/cleaning process?
+
+- [ ] Strong magnets
+- [ ] Sieving
+- [ ] Drying with heat
+- [ ] Optical sorting machines
+- [x] All of the above
+
+Q6: What is the purpose of sorting glass waste by color before recycling?
+
+- [ ] To create new glass colors for artistic purposes
+- [x] To ensure the recycled products maintain high quality and color purity
+- [ ] To remove contaminants from the glass
+- [ ] To separate glass waste from other types of waste
+
+Q7: At what temperature range is glass typically melted in the furnace during recycling?
+
+- [ ] 200 - 650 degrees C
+- [ ] 850 - 1000 degrees C
+- [x] 1,300 - 1,650 degrees C
+- [ ] 2,100 - 2,400 degrees C
+
+Q8: The annealing process is used to strengthen the glass by adding reinforcing materials. True or false?
+
+- [ ] True
+- [x] False
+
+Q9: What is the most crucial factor to consider when forming durable and strong glass?
+
+- [ ] The melt composition
+- [x] Temperature/cooling gradient of the melt
+- [ ] The form of the mold
+- [ ] The precision with which the gob is poured into the mold
+
+Q10: The resource requirements of and overall emissions from glass production can be reduced by increasing which input during the process?
+
+- [x] Amount of glass cullet
+- [ ] Temperature of the furnace
+- [ ] Amount of raw silica
+- [ ] Amount of raw sodium carbonate
+
+canBeSentByEmail:true
+`;
+
+var metalFoodContactMaterialRecycling = `
+Q1: What recycling collection system produces the highest quality recyclate?
+
+- [ ] Bring banks
+- [ ] Container deposit
+- [ ] Curbside pick up
+- [x] Any system that separates material types
+
+Q2: What about the design of both aluminum coffee pods and steel lids make them difficult to recycle?
+
+- [x] Small size
+- [ ] Contamination
+- [ ] Not magnetic
+
+Q3: "All labeling on beverage cans can be easily cleaned off prior to melting." True or false?
+
+- [ ] True
+- [x] False
+
+Q4: Which two metals are the most widely used for food contact in packaging?
+
+- [ ] Copper and zinc
+- [ ] Gold and silver
+- [x] Aluminum and steel
+- [ ] Titanium and nickel
+
+Q5: What method is commonly used to separate ferrous metals from non-ferrous metals during recycling?
+
+- [ ] Chemical extraction
+- [ ] Gravity separation
+- [x] Magnetic separation
+- [ ] Electrolysis
+
+Q6: What safety concern exists for aerosol cans in the recycling process?
+
+- [ ] Corrosion
+- [x] Fires and explosions
+- [ ] Electric shocks
+- [ ] Leakage
+
+Q7: Which are two key challenges identified for recycling aluminum foil and trays?
+
+- [x] Contaminated with food residues
+- [x] Difficulty in separation
+- [ ] Presence of paper or plastic labels
+- [ ] Low consumer awareness
+
+Q8: Why are aluminum drink cans and steel food cans often preferred for recycling?
+
+- [ ] They are the cheapest materials.
+- [x] They have the highest market value.
+- [ ] They are the easiest to manufacture.
+- [ ] They have the longest lifespan.
+
+canBeSentByEmail:true
+`;
+
+var universeOfFoodContactChemicals = `
+Q1: Which of the following are permanent materials?
+
+- [ ] Polyethylene terephthalate (PET)
+- [ ] Paper and board
+- [x] Stainless steel
+- [ ] Polylactic acid (PLA)
+- [x] Glass
+- [ ] Silicone
+- [ ] Polypropylene (PP)
+- [x] Aluminum
+- [ ] High-density polyethylene (HDPE)
+
+Q2: Uncoated permanent materials are different than non-permanent materials in that they:
+
+- [ ] Are all lightweight
+- [x] Can be recycled infinitely
+- [ ] Have higher levels of migration
+- [x] Are highly inert materials
+- [ ] Are all biodegradable
+- [ ] Are all inorganic
+
+Q3: Which material types are considered less of a concern for chemical safety during recycling due to their inert structure?
+
+- [ ] Plastic
+- [ ] Paper and cardboard
+- [x] Glass
+- [ ] Bio-based and biodegradable materials
+- [x] Stainless steel
+- [ ] Coated aluminum
+
+Q4: What is a challenge associated with all non-permanent materials such as plastics in reusable products?
+
+- [ ] Breakage
+- [x] Physical and chemical degradation (and migration) through repeated use
+- [ ] Difficulty with washing
+- [ ] Reduced absorption of flavors and colors
+
+Q5: What is the primary concern regarding the chemical safety of recycled paper and board for food contact applications?
+
+- [ ] Inadequate recycling infrastructure
+- [x] Presence of contaminants from non-food contact paper products
+- [ ] Lack of regulations for recycled paper and board
+- [ ] Excessive use of multilayer packaging
+
+Q6: Why are multimaterial multilayer food contact products often downcycled into non-food contact applications?
+
+- [x] Separating their layers for recycling is challenging
+- [ ] They contain fewer hazardous chemicals
+- [ ] They are not suitable for reuse
+- [ ] They are resistant to chemical migration
+
+Q7: Which are key concerns associated with the use of aluminum in reusable applications?
+
+- [x] Chemical safety of the applied food contact coatings
+- [ ] Limited recyclability
+- [ ] Inert structure leading to poor durability
+- [x] Migration of aluminum ions in case a coating is not present
+
+Q8: In total, how many food contact chemicals are known to be potentially present in and/or detected across all types of food contact materials?
+
+- [ ] 279
+- [ ] 6405
+- [x] 13,233
+- [ ] 62,864
+
+Q9: Of the food contact material types shown below, which four can contain the highest numbers of identified food contact chemicals of concern?
+
+- [x] Coatings used on metals
+- [ ] Adhesives
+- [ ] Rubbers
+- [x] Plastics
+- [x] Printing inks
+- [ ] Cork and wood
+- [x] Paper and board
+- [ ] Silicones
+
+Q10: Which of the following statements correctly describe all bio-based plastic food contact materials?
+
+- [ ] They are biodegradable
+- [x] They are created using a feedstock other than fossil fuels
+- [ ] They are inert
+- [ ] They are fully recyclable
+- [x] They are not inert
+- [x] They are equally as chemically complex as fossil-based plastics
 
 canBeSentByEmail:true
 `;

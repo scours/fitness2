@@ -144,7 +144,7 @@ Below, you will find the steps to convert a pptx file to html FITNESS format.
 3. Save the file
 4. In the “manifests/” folder, select the manifest in which you want to add the Q&A, for example “manifests/Innovations/Bacterial polyesters/bacterial-polyesters.manifest”
 5. Modify the “qAndAVariables” property to determine which Q&A to show
-   1. This property can accept multiple variables from the “quiz-creator-tool-online/src/markdownContentVars.js” file. Each entry of that variable is formatted as: “name to display for the Q&A / name of the variable in “markdownContentVars.js” file. For example "qAndAVariables":["Access Q&A number 1/bacterialPolyester"]
+   1. This property can accept multiple variables from the “quiz-creator-tool-online/src/markdownContentVars.js” file. Each entry of that variable is formatted as: “name to display for the Q&A / name of the variable in “markdownContentVars.js” file. For example "qAndAVariables":["Take a quiz/bacterialPolyester"]
    2. save the file
 6. Update prefetch (link to “update prefetch” steps)
 

@@ -368,7 +368,7 @@ function createAElementForDropDownMenuToPrint(identifier) {
 
       if (title === "") {
         // If the title is empty, replace it with "Access Q/A number x"
-        title = "Access the assessment number " + (i + 1);
+        title = "Take quiz number " + (i + 1);
       }
 
       if (qAndAVariableContent.startsWith("https")) {
