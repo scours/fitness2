@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 4th March 2024
+ * Last Modified: Tuesday, 9th April 2024
  * Modified By: Steward OUADI
  */
 
@@ -342,85 +342,87 @@ function clearErrorText() {
   errorMessageDiv.style.display = "none"; // Hide the container
 }
 
-/**
- * Sets up an event listener to process the manifest file when the user selects a file and clicks the "Process" button.
- */
 document.addEventListener("DOMContentLoaded", function () {
   // Clear message on page load
   clearErrorText();
   document
-    .getElementById("processButton")
-    .addEventListener("click", async function () {
-      const fileInput = document.getElementById("fileInput"); // Get the file input element.
-      if (fileInput.files.length > 0) {
-        const file = fileInput.files[0]; // Get the selected file.
-        const reader = new FileReader(); // Create a new FileReader object.
-        reader.onload = async function (e) {
-          const content = e.target.result; // Read the content of the file.
-          const slides = await parseManifest(content); // Parse the manifest content to create Slide objects.
-          saveOutput(slides); // Save the output to a file.
+    .getElementById("fileInput")
+    .addEventListener("change", function (event) {
+      // This function will be called when a file is selected
+      var file = event.target.files[0]; // This is the file that was selected
+      // You can now call another function and pass the file to it, or process the file as needed
+      const reader = new FileReader(); // Create a new FileReader object.
+      reader.onload = async function (e) {
+        const content = e.target.result; // Read the content of the file.
+        const slides = await parseManifest(content); // Parse the manifest content to create Slide objects.
+        saveOutput(slides); // Save the output to a file.
 
-          const response = httpGet(referenceURL);
-          // htmlContentToDisplay will display only what we want
-          let htmlContentToDisplay = document.createElement("html");
-          htmlContentToDisplay.innerHTML = response;
+        const response = httpGet(referenceURL);
+        // htmlContentToDisplay will display only what we want
+        let htmlContentToDisplay = document.createElement("html");
+        htmlContentToDisplay.innerHTML = response;
 
-          let slidesToDisplay = document.createElement("div");
-          slidesToDisplay.setAttribute("class", "slides");
+        let slidesToDisplay = document.createElement("div");
+        slidesToDisplay.setAttribute("class", "slides");
 
-          slides.forEach((element) => {
-            slidesToDisplay.appendChild(displayFinalContent(element));
-          });
+        slides.forEach((element) => {
+          slidesToDisplay.appendChild(displayFinalContent(element));
+        });
 
-          htmlContentToDisplay.getElementsByClassName("slides")[0].innerHTML =
-            slidesToDisplay.innerHTML;
+        htmlContentToDisplay.getElementsByClassName("slides")[0].innerHTML =
+          slidesToDisplay.innerHTML;
 
-          console.log("displaying slides to display begin");
-          console.log(slidesToDisplay);
-          console.log(slidesToDisplay.children);
-          console.log("displaying slides to display end");
+        console.log("displaying slides to display begin");
+        console.log(slidesToDisplay);
+        console.log(slidesToDisplay.children);
+        console.log("displaying slides to display end");
 
-          console.log("htmlContentToDisplay begin");
-          console.log(htmlContentToDisplay);
-          console.log("htmlContentToDisplay end");
-          var lectureIframe = document.createElement("iframe");
+        console.log("htmlContentToDisplay begin");
+        console.log(htmlContentToDisplay);
+        console.log("htmlContentToDisplay end");
+        var lectureIframe = document.createElement("iframe");
 
-          let modifiedA = document.createElement("html");
-          modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
-            `"../../../../`,
-            `"https://fitness.agroparistech.fr/fitness/lectures/`
-          );
+        let modifiedA = document.createElement("html");
+        modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
+          `"../../../../`,
+          `"https://fitness.agroparistech.fr/fitness/lectures/`
+        );
 
-          let modifiedB = document.createElement("html");
-          modifiedB.innerHTML = modifiedA.innerHTML.replaceAll(
-            `"./../../../../../`,
-            `"https://fitness.agroparistech.fr/fitness/`
-          );
+        let modifiedB = document.createElement("html");
+        modifiedB.innerHTML = modifiedA.innerHTML.replaceAll(
+          `"./../../../../../`,
+          `"https://fitness.agroparistech.fr/fitness/`
+        );
 
-          let modifiedC = document.createElement("html");
-          modifiedC.innerHTML = modifiedB.innerHTML.replaceAll(
-            `'../../../../`,
-            `'https://fitness.agroparistech.fr/fitness/lectures/`
-          );
+        let modifiedC = document.createElement("html");
+        modifiedC.innerHTML = modifiedB.innerHTML.replaceAll(
+          `'../../../../`,
+          `'https://fitness.agroparistech.fr/fitness/lectures/`
+        );
 
-          let modifiedD = document.createElement("html");
-          modifiedD.innerHTML = modifiedC.innerHTML.replaceAll(
-            `'./../../../../../`,
-            `'https://fitness.agroparistech.fr/fitness/`
-          );
+        let modifiedD = document.createElement("html");
+        modifiedD.innerHTML = modifiedC.innerHTML.replaceAll(
+          `'./../../../../../`,
+          `'https://fitness.agroparistech.fr/fitness/`
+        );
 
-          lectureIframe.setAttribute("srcdoc", modifiedD.outerHTML);
+        lectureIframe.setAttribute("srcdoc", modifiedD.outerHTML);
 
-          lectureIframe.setAttribute("class", "frame");
-          lectureIframe.style.width = "100%";
-          // lectureIframe.style.height = screen.height * 0.7 + "px";
-          lectureIframe.style.height = "900px";
-          lectureIframe.style.border = "none";
+        lectureIframe.setAttribute("class", "frame");
+        lectureIframe.style.width = "100%";
+        // lectureIframe.style.height = screen.height * 0.7 + "px";
+        lectureIframe.style.height = "900px";
+        lectureIframe.style.border = "none";
 
-          const mainContent = document.getElementById("main-content");
-          mainContent.innerHTML = lectureIframe.outerHTML;
-        };
-        reader.readAsText(file); // Read the file as text.
-      }
+        const mainContent = document.getElementById("main-content");
+        mainContent.innerHTML = lectureIframe.outerHTML;
+      };
+      reader.readAsText(file); // Read the file as text.
+    });
+
+  document
+    .getElementById("viewerDocumentation")
+    .addEventListener("click", function () {
+      window.location.href = "documentation.html";
     });
 });
