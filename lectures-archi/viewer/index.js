@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 9th April 2024
+ * Last Modified: Thursday, 11th April 2024
  * Modified By: Steward OUADI
  */
 
@@ -58,54 +58,70 @@ function cleanUrl(url) {
 
 const markDownSlides = new Map();
 
-function updateMarkdownSlides(URL) {
-  const response = httpGet(URL);
+// function updateMarkdownSlides(URL) {
+//   const response = httpGet(URL);
 
-  console.log("showing click URL");
-  console.log(URL);
-  console.log("response beg");
-  console.log(response);
-  console.log(typeof response);
-  console.log("response end");
-  console.log("html content begin");
+//   console.log("showing click URL");
+//   console.log(URL);
+//   console.log("response beg");
+//   console.log(response);
+//   console.log(typeof response);
+//   console.log("response end");
+//   console.log("html content begin");
 
-  htmlContent = document.createElement("html");
-  htmlContent.innerHTML = response;
+//   htmlContent = document.createElement("html");
+//   htmlContent.innerHTML = response;
 
-  // htmlContentToDisplay will display only what we want
-  let htmlContentToDisplay = document.createElement("html");
-  htmlContentToDisplay.innerHTML = response;
+//   // htmlContentToDisplay will display only what we want
+//   let htmlContentToDisplay = document.createElement("html");
+//   htmlContentToDisplay.innerHTML = response;
 
-  console.log(htmlContent);
-  console.log("html content end");
-  let slidesFromResponse =
-    htmlContent.getElementsByClassName("slides")[0].children;
+//   console.log(htmlContent);
+//   console.log("html content end");
+//   let slidesFromResponse =
+//     htmlContent.getElementsByClassName("slides")[0].children;
 
-  markDownSlides.set(URL, slidesFromResponse);
+//   markDownSlides.set(URL, slidesFromResponse);
+// }
+
+async function updateMarkdownSlides(URL) {
+  // Assume httpGet now returns a Promise resolving to the response text
+  const response = await httpGet(URL);
+
+  // Assuming response is a string containing HTML
+  const parser = new DOMParser(); // Use DOMParser to parse the string into HTML
+  const doc = parser.parseFromString(response, "text/html");
+
+  // Safely access the slides container
+  const slidesContainer = doc.getElementsByClassName("slides")[0];
+  if (slidesContainer) {
+    let slidesFromResponse = slidesContainer.children;
+    markDownSlides.set(URL, slidesFromResponse);
+  } else {
+    console.error("Slides container not found in the response");
+  }
 }
 
-function httpGet(theUrl) {
-  console.log("the url to manage");
-  console.log(theUrl);
-  let xmlhttp;
-  let responseText;
-  if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
-    xmlhttp = new XMLHttpRequest();
-  } else {
-    // code for IE6, IE5
-    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  }
-  xmlhttp.onreadystatechange = function () {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-      responseText = xmlhttp.responseText;
+// Update httpGet to return a promise
+async function httpGet(theUrl) {
+  return new Promise((resolve, reject) => {
+    let xmlhttp = window.XMLHttpRequest
+      ? new XMLHttpRequest()
+      : new ActiveXObject("Microsoft.XMLHTTP");
 
-      return responseText;
-    }
-  };
-  xmlhttp.open("GET", theUrl, false);
-  xmlhttp.send();
-  return responseText;
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == 4) {
+        if (xmlhttp.status == 200) {
+          resolve(xmlhttp.responseText);
+        } else {
+          reject("Error: " + xmlhttp.statusText);
+        }
+      }
+    };
+
+    xmlhttp.open("GET", theUrl, true);
+    xmlhttp.send();
+  });
 }
 
 function displayFinalContent(element) {
@@ -179,14 +195,40 @@ function lineFormatChecker(line, regex, args, lineNumber) {
   return null;
 }
 
-function evaluateWithMathJs(expression) {
-  let resultToReturn;
+// function evaluateWithMathJs(expression) {
+//   let resultToReturn;
 
-  resultToReturn = math.evaluate(expression);
+//   resultToReturn = math.evaluate(expression);
+//   if (resultToReturn["_data"] !== undefined) {
+//     resultToReturn = resultToReturn["_data"];
+//   }
+//   // evaluateResult = math.evaluate(slideNumberIfAny)["_data"];
+
+//   return resultToReturn;
+// }
+
+function evaluateWithMathJs(expression) {
+  // Assuming the expression is in the form "[start:end]"
+  // Manually parse this range and generate the array of numbers it represents
+  if (expression.startsWith("[") && expression.endsWith("]")) {
+    // Remove the brackets and split by colon
+    const [start, end] = expression.slice(1, -1).split(":").map(Number);
+    if (!isNaN(start) && !isNaN(end)) {
+      // Generate an array containing all numbers from start to end
+      const result = [];
+      for (let i = start; i <= end; i++) {
+        result.push(i);
+      }
+      return result;
+    }
+  }
+
+  // Fallback or additional handling for other types of expressions
+  // You might need to adjust this part based on what math.evaluate is and what it returns
+  let resultToReturn = math.evaluate(expression);
   if (resultToReturn["_data"] !== undefined) {
     resultToReturn = resultToReturn["_data"];
   }
-  // evaluateResult = math.evaluate(slideNumberIfAny)["_data"];
 
   return resultToReturn;
 }
@@ -251,7 +293,7 @@ async function parseManifest(manifestContent) {
         referenceURL = link;
       }
 
-      updateMarkdownSlides(link);
+      await updateMarkdownSlides(link);
 
       // Check if there's a specified slide number or range.
       if (slideNumberIfAny) {
@@ -342,83 +384,250 @@ function clearErrorText() {
   errorMessageDiv.style.display = "none"; // Hide the container
 }
 
+// Adjusted httpGet function to accept a callback for processing content
+function httpGetWithCallback(theUrl, callback) {
+  console.log("the url to manage");
+  console.log(theUrl);
+  let xmlhttp;
+
+  if (window.XMLHttpRequest) {
+    xmlhttp = new XMLHttpRequest();
+  } else {
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  xmlhttp.onreadystatechange = function () {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      const responseText = xmlhttp.responseText;
+      if (callback) callback(responseText);
+    }
+  };
+
+  xmlhttp.open("GET", theUrl, false);
+  xmlhttp.send();
+}
+
+function processFileContent(content = null) {
+  // If content is not directly provided (null), listen for file input change
+  if (content === null) {
+    document
+      .getElementById("fileInput")
+      .addEventListener("change", function (event) {
+        var file = event.target.files[0]; // This is the file that was selected
+        const reader = new FileReader(); // Create a new FileReader object.
+
+        reader.onload = async function (e) {
+          // Process the read content from the file
+          processManifestAndDisplay(e.target.result);
+        };
+
+        reader.readAsText(file); // Read the file as text.
+      });
+  } else {
+    // If content is provided directly, process it
+    processManifestAndDisplay(content);
+  }
+}
+
+async function processManifestAndDisplay(content) {
+  const slides = await parseManifest(content); // Parse the manifest content to create Slide objects.
+  saveOutput(slides); // Save the output to a file.
+
+  try {
+    // The rest of your existing logic to process and display the slides
+    const response = await httpGet(referenceURL); // Assume httpGet is now an async function
+    let htmlContentToDisplay = document.createElement("html");
+    htmlContentToDisplay.innerHTML = response;
+
+    let slidesToDisplay = document.createElement("div");
+    slidesToDisplay.setAttribute("class", "slides");
+
+    slides.forEach((element) => {
+      slidesToDisplay.appendChild(displayFinalContent(element));
+    });
+
+    htmlContentToDisplay.getElementsByClassName("slides")[0].innerHTML =
+      slidesToDisplay.innerHTML;
+
+    console.log("displaying slides to display begin");
+    console.log(slidesToDisplay);
+    console.log(slidesToDisplay.children);
+    console.log("displaying slides to display end");
+
+    console.log("htmlContentToDisplay begin");
+    console.log(htmlContentToDisplay);
+    console.log("htmlContentToDisplay end");
+    var lectureIframe = document.createElement("iframe");
+
+    let modifiedA = document.createElement("html");
+    modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
+      `"../../../../`,
+      `"https://fitness.agroparistech.fr/fitness/lectures/`
+    );
+
+    let modifiedB = document.createElement("html");
+    modifiedB.innerHTML = modifiedA.innerHTML.replaceAll(
+      `"./../../../../../`,
+      `"https://fitness.agroparistech.fr/fitness/`
+    );
+
+    let modifiedC = document.createElement("html");
+    modifiedC.innerHTML = modifiedB.innerHTML.replaceAll(
+      `'../../../../`,
+      `'https://fitness.agroparistech.fr/fitness/lectures/`
+    );
+
+    let modifiedD = document.createElement("html");
+    modifiedD.innerHTML = modifiedC.innerHTML.replaceAll(
+      `'./../../../../../`,
+      `'https://fitness.agroparistech.fr/fitness/`
+    );
+
+    lectureIframe.setAttribute("srcdoc", modifiedD.outerHTML);
+
+    lectureIframe.setAttribute("class", "frame");
+    lectureIframe.style.width = "100%";
+    // lectureIframe.style.height = screen.height * 0.7 + "px";
+    lectureIframe.style.height = "900px";
+    lectureIframe.style.border = "none";
+
+    const mainContent = document.getElementById("main-content");
+    mainContent.innerHTML = lectureIframe.outerHTML;
+  } catch (error) {
+    console.error("Failed to get URL:", URL, error);
+  }
+}
+
+// Adjusted httpGet function to be asynchronous
+async function httpGet(theUrl) {
+  return new Promise((resolve, reject) => {
+    let xmlhttp = window.XMLHttpRequest
+      ? new XMLHttpRequest()
+      : new ActiveXObject("Microsoft.XMLHTTP");
+
+    xmlhttp.onreadystatechange = function () {
+      if (xmlhttp.readyState == 4) {
+        if (xmlhttp.status == 200) {
+          resolve(xmlhttp.responseText);
+        } else {
+          reject("Error loading the URL");
+        }
+      }
+    };
+
+    xmlhttp.open("GET", theUrl, true);
+    xmlhttp.send();
+  });
+}
+
+// function processFileContent() {
+//   document
+//     .getElementById("fileInput")
+//     .addEventListener("change", function (event) {
+//       // This function will be called when a file is selected
+//       var file = event.target.files[0]; // This is the file that was selected
+//       // You can now call another function and pass the file to it, or process the file as needed
+//       const reader = new FileReader(); // Create a new FileReader object.
+//       reader.onload = async function (e) {
+//         const content = e.target.result; // Read the content of the file.
+//         const slides = await parseManifest(content); // Parse the manifest content to create Slide objects.
+//         saveOutput(slides); // Save the output to a file.
+
+//         const response = httpGet(referenceURL);
+//         // htmlContentToDisplay will display only what we want
+//         let htmlContentToDisplay = document.createElement("html");
+//         htmlContentToDisplay.innerHTML = response;
+
+//         let slidesToDisplay = document.createElement("div");
+//         slidesToDisplay.setAttribute("class", "slides");
+
+//         slides.forEach((element) => {
+//           slidesToDisplay.appendChild(displayFinalContent(element));
+//         });
+
+//         htmlContentToDisplay.getElementsByClassName("slides")[0].innerHTML =
+//           slidesToDisplay.innerHTML;
+
+//         console.log("displaying slides to display begin");
+//         console.log(slidesToDisplay);
+//         console.log(slidesToDisplay.children);
+//         console.log("displaying slides to display end");
+
+//         console.log("htmlContentToDisplay begin");
+//         console.log(htmlContentToDisplay);
+//         console.log("htmlContentToDisplay end");
+//         var lectureIframe = document.createElement("iframe");
+
+//         let modifiedA = document.createElement("html");
+//         modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
+//           `"../../../../`,
+//           `"https://fitness.agroparistech.fr/fitness/lectures/`
+//         );
+
+//         let modifiedB = document.createElement("html");
+//         modifiedB.innerHTML = modifiedA.innerHTML.replaceAll(
+//           `"./../../../../../`,
+//           `"https://fitness.agroparistech.fr/fitness/`
+//         );
+
+//         let modifiedC = document.createElement("html");
+//         modifiedC.innerHTML = modifiedB.innerHTML.replaceAll(
+//           `'../../../../`,
+//           `'https://fitness.agroparistech.fr/fitness/lectures/`
+//         );
+
+//         let modifiedD = document.createElement("html");
+//         modifiedD.innerHTML = modifiedC.innerHTML.replaceAll(
+//           `'./../../../../../`,
+//           `'https://fitness.agroparistech.fr/fitness/`
+//         );
+
+//         lectureIframe.setAttribute("srcdoc", modifiedD.outerHTML);
+
+//         lectureIframe.setAttribute("class", "frame");
+//         lectureIframe.style.width = "100%";
+//         // lectureIframe.style.height = screen.height * 0.7 + "px";
+//         lectureIframe.style.height = "900px";
+//         lectureIframe.style.border = "none";
+
+//         const mainContent = document.getElementById("main-content");
+//         mainContent.innerHTML = lectureIframe.outerHTML;
+//       };
+//       reader.readAsText(file); // Read the file as text.
+//     });
+// }
+
 document.addEventListener("DOMContentLoaded", function () {
   // Clear message on page load
   clearErrorText();
-  document
-    .getElementById("fileInput")
-    .addEventListener("change", function (event) {
-      // This function will be called when a file is selected
-      var file = event.target.files[0]; // This is the file that was selected
-      // You can now call another function and pass the file to it, or process the file as needed
-      const reader = new FileReader(); // Create a new FileReader object.
-      reader.onload = async function (e) {
-        const content = e.target.result; // Read the content of the file.
-        const slides = await parseManifest(content); // Parse the manifest content to create Slide objects.
-        saveOutput(slides); // Save the output to a file.
 
-        const response = httpGet(referenceURL);
-        // htmlContentToDisplay will display only what we want
-        let htmlContentToDisplay = document.createElement("html");
-        htmlContentToDisplay.innerHTML = response;
+  // Get the current URL and remove the filename to get the folder path
+  const currentUrl = window.location.href;
+  const pathToHtmlFolder = currentUrl.substring(
+    0,
+    currentUrl.lastIndexOf("/") + 1
+  );
 
-        let slidesToDisplay = document.createElement("div");
-        slidesToDisplay.setAttribute("class", "slides");
+  // Check URL for #variableName
+  const hash = window.location.hash;
+  let fileName;
 
-        slides.forEach((element) => {
-          slidesToDisplay.appendChild(displayFinalContent(element));
-        });
+  if (hash.startsWith("#")) {
+    const variableName = hash.substring(1); // Remove '#' from the start
+    fileName = `${variableName}.txt`; // Append .txt extension
 
-        htmlContentToDisplay.getElementsByClassName("slides")[0].innerHTML =
-          slidesToDisplay.innerHTML;
+    // Hide the file import button
+    const fileInputButton = document.getElementById("fileInputButton"); // Assuming the button has this ID
+    if (fileInputButton) {
+      fileInputButton.style.display = "none";
+    }
 
-        console.log("displaying slides to display begin");
-        console.log(slidesToDisplay);
-        console.log(slidesToDisplay.children);
-        console.log("displaying slides to display end");
-
-        console.log("htmlContentToDisplay begin");
-        console.log(htmlContentToDisplay);
-        console.log("htmlContentToDisplay end");
-        var lectureIframe = document.createElement("iframe");
-
-        let modifiedA = document.createElement("html");
-        modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
-          `"../../../../`,
-          `"https://fitness.agroparistech.fr/fitness/lectures/`
-        );
-
-        let modifiedB = document.createElement("html");
-        modifiedB.innerHTML = modifiedA.innerHTML.replaceAll(
-          `"./../../../../../`,
-          `"https://fitness.agroparistech.fr/fitness/`
-        );
-
-        let modifiedC = document.createElement("html");
-        modifiedC.innerHTML = modifiedB.innerHTML.replaceAll(
-          `'../../../../`,
-          `'https://fitness.agroparistech.fr/fitness/lectures/`
-        );
-
-        let modifiedD = document.createElement("html");
-        modifiedD.innerHTML = modifiedC.innerHTML.replaceAll(
-          `'./../../../../../`,
-          `'https://fitness.agroparistech.fr/fitness/`
-        );
-
-        lectureIframe.setAttribute("srcdoc", modifiedD.outerHTML);
-
-        lectureIframe.setAttribute("class", "frame");
-        lectureIframe.style.width = "100%";
-        // lectureIframe.style.height = screen.height * 0.7 + "px";
-        lectureIframe.style.height = "900px";
-        lectureIframe.style.border = "none";
-
-        const mainContent = document.getElementById("main-content");
-        mainContent.innerHTML = lectureIframe.outerHTML;
-      };
-      reader.readAsText(file); // Read the file as text.
-    });
+    // Use the path to dynamically construct the full URL to the file
+    const fileURL = `${pathToHtmlFolder}${fileName}`;
+    httpGetWithCallback(fileURL, processFileContent); // Assuming httpGet can accept a callback as second parameter
+  } else {
+    processFileContent();
+  }
 
   document
     .getElementById("viewerDocumentation")
