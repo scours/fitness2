@@ -1,0 +1,3 @@
+[submodule "Certificate"]
+	path = Certificate
+	url = https://github.com/Xeone971/Certificate.git
