@@ -344,12 +344,35 @@ function saveOutput(slides) {
   const blob = new Blob([outputLines.join("\n")], { type: "text/plain" }); // Create a new Blob object from the string representations.
   const url = URL.createObjectURL(blob); // Generate a URL for the Blob object.
 
-  const downloadLink = document.createElement("a"); // Create a new <a> element for the download link.
-  downloadLink.href = url; // Set the href of the link to the Blob URL.
-  downloadLink.download = "manifest2-output.txt"; // Set the download attribute to specify the filename.
-  document.body.appendChild(downloadLink); // Temporarily add the link to the document.
-  downloadLink.click(); // Trigger the download.
-  document.body.removeChild(downloadLink); // Remove the link from the document.
+  // Create a button element
+  const downloadBtn = document.createElement("button");
+  downloadBtn.textContent = "Download Output"; // Set button text
+  downloadBtn.style.display = "block"; // Optional: adjust styling as needed
+  downloadBtn.style.marginTop = "20px"; // Optional: adjust styling as needed
+  downloadBtn.style.display = "none";
+
+  // Add an event listener to the button for the 'click' event
+  downloadBtn.addEventListener("click", function () {
+    const downloadLink = document.createElement("a"); // Create a new <a> element for the download link.
+    downloadLink.href = url; // Set the href of the link to the Blob URL.
+    downloadLink.download = "manifest2-output.txt"; // Set the download attribute to specify the filename.
+    document.body.appendChild(downloadLink); // Temporarily add the link to the document.
+    downloadLink.click(); // Trigger the download.
+    document.body.removeChild(downloadLink); // Remove the link from the document.
+  });
+
+  // Find the element with id 'fileInput'
+  const fileInputElement = document.getElementById("fileInput");
+  if (fileInputElement) {
+    // Insert the button right after the 'fileInput' element
+    fileInputElement.parentNode.insertBefore(
+      downloadBtn,
+      fileInputElement.nextSibling
+    );
+  } else {
+    // Fallback to appending to the body if 'fileInput' is not found
+    document.body.appendChild(downloadBtn);
+  }
 }
 
 function clearErrorText() {
@@ -513,10 +536,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const variableName = hash.substring(1); // Remove '#' from the start
     fileName = `${variableName}.txt`; // Append .txt extension
 
-    // Hide the file import button
-    const fileInputButton = document.getElementById("fileInputButton"); // Assuming the button has this ID
-    if (fileInputButton) {
-      fileInputButton.style.display = "none";
+    // Hide the file import manifest button
+    const importManifestContainer = document.getElementById(
+      "import-manifest-container"
+    ); // Assuming the button has this ID
+    if (importManifestContainer) {
+      importManifestContainer.style.display = "none";
     }
 
     // Use the path to dynamically construct the full URL to the file

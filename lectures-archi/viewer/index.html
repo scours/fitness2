@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Wednesday, 21st February 2024
 Author: Steward OUADI
 -----
-Last Modified: Tuesday, 9th April 2024
+Last Modified: Thursday, 11th April 2024
 Modified By: Steward OUADI
 -->
 <!DOCTYPE html>
@@ -38,7 +38,8 @@ Modified By: Steward OUADI
     }
 
     #viewerDocumentation,
-    #fileInput {
+    #fileInput,
+    #main-content {
       margin-top: 5%;
     }
 
@@ -51,10 +52,12 @@ Modified By: Steward OUADI
 <body>
   <main-header></main-header>
   <div class="centered-content">
-    <h2>Import a manifest file</h2>
+    <div id="import-manifest-container">
+      <h2>Import a manifest file</h2>
+      <input type="file" id="fileInput" />
+    </div>
     <!-- Error message container, hidden by default -->
     <p id="errorMessage"></p>
-    <input type="file" id="fileInput" />
     <div id="main-content"></div>
     <div id="output"></div>
     <button id="viewerDocumentation">How to use the viewer?</button>
