@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 11th April 2024
+ * Last Modified: Monday, 15th April 2024
  * Modified By: Steward OUADI
  */
 
@@ -426,9 +426,71 @@ function processFileContent(content = null) {
   }
 }
 
+async function fetchAndDisplayContent() {
+  try {
+    const testURL =
+      "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#materialMetal";
+    // Calculate the base URL up to the last slash before the file name or hash
+    const baseURL =
+      new URL(testURL).origin +
+      new URL(testURL).pathname.substring(
+        0,
+        new URL(testURL).pathname.lastIndexOf("/") + 1
+      );
+
+    const lectureTestResponse = await httpGet(testURL);
+    const container = document.getElementById("main-content-2");
+    let iframe = container.querySelector("iframe");
+    if (!iframe) {
+      iframe = document.createElement("iframe");
+      iframe.style.width = "100%";
+      iframe.style.height = "500px";
+      container.appendChild(iframe);
+    }
+
+    iframe.onload = function () {
+      const iframeDocument =
+        iframe.contentDocument || iframe.contentWindow.document;
+      iframeDocument.open();
+
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(lectureTestResponse, "text/html");
+
+      // Set the base URL for the document
+      const base = doc.createElement("base");
+      base.href = baseURL;
+      doc.head.prepend(base);
+
+      // Modify links to absolute paths
+      doc.querySelectorAll('link[rel="stylesheet"]').forEach((link) => {
+        link.href = new URL(link.getAttribute("href"), baseURL).href;
+      });
+
+      // Modify scripts to absolute paths
+      doc.querySelectorAll("script").forEach((script) => {
+        if (script.src) {
+          script.src = new URL(script.getAttribute("src"), baseURL).href;
+        }
+      });
+
+      // Write the modified HTML back to the iframe
+      iframeDocument.write(doc.documentElement.outerHTML);
+      iframeDocument.close();
+    };
+
+    // Set about:blank to trigger onload event
+    iframe.src = "about:blank";
+  } catch (error) {
+    console.error("Failed to fetch content:", error);
+    document.getElementById("main-content-2").innerHTML =
+      "Failed to load content.";
+  }
+}
+
 async function processManifestAndDisplay(content) {
   const slides = await parseManifest(content); // Parse the manifest content to create Slide objects.
   saveOutput(slides); // Save the output to a file.
+  fetchAndDisplayContent();
 
   try {
     // The rest of your existing logic to process and display the slides
