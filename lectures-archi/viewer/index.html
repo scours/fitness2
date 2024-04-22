@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Wednesday, 21st February 2024
 Author: Steward OUADI
 -----
-Last Modified: Monday, 15th April 2024
+Last Modified: Monday, 22nd April 2024
 Modified By: Steward OUADI
 -->
 <!DOCTYPE html>
@@ -58,14 +58,20 @@ Modified By: Steward OUADI
     </div>
     <!-- Error message container, hidden by default -->
     <p id="errorMessage"></p>
+    <div id="iframeContainer">
+      <!-- Iframe will be inserted here by JavaScript -->
+    </div>
     <div id="main-content"></div>
     <div id="main-content-2"></div>
     <div id="output"></div>
+    <button id="prevButton" onclick="navigateContent(-1)">Previous</button>
+    <button id="nextButton" onclick="navigateContent(1)">Next</button>
     <button id="viewerDocumentation">How to use the viewer?</button>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
   <script src="Slide.js"></script>
+  <script src="TestSlide.js"></script>
   <script src="index.js"></script>
 
   <main-footer></main-footer>

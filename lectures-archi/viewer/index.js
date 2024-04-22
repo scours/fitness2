@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 15th April 2024
+ * Last Modified: Monday, 22nd April 2024
  * Modified By: Steward OUADI
  */
 
@@ -239,77 +239,119 @@ function displayErrorText(errorText) {
  * @returns {Promise<Slide[]>} A promise that resolves to an array of Slide objects.
  */
 async function parseManifest(manifestContent) {
-  const slides = []; // Initialize an array to store Slide objects.
-  const lines = manifestContent.split("\n"); // Split the manifest content into individual lines.
+  const contentArray = []; // This will store both Slide and TestSlide objects
+  const lines = manifestContent.split("\n");
 
   for (let index = 0; index < lines.length; index++) {
     let line = lines[index];
+    line = removeInlineComment(line); // Clean the line from inline comments first
 
-    // Skip processing if the line does not start with "slide".
-    if (!line.trim().startsWith("slide")) continue;
-
-    // Remove any inline comment from the line
-    line = removeInlineComment(line);
-    // Regular expression to match valid slide entries, excluding inline comments.
-    const regex = /^(slide)\s+([^\s]+)\s*(.*)$/;
-    const match = line.match(regex);
-
-    const args = ["slide", "link", "slideNumberIfAny"];
-    const errorText = lineFormatChecker(line, regex, args, index + 1);
-    if (errorText) {
-      displayErrorText(errorText);
-    } else {
-      let [, , link, slideNumberIfAny] = match; // Destructure the URL and slide number or range from the match.
-
-      link = cleanUrl(link);
-      if (referenceURL === null) {
-        // Set reference URL to be the first encountered URL
-        referenceURL = link;
-      }
-
-      await updateMarkdownSlides(link);
-
-      // Check if there's a specified slide number or range.
-      if (slideNumberIfAny) {
-        try {
-          // let result = math.evaluate(slideNumberIfAny)["_data"];
-          let result = evaluateWithMathJs(slideNumberIfAny);
-
-          if (!Array.isArray(result)) {
-            result = [result];
-          }
-
-          // Flatten the result to handle any nested arrays
-          result = result.flat();
-
-          for (let num of result) {
-            const hash = await generateHash(index, line, num);
-            // Compute slide number: in the URLs from FITNESS 1, there are slides before the
-            // "FITNESS 2" project slide, se we would not take those slides into account.
-            // And the slide number the teacher is seeing on FITNESS 1 takes those "syllabus" slides into account.
-            // So we make a computation so that we can get the exact slide the user is referring to on FITNESS 1 (using FITNESS 1 numbering patterns)
-            const slideNumber = num - numberOfSyllabusSlide;
-            const currentMarkDownSlide = markDownSlides.get(link)[slideNumber];
-            slides.push(new Slide(hash, line, link, num, currentMarkDownSlide));
-            finalLecture.set(hash, currentMarkDownSlide);
-          }
-        } catch (error) {
-          console.error(
-            `Error evaluating slideNumberIfAny '${slideNumberIfAny}': ${error}`
-          );
-          const errorText = "At line " + (index + 1) + ":" + error.message;
+    if (line.startsWith("slide")) {
+      const regex = /^(slide)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/;
+      const match = line.match(regex);
+      if (match) {
+        // const [, , link, , range] = match;
+        // const cleanLink = cleanUrl(link);
+        // const result = range ? evaluateWithMathJs(range) : undefined;
+        // const hash = await generateHash(index + cleanLink + range);
+        // contentArray.push(new Slide(hash, line, cleanLink, result));
+        const args = ["slide", "link", "slideNumberIfAny"];
+        const errorText = lineFormatChecker(line, regex, args, index + 1);
+        if (errorText) {
           displayErrorText(errorText);
+        } else {
+          let [, , link, slideNumberIfAny] = match; // Destructure the URL and slide number or range from the match.
+
+          link = cleanUrl(link);
+          if (referenceURL === null) {
+            // Set reference URL to be the first encountered URL
+            referenceURL = link;
+          }
+
+          await updateMarkdownSlides(link);
+
+          // Check if there's a specified slide number or range.
+          if (slideNumberIfAny) {
+            try {
+              // let result = math.evaluate(slideNumberIfAny)["_data"];
+              let result = evaluateWithMathJs(slideNumberIfAny);
+
+              if (!Array.isArray(result)) {
+                result = [result];
+              }
+
+              // Flatten the result to handle any nested arrays
+              result = result.flat();
+
+              for (let num of result) {
+                const hash = await generateHash(index, line, num);
+                // Compute slide number: in the URLs from FITNESS 1, there are slides before the
+                // "FITNESS 2" project slide, se we would not take those slides into account.
+                // And the slide number the teacher is seeing on FITNESS 1 takes those "syllabus" slides into account.
+                // So we make a computation so that we can get the exact slide the user is referring to on FITNESS 1 (using FITNESS 1 numbering patterns)
+                const slideNumber = num - numberOfSyllabusSlide;
+                const currentMarkDownSlide =
+                  markDownSlides.get(link)[slideNumber];
+                contentArray.push(
+                  new Slide(hash, line, link, num, currentMarkDownSlide)
+                );
+                finalLecture.set(hash, currentMarkDownSlide);
+              }
+            } catch (error) {
+              console.error(
+                `Error evaluating slideNumberIfAny '${slideNumberIfAny}': ${error}`
+              );
+              const errorText = "At line " + (index + 1) + ":" + error.message;
+              displayErrorText(errorText);
+            }
+          } else {
+            // Handle lines without a specific slide number or range.
+            const hash = await generateHash(index, line, "");
+            contentArray.push(new Slide(hash, line, link, "", ""));
+            // TODO: add into finalLecture all the slides for this URL
+          }
         }
-      } else {
-        // Handle lines without a specific slide number or range.
-        const hash = await generateHash(index, line, "");
-        slides.push(new Slide(hash, line, link, "", ""));
-        // TODO: add into finalLecture all the slides for this URL
+      }
+    } else if (line.startsWith("test")) {
+      const regex = /^(test)\s+"([^"]+)"$/;
+      const match = line.match(regex);
+      if (match) {
+        const [, , link] = match;
+        const cleanLink = cleanUrl(link);
+        const hash = await generateHash(index + cleanLink);
+        contentArray.push(new TestSlide(hash, line, cleanLink, undefined));
       }
     }
   }
 
-  return slides; // Return the array of Slide objects.
+  // return contentArray; // Return the array of content items (slides and tests)
+  return groupByLinkAndType(contentArray);
+}
+
+function groupByLinkAndType(entries) {
+  const grouped = {};
+
+  entries.forEach((entry) => {
+    const { link, lineContent } = entry;
+
+    // Determine type based on the line content
+    let type = lineContent.startsWith("slide") ? "slide" : "test";
+
+    // Initialize the group if it doesn't exist
+    if (!grouped[link]) {
+      grouped[link] = {
+        link: link,
+        type: type,
+        slides: [],
+      };
+    }
+
+    // Append the entry to the correct group
+    grouped[link].slides.push(entry);
+  });
+
+  // Convert the object to an array of grouped entries
+  return Object.values(grouped);
 }
 
 /**
@@ -426,72 +468,120 @@ function processFileContent(content = null) {
   }
 }
 
-async function fetchAndDisplayContent() {
+async function fetchAndDisplayContent(contentURL) {
+  let outerHtml = "";
   try {
-    const testURL =
-      "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#materialMetal";
-    // Calculate the base URL up to the last slash before the file name or hash
-    const baseURL =
+    const testURL = contentURL;
+    const markdownVariableFromURL = new URL(testURL).hash.substring(1);
+
+    const lectureTestResponse = await httpGet(testURL);
+
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(lectureTestResponse, "text/html");
+
+    // Set the base URL for the document
+    const base = doc.createElement("base");
+    base.href =
       new URL(testURL).origin +
       new URL(testURL).pathname.substring(
         0,
         new URL(testURL).pathname.lastIndexOf("/") + 1
       );
+    doc.head.prepend(base);
 
-    const lectureTestResponse = await httpGet(testURL);
-    const container = document.getElementById("main-content-2");
-    let iframe = container.querySelector("iframe");
-    if (!iframe) {
-      iframe = document.createElement("iframe");
-      iframe.style.width = "100%";
-      iframe.style.height = "500px";
-      container.appendChild(iframe);
-    }
+    // Replace specific script content
+    const scripts = doc.querySelectorAll("script");
+    scripts.forEach((script) => {
+      if (
+        !script.src &&
+        script.textContent.includes("window.location.hash.substring(1)")
+      ) {
+        script.textContent = script.textContent.replace(
+          "window.location.hash.substring(1)",
+          `'${markdownVariableFromURL}'`
+        );
+      }
+    });
 
-    iframe.onload = function () {
-      const iframeDocument =
-        iframe.contentDocument || iframe.contentWindow.document;
-      iframeDocument.open();
+    // Modify links to absolute paths
+    doc.querySelectorAll('link[rel="stylesheet"]').forEach((link) => {
+      link.href = new URL(link.getAttribute("href"), base.href).href;
+    });
 
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(lectureTestResponse, "text/html");
+    // Modify scripts to absolute paths
+    scripts.forEach((script) => {
+      if (script.src) {
+        script.src = new URL(script.getAttribute("src"), base.href).href;
+      }
+    });
 
-      // Set the base URL for the document
-      const base = doc.createElement("base");
-      base.href = baseURL;
-      doc.head.prepend(base);
-
-      // Modify links to absolute paths
-      doc.querySelectorAll('link[rel="stylesheet"]').forEach((link) => {
-        link.href = new URL(link.getAttribute("href"), baseURL).href;
-      });
-
-      // Modify scripts to absolute paths
-      doc.querySelectorAll("script").forEach((script) => {
-        if (script.src) {
-          script.src = new URL(script.getAttribute("src"), baseURL).href;
-        }
-      });
-
-      // Write the modified HTML back to the iframe
-      iframeDocument.write(doc.documentElement.outerHTML);
-      iframeDocument.close();
-    };
-
-    // Set about:blank to trigger onload event
-    iframe.src = "about:blank";
+    // Get the modified outer HTML
+    outerHtml = doc.documentElement.outerHTML;
   } catch (error) {
     console.error("Failed to fetch content:", error);
-    document.getElementById("main-content-2").innerHTML =
-      "Failed to load content.";
   }
+  return outerHtml;
 }
 
-async function processManifestAndDisplay(content) {
-  const slides = await parseManifest(content); // Parse the manifest content to create Slide objects.
-  saveOutput(slides); // Save the output to a file.
-  fetchAndDisplayContent();
+let contentToDisplay = [];
+const mainContent = document.getElementById("main-content");
 
+let currentIndex = 0; // Initialize a variable to keep track of the current index
+
+function displayContentInIframe(contentIndex) {
+  const container = document.getElementById("iframeContainer"); // This should be the ID of the container where the iframe will be placed
+
+  if (!container) {
+    console.error("Container for iframe not found.");
+    return;
+  }
+
+  if (contentIndex < 0 || contentIndex >= globalContentContainer.length) {
+    console.error("Content index out of bounds.");
+    return;
+  }
+
+  // Clear existing iframe if it exists
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+
+  // Create a new iframe for the new content
+  const newIframe = document.createElement("iframe");
+  newIframe.id = "lectureIframe"; // Reusing the ID for consistency, though it's not necessary
+  newIframe.style.width = "100%";
+  newIframe.style.height = "900px"; // Adjust dimensions as needed
+  newIframe.style.border = "none";
+
+  // Append the new iframe to the container
+  container.appendChild(newIframe);
+
+  // Wait for the iframe to load about:blank before setting srcdoc
+  newIframe.src = "about:blank";
+  newIframe.onload = () => {
+    newIframe.onload = null; // Cleanup onload event after use
+    newIframe.srcdoc = globalContentContainer[contentIndex].htmlOutput;
+  };
+
+  // Set the current index to the new content index
+  currentIndex = contentIndex;
+
+  updateButtonStates(); // Update button states after setting the content
+}
+
+function navigateContent(direction) {
+  displayContentInIframe(currentIndex + direction);
+}
+
+function updateButtonStates() {
+  // Enable or disable buttons based on the current index
+  document.getElementById("prevButton").disabled = currentIndex <= 0;
+  document.getElementById("nextButton").disabled =
+    currentIndex >= globalContentContainer.length - 1;
+}
+
+async function getSlideTypeHtmlOutput(slides) {
+  let htmlOutput;
   try {
     // The rest of your existing logic to process and display the slides
     const response = await httpGet(referenceURL); // Assume httpGet is now an async function
@@ -502,7 +592,9 @@ async function processManifestAndDisplay(content) {
     slidesToDisplay.setAttribute("class", "slides");
 
     slides.forEach((element) => {
-      slidesToDisplay.appendChild(displayFinalContent(element));
+      if (element instanceof Slide) {
+        slidesToDisplay.appendChild(displayFinalContent(element));
+      }
     });
 
     htmlContentToDisplay.getElementsByClassName("slides")[0].innerHTML =
@@ -516,7 +608,6 @@ async function processManifestAndDisplay(content) {
     console.log("htmlContentToDisplay begin");
     console.log(htmlContentToDisplay);
     console.log("htmlContentToDisplay end");
-    var lectureIframe = document.createElement("iframe");
 
     let modifiedA = document.createElement("html");
     modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
@@ -542,19 +633,40 @@ async function processManifestAndDisplay(content) {
       `'https://fitness.agroparistech.fr/fitness/`
     );
 
-    lectureIframe.setAttribute("srcdoc", modifiedD.outerHTML);
-
-    lectureIframe.setAttribute("class", "frame");
-    lectureIframe.style.width = "100%";
-    // lectureIframe.style.height = screen.height * 0.7 + "px";
-    lectureIframe.style.height = "900px";
-    lectureIframe.style.border = "none";
-
-    const mainContent = document.getElementById("main-content");
-    mainContent.innerHTML = lectureIframe.outerHTML;
+    // contentToDisplay.push(modifiedD.outerHTML);
+    htmlOutput = modifiedD.outerHTML;
   } catch (error) {
     console.error("Failed to get URL:", URL, error);
   }
+  return htmlOutput;
+}
+
+let globalContentContainer;
+
+async function processManifestAndDisplay(content) {
+  globalContentContainer = await parseManifest(content); // Parse the manifest content to create Slide objects.
+  // saveOutput(contentContainer); // Save the output to a file.
+  // initializeIframe();
+
+  // Create an array of promises from the asynchronous operations
+  const promises = globalContentContainer.map(async (content) => {
+    if (content.type === "slide") {
+      const slidesHtmlOutput = await getSlideTypeHtmlOutput(content.slides);
+      content.htmlOutput = slidesHtmlOutput;
+      return slidesHtmlOutput;
+    } else if (content.type === "test") {
+      const testHtmlOutput = await fetchAndDisplayContent(content.link);
+      content.htmlOutput = testHtmlOutput;
+      return testHtmlOutput;
+    }
+  });
+
+  // Wait for all promises to resolve
+  await Promise.all(promises);
+
+  // Now that all async operations have completed, display the first content
+  displayContentInIframe(currentIndex); // Start by displaying the first item
+  updateButtonStates(); // Set the initial state of the navigation buttons
 }
 
 // Adjusted httpGet function to be asynchronous
