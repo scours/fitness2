@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Wednesday, 27th March 2024
+Last Modified: Wednesday, 24th April 2024
 Modified By: Steward OUADI
 -----
 -->
@@ -66,6 +66,7 @@ Modified By: Steward OUADI
 
   <!-- Include classes -->
   <script src="src/GlobalSlide.js"></script>
+  <script src="src/FillInTheBlanksSlide.js"></script>
   <script src="src/RadioButtonQuizSlide.js"></script>
   <script src="src/SuggestionMenuSlide.js"></script>
   <script src="src/CheckBoxButtonQuizSlide.js"></script>
@@ -156,7 +157,7 @@ Modified By: Steward OUADI
         const trimmedLine = line.trim();
 
         if (trimmedLine.startsWith('canBeSentByEmail')) {
-          canBeSentByEmail = trimmedLine.split(':')[1].trim();
+          canBeSentByEmail = trimmedLine.split(':')[1].trim() === "true";
         } else if (trimmedLine.match(/^Q(\d+)[\.:]?\s*(.*)/)) {
           if (isMultiChoice) {
             // Only include the correctAnswer array if there are correct answers
@@ -166,7 +167,6 @@ Modified By: Steward OUADI
             }
           }
 
-          isMultiChoice = true;
           const matchResult = trimmedLine.match(/^Q(\d+)[\.:]?\s*(.*)/);
           if (!matchResult) {
             console.error('Error: Unable to extract question number and text.');
@@ -174,22 +174,33 @@ Modified By: Steward OUADI
           }
 
           const [, questionNumber, questionText] = matchResult;
-          currentQuestion = {
-            id: 'quest-' + (configurationData.length),
-            question: {
-              text: `Q${questionNumber}: ${questionText}`,
-            },
-            answers: {},
-            minimumPassedScore: 0,
-            pointsIfCorrectAnswer: 1,
-            pointsIfWrongAnswer: 0,
-          };
-          answerIndex = 'a';
-          correctAnswer = [];
+
+          if (questionText.includes("BLANK")) {
+            // Handle fill-in-the-blanks question
+            const fillInTheBlanksSlide = new FillInTheBlanksSlide(questionText);
+            fillInTheBlanksSlide.id = 'fill-' + questionNumber;
+            configurationData.push(fillInTheBlanksSlide);
+            isMultiChoice = false; // Reset the multiChoice flag for the next question
+          } else {
+            // Standard multiple-choice question handling
+            currentQuestion = {
+              id: 'quest-' + configurationData.length,
+              question: {
+                text: `Q${questionNumber}: ${questionText}`,
+              },
+              answers: {},
+              minimumPassedScore: 0,
+              pointsIfCorrectAnswer: 1,
+              pointsIfWrongAnswer: 0,
+            };
+            isMultiChoice = true;
+            answerIndex = 'a';
+            correctAnswer = [];
+          }
 
         } else if (trimmedLine.startsWith('- [x]') || trimmedLine.startsWith('- [ ]')) {
           if (!isMultiChoice) {
-            return;
+            return; // Skip if not within a multiple-choice context
           }
 
           const answerText = trimmedLine.replace(/- \[[x ]\]/, '').trim();
@@ -205,37 +216,28 @@ Modified By: Steward OUADI
         }
       });
 
-      if (isMultiChoice) {
+      if (isMultiChoice && correctAnswer.length > 0) {
         // Only include the correctAnswer array if there are correct answers
-        if (correctAnswer.length > 0) {
-          currentQuestion.correctAnswer = correctAnswer;
-          configurationData.push(currentQuestion);
-        }
+        currentQuestion.correctAnswer = correctAnswer;
+        configurationData.push(currentQuestion);
       }
 
-      // return configurationData;
       return {
-        'configurationData': configurationData,
-        'canBeSentByEmail': canBeSentByEmail
-      }
+        configurationData: configurationData,
+        canBeSentByEmail: canBeSentByEmail
+      };
     }
 
 
-
-
-
     function processMarkdownContent(lines) {
-
-      const getConfigResults = getConfigurationData(lines);
-      const configurationData = getConfigResults.configurationData;
-      let canBeSentByEmail = getConfigResults.canBeSentByEmail;
-
-      const result = `const configurationData = ${JSON.stringify(configurationData, null, 2)};`;
+      const {
+        configurationData,
+        canBeSentByEmail
+      } = getConfigurationData(lines);
       const quizContainer = document.getElementById("quiz");
       quizContainer.innerHTML = "";
       allSlides = configurationData;
       DoQuiz(canBeSentByEmail);
-      // document.getElementById('output').textContent = result;
     }
 
     questionsFromURL();
@@ -243,7 +245,6 @@ Modified By: Steward OUADI
       console.log("button clicked")
       // Define variables
       var recipient1 = "olivier.vitrac@agroparistech.fr";
-      var recipient2 = "steward.ouadi@agroparistech.fr";
       var title = markdownVariableToRead;
       var identifier = defaultSessionIdentifier;
       var subject = encodeURIComponent(title + "__" + identifier);
@@ -291,7 +292,7 @@ Modified By: Steward OUADI
       // Add click event listener to the send button
       sendButton.addEventListener("click", function () {
         var sessionIdentifier = inputField.value;
-        var mailtoLink = "mailto:" + recipient1 + "," + recipient2 + "?subject=" + subject + "&body=" + content;
+        var mailtoLink = "mailto:" + recipient1 + "?subject=" + subject + "&body=" + content;
         window.location.href = mailtoLink;
       });
 

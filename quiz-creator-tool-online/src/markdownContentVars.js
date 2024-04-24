@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 2nd April 2024
+ * Last Modified: Wednesday, 24th April 2024
  * Modified By: Steward OUADI
  */
 
@@ -310,6 +310,19 @@ Q4: The reduction of metal weight can has not occurred because it is required a 
 Q5: The staking of metal cans (stable sets of staked cans) is due to expertise of operator in handling the cans. 
 - [ ] True	
 - [x] False
+
+canBeSentByEmail:true
+`;
+
+var materialMetal2 = `
+Q1: Please fill the blanks: A protocol BLANK be proposed to enable BLANK hosting the core content to deliver BLANK certificates and degreed
+skill certification on food packaging technology and science
+
+Q2: Tinplate and aluminium are metallic materials used to produce 3-pieces cans. 
+- [ ] True	
+- [x] False
+
+Q3: The reduction of BLANK weight can has not occurred because it
 
 canBeSentByEmail:true
 `;

@@ -1,11 +1,11 @@
 /*
  * File: GlobalSlide.js
  * Contract: EU contract 2017-1-FR01-KA202-037441
- * Project: FitNESS ERASMUS+
+ * Project: FitNESS 2 ERASMUS+
  * File Created: Tuesday, 13th April 2021
  * Author: Steward OUADI
  * -----
- * Last Modified: Friday, 25th June 2021
+ * Last Modified: Wednesday, 24th April 2024
  * Modified By: Steward OUADI
  */
 class GlobalSlide {
@@ -200,89 +200,106 @@ class GlobalSlide {
   ) {
     const firstDiv = document.createElement("DIV");
     firstDiv.classList.add("slide");
-
     this.htmlObjectId = this.getComputedIdentifier();
     firstDiv.id = this.htmlObjectId;
 
-    const secondDiv = document.createElement("DIV");
-    secondDiv.classList.add("question");
+    if (currentQuestion.type === "fillInTheBlanks") {
+      // Render the content and convert the HTML string back to a DOM element
+      const renderedHtml = currentQuestion.render();
+      const tempContainer = document.createElement("div");
+      tempContainer.innerHTML = renderedHtml; // Convert string to DOM
 
-    const kbdForQuestion = document.createElement("KBD");
-    const bold1 = document.createElement("B");
-    const bold2 = document.createElement("B");
-    const bold3 = document.createElement("B");
-
-    bold2.style.display = "none";
-    bold3.style.display = "none";
-
-    const answersDiv = document.createElement("DIV");
-    let questionTextNotifierP1 = document.createTextNode("");
-
-    if (currentQuestion.correctAnswer !== undefined) {
-      // Only if the "correct answer" field is define, we add this class
-      answersDiv.classList.add("answers");
-
-      questionTextNotifierP1 = document.createTextNode(`Quiz`);
-    }
-
-    if (isAClickableMenu(currentQuestion.answers)) {
-      // If the slide is of type clickable menu
-      answersDiv.classList.add("menuFromConfigFile");
+      firstDiv.appendChild(tempContainer.firstChild); // Append the actual content, not the temporary container
     } else {
-      answersDiv.classList.add("menuFromConfigFile");
-      answersDiv.classList.add("borderIt");
-    }
+      const secondDiv = document.createElement("DIV");
+      secondDiv.classList.add("question");
 
-    const questionTextNotifierP2 = document.createTextNode(
-      `${questionsIterator.toString()}`
-    );
+      const kbdForQuestion = document.createElement("KBD");
+      const bold1 = document.createElement("B");
+      const bold2 = document.createElement("B");
+      const bold3 = document.createElement("B");
 
-    const questionTextNotifierP3 = document.createTextNode(
-      `/${totalNumberOfQuestions.toString()}`
-    );
+      bold2.style.display = "none";
+      bold3.style.display = "none";
 
-    this.currentQuestionNumberHtmlObjectId = this.getComputedIdentifier();
-    bold1.id = this.getComputedIdentifier();
-    bold2.id = this.currentQuestionNumberHtmlObjectId;
-    bold3.id = this.getComputedIdentifier();
+      const answersDiv = document.createElement("DIV");
+      let questionTextNotifierP1 = document.createTextNode("");
 
-    const currentQuestionText = document.createTextNode(
-      currentQuestion.question.text
-    );
+      if (currentQuestion.correctAnswer !== undefined) {
+        // Only if the "correct answer" field is define, we add this class
+        answersDiv.classList.add("answers");
 
-    bold1.appendChild(questionTextNotifierP1);
-    bold2.appendChild(questionTextNotifierP2);
-    bold3.appendChild(questionTextNotifierP3);
-    kbdForQuestion.appendChild(bold1);
-    kbdForQuestion.appendChild(bold2);
-    kbdForQuestion.appendChild(bold3);
+        questionTextNotifierP1 = document.createTextNode(`Quiz`);
+      }
 
-    const br = document.createElement("BR");
+      if (
+        currentQuestion.answers != undefined &&
+        isAClickableMenu(currentQuestion.answers)
+      ) {
+        // If the slide is of type clickable menu
+        answersDiv.classList.add("menuFromConfigFile");
+      } else {
+        answersDiv.classList.add("menuFromConfigFile");
+        answersDiv.classList.add("borderIt");
+      }
 
-    secondDiv.appendChild(kbdForQuestion);
-    secondDiv.appendChild(br);
-    secondDiv.appendChild(currentQuestionText);
-
-    // If there is an image to show, create it and append it as a child
-    if (currentQuestion.question.img !== undefined) {
-      const br = document.createElement("BR");
-      secondDiv.appendChild(br);
-      secondDiv.appendChild(
-        this.getImageElement(
-          currentQuestion.question.img,
-          currentQuestion.question.imgLink,
-          "responsive"
-        )
+      const questionTextNotifierP2 = document.createTextNode(
+        `${questionsIterator.toString()}`
       );
+
+      const questionTextNotifierP3 = document.createTextNode(
+        `/${totalNumberOfQuestions.toString()}`
+      );
+
+      this.currentQuestionNumberHtmlObjectId = this.getComputedIdentifier();
+      bold1.id = this.getComputedIdentifier();
+      bold2.id = this.currentQuestionNumberHtmlObjectId;
+      bold3.id = this.getComputedIdentifier();
+
+      let currentQuestionText = document.createTextNode("");
+      if (currentQuestion.question != undefined) {
+        currentQuestionText = document.createTextNode(
+          currentQuestion.question.text
+        );
+      }
+
+      bold1.appendChild(questionTextNotifierP1);
+      bold2.appendChild(questionTextNotifierP2);
+      bold3.appendChild(questionTextNotifierP3);
+      kbdForQuestion.appendChild(bold1);
+      kbdForQuestion.appendChild(bold2);
+      kbdForQuestion.appendChild(bold3);
+
+      const br = document.createElement("BR");
+
+      secondDiv.appendChild(kbdForQuestion);
+      secondDiv.appendChild(br);
+      secondDiv.appendChild(currentQuestionText);
+
+      if (currentQuestion.question != undefined) {
+        // If there is an image to show, create it and append it as a child
+        if (currentQuestion.question.img !== undefined) {
+          const br = document.createElement("BR");
+          secondDiv.appendChild(br);
+          secondDiv.appendChild(
+            this.getImageElement(
+              currentQuestion.question.img,
+              currentQuestion.question.imgLink,
+              "responsive"
+            )
+          );
+        }
+      }
+
+      this.currentQuestionAnswersDivId = this.getComputedIdentifier();
+      answersDiv.id = this.currentQuestionAnswersDivId;
+
+      answersDiv.appendChild(answersDivContent);
+
+      firstDiv.appendChild(secondDiv);
+
+      firstDiv.appendChild(answersDiv);
     }
-
-    this.currentQuestionAnswersDivId = this.getComputedIdentifier();
-    answersDiv.id = this.currentQuestionAnswersDivId;
-
-    answersDiv.appendChild(answersDivContent);
-
-    firstDiv.appendChild(secondDiv);
-    firstDiv.appendChild(answersDiv);
 
     return firstDiv;
   }

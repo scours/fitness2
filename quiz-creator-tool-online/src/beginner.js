@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Tuesday, 26th March 2024
+ * Last Modified: Wednesday, 24th April 2024
  * Modified By: Steward OUADI
  * -----
  */
@@ -446,6 +446,10 @@ function buildSlides() {
         currentSlide.next = answersContent.next;
       }
 
+      if (currentSlide.type === "fillInTheBlanks") {
+        currentSlideElement = new FillInTheBlanksSlide();
+      }
+
       if (currentSlide.answers !== undefined) {
         if (shufflingIsActivated) {
           // shuffle answers
@@ -620,6 +624,14 @@ function buildSlides() {
         currentSlideElement
       );
 
+      if (currentSlide.type === "fillInTheBlanks") {
+        firstDiv = currentSlideElement.getQuestionAndAnswersContent(
+          slidesIterator,
+          totalNumberOfQuestions,
+          currentSlide,
+          answersDivContent
+        );
+      }
       questionAndAnswersDiv.appendChild(firstDiv);
 
       // add this question and its answers to the output
@@ -766,7 +778,7 @@ function showResults() {
 function displaySendResultsByEmailButtonIfNecessary() {
   var containerElement = document.getElementById("submit-results-proposal");
 
-  if (canBeSentByEmail === "true") {
+  if (canBeSentByEmail) {
     containerElement.style.display = "block"; // Show the container element
   } else {
     containerElement.style.display = "none"; // Hide the container element
