@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Wednesday, 24th April 2024
+ * Last Modified: Thursday, 25th April 2024
  * Modified By: Steward OUADI
  * -----
  */
@@ -80,6 +80,19 @@ function computeNextSlideElementBasedOnChoice() {
   }
 }
 
+function getAnswersFromFillInTheBlanksQuestion(currentSlide) {
+  // Find the specific slide in allSlides that matches the currentSlide's uid
+  const slideToRegister = allSlides.find(
+    (slide) => slide.id === currentSlide.uid
+  );
+
+  const questionAndUserAnswer = {
+    slideToRegister,
+    userAnswer: currentSlide.getAnswers(),
+  };
+
+  questionsAndUserAnswers.push(questionAndUserAnswer);
+}
 function getScoreForCheckboxesQuiz(
   modifyUserAnswersColor,
   answerContainer,
@@ -447,7 +460,9 @@ function buildSlides() {
       }
 
       if (currentSlide.type === "fillInTheBlanks") {
-        currentSlideElement = new FillInTheBlanksSlide();
+        currentSlideElement = new FillInTheBlanksSlide(
+          currentSlide.questionText
+        );
       }
 
       if (currentSlide.answers !== undefined) {
@@ -753,6 +768,20 @@ function computeScore() {
       }
     }
   }
+
+  slideElementContainer.forEach((slide, slideId) => {
+    if (slide.type === "fillInTheBlanks") {
+      getAnswersFromFillInTheBlanksQuestion(slide);
+    }
+  });
+
+  // for (let i = 0; i < allSlides.length; i++) {
+  //   slideElementContainer;
+  //   currentSlide = allSlides[i];
+  //   if (currentSlide.type === "fillInTheBlanks") {
+  //     getAnswersFromFillInTheBlanksQuestion(currentSlide);
+  //   }
+  // }
 }
 
 function showNumberOfAnswersOutOfTotal() {

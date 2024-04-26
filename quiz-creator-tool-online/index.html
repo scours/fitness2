@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Wednesday, 24th April 2024
+Last Modified: Thursday, 25th April 2024
 Modified By: Steward OUADI
 -----
 -->
@@ -248,6 +248,7 @@ Modified By: Steward OUADI
       var title = markdownVariableToRead;
       var identifier = defaultSessionIdentifier;
       var subject = encodeURIComponent(title + "__" + identifier);
+      console.log(questionsAndUserAnswers);
       var content = encodeURIComponent(JSON.stringify(questionsAndUserAnswers, undefined, 2));
 
       // Create the div and input elements dynamically

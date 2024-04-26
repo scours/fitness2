@@ -5,7 +5,7 @@
  * File Created: Tuesday, 13th April 2021
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 24th April 2024
+ * Last Modified: Thursday, 25th April 2024
  * Modified By: Steward OUADI
  */
 class GlobalSlide {
@@ -203,103 +203,103 @@ class GlobalSlide {
     this.htmlObjectId = this.getComputedIdentifier();
     firstDiv.id = this.htmlObjectId;
 
-    if (currentQuestion.type === "fillInTheBlanks") {
-      // Render the content and convert the HTML string back to a DOM element
-      const renderedHtml = currentQuestion.render();
-      const tempContainer = document.createElement("div");
-      tempContainer.innerHTML = renderedHtml; // Convert string to DOM
+    // if (currentQuestion.type === "fillInTheBlanks") {
+    //   // Render the content and convert the HTML string back to a DOM element
+    //   const renderedHtml = currentQuestion.render();
+    //   const tempContainer = document.createElement("div");
+    //   tempContainer.innerHTML = renderedHtml; // Convert string to DOM
 
-      firstDiv.appendChild(tempContainer.firstChild); // Append the actual content, not the temporary container
+    //   firstDiv.appendChild(tempContainer.firstChild); // Append the actual content, not the temporary container
+    // } else {
+    const secondDiv = document.createElement("DIV");
+    secondDiv.classList.add("question");
+
+    const kbdForQuestion = document.createElement("KBD");
+    const bold1 = document.createElement("B");
+    const bold2 = document.createElement("B");
+    const bold3 = document.createElement("B");
+
+    bold2.style.display = "none";
+    bold3.style.display = "none";
+
+    const answersDiv = document.createElement("DIV");
+    let questionTextNotifierP1 = document.createTextNode("");
+
+    if (currentQuestion.correctAnswer !== undefined) {
+      // Only if the "correct answer" field is define, we add this class
+      answersDiv.classList.add("answers");
+
+      questionTextNotifierP1 = document.createTextNode(`Quiz`);
+    }
+
+    if (
+      currentQuestion.answers != undefined &&
+      isAClickableMenu(currentQuestion.answers)
+    ) {
+      // If the slide is of type clickable menu
+      answersDiv.classList.add("menuFromConfigFile");
     } else {
-      const secondDiv = document.createElement("DIV");
-      secondDiv.classList.add("question");
+      answersDiv.classList.add("menuFromConfigFile");
+      answersDiv.classList.add("borderIt");
+    }
 
-      const kbdForQuestion = document.createElement("KBD");
-      const bold1 = document.createElement("B");
-      const bold2 = document.createElement("B");
-      const bold3 = document.createElement("B");
+    const questionTextNotifierP2 = document.createTextNode(
+      `${questionsIterator.toString()}`
+    );
 
-      bold2.style.display = "none";
-      bold3.style.display = "none";
+    const questionTextNotifierP3 = document.createTextNode(
+      `/${totalNumberOfQuestions.toString()}`
+    );
 
-      const answersDiv = document.createElement("DIV");
-      let questionTextNotifierP1 = document.createTextNode("");
+    this.currentQuestionNumberHtmlObjectId = this.getComputedIdentifier();
+    bold1.id = this.getComputedIdentifier();
+    bold2.id = this.currentQuestionNumberHtmlObjectId;
+    bold3.id = this.getComputedIdentifier();
 
-      if (currentQuestion.correctAnswer !== undefined) {
-        // Only if the "correct answer" field is define, we add this class
-        answersDiv.classList.add("answers");
-
-        questionTextNotifierP1 = document.createTextNode(`Quiz`);
-      }
-
-      if (
-        currentQuestion.answers != undefined &&
-        isAClickableMenu(currentQuestion.answers)
-      ) {
-        // If the slide is of type clickable menu
-        answersDiv.classList.add("menuFromConfigFile");
-      } else {
-        answersDiv.classList.add("menuFromConfigFile");
-        answersDiv.classList.add("borderIt");
-      }
-
-      const questionTextNotifierP2 = document.createTextNode(
-        `${questionsIterator.toString()}`
+    let currentQuestionText = document.createTextNode("");
+    if (currentQuestion.question != undefined) {
+      currentQuestionText = document.createTextNode(
+        currentQuestion.question.text
       );
+    }
 
-      const questionTextNotifierP3 = document.createTextNode(
-        `/${totalNumberOfQuestions.toString()}`
-      );
+    bold1.appendChild(questionTextNotifierP1);
+    bold2.appendChild(questionTextNotifierP2);
+    bold3.appendChild(questionTextNotifierP3);
+    kbdForQuestion.appendChild(bold1);
+    kbdForQuestion.appendChild(bold2);
+    kbdForQuestion.appendChild(bold3);
 
-      this.currentQuestionNumberHtmlObjectId = this.getComputedIdentifier();
-      bold1.id = this.getComputedIdentifier();
-      bold2.id = this.currentQuestionNumberHtmlObjectId;
-      bold3.id = this.getComputedIdentifier();
+    const br = document.createElement("BR");
 
-      let currentQuestionText = document.createTextNode("");
-      if (currentQuestion.question != undefined) {
-        currentQuestionText = document.createTextNode(
-          currentQuestion.question.text
+    secondDiv.appendChild(kbdForQuestion);
+    secondDiv.appendChild(br);
+    secondDiv.appendChild(currentQuestionText);
+
+    if (currentQuestion.question != undefined) {
+      // If there is an image to show, create it and append it as a child
+      if (currentQuestion.question.img !== undefined) {
+        const br = document.createElement("BR");
+        secondDiv.appendChild(br);
+        secondDiv.appendChild(
+          this.getImageElement(
+            currentQuestion.question.img,
+            currentQuestion.question.imgLink,
+            "responsive"
+          )
         );
       }
-
-      bold1.appendChild(questionTextNotifierP1);
-      bold2.appendChild(questionTextNotifierP2);
-      bold3.appendChild(questionTextNotifierP3);
-      kbdForQuestion.appendChild(bold1);
-      kbdForQuestion.appendChild(bold2);
-      kbdForQuestion.appendChild(bold3);
-
-      const br = document.createElement("BR");
-
-      secondDiv.appendChild(kbdForQuestion);
-      secondDiv.appendChild(br);
-      secondDiv.appendChild(currentQuestionText);
-
-      if (currentQuestion.question != undefined) {
-        // If there is an image to show, create it and append it as a child
-        if (currentQuestion.question.img !== undefined) {
-          const br = document.createElement("BR");
-          secondDiv.appendChild(br);
-          secondDiv.appendChild(
-            this.getImageElement(
-              currentQuestion.question.img,
-              currentQuestion.question.imgLink,
-              "responsive"
-            )
-          );
-        }
-      }
-
-      this.currentQuestionAnswersDivId = this.getComputedIdentifier();
-      answersDiv.id = this.currentQuestionAnswersDivId;
-
-      answersDiv.appendChild(answersDivContent);
-
-      firstDiv.appendChild(secondDiv);
-
-      firstDiv.appendChild(answersDiv);
     }
+
+    this.currentQuestionAnswersDivId = this.getComputedIdentifier();
+    answersDiv.id = this.currentQuestionAnswersDivId;
+
+    answersDiv.appendChild(answersDivContent);
+
+    firstDiv.appendChild(secondDiv);
+
+    firstDiv.appendChild(answersDiv);
+    // }
 
     return firstDiv;
   }
