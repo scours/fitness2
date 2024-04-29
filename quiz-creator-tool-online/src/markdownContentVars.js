@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 24th April 2024
+ * Last Modified: Monday, 29th April 2024
  * Modified By: Steward OUADI
  */
 
@@ -318,11 +318,17 @@ var materialMetal2 = `
 Q1: Please fill the blanks: A protocol BLANK be proposed to enable BLANK hosting the core content to deliver BLANK certificates and degreed
 skill certification on food packaging technology and science
 
+Q5: An inexperienced bottler wants to fill orange FREE WRITING.
+
 Q2: Tinplate and aluminium are metallic materials used to produce 3-pieces cans. 
 - [ ] True	
 - [x] False
 
 Q3: The reduction of BLANK weight can has not occurred because it
+
+Q4: How much oxygen (in cm3(STP)) would permeate through a 20 cm x 20 cm plastic bag made of linear low-density polyethylene (LLDPE) or polyethylene terephthalate (PET) per second? The thickness (X) of the plastic is 0.2 cm, and the BLANK pressure of oxygen across the film is 21.3 kPa.
+
+
 
 canBeSentByEmail:true
 `;
