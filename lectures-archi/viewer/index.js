@@ -644,15 +644,15 @@ async function getSlideTypeHtmlOutput(slides) {
       `'https://fitness.agroparistech.fr/fitness/`
     );
 
-    // Create a temporary container to manipulate the DOM
-    const tempContainer = document.createElement("div");
-    tempContainer.innerHTML = modifiedD.innerHTML;
+    // // Create a temporary container to manipulate the DOM
+    // const tempContainer = document.createElement("div");
+    // tempContainer.innerHTML = modifiedD.innerHTML;
 
-    // Find and remove the button by its ID
-    const openMenuButton = tempContainer.querySelector("#open-menu-button");
-    if (openMenuButton) {
-      openMenuButton.remove(); // Remove the button from the DOM
-    }
+    // // Find and remove the button by its ID
+    // const openMenuButton = tempContainer.querySelector("#open-menu-button");
+    // if (openMenuButton) {
+    //   openMenuButton.remove(); // Remove the button from the DOM
+    // }
 
     // Update modifiedD.innerHTML with the new HTML content without the button
     modifiedD.innerHTML = tempContainer.innerHTML;
