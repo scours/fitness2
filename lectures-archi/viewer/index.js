@@ -654,8 +654,8 @@ async function getSlideTypeHtmlOutput(slides) {
     //   openMenuButton.remove(); // Remove the button from the DOM
     // }
 
-    // Update modifiedD.innerHTML with the new HTML content without the button
-    modifiedD.innerHTML = tempContainer.innerHTML;
+    // // Update modifiedD.innerHTML with the new HTML content without the button
+    // modifiedD.innerHTML = tempContainer.innerHTML;
 
     // contentToDisplay.push(modifiedD.outerHTML);
     htmlOutput = modifiedD.outerHTML;
