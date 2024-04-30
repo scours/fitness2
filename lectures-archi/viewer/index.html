@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Wednesday, 21st February 2024
 Author: Steward OUADI
 -----
-Last Modified: Monday, 22nd April 2024
+Last Modified: Tuesday, 30th April 2024
 Modified By: Steward OUADI
 -->
 <!DOCTYPE html>
@@ -46,6 +46,113 @@ Modified By: Steward OUADI
     #fileInput {
       padding-bottom: 5%;
     }
+
+    /* #navigationSteps {
+      display: inline-flex;
+      align-items: center;
+      height: 40px;
+    }
+
+    .step {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      margin: 0 5px;
+    }
+
+    .step.current {
+      width: 30px;
+      height: 30px;
+      background-color: #ec6807;
+    }
+
+    #stepInfo {
+      margin-left: 10px;
+      font-weight: bold;
+    } */
+
+    #navigationContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      border: 2px solid #ec6807;
+      /* Orange border */
+      border-radius: 15px;
+      /* Rounded corners for the container */
+    }
+
+    #navigationSteps {
+      text-align: center;
+      padding: 10px;
+      flex-grow: 1;
+    }
+
+    .step {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+      margin: 0 10px;
+    }
+
+    .current {
+      background-color: #ec6807;
+      transform: scale(3);
+    }
+
+    #stepInfo {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .fitnessButton {
+      padding: 10px 20px;
+      border: none;
+      /* Remove default border */
+      background-color: #ec6807;
+      /* Orange background */
+      color: white;
+      /* White text */
+      border-radius: 15px;
+      /* Rounded corners for buttons */
+      cursor: pointer;
+      /* Cursor indicates clickable item */
+    }
+
+    #prevButton:hover,
+    #nextButton:hover {
+      background-color: #d45f05;
+      /* Slightly darker orange on hover */
+    }
+
+    /* Base styles for iframe */
+    #lectureIframe {
+      width: 100%;
+      height: 850px;
+      /* Default height for PCs */
+      border: none;
+    }
+
+    /* Styles for tablets */
+    @media (max-width: 768px) {
+      #lectureIframe {
+        height: 650px;
+        /* Adjusted height for tablets */
+      }
+    }
+
+    /* Styles for smartphones */
+    @media (max-width: 480px) {
+      #lectureIframe {
+        height: 450px;
+        /* Adjusted height for smartphones */
+      }
+    }
   </style>
 </head>
 
@@ -54,7 +161,7 @@ Modified By: Steward OUADI
   <div class="centered-content">
     <div id="import-manifest-container">
       <h2>Import a manifest file</h2>
-      <input type="file" id="fileInput" />
+      <input type="file" id="fileInput" class="fitnessButton" />
     </div>
     <!-- Error message container, hidden by default -->
     <p id="errorMessage"></p>
@@ -64,9 +171,16 @@ Modified By: Steward OUADI
     <div id="main-content"></div>
     <div id="main-content-2"></div>
     <div id="output"></div>
-    <button id="prevButton" onclick="navigateContent(-1)">Previous</button>
-    <button id="nextButton" onclick="navigateContent(1)">Next</button>
-    <button id="viewerDocumentation">How to use the viewer?</button>
+    <div id="navigationContainer">
+      <button id="prevButton" class="fitnessButton" onclick="navigateContent(-1)">Previous section</button>
+      <div id="centerContainer">
+        <!-- Wrapper for centered content -->
+        <div id="navigationSteps"></div>
+        <span id="stepInfo"></span>
+      </div>
+      <button id="nextButton" class="fitnessButton" onclick="navigateContent(1)">Next section</button>
+    </div>
+    <button id="viewerDocumentation" class="fitnessButton">How to use the viewer?</button>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>

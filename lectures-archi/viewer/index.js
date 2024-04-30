@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 22nd April 2024
+ * Last Modified: Tuesday, 30th April 2024
  * Modified By: Steward OUADI
  */
 
@@ -456,6 +456,8 @@ function processFileContent(content = null) {
         const reader = new FileReader(); // Create a new FileReader object.
 
         reader.onload = async function (e) {
+          // Show navigation container as we will display content.
+          showElementBySelector("#navigationContainer");
           // Process the read content from the file
           processManifestAndDisplay(e.target.result);
         };
@@ -529,48 +531,37 @@ const mainContent = document.getElementById("main-content");
 let currentIndex = 0; // Initialize a variable to keep track of the current index
 
 function displayContentInIframe(contentIndex) {
-  const container = document.getElementById("iframeContainer"); // This should be the ID of the container where the iframe will be placed
-
+  const container = document.getElementById("iframeContainer");
   if (!container) {
     console.error("Container for iframe not found.");
     return;
   }
 
-  if (contentIndex < 0 || contentIndex >= globalContentContainer.length) {
-    console.error("Content index out of bounds.");
-    return;
-  }
-
-  // Clear existing iframe if it exists
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
 
-  // Create a new iframe for the new content
   const newIframe = document.createElement("iframe");
-  newIframe.id = "lectureIframe"; // Reusing the ID for consistency, though it's not necessary
-  newIframe.style.width = "100%";
-  newIframe.style.height = "900px"; // Adjust dimensions as needed
-  newIframe.style.border = "none";
+  newIframe.id = "lectureIframe";
 
-  // Append the new iframe to the container
   container.appendChild(newIframe);
 
-  // Wait for the iframe to load about:blank before setting srcdoc
   newIframe.src = "about:blank";
   newIframe.onload = () => {
-    newIframe.onload = null; // Cleanup onload event after use
+    newIframe.onload = null;
     newIframe.srcdoc = globalContentContainer[contentIndex].htmlOutput;
+    currentIndex = contentIndex;
+    updateButtonStates();
   };
-
-  // Set the current index to the new content index
-  currentIndex = contentIndex;
-
-  updateButtonStates(); // Update button states after setting the content
 }
 
 function navigateContent(direction) {
-  displayContentInIframe(currentIndex + direction);
+  const newIndex = currentIndex + direction;
+  if (newIndex < 0 || newIndex >= globalContentContainer.length) {
+    console.error("Content index out of bounds.");
+    return;
+  }
+  displayContentInIframe(newIndex);
 }
 
 function updateButtonStates() {
@@ -578,6 +569,26 @@ function updateButtonStates() {
   document.getElementById("prevButton").disabled = currentIndex <= 0;
   document.getElementById("nextButton").disabled =
     currentIndex >= globalContentContainer.length - 1;
+
+  // Update navigation steps and the step info
+  updateNavigationSteps();
+  updateStepInfo();
+}
+
+function updateStepInfo() {
+  const stepInfo = document.getElementById("stepInfo");
+  stepInfo.textContent = `${currentIndex + 1}/${globalContentContainer.length}`; // Display as "X/Y"
+}
+
+function updateNavigationSteps() {
+  const stepsContainer = document.getElementById("navigationSteps");
+  stepsContainer.innerHTML = ""; // Clear previous steps
+
+  for (let i = 0; i < globalContentContainer.length; i++) {
+    const step = document.createElement("div");
+    step.className = "step" + (i === currentIndex ? " current" : "");
+    stepsContainer.appendChild(step);
+  }
 }
 
 async function getSlideTypeHtmlOutput(slides) {
@@ -632,6 +643,19 @@ async function getSlideTypeHtmlOutput(slides) {
       `'./../../../../../`,
       `'https://fitness.agroparistech.fr/fitness/`
     );
+
+    // Create a temporary container to manipulate the DOM
+    const tempContainer = document.createElement("div");
+    tempContainer.innerHTML = modifiedD.innerHTML;
+
+    // Find and remove the button by its ID
+    const openMenuButton = tempContainer.querySelector("#open-menu-button");
+    if (openMenuButton) {
+      openMenuButton.remove(); // Remove the button from the DOM
+    }
+
+    // Update modifiedD.innerHTML with the new HTML content without the button
+    modifiedD.innerHTML = tempContainer.innerHTML;
 
     // contentToDisplay.push(modifiedD.outerHTML);
     htmlOutput = modifiedD.outerHTML;
@@ -691,6 +715,24 @@ async function httpGet(theUrl) {
   });
 }
 
+function hideElementBySelector(selector) {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.style.display = "none";
+  } else {
+    console.log("Element not found for selector:", selector);
+  }
+}
+
+function showElementBySelector(selector) {
+  const element = document.querySelector(selector);
+  if (element) {
+    element.style.display = ""; // Adjust this as necessary for different display types like 'flex', 'inline', etc.
+  } else {
+    console.log("Element not found for selector:", selector);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // Clear message on page load
   clearErrorText();
@@ -711,17 +753,15 @@ document.addEventListener("DOMContentLoaded", function () {
     fileName = `${variableName}.txt`; // Append .txt extension
 
     // Hide the file import manifest button
-    const importManifestContainer = document.getElementById(
-      "import-manifest-container"
-    ); // Assuming the button has this ID
-    if (importManifestContainer) {
-      importManifestContainer.style.display = "none";
-    }
+    hideElementBySelector("#import-manifest-container");
+    // Hide view documentation button
+    hideElementBySelector("#viewerDocumentation");
 
     // Use the path to dynamically construct the full URL to the file
     const fileURL = `${pathToHtmlFolder}${fileName}`;
     httpGetWithCallback(fileURL, processFileContent); // Assuming httpGet can accept a callback as second parameter
   } else {
+    hideElementBySelector("#navigationContainer");
     processFileContent();
   }
 
