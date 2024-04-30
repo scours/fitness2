@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Monday, 29th April 2024
+Last Modified: Tuesday, 30th April 2024
 Modified By: Steward OUADI
 -----
 -->
@@ -105,7 +105,6 @@ Modified By: Steward OUADI
     function questionsFromURL() {
       // If variable is not empty, use it to read markdown
       if (markdownVariableToRead.trim() !== "") {
-
         // Hide import questions div, as we won't need it
         var div = document.getElementById("import-questions-div");
         if (div) {
@@ -114,11 +113,34 @@ Modified By: Steward OUADI
 
         var markdownContent = window[markdownVariableToRead];
         var lines = markdownContent.split('\n');
-        // var lines = event.target.result.split('\n');
-        processMarkdownContent(lines);
-      }
+        var concatenatedLines = [];
+        var currentLine = "";
 
+        lines.forEach(line => {
+          // Check if the line starts with a question indicator or configuration
+          if (/^Q\d+:/.test(line) || /^canBeSentByEmail/.test(line)) {
+            // If there's an ongoing question, push it to the array before starting a new one
+            if (currentLine) {
+              concatenatedLines.push(currentLine);
+              currentLine = line;
+            } else {
+              currentLine = line;
+            }
+          } else {
+            // Continue appending to current question
+            currentLine += " " + line;
+          }
+        });
+
+        // Don't forget to add the last processed line to the array
+        if (currentLine) {
+          concatenatedLines.push(currentLine);
+        }
+
+        processMarkdownContent(concatenatedLines);
+      }
     }
+
 
     function convertQuestions() {
       const fileInput = document.getElementById('fileInput');
@@ -168,32 +190,39 @@ Modified By: Steward OUADI
             }
           }
 
-          const matchResult = trimmedLine.match(/^Q(\d+)[\.:]?\s*(.*)/);
+          const questionParts = trimmedLine.split(
+            /(?<=^\S+)\s/); // Split at the first sequence of whitespace after non - whitespace
+          const matchResult = questionParts[0].match(/^Q(\d+)[\.:]?\s*(.*)/);
           if (!matchResult) {
             console.error('Error: Unable to extract question number and text.');
             return;
           }
+          const [, questionNumber,
+            questionText
+          ] = matchResult;
+          let questionBody = questionText + (questionParts.length > 1 ? questionParts[1] :
+            ""); // Include the rest of the line if exists
 
-          const [, questionNumber, questionText] = matchResult;
-
-          if (questionText.includes("BLANK")) {
+          if (questionBody.includes("BLANK")) {
             // Handle fill-in-the-blanks question
-            const fillInTheBlanksSlide = new FillInTheBlanksSlide(questionText);
+            const fillInTheBlanksSlide = new FillInTheBlanksSlide(questionBody);
             fillInTheBlanksSlide.id = 'fill-' + questionNumber;
             configurationData.push(fillInTheBlanksSlide);
             isMultiChoice = false; // Reset the multiChoice flag for the next question
-          } else if (questionText.includes("FREE WRITING")) {
+          } else if (questionBody.includes("FREE WRITING")) {
             // Handle free writing question
-            const freeWritingSlide = new FreeWritingSlide(questionText);
+            const freeWritingSlide = new FreeWritingSlide(questionBody);
             freeWritingSlide.id = "free-writing-" + questionNumber;
             configurationData.push(freeWritingSlide);
             isMultiChoice = false;
           } else {
+            // Use regex to split the string at the first occurrence of " - [ ]" or " - [x]"
+            let questionToDisplay = questionBody.split(/(?= - \[[x ]\])/)[0].trim();
             // Standard multiple-choice question handling
             currentQuestion = {
               id: 'quest-' + configurationData.length,
               question: {
-                text: `Q${questionNumber}: ${questionText}`,
+                text: `Q${questionNumber}: ${questionToDisplay}`,
               },
               answers: {},
               minimumPassedScore: 0,
@@ -203,23 +232,29 @@ Modified By: Steward OUADI
             isMultiChoice = true;
             answerIndex = 'a';
             correctAnswer = [];
+            // Extract answers from the remaining part of the line
+            if (questionParts.length > 1) {
+              // This regex now correctly looks for the pattern " - [ ]" or " - [x]" to split the answers
+              const answersParts = questionParts[1].split(/(?= - \[[x ]\])/);
+              answersParts.forEach((part) => {
+                // Trim and remove the leading " - [ ]" or " - [x]" from the answer text
+                const match = part.match(/ - \[([ x])\](.*)/);
+                if (match) {
+                  const isCorrect = match[1] === 'x'; // Determine if the answer is marked as correct
+                  const answerText = match[2].trim(); // Get the text part of the answer
+                  currentQuestion.answers[answerIndex] = {
+                    text: answerText,
+                  };
+                  if (isCorrect) {
+                    correctAnswer.push(answerIndex);
+                  }
+                  answerIndex = String.fromCharCode(answerIndex.charCodeAt(0) +
+                    1); // Increment to the next letter for answer index
+                }
+              });
+            }
+
           }
-
-        } else if (trimmedLine.startsWith('- [x]') || trimmedLine.startsWith('- [ ]')) {
-          if (!isMultiChoice) {
-            return; // Skip if not within a multiple-choice context
-          }
-
-          const answerText = trimmedLine.replace(/- \[[x ]\]/, '').trim();
-          currentQuestion.answers[answerIndex] = {
-            text: answerText,
-          };
-
-          if (trimmedLine.startsWith('- [x]')) {
-            correctAnswer.push(answerIndex);
-          }
-
-          answerIndex = String.fromCharCode(answerIndex.charCodeAt(0) + 1);
         }
       });
 
