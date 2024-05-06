@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 30th April 2024
+ * Last Modified: Monday, 6th May 2024
  * Modified By: Steward OUADI
  */
 
@@ -530,6 +530,31 @@ const mainContent = document.getElementById("main-content");
 
 let currentIndex = 0; // Initialize a variable to keep track of the current index
 
+function attemptToBlockClicks(newIframe, attemptsLeft) {
+  if (attemptsLeft === 0) {
+    console.log(
+      "Attempted three times and failed to find the slide number div."
+    );
+    return; // Stop attempting after three tries.
+  }
+
+  setTimeout(() => {
+    const slideNumberDiv =
+      newIframe.contentWindow.document.querySelector(".slide-number");
+    if (slideNumberDiv) {
+      slideNumberDiv.addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        console.log("Click on slide number prevented.");
+      });
+      console.log("Slide number div found and click event blocked.");
+    } else {
+      console.log("Slide number div not found, trying again...");
+      attemptToBlockClicks(newIframe, attemptsLeft - 1); // Retry by calling the function again with decremented attemptsLeft
+    }
+  }, 2000); // Wait for 3 seconds before retrying
+}
+
 function displayContentInIframe(contentIndex) {
   const container = document.getElementById("iframeContainer");
   if (!container) {
@@ -543,15 +568,19 @@ function displayContentInIframe(contentIndex) {
 
   const newIframe = document.createElement("iframe");
   newIframe.id = "lectureIframe";
+  newIframe.style.width = "100%";
+  newIframe.style.height = "900px"; // Adjust dimensions as needed
+  newIframe.style.border = "none";
 
   container.appendChild(newIframe);
 
   newIframe.src = "about:blank";
   newIframe.onload = () => {
-    newIframe.onload = null;
+    newIframe.onload = null; // Cleanup onload event after use
     newIframe.srcdoc = globalContentContainer[contentIndex].htmlOutput;
     currentIndex = contentIndex;
-    updateButtonStates();
+    updateButtonStates(); // Update button states after setting the content
+    attemptToBlockClicks(newIframe, 5); // Start the attempt to block clicks with 3 allowed attempts
   };
 }
 
@@ -620,29 +649,29 @@ async function getSlideTypeHtmlOutput(slides) {
     console.log(htmlContentToDisplay);
     console.log("htmlContentToDisplay end");
 
-    let modifiedA = document.createElement("html");
-    modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
-      `"../../../../`,
-      `"https://fitness.agroparistech.fr/fitness/lectures/`
-    );
+    // let modifiedA = document.createElement("html");
+    // modifiedA.innerHTML = htmlContentToDisplay.innerHTML.replaceAll(
+    //   `"../../../../`,
+    //   `"https://fitness.agroparistech.fr/fitness/lectures/`
+    // );
 
-    let modifiedB = document.createElement("html");
-    modifiedB.innerHTML = modifiedA.innerHTML.replaceAll(
-      `"./../../../../../`,
-      `"https://fitness.agroparistech.fr/fitness/`
-    );
+    // let modifiedB = document.createElement("html");
+    // modifiedB.innerHTML = modifiedA.innerHTML.replaceAll(
+    //   `"./../../../../../`,
+    //   `"https://fitness.agroparistech.fr/fitness/`
+    // );
 
-    let modifiedC = document.createElement("html");
-    modifiedC.innerHTML = modifiedB.innerHTML.replaceAll(
-      `'../../../../`,
-      `'https://fitness.agroparistech.fr/fitness/lectures/`
-    );
+    // let modifiedC = document.createElement("html");
+    // modifiedC.innerHTML = modifiedB.innerHTML.replaceAll(
+    //   `'../../../../`,
+    //   `'https://fitness.agroparistech.fr/fitness/lectures/`
+    // );
 
-    let modifiedD = document.createElement("html");
-    modifiedD.innerHTML = modifiedC.innerHTML.replaceAll(
-      `'./../../../../../`,
-      `'https://fitness.agroparistech.fr/fitness/`
-    );
+    // let modifiedD = document.createElement("html");
+    // modifiedD.innerHTML = modifiedC.innerHTML.replaceAll(
+    //   `'./../../../../../`,
+    //   `'https://fitness.agroparistech.fr/fitness/`
+    // );
 
     // // Create a temporary container to manipulate the DOM
     // const tempContainer = document.createElement("div");
@@ -658,7 +687,38 @@ async function getSlideTypeHtmlOutput(slides) {
     // modifiedD.innerHTML = tempContainer.innerHTML;
 
     // contentToDisplay.push(modifiedD.outerHTML);
-    htmlOutput = modifiedD.outerHTML;
+    // htmlOutput = modifiedD.outerHTML;
+
+    let modifiedHtml = document.createElement("html");
+
+    // Set the initial HTML content
+    modifiedHtml.innerHTML = htmlContentToDisplay.innerHTML;
+
+    // Regex to remove the entire line containing 'id="open-menu-button"'
+    modifiedHtml.innerHTML = modifiedHtml.innerHTML.replace(
+      /<button[^>]*id="open-menu-button"[^>]*>.*?<\/button>\s*/g,
+      ""
+    );
+
+    // Perform all replacements in one go
+    modifiedHtml.innerHTML = modifiedHtml.innerHTML
+      .replaceAll(
+        `"../../../../`,
+        `"https://fitness.agroparistech.fr/fitness/lectures/`
+      )
+      .replaceAll(
+        `"./../../../../../`,
+        `"https://fitness.agroparistech.fr/fitness/`
+      )
+      .replaceAll(
+        `'../../../../`,
+        `'https://fitness.agroparistech.fr/fitness/lectures/`
+      )
+      .replaceAll(
+        `'./../../../../../`,
+        `'https://fitness.agroparistech.fr/fitness/`
+      );
+    htmlOutput = modifiedHtml.outerHTML;
   } catch (error) {
     console.error("Failed to get URL:", URL, error);
   }
