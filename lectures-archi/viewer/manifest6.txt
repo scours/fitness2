@@ -5,31 +5,48 @@
  * File Created: Monday, 6th May 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Monday, 6th May 2024
+ * Last Modified: Monday, 13th May 2024
  * Modified By: Steward OUADI
  */
 
 
 // Syntax: defSlide labelName {lines (markdown or html)}
+
+
 defSlide labelSlide1 { 
     
-<p>Welcome to our test.</p>
+<div>
+    <h2>Welcome to Our Lecture Series! 🎓</h2>
+    <br/>
+    <br/>
+    <p>Before each lecture, you'll take a quick quiz 📝 to gauge your knowledge.</p>
+    <p>After the lecture, another quiz will show how much you've learned.</p>
+    <p>If you're ready to begin, please fill out the form on your screen to participate.</p>
+            
+    <p>Let's get started! 🚀</p>
+    <br/>
+    <br/>
+    <br/>
 
-<form id="userForm">
-  <label for="firstName">First Name:</label>
-  <input type="text" id="firstName" name="firstName" required>
 
-  <label for="lastName">Last Name:</label>
-  <input type="text" id="lastName" name="lastName" required>
+  <form id="userForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" required>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
 
-  <button type="submit">Submit</button>
-</form>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
+    <button type="submit">Submit</button>
+  </form>
+</div>
 } 
+
+
 // Syntax: slide URL slidesToShow
-slide "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part5.html" [7:12] // s’il n’y à pas de 3eme arg, on charge tout.
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#materialGlass"
-slide "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S1/U1.1/part1.html" [7:17]  // comment
+slide "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part5.html" [7:30] 
+test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#materialGlass"
+

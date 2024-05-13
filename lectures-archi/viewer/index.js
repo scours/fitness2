@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 7th May 2024
+ * Last Modified: Monday, 13th May 2024
  * Modified By: Steward OUADI
  */
 
@@ -110,9 +110,9 @@ function displayFinalContent(element) {
   // Regular expression to get resources path for the lecture
   const regExpForSources = /\(\.\/src/;
 
-  console.log("slide we want to append beg");
-  console.log(element.markdownContent);
-  console.log(element.markdownContent.innerHTML);
+  // console.log("slide we want to append beg");
+  // console.log(element.markdownContent);
+  // console.log(element.markdownContent.innerHTML);
 
   var newSection = document.createElement("SECTION");
   // The data-markdown will allow to create Markdown slide
@@ -123,8 +123,8 @@ function displayFinalContent(element) {
     regExpForSources,
     "(" + pathToHtmlFolder + "/src"
   );
-  console.log(newSection);
-  console.log("slide we want to append end");
+  // console.log(newSection);
+  // console.log("slide we want to append end");
 
   return newSection;
 }
@@ -230,6 +230,49 @@ function displayErrorText(errorText) {
   errorMessageDiv.style.display = "block";
 }
 
+function isHtml(content) {
+  // Simple regex to detect HTML tags
+  return /<\/?[a-z][\s\S]*>/i.test(content);
+}
+
+async function processDefSlideContent(
+  index,
+  currentDefSlideContent,
+  currentLabelName,
+  contentArray
+) {
+  const defSlideContent = currentDefSlideContent.join("\n");
+  let htmlContent;
+
+  if (isHtml(defSlideContent)) {
+    // If it's HTML, use as is
+    htmlContent = defSlideContent;
+  } else {
+    // Otherwise, assume it's Markdown and convert to HTML
+    try {
+      marked.use("marked-highlight");
+      htmlContent = marked.parse(defSlideContent);
+    } catch (error) {
+      console.error(`Error converting Markdown to HTML: ${error.message}`);
+      htmlContent = "<p>Error processing Markdown content.</p>"; // Fallback error message
+    }
+  }
+
+  try {
+    const hash = await generateHash(index, defSlideContent);
+    contentArray.push(
+      new VirtualSlide(hash, currentLabelName, "", htmlContent, index)
+    );
+    console.log(
+      `Added defSlide with label '${currentLabelName}', processed as ${
+        isHtml(defSlideContent) ? "HTML" : "Markdown"
+      }.`
+    );
+  } catch (error) {
+    console.error(`Error processing defSlide content: ${error.message}`);
+  }
+}
+
 /**
  * Asynchronously parses the manifest content, creating Slide objects for each valid line.
  * This function ensures lines not starting with "slide" are ignored and processes each valid line to create Slide objects,
@@ -262,28 +305,17 @@ async function parseManifest(manifestContent) {
 
     if (readingDefSlide) {
       if (line.endsWith("}")) {
-        // When reaching the end of defSlide, remove the '}' and stop reading
         currentDefSlideContent.push(line.slice(0, -1).trim());
         readingDefSlide = false;
-
-        // Join the lines collected for this defSlide and process it
-        const defSlideContent = currentDefSlideContent.join("\n");
-        try {
-          const hash = await generateHash(index, defSlideContent);
-          contentArray.push(
-            new VirtualSlide(hash, currentLabelName, "", defSlideContent)
-          );
-          console.log(`Added defSlide with label '${currentLabelName}'`);
-        } catch (error) {
-          console.error(`Error processing defSlide content: ${error.message}`);
-        }
-
-        // Reset for the next possible defSlide
+        await processDefSlideContent(
+          index,
+          currentDefSlideContent,
+          currentLabelName,
+          contentArray
+        );
         currentDefSlideContent = [];
         currentLabelName = "";
-        continue;
       } else {
-        // Collect lines inside defSlide
         currentDefSlideContent.push(line);
       }
     }
@@ -341,7 +373,14 @@ async function parseManifest(manifestContent) {
                     const currentMarkDownSlide =
                       markDownSlides.get(link)[slideNumber];
                     contentArray.push(
-                      new Slide(hash, line, link, num, currentMarkDownSlide)
+                      new Slide(
+                        hash,
+                        line,
+                        link,
+                        num,
+                        currentMarkDownSlide,
+                        index
+                      )
                     );
                     finalLecture.set(hash, currentMarkDownSlide);
                   }
@@ -368,7 +407,9 @@ async function parseManifest(manifestContent) {
             const [, , link] = match;
             const cleanLink = cleanUrl(link);
             const hash = await generateHash(index + cleanLink);
-            contentArray.push(new TestSlide(hash, line, cleanLink, undefined));
+            contentArray.push(
+              new TestSlide(hash, line, cleanLink, undefined, index)
+            );
           }
         }
       }
@@ -382,9 +423,9 @@ function groupByLinkAndType(entries) {
   const grouped = {};
 
   entries.forEach((entry) => {
-    const { link } = entry;
+    const { lineNumber, link } = entry;
 
-    // Determine type by instance or by lineContent if available
+    // Determine type by instance or other specific identifier
     let type;
     if (entry instanceof VirtualSlide) {
       type = "virtualSlide";
@@ -393,33 +434,34 @@ function groupByLinkAndType(entries) {
     } else if (entry instanceof TestSlide) {
       type = "test";
     } else {
-      // Fallback or default type if needed
-      type = "unknown"; // This will catch any unclassified types
+      type = "unknown"; // This handles any unclassified types
     }
 
-    // Initialize the group if it doesn't exist
-    if (!grouped[link]) {
-      grouped[link] = {
-        link: link,
-        types: {},
+    // Initialize the group for the specific lineNumber if it doesn't exist
+    if (!grouped[lineNumber]) {
+      grouped[lineNumber] = {
+        lineNumber: lineNumber,
+        link: link, // Store the first encountered link for this line number
+        types: {}, // Use a types object to categorize by type within the line
       };
     }
 
-    // Initialize the type group if it doesn't exist
-    if (!grouped[link].types[type]) {
-      grouped[link].types[type] = [];
+    // Ensure each type category is initialized
+    if (!grouped[lineNumber].types[type]) {
+      grouped[lineNumber].types[type] = [];
     }
 
-    // Append the entry to the correct type group
-    grouped[link].types[type].push(entry);
+    // Append the entry to the correct type category for this line number
+    grouped[lineNumber].types[type].push(entry);
   });
 
   // Convert the nested objects into a flat array structure for compatibility
   const groupedArray = [];
-  Object.entries(grouped).forEach(([link, info]) => {
-    Object.entries(info.types).forEach(([type, slides]) => {
+  Object.values(grouped).forEach((group) => {
+    Object.entries(group.types).forEach(([type, slides]) => {
       groupedArray.push({
-        link: link,
+        lineNumber: group.lineNumber,
+        link: group.link,
         type: type,
         slides: slides,
       });
@@ -607,10 +649,8 @@ let currentIndex = 0; // Initialize a variable to keep track of the current inde
 
 function attemptToBlockClicks(newIframe, attemptsLeft) {
   if (attemptsLeft === 0) {
-    console.log(
-      "Attempted three times and failed to find the slide number div."
-    );
-    return; // Stop attempting after three tries.
+    console.log("Attempted 5 times and failed to find the slide number div.");
+    return; // Stop attempting after 5 tries.
   }
 
   setTimeout(() => {
@@ -731,14 +771,14 @@ async function getSlideTypeHtmlOutput(slides) {
     htmlContentToDisplay.getElementsByClassName("slides")[0].innerHTML =
       slidesToDisplay.innerHTML;
 
-    console.log("displaying slides to display begin");
-    console.log(slidesToDisplay);
-    console.log(slidesToDisplay.children);
-    console.log("displaying slides to display end");
+    // console.log("displaying slides to display begin");
+    // console.log(slidesToDisplay);
+    // console.log(slidesToDisplay.children);
+    // console.log("displaying slides to display end");
 
-    console.log("htmlContentToDisplay begin");
-    console.log(htmlContentToDisplay);
-    console.log("htmlContentToDisplay end");
+    // console.log("htmlContentToDisplay begin");
+    // console.log(htmlContentToDisplay);
+    // console.log("htmlContentToDisplay end");
 
     let modifiedHtml = document.createElement("html");
 
@@ -795,7 +835,7 @@ async function processManifestAndDisplay(content) {
       return testHtmlOutput;
     } else if (content.type === "virtualSlide") {
       // Return the slide html output
-      let htmlContent = content.slides[0].slideContent;
+      let htmlContent = `<div class="fitness2Content">${content.slides[0].slideContent}</div>`;
       content.htmlOutput = htmlContent;
       return htmlContent;
     }
