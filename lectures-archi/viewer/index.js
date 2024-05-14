@@ -5,12 +5,67 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 13th May 2024
+ * Last Modified: Tuesday, 14th May 2024
  * Modified By: Steward OUADI
  */
 
 const finalLecture = new Map();
 let referenceURL = null;
+
+function storeUserData() {
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
+
+  // Create a data object
+  const userData = {
+    FirstName: firstName,
+    LastName: lastName,
+    Email: email,
+  };
+
+  // Convert the data object to JSON string
+  const jsonString = JSON.stringify(userData);
+
+  // Compress and encode the JSON string
+  const compressedData = LZString.compressToEncodedURIComponent(jsonString);
+
+  // Store in local storage
+  localStorage.setItem("learnerData", compressedData);
+  console.log("Data stored in local storage as URL-safe string.");
+}
+
+function displayUserData() {
+  const encodedData = localStorage.getItem("learnerData");
+  if (encodedData) {
+    // Decode and decompress the data
+    const decompressedData =
+      LZString.decompressFromEncodedURIComponent(encodedData);
+
+    if (decompressedData) {
+      // Parse the JSON string back to an object
+      const userData = JSON.parse(decompressedData);
+
+      // Set values to input fields if they exist and the elements are available in the DOM
+      const firstNameElement = document.getElementById("firstName");
+      const lastNameElement = document.getElementById("lastName");
+      const emailElement = document.getElementById("email");
+
+      if (firstNameElement && userData.FirstName)
+        firstNameElement.value = userData.FirstName;
+      if (lastNameElement && userData.LastName)
+        lastNameElement.value = userData.LastName;
+      if (emailElement && userData.Email) emailElement.value = userData.Email;
+
+      console.log("Data retrieved and displayed from local storage:", userData);
+    } else {
+      console.error("Failed to decode or decompress user data.");
+    }
+  } else {
+    console.log("No data found in local storage.");
+  }
+}
+
 /**
  * Removes inline comments from a given line of text.
  * Inline comments are assumed to start with "//" outside of URLs.
@@ -927,4 +982,18 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function () {
       window.location.href = "documentation.html";
     });
+
+  setTimeout(() => {
+    const form = document.getElementById("userForm");
+
+    if (form) {
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form from submitting in the traditional way
+        storeUserData();
+      });
+      displayUserData(); // Optionally display right after storing to confirm data integrity
+    } else {
+      console.log("The form element was not found!");
+    }
+  }, 5000); // Wait for 3 seconds before retrying
 });
