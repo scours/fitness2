@@ -757,7 +757,24 @@ function displayContentInsideViewer(contentIndex) {
     // Update the current index and button states
     currentIndex = contentIndex;
     updateButtonStates();
-    attemptToBlockClicks(newIframe, 5); // Attempt to block clicks in the iframe
+    if (contentType === "slide") {
+      attemptToBlockClicks(newIframe, 5); // Attempt to block clicks in the iframe
+    }
+
+    // Listen for messages from the iframe
+    window.addEventListener("message", function (event) {
+      // Check the origin of the message for security purposes
+      // if (event.origin !== 'https://fitness.agroparistech.fr/'){
+      //   console.error("We only accept messages from https://fitness.agroparistech.fr/");
+      //    return;
+      // }
+
+      if (event.data.type === "contentData") {
+        var content = event.data.content;
+        console.log("Received content from iframe:", content);
+        // Now you can use the content variable as needed
+      }
+    });
   } else {
     // Handle non-slide content differently
     const contentDiv = document.createElement("div");
@@ -767,6 +784,21 @@ function displayContentInsideViewer(contentIndex) {
     // Update the current index and button states without setting up an iframe
     currentIndex = contentIndex;
     updateButtonStates();
+    if (contentType === "virtualSlide") {
+      // setTimeout(() => {
+      const form = document.getElementById("userForm");
+
+      if (form) {
+        form.addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the form from submitting in the traditional way
+          storeUserData();
+        });
+        displayUserData(); // Optionally display right after storing to confirm data integrity
+      } else {
+        console.log("The form element was not found!");
+      }
+      // }, 5000); // Wait for 3 seconds before retrying
+    }
   }
 }
 
@@ -982,18 +1014,4 @@ document.addEventListener("DOMContentLoaded", function () {
     .addEventListener("click", function () {
       window.location.href = "documentation.html";
     });
-
-  setTimeout(() => {
-    const form = document.getElementById("userForm");
-
-    if (form) {
-      form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the form from submitting in the traditional way
-        storeUserData();
-      });
-      displayUserData(); // Optionally display right after storing to confirm data integrity
-    } else {
-      console.log("The form element was not found!");
-    }
-  }, 5000); // Wait for 3 seconds before retrying
 });

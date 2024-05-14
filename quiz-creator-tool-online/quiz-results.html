@@ -1,0 +1,199 @@
+<!--
+File: quiz-results.html
+Contract: EU contract 2022-FR01-KA220-HED-000023509
+Project: FitNESS 2 ERASMUS+
+File Created: Tuesday, 14th May 2024
+Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
+-----
+Last Modified: Tuesday, 14th May 2024
+Modified By: Steward OUADI
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FITNESS Quiz Results</title>
+  <link rel="stylesheet" href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/font-awesome-4-7-0.min.css">
+  <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness.css" rel="stylesheet">
+  <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness2.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .section h2 {
+      margin-top: 0;
+    }
+
+    .question {
+      margin-bottom: 10px;
+    }
+
+    .choices {
+      margin-left: 20px;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <main-header></main-header>
+
+  <div class="container">
+    <div class="section">
+      <h2>Learner Information</h2>
+      <p id="learnerName"></p>
+      <p id="learnerEmail"></p>
+    </div>
+    <div class="section">
+      <h2>Quiz Information</h2>
+      <p> <a id="quizURL" href="#" target="_blank"></a></p>
+      <p id="successPercentage"></p>
+      <p id="startedAt"></p>
+      <p id="endedAt"></p>
+      <p id="elapsedTime"></p>
+    </div>
+    <div class="section">
+      <h2>Questions and Answers</h2>
+      <div id="questionsContainer"></div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get the hash part of the URL, which contains the compressedQuizInfo
+      const hash = window.location.hash.substring(1);
+
+      if (hash) {
+        // Decompress the hash value
+        const decompressedQuizInfo = LZString.decompressFromEncodedURIComponent(hash);
+        if (decompressedQuizInfo) {
+          // Parse the decompressed string to an object
+          const quizInfo = JSON.parse(decompressedQuizInfo);
+
+          // Display learner information
+          const learnerData = quizInfo.learnerData;
+          document.getElementById('learnerName').textContent =
+            `Name: ${learnerData.FirstName} ${learnerData.LastName}`;
+          document.getElementById('learnerEmail').textContent = `Email: ${learnerData.Email}`;
+
+          // Display quiz information
+          const metadata = quizInfo.metadata;
+          document.getElementById('quizURL').textContent = "Click here to access the quiz";
+          document.getElementById('quizURL').href = metadata.quizUrl;
+          const numberOfCorrectAnswers = parseFloat(metadata.numberOfCorrectAnswers);
+          const numberOfQuestions = parseInt(metadata.numberOfQuestions);
+          const successPercentage = ((numberOfCorrectAnswers / numberOfQuestions) * 100).toFixed(2);
+          document.getElementById('successPercentage').textContent = `Success Percentage: ${successPercentage}%`;
+
+          // Display startedAt and endedAt with separate date and time including the weekday
+          const startedAt = new Date(metadata.startedAt);
+          const endedAt = new Date(metadata.endedAt);
+
+          // Options to include the weekday in the date string
+          const dateOptions = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          };
+
+          // Format the start and end times
+          const startedAtTime = startedAt.toLocaleTimeString();
+          const startedAtDate = startedAt.toLocaleDateString(undefined, dateOptions);
+          const endedAtTime = endedAt.toLocaleTimeString();
+          const endedAtDate = endedAt.toLocaleDateString(undefined, dateOptions);
+
+          document.getElementById('startedAt').textContent =
+            `Quiz Started At: ${startedAtTime}, on ${startedAtDate}`;
+          document.getElementById('endedAt').textContent = `Quiz Ended At: ${endedAtTime}, on ${endedAtDate}`;
+
+
+          // Calculate and display elapsed time
+          const elapsedTime = endedAt - startedAt;
+          const elapsedHours = Math.floor(elapsedTime / (1000 * 60 * 60));
+          const elapsedMinutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+          const elapsedSeconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+          document.getElementById('elapsedTime').textContent =
+            `Elapsed Time: ${elapsedHours}h ${elapsedMinutes}m ${elapsedSeconds}s`;
+
+          // Display questions and answers
+          const questionsContainer = document.getElementById('questionsContainer');
+          quizInfo.questionsAndUserAnswers.forEach((q, index) => {
+            const questionDiv = document.createElement('div');
+            questionDiv.className = 'question';
+
+            const questionText = document.createElement('p');
+            questionText.textContent = `${q.currentSlide.question.text}`;
+            questionDiv.appendChild(questionText);
+
+            const choicesList = document.createElement('ul');
+            choicesList.className = 'choices';
+            for (const [key, answer] of Object.entries(q.currentSlide.answers)) {
+              const choiceItem = document.createElement('li');
+              choiceItem.textContent = `${key}: ${answer.text}`;
+              choicesList.appendChild(choiceItem);
+            }
+            questionDiv.appendChild(choicesList);
+
+            const correctAnswer = document.createElement('p');
+            correctAnswer.className = 'correct';
+            correctAnswer.textContent = `Expected Answer: ${q.currentSlide.correctAnswer}`;
+            questionDiv.appendChild(correctAnswer);
+
+            const userAnswer = document.createElement('p');
+            userAnswer.className = q.currentSlide.correctAnswer === q.userAnswer ? 'correct' : 'incorrect';
+            userAnswer.textContent = `Your Answer: ${q.userAnswer}`;
+            questionDiv.appendChild(userAnswer);
+
+            questionsContainer.appendChild(questionDiv);
+          });
+        } else {
+          console.error('Failed to decompress quiz information.');
+        }
+      } else {
+        console.error('No quiz information found in the URL.');
+      }
+    });
+  </script>
+  <main-footer></main-footer>
+
+
+
+  <link rel="stylesheet"
+    href="http://127.0.0.1:5502/lectures-archi/modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
+
+  <script src="https://fitness.agroparistech.fr/fitness2/lectures/src/js/header.js"></script>
+  <script src="https://fitness.agroparistech.fr/fitness2/lectures/src/js/footer.js"></script>
+</body>
+
+</html>

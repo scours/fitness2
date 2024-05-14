@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Tuesday, 30th April 2024
+Last Modified: Tuesday, 14th May 2024
 Modified By: Steward OUADI
 -----
 -->
@@ -15,7 +15,7 @@ Modified By: Steward OUADI
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FITNess test</title>
+  <title>FITNESS Quizz</title>
   <link type="text/css" rel="stylesheet" href="src/quiz.css" />
 </head>
 
@@ -79,6 +79,7 @@ Modified By: Steward OUADI
   <!-- <script src="src/config.js"></script> -->
   <script type="text/javascript" src="src/beginner.js"></script>
   <script type="text/javascript" src="src/markdownContentVars.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
 
 
   <script>
@@ -284,14 +285,90 @@ Modified By: Steward OUADI
 
     questionsFromURL();
     document.getElementById("submit-results").addEventListener("click", function () {
+      event.preventDefault();
       console.log("button clicked")
+
+      endedAt = new Date();
       // Define variables
       var recipient1 = "olivier.vitrac@agroparistech.fr";
       var title = markdownVariableToRead;
       var identifier = defaultSessionIdentifier;
       var subject = encodeURIComponent(title + "__" + identifier);
       console.log(questionsAndUserAnswers);
-      var content = encodeURIComponent(JSON.stringify(questionsAndUserAnswers, undefined, 2));
+      var stringifiedContent = JSON.stringify(questionsAndUserAnswers, undefined, 2)
+      var content = encodeURIComponent(stringifiedContent);
+
+      // // Check if the current window is inside an iframe
+      // if (window !== window.parent) {
+      //   // Send the content to the parent window
+      //   window.parent.postMessage({
+      //     type: 'contentData',
+      //     content: stringifiedContent
+      //   }, 'https://fitness.agroparistech.fr/');
+      // } else {
+      //   // Handle standalone execution (if needed)
+      //   console.log('Running as standalone page. Content:', stringifiedContent);
+      // }
+
+      let learnerData;
+      const encodedLearnerData = localStorage.getItem("learnerData");
+
+      if (encodedLearnerData) {
+        // Decode and decompress the data
+        const decompressedLearnerData =
+          LZString.decompressFromEncodedURIComponent(encodedLearnerData);
+
+        if (decompressedLearnerData) {
+          // Parse the JSON string back to an object
+          learnerData = JSON.parse(decompressedLearnerData);
+
+          // // Set values to input fields if they exist and the elements are available in the DOM
+          // const firstNameElement = document.getElementById("firstName");
+          // const lastNameElement = document.getElementById("lastName");
+          // const emailElement = document.getElementById("email");
+
+          // if (firstNameElement && learnerData.FirstName)
+          //   firstNameElement.value = learnerData.FirstName;
+          // if (lastNameElement && learnerData.LastName)
+          //   lastNameElement.value = learnerData.LastName;
+          // if (emailElement && learnerData.Email) emailElement.value = learnerData.Email;
+
+          console.log("Data retrieved from local storage - Quiz creator tool:", learnerData);
+          console.log("Stringified content:", stringifiedContent);
+        }
+      }
+
+      const quizUrl =
+        `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#${markdownVariableToRead}`
+
+      const metadata = {
+        name: markdownVariableToRead,
+        mailRecipient: recipient1,
+        numberOfCorrectAnswers: numberOfCorrectAnswers.toFixed(2),
+        numberOfQuestions: visitedQuestions.size,
+        quizUrl,
+        startedAt,
+        endedAt,
+      }
+
+      const quizInfo = {
+        learnerData,
+        questionsAndUserAnswers,
+        metadata
+      }
+
+      console.log("Stringified content:", quizInfo);
+
+      // Convert the data object to JSON string
+      const quizInfoStringified = JSON.stringify(quizInfo);
+
+      // Compress and encode the JSON string
+      const compressedQuizInfo = LZString.compressToEncodedURIComponent(quizInfoStringified);
+
+      // const URLWithQuizInfo =
+      // `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`
+      const URLWithQuizInfo =
+        `http://127.0.0.1:5502/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`
 
       // Create the div and input elements dynamically
       var contentDiv = document.createElement("div");
@@ -302,7 +379,8 @@ Modified By: Steward OUADI
       var inputField = document.createElement("input");
       inputField.type = "text";
       inputField.id = "input-id";
-      inputField.value = defaultSessionIdentifier;
+      // inputField.value = defaultSessionIdentifier;
+      inputField.value = URLWithQuizInfo;
 
       // Make the input field bigger
       inputField.style.fontSize = '1.5em'; // Increases the font size
@@ -348,6 +426,8 @@ Modified By: Steward OUADI
         let filename = subject.replace(/[<>:"\/\\|?*\x00-\x1F]/g, '_') + ".txt";
 
         download(filename, decodeURIComponent(content));
+
+
       });
 
       function download(filename, text) {

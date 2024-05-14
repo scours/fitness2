@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Monday, 29th April 2024
+ * Last Modified: Tuesday, 14th May 2024
  * Modified By: Steward OUADI
  * -----
  */
@@ -312,60 +312,64 @@ function computeNextSlideElementBasedOnScore() {
     }
   }
 
-  const nextSlide = currentSlideElement.getNextElement().getInitialObject();
-  if (nextSlide !== undefined && isASuggestionMenu(nextSlide) === true) {
-    // Compute score before creating suggestion slide
+  // const nextSlide = currentSlideElement.getNextElement().getInitialObject();
+  const nextElement = currentSlideElement.getNextElement();
+  if (nextElement !== undefined) {
+    const nextSlide = nextElement.getInitialObject();
+    if (nextSlide !== undefined && isASuggestionMenu(nextSlide) === true) {
+      // Compute score before creating suggestion slide
 
-    computeScore();
-    const nextSlideContent = computeSuggestionMenu(nextSlide);
-    const newNextSlideHtmlObject = nextSlideContent.questionAndAnswersDiv;
-    const newNextSlideElement = nextSlideContent.currentSlideElement;
+      computeScore();
+      const nextSlideContent = computeSuggestionMenu(nextSlide);
+      const newNextSlideHtmlObject = nextSlideContent.questionAndAnswersDiv;
+      const newNextSlideElement = nextSlideContent.currentSlideElement;
 
-    const currentSlideNextElement = currentSlideElement.getNextElement();
-    newNextSlideElement.setNextElement(currentSlideNextElement);
+      const currentSlideNextElement = currentSlideElement.getNextElement();
+      newNextSlideElement.setNextElement(currentSlideNextElement);
 
-    currentSlideNextElement.setPreviousElement(newNextSlideElement);
+      currentSlideNextElement.setPreviousElement(newNextSlideElement);
 
-    currentSlideElement.setNextElement(newNextSlideElement);
-    newNextSlideElement.setPreviousElement(currentSlideElement);
+      currentSlideElement.setNextElement(newNextSlideElement);
+      newNextSlideElement.setPreviousElement(currentSlideElement);
 
-    const currentSlideNextElementId = currentSlideNextElement.getId();
-    slideElementContainer.delete(
-      currentSlideNextElementId,
-      currentSlideNextElement
-    );
-
-    const newNextSlideElementInitialObject =
-      newNextSlideElement.getInitialObject();
-    if (newNextSlideElementInitialObject.nextButtonText !== undefined) {
-      newNextSlideElement.setNextButtonText(
-        newNextSlideElementInitialObject.nextButtonText
+      const currentSlideNextElementId = currentSlideNextElement.getId();
+      slideElementContainer.delete(
+        currentSlideNextElementId,
+        currentSlideNextElement
       );
+
+      const newNextSlideElementInitialObject =
+        newNextSlideElement.getInitialObject();
+      if (newNextSlideElementInitialObject.nextButtonText !== undefined) {
+        newNextSlideElement.setNextButtonText(
+          newNextSlideElementInitialObject.nextButtonText
+        );
+      }
+
+      // If there is a previous button text defined in config file, set it
+      if (newNextSlideElementInitialObject.previousButtonText !== undefined) {
+        newNextSlideElement.setPreviousButtonText(
+          newNextSlideElementInitialObject.previousButtonText
+        );
+      }
+
+      // If there is a "quiz score" button text defined in config file, set it
+      if (newNextSlideElementInitialObject.quizScoreButtonText !== undefined) {
+        newNextSlideElement.setQuizScoreButtonText(
+          newNextSlideElementInitialObject.quizScoreButtonText
+        );
+      }
+
+      const newNextSlideId = newNextSlideElement.getId();
+      // As existing slide element has been removed from slideElementContainer,
+      // add new next slide element
+      slideElementContainer.set(newNextSlideId, newNextSlideElement);
+
+      // add this question and its answers to the output
+      quizContainer.appendChild(newNextSlideHtmlObject);
+
+      showNumberOfAnswersOutOfTotal();
     }
-
-    // If there is a previous button text defined in config file, set it
-    if (newNextSlideElementInitialObject.previousButtonText !== undefined) {
-      newNextSlideElement.setPreviousButtonText(
-        newNextSlideElementInitialObject.previousButtonText
-      );
-    }
-
-    // If there is a "quiz score" button text defined in config file, set it
-    if (newNextSlideElementInitialObject.quizScoreButtonText !== undefined) {
-      newNextSlideElement.setQuizScoreButtonText(
-        newNextSlideElementInitialObject.quizScoreButtonText
-      );
-    }
-
-    const newNextSlideId = newNextSlideElement.getId();
-    // As existing slide element has been removed from slideElementContainer,
-    // add new next slide element
-    slideElementContainer.set(newNextSlideId, newNextSlideElement);
-
-    // add this question and its answers to the output
-    quizContainer.appendChild(newNextSlideHtmlObject);
-
-    showNumberOfAnswersOutOfTotal();
   }
 }
 
@@ -799,14 +803,14 @@ function showNumberOfAnswersOutOfTotal() {
          correct answers out of <b>${
            visitedQuestions.size
          }</b> questions | <font size="0.4rem">${dt.toLocaleString()}</font>
-         <hr class="fitness" /><br /><a href="/fitness2/lectures/lectures.html">See all FitNESS lectures</a>`;
+         <hr class="fitness" />`;
 }
 
 function showResults() {
   computeScore();
   showNumberOfAnswersOutOfTotal();
   displaySendResultsByEmailButtonIfNecessary();
-  createMenuBasedOnLearnerAnswers();
+  // createMenuBasedOnLearnerAnswers();
   showNextSlide();
 }
 
@@ -867,14 +871,17 @@ function showNextSlide() {
   );
   currentHtmlObject.classList.remove("active-slide");
 
-  const nextSlideElementId = globalCurrentSlideElement.getNextElement().getId();
+  const nextElement = globalCurrentSlideElement.getNextElement();
+  if (nextElement != undefined) {
+    const nextSlideElementId = nextElement.getId();
 
-  // Set next element previous as the current slide
-  globalCurrentSlideElement
-    .getNextElement()
-    .setPreviousElement(globalCurrentSlideElement);
+    // Set next element previous as the current slide
+    globalCurrentSlideElement
+      .getNextElement()
+      .setPreviousElement(globalCurrentSlideElement);
 
-  showSlide(currentSlide + 1, nextSlideElementId);
+    showSlide(currentSlide + 1, nextSlideElementId);
+  }
 }
 
 function showPreviousSlide() {
@@ -1144,6 +1151,7 @@ function createMenuBasedOnLearnerAnswers() {
 
 // main
 function DoQuiz(canBeSentByEmailFromConfig) {
+  startedAt = startedAt = new Date();
   canBeSentByEmail = canBeSentByEmailFromConfig;
   for (let i = 0; i < allSlides.length; i++) {
     // If correct answer is of type array and there is only one correct answer,
@@ -1226,6 +1234,9 @@ let questionsAndUserAnswers = [];
 // indicates whether the result of the questionnaire is to be sent by e-mail or not. If so, a button allows you to
 // do so, once you have clicked on the button that allows to view the results.
 let canBeSentByEmail;
+
+let startedAt;
+let endedAt;
 // function setCanBeSentByEmailVariable() {
 //   // indicates whether the result of the questionnaire is to be sent by e-mail or not. If so, a button allows you to
 //   // do so, once you have clicked on the button that allows to view the results.
