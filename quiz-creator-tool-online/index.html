@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Tuesday, 14th May 2024
+Last Modified: Wednesday, 15th May 2024
 Modified By: Steward OUADI
 -----
 -->
@@ -284,6 +284,8 @@ Modified By: Steward OUADI
     }
 
     questionsFromURL();
+    const webAppUrl =
+      "https://script.google.com/macros/s/AKfycbwZlQ0xMFMPIdAK-nGPMgJOjKREA-ZLFOv3pGH4lT_H_NGCW29KPidy60Er86uN0deA1Q/exec";
     document.getElementById("submit-results").addEventListener("click", function () {
       event.preventDefault();
       console.log("button clicked")
@@ -365,10 +367,35 @@ Modified By: Steward OUADI
       // Compress and encode the JSON string
       const compressedQuizInfo = LZString.compressToEncodedURIComponent(quizInfoStringified);
 
-      // const URLWithQuizInfo =
-      // `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`
       const URLWithQuizInfo =
-        `http://127.0.0.1:5502/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`
+        `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`
+
+      let bodyToSend = JSON.stringify({
+        url: URLWithQuizInfo
+      });
+      console.log("body to send:", bodyToSend)
+
+      // Apps Script web app URL
+      // Send URLWithQuizInfo to Google Apps Script web app
+      fetch(webAppUrl, {
+          redirect: "follow",
+          method: 'POST',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8',
+          },
+          body: JSON.stringify({
+            url: URLWithQuizInfo
+          }),
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Server response:', data);
+          alert('URL successfully saved to Google Sheets.');
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert('Error saving URL to Google Sheets.');
+        });
 
       // Create the div and input elements dynamically
       var contentDiv = document.createElement("div");
