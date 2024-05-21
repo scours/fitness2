@@ -89,6 +89,7 @@ Modified By: Steward OUADI
     <div class="section">
       <h2>Score Graph</h2>
       <div id="scoreChart"></div>
+      <p id="participantsCount"></p>
     </div>
     <div class="section">
       <h2>Elapsed Time Graph</h2>
@@ -98,7 +99,6 @@ Modified By: Steward OUADI
 
   <script>
     const sheetId = '1tzrLootQ-mFCjg6XHqW5tPd39gKl92Z_ldMK2gQNyPI'; // Add your sheetId here
-
     const webAppUrl =
       'https://script.google.com/macros/s/AKfycbyk2zFtF7CKPRwYnj_wAM__BL5Vrdt6bKUPHf0oh-PtzG8OoK4a-D2Bh-2zsxWYIMEU/exec';
 
@@ -114,18 +114,24 @@ Modified By: Steward OUADI
 
           const dataTable = google.visualization.arrayToDataTable([
             ['Metric', 'Value'],
-            ['Average Score', averageScore],
-            ['Median Score', medianScore]
+            ['Average Score (%)', averageScore],
+            ['Median Score (%)', medianScore]
           ]);
 
           const options = {
             title: 'Quiz Scores',
+            vAxis: {
+              title: 'Percentage (%)'
+            },
             width: 600,
             height: 400
           };
 
           const chart = new google.visualization.ColumnChart(document.getElementById('scoreChart'));
           chart.draw(dataTable, options);
+
+          // Display the number of participants
+          document.getElementById('participantsCount').textContent = `Number of participants: ${scores.length}`;
         })
         .catch(error => console.error('Error fetching score data:', error));
     }
@@ -147,14 +153,26 @@ Modified By: Steward OUADI
           const averageElapsedTime = calculateAverage(elapsedTimes);
           const medianElapsedTime = calculateMedian(elapsedTimes);
 
+          const averageElapsedTimeFormatted = formatSecondsToHMS(averageElapsedTime);
+          const medianElapsedTimeFormatted = formatSecondsToHMS(medianElapsedTime);
+
           const dataTable = google.visualization.arrayToDataTable([
             ['Metric', 'Value'],
-            ['Average Elapsed Time', averageElapsedTime],
-            ['Median Elapsed Time', medianElapsedTime]
+            ['Average Elapsed Time (hh:mm:ss)', {
+              v: averageElapsedTime,
+              f: averageElapsedTimeFormatted
+            }],
+            ['Median Elapsed Time (hh:mm:ss)', {
+              v: medianElapsedTime,
+              f: medianElapsedTimeFormatted
+            }]
           ]);
 
           const options = {
             title: 'Elapsed Time',
+            vAxis: {
+              title: 'Time (hh:mm:ss)'
+            },
             width: 600,
             height: 400
           };
@@ -163,6 +181,14 @@ Modified By: Steward OUADI
           chart.draw(dataTable, options);
         })
         .catch(error => console.error('Error fetching elapsed time data:', error));
+    }
+
+    // Helper function to format seconds into hh:mm:ss
+    function formatSecondsToHMS(seconds) {
+      const h = Math.floor(seconds / 3600).toString().padStart(2, '0');
+      const m = Math.floor((seconds % 3600) / 60).toString().padStart(2, '0');
+      const s = Math.floor(seconds % 60).toString().padStart(2, '0');
+      return `${h}:${m}:${s}`;
     }
 
     // Function to calculate the average of an array of numbers
@@ -186,6 +212,7 @@ Modified By: Steward OUADI
       drawScoreChart(sheetName);
       drawElapsedTimeChart(sheetName);
     }
+
     document.addEventListener('DOMContentLoaded', function () {
       // Get the hash part of the URL, which contains the compressedQuizInfo
       const hash = window.location.hash.substring(1);
@@ -283,8 +310,6 @@ Modified By: Steward OUADI
 
             questionsContainer.appendChild(questionDiv);
           });
-
-
 
         } else {
           console.error('Failed to decompress quiz information.');
