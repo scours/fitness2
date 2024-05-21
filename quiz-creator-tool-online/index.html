@@ -373,8 +373,8 @@ Modified By: Steward OUADI
 
 
 
-          console.log("Data retrieved from local storage - Quiz creator tool:", learnerData);
-          console.log("Stringified content:", stringifiedContent);
+          // console.log("Data retrieved from local storage - Quiz creator tool:", learnerData);
+          // console.log("Stringified content:", stringifiedContent);
         }
       }
 
@@ -393,6 +393,14 @@ Modified By: Steward OUADI
 
       // Create the sheet name
       var sheetName = `${formattedDate} ${quizIdentifier} ${sessionId}`;
+
+      if (!learnerData) {
+        learnerData = {
+          FirstName: "unknown",
+          LastName: "unknown",
+          Email: "unknown"
+        };
+      }
 
       const metadata = {
         name: markdownVariableToRead,
@@ -428,6 +436,8 @@ Modified By: Steward OUADI
 
       const URLWithQuizInfo =
         `http://127.0.0.1:5502/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`;
+
+
 
       let bodyToSend = JSON.stringify({
         url: URLWithQuizInfo,
