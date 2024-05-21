@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Wednesday, 15th May 2024
+Last Modified: Friday, 17th May 2024
 Modified By: Steward OUADI
 -----
 -->
@@ -283,16 +283,21 @@ Modified By: Steward OUADI
       DoQuiz(canBeSentByEmail);
     }
 
+    function camelCaseToWords(str) {
+      return str.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
+    }
+
+
     questionsFromURL();
     const webAppUrl =
-      "https://script.google.com/macros/s/AKfycbwZlQ0xMFMPIdAK-nGPMgJOjKREA-ZLFOv3pGH4lT_H_NGCW29KPidy60Er86uN0deA1Q/exec";
+      "https://script.google.com/macros/s/AKfycbzBFiR6rG0b3TAhpi0faHcXiDyZNm4WefR_vrgxrl77bj3CNKufUKVrdgJWaXpscGv3Ew/exec";
     document.getElementById("submit-results").addEventListener("click", function () {
       event.preventDefault();
       console.log("button clicked")
 
       endedAt = new Date();
       // Define variables
-      var recipient1 = "olivier.vitrac@agroparistech.fr";
+      var recipient1 = "rotam@gmail.com";
       var title = markdownVariableToRead;
       var identifier = defaultSessionIdentifier;
       var subject = encodeURIComponent(title + "__" + identifier);
@@ -311,6 +316,13 @@ Modified By: Steward OUADI
       //   // Handle standalone execution (if needed)
       //   console.log('Running as standalone page. Content:', stringifiedContent);
       // }
+
+      // Calculate success rate and elapsed time
+      var numberOfCorrectAnswersFixed = numberOfCorrectAnswers.toFixed(2);
+      var numberOfQuestions = visitedQuestions.size;
+      var successRate = ((numberOfCorrectAnswersFixed / numberOfQuestions) * 100).toFixed(2) + '%';
+      var elapsedTime = new Date(endedAt - startedAt).toISOString().substr(11, 8);
+
 
       let learnerData;
       const encodedLearnerData = localStorage.getItem("learnerData");
@@ -335,6 +347,9 @@ Modified By: Steward OUADI
           //   lastNameElement.value = learnerData.LastName;
           // if (emailElement && learnerData.Email) emailElement.value = learnerData.Email;
 
+
+
+
           console.log("Data retrieved from local storage - Quiz creator tool:", learnerData);
           console.log("Stringified content:", stringifiedContent);
         }
@@ -346,18 +361,21 @@ Modified By: Steward OUADI
       const metadata = {
         name: markdownVariableToRead,
         mailRecipient: recipient1,
-        numberOfCorrectAnswers: numberOfCorrectAnswers.toFixed(2),
-        numberOfQuestions: visitedQuestions.size,
-        quizUrl,
-        startedAt,
-        endedAt,
-      }
-
+        numberOfCorrectAnswers: numberOfCorrectAnswersFixed,
+        numberOfQuestions: numberOfQuestions,
+        successRate: successRate,
+        elapsedTime: elapsedTime,
+        quizUrl: quizUrl,
+        startedAt: startedAt,
+        endedAt: endedAt,
+      };
       const quizInfo = {
         learnerData,
         questionsAndUserAnswers,
         metadata
       }
+
+      var quizIdentifier = camelCaseToWords(markdownVariableToRead);
 
       console.log("Stringified content:", quizInfo);
 
@@ -367,12 +385,23 @@ Modified By: Steward OUADI
       // Compress and encode the JSON string
       const compressedQuizInfo = LZString.compressToEncodedURIComponent(quizInfoStringified);
 
+      // const URLWithQuizInfo =
+      // `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`
+
       const URLWithQuizInfo =
-        `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`
+        `http://127.0.0.1:5502/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`;
 
       let bodyToSend = JSON.stringify({
-        url: URLWithQuizInfo
+        url: URLWithQuizInfo,
+        sheetId: '1tzrLootQ-mFCjg6XHqW5tPd39gKl92Z_ldMK2gQNyPI', // Assuming this will come from somewhere
+        quizIdentifier: quizIdentifier,
+        successRate: successRate,
+        elapsedTime: elapsedTime,
+        firstName: learnerData.FirstName,
+        lastName: learnerData.LastName,
+        email: learnerData.Email
       });
+
       console.log("body to send:", bodyToSend)
 
       // Apps Script web app URL
@@ -383,14 +412,21 @@ Modified By: Steward OUADI
           headers: {
             'Content-Type': 'text/plain;charset=utf-8',
           },
-          body: JSON.stringify({
-            url: URLWithQuizInfo
-          }),
+          body: bodyToSend,
         })
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
         .then(data => {
-          console.log('Server response:', data);
-          alert('URL successfully saved to Google Sheets.');
+          if (data.status === "success") {
+            console.log('Server response:', data);
+            alert('URL successfully saved to Google Sheets.');
+          } else {
+            throw new Error(`Server error: ${data.message}`);
+          }
         })
         .catch(error => {
           console.error('Error:', error);

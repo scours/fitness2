@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Tuesday, 14th May 2024
 Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
 -----
-Last Modified: Tuesday, 14th May 2024
+Last Modified: Tuesday, 21st May 2024
 Modified By: Steward OUADI
 -->
 <!DOCTYPE html>
@@ -18,8 +18,8 @@ Modified By: Steward OUADI
   <link rel="stylesheet" href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/font-awesome-4-7-0.min.css">
   <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness.css" rel="stylesheet">
   <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness2.css" rel="stylesheet">
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -76,7 +76,7 @@ Modified By: Steward OUADI
     </div>
     <div class="section">
       <h2>Quiz Information</h2>
-      <p> <a id="quizURL" href="#" target="_blank"></a></p>
+      <p><a id="quizURL" href="#" target="_blank"></a></p>
       <p id="successPercentage"></p>
       <p id="startedAt"></p>
       <p id="endedAt"></p>
@@ -86,9 +86,22 @@ Modified By: Steward OUADI
       <h2>Questions and Answers</h2>
       <div id="questionsContainer"></div>
     </div>
+    <div class="section">
+      <h2>Score Graph</h2>
+      <div id="scoreChart"></div>
+    </div>
+    <div class="section">
+      <h2>Elapsed Time Graph</h2>
+      <div id="elapsedTimeChart"></div>
+    </div>
   </div>
 
   <script>
+    const sheetId = '1tzrLootQ-mFCjg6XHqW5tPd39gKl92Z_ldMK2gQNyPI'; // Add your sheetId here
+    const sheetName = 'Friday, May 17, 2024 - material glass'; // Add your sheetName here
+    const webAppUrl =
+      'https://script.google.com/macros/s/AKfycbyODGew7ljpOiMz7L8nGDehq4DQronK496qUL8NtNxiEhOpJLpYX7DkSFw-OJfNrRYP0Q/exec';
+
     document.addEventListener('DOMContentLoaded', function () {
       // Get the hash part of the URL, which contains the compressedQuizInfo
       const hash = window.location.hash.substring(1);
@@ -137,7 +150,6 @@ Modified By: Steward OUADI
             `Quiz Started At: ${startedAtTime}, on ${startedAtDate}`;
           document.getElementById('endedAt').textContent = `Quiz Ended At: ${endedAtTime}, on ${endedAtDate}`;
 
-
           // Calculate and display elapsed time
           const elapsedTime = endedAt - startedAt;
           const elapsedHours = Math.floor(elapsedTime / (1000 * 60 * 60));
@@ -177,6 +189,101 @@ Modified By: Steward OUADI
 
             questionsContainer.appendChild(questionDiv);
           });
+
+          // Load the Google Charts library
+          google.charts.load('current', {
+            'packages': ['corechart']
+          });
+          google.charts.setOnLoadCallback(drawCharts);
+
+          function drawCharts() {
+            drawScoreChart();
+            drawElapsedTimeChart();
+          }
+
+          // Function to fetch data from Google Sheets and draw the score chart
+          function drawScoreChart() {
+            // Fetch data from the Google Sheets and update the chart
+            fetch(`${webAppUrl}?sheetId=${sheetId}&sheetName=${sheetName}`)
+              .then(response => response.json())
+              .then(data => {
+                const scores = data.map(row => parseFloat(row['Success rate (percentage)'].replace('%', '')));
+                const averageScore = calculateAverage(scores);
+                const medianScore = calculateMedian(scores);
+
+                const dataTable = google.visualization.arrayToDataTable([
+                  ['Metric', 'Value'],
+                  ['Average Score', averageScore],
+                  ['Median Score', medianScore]
+                ]);
+
+                const options = {
+                  title: 'Quiz Scores',
+                  width: 600,
+                  height: 400
+                };
+
+                const chart = new google.visualization.ColumnChart(document.getElementById('scoreChart'));
+                chart.draw(dataTable, options);
+              })
+              .catch(error => console.error('Error fetching score data:', error));
+          }
+
+          // Function to fetch data from Google Sheets and draw the elapsed time chart
+          function drawElapsedTimeChart() {
+            // Fetch data from the Google Sheets and update the chart
+            fetch(`${webAppUrl}?sheetId=${sheetId}&sheetName=${sheetName}`)
+              .then(response => response.json())
+              .then(data => {
+                const elapsedTimes = data.map(row => {
+                  const timeParts = row['Elapsed Time'].split(':');
+                  const hours = parseInt(timeParts[0], 10);
+                  const minutes = parseInt(timeParts[1], 10);
+                  const seconds = parseInt(timeParts[2], 10);
+                  return hours * 3600 + minutes * 60 + seconds;
+                });
+
+                const averageElapsedTime = calculateAverage(elapsedTimes);
+                const medianElapsedTime = calculateMedian(elapsedTimes);
+
+                const dataTable = google.visualization.arrayToDataTable([
+                  ['Metric', 'Value'],
+                  ['Average Elapsed Time', averageElapsedTime],
+                  ['Median Elapsed Time', medianElapsedTime]
+                ]);
+
+                const options = {
+                  title: 'Elapsed Time',
+                  width: 600,
+                  height: 400
+                };
+
+                const chart = new google.visualization.ColumnChart(document.getElementById('elapsedTimeChart'));
+                chart.draw(dataTable, options);
+              })
+              .catch(error => console.error('Error fetching elapsed time data:', error));
+          }
+
+          // Function to calculate the average of an array of numbers
+          function calculateAverage(data) {
+            const sum = data.reduce((acc, value) => acc + value, 0);
+            return sum / data.length;
+          }
+
+          // Function to calculate the median of an array of numbers
+          function calculateMedian(data) {
+            data.sort((a, b) => a - b);
+            const middleIndex = Math.floor(data.length / 2);
+            if (data.length % 2 === 0) {
+              return (data[middleIndex - 1] + data[middleIndex]) / 2;
+            } else {
+              return data[middleIndex];
+            }
+          }
+
+          // Set an interval to update the charts every 5 seconds
+          setInterval(drawCharts, 5000);
+
         } else {
           console.error('Failed to decompress quiz information.');
         }
@@ -187,11 +294,8 @@ Modified By: Steward OUADI
   </script>
   <main-footer></main-footer>
 
-
-
   <link rel="stylesheet"
     href="http://127.0.0.1:5502/lectures-archi/modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
-
   <script src="https://fitness.agroparistech.fr/fitness2/lectures/src/js/header.js"></script>
   <script src="https://fitness.agroparistech.fr/fitness2/lectures/src/js/footer.js"></script>
 </body>
