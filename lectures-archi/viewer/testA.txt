@@ -45,5 +45,5 @@ defSlide labelSlide1 {
 
 
 // Syntax: slide URL slidesToShow
-test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=testB&sessionId=1"
-test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=testB&sessionId=2"
+test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=testA&sessionId=1"
+test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=testA&sessionId=2"
