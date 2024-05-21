@@ -5,7 +5,7 @@
  * File Created: Monday, 6th May 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Tuesday, 14th May 2024
+ * Last Modified: Tuesday, 21st May 2024
  * Modified By: Steward OUADI
  */
 
@@ -46,7 +46,7 @@ defSlide labelSlide1 {
 
 
 // Syntax: slide URL slidesToShow
-test "http://127.0.0.1:5502/quiz-creator-tool-online/index.html#materialGlass"
+test "http://127.0.0.1:5502/quiz-creator-tool-online/index.html?quizId=materialBioBased&sessionId=1"
 slide "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part5.html" [7:30] 
 test "http://127.0.0.1:5502/quiz-creator-tool-online/index.html#materialGlass"
 

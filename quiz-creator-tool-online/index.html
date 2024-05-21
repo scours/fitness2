@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Friday, 17th May 2024
+Last Modified: Tuesday, 21st May 2024
 Modified By: Steward OUADI
 -----
 -->
@@ -48,7 +48,8 @@ Modified By: Steward OUADI
   <div id="results">
   </div>
   <div id="submit-results-proposal">
-    <a href="#" id="submit-results">See form to submit results by email</a>
+    <a href="#" id="submit-results">Share and see results. By clicking here, you agree to share your answers with the
+      quiz creator in order to improve the platform</a>
   </div>
   <div class="quiz-container">
     <div id="quiz">
@@ -101,7 +102,25 @@ Modified By: Steward OUADI
 
     const defaultSessionIdentifier = generateIdentifier();
 
-    var markdownVariableToRead = window.location.hash.substring(1);
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      const queryParams = {};
+      params.forEach((value, key) => {
+        queryParams[key] = value;
+      });
+      return queryParams;
+    }
+
+    // Read the query parameters
+    const queryParams = getQueryParams();
+
+
+    // var markdownVariableToRead = window.location.hash.substring(1);
+    var markdownVariableToRead = queryParams.quizId;
+    var sessionId = queryParams.sessionId;
+
+    console.log(queryParams);
+
 
     function questionsFromURL() {
       // If variable is not empty, use it to read markdown
@@ -287,10 +306,14 @@ Modified By: Steward OUADI
       return str.replace(/([a-z])([A-Z])/g, '$1 $2').toLowerCase();
     }
 
+    // Generate the session identifier
+    function generateSessionIdentifier() {
+      return Math.random().toString(36).substring(2, 6).toUpperCase();
+    }
 
     questionsFromURL();
     const webAppUrl =
-      "https://script.google.com/macros/s/AKfycbzBFiR6rG0b3TAhpi0faHcXiDyZNm4WefR_vrgxrl77bj3CNKufUKVrdgJWaXpscGv3Ew/exec";
+      "https://script.google.com/macros/s/AKfycbyk2zFtF7CKPRwYnj_wAM__BL5Vrdt6bKUPHf0oh-PtzG8OoK4a-D2Bh-2zsxWYIMEU/exec";
     document.getElementById("submit-results").addEventListener("click", function () {
       event.preventDefault();
       console.log("button clicked")
@@ -368,6 +391,8 @@ Modified By: Steward OUADI
         quizUrl: quizUrl,
         startedAt: startedAt,
         endedAt: endedAt,
+        sheetName: sheetName,
+        sessionIdentifier: sessionId,
       };
       const quizInfo = {
         learnerData,
@@ -375,7 +400,18 @@ Modified By: Steward OUADI
         metadata
       }
 
-      var quizIdentifier = camelCaseToWords(markdownVariableToRead);
+      // Get the quiz identifier from the markdown variable and limit it to 30 characters
+      var quizIdentifier = camelCaseToWords(markdownVariableToRead).slice(0, 30);
+
+
+
+      // Format the current date for the sheet name
+      var currentDate = new Date();
+      var formattedDate = currentDate.toLocaleDateString('en-GB').split('/').reverse().join(
+        '/'); // Format: DD/MM/YY
+
+      // Create the sheet name
+      var sheetName = `${formattedDate} ${quizIdentifier} ${sessionId}`;
 
       console.log("Stringified content:", quizInfo);
 
@@ -394,6 +430,7 @@ Modified By: Steward OUADI
       let bodyToSend = JSON.stringify({
         url: URLWithQuizInfo,
         sheetId: '1tzrLootQ-mFCjg6XHqW5tPd39gKl92Z_ldMK2gQNyPI', // Assuming this will come from somewhere
+        sheetName: sheetName,
         quizIdentifier: quizIdentifier,
         successRate: successRate,
         elapsedTime: elapsedTime,
@@ -423,7 +460,7 @@ Modified By: Steward OUADI
         .then(data => {
           if (data.status === "success") {
             console.log('Server response:', data);
-            alert('URL successfully saved to Google Sheets.');
+            alert('Results successfully shared.');
           } else {
             throw new Error(`Server error: ${data.message}`);
           }
@@ -437,7 +474,7 @@ Modified By: Steward OUADI
       var contentDiv = document.createElement("div");
       var inputLabel = document.createElement("label");
       inputLabel.setAttribute("for", "input-id");
-      inputLabel.innerHTML = "Pseudonym or first/last name: (you can change it to write your own)";
+      inputLabel.innerHTML = "This is your result URL. Open it or share it with anyone";
 
       var inputField = document.createElement("input");
       inputField.type = "text";
@@ -453,14 +490,14 @@ Modified By: Steward OUADI
 
       var sendButton = document.createElement("button");
       sendButton.id = "btn-send";
-      sendButton.textContent = "Send";
+      sendButton.textContent = "Open";
 
       var downloadText = document.createElement("p");
       downloadText.innerHTML =
-        "If the button above does not send your email, <a href='#' id='download-link'>click here to download the file </a> and send it by email on your own.";
+        "";
       var sendButtonExplainer = document.createElement("p");
       sendButtonExplainer.innerHTML =
-        "By clicking on 'Send', depending on the configuration of your device, your mail manager will open with a pre-filled mail content and recipient (creator of this quiz). Then you'll just have to send your email.";
+        "";
 
       // Append elements to the contentDiv
       contentDiv.appendChild(inputLabel);
@@ -475,9 +512,10 @@ Modified By: Steward OUADI
 
       // Add click event listener to the send button
       sendButton.addEventListener("click", function () {
-        var sessionIdentifier = inputField.value;
-        var mailtoLink = "mailto:" + recipient1 + "?subject=" + subject + "&body=" + content;
-        window.location.href = mailtoLink;
+        // var sessionIdentifier = inputField.value;
+        // var mailtoLink = "mailto:" + recipient1 + "?subject=" + subject + "&body=" + content;
+        // window.location.href = mailtoLink;
+        window.open(URLWithQuizInfo, '_blank');
       });
 
       // Add click event listener to the download link

@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 14th May 2024
+ * Last Modified: Tuesday, 21st May 2024
  * Modified By: Steward OUADI
  */
 
@@ -646,7 +646,6 @@ async function fetchAndDisplayContent(contentURL) {
   let outerHtml = "";
   try {
     const testURL = contentURL;
-    const markdownVariableFromURL = new URL(testURL).hash.substring(1);
 
     const lectureTestResponse = await httpGet(testURL);
 
@@ -668,11 +667,11 @@ async function fetchAndDisplayContent(contentURL) {
     scripts.forEach((script) => {
       if (
         !script.src &&
-        script.textContent.includes("window.location.hash.substring(1)")
+        script.textContent.includes("window.location.search")
       ) {
         script.textContent = script.textContent.replace(
-          "window.location.hash.substring(1)",
-          `'${markdownVariableFromURL}'`
+          "window.location.search",
+          `new URL('${testURL}').search`
         );
       }
     });

@@ -98,10 +98,89 @@ Modified By: Steward OUADI
 
   <script>
     const sheetId = '1tzrLootQ-mFCjg6XHqW5tPd39gKl92Z_ldMK2gQNyPI'; // Add your sheetId here
-    const sheetName = 'Friday, May 17, 2024 - material glass'; // Add your sheetName here
+    let sheetName;
     const webAppUrl =
-      'https://script.google.com/macros/s/AKfycbyODGew7ljpOiMz7L8nGDehq4DQronK496qUL8NtNxiEhOpJLpYX7DkSFw-OJfNrRYP0Q/exec';
+      'https://script.google.com/macros/s/AKfycbyk2zFtF7CKPRwYnj_wAM__BL5Vrdt6bKUPHf0oh-PtzG8OoK4a-D2Bh-2zsxWYIMEU/exec';
 
+    // Function to fetch data from Google Sheets and draw the score chart
+    function drawScoreChart() {
+      // Fetch data from the Google Sheets and update the chart
+      fetch(`${webAppUrl}?sheetId=${sheetId}&sheetName=${sheetName}`)
+        .then(response => response.json())
+        .then(data => {
+          const scores = data.map(row => parseFloat(row['Success rate (percentage)'].replace('%', '')));
+          const averageScore = calculateAverage(scores);
+          const medianScore = calculateMedian(scores);
+
+          const dataTable = google.visualization.arrayToDataTable([
+            ['Metric', 'Value'],
+            ['Average Score', averageScore],
+            ['Median Score', medianScore]
+          ]);
+
+          const options = {
+            title: 'Quiz Scores',
+            width: 600,
+            height: 400
+          };
+
+          const chart = new google.visualization.ColumnChart(document.getElementById('scoreChart'));
+          chart.draw(dataTable, options);
+        })
+        .catch(error => console.error('Error fetching score data:', error));
+    }
+
+    // Function to fetch data from Google Sheets and draw the elapsed time chart
+    function drawElapsedTimeChart() {
+      // Fetch data from the Google Sheets and update the chart
+      fetch(`${webAppUrl}?sheetId=${sheetId}&sheetName=${sheetName}`)
+        .then(response => response.json())
+        .then(data => {
+          const elapsedTimes = data.map(row => {
+            const timeParts = row['Elapsed Time'].split(':');
+            const hours = parseInt(timeParts[0], 10);
+            const minutes = parseInt(timeParts[1], 10);
+            const seconds = parseInt(timeParts[2], 10);
+            return hours * 3600 + minutes * 60 + seconds;
+          });
+
+          const averageElapsedTime = calculateAverage(elapsedTimes);
+          const medianElapsedTime = calculateMedian(elapsedTimes);
+
+          const dataTable = google.visualization.arrayToDataTable([
+            ['Metric', 'Value'],
+            ['Average Elapsed Time', averageElapsedTime],
+            ['Median Elapsed Time', medianElapsedTime]
+          ]);
+
+          const options = {
+            title: 'Elapsed Time',
+            width: 600,
+            height: 400
+          };
+
+          const chart = new google.visualization.ColumnChart(document.getElementById('elapsedTimeChart'));
+          chart.draw(dataTable, options);
+        })
+        .catch(error => console.error('Error fetching elapsed time data:', error));
+    }
+
+    // Function to calculate the average of an array of numbers
+    function calculateAverage(data) {
+      const sum = data.reduce((acc, value) => acc + value, 0);
+      return sum / data.length;
+    }
+
+    // Function to calculate the median of an array of numbers
+    function calculateMedian(data) {
+      data.sort((a, b) => a - b);
+      const middleIndex = Math.floor(data.length / 2);
+      if (data.length % 2 === 0) {
+        return (data[middleIndex - 1] + data[middleIndex]) / 2;
+      } else {
+        return data[middleIndex];
+      }
+    }
     document.addEventListener('DOMContentLoaded', function () {
       // Get the hash part of the URL, which contains the compressedQuizInfo
       const hash = window.location.hash.substring(1);
@@ -127,6 +206,8 @@ Modified By: Steward OUADI
           const numberOfQuestions = parseInt(metadata.numberOfQuestions);
           const successPercentage = ((numberOfCorrectAnswers / numberOfQuestions) * 100).toFixed(2);
           document.getElementById('successPercentage').textContent = `Success Percentage: ${successPercentage}%`;
+
+          sheetName = metadata.sheetName;
 
           // Display startedAt and endedAt with separate date and time including the weekday
           const startedAt = new Date(metadata.startedAt);
@@ -201,88 +282,10 @@ Modified By: Steward OUADI
             drawElapsedTimeChart();
           }
 
-          // Function to fetch data from Google Sheets and draw the score chart
-          function drawScoreChart() {
-            // Fetch data from the Google Sheets and update the chart
-            fetch(`${webAppUrl}?sheetId=${sheetId}&sheetName=${sheetName}`)
-              .then(response => response.json())
-              .then(data => {
-                const scores = data.map(row => parseFloat(row['Success rate (percentage)'].replace('%', '')));
-                const averageScore = calculateAverage(scores);
-                const medianScore = calculateMedian(scores);
 
-                const dataTable = google.visualization.arrayToDataTable([
-                  ['Metric', 'Value'],
-                  ['Average Score', averageScore],
-                  ['Median Score', medianScore]
-                ]);
-
-                const options = {
-                  title: 'Quiz Scores',
-                  width: 600,
-                  height: 400
-                };
-
-                const chart = new google.visualization.ColumnChart(document.getElementById('scoreChart'));
-                chart.draw(dataTable, options);
-              })
-              .catch(error => console.error('Error fetching score data:', error));
-          }
-
-          // Function to fetch data from Google Sheets and draw the elapsed time chart
-          function drawElapsedTimeChart() {
-            // Fetch data from the Google Sheets and update the chart
-            fetch(`${webAppUrl}?sheetId=${sheetId}&sheetName=${sheetName}`)
-              .then(response => response.json())
-              .then(data => {
-                const elapsedTimes = data.map(row => {
-                  const timeParts = row['Elapsed Time'].split(':');
-                  const hours = parseInt(timeParts[0], 10);
-                  const minutes = parseInt(timeParts[1], 10);
-                  const seconds = parseInt(timeParts[2], 10);
-                  return hours * 3600 + minutes * 60 + seconds;
-                });
-
-                const averageElapsedTime = calculateAverage(elapsedTimes);
-                const medianElapsedTime = calculateMedian(elapsedTimes);
-
-                const dataTable = google.visualization.arrayToDataTable([
-                  ['Metric', 'Value'],
-                  ['Average Elapsed Time', averageElapsedTime],
-                  ['Median Elapsed Time', medianElapsedTime]
-                ]);
-
-                const options = {
-                  title: 'Elapsed Time',
-                  width: 600,
-                  height: 400
-                };
-
-                const chart = new google.visualization.ColumnChart(document.getElementById('elapsedTimeChart'));
-                chart.draw(dataTable, options);
-              })
-              .catch(error => console.error('Error fetching elapsed time data:', error));
-          }
-
-          // Function to calculate the average of an array of numbers
-          function calculateAverage(data) {
-            const sum = data.reduce((acc, value) => acc + value, 0);
-            return sum / data.length;
-          }
-
-          // Function to calculate the median of an array of numbers
-          function calculateMedian(data) {
-            data.sort((a, b) => a - b);
-            const middleIndex = Math.floor(data.length / 2);
-            if (data.length % 2 === 0) {
-              return (data[middleIndex - 1] + data[middleIndex]) / 2;
-            } else {
-              return data[middleIndex];
-            }
-          }
 
           // Set an interval to update the charts every 5 seconds
-          setInterval(drawCharts, 5000);
+          setInterval(drawCharts, 500000);
 
         } else {
           console.error('Failed to decompress quiz information.');
