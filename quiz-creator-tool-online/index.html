@@ -379,7 +379,7 @@ Modified By: Steward OUADI
       }
 
       const quizUrl =
-        `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#${markdownVariableToRead}`
+        `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=${markdownVariableToRead}&sessionId=${sessionId}`
 
       // Get the quiz identifier from the markdown variable and limit it to 30 characters
       var quizIdentifier = camelCaseToWords(markdownVariableToRead).slice(0, 30);
