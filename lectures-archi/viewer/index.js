@@ -788,10 +788,19 @@ function displayContentInsideViewer(contentIndex) {
       const form = document.getElementById("userForm");
 
       if (form) {
-        form.addEventListener("submit", function (event) {
-          event.preventDefault(); // Prevent the form from submitting in the traditional way
-          storeUserData();
-        });
+        // form.addEventListener("submit", function (event) {
+        //   event.preventDefault(); // Prevent the form from submitting in the traditional way
+        //   storeUserData();
+        // });
+        const firstNameField = document.getElementById("firstName");
+        const lastNameField = document.getElementById("lastName");
+        const emailField = document.getElementById("email");
+
+        if (firstNameField)
+          firstNameField.addEventListener("input", storeUserData);
+        if (lastNameField)
+          lastNameField.addEventListener("input", storeUserData);
+        if (emailField) emailField.addEventListener("input", storeUserData);
         displayUserData(); // Optionally display right after storing to confirm data integrity
       } else {
         console.log("The form element was not found!");

@@ -381,6 +381,19 @@ Modified By: Steward OUADI
       const quizUrl =
         `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#${markdownVariableToRead}`
 
+      // Get the quiz identifier from the markdown variable and limit it to 30 characters
+      var quizIdentifier = camelCaseToWords(markdownVariableToRead).slice(0, 30);
+
+
+
+      // Format the current date for the sheet name
+      var currentDate = new Date();
+      var formattedDate = currentDate.toLocaleDateString('en-GB').split('/').reverse().join(
+        '/'); // Format: DD/MM/YY
+
+      // Create the sheet name
+      var sheetName = `${formattedDate} ${quizIdentifier} ${sessionId}`;
+
       const metadata = {
         name: markdownVariableToRead,
         mailRecipient: recipient1,
@@ -400,18 +413,7 @@ Modified By: Steward OUADI
         metadata
       }
 
-      // Get the quiz identifier from the markdown variable and limit it to 30 characters
-      var quizIdentifier = camelCaseToWords(markdownVariableToRead).slice(0, 30);
 
-
-
-      // Format the current date for the sheet name
-      var currentDate = new Date();
-      var formattedDate = currentDate.toLocaleDateString('en-GB').split('/').reverse().join(
-        '/'); // Format: DD/MM/YY
-
-      // Create the sheet name
-      var sheetName = `${formattedDate} ${quizIdentifier} ${sessionId}`;
 
       console.log("Stringified content:", quizInfo);
 

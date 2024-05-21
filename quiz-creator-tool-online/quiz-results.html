@@ -98,12 +98,12 @@ Modified By: Steward OUADI
 
   <script>
     const sheetId = '1tzrLootQ-mFCjg6XHqW5tPd39gKl92Z_ldMK2gQNyPI'; // Add your sheetId here
-    let sheetName;
+
     const webAppUrl =
       'https://script.google.com/macros/s/AKfycbyk2zFtF7CKPRwYnj_wAM__BL5Vrdt6bKUPHf0oh-PtzG8OoK4a-D2Bh-2zsxWYIMEU/exec';
 
     // Function to fetch data from Google Sheets and draw the score chart
-    function drawScoreChart() {
+    function drawScoreChart(sheetName) {
       // Fetch data from the Google Sheets and update the chart
       fetch(`${webAppUrl}?sheetId=${sheetId}&sheetName=${sheetName}`)
         .then(response => response.json())
@@ -131,7 +131,7 @@ Modified By: Steward OUADI
     }
 
     // Function to fetch data from Google Sheets and draw the elapsed time chart
-    function drawElapsedTimeChart() {
+    function drawElapsedTimeChart(sheetName) {
       // Fetch data from the Google Sheets and update the chart
       fetch(`${webAppUrl}?sheetId=${sheetId}&sheetName=${sheetName}`)
         .then(response => response.json())
@@ -181,6 +181,11 @@ Modified By: Steward OUADI
         return data[middleIndex];
       }
     }
+
+    function drawCharts(sheetName) {
+      drawScoreChart(sheetName);
+      drawElapsedTimeChart(sheetName);
+    }
     document.addEventListener('DOMContentLoaded', function () {
       // Get the hash part of the URL, which contains the compressedQuizInfo
       const hash = window.location.hash.substring(1);
@@ -206,8 +211,16 @@ Modified By: Steward OUADI
           const numberOfQuestions = parseInt(metadata.numberOfQuestions);
           const successPercentage = ((numberOfCorrectAnswers / numberOfQuestions) * 100).toFixed(2);
           document.getElementById('successPercentage').textContent = `Success Percentage: ${successPercentage}%`;
+          let sheetName = metadata.sheetName;
 
-          sheetName = metadata.sheetName;
+          // Load the Google Charts library
+          google.charts.load('current', {
+            'packages': ['corechart']
+          });
+          google.charts.setOnLoadCallback(() => drawCharts(sheetName));
+
+          // Set an interval to update the charts every 5 seconds
+          setInterval(() => drawCharts(sheetName), 5000);
 
           // Display startedAt and endedAt with separate date and time including the weekday
           const startedAt = new Date(metadata.startedAt);
@@ -271,21 +284,7 @@ Modified By: Steward OUADI
             questionsContainer.appendChild(questionDiv);
           });
 
-          // Load the Google Charts library
-          google.charts.load('current', {
-            'packages': ['corechart']
-          });
-          google.charts.setOnLoadCallback(drawCharts);
 
-          function drawCharts() {
-            drawScoreChart();
-            drawElapsedTimeChart();
-          }
-
-
-
-          // Set an interval to update the charts every 5 seconds
-          setInterval(drawCharts, 500000);
 
         } else {
           console.error('Failed to decompress quiz information.');
