@@ -5,7 +5,7 @@
  * File Created: Tuesday, 16th January 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Tuesday, 2nd April 2024
+ * Last Modified: Thursday, 23rd May 2024
  * Modified By: Steward OUADI
  */
 
@@ -277,7 +277,7 @@ video {
   }
 }
 
-#main-content h2.inline-icon {
+#main-content .inline-icon {
   display: inline; /* Change display from flex to inline for this specific h2 */
   flex-direction: row; /* This line is not needed since display is no longer flex */
   max-width: 100%; /* Allow the h2 to take the full width if needed */

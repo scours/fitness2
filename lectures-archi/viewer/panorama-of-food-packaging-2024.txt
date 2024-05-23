@@ -5,7 +5,7 @@
  * File Created: Wednesday, 22nd May 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Wednesday, 22nd May 2024
+ * Last Modified: Thursday, 23rd May 2024
  * Modified By: Steward OUADI
  */
 
@@ -47,5 +47,5 @@ defSlide labelSlide1 {
 
 // Syntax: slide URL slidesToShow
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=panoramaOfFoodPackaging&sessionId=1"
-slide "https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html" [8:50]
+slide "https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html" [8:60]
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=panoramaOfFoodPackaging&sessionId=2"
