@@ -47,5 +47,5 @@ defSlide labelSlide1 {
 
 // Syntax: slide URL slidesToShow
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=panoramaOfFoodPackaging&sessionId=1"
-slide "https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html" [8:60]
+slide "https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html" [8:55]
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=panoramaOfFoodPackaging&sessionId=2"
