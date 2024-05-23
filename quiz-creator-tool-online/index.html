@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Tuesday, 21st May 2024
+Last Modified: Thursday, 23rd May 2024
 Modified By: Steward OUADI
 -----
 -->
@@ -137,29 +137,36 @@ Modified By: Steward OUADI
         var currentLine = "";
 
         lines.forEach(line => {
+          const trimmedLine = line.trim();
           // Check if the line starts with a question indicator or configuration
-          if (/^Q\d+:/.test(line) || /^canBeSentByEmail/.test(line)) {
+          if (/^Q\d+[\.:]?\s/.test(trimmedLine) || /^canBeSentByEmail/.test(trimmedLine)) {
             // If there's an ongoing question, push it to the array before starting a new one
             if (currentLine) {
-              concatenatedLines.push(currentLine);
-              currentLine = line;
+              concatenatedLines.push(currentLine.trim());
+              currentLine = trimmedLine;
             } else {
-              currentLine = line;
+              currentLine = trimmedLine;
             }
-          } else {
+          } else if (/^-\s*\[([ x])\]\s*(.*)/.test(trimmedLine)) {
             // Continue appending to current question
-            currentLine += " " + line;
+            currentLine += " " + trimmedLine;
+          } else if (trimmedLine === "") {
+            // Ignore empty lines
+          } else {
+            // Add any additional lines to the current question
+            currentLine += " " + trimmedLine;
           }
         });
 
         // Don't forget to add the last processed line to the array
         if (currentLine) {
-          concatenatedLines.push(currentLine);
+          concatenatedLines.push(currentLine.trim());
         }
 
         processMarkdownContent(concatenatedLines);
       }
     }
+
 
 
     function convertQuestions() {
