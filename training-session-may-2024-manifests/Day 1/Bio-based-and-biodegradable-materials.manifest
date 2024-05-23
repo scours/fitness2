@@ -1,0 +1,24 @@
+{
+  "idx": 351894,
+  "title": "Bio-based and biodegradable materials",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": "Aarhus university",
+  "institution": "U_Aarhus",
+  "abstract": "Bio-based and biodegradable materials",
+  "topic": [
+    "topic1",
+    "topic2",
+    "topic3"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html"
+}

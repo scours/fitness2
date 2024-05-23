@@ -1,0 +1,24 @@
+{
+  "idx": 523999,
+  "title": "Reuse and returnable systems",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": "Aarhus University",
+  "institution": "U_Aarhus",
+  "abstract": "Abstract",
+  "topic": [
+    "topic1",
+    "topic2",
+    "topic3"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html"
+}

@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 21st May 2024
+ * Last Modified: Wednesday, 22nd May 2024
  * Modified By: Steward OUADI
  */
 
@@ -1114,6 +1114,25 @@ Q10: Which of the following statements correctly describe all bio-based plastic 
 - [ ] They are fully recyclable
 - [x] They are not inert
 - [x] They are equally as chemically complex as fossil-based plastics
+
+canBeSentByEmail:true
+`;
+
+var panoramaOfFoodPackaging = `
+Q1: What creates the highest amount of CO2 emissions in the whole food chain?
+
+- [ ] Food losses at the retail level
+- [x] Food discarded after preparation by the consumer
+- [ ] Food packaging
+
+
+
+Q2: What represents the highest total amount of packaging material on a mass basis in Europe?
+
+- [ ] Metal packaging
+- [ ] Glass packaging
+- [x] Paper and cardboard packaging
+- [ ] Plastics packaging
 
 canBeSentByEmail:true
 `;

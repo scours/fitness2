@@ -1,0 +1,24 @@
+{
+  "idx": 38159,
+  "title": "Use of information theory for the unsupervised identification of contaminants in recycled materials (plastic and cellulose) intended to come into contact with food.",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": "Phuong-Mai Nguyen",
+  "institution": "LNE",
+  "abstract": "Abstract",
+  "topic": [
+    "topic1",
+    "topic2",
+    "topic3"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html"
+}
