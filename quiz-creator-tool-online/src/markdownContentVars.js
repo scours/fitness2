@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 22nd May 2024
+ * Last Modified: Thursday, 23rd May 2024
  * Modified By: Steward OUADI
  */
 
@@ -1133,6 +1133,75 @@ Q2: What represents the highest total amount of packaging material on a mass bas
 - [ ] Glass packaging
 - [x] Paper and cardboard packaging
 - [ ] Plastics packaging
+
+
+Q3: Which of the following statements are correct?
+
+- [ ] To use packaging for fresh fruit and vegetables always increases the environmental impact.
+- [x] Well-tailored sales packaging may reduce product losses by a factor of more than 10.
+- [ ] There is no difference in the shelf life between packed and non-packed fresh produce.
+- [x] Plastic packaging may lead to plastic litter in the environment.
+
+Q4: Which of the following items is a packaging component?
+
+- [x] Screw cap of a glass jar
+- [ ] Polyethylene layer of a multilayer film
+- [ ] Printed label on a plastic bottle
+- [x] Paper label on a glass bottle
+- [ ] The colorant in the plastic of a white yoghurt cup
+- [x] The Aluminum lid on a tray for soft cheese
+
+Q5: Which of the following items is a packaging constituent?
+
+- [ ] Screw cap of a glass jar
+- [x] Polyethylene layer of a multilayer film
+- [x] Printed label on a plastic bottle
+- [ ] Paper label on a glass bottle
+- [x] The colorant in the plastic of a white yoghurt cup
+- [ ] The Aluminum lid on a tray for soft cheese
+
+Q6: Which of the following items is a packaging constituent?
+
+- [x] Hand it back to the shop before the “use-by” date
+- [ ] Eat it if it does not have a negative odor
+- [x] Throw it in the refuse bin
+- [ ] Eat it after heating it up in the microwave
+
+canBeSentByEmail:true
+`;
+
+var safetyAssessmentOfPlasticsRecyclingForFoodContactMaterials = `
+Q1: How is the product carbon footprint of products influenced by the increased use of recycled materials?
+
+
+- [x] Basically, the carbon footprint is reduced because the mass of fossil resources consumed is lower and therefore less CO2 can be emitted.
+- [ ] The total quantity of fossil resources required for a product is always greater when recycled material is used because the additional processes consume many resources.
+- [x] The amount of additional fossil resources required for collection, sorting and recovery is generally more than compensated for by the savings made during recycling.
+- [ ] Mechanically recycled material can never again achieve the quality of virgin material.
+
+
+
+Q2: What limit values must be complied with for plastic packaging in direct contact with food?
+
+- [ ] Possible odor impairments are insignificant as soon as the limit value for overall migration is complied with.
+- [x] Limit values are defined for the migration of all substances that may be used in the manufacture of packaging.
+- [x] Substances that may additionally arise during the manufacturing process must be assessed separately.
+- [ ] If all specifications for the use of permitted substances have been met, the corresponding packaging is automatically compliant for direct food contact.
+
+
+Q3: What principles apply to food packaging in which plastic recyclates are used?
+
+- [x] Because many possible unknown substances can occur, additional regulations apply with regard to virgin plastics.
+- [ ] Irrespective of the previous history, exactly the same regulations apply as for virgin plastics.
+- [ ] Recyclates from other products can be used for new food packaging in the same way as recyclates from food packaging.
+- [x] When using recyclates in food packaging, it is important to consider exactly in which area of application and for which consumers the new packaging is to be used.
+
+Q4: Contaminations and cleaning efficiency of recycling processes
+
+- [ ] Contaminants can only come from packaging in which no food was previously packed.
+- [ ] The cleaning efficiency of recyclates from contaminants is independent of the molecular size of the latter.
+- [x] Contaminants can be removed more easily if the temperature of the recycled plastic is higher.
+- [x] The effect of contamination in food packaging depends on the storage time of the packed food and the diffusion coefficient in the polymer.
 
 canBeSentByEmail:true
 `;

@@ -1,0 +1,52 @@
+/*
+ * File: safety-assessment-of-plastics-recycling-for-food-contact-materials.txt
+ * Contract: EU contract 2022-FR01-KA220-HED-000023509
+ * Project: FitNESS 2 ERASMUS+
+ * File Created: Thursday, 23rd May 2024
+ * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
+ * -----
+ * Last Modified: Thursday, 23rd May 2024
+ * Modified By: Steward OUADI
+ */
+
+
+
+
+// Syntax: defSlide labelName {lines (markdown or html)}
+
+
+defSlide labelSlide1 { 
+    
+<div>
+    <h2>Welcome to Our Lecture Series! 🎓</h2>
+    <br/>
+    <br/>
+    <p>Before each lecture, you'll take a quick quiz 📝 to gauge your knowledge.</p>
+    <p>After the lecture, another quiz will show how much you've learned.</p>
+    <p>If you're ready to begin, please fill out the form on your screen to participate.</p>
+            
+    <p>Let's get started! 🚀</p>
+    <br/>
+    <br/>
+    <br/>
+
+
+  <form id="userForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+  </form>
+</div>
+} 
+
+
+// Syntax: slide URL slidesToShow
+test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=safetyAssessmentOfPlasticsRecyclingForFoodContactMaterials&sessionId=1"
+slide "https://fitness.agroparistech.fr/fitness2/online/FHG/safety-Assessment-of-Plastics-Recycling-for-Food-Contact-Materials.html" [8:15]
+test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=safetyAssessmentOfPlasticsRecyclingForFoodContactMaterials&sessionId=2"
