@@ -5,7 +5,7 @@
  * File Created: Tuesday, 13th April 2021
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 25th April 2024
+ * Last Modified: Thursday, 16th May 2024
  * Modified By: Steward OUADI
  */
 class GlobalSlide {
@@ -39,10 +39,10 @@ class GlobalSlide {
     this.currentQuestionAnswersDivId;
 
     // Text to be displayed for the previous button
-    this.previousButtonText = "Previous";
+    this.previousButtonText = "Previous question";
 
     // Text to be displayed for the next button
-    this.nextButtonText = "Next";
+    this.nextButtonText = "Next question";
 
     // Text to be displayed for the "quiz score" button. Button to get results to the test
     this.quizScoreButtonText = "Get Quiz Score";
@@ -263,10 +263,10 @@ class GlobalSlide {
       );
     }
 
-    bold1.appendChild(questionTextNotifierP1);
+    // bold1.appendChild(questionTextNotifierP1);
     bold2.appendChild(questionTextNotifierP2);
     bold3.appendChild(questionTextNotifierP3);
-    kbdForQuestion.appendChild(bold1);
+    // kbdForQuestion.appendChild(bold1);
     kbdForQuestion.appendChild(bold2);
     kbdForQuestion.appendChild(bold3);
 
@@ -325,5 +325,49 @@ class GlobalSlide {
       this.currentQuestionNumberHtmlObjectId
     );
     currentQuestionNumberHtmlObject.innerHTML = newQuestionNumber;
+  }
+
+  // New method to display images
+  showImages(imageUrls) {
+    const container = document.createElement("div");
+    container.className = "image-container";
+
+    imageUrls.forEach((url) => {
+      const img = document.createElement("img");
+      img.src = url;
+      img.style.width = "100px"; // Thumbnail size
+      img.style.cursor = "pointer";
+      img.onclick = () => {
+        const modal = this.createImageModal(url);
+        document.body.appendChild(modal);
+      };
+      container.appendChild(img);
+    });
+
+    return container;
+  }
+
+  // Helper method to create a modal for the enlarged image
+  createImageModal(imageSrc) {
+    const modal = document.createElement("div");
+    modal.style.position = "fixed";
+    modal.style.left = "0";
+    modal.style.top = "0";
+    modal.style.width = "100%";
+    modal.style.height = "100%";
+    modal.style.backgroundColor = "rgba(0,0,0,0.5)";
+    modal.style.display = "flex";
+    modal.style.justifyContent = "center";
+    modal.style.alignItems = "center";
+
+    const img = document.createElement("img");
+    img.src = imageSrc;
+    img.style.maxWidth = "90%";
+    img.style.maxHeight = "90%";
+
+    modal.appendChild(img);
+    modal.onclick = () => modal.remove();
+
+    return modal;
   }
 }
