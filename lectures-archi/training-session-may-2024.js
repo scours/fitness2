@@ -18,7 +18,7 @@ const lecturesPaths = new Map();
 // Map of URLs to redirect, key is old URL, value is new URL
 const urlsToRedirect = new Map();
 
-const refreshLecturesPrefetch = true;
+const refreshLecturesPrefetch = false;
 let lecturesPrefetchContent =
   "let dropDownMenuContent; let lecturesDetails = new Map();";
 launchRefreshLecturesPrefetch();
