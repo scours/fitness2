@@ -5,7 +5,7 @@
  * File Created: Wednesday, 22nd May 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Wednesday, 22nd May 2024
+ * Last Modified: Friday, 24th May 2024
  * Modified By: Steward OUADI
  */
 
@@ -351,11 +351,13 @@ function createAElementForDropDownMenuToPrint(identifier) {
   }
   const qAndAHeader = document.createElement("h4");
   qAndAHeader.innerHTML = "Test your knowledge";
+  qAndAHeader.id = "q-and-a-header";
 
   mainDiv.appendChild(qAndAHeader);
 
   const qAndAPar = document.createElement("p");
   qAndAPar.textContent = "There is no assessment for this lecture.";
+  qAndAPar.id = "q-and-a-par";
 
   // console.log(lecture.qAndAVariables !== undefined);
   if (lecture.qAndAVariables !== undefined) {
@@ -387,6 +389,12 @@ function createAElementForDropDownMenuToPrint(identifier) {
 
   mainDiv.appendChild(authorsHeader);
   mainDiv.appendChild(authorsElement);
+
+  // Check the content of qAndAPar and hide elements if necessary
+  if (qAndAPar.textContent.toLowerCase().includes("there is no assessment")) {
+    qAndAHeader.style.display = "none";
+    qAndAPar.style.display = "none";
+  }
 
   // use append instead of adding it directly with innerHTML because was preventing us to click on the button to read the lecture
   // mainContent.innerHTML = ""; // Clear the existing content
