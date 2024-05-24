@@ -48,5 +48,5 @@ defSlide labelSlide1 {
 
 // Syntax: slide URL slidesToShow
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=safetyAssessmentOfPlasticsRecyclingForFoodContactMaterials&sessionId=1"
-slide "https://fitness.agroparistech.fr/fitness2/online/FHG/safety-Assessment-of-Plastics-Recycling-for-Food-Contact-Materials.html" [8:40]
+slide "https://fitness.agroparistech.fr/fitness2/online/FHG/safety-Assessment-of-Plastics-Recycling-for-Food-Contact-Materials.html" [7:40]
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=safetyAssessmentOfPlasticsRecyclingForFoodContactMaterials&sessionId=2"
