@@ -5,7 +5,7 @@
  * File Created: Thursday, 23rd May 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 23rd May 2024
+ * Last Modified: Friday, 24th May 2024
  * Modified By: Steward OUADI
  */
 
@@ -48,5 +48,5 @@ defSlide labelSlide1 {
 
 // Syntax: slide URL slidesToShow
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=safetyAssessmentOfPlasticsRecyclingForFoodContactMaterials&sessionId=1"
-slide "https://fitness.agroparistech.fr/fitness2/online/FHG/safety-Assessment-of-Plastics-Recycling-for-Food-Contact-Materials.html" [8:15]
+slide "https://fitness.agroparistech.fr/fitness2/online/FHG/safety-Assessment-of-Plastics-Recycling-for-Food-Contact-Materials.html" [8:39]
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=safetyAssessmentOfPlasticsRecyclingForFoodContactMaterials&sessionId=2"
