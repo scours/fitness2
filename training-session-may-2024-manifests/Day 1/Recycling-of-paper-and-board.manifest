@@ -10,15 +10,13 @@
   "institution": "UCP",
   "abstract": "Recycling of paper and board including safety aspects and legislation",
   "topic": [
-    "topic1",
-    "topic2",
-    "topic3"
+    "Recycling",
+    "Paper",
+    "Board",
+    "Safety",
+    "Legislation"
   ],
   "license": "BY-SA-ND",
-  "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
-  ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html"
+  "keywords": "",
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/UCP/recycling-of-paper-and-paperboard.html#/1"
 }
