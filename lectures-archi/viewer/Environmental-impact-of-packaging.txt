@@ -11,6 +11,6 @@
 
 // Syntax: slide URL slidesToShow
 
-slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/Introduction-to-circular-ecocomy.html" [8:22]
-slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/Ecodesign.html" [8:38]
-slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/legal-requirements-for-packaging.html" [8:31]
+slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/Introduction-to-circular-ecocomy.html" [7:20]
+slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/Ecodesign.html" [7:36]
+slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/legal-requirements-for-packaging.html" [7:29]
