@@ -8,17 +8,15 @@
   "part": "part1",
   "author": "Fraunhofer",
   "institution": "FHG",
-  "abstract": "Abstract",
+  "abstract": "The EU is pursuing the transition to a circular economy in many areas. This applies in particular to packaging. Recycling of used packaging is a central element of this policy, which aims to minimise the environmental impact of our economic system. The introduction explains the different types of recycling specifically for plastic packaging and the priority given to mechanical recycling. For the consumer, it is particularly important that the possible health effects of packaging are minimised. For this purpose, there is a series of EU regulatory acts for both virgin materials and recycled plastic in packaging applications with direct contact between food and packaging. Finally, the assessment of the food safety of recycled plastics is discussed, taking into account the criteria of the European Food Safety Agency (EFSA).",
   "topic": [
-    "topic1",
-    "topic2",
-    "topic3"
+	"EU policy",
+	"basics of recycling",
+	"food contact regulations",
+	"health issues",
+	"recycling processes"
   ],
   "license": "BY-SA-ND",
-  "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
-  ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html"
+  "keywords": "",
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#safety-assessment-of-plastics-recycling-for-food-contact-materials"
 }

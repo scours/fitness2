@@ -8,17 +8,14 @@
   "part": "part1",
   "author": "Horst-Christian Langowski",
   "institution": "FHG",
-  "abstract": "Abstract",
+  "abstract": "In Europe and globally, there are a large number of environmentally relevant targets, some of which contradict each other in terms of their consequences. It is therefore difficult to solve the problem of environmental pollution caused by plastic waste. At the same time, food losses, the overall use of packaging and the emission of greenhouse gases are also to be reduced. Although substituting plastics with other materials solves the problem of plastic waste in the environment, it jeopardizes the achievement of other goals. The right measures for food packaging can therefore only be identified by taking into account the required packaging functions. Moreover, they are always a compromise. The circular economy of packaging therefore appears to be the relatively best strategy for solving the problems together.",
   "topic": [
-    "topic1",
-    "topic2",
-    "topic3"
+	"Plastic packaging",
+	"food safety and quality requirements",
+	"plastic substitution",
+	"consequences"
   ],
   "license": "BY-SA-ND",
-  "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
-  ],
+  "keywords": "",
   "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/do-we-need-plastics.html"
 }
