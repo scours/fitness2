@@ -825,11 +825,26 @@ function displayContentInsideViewer(contentIndex) {
 
 function navigateContent(direction) {
   const newIndex = currentIndex + direction;
+  const contentType = globalContentContainer[currentIndex].type;
+
   if (newIndex < 0 || newIndex >= globalContentContainer.length) {
     console.error("Content index out of bounds.");
     return;
   }
-  displayContentInsideViewer(newIndex);
+
+  if (contentType === "test") {
+    const userConfirmed = confirm(
+      "Any information you did not save will be lost. Do you want to proceed?"
+    );
+    if (userConfirmed) {
+      displayContentInsideViewer(newIndex);
+    } else {
+      // Do not proceed
+      return;
+    }
+  } else {
+    displayContentInsideViewer(newIndex);
+  }
 }
 
 function updateButtonStates() {
