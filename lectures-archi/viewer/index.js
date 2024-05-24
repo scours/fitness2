@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 21st May 2024
+ * Last Modified: Friday, 24th May 2024
  * Modified By: Steward OUADI
  */
 
@@ -739,6 +739,14 @@ function displayContentInsideViewer(contentIndex) {
   // Check the content type from the global container
   const contentType = globalContentContainer[contentIndex].type;
 
+  // Locate the element by its ID
+  const openLectureFullScreenElement = document.getElementById(
+    "open-lecture-full-screen"
+  );
+
+  // Clear the content of the element
+  openLectureFullScreenElement.innerHTML = "";
+
   // Handle based on content type
   if (contentType === "slide" || contentType === "test") {
     // Code to execute if contentType is either "slide" or "test"
@@ -758,6 +766,11 @@ function displayContentInsideViewer(contentIndex) {
     updateButtonStates();
     if (contentType === "slide") {
       attemptToBlockClicks(newIframe, 5); // Attempt to block clicks in the iframe
+      const link = document.createElement("a");
+      link.href = globalContentContainer[contentIndex].link;
+      link.target = "_blank";
+      link.textContent = "Open lecture in full screen";
+      openLectureFullScreenElement.appendChild(link);
     }
 
     // Listen for messages from the iframe
