@@ -12,10 +12,6 @@
 let dropDownMenuContent;
 let lecturesDetails = new Map();
 lecturesDetails.set(
-  "Day 1/Bio-based-and-biodegradable-materials",
-  `<h1>Bio-based and biodegradable materials</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Bio-based and biodegradable materials</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html" id="lecture-button-Bio-based-and-biodegradable-materials" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Aarhus university</li></ul>`
-);
-lecturesDetails.set(
   "Day 1/Do-we-need-and-how-to-substitute-plastics",
   `<h1>Do we need and how to substitute plastics?</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Plastic packaging,food safety and quality requirements,plastic substitution,consequences</p><h4>Abstract</h4><p>In Europe and globally, there are a large number of environmentally relevant targets, some of which contradict each other in terms of their consequences. It is therefore difficult to solve the problem of environmental pollution caused by plastic waste. At the same time, food losses, the overall use of packaging and the emission of greenhouse gases are also to be reduced. Although substituting plastics with other materials solves the problem of plastic waste in the environment, it jeopardizes the achievement of other goals. The right measures for food packaging can therefore only be identified by taking into account the required packaging functions. Moreover, they are always a compromise. The circular economy of packaging therefore appears to be the relatively best strategy for solving the problems together.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/do-we-need-plastics.html" id="lecture-button-Do-we-need-and-how-to-substitute-plastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
@@ -32,16 +28,8 @@ lecturesDetails.set(
   `<h1>Recycling of paper and board</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Recycling,Paper,Board,Safety,Legislation</p><h4>Abstract</h4><p>Recycling of paper and board including safety aspects and legislation</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UCP/recycling-of-paper-and-paperboard.html#/1" id="lecture-button-Recycling-of-paper-and-board" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>UCP</li></ul>`
 );
 lecturesDetails.set(
-  "Day 1/Reuse-and-returnable-systems",
-  `<h1>Reuse and returnable systems</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html" id="lecture-button-Reuse-and-returnable-systems" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Aarhus University</li></ul>`
-);
-lecturesDetails.set(
   "Day 1/Safety-assessments-of-biobased-materials",
   `<h1>Safety assessments of biobased materials</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Biobased materials,Safety Assessment,Regulatory Framework</p><h4>Abstract</h4><p>Biobased materials derived from renewable biological resources are gaining significant attention for their potential to replace conventional petroleum-based materials in various applications, including food contact materials (FCMs). These materials can originate from plants, animals, and microorganisms and encompass bioplastics, paper, and board products. The safety assessment of biobased materials involves evaluating their chemical composition, migration potential, and toxicological impact. Regulatory frameworks in the EU and the US outline stringent guidelines to ensure these materials do not pose health risks when used in food contact applications. This lecture will cover the key aspects of biobased materials, including their definition, regulatory requirements, and safety assessment processes. We will also explore common contaminants in biobased FCMs, such as heavy metals, persistent organic pollutants, and process contaminants. Case studies of legal actions against non-compliant biobased products will be discussed to highlight the importance of adhering to regulations. Finally, the lecture will address future outlooks and innovations in the biobased materials sector, emphasizing the need for ongoing research and development to ensure safety and sustainability.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#safety-assessment-biobased" id="lecture-button-Safety-assessments-of-biobased-materials" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Phuong-Mai Nguyen</li><li>Olivier Vitrac</li><li>Lucas Biant</li></ul>`
-);
-lecturesDetails.set(
-  "Day 1/The-incorporation-of-recycled-materials",
-  `<h1>The incorporation of recycled materials</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html" id="lecture-button-The-incorporation-of-recycled-materials" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>AgroParisTech</li></ul>`
 );
 lecturesDetails.set(
   "Day 2/Functional-barrier-concept",
@@ -52,23 +40,11 @@ lecturesDetails.set(
   `<h1>Introduction on recycling  + Plastics - safety assessment of plastics recycling processed for food contact materials</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>EU policy,basics of recycling,food contact regulations,health issues,recycling processes</p><h4>Abstract</h4><p>The EU is pursuing the transition to a circular economy in many areas. This applies in particular to packaging. Recycling of used packaging is a central element of this policy, which aims to minimise the environmental impact of our economic system. The introduction explains the different types of recycling specifically for plastic packaging and the priority given to mechanical recycling. For the consumer, it is particularly important that the possible health effects of packaging are minimised. For this purpose, there is a series of EU regulatory acts for both virgin materials and recycled plastic in packaging applications with direct contact between food and packaging. Finally, the assessment of the food safety of recycled plastics is discussed, taking into account the criteria of the European Food Safety Agency (EFSA).</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#safety-assessment-of-plastics-recycling-for-food-contact-materials" id="lecture-button-Introduction-on-recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Fraunhofer</li></ul>`
 );
 lecturesDetails.set(
-  "Day 2/Recycling-packaging-material-processes-safety",
-  `<h1>Recycling packaging material processes, safety and comparison of recycled materials with native ones</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html" id="lecture-button-Recycling-packaging-material-processes-safety" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>AgroParisTech</li></ul>`
-);
-lecturesDetails.set(
   "Day 2/Use-of-information-theory-for-the-unsupervised-identification-of-contaminants",
   `<h1>Use of information theory for the unsupervised identification of contaminants in recycled materials (plastic and cellulose) intended to come into contact with food.</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Circular economy,Substances in packaging,Food contamination</p><h4>Abstract</h4><p>The circular economy questions the possibility of collectively managing the health risks of new materials and applications of packaging by the actors of the food industry. The indirect contamination of food by packaging is managed by the ambiguous concepts of intentionally or unintentionally added substances, whose concentrations decrease through dilution during mixing, or which simultaneously disappear and appear during aging. This presentation introduces a new approach based on an original analysis of chromatograms within the framework of information theory. It enables to pair the contamination profiles of materials and foods and to guide of the use of recycled material according to the level of decontamination reconstructed by the method.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/LNE/training_chemical_fingerprint_LNE.html" id="lecture-button-Use-of-information-theory-for-the-unsupervised-identification-of-contaminants" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Phuong-Mai Nguyen</li><li>Olivier Vitrac</li></ul>`
 );
 dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Day 1">Day 1<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Day 1"><button class="dropdown-btn"
-            id="dropdown-btn-Bio-based-and-biodegradable-materials">Bio-based-and-biodegradable-materials<i
-                class="fa fa-caret-down"></i></button>
-        <div class="dropdown-container" id="dropdown-container-Bio-based-and-biodegradable-materials"><a
-                href="#Day 1/Bio-based-and-biodegradable-materials" id="Day 1/Bio-based-and-biodegradable-materials"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Bio-based and biodegradable
-                materials<i class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
             id="dropdown-btn-Do-we-need-and-how-to-substitute-plastics">Do-we-need-and-how-to-substitute-plastics<i
                 class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Do-we-need-and-how-to-substitute-plastics"><a
@@ -102,14 +78,6 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Day 1">Day 
                     class="fa fa-star star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-            id="dropdown-btn-Reuse-and-returnable-systems">Reuse-and-returnable-systems<i
-                class="fa fa-caret-down"></i></button>
-        <div class="dropdown-container" id="dropdown-container-Reuse-and-returnable-systems"><a
-                href="#Day 1/Reuse-and-returnable-systems" id="Day 1/Reuse-and-returnable-systems"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Reuse and returnable systems<i
-                    class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
             id="dropdown-btn-Safety-assessments-of-biobased-materials">Safety-assessments-of-biobased-materials<i
                 class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Safety-assessments-of-biobased-materials"><a
@@ -117,14 +85,6 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Day 1">Day 
                 id="Day 1/Safety-assessments-of-biobased-materials" class="dropdown-container-class"
                 onclick="lectureToDisplay(this.id)">Safety assessments of biobased materials<i
                     class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-            id="dropdown-btn-The-incorporation-of-recycled-materials">The-incorporation-of-recycled-materials<i
-                class="fa fa-caret-down"></i></button>
-        <div class="dropdown-container" id="dropdown-container-The-incorporation-of-recycled-materials"><a
-                href="#Day 1/The-incorporation-of-recycled-materials" id="Day 1/The-incorporation-of-recycled-materials"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">The incorporation of recycled
-                materials<i class="fa fa-star star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i></a></div>
     </div><button class="dropdown-btn" id="dropdown-btn-Day 2">Day 2<i class="fa fa-caret-down"></i></button>
@@ -145,15 +105,6 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Day 1">Day 
                 class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction on recycling +
                 Plastics - safety assessment of plastics recycling processed for food contact materials<i
                     class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-            id="dropdown-btn-Recycling-packaging-material-processes-safety">Recycling-packaging-material-processes-safety<i
-                class="fa fa-caret-down"></i></button>
-        <div class="dropdown-container" id="dropdown-container-Recycling-packaging-material-processes-safety"><a
-                href="#Day 2/Recycling-packaging-material-processes-safety"
-                id="Day 2/Recycling-packaging-material-processes-safety" class="dropdown-container-class"
-                onclick="lectureToDisplay(this.id)">Recycling packaging material processes, safety and comparison of
-                recycled materials with native ones<i class="fa fa-star star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
             id="dropdown-btn-Use-of-information-theory-for-the-unsupervised-identification-of-contaminants">Use-of-information-theory-for-the-unsupervised-identification-of-contaminants<i
