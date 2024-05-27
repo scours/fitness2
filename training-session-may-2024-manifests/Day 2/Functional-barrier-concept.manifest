@@ -11,11 +11,11 @@
     "Olivier Vitrac"
   ],
   "institution": "LNE",
-  "abstract": "Abstract",
+  "abstract": "The functional barrier is designed to delay the mass transfer of substances from the layer behind it. This concept is increasingly used, especially for recycled materials or materials using substances not on the positive or acceptable list. However, this barrier is not absolute but only temporary, and must be appropriately chosen and scaled to guarantee food safety. Modelling tools are widely used and accepted in Europe, the USA and China to demonstrate the food contact material compliance. These tools, coupled with assumptions related to contaminants and mass transfer physico-chemical properties, can also be used to design the functional barrier.",
   "topic": [
-    "topic1",
-    "topic2",
-    "topic3"
+    "Functional barriers",
+    "Recycled materials",
+    "Food safety"
   ],
   "license": "BY-SA-ND",
   "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/LNE/training_functional_barrier_LNE.html",

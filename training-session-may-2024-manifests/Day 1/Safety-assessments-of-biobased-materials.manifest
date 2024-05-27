@@ -6,19 +6,18 @@
   "unit": "",
   "difficultyLevel": "Novice",
   "part": "part1",
-  "author": "AgroParisTech",
+  "author": [
+    "Phuong-Mai Nguyen",
+    "Olivier Vitrac",
+    "Lucas Biant"
+  ],
   "institution": "AgroParisTech",
-  "abstract": "Abstract",
+  "abstract": "Biobased materials derived from renewable biological resources are gaining significant attention for their potential to replace conventional petroleum-based materials in various applications, including food contact materials (FCMs). These materials can originate from plants, animals, and microorganisms and encompass bioplastics, paper, and board products. The safety assessment of biobased materials involves evaluating their chemical composition, migration potential, and toxicological impact. Regulatory frameworks in the EU and the US outline stringent guidelines to ensure these materials do not pose health risks when used in food contact applications. This lecture will cover the key aspects of biobased materials, including their definition, regulatory requirements, and safety assessment processes. We will also explore common contaminants in biobased FCMs, such as heavy metals, persistent organic pollutants, and process contaminants. Case studies of legal actions against non-compliant biobased products will be discussed to highlight the importance of adhering to regulations. Finally, the lecture will address future outlooks and innovations in the biobased materials sector, emphasizing the need for ongoing research and development to ensure safety and sustainability.",
   "topic": [
-    "topic1",
-    "topic2",
-    "topic3"
+    "Biobased materials",
+    "Safety Assessment",
+    "Regulatory Framework"
   ],
   "license": "BY-SA-ND",
-  "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
-  ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#safety-assessment-of-plastics-recycling-for-food-contact-materials"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#safety-assessment-biobased"
 }

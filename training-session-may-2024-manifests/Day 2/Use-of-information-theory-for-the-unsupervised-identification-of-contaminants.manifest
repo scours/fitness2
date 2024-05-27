@@ -6,19 +6,17 @@
   "unit": "",
   "difficultyLevel": "Novice",
   "part": "part1",
-  "author": "Phuong-Mai Nguyen",
-  "institution": "LNE",
-  "abstract": "Abstract",
+  "author": [
+    "Phuong-Mai Nguyen",
+    "Olivier Vitrac"
+  ],
+  "institution": "LNE - INRAE - AgroParisTech",
+  "abstract": "The circular economy questions the possibility of collectively managing the health risks of new materials and applications of packaging by the actors of the food industry. The indirect contamination of food by packaging is managed by the ambiguous concepts of intentionally or unintentionally added substances, whose concentrations decrease through dilution during mixing, or which simultaneously disappear and appear during aging. This presentation introduces a new approach based on an original analysis of chromatograms within the framework of information theory. It enables to pair the contamination profiles of materials and foods and to guide of the use of recycled material according to the level of decontamination reconstructed by the method.",
   "topic": [
-    "topic1",
-    "topic2",
-    "topic3"
+    "Circular economy",
+    "Substances in packaging",
+    "Food contamination"
   ],
   "license": "BY-SA-ND",
-  "keywords": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
-  ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/LNE/training_chemical_fingerprint_LNE.html"
 }

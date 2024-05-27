@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 23rd May 2024
+ * Last Modified: Monday, 27th May 2024
  * Modified By: Steward OUADI
  */
 
@@ -1202,6 +1202,94 @@ Q4: Contaminations and cleaning efficiency of recycling processes
 - [ ] The cleaning efficiency of recyclates from contaminants is independent of the molecular size of the latter.
 - [x] Contaminants can be removed more easily if the temperature of the recycled plastic is higher.
 - [x] The effect of contamination in food packaging depends on the storage time of the packed food and the diffusion coefficient in the polymer.
+
+canBeSentByEmail:true
+`;
+
+var safetyAssessmentBiobased = `
+Q1: What are biobased materials?
+- [ ] Any material from renewable resources?
+- [ ] Any biodegradable materials?
+- [x] Paper and board?
+- [x] Bioplastics
+- [x] Plant-based materials
+- [x] Animal-based materials
+- [x] Microbiologically produced or transformed
+
+Q2: Are recycled paper & board biobased materials?
+- [x] Yes
+- [ ] No
+
+Q3: Can biobased materials:
+- [x] Be modified chemically?
+- [x] Be blended with materials with organic or mineral origin?
+- [ ] Be used for food contact without control
+- [ ] Be used for any industrial application
+
+Q4: Can biobased materials be recycled for food contact?
+- [x] It depends on the material
+- [ ] Never
+- [ ] Always
+- [ ] Only after thorough testing
+
+Q5: Can biobased materials be contaminated by:
+- [x] Heavy metals
+- [x] Fluorinated compounds
+- [x] Plasticizers
+- [x] Pesticides
+- [x] Mineral oils
+- [x] Toxins
+- [x] GMOs
+- [x] Endocrine disruptors
+- [x] Nanomaterials, microplastics
+- [x] Biocides
+
+Q6: Are biobased materials regulated as a single class of materials:
+- [ ] In the US
+- [ ] In Europe
+- [ ] In China
+- [ ] In France
+- [ ] In Germany
+- [x] No country
+
+Q7: Are bioplastics regulated:
+- [x] As plastics in the US
+- [x] As plastics by the European Commission
+- [ ] As plastics by the European Council
+- [ ] As a separate category
+
+Q8: Are paper and board used for food contact regulated:
+- [x] In the US as indirect additives
+- [ ] By the European Commission with a list of substances authorized
+- [x] By the European Council with a list of substances authorized
+- [x] By the France DGCCRF with a list of substances authorized
+- [x] By the German BfR with a list of substances authorized
+
+Q9: Can substances from biobased materials be transferred:
+- [x] Into dry foods
+- [x] Into aqueous foods
+- [x] Without direct contact
+- [x] Across a plastic layer
+
+Q10: Can bamboo or bagasse fibers be incorporated into plastic containers?
+- [ ] In the EU
+- [x] In China
+- [x] In the US
+- [x] In the rest of the world
+
+Q11: What is the origin of contaminants in recycled cellulosic fibers?
+- [x] Printing inks
+- [x] Adhesives and glues
+- [x] Contacting products
+- [ ] Natural sources
+
+Q12: Are recycled fibers decontaminated before food contact:
+- [ ] Yes
+- [x] No
+
+Q13: Can we expect a rapid evolution of the EU regulation to encourage more sustainable packaging:
+- [x] Yes
+- [ ] No
 
 canBeSentByEmail:true
 `;
