@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Friday, 24th May 2024
+ * Last Modified: Monday, 27th May 2024
  * Modified By: Steward OUADI
  */
 
@@ -834,7 +834,7 @@ function navigateContent(direction) {
 
   if (contentType === "test") {
     const userConfirmed = confirm(
-      "Any information you did not save will be lost. Do you want to proceed?"
+      "Please save your result URL. Any information you did not save will be lost. Do you want to proceed?"
     );
     if (userConfirmed) {
       displayContentInsideViewer(newIndex);
