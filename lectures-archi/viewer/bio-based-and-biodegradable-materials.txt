@@ -46,5 +46,5 @@ defSlide labelSlide1 {
 
 // Syntax: slide URL slidesToShow
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=materialBioBased&sessionId=1"
-slide "https://fitness.agroparistech.fr/fitness2/online/CSIC/biobased-and-biodegradable-materials.html#/2" [7:20]
+slide "https://fitness.agroparistech.fr/fitness2/online/CSIC/biobased-and-biodegradable-materials.html#/2" [7:62]
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=materialBioBased&sessionId=2"
