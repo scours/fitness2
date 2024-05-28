@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 27th May 2024
+ * Last Modified: Tuesday, 28th May 2024
  * Modified By: Steward OUADI
  */
 
@@ -1290,6 +1290,147 @@ Q12: Are recycled fibers decontaminated before food contact:
 Q13: Can we expect a rapid evolution of the EU regulation to encourage more sustainable packaging:
 - [x] Yes
 - [ ] No
+
+canBeSentByEmail:true
+`;
+
+var recyclingSafety = `
+Q1. What is the final target of the European Green Deal?
+- [ ] Recycling all plastics
+- [ ] Recycling the most visible plastics in the environment
+- [x] Reusing packaging/containers so that no waste is generated anymore
+
+Q2. What is the irreducible rate of plastic waste not collected and lost in the environment?
+- [ ] 20%
+- [ ] 10%
+- [ ] 5%
+- [x] 3%
+
+Q3. Pick regulations controlling the safety of recycled papers for food contact.
+- [ ] Packaging, Packaging Waste Regulation
+- [x] Regulation (EU) 1935/2004
+- [x] Regulation (EU) 2023/2006
+- [x] Regulation (EU) 2022/1616
+- [x] Regulation (EU) 10/2011
+
+Q4. What are the recycled plastics available for food contact in 2024?
+- [x] rPET
+- [ ] rPLA
+- [ ] rPS
+- [ ] rPP
+- [ ] rHDPE
+- [ ] rLDPE
+
+Q5. List the technology available for recycling PET.
+- [x] Mechanical recycling
+- [x] Methanolysis
+- [x] Enzymatic hydrolysis
+- [ ] Pyrolysis
+
+Q6. List possible contaminants of recycled plastics.
+- [x] Heavy metals
+- [x] Herbicides
+- [x] Gasoline
+- [x] Fragrances
+- [x] Plasticizers
+- [x] Food constituents
+- [x] Process agents
+- [x] Toxins
+- [x] Breakdown products
+
+Q7. List mechanisms responsible for the contamination of recycled feedstocks.
+- [x] Misuse
+- [x] Poor sorting of feedstocks
+- [x] Blending feedstocks
+- [x] Lack of sourcing traceability
+- [x] Washing in hot water
+- [x] Contamination through the gas phase
+
+Q8. Amount of cosmetic packaging tolerated in mechanical recycling of plastics for food contact.
+- [ ] 50%
+- [ ] 30%
+- [ ] 20%
+- [ ] 10%
+- [x] 5%
+- [ ] 2%
+- [ ] 1%
+- [ ] 0%
+
+Q9. List of toxicological endpoints that are compulsory in safety assessment.
+- [x] Cancers
+- [ ] Cardiovascular diseases
+- [ ] Reproductive disorders
+- [ ] Brain-related disorders
+- [ ] Immunological disorders
+- [ ] Metabolic diseases
+
+Q10. Can recycled plastic safe for adults be considered safe for infants and toddlers?
+- [ ] Yes
+- [x] No
+
+Q11. What is the threshold of toxicological concern for genotoxic substances?
+- [ ] 0.0025 mg/kg body weight/day
+- [x] 0.0025 µg/kg body weight/day
+- [ ] 0.0025 ng/kg body weight/day
+
+Q12. What is the maximum concentration amount currently applied in PET feedstocks for genotoxic substances before decontamination?
+- [ ] 300 mg/kg plastics
+- [ ] 30 mg/kg plastics 
+- [x] 3 mg/kg plastics
+- [ ] 0.3 mg/kg plastics
+
+Q13. What is the minimum plastics recycled rate in PET bottles required in Europe by 2030 according to the new regulation PPWR?
+- [ ] 80%
+- [ ] 70%
+- [ ] 50%
+- [x] 30%
+- [ ] 20%
+- [ ] 10%
+
+Q14. Recycled plastics for food contact are:
+- [ ] Cheaper than virgin ones
+- [x] More expensive than virgin ones
+- [x] Theoretically as safe as virgin ones
+- [ ] More hazardous than virgin ones
+
+Q15. Recycled plastics and their containers made of:
+- [x] Can reduce the shelf life of food products
+- [x] Must be designed for future recycling
+- [x] Prevent their use in a microwave oven
+- [x] Must be used for imported products
+- [ ] Must be accepted by our commercial partners outside the EU
+- [x] May affect the type of plastics used for food contact
+- [x] May force the food industry to alter food processing and packaging conditions
+
+Q16. Recycled plastics are legally accepted in 2024:
+- [x] In Europe
+- [x] In the USA
+- [ ] In China
+- [ ] Globally in any other country
+
+Q17. Which method is not suitable for recycling PET?
+- [ ] Mechanical recycling
+- [ ] Methanolysis
+- [ ] Enzymatic hydrolysis
+- [x] Pyrolysis
+
+Q18. What is a critical consideration for food safety in recycled plastics?
+- [ ] Cost of recycling
+- [ ] Color of the plastic
+- [x] Presence of contaminants
+- [ ] Shape of the container
+
+Q19. What is one major advantage of mechanical recycling of plastics?
+- [x] Lower energy consumption compared to chemical recycling
+- [ ] Produces higher purity plastics
+- [ ] Can handle all types of plastic waste
+- [ ] Requires no sorting
+
+Q20. Which regulation specifically addresses the recycling of plastics in the EU?
+- [ ] Regulation (EU) 1935/2004
+- [ ] Regulation (EU) 2023/2006
+- [x] Packaging, Packaging Waste Regulation (PPWR)
+- [ ] Regulation (EU) 10/2011
 
 canBeSentByEmail:true
 `;
