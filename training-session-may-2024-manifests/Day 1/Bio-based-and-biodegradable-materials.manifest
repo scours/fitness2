@@ -4,15 +4,18 @@
   "level": "",
   "section": "",
   "unit": "",
-  "difficultyLevel": "Novice",
+  "difficultyLevel": "Intermediate",
   "part": "part1",
-  "author": "Aarhus university",
-  "institution": "U_Aarhus",
-  "abstract": "Bio-based and biodegradable materials",
+  "author": "Maria José Fabra",
+  "institution": "CSIC",
+  "abstract": "Biobased and biodegradable materials: from polymers to bioplastics",
   "topic": [
-    "topic1",
-    "topic2",
-    "topic3"
+    "biodegradable",
+    "renewable",
+    "environment",
+    "starch",
+    "polysaccharides",
+    "proteins"
   ],
   "license": "BY-SA-ND",
   "keywords": [
@@ -20,5 +23,5 @@
     "keyword2",
     "keyword3"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#bio-based-and-biodegradable-materials"
 }

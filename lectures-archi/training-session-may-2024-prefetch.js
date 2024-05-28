@@ -5,12 +5,16 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Monday, 27th May 2024
+ * Last Modified: Tuesday, 28th May 2024
  * Modified By: Steward OUADI
  */
 
 let dropDownMenuContent;
 let lecturesDetails = new Map();
+lecturesDetails.set(
+  "Day 1/Bio-based-and-biodegradable-materials",
+  `<h1>Bio-based and biodegradable materials</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>biodegradable,renewable,environment,starch,polysaccharides,proteins</p><h4>Abstract</h4><p>Biobased and biodegradable materials: from polymers to bioplastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#bio-based-and-biodegradable-materials" id="lecture-button-Bio-based-and-biodegradable-materials" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
+);
 lecturesDetails.set(
   "Day 1/Do-we-need-and-how-to-substitute-plastics",
   `<h1>Do we need and how to substitute plastics?</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Plastic packaging,food safety and quality requirements,plastic substitution,consequences</p><h4>Abstract</h4><p>In Europe and globally, there are a large number of environmentally relevant targets, some of which contradict each other in terms of their consequences. It is therefore difficult to solve the problem of environmental pollution caused by plastic waste. At the same time, food losses, the overall use of packaging and the emission of greenhouse gases are also to be reduced. Although substituting plastics with other materials solves the problem of plastic waste in the environment, it jeopardizes the achievement of other goals. The right measures for food packaging can therefore only be identified by taking into account the required packaging functions. Moreover, they are always a compromise. The circular economy of packaging therefore appears to be the relatively best strategy for solving the problems together.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/do-we-need-plastics.html" id="lecture-button-Do-we-need-and-how-to-substitute-plastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
@@ -44,78 +48,94 @@ lecturesDetails.set(
   `<h1>Use of information theory for the unsupervised identification of contaminants in recycled materials (plastic and cellulose) intended to come into contact with food.</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Circular economy,Substances in packaging,Food contamination</p><h4>Abstract</h4><p>The circular economy questions the possibility of collectively managing the health risks of new materials and applications of packaging by the actors of the food industry. The indirect contamination of food by packaging is managed by the ambiguous concepts of intentionally or unintentionally added substances, whose concentrations decrease through dilution during mixing, or which simultaneously disappear and appear during aging. This presentation introduces a new approach based on an original analysis of chromatograms within the framework of information theory. It enables to pair the contamination profiles of materials and foods and to guide of the use of recycled material according to the level of decontamination reconstructed by the method.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/LNE/training_chemical_fingerprint_LNE.html" id="lecture-button-Use-of-information-theory-for-the-unsupervised-identification-of-contaminants" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4 id="q-and-a-header" style="display: none;">Test your knowledge</h4><p id="q-and-a-par" style="display: none;">There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Phuong-Mai Nguyen</li><li>Olivier Vitrac</li></ul>`
 );
 dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Day 1">Day 1<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Day 1"><button class="dropdown-btn"
-            id="dropdown-btn-Do-we-need-and-how-to-substitute-plastics">Do-we-need-and-how-to-substitute-plastics<i
-                class="fa fa-caret-down"></i></button>
+<div class="dropdown-container" id="dropdown-container-Day 1"><button class="dropdown-btn"
+                id="dropdown-btn-Bio-based-and-biodegradable-materials">Bio-based-and-biodegradable-materials<i
+                        class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Bio-based-and-biodegradable-materials"><a
+                        href="#Day 1/Bio-based-and-biodegradable-materials"
+                        id="Day 1/Bio-based-and-biodegradable-materials" class="dropdown-container-class"
+                        onclick="lectureToDisplay(this.id)">Bio-based and biodegradable materials<i
+                                class="fa fa-star star-color-yellow little-space"></i><i
+                                class="fa fa-star star-color-yellow little-space"></i><i
+                                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button
+                class="dropdown-btn"
+                id="dropdown-btn-Do-we-need-and-how-to-substitute-plastics">Do-we-need-and-how-to-substitute-plastics<i
+                        class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Do-we-need-and-how-to-substitute-plastics"><a
-                href="#Day 1/Do-we-need-and-how-to-substitute-plastics"
-                id="Day 1/Do-we-need-and-how-to-substitute-plastics" class="dropdown-container-class"
-                onclick="lectureToDisplay(this.id)">Do we need and how to substitute plastics?<i
-                    class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-            id="dropdown-btn-Environmental-impact-of-packaging">Environmental-impact-of-packaging<i
-                class="fa fa-caret-down"></i></button>
+                        href="#Day 1/Do-we-need-and-how-to-substitute-plastics"
+                        id="Day 1/Do-we-need-and-how-to-substitute-plastics" class="dropdown-container-class"
+                        onclick="lectureToDisplay(this.id)">Do we need and how to substitute plastics?<i
+                                class="fa fa-star star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i></a></div><button
+                class="dropdown-btn"
+                id="dropdown-btn-Environmental-impact-of-packaging">Environmental-impact-of-packaging<i
+                        class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Environmental-impact-of-packaging"><a
-                href="#Day 1/Environmental-impact-of-packaging" id="Day 1/Environmental-impact-of-packaging"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Environmental impact of packaging<i
-                    class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-            id="dropdown-btn-Panorama-of-food-packaging">Panorama-of-food-packaging<i
-                class="fa fa-caret-down"></i></button>
+                        href="#Day 1/Environmental-impact-of-packaging"
+                        id="Day 1/Environmental-impact-of-packaging" class="dropdown-container-class"
+                        onclick="lectureToDisplay(this.id)">Environmental impact of packaging<i
+                                class="fa fa-star star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i></a></div><button
+                class="dropdown-btn" id="dropdown-btn-Panorama-of-food-packaging">Panorama-of-food-packaging<i
+                        class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Panorama-of-food-packaging"><a
-                href="#Day 1/Panorama-of-food-packaging" id="Day 1/Panorama-of-food-packaging"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Panorama of food packaging<i
-                    class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-            id="dropdown-btn-Recycling-of-paper-and-board">Recycling-of-paper-and-board<i
-                class="fa fa-caret-down"></i></button>
+                        href="#Day 1/Panorama-of-food-packaging" id="Day 1/Panorama-of-food-packaging"
+                        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Panorama of food
+                        packaging<i class="fa fa-star star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i></a></div><button
+                class="dropdown-btn"
+                id="dropdown-btn-Recycling-of-paper-and-board">Recycling-of-paper-and-board<i
+                        class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Recycling-of-paper-and-board"><a
-                href="#Day 1/Recycling-of-paper-and-board" id="Day 1/Recycling-of-paper-and-board"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Recycling of paper and board<i
-                    class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-            id="dropdown-btn-Safety-assessments-of-biobased-materials">Safety-assessments-of-biobased-materials<i
-                class="fa fa-caret-down"></i></button>
+                        href="#Day 1/Recycling-of-paper-and-board" id="Day 1/Recycling-of-paper-and-board"
+                        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Recycling of paper
+                        and board<i class="fa fa-star star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i></a></div><button
+                class="dropdown-btn"
+                id="dropdown-btn-Safety-assessments-of-biobased-materials">Safety-assessments-of-biobased-materials<i
+                        class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Safety-assessments-of-biobased-materials"><a
-                href="#Day 1/Safety-assessments-of-biobased-materials"
-                id="Day 1/Safety-assessments-of-biobased-materials" class="dropdown-container-class"
-                onclick="lectureToDisplay(this.id)">Safety assessments of biobased materials<i
-                    class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div>
-    </div><button class="dropdown-btn" id="dropdown-btn-Day 2">Day 2<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Day 2"><button class="dropdown-btn"
-            id="dropdown-btn-Functional-barrier-concept">Functional-barrier-concept<i
-                class="fa fa-caret-down"></i></button>
+                        href="#Day 1/Safety-assessments-of-biobased-materials"
+                        id="Day 1/Safety-assessments-of-biobased-materials" class="dropdown-container-class"
+                        onclick="lectureToDisplay(this.id)">Safety assessments of biobased materials<i
+                                class="fa fa-star star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i></a></div>
+</div><button class="dropdown-btn" id="dropdown-btn-Day 2">Day 2<i class="fa fa-caret-down"></i></button>
+<div class="dropdown-container" id="dropdown-container-Day 2"><button class="dropdown-btn"
+                id="dropdown-btn-Functional-barrier-concept">Functional-barrier-concept<i
+                        class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Functional-barrier-concept"><a
-                href="#Day 2/Functional-barrier-concept" id="Day 2/Functional-barrier-concept"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Functional barrier concept and how
-                to design (by modeling tool) including substance transfer for flexible materials in a roll<i
-                    class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-            id="dropdown-btn-Introduction-on-recycling">Introduction-on-recycling<i
-                class="fa fa-caret-down"></i></button>
+                        href="#Day 2/Functional-barrier-concept" id="Day 2/Functional-barrier-concept"
+                        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Functional barrier
+                        concept and how to design (by modeling tool) including substance transfer for flexible
+                        materials in a roll<i class="fa fa-star star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i></a></div><button
+                class="dropdown-btn" id="dropdown-btn-Introduction-on-recycling">Introduction-on-recycling<i
+                        class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Introduction-on-recycling"><a
-                href="#Day 2/Introduction-on-recycling" id="Day 2/Introduction-on-recycling"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction on recycling +
-                Plastics - safety assessment of plastics recycling processed for food contact materials<i
-                    class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-            id="dropdown-btn-Use-of-information-theory-for-the-unsupervised-identification-of-contaminants">Use-of-information-theory-for-the-unsupervised-identification-of-contaminants<i
-                class="fa fa-caret-down"></i></button>
+                        href="#Day 2/Introduction-on-recycling" id="Day 2/Introduction-on-recycling"
+                        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction on
+                        recycling + Plastics - safety assessment of plastics recycling processed for food
+                        contact materials<i class="fa fa-star star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i></a></div><button
+                class="dropdown-btn"
+                id="dropdown-btn-Use-of-information-theory-for-the-unsupervised-identification-of-contaminants">Use-of-information-theory-for-the-unsupervised-identification-of-contaminants<i
+                        class="fa fa-caret-down"></i></button>
         <div class="dropdown-container"
-            id="dropdown-container-Use-of-information-theory-for-the-unsupervised-identification-of-contaminants"><a
-                href="#Day 2/Use-of-information-theory-for-the-unsupervised-identification-of-contaminants"
-                id="Day 2/Use-of-information-theory-for-the-unsupervised-identification-of-contaminants"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Use of information theory for the
-                unsupervised identification of contaminants in recycled materials (plastic and cellulose) intended to
-                come into contact with food.<i class="fa fa-star star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i><i
-                    class="fa fa-star-o star-color-green little-space"></i></a></div>
-    </div>`;
+                id="dropdown-container-Use-of-information-theory-for-the-unsupervised-identification-of-contaminants">
+                <a href="#Day 2/Use-of-information-theory-for-the-unsupervised-identification-of-contaminants"
+                        id="Day 2/Use-of-information-theory-for-the-unsupervised-identification-of-contaminants"
+                        class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Use of information
+                        theory for the unsupervised identification of contaminants in recycled materials
+                        (plastic and cellulose) intended to come into contact with food.<i
+                                class="fa fa-star star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i><i
+                                class="fa fa-star-o star-color-green little-space"></i></a></div>
+</div>`;
