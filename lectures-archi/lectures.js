@@ -253,7 +253,7 @@ function createAElementForDropDownMenuToPrint(identifier) {
   // console.log(y);
 
   const qAndABaseURL =
-    "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#";
+    "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?";
 
   // We will modify main view to display the content of the selected lecture
 
@@ -376,7 +376,7 @@ function createAElementForDropDownMenuToPrint(identifier) {
         qAndAURL.href = qAndAVariableContent;
       } else {
         // It is a variable
-        qAndAURL.href = qAndABaseURL + qAndAVariableContent;
+        qAndAURL.href = `${qAndABaseURL}quizId=${qAndAVariableContent}&sessionId=1`;
       }
       qAndAURL.text = title;
       qAndAURL.target = "_blank";
