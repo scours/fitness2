@@ -23,5 +23,6 @@
     "glass",
     "differential scanning calorimetry"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part1.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part1.html#/2",
+  "qAndAVariables":["Take a quiz = thermalProperties"]
 }

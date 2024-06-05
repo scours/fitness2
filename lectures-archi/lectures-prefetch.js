@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Tuesday, 21st May 2024
+ * Last Modified: Wednesday, 5th June 2024
  * Modified By: Steward OUADI
  */
 
@@ -17,23 +17,23 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Packaging materials/Packaging materials and shaping process/glass-packaging",
-  `<h1>Glass</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,glass,bottles</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: glass materials</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UCP/Glass.html#/2" id="lecture-button-glass-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=materialGlass&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  `<h1>Glass</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,glass,bottles</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: glass materials</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UCP/Glass.html#/2" id="lecture-button-glass-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#materialGlass" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/Packaging materials and shaping process/metal-packaging",
-  `<h1>Metal</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,metal,cans,corrosion,interactions,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: Metal Packaging</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part3.html#/2" id="lecture-button-metal-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=materialMetal&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  `<h1>Metal</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,metal,cans,corrosion,interactions,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: Metal Packaging</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part3.html#/2" id="lecture-button-metal-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#materialMetal" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/Packaging materials and shaping process/plastic-packaging",
-  `<h1>Plastic</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,plastics,polymers,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: plastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UCP/Plastics.html#/2" id="lecture-button-plastic-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=materialPlastics&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  `<h1>Plastic</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,plastics,polymers,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: plastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UCP/Plastics.html#/2" id="lecture-button-plastic-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#materialPlastics" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/Packaging materials and shaping process/paper-and-paperboard",
-  `<h1>Paper and paperboard</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,paper,board,paperboard,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: paper and paperboard</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UCP/Paper-and-paperboard.html#/2" id="lecture-button-paper-and-paperboard" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=materialPaperAndBoard&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  `<h1>Paper and paperboard</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,paper,board,paperboard,migration</p><h4>Abstract</h4><p>Packaging systems can be made from various materials: paper and paperboard</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UCP/Paper-and-paperboard.html#/2" id="lecture-button-paper-and-paperboard" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#materialPaperAndBoard" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/Packaging materials and shaping process/bio-based-materials",
-  `<h1>Bio-based materials</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,biosourced,renewable,proteins,polysaccharides,starch,cellulose</p><h4>Abstract</h4><p>This lecture introduces bio-based materials for food packaging. Their consituents are fully or partly extracted from biomass:  polysaccharides and proteins. Materials made from biomass (renewable resources) are coined boisourced, but it does not mean that they are biodegradable. The standards applicable to these materials are briefly presented. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part8.html#/2" id="lecture-button-bio-based-materials" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=materialBioBased&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  `<h1>Bio-based materials</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,biosourced,renewable,proteins,polysaccharides,starch,cellulose</p><h4>Abstract</h4><p>This lecture introduces bio-based materials for food packaging. Their consituents are fully or partly extracted from biomass:  polysaccharides and proteins. Materials made from biomass (renewable resources) are coined boisourced, but it does not mean that they are biodegradable. The standards applicable to these materials are briefly presented. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part8.html#/2" id="lecture-button-bio-based-materials" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#materialBioBased" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/Packaging materials and shaping process/cork-as-food-packaging",
@@ -57,7 +57,7 @@ lecturesDetails.set(
 
 The unit is divided into five sections. Each one is related to a specific property in which are discussed influencing factors, physical parameters of importance and analysis tools. 
 
-The first section describes the thermal properties of packaging materials related to their structure. The second section is dedicated to mechanical properties, the third one to mass transfer properties, the fourth one to electromagnetic properties and the last one to surface properties. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part1.html#/2" id="lecture-button-thermal-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
+The first section describes the thermal properties of packaging materials related to their structure. The second section is dedicated to mechanical properties, the third one to mass transfer properties, the fourth one to electromagnetic properties and the last one to surface properties. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part1.html#/2" id="lecture-button-thermal-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#thermalProperties" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
   "Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties",
@@ -65,7 +65,7 @@ lecturesDetails.set(
 
 The unit is divided into five sections. Each one is related to a specific property in which are discussed influencing factors, physical parameters of importance and analysis tools. 
 
-The first section describes the thermal properties of packaging materials related to their structure. The second section is dedicated to mechanical properties, the third one to mass transfer properties, the fourth one to electromagnetic properties and the last one to surface properties. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part2.html#/2" id="lecture-button-mechanical-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
+The first section describes the thermal properties of packaging materials related to their structure. The second section is dedicated to mechanical properties, the third one to mass transfer properties, the fourth one to electromagnetic properties and the last one to surface properties. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part2.html#/2" id="lecture-button-mechanical-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#mechanicalProperties" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
   "Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties",
@@ -74,7 +74,7 @@ lecturesDetails.set(
 The unit is divided into five sections. Each one is related to a specific property in which are discussed influencing factors, physical parameters of importance and analysis tools. 
 
 The first section describes the thermal properties of packaging materials related to their structure. The second section is dedicated to mechanical properties, the third one to mass transfer properties, the fourth one to electromagnetic properties and the last one to surface properties. 
-</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part3.html#/2" id="lecture-button-mass-transfer-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
+</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part3.html#/2" id="lecture-button-mass-transfer-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#massTransferProperties" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
   "Packaging properties/Thermal, mechanical and barrier properties/optical-properties",
@@ -172,7 +172,7 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Shelf-life/Food packaging and shelf life/shelf-life-definitions",
-  `<h1>Definitions</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,consumer,acceptability,law</p><h4>Abstract</h4><p>Shelf-life is a concept covering many facets in food (please read §3.1 before)  - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part1.html#/2" id="lecture-button-shelf-life-definitions" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
+  `<h1>Definitions</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,consumer,acceptability,law</p><h4>Abstract</h4><p>Shelf-life is a concept covering many facets in food (please read §3.1 before)  - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part1.html#/2" id="lecture-button-shelf-life-definitions" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#shelfLifeStudy" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
   "Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life",
@@ -207,11 +207,11 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Environmental pollution/Glass food contact material recycling/glass-food-contact-material-recycling",
-  `<h1>Glass food contact material recycling</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>glass,recycling</p><h4>Abstract</h4><p>This lecture provides an overview of the recycling process for food contact glass. The composition and production of glass for food contact applications are explored, with a particular focus on glass cullet and its pivotal role in glass recycling. Key stages in the glass recycling process are introduced including collection, separation and cleaning, sorting, melting, as well as molding and annealing. Environmental implications are analyzed, highlighting the efficiency gains and emission reductions stemming from recycled glass compared to primary production. Links to explanatory videos and further reading are provided that offer more information on individual processing steps and concepts.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/glass-food-contact-material-recycling.html" id="lecture-button-glass-food-contact-material-recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=glassFoodContactMaterialRecycling&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Joel Scheuchzer</li><li>Justin Boucher</li><li>Lindsey Parkinson</li></ul>`
+  `<h1>Glass food contact material recycling</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>glass,recycling</p><h4>Abstract</h4><p>This lecture provides an overview of the recycling process for food contact glass. The composition and production of glass for food contact applications are explored, with a particular focus on glass cullet and its pivotal role in glass recycling. Key stages in the glass recycling process are introduced including collection, separation and cleaning, sorting, melting, as well as molding and annealing. Environmental implications are analyzed, highlighting the efficiency gains and emission reductions stemming from recycled glass compared to primary production. Links to explanatory videos and further reading are provided that offer more information on individual processing steps and concepts.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/glass-food-contact-material-recycling.html" id="lecture-button-glass-food-contact-material-recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#glassFoodContactMaterialRecycling" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Joel Scheuchzer</li><li>Justin Boucher</li><li>Lindsey Parkinson</li></ul>`
 );
 lecturesDetails.set(
   "Environmental pollution/Metal food contact material recycling/metal-food-contact-material-recycling",
-  `<h1>Metal food contact material recycling</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>metal,recycling</p><h4>Abstract</h4><p>This lecture provides an overview of the recycling process for food contact metals with a focus on aluminum and steel. It introduces existing collection methods including curbside collection, bring banks, and container deposit systems. The basic processing steps for recycling each metal type are summarized along with photos, explanatory videos, and links to publications that provide more detail. Key environmental benefits from recycling, as well as impacts stemming from the recycling processes are also reviewed along with European regulations pertinent to metal recycling.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/metal-food-contact-material-recycling.html" id="lecture-button-metal-food-contact-material-recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=metalFoodContactMaterialRecycling&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Lindsey Parkinson</li><li>Justin Boucher</li><li>Joel Scheuchzer</li></ul>`
+  `<h1>Metal food contact material recycling</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>metal,recycling</p><h4>Abstract</h4><p>This lecture provides an overview of the recycling process for food contact metals with a focus on aluminum and steel. It introduces existing collection methods including curbside collection, bring banks, and container deposit systems. The basic processing steps for recycling each metal type are summarized along with photos, explanatory videos, and links to publications that provide more detail. Key environmental benefits from recycling, as well as impacts stemming from the recycling processes are also reviewed along with European regulations pertinent to metal recycling.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/metal-food-contact-material-recycling.html" id="lecture-button-metal-food-contact-material-recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#metalFoodContactMaterialRecycling" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Lindsey Parkinson</li><li>Justin Boucher</li><li>Joel Scheuchzer</li></ul>`
 );
 lecturesDetails.set(
   "Environmental pollution/Biodegradation and microplastics/overview",
@@ -219,36 +219,36 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Marketing and design/Sensory science/sensory-science",
-  `<h1>Sensory science</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/sensory-science-applied-to-food-and-food-packaging.html#/1" id="lecture-button-sensory-science" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=factorsShelfLifeGeneral&sessionId=1" target="_blank">General questions for introductory assessment</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=sensoryAnalyticsOfFoodProducts&sessionId=1" target="_blank">Sensory analytics of food products</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=instrumentalAnalyticsCoupledToSensoryEvaluation&sessionId=1" target="_blank">Instrumental analytics coupled to sensory evaluation</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=sensoryEvaluationInShelfLifeTestingOfPackedFood&sessionId=1" target="_blank">Sensory evaluation in shelf life testing of packed food</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=instrumentalAnalyticsCoupledToSensoryEvaluation&sessionId=1" target="_blank">Sensory investigations of packaging materials</a></p><h4>Authors</h4><ul><li>Author</li></ul>`
+  `<h1>Sensory science</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/sensory-science-applied-to-food-and-food-packaging.html#/1" id="lecture-button-sensory-science" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#factorsShelfLifeGeneral" target="_blank">General questions for introductory assessment</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#sensoryAnalyticsOfFoodProducts" target="_blank">Sensory analytics of food products</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#instrumentalAnalyticsCoupledToSensoryEvaluation" target="_blank">Instrumental analytics coupled to sensory evaluation</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#sensoryEvaluationInShelfLifeTestingOfPackedFood" target="_blank">Sensory evaluation in shelf life testing of packed food</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#instrumentalAnalyticsCoupledToSensoryEvaluation" target="_blank">Sensory investigations of packaging materials</a></p><h4>Authors</h4><ul><li>Author</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics",
-  `<h1>Overview</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>biodegradable,renewable,environment,starch,polysaccharides,proteins</p><h4>Abstract</h4><p>Biobased and biodegradable materials: from polymers to bioplastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/biobased-and-biodegradable-materials.html#/2" id="lecture-button-from-polymers-to-bioplastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=materialBioBased&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
+  `<h1>Overview</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>biodegradable,renewable,environment,starch,polysaccharides,proteins</p><h4>Abstract</h4><p>Biobased and biodegradable materials: from polymers to bioplastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/biobased-and-biodegradable-materials.html#/2" id="lecture-button-from-polymers-to-bioplastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#materialBioBased" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Active packaging/overview",
-  `<h1>Overview and principles</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>active,absorber,scavanger,emitter,oxygen,CO2</p><h4>Abstract</h4><p>With the concept of active packaging, the packaging system is not inert anymore and the active system is interacting with the food and/or its atmosphere. Active systems require to be beneficial for the food. Note that the use of active systems may have legal implications. (please read §1 before). Content: overview, oxygen scavengers, CO2 absorbing/releasing systems, ethylene scavengers, flavor/odor absorber/releaser, antioxidants. - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/active-packaging.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=activePackaging&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
+  `<h1>Overview and principles</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>active,absorber,scavanger,emitter,oxygen,CO2</p><h4>Abstract</h4><p>With the concept of active packaging, the packaging system is not inert anymore and the active system is interacting with the food and/or its atmosphere. Active systems require to be beneficial for the food. Note that the use of active systems may have legal implications. (please read §1 before). Content: overview, oxygen scavengers, CO2 absorbing/releasing systems, ethylene scavengers, flavor/odor absorber/releaser, antioxidants. - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/active-packaging.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#activePackaging" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Smart packaging/overview",
-  `<h1>From principles to commercially available intelligent packaging systems</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>RFID,smart,indicator</p><h4>Abstract</h4><p>Smart packaging concepts bring intelligent functions to the packaging  (detecting, sensing, recording, tracing, communicating, applying some mathematical logic) (please read §1 before). Content: overview, indicators, RFID, sensors, commercially available intelligent packaging systems - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=smartPackaging&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
+  `<h1>From principles to commercially available intelligent packaging systems</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>RFID,smart,indicator</p><h4>Abstract</h4><p>Smart packaging concepts bring intelligent functions to the packaging  (detecting, sensing, recording, tracing, communicating, applying some mathematical logic) (please read §1 before). Content: overview, indicators, RFID, sensors, commercially available intelligent packaging systems - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#smartPackaging" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Nanotechnology strategies/definitions",
-  `<h1>Definitions, nano-scale additives, examples of gains and applications.</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>properties,nanotechnology,active,smart</p><h4>Abstract</h4><p>Nanotechnology is an umbrella name covering different technologies, capabilities and impacts. They are essential to advanced, active, smart food packaging systems.   - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.4/part1.html#/2" id="lecture-button-definitions" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=nanomaterials&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
+  `<h1>Definitions, nano-scale additives, examples of gains and applications.</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>properties,nanotechnology,active,smart</p><h4>Abstract</h4><p>Nanotechnology is an umbrella name covering different technologies, capabilities and impacts. They are essential to advanced, active, smart food packaging systems.   - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.4/part1.html#/2" id="lecture-button-definitions" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#nanomaterials" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Bacterial polyesters/bacterial-polyesters",
   `<h1>Bacterial Polyesters</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>PHB,bioplastic,PHBV,properties,packaging</p><h4>Abstract</h4><p>Among the biobased materials, the ones synthesized by microorganisms are of great interest in the sense that thanks to the metabolic engineering of those microorganisms, it is possible to adjust the physicochemical properties of such biobased polymers together with the possibilities to introduce repeating units of a different nature in the macromolecular backbone by feeding the microorgansisms with various carbon sources.
-This unit provides an overview of: i) the classification and structures of PHAs, ii) the established methods for the synthesis of PHAs and their copolymers by microorganisms, iii) the main properties of such biobased polymers and iv) their major applications.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/bacterial-polyesters.html#/2" id="lecture-button-bacterial-polyesters" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=bacterialPolyester&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>María José Fabra</li><li>Eugenia Núñez-Calzado</li><li>Cristina Campano</li><li>Amparo López-Rubio</li></ul>`
+This unit provides an overview of: i) the classification and structures of PHAs, ii) the established methods for the synthesis of PHAs and their copolymers by microorganisms, iii) the main properties of such biobased polymers and iv) their major applications.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/bacterial-polyesters.html#/2" id="lecture-button-bacterial-polyesters" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#bacterialPolyester" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>María José Fabra</li><li>Eugenia Núñez-Calzado</li><li>Cristina Campano</li><li>Amparo López-Rubio</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Advanced cellulosic materials/advanced-cellulosic-materials-for-food-packaging",
-  `<h1>Advanced cellulosic materials for food packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Cellulose,nanocellulose,advanced coatings,cellulose nanocrystals,barrier properties,packaging</p><h4>Abstract</h4><p>Global food packaging is a billion-dollar market that is projected to reach USD 464 billion by 2027. In general, there are many types of packaging materials available in the market, such as plastics, glass, aluminium and paper. However, cellulose and its derivates has received great attention recently as food pacakjging materials due to environmental pressure by local authorities or driven by national and international policy. This is also because of sustainabililty, renewability and disposal issues. This unit compiles recent advances of cellulose-based packaging materials and the use of nanocellulose (especially nanofibrillated cellulose (NFC), cellulose nmanocrystals (CNC) and bacterial cellulose (BC)) to enhace barrier properties and other performance attributes of new generations of packaging materials. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/Advanced-cellulosic-materials.html#/2" id="lecture-button-advanced-cellulosic-materials-for-food-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=cellulose&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>María José Fabra</li><li>Eugenia Núñez-Calzado</li><li>Amparo López-Rubio</li></ul>`
+  `<h1>Advanced cellulosic materials for food packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Cellulose,nanocellulose,advanced coatings,cellulose nanocrystals,barrier properties,packaging</p><h4>Abstract</h4><p>Global food packaging is a billion-dollar market that is projected to reach USD 464 billion by 2027. In general, there are many types of packaging materials available in the market, such as plastics, glass, aluminium and paper. However, cellulose and its derivates has received great attention recently as food pacakjging materials due to environmental pressure by local authorities or driven by national and international policy. This is also because of sustainabililty, renewability and disposal issues. This unit compiles recent advances of cellulose-based packaging materials and the use of nanocellulose (especially nanofibrillated cellulose (NFC), cellulose nmanocrystals (CNC) and bacterial cellulose (BC)) to enhace barrier properties and other performance attributes of new generations of packaging materials. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/Advanced-cellulosic-materials.html#/2" id="lecture-button-advanced-cellulosic-materials-for-food-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#cellulose" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>María José Fabra</li><li>Eugenia Núñez-Calzado</li><li>Amparo López-Rubio</li></ul>`
 );
 lecturesDetails.set(
   "Innovations/Modified atmosphere packaging/modified-atmosphere-packaging",
-  `<h1>Modified atmosphere packaging</h1><h4>Difficulty level</h4><span>Advanced<i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i></span><h4>Topics</h4><p>fresh product,shelf life,packaging methods</p><h4>Abstract</h4><p>Modified atmosphere packaging is a preservation method where the surrounding atmosphere of the product is replaced typically with an inert gas, such as nitrogen combined with an antimicrobially active carbon dioxide, and oxygen in exact amounts, to extend its shelf life. Control of water loss, protection from skin abrasion and softening, reduced contamination of the produce during handling, and delayed ripening and slow various compositional changes associated with ripening are only some benefits of using MAP. Gases used, product and storage factors to be taken into account, packaging materials, and mathematical principles are well described in this presentation. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/modified-atmosphere-packaging.html#/1" id="lecture-button-modified-atmosphere-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Mario Ščetar</li><li>Mia Kurek</li><li>Kata Galić</li></ul>`
+  `<h1>Modified atmosphere packaging</h1><h4>Difficulty level</h4><span>Advanced<i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i></span><h4>Topics</h4><p>fresh product,shelf life,packaging methods</p><h4>Abstract</h4><p>Modified atmosphere packaging is a preservation method where the surrounding atmosphere of the product is replaced typically with an inert gas, such as nitrogen combined with an antimicrobially active carbon dioxide, and oxygen in exact amounts, to extend its shelf life. Control of water loss, protection from skin abrasion and softening, reduced contamination of the produce during handling, and delayed ripening and slow various compositional changes associated with ripening are only some benefits of using MAP. Gases used, product and storage factors to be taken into account, packaging materials, and mathematical principles are well described in this presentation. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/modified-atmosphere-packaging.html#/1" id="lecture-button-modified-atmosphere-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#modifiedAtmospherePackaging" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Mario Ščetar</li><li>Mia Kurek</li><li>Kata Galić</li></ul>`
 );
 lecturesDetails.set(
   "Recoverability/Environmental impact of plastics and recycling/overview",
@@ -271,7 +271,7 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Legislation/Universe of food contact chemicals/universe-of-food-contact-chemicals",
-  `<h1>Universe of food contact chemicals</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>chemicals,recycling,reuse,food contact chemicals</p><h4>Abstract</h4><p>Foodware and food packaging products can contain thousands of different chemicals, many of which can migrate from the materials into food and have hazardous properties that harm health. This lecture introduces the currently known universe of the thousands of different chemicals that can be present in food contact materials. It explains fundamental concepts such as the waste hierarchy including reuse and recycling, specifically in the context of food contact chemicals. The chemical diversity and migration potential of different food contact materials is explored including the fundamental distinction between permanent and non-permanent materials. Learners gain insights into both the knowns and known unknowns about the chemicals present in food contact materials with references to additional resources that dive deeper into the topic. Furthermore, the chemical complexities and limitations associated with "bio-based" or "biodegradable" materials are addressed. Upon completion, learners will be better equipped to navigate scientific and policy discussions surrounding the chemical safety of food contact materials, especially concerning reuse and recycling.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/universe-of-food-contact-chemicals.html" id="lecture-button-universe-of-food-contact-chemicals" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=universeOfFoodContactChemicals&sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Justin Boucher</li><li>Lisa Zimmermann</li><li>Birgit Geueke</li><li>Joel Scheuchzer</li><li>Lindsey Parkinson</li><li>Jane Muncke</li></ul>`
+  `<h1>Universe of food contact chemicals</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>chemicals,recycling,reuse,food contact chemicals</p><h4>Abstract</h4><p>Foodware and food packaging products can contain thousands of different chemicals, many of which can migrate from the materials into food and have hazardous properties that harm health. This lecture introduces the currently known universe of the thousands of different chemicals that can be present in food contact materials. It explains fundamental concepts such as the waste hierarchy including reuse and recycling, specifically in the context of food contact chemicals. The chemical diversity and migration potential of different food contact materials is explored including the fundamental distinction between permanent and non-permanent materials. Learners gain insights into both the knowns and known unknowns about the chemicals present in food contact materials with references to additional resources that dive deeper into the topic. Furthermore, the chemical complexities and limitations associated with "bio-based" or "biodegradable" materials are addressed. Upon completion, learners will be better equipped to navigate scientific and policy discussions surrounding the chemical safety of food contact materials, especially concerning reuse and recycling.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/universe-of-food-contact-chemicals.html" id="lecture-button-universe-of-food-contact-chemicals" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html#universeOfFoodContactChemicals" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Justin Boucher</li><li>Lisa Zimmermann</li><li>Birgit Geueke</li><li>Joel Scheuchzer</li><li>Lindsey Parkinson</li><li>Jane Muncke</li></ul>`
 );
 lecturesDetails.set(
   "Legislation/Hazard identification and characterization/introduction",
@@ -406,8 +406,9 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
 <div class="dropdown-container" id="dropdown-container-Packaging design"><button class="dropdown-btn"
         id="dropdown-btn-the-basics-of-mechanical-engineering-for-packaging-designer">the-basics-of-mechanical-engineering-for-packaging-designer<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-the-basics-of-mechanical-engineering-for-packaging-designer">
-        <a href="#Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
+    <div class="dropdown-container"
+        id="dropdown-container-the-basics-of-mechanical-engineering-for-packaging-designer"><a
+            href="#Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
             id="Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mechanical design of packaging: an
             introduction<i class="fa fa-star star-color-yellow little-space"></i><i
@@ -433,8 +434,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star-o star-color-green little-space"></i></a><a
             href="#Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties"
             id="Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mass transfer properties: methods and
-            standards<i class="fa fa-star star-color-green little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mass transfer properties: methods
+            and standards<i class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a><a
             href="#Packaging properties/Thermal, mechanical and barrier properties/optical-properties"
@@ -452,8 +453,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
         id="dropdown-btn-Chemical and physical">Chemical and physical<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Chemical and physical"><a
             href="#Packaging properties/Chemical and physical/food-packaging-interaction"
-            id="Packaging properties/Chemical and physical/food-packaging-interaction" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Food packaging interaction<i
+            id="Packaging properties/Chemical and physical/food-packaging-interaction"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Food packaging interaction<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
@@ -471,8 +472,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Calculation of permeability in composite systems"><a
             href="#Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials"
             id="Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Permeability in composites: from ideal
-            laminates to materials with defects and dispersed particles.<i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Permeability in composites: from
+            ideal laminates to materials with defects and dispersed particles.<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
@@ -481,8 +482,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Multicomponent diffusion, predictive models"><a
             href="#Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale"
             id="Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Multicomponent diffusion: diffusion and
-            solubility at molecular scale (overview) and in non-ideal systems<i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Multicomponent diffusion: diffusion
+            and solubility at molecular scale (overview) and in non-ideal systems<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
@@ -491,8 +492,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Micro holes and leaks in packaging"><a
             href="#Packaging properties/Micro holes and leaks in packaging/measurement-and-modeling"
             id="Packaging properties/Micro holes and leaks in packaging/measurement-and-modeling"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Micro holes and leaks in packaging –
-            measurement and modeling<i class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Micro holes and leaks in packaging
+            – measurement and modeling<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Packaging processes">Packaging processes<i
@@ -523,7 +524,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Filling and dosing"><a
             href="#Packaging processes/Filling and dosing/principles"
             id="Packaging processes/Filling and dosing/principles" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Principles<i class="fa fa-star star-color-yellow little-space"></i><i
+            onclick="lectureToDisplay(this.id)">Principles<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Packaging processes/Filling and dosing/forming-filling-sealing"
@@ -574,9 +576,9 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Packaging line">Packaging line<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Packaging line"><a
-            href="#Packaging processes/Packaging line/optimization" id="Packaging processes/Packaging line/optimization"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Optimization<i
-                class="fa fa-star star-color-red little-space"></i><i
+            href="#Packaging processes/Packaging line/optimization"
+            id="Packaging processes/Packaging line/optimization" class="dropdown-container-class"
+            onclick="lectureToDisplay(this.id)">Optimization<i class="fa fa-star star-color-red little-space"></i><i
                 class="fa fa-star star-color-red little-space"></i><i
                 class="fa fa-star star-color-red little-space"></i></a><a
             href="#Packaging processes/Packaging line/hygienic-design"
@@ -598,7 +600,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Common physical chemical factors affecting food stability">Common physical chemical factors
         affecting food stability<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Common physical chemical factors affecting food stability"><a
+    <div class="dropdown-container"
+        id="dropdown-container-Common physical chemical factors affecting food stability"><a
             href="#Shelf-life/Common physical chemical factors affecting food stability/overview"
             id="Shelf-life/Common physical chemical factors affecting food stability/overview"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview physical and chemical
@@ -611,12 +614,13 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Food packaging and shelf life"><a
             href="#Shelf-life/Food packaging and shelf life/shelf-life-definitions"
             id="Shelf-life/Food packaging and shelf life/shelf-life-definitions" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Definitions<i class="fa fa-star star-color-yellow little-space"></i><i
+            onclick="lectureToDisplay(this.id)">Definitions<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life"
-            id="Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Factors affection shelf-life<i
+            id="Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Factors affection shelf-life<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
@@ -635,7 +639,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
         id="dropdown-btn-interaction">interaction<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-interaction"><a href="#Shelf-life/interaction"
             id="Shelf-life/interaction" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Interaction<i class="fa fa-star star-color-green little-space"></i><i
+            onclick="lectureToDisplay(this.id)">Interaction<i
+                class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Environmental pollution">Environmental pollution<i
@@ -646,8 +651,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Methodologies used in life cycle assessment"><a
             href="#Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging"
             id="Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Sustainability and Packaging - What is
-            suistainability? (part 1/2)<i class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Sustainability and Packaging - What
+            is suistainability? (part 1/2)<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Environmental pollution/Methodologies used in life cycle assessment/life-cycle-assessment"
@@ -670,8 +675,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Glass food contact material recycling"><a
             href="#Environmental pollution/Glass food contact material recycling/glass-food-contact-material-recycling"
             id="Environmental pollution/Glass food contact material recycling/glass-food-contact-material-recycling"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Glass food contact material recycling<i
-                class="fa fa-star star-color-green little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Glass food contact material
+            recycling<i class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Metal food contact material recycling">Metal food contact material recycling<i
@@ -679,8 +684,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Metal food contact material recycling"><a
             href="#Environmental pollution/Metal food contact material recycling/metal-food-contact-material-recycling"
             id="Environmental pollution/Metal food contact material recycling/metal-food-contact-material-recycling"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Metal food contact material recycling<i
-                class="fa fa-star star-color-green little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Metal food contact material
+            recycling<i class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Biodegradation and microplastics">Biodegradation and microplastics<i
@@ -702,7 +707,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Innovations">Innovations<i class="fa fa-caret-down"></i></button>
+</div><button class="dropdown-btn" id="dropdown-btn-Innovations">Innovations<i
+        class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Innovations"><button class="dropdown-btn"
         id="dropdown-btn-Biobased and biodegradable materials">Biobased and biodegradable materials<i
             class="fa fa-caret-down"></i></button>
@@ -727,12 +733,13 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
             available intelligent packaging systems<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Nanotechnology strategies">Nanotechnology strategies<i class="fa fa-caret-down"></i></button>
+        id="dropdown-btn-Nanotechnology strategies">Nanotechnology strategies<i
+            class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Nanotechnology strategies"><a
             href="#Innovations/Nanotechnology strategies/definitions"
             id="Innovations/Nanotechnology strategies/definitions" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Definitions, nano-scale additives, examples of gains and applications.<i
-                class="fa fa-star star-color-yellow little-space"></i><i
+            onclick="lectureToDisplay(this.id)">Definitions, nano-scale additives, examples of gains and
+            applications.<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Bacterial polyesters">Bacterial polyesters<i class="fa fa-caret-down"></i></button>
@@ -748,8 +755,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Advanced cellulosic materials"><a
             href="#Innovations/Advanced cellulosic materials/advanced-cellulosic-materials-for-food-packaging"
             id="Innovations/Advanced cellulosic materials/advanced-cellulosic-materials-for-food-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Advanced cellulosic materials for food
-            packaging<i class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Advanced cellulosic materials for
+            food packaging<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Modified atmosphere packaging">Modified atmosphere packaging<i
@@ -768,8 +775,9 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
         recycling<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Environmental impact of plastics and recycling"><a
             href="#Recoverability/Environmental impact of plastics and recycling/overview"
-            id="Recoverability/Environmental impact of plastics and recycling/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-yellow little-space"></i><i
+            id="Recoverability/Environmental impact of plastics and recycling/overview"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Safety assessment of recycling processes">Safety assessment of recycling processes<i
@@ -780,9 +788,11 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
             onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Legislation">Legislation<i class="fa fa-caret-down"></i></button>
+</div><button class="dropdown-btn" id="dropdown-btn-Legislation">Legislation<i
+        class="fa fa-caret-down"></i></button>
 <div class="dropdown-container" id="dropdown-container-Legislation"><button class="dropdown-btn"
-        id="dropdown-btn-EU, US others regulations">EU, US others regulations<i class="fa fa-caret-down"></i></button>
+        id="dropdown-btn-EU, US others regulations">EU, US others regulations<i
+            class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-EU, US others regulations"><a
             href="#Legislation/EU, US others regulations/regulatory-framework"
             id="Legislation/EU, US others regulations/regulatory-framework" class="dropdown-container-class"
@@ -795,8 +805,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-GMP and quality assurance standards"><a
             href="#Legislation/GMP and quality assurance standards/safety-and-quality-management-system"
             id="Legislation/GMP and quality assurance standards/safety-and-quality-management-system"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">GMP, Safety, Quality management system,
-            Responsibilities and Certification<i class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">GMP, Safety, Quality management
+            system, Responsibilities and Certification<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Universe of food contact chemicals">Universe of food contact chemicals<i
@@ -804,21 +814,22 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Universe of food contact chemicals"><a
             href="#Legislation/Universe of food contact chemicals/universe-of-food-contact-chemicals"
             id="Legislation/Universe of food contact chemicals/universe-of-food-contact-chemicals"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Universe of food contact chemicals<i
-                class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Universe of food contact
+            chemicals<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Hazard identification and characterization">Hazard identification and characterization<i
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Hazard identification and characterization"><a
             href="#Legislation/Hazard identification and characterization/introduction"
-            id="Legislation/Hazard identification and characterization/introduction" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Introduction<i class="fa fa-star star-color-yellow little-space"></i><i
+            id="Legislation/Hazard identification and characterization/introduction"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Legislation/Hazard identification and characterization/identification"
-            id="Legislation/Hazard identification and characterization/identification" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Identification<i
+            id="Legislation/Hazard identification and characterization/identification"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Identification<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
@@ -832,8 +843,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Exposure and risk assessment"><a
             href="#Legislation/Exposure and risk assessment/exposure-and-risk-assessment"
-            id="Legislation/Exposure and risk assessment/exposure-and-risk-assessment" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Exposure and risk assessment<i
+            id="Legislation/Exposure and risk assessment/exposure-and-risk-assessment"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Exposure and risk assessment<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
@@ -857,8 +868,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Modeling for multi-materials, multi-steps process">Modeling for multi-materials, multi-steps
-        process<i class="fa fa-caret-down"></i></button>
+        id="dropdown-btn-Modeling for multi-materials, multi-steps process">Modeling for multi-materials,
+        multi-steps process<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Modeling for multi-materials, multi-steps process"><a
             href="#Modeling tools/Modeling for multi-materials, multi-steps process/mass-transfer-for-multi-materials"
             id="Modeling tools/Modeling for multi-materials, multi-steps process/mass-transfer-for-multi-materials"
@@ -866,8 +877,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star star-color-red little-space"></i><i
                 class="fa fa-star star-color-red little-space"></i><i
                 class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Introduction to decision theory and risk management">Introduction to decision theory and risk
-        management<i class="fa fa-caret-down"></i></button>
+        id="dropdown-btn-Introduction to decision theory and risk management">Introduction to decision theory and
+        risk management<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Introduction to decision theory and risk management"><a
             href="#Modeling tools/Introduction to decision theory and risk management/introduction"
             id="Modeling tools/Introduction to decision theory and risk management/introduction"
@@ -875,13 +886,14 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Managing uncertainty by intervals and worst-case scenarios">Managing uncertainty by intervals
-        and worst-case scenarios<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Managing uncertainty by intervals and worst-case scenarios">
-        <a href="#Modeling tools/Managing uncertainty by intervals and worst-case scenarios/monotonic-calculations"
+        id="dropdown-btn-Managing uncertainty by intervals and worst-case scenarios">Managing uncertainty by
+        intervals and worst-case scenarios<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container"
+        id="dropdown-container-Managing uncertainty by intervals and worst-case scenarios"><a
+            href="#Modeling tools/Managing uncertainty by intervals and worst-case scenarios/monotonic-calculations"
             id="Modeling tools/Managing uncertainty by intervals and worst-case scenarios/monotonic-calculations"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Principles of monotonic (conservative)
-            calculations of migration in presence of uncertainty.<i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Principles of monotonic
+            (conservative) calculations of migration in presence of uncertainty.<i
                 class="fa fa-star star-color-red little-space"></i><i
                 class="fa fa-star star-color-red little-space"></i><i
                 class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
@@ -898,19 +910,21 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-History and principles of FMEA-FMECA"><a
             href="#Modeling tools/History and principles of FMEA-FMECA/fmeca-approaches"
-            id="Modeling tools/History and principles of FMEA-FMECA/fmeca-approaches" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Approaches, link with regulation 2023/2006/EC<i
-                class="fa fa-star star-color-yellow little-space"></i><i
+            id="Modeling tools/History and principles of FMEA-FMECA/fmeca-approaches"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Approaches, link with regulation
+            2023/2006/EC<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Diagram-based approaches">Diagram-based approaches<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Diagram-based approaches"><a
             href="#Modeling tools/Diagram-based approaches/overview"
             id="Modeling tools/Diagram-based approaches/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">FMECA modeling<i class="fa fa-star star-color-red little-space"></i><i
+            onclick="lectureToDisplay(this.id)">FMECA modeling<i
+                class="fa fa-star star-color-red little-space"></i><i
                 class="fa fa-star star-color-red little-space"></i><i
                 class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Computer-aided approaches">Computer-aided approaches<i class="fa fa-caret-down"></i></button>
+        id="dropdown-btn-Computer-aided approaches">Computer-aided approaches<i
+            class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Computer-aided approaches"><a
             href="#Modeling tools/Computer-aided approaches/overview"
             id="Modeling tools/Computer-aided approaches/overview" class="dropdown-container-class"

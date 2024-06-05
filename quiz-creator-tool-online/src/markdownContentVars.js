@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 28th May 2024
+ * Last Modified: Friday, 31st May 2024
  * Modified By: Steward OUADI
  */
 
@@ -1431,6 +1431,492 @@ Q20. Which regulation specifically addresses the recycling of plastics in the EU
 - [ ] Regulation (EU) 2023/2006
 - [x] Packaging, Packaging Waste Regulation (PPWR)
 - [ ] Regulation (EU) 10/2011
+
+canBeSentByEmail:true
+`;
+
+var modifiedAtmospherePackaging = `
+Q1: What does MAP of the fresh produce controls?
+- [ ] Produce respiration
+- [ ] Product shelf-life
+- [ ] Produce ripening
+- [ ] Gas permeation through package
+- [x] All mentioned
+
+Q2: What are the factors of respiration? 
+- [x]  Consumption of oxygen and release of carbon dioxide
+- [ ] Consumption of oxygen and release of air
+- [ ] Consumption of oxygen and release of nitrogen
+- [ ] All above
+
+
+Q3: What are MAP benefits?
+
+- [x] Control of water loss
+- [x] Protection from skin abrasion
+- [x] Reduced contamination of the produce during handling
+- [x] Delayed ripening
+
+Q4: Which materials can be used for MAP packaging?
+
+- [x] Biodegradable polymers
+- [x] Cellulose
+- [ ] Metal
+- [x] Plastic
+
+
+Q5: Which kind of packaging barrier properties are required for MAP of fresh produce? 
+
+- [ ] Absolute barrier to oxygen 
+- [ ] Absolute barrier to carbon dioxide
+- [ ] Absolute barrier to moisture
+- [x]  Different gas barrier
+
+Q6: On which parameters MAP dynamics depends on?
+
+- [x] Product optimisation
+- [x] Respiration balance of produce
+- [x] Ripening stage of produce
+- [x] Storage condition
+
+Q7: Which law is applied to describe temperature dependent processes?
+- [ ] Poiseuille’s law
+- [x] Arrhenius’s law
+- [ ] Fick’s law
+- [ ] All above
+
+canBeSentByEmail:true
+`;
+
+var massTransferProperties = `
+Q1. What is the correct order in the three-steps mechanism of permeation phenomenon?
+
+- [x] Sorption, diffusion, sorption
+- [ ] Diffusion, sorption, diffusion
+
+
+Q2. The term sorption includes ADsorption and ABsorption phenomena?
+
+- [x] True
+- [ ] False
+
+
+Q3. D = P x S : is this relationship between permeability, solubility and diffusion coefficients correct?
+
+- [ ] True
+- [x] False
+
+
+Q4. Fickian diffusion through packaging polymer matrix is the main mechanism by which gas or vapor transfer through the packaging in absence of defects?
+
+- [x] True
+- [ ] False
+
+Q5. No question -
+
+- [ ] Diffusivity
+- [x] Concentration gradient
+- [ ] Mass flow
+- [ ] Thickness
+- [ ] Chemical potential
+
+Q6. Fickian behavior refers to the diffusion process in polymer where the permeant concentration is?
+
+- [x] Non concentration dependent diffusion coefficient
+- [ ] Concentration dependent diffusion coefficient
+
+Q7. Which molecules can permeate through food packaging? (multiple choice)
+
+- [x] O2
+- [x] CO2
+- [x] Water vapor H2O(g)
+- [x] Liquid water H2O(l)
+- [x] Aroma compounds
+
+
+Q8. What are the characteristics of the permeant that influence the permeability phenomenon the most?
+
+- [x] Molecular size for diffusivity and chemical affinity to the polymer matrix for solubility
+- [ ] Molecular size for solubility and chemical affinity to the polymer matrix for diffusivity
+
+
+Q9.  Carbon dioxide (CO2) permeability value is usually 3-7 times higher than oxygen permeability: why?
+
+- [x] Lower diffusion coefficient of CO2 than O2 but higher solubility of CO2 than O2
+- [ ] Lower diffusion coefficient of O2 than CO2 but higher solubility of O2 than CO2
+- [ ] Both diffusion coefficient and solubility coefficient of CO2 higher than O2
+
+
+Q10. In which materials do permeability phenomenon occurs during food storage? (multiple choice)
+
+- [ ] Glass
+- [ ] Metal
+- [x] Paper
+- [x] Plastics
+- [x] Resin
+- [x] Wood
+
+
+Q11.  Contrary to permanent gases, vapor refers to low-boiling-point molecules that are non-condensable and exist only in the gaseous state at ambient temperature and atmospheric pressure
+
+- [ ] True
+- [x] False
+
+Q12.  Permeation phenomenon is affected by (multiple choice)
+
+- [x] Nature of polymer matrix
+- [x] Nature of permeant
+- [x] Thickness
+- [x] Porosity
+
+
+Q13.  Is the permeability of non-polar packaging polymers affected by water vapor?
+
+- [ ] Yes
+- [x] No
+
+
+Q14. Is the permeability phenomenon affected by the glass transition temperature of the polymer?
+
+- [x] Yes
+- [ ] No
+
+Q15. Permeability value is higher for an amorphous material than for the same crystalline material having identical thickness
+
+- [x] Yes
+- [ ] No
+
+
+Q16. If you add fillers or plasticizers in a polymer matrix, the permeability
+
+- [ ] Does not change
+- [x] Increases
+- [ ] Decreases
+
+
+Q17. In a multilayer film, the total resistance to mass transfer is equal to the sum of permeance values of each individual layer
+
+- [ ] Yes
+- [x] No
+
+
+Q18. In order to convert transmission rate (TR) in permeability: which operations do I have to perform?
+
+- [ ] Divide by pressure difference and thickness
+- [x] Divide by pressure difference and multiply by thickness
+- [ ] Divide by thickness and multiply by pressure difference
+- [ ] Multiply by both thickness and pressure
+
+
+Q19. When measuring gas permeation, what is the driving force for gas transfer through packaging?
+
+- [x] Partial pressure difference
+- [ ] Total pressure difference
+
+canBeSentByEmail:true
+`;
+
+var thermalProperties = `
+Q1. What are the differences between an amorphous material and a crystalline material?
+
+- [ ] Chemical composition
+- [x] Physical structure
+- [ ] Physical state
+
+
+
+Q2. Can food packaging materials be both amorphous and crystalline?
+
+- [x] Yes
+- [ ] No
+
+
+Q3. In a semi-crystalline material
+
+- [ ] All polymer chains undergo Tg and Tm 
+- [x] Part of polymer chain undergo Tg and another part Tm
+
+
+Q4.  Which structure is amorphous? (multiple choice)
+
+- [x] Glass
+- [x] Rubber
+- [ ] Crystal
+
+
+Q5.  Which material provides a higher specific heat value (Cp) and thus a better thermal insulation?
+
+- [ ] Crystalline
+- [x] Amorphous
+- [ ] Semi-crystalline
+
+Q6.  Glass transition is the transition from glassy to amorphous?
+
+- [ ] True
+- [x] False
+
+Q7.  Glass transition temperature and melting temperature are:
+
+- [x] Reversible events
+- [ ] Ireversible events
+
+Q8.  What are the parameters impacted by the glass transition in polymers? (multiple choice)
+
+- [x] Molecular chain mobility
+- [x] Free volume 
+- [x] Heat capacity
+- [ ] Melting point
+
+Q9.  Is the volume affected by melting temperature and glass transition temperature?
+
+- [x] TRUE for melting temperature and FALSE for glass transition temperature
+- [ ] FALSE for both temperatures
+- [ ] FALSE for melting temperature and TRUE for glass transition temperature
+- [ ] TRUE for both temperatures
+
+Q10.  Is the glass transition temperature of packaging polymers always lower than the room temperature?
+
+- [ ] Yes
+- [x] No
+
+Q11:  For polymers, the higher the molecular mass is, the higher the glass transition temperature value is. Is it correct?
+
+- [x] Yes
+- [ ] No
+
+Q12.  Which consequences can have the bulky side groups on the polymer chain mobility and on the glass transition temperature?
+
+- [ ] Increase both parameters
+- [ ] Decrease both parameters
+- [x] Decrease mobility of the chain and increase Tg
+- [ ] Increase mobility and keep constant the Tg
+
+Q13.  When a plasticizer is added to a polymer, the Tg:
+
+- [x] Decreases
+- [ ] Increases 
+- [ ] Is not modified
+
+Q14.  Can inorganic materials have a glass transition temperature (Tg)?
+
+- [x] Yes
+- [ ] No
+
+Q15.  Do metallic materials have a glass transition temperature (Tg)?
+
+- [ ] Yes
+- [x] No
+
+Q16. What are the most important parameters to define the process ability for food packaging materials?
+
+- [x] Tg and Tm
+- [ ] Specific Heat (Cp) and Tg
+- [ ] Percentage of crystallinity and Tm
+
+Q17. Do the plastic materials always have a melting temperature ( Tm )?
+
+- [ ] Yes
+- [x] No
+
+canBeSentByEmail:true
+`;
+
+var shelfLifeStudy = `
+Q1. In your opinion, at which stage of the food chain can the concept of shelf life be applied? (multiple choice)
+
+- [x] Product manufacturing process
+- [x] Sale at grocery store
+- [x] Home product consumption
+
+
+Q2. Which are the main factors affecting the shelf life of foodstuff? (multiple choice)
+
+- [x] Food
+- [x] Environment
+- [x] Packaging
+
+Q3. Complete the text : _________shelf life can be defined as the time prior to pack opening needed to reach the acceptability limit under defined storage conditions.
+
+- [x] Primary
+- [ ] Secondary
+
+
+Q4. The period of time after pack opening, during which a food product maintains an acceptable quality level, is defined as secondary shelf life:
+
+- [x] True
+- [ ] False
+
+Q5. If a product is labelled with “Best before end” or “Best before” and its shelf life is over, can the product still be eaten?
+
+- [x] Yes
+- [ ] No
+
+Q6. Which is the correct sentence that must be used to indicate the shelf life of highly perishable food products?
+
+- [ ] “Best before end”
+- [x] “Use by”
+
+
+Q7. According to the EU regulation 1169/2011 on the provision of food information to consumers, in the case of products having a shelf life shorter than 3 months, which date format must be applied on the label?
+
+- [ ] Day/month/year
+- [ ] Month/year
+- [x] Day/month
+
+
+Q8. Complete the text: The food product characteristics are measured over time to estimate the quality decay:
+
+- [x] Stability study
+- [ ] Shelf life study
+
+
+Q9. Accelerated shelf life test is based on:
+
+- [ ] Prediction from mathematical modelling
+- [ ] Prediction from experimental analysis
+- [x] Prediction from both
+
+
+Q10.  What is the most common acceleration factor to perform an Accelerated Shelf Life Testing (ASLT)?
+
+- [ ] Light
+- [x] Temperature
+- [ ] Relative humidity
+
+
+Q11. Is the ratio between the rate constant at 5°C higher temperature and the rate constant at defined temperature:
+
+- [ ] True
+- [x] False
+
+
+canBeSentByEmail:true
+`;
+
+var mechanicalProperties = `
+Q1. In a classical tensile test, the instrument stretching the packaging film measures the force required under:
+
+- [x] Constant speed
+- [ ] Constant stress
+- [ ] Constant speed and stress
+
+
+Q2. The tensile test gives the same result whether the material is stretched in the machine direction or in the transverse direction:
+
+- [ ] True
+- [x] False
+
+
+Q3. Elastic and plastic deformation are:
+
+- [ ] Reversible
+- [ ] Irreversible
+- [x] Elastic is reversible and plastic is irreversible
+- [ ] Elastic is irreversible and plastic is reversible
+
+
+Q4.  In a stress-strain curve, the plastic region corresponds to the area in which the material recovers its original shape:
+
+- [ ] True
+- [x] False
+
+Q5. Using Hooke’s law, Young's modulus is determined from the slope of the initial linear part of the stress-strain curve and corresponds to the ratio σ/ε:
+
+- [x] True
+- [ ] False
+
+Q6.  The lower the Young’s modulus value is, the higher the stiffness of the material is. Is this correct?
+
+- [ ] Yes
+- [x] No
+
+Q7. Does the glass transition temperature affect the Young’s modulus value?
+
+- [x] Yes
+- [ ] No
+
+
+Q8.  In a stress-strain curve, what does yield stress refer to?
+
+- [x] Limit of elasticity
+- [ ] Young’s modulus
+- [ ] Breaking point
+- [ ] Maximum elongation
+- [ ] Stress at breaking
+
+
+Q9.  What happens to a packaging material when, in a tensile strength test, it reaches the maximum elastic deformation?
+
+- [ ] The food packaging material breaks
+- [ ] The food packaging material continues to deform
+- [x] It depends on the food packaging material
+
+
+Q10. During a tensile test, does the maximum strain always correspond to the breaking elongation?
+
+- [ ] Yes
+- [x] No
+
+Q11.  Maximum tensile strength corresponds to the maximum stress (MPa) applied to the specimen before it breaks:
+
+- [ ] Yes
+- [ ] No
+- [x] It depends on the food packaging material
+
+
+Q12.  In a tensile test, the toughness corresponds to the energy (Joule, J) to break the material:
+
+- [x] True
+- [ ] False
+
+
+Q13.  Ductility is the property that refers to the ability of a material to be plastically deformed by elongation before rupture:
+
+- [x] Yes
+- [ ] No
+
+
+Q14.  The stress-strain curve of a fragile material is only characterized by the elastic region:
+
+- [x] True
+- [ ] False
+
+Q15.  For which food packaging material, the burst strength test is commonly used? (multiple choice)
+
+- [x] Paper
+- [x] Board
+- [x] Plastic film
+- [x] Glass bottle
+- [x] Wood
+
+Q16. Which substances are generally used for burst strength test? (multiple choice)
+
+- [x] Compressed air
+- [x] Water
+- [ ] Gases
+
+Q17. The creep property is defined as slow deformation measured under constant stress. Is creep property time dependent?
+
+- [x] Yes
+- [ ] No
+
+
+Q18. In a relaxation test, a visco-elastic material fully recovers its original structure? 
+
+- [ ] True
+- [x] False
+
+
+Q19. The force necessary to move a  packaging film on a sliding plane at a constant speed is defined as dynamic coefficient of friction?
+
+- [x] True
+- [ ] False
+
+Q20. What are the parameters influencing the coefficient of friction? (multiple choice)
+
+- [x] Surface roughness
+- [x] Surface treatments
+- [x] Processing additives (e.g. lubricants and plasticizers)
 
 canBeSentByEmail:true
 `;
