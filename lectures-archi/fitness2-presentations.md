@@ -4,6 +4,8 @@ Below are the different presentations of the FITNESS 2 platforms.
 
 ### Online meeting with FITNESS partners
 
+[June 2024](https://fitness.agroparistech.fr/fitness2/presentations/fit2-on-meet/fitness-meeting-saclay-june-24.html)
+
 [May 2024 - Saclay training session](https://fitness.agroparistech.fr/fitness2/presentations/fit2-on-meet/fitness-meeting-saclay-may-24.html)
 
 [April 2024](https://fitness.agroparistech.fr/fitness2/presentations/fit2-on-meet/fitness-2-progress-april-24.html)
