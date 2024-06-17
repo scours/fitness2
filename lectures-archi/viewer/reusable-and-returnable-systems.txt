@@ -46,5 +46,5 @@ defSlide labelSlide1 {
 
 // Syntax: slide URL slidesToShow
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=reusableAndReturnableSystems&sessionId=1"
-slide "https://fitness.agroparistech.fr/fitness2/online/U_Aarhus/reusable_and_returnable_systems.html#/1" [7:20]
+slide "https://fitness.agroparistech.fr/fitness2/online/U_Aarhus/reusable_and_returnable_systems.html#/1" [7:31]
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=reusableAndReturnableSystems&sessionId=2"
