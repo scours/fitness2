@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Wednesday, 5th June 2024
+ * Last Modified: Monday, 24th June 2024
  * Modified By: Steward OUADI
  */
 
@@ -127,6 +127,10 @@ lecturesDetails.set(
   `<h1>Films and sheets</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p>Abstract</p><a target="_blank" class="btn btn-primary" href="" id="lecture-button-films-and-sheets" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Author</li></ul>`
 );
 lecturesDetails.set(
+  "Packaging processes/aseptic-packaging",
+  `<h1>Aseptic packaging</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Aseptic,packaging</p><h4>Abstract</h4><p>Aseptic packaging</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/aseptic-packaging.html#/1" id="lecture-button-aseptic-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+);
+lecturesDetails.set(
   "Packaging processes/Filling and dosing/principles",
   `<h1>Principles</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>dosing,food,weight,statistical,calibration,legal,optimization</p><h4>Abstract</h4><p>How to fill small 25 g chip bags at a high rate and with a precise weight without breaking them. This is the challenge of filling packaging with solid food. The weight cannot be exact in relation to the printed value on the package, but it must absolutely be within precise tolerance values by legislation in place (European rules). This lecture presents the principles and their implementation for powdered dry food but also for ready meals that do not flow.    - level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.3/part1.html#/2" id="lecture-button-principles" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
@@ -183,6 +187,10 @@ lecturesDetails.set(
   "Shelf-life/Food packaging and shelf life/study-shelf-life",
   `<h1>How to study shelf life</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,temperature,time,activation</p><h4>Abstract</h4><p>The quality of most foods and beverages decreases with time. The length of time between processing and consumption, during which the product maintains an “acceptable” quality, is named shelf life.
 The unit is divided into four sections. In the first section shelf life definitions and related regulation aspects are discussed. The second section is focused on factors influencing the shelf life, such as product characteristics, food packaging and environment. The third section introduces accelerated shelf life testing. The last section gives the tools for the prediction of shelf life of packaged foods.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part3.html#/2" id="lecture-button-study-shelf-life" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
+);
+lecturesDetails.set(
+  "Shelf-life/Food packaging and shelf life/microbiological-assessment-of-food-and-packaging",
+  `<h1>Microbiological assessment of food and packaging</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Microbiological assessment,food packaging</p><h4>Abstract</h4><p>Microbiological assessment of food and packaging</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/microbiological-assessment-of-food-and-packaging.html#/1" id="lecture-button-microbiological-assessment-of-food-and-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=microbiologicalAssessmentOfFoodAndPackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Peter Muranyi</li><li>Bernd Kramer Kata Galić</li><li>Mia Kurek</li><li>Mario Ščetar</li></ul>`
 );
 lecturesDetails.set(
   "Shelf-life/Food packaging and shelf life/predict-shelf-life",
@@ -519,6 +527,13 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+        id="dropdown-btn-aseptic-packaging">aseptic-packaging<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container" id="dropdown-container-aseptic-packaging"><a
+            href="#Packaging processes/aseptic-packaging" id="Packaging processes/aseptic-packaging"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Aseptic packaging<i
+                class="fa fa-star star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Filling and dosing">Filling and dosing<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Filling and dosing"><a
             href="#Packaging processes/Filling and dosing/principles"
@@ -626,6 +641,12 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
+            href="#Shelf-life/Food packaging and shelf life/microbiological-assessment-of-food-and-packaging"
+            id="Shelf-life/Food packaging and shelf life/microbiological-assessment-of-food-and-packaging"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Microbiological assessment of food and
+            packaging<i class="fa fa-star star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i><i
+                class="fa fa-star-o star-color-green little-space"></i></a><a
             href="#Shelf-life/Food packaging and shelf life/predict-shelf-life"
             id="Shelf-life/Food packaging and shelf life/predict-shelf-life" class="dropdown-container-class"
             onclick="lectureToDisplay(this.id)">How to calculate/predict shelf-life<i

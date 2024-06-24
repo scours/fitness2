@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 17th June 2024
+ * Last Modified: Monday, 24th June 2024
  * Modified By: Steward OUADI
  */
 
@@ -1948,6 +1948,66 @@ Q4.  Approximately how many different chemicals are recorded to have been used i
 - [ ] 500
 - [ ] 3,000
 - [x] 16,000
+
+canBeSentByEmail:true
+`;
+
+var microbiologicalAssessmentOfFoodAndPackaging = `
+Q1. Which of the following statements are correct? (multiple answers)
+- [ ] Obligatory anaerobic bacteria can grow on food under all conditions
+- [x] The growth of obligatory aerobic microorganisms can be hindered by vacuum packaging
+- [x] The growth of all microorganisms can be hindered by high concentrations of CO2
+- [ ] Facultative anaerobic bacteria cannot grow in normal atmosphere
+
+
+Q2. Which are properties of spoilage microorganisms? (multiple answers) 
+- [ ] Different spoilage microorganisms have no type-specific limit value
+- [ ] Spoilage microorganisms do not develop substances that are unhealthy for humans
+- [x] Spoilage microorganisms do not grow on dry foods with aw < 0.6
+- [x] The growth of spoilage microorganisms can be hindered by preservatives
+
+
+Q3. Microbial spoilage of food depends on: (multiple answers)
+- [x] Type of food
+- [x] Initial level of microorganisms in food
+- [x] Storage and handling conditions
+- [x] Temperature
+
+
+Q4. Which is the correct term for the end of food shelf-life in Europe for microbiologically sensitive products? (matching)
+- [x] Use by
+- [ ] Sell by
+- [ ] Best before
+- [ ] Eat before
+
+
+Q5. What is the direct shelf-life testing method? (matching)
+- [x] Food assessment in a real time study
+- [ ] Accelerated shelf-life testing
+- [ ] Predictive modelling
+- [ ] Challenge testing
+
+
+Q6. What is a correct example of predictive modelling? (matching)
+- [ ] Procedure to predict food sales on the market 
+- [ ] Procedure to predict consumers acceptance of new food on the market
+- [x] Procedure to assess the growth of a microorganism under defined conditions
+- [ ] Procedure to predict food price fluctuation on the market
+
+
+Q7. What are the possible orders of the kinetics of microbiological reactions? (multiple answers)
+- [x] zero order
+- [x] first order
+- [x] second order
+- [x] transitions between kinetics of different orders are possible
+
+
+Q8. Which substrates are used in a laboratory to cultivate and quantify microorganisms? (multiple answers)
+- [x] agar plates
+- [ ] food samples
+- [ ] beverages
+- [x] broths (liquids)
+
 
 canBeSentByEmail:true
 `;
