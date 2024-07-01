@@ -5,7 +5,7 @@
  * File Created: Friday, 16th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 13th May 2024
+ * Last Modified: Monday, 1st July 2024
  * Modified By: Steward OUADI
  */
 class Slide {
@@ -15,7 +15,8 @@ class Slide {
     link,
     slideNumberToDisplay,
     markdownContent,
-    lineNumber
+    lineNumber,
+    labelName = null
   ) {
     this.hash = hash; // An object identifier
     this.lineContent = lineContent; // The content of the line
@@ -23,5 +24,6 @@ class Slide {
     this.slideNumberToDisplay = slideNumberToDisplay; // slide number to be shown
     this.markdownContent = markdownContent; // The markdown content of the slide
     this.lineNumber = lineNumber; // line number of the beginning of the slide definition in manifest file
+    this.labelName = labelName;
   }
 }

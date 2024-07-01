@@ -5,12 +5,16 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 27th May 2024
+ * Last Modified: Monday, 1st July 2024
  * Modified By: Steward OUADI
  */
 
 const finalLecture = new Map();
 let referenceURL = null;
+
+// Define slides and assignation for later use
+const slides = [];
+const assignation = new Assignation();
 
 function storeUserData() {
   const firstName = document.getElementById("firstName").value;
@@ -346,6 +350,18 @@ async function parseManifest(manifestContent) {
 
   for (let index = 0; index < lines.length; index++) {
     let line = lines[index].trim();
+    let lineLabelName = "";
+
+    // Detect and handle label names in the format ":labelName:"
+    if (line.startsWith(":")) {
+      const labelMatch = line.match(
+        /^:(\S+):\s*(slide|test)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/
+      );
+      if (labelMatch) {
+        lineLabelName = labelMatch[1];
+        line = line.replace(/^:\S+:\s*/, ""); // Remove the label part for further processing
+      }
+    }
 
     // Detect and handle the start of a defSlide block
     if (line.startsWith("defSlide")) {
@@ -385,11 +401,6 @@ async function parseManifest(manifestContent) {
           const regex = /^(slide)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/;
           const match = line.match(regex);
           if (match) {
-            // const [, , link, , range] = match;
-            // const cleanLink = cleanUrl(link);
-            // const result = range ? evaluateWithMathJs(range) : undefined;
-            // const hash = await generateHash(index + cleanLink + range);
-            // contentArray.push(new Slide(hash, line, cleanLink, result));
             const args = ["slide", "link", "slideNumberIfAny"];
             const errorText = lineFormatChecker(line, regex, args, index + 1);
             if (errorText) {
@@ -408,7 +419,6 @@ async function parseManifest(manifestContent) {
               // Check if there's a specified slide number or range.
               if (slideNumberIfAny) {
                 try {
-                  // let result = math.evaluate(slideNumberIfAny)["_data"];
                   let result = evaluateWithMathJs(slideNumberIfAny);
 
                   if (!Array.isArray(result)) {
@@ -420,10 +430,6 @@ async function parseManifest(manifestContent) {
 
                   for (let num of result) {
                     const hash = await generateHash(index, line, num);
-                    // Compute slide number: in the URLs from FITNESS 1, there are slides before the
-                    // "FITNESS 2" project slide, se we would not take those slides into account.
-                    // And the slide number the teacher is seeing on FITNESS 1 takes those "syllabus" slides into account.
-                    // So we make a computation so that we can get the exact slide the user is referring to on FITNESS 1 (using FITNESS 1 numbering patterns)
                     const slideNumber = num - numberOfSyllabusSlide;
                     const currentMarkDownSlide =
                       markDownSlides.get(link)[slideNumber];
@@ -434,7 +440,8 @@ async function parseManifest(manifestContent) {
                         link,
                         num,
                         currentMarkDownSlide,
-                        index
+                        index,
+                        lineLabelName
                       )
                     );
                     finalLecture.set(hash, currentMarkDownSlide);
@@ -450,8 +457,9 @@ async function parseManifest(manifestContent) {
               } else {
                 // Handle lines without a specific slide number or range.
                 const hash = await generateHash(index, line, "");
-                contentArray.push(new Slide(hash, line, link, "", ""));
-                // TODO: add into finalLecture all the slides for this URL
+                contentArray.push(
+                  new Slide(hash, line, link, "", "", index, lineLabelName)
+                );
               }
             }
           }
@@ -463,14 +471,21 @@ async function parseManifest(manifestContent) {
             const cleanLink = cleanUrl(link);
             const hash = await generateHash(index + cleanLink);
             contentArray.push(
-              new TestSlide(hash, line, cleanLink, undefined, index)
+              new TestSlide(
+                hash,
+                line,
+                cleanLink,
+                undefined,
+                index,
+                lineLabelName
+              )
             );
           }
         }
       }
     }
   }
-
+  console.log("Parsed contentArray:", JSON.stringify(contentArray, null, 2));
   return groupByLinkAndType(contentArray);
 }
 
@@ -478,9 +493,8 @@ function groupByLinkAndType(entries) {
   const grouped = {};
 
   entries.forEach((entry) => {
-    const { lineNumber, link } = entry;
+    const { lineNumber, link, labelName } = entry;
 
-    // Determine type by instance or other specific identifier
     let type;
     if (entry instanceof VirtualSlide) {
       type = "virtualSlide";
@@ -492,25 +506,22 @@ function groupByLinkAndType(entries) {
       type = "unknown"; // This handles any unclassified types
     }
 
-    // Initialize the group for the specific lineNumber if it doesn't exist
     if (!grouped[lineNumber]) {
       grouped[lineNumber] = {
         lineNumber: lineNumber,
         link: link, // Store the first encountered link for this line number
         types: {}, // Use a types object to categorize by type within the line
+        labelName: labelName || null, // Add the labelName here if it exists
       };
     }
 
-    // Ensure each type category is initialized
     if (!grouped[lineNumber].types[type]) {
       grouped[lineNumber].types[type] = [];
     }
 
-    // Append the entry to the correct type category for this line number
     grouped[lineNumber].types[type].push(entry);
   });
 
-  // Convert the nested objects into a flat array structure for compatibility
   const groupedArray = [];
   Object.values(grouped).forEach((group) => {
     Object.entries(group.types).forEach(([type, slides]) => {
@@ -519,12 +530,843 @@ function groupByLinkAndType(entries) {
         link: group.link,
         type: type,
         slides: slides,
+        labelName: group.labelName, // Use the labelName from the group
       });
     });
   });
 
+  console.log("Grouped array:", JSON.stringify(groupedArray, null, 2));
   return groupedArray;
 }
+
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+
+// /**
+//  * Asynchronously parses the manifest content, creating Slide objects for each valid line.
+//  * This function ensures lines not starting with "slide" are ignored and processes each valid line to create Slide objects,
+//  * handling both single slide numbers and ranges.
+//  *
+//  * @param {string} manifestContent The full text content of the manifest file.
+//  * @returns {Promise<Slide[]>} A promise that resolves to an array of Slide objects.
+//  */
+// async function parseManifest(manifestContent) {
+//   const contentArray = [];
+//   const lines = manifestContent.split("\n");
+
+//   let currentDefSlideContent = [];
+//   let readingDefSlide = false;
+//   let currentLabelName = "";
+
+//   for (let index = 0; index < lines.length; index++) {
+//     let line = lines[index].trim();
+
+//     // Detect and handle the start of a defSlide block
+//     if (line.startsWith("defSlide")) {
+//       const labelMatch = line.match(/^defSlide\s+(\S+)\s+\{/);
+//       if (labelMatch) {
+//         currentLabelName = labelMatch[1];
+//         readingDefSlide = true;
+//         console.log(`Starting defSlide with label '${currentLabelName}'`);
+//         continue; // Skip the start line of defSlide to prevent '{' from being added
+//       }
+//     }
+
+//     if (readingDefSlide) {
+//       if (line.endsWith("}")) {
+//         currentDefSlideContent.push(line.slice(0, -1).trim());
+//         readingDefSlide = false;
+//         await processDefSlideContent(
+//           index,
+//           currentDefSlideContent,
+//           currentLabelName,
+//           contentArray
+//         );
+//         currentDefSlideContent = [];
+//         currentLabelName = "";
+//       } else {
+//         currentDefSlideContent.push(line);
+//       }
+//     }
+
+//     // Remaining parsing logic for "slide" and "test"...
+//     if (line.startsWith("slide") || line.startsWith("test")) {
+//       line = removeInlineComment(line); // Clean the line from inline comments first
+//       // Implement parsing logic for "slide" and "test" here
+//       // Ensure it is not part of defSlide content
+//       if (!readingDefSlide) {
+//         if (line.startsWith("slide")) {
+//           const regex = /^(slide)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/;
+//           const match = line.match(regex);
+//           if (match) {
+//             const args = ["slide", "link", "slideNumberIfAny"];
+//             const errorText = lineFormatChecker(line, regex, args, index + 1);
+//             if (errorText) {
+//               displayErrorText(errorText);
+//             } else {
+//               let [, , link, slideNumberIfAny] = match; // Destructure the URL and slide number or range from the match.
+
+//               link = cleanUrl(link);
+//               if (referenceURL === null) {
+//                 // Set reference URL to be the first encountered URL
+//                 referenceURL = link;
+//               }
+
+//               await updateMarkdownSlides(link);
+
+//               // Check if there's a specified slide number or range.
+//               if (slideNumberIfAny) {
+//                 try {
+//                   let result = evaluateWithMathJs(slideNumberIfAny);
+
+//                   if (!Array.isArray(result)) {
+//                     result = [result];
+//                   }
+
+//                   // Flatten the result to handle any nested arrays
+//                   result = result.flat();
+
+//                   for (let num of result) {
+//                     const hash = await generateHash(index, line, num);
+//                     const slideNumber = num - numberOfSyllabusSlide;
+//                     const currentMarkDownSlide =
+//                       markDownSlides.get(link)[slideNumber];
+//                     contentArray.push(
+//                       new Slide(
+//                         hash,
+//                         line,
+//                         link,
+//                         num,
+//                         currentMarkDownSlide,
+//                         index
+//                       )
+//                     );
+//                     finalLecture.set(hash, currentMarkDownSlide);
+//                   }
+//                 } catch (error) {
+//                   console.error(
+//                     `Error evaluating slideNumberIfAny '${slideNumberIfAny}': ${error}`
+//                   );
+//                   const errorText =
+//                     "At line " + (index + 1) + ":" + error.message;
+//                   displayErrorText(errorText);
+//                 }
+//               } else {
+//                 // Handle lines without a specific slide number or range.
+//                 const hash = await generateHash(index, line, "");
+//                 contentArray.push(new Slide(hash, line, link, "", ""));
+//               }
+//             }
+//           }
+//         } else if (line.startsWith("test")) {
+//           const regex = /^(test)\s+"([^"]+)"$/;
+//           const match = line.match(regex);
+//           if (match) {
+//             const [, , link] = match;
+//             const cleanLink = cleanUrl(link);
+//             const hash = await generateHash(index + cleanLink);
+//             contentArray.push(
+//               new TestSlide(hash, line, cleanLink, undefined, index)
+//             );
+//           }
+//         }
+//       }
+//     }
+//   }
+//   console.log("Parsed contentArray:", JSON.stringify(contentArray, null, 2));
+//   return groupByLinkAndType(contentArray);
+// }
+
+// function groupByLinkAndType(entries) {
+//   const grouped = {};
+
+//   entries.forEach((entry) => {
+//     const { lineNumber, link } = entry;
+
+//     let type;
+//     if (entry instanceof VirtualSlide) {
+//       type = "virtualSlide";
+//     } else if (entry instanceof Slide) {
+//       type = "slide";
+//     } else if (entry instanceof TestSlide) {
+//       type = "test";
+//     } else {
+//       type = "unknown"; // This handles any unclassified types
+//     }
+
+//     if (!grouped[lineNumber]) {
+//       grouped[lineNumber] = {
+//         lineNumber: lineNumber,
+//         link: link, // Store the first encountered link for this line number
+//         types: {}, // Use a types object to categorize by type within the line
+//       };
+//     }
+
+//     if (!grouped[lineNumber].types[type]) {
+//       grouped[lineNumber].types[type] = [];
+//     }
+
+//     grouped[lineNumber].types[type].push(entry);
+//   });
+
+//   const groupedArray = [];
+//   Object.values(grouped).forEach((group) => {
+//     Object.entries(group.types).forEach(([type, slides]) => {
+//       groupedArray.push({
+//         lineNumber: group.lineNumber,
+//         link: group.link,
+//         type: type,
+//         slides: slides,
+//       });
+//     });
+//   });
+
+//   console.log("Grouped array:", JSON.stringify(groupedArray, null, 2));
+//   return groupedArray;
+// }
+
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+// async function parseManifest(manifestContent) {
+//   const contentArray = [];
+//   const lines = manifestContent.split("\n");
+
+//   let currentDefSlideContent = [];
+//   let readingDefSlide = false;
+//   let currentLabelName = "";
+
+//   for (let index = 0; index < lines.length; index++) {
+//     let line = lines[index].trim();
+
+//     // Detect and handle the start of a defSlide block
+//     if (line.startsWith("defSlide")) {
+//       const labelMatch = line.match(/^defSlide\s+(\S+)\s+\{/);
+//       if (labelMatch) {
+//         currentLabelName = labelMatch[1];
+//         readingDefSlide = true;
+//         console.log(`Starting defSlide with label '${currentLabelName}'`);
+//         continue; // Skip the start line of defSlide to prevent '{' from being added
+//       }
+//     }
+
+//     if (readingDefSlide) {
+//       if (line.endsWith("}")) {
+//         currentDefSlideContent.push(line.slice(0, -1).trim());
+//         readingDefSlide = false;
+//         await processDefSlideContent(
+//           index,
+//           currentDefSlideContent,
+//           currentLabelName,
+//           contentArray
+//         );
+//         currentDefSlideContent = [];
+//         currentLabelName = "";
+//       } else {
+//         currentDefSlideContent.push(line);
+//       }
+//     }
+
+//     // Remaining parsing logic for "slide" and "test"...
+//     if (
+//       line.startsWith("slide") ||
+//       line.startsWith("test") ||
+//       line.startsWith(":")
+//     ) {
+//       line = removeInlineComment(line); // Clean the line from inline comments first
+//       if (!readingDefSlide) {
+//         const labelMatch = line.match(
+//           /^:(\S+):\s+(slide|test)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/
+//         );
+//         if (labelMatch) {
+//           const [, labelName, type, link, , range] = labelMatch;
+//           await processLine(
+//             type,
+//             link,
+//             range,
+//             labelName,
+//             index,
+//             line,
+//             contentArray
+//           );
+//         } else {
+//           const match = line.match(
+//             /^(slide|test)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/
+//           );
+//           if (match) {
+//             const [, type, link, , range] = match;
+//             await processLine(
+//               type,
+//               link,
+//               range,
+//               null,
+//               index,
+//               line,
+//               contentArray
+//             );
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   console.log("Parsed contentArray with labels:", contentArray);
+//   return groupByLinkAndType(contentArray);
+// }
+
+// async function processLine(
+//   type,
+//   link,
+//   range,
+//   labelName,
+//   index,
+//   line,
+//   contentArray
+// ) {
+//   if (type === "slide") {
+//     const cleanLink = cleanUrl(link);
+//     if (referenceURL === null) {
+//       // Set reference URL to be the first encountered URL
+//       referenceURL = cleanLink;
+//     }
+
+//     await updateMarkdownSlides(cleanLink);
+
+//     if (range) {
+//       try {
+//         let result = evaluateWithMathJs(range);
+
+//         if (!Array.isArray(result)) {
+//           result = [result];
+//         }
+
+//         result = result.flat();
+
+//         for (let num of result) {
+//           const hash = await generateHash(index, line, num);
+//           const slideNumber = num - numberOfSyllabusSlide;
+//           const currentMarkDownSlide =
+//             markDownSlides.get(cleanLink)[slideNumber];
+//           contentArray.push({
+//             type: "slide",
+//             labelName: labelName,
+//             slide: new Slide(
+//               hash,
+//               line,
+//               cleanLink,
+//               num,
+//               currentMarkDownSlide,
+//               index
+//             ),
+//           });
+//           finalLecture.set(hash, currentMarkDownSlide);
+//         }
+//       } catch (error) {
+//         console.error(`Error evaluating range '${range}': ${error}`);
+//         const errorText = "At line " + (index + 1) + ":" + error.message;
+//         displayErrorText(errorText);
+//       }
+//     } else {
+//       const hash = await generateHash(index, line, "");
+//       contentArray.push({
+//         type: "slide",
+//         labelName: labelName,
+//         slide: new Slide(hash, line, cleanLink, "", "", index),
+//       });
+//       // TODO: add into finalLecture all the slides for this URL
+//     }
+//   } else if (type === "test") {
+//     const cleanLink = cleanUrl(link);
+//     const hash = await generateHash(index + cleanLink);
+//     contentArray.push({
+//       type: "test",
+//       labelName: labelName,
+//       slide: new TestSlide(hash, line, cleanLink, undefined, index),
+//     });
+//   }
+// }
+
+// function groupByLinkAndType(contentArray) {
+//   const grouped = {};
+
+//   contentArray.forEach(({ type, labelName, slide }) => {
+//     if (!type || !slide) {
+//       console.warn("Skipping invalid entry:", { type, labelName, slide });
+//       return;
+//     }
+
+//     const link = slide.link;
+//     const lineNumber = slide.lineNumber;
+//     const entry = { ...slide };
+
+//     if (!grouped[lineNumber]) {
+//       grouped[lineNumber] = {
+//         lineNumber,
+//         link,
+//         types: {}, // Use an object to categorize by type within the line
+//         labelName: labelName, // Add the labelName here
+//       };
+//     }
+
+//     if (!grouped[lineNumber].types[type]) {
+//       grouped[lineNumber].types[type] = [];
+//     }
+
+//     grouped[lineNumber].types[type].push(entry);
+//   });
+
+//   const groupedArray = [];
+//   Object.values(grouped).forEach((group) => {
+//     Object.entries(group.types).forEach(([type, slides]) => {
+//       groupedArray.push({
+//         lineNumber: group.lineNumber,
+//         link: group.link,
+//         type: type,
+//         slides: slides,
+//         labelName: group.labelName, // Use the labelName from the group
+//       });
+//     });
+//   });
+
+//   console.log("Grouped array with labels:", groupedArray);
+//   return groupedArray;
+// }
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// /**
+//  * Asynchronously parses the manifest content, creating Slide objects for each valid line.
+//  * This function ensures lines not starting with "slide" are ignored and processes each valid line to create Slide objects,
+//  * handling both single slide numbers and ranges.
+//  *
+//  * @param {string} manifestContent The full text content of the manifest file.
+//  * @returns {Promise<Object[]>} A promise that resolves to an array of grouped objects.
+//  */
+// async function parseManifest(manifestContent) {
+//   const contentArray = [];
+//   const lines = manifestContent.split("\n");
+
+//   let currentDefSlideContent = [];
+//   let readingDefSlide = false;
+//   let currentLabelName = "";
+
+//   for (let index = 0; index < lines.length; index++) {
+//     let line = lines[index].trim();
+
+//     // Detect and handle the start of a defSlide block
+//     if (line.startsWith("defSlide")) {
+//       const labelMatch = line.match(/^defSlide\s+(\S+)\s+\{/);
+//       if (labelMatch) {
+//         currentLabelName = labelMatch[1];
+//         readingDefSlide = true;
+//         console.log(`Starting defSlide with label '${currentLabelName}'`);
+//         continue; // Skip the start line of defSlide to prevent '{' from being added
+//       }
+//     }
+
+//     if (readingDefSlide) {
+//       if (line.endsWith("}")) {
+//         currentDefSlideContent.push(line.slice(0, -1).trim());
+//         readingDefSlide = false;
+//         await processDefSlideContent(
+//           index,
+//           currentDefSlideContent,
+//           currentLabelName,
+//           contentArray
+//         );
+//         currentDefSlideContent = [];
+//         currentLabelName = "";
+//       } else {
+//         currentDefSlideContent.push(line);
+//       }
+//     }
+
+//     // Remaining parsing logic for "slide" and "test"...
+//     if (
+//       line.startsWith("slide") ||
+//       line.startsWith("test") ||
+//       line.startsWith(":")
+//     ) {
+//       line = removeInlineComment(line); // Clean the line from inline comments first
+//       // Implement parsing logic for "slide" and "test" here
+//       // Ensure it is not part of defSlide content
+//       if (!readingDefSlide) {
+//         const labelMatch = line.match(
+//           /^:(\S+):\s+(slide|test)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/
+//         );
+//         if (labelMatch) {
+//           const [, labelName, type, link, , range] = labelMatch;
+//           await processLine(
+//             type,
+//             link,
+//             range,
+//             labelName,
+//             index,
+//             line,
+//             contentArray
+//           );
+//         } else {
+//           const match = line.match(
+//             /^(slide|test)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/
+//           );
+//           if (match) {
+//             const [, type, link, , range] = match;
+//             await processLine(
+//               type,
+//               link,
+//               range,
+//               null,
+//               index,
+//               line,
+//               contentArray
+//             );
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   return groupByLinkAndType(contentArray);
+// }
+
+// async function processLine(
+//   type,
+//   link,
+//   range,
+//   labelName,
+//   index,
+//   line,
+//   contentArray
+// ) {
+//   if (type === "slide") {
+//     const cleanLink = cleanUrl(link);
+//     if (referenceURL === null) {
+//       // Set reference URL to be the first encountered URL
+//       referenceURL = cleanLink;
+//     }
+
+//     await updateMarkdownSlides(cleanLink);
+
+//     if (range) {
+//       try {
+//         let result = evaluateWithMathJs(range);
+
+//         if (!Array.isArray(result)) {
+//           result = [result];
+//         }
+
+//         result = result.flat();
+
+//         for (let num of result) {
+//           const hash = await generateHash(index, line, num);
+//           const slideNumber = num - numberOfSyllabusSlide;
+//           const currentMarkDownSlide =
+//             markDownSlides.get(cleanLink)[slideNumber];
+//           contentArray.push({
+//             type: "slide",
+//             labelName: labelName,
+//             slide: new Slide(
+//               hash,
+//               line,
+//               cleanLink,
+//               num,
+//               currentMarkDownSlide,
+//               index
+//             ),
+//           });
+//           finalLecture.set(hash, currentMarkDownSlide);
+//         }
+//       } catch (error) {
+//         console.error(`Error evaluating range '${range}': ${error}`);
+//         const errorText = "At line " + (index + 1) + ":" + error.message;
+//         displayErrorText(errorText);
+//       }
+//     } else {
+//       const hash = await generateHash(index, line, "");
+//       contentArray.push({
+//         type: "slide",
+//         labelName: labelName,
+//         slide: new Slide(hash, line, cleanLink, "", "", index),
+//       });
+//       // TODO: add into finalLecture all the slides for this URL
+//     }
+//   } else if (type === "test") {
+//     const cleanLink = cleanUrl(link);
+//     const hash = await generateHash(index + cleanLink);
+//     contentArray.push({
+//       type: "test",
+//       labelName: labelName,
+//       slide: new TestSlide(hash, line, cleanLink, undefined, index),
+//     });
+//   }
+// }
+
+// function groupByLinkAndType(contentArray) {
+//   const grouped = {};
+
+//   contentArray.forEach(({ type, labelName, slide }) => {
+//     if (!type || !slide) {
+//       console.warn("Skipping invalid entry:", { type, labelName, slide });
+//       return;
+//     }
+
+//     const link = slide.link;
+//     const lineNumber = slide.lineNumber;
+//     const entry = { ...slide };
+
+//     if (!grouped[lineNumber]) {
+//       grouped[lineNumber] = {
+//         lineNumber,
+//         link,
+//         types: {}, // Use an object to categorize by type within the line
+//         labelName: labelName, // Add the labelName here
+//       };
+//     }
+
+//     if (!grouped[lineNumber].types[type]) {
+//       grouped[lineNumber].types[type] = [];
+//     }
+
+//     grouped[lineNumber].types[type].push(entry);
+//   });
+
+//   const groupedArray = [];
+//   Object.values(grouped).forEach((group) => {
+//     Object.entries(group.types).forEach(([type, slides]) => {
+//       groupedArray.push({
+//         lineNumber: group.lineNumber,
+//         link: group.link,
+//         type: type,
+//         slides: slides,
+//         labelName: group.labelName, // Use the labelName from the group
+//       });
+//     });
+//   });
+
+//   return groupedArray;
+// }
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// /**
+//  * Asynchronously parses the manifest content, creating Slide objects for each valid line.
+//  * This function ensures lines not starting with "slide" are ignored and processes each valid line to create Slide objects,
+//  * handling both single slide numbers and ranges.
+//  *
+//  * @param {string} manifestContent The full text content of the manifest file.
+//  * @returns {Promise<Object[]>} A promise that resolves to an array of grouped objects.
+//  */
+// async function parseManifest(manifestContent) {
+//   const contentArray = [];
+//   const lines = manifestContent.split("\n");
+
+//   let currentDefSlideContent = [];
+//   let readingDefSlide = false;
+//   let currentLabelName = "";
+
+//   for (let index = 0; index < lines.length; index++) {
+//     let line = lines[index].trim();
+
+//     // Detect and handle the start of a defSlide block
+//     if (line.startsWith("defSlide")) {
+//       const labelMatch = line.match(/^defSlide\s+(\S+)\s+\{/);
+//       if (labelMatch) {
+//         currentLabelName = labelMatch[1];
+//         readingDefSlide = true;
+//         console.log(`Starting defSlide with label '${currentLabelName}'`);
+//         continue; // Skip the start line of defSlide to prevent '{' from being added
+//       }
+//     }
+
+//     if (readingDefSlide) {
+//       if (line.endsWith("}")) {
+//         currentDefSlideContent.push(line.slice(0, -1).trim());
+//         readingDefSlide = false;
+//         await processDefSlideContent(
+//           index,
+//           currentDefSlideContent,
+//           currentLabelName,
+//           contentArray
+//         );
+//         currentDefSlideContent = [];
+//         currentLabelName = "";
+//       } else {
+//         currentDefSlideContent.push(line);
+//       }
+//     }
+
+//     // Remaining parsing logic for "slide" and "test"...
+//     if (
+//       line.startsWith("slide") ||
+//       line.startsWith("test") ||
+//       line.startsWith(":")
+//     ) {
+//       line = removeInlineComment(line); // Clean the line from inline comments first
+//       // Implement parsing logic for "slide" and "test" here
+//       // Ensure it is not part of defSlide content
+//       if (!readingDefSlide) {
+//         const labelMatch = line.match(
+//           /^:(\S+):\s+(slide|test)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/
+//         );
+//         if (labelMatch) {
+//           const [, labelName, type, link, , range] = labelMatch;
+//           await processLine(
+//             type,
+//             link,
+//             range,
+//             labelName,
+//             index,
+//             line,
+//             contentArray
+//           );
+//         } else {
+//           const match = line.match(
+//             /^(slide|test)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/
+//           );
+//           if (match) {
+//             const [, type, link, , range] = match;
+//             await processLine(
+//               type,
+//               link,
+//               range,
+//               null,
+//               index,
+//               line,
+//               contentArray
+//             );
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   return groupByLinkAndType(contentArray);
+// }
+
+// async function processLine(
+//   type,
+//   link,
+//   range,
+//   labelName,
+//   index,
+//   line,
+//   contentArray
+// ) {
+//   if (type === "slide") {
+//     const cleanLink = cleanUrl(link);
+//     if (referenceURL === null) {
+//       // Set reference URL to be the first encountered URL
+//       referenceURL = cleanLink;
+//     }
+
+//     await updateMarkdownSlides(cleanLink);
+
+//     if (range) {
+//       try {
+//         let result = evaluateWithMathJs(range);
+
+//         if (!Array.isArray(result)) {
+//           result = [result];
+//         }
+
+//         result = result.flat();
+
+//         for (let num of result) {
+//           const hash = await generateHash(index, line, num);
+//           const slideNumber = num - numberOfSyllabusSlide;
+//           const currentMarkDownSlide =
+//             markDownSlides.get(cleanLink)[slideNumber];
+//           contentArray.push({
+//             type: "slide",
+//             labelName: labelName,
+//             slide: new Slide(
+//               hash,
+//               line,
+//               cleanLink,
+//               num,
+//               currentMarkDownSlide,
+//               index
+//             ),
+//           });
+//           finalLecture.set(hash, currentMarkDownSlide);
+//         }
+//       } catch (error) {
+//         console.error(`Error evaluating range '${range}': ${error}`);
+//         const errorText = "At line " + (index + 1) + ":" + error.message;
+//         displayErrorText(errorText);
+//       }
+//     } else {
+//       const hash = await generateHash(index, line, "");
+//       contentArray.push({
+//         type: "slide",
+//         labelName: labelName,
+//         slide: new Slide(hash, line, cleanLink, "", "", index),
+//       });
+//       // TODO: add into finalLecture all the slides for this URL
+//     }
+//   } else if (type === "test") {
+//     const cleanLink = cleanUrl(link);
+//     const hash = await generateHash(index + cleanLink);
+//     contentArray.push({
+//       type: "test",
+//       labelName: labelName,
+//       slide: new TestSlide(hash, line, cleanLink, undefined, index),
+//     });
+//   }
+// }
+
+// function groupByLinkAndType(contentArray) {
+//   const grouped = {};
+
+//   contentArray.forEach(({ type, labelName, slide }) => {
+//     if (!type || !slide) {
+//       console.warn("Skipping invalid entry:", { type, labelName, slide });
+//       return;
+//     }
+
+//     const link = slide.link;
+//     const lineNumber = slide.lineNumber;
+//     const entry = { ...slide };
+
+//     if (!grouped[lineNumber]) {
+//       grouped[lineNumber] = {
+//         lineNumber,
+//         link,
+//         types: {}, // Use an object to categorize by type within the line
+//         labelName: labelName, // Add the labelName here
+//       };
+//     }
+
+//     if (!grouped[lineNumber].types[type]) {
+//       grouped[lineNumber].types[type] = [];
+//     }
+
+//     grouped[lineNumber].types[type].push(entry);
+//   });
+
+//   const groupedArray = [];
+//   Object.values(grouped).forEach((group) => {
+//     Object.entries(group.types).forEach(([type, slides]) => {
+//       groupedArray.push({
+//         lineNumber: group.lineNumber,
+//         link: group.link,
+//         type: type,
+//         slides: slides,
+//         labelName: group.labelName, // Use the labelName from the group
+//       });
+//     });
+//   });
+
+//   return groupedArray;
+// }
 
 /**
  * Generates a unique hash for each slide using SHA-256 encryption.
@@ -967,6 +1809,30 @@ async function processManifestAndDisplay(content) {
 
   // Wait for all promises to resolve
   await Promise.all(promises);
+
+  // Process the configuration content
+  const config = content.split("\n");
+
+  config.forEach((line) => {
+    if (line.startsWith(":label")) {
+      // TODO: rework on this one
+      const [labelName, slideDetails] = line.split(": ");
+      const [url, time] = slideDetails
+        .match(/"(.*?)"/g)
+        .map((s) => s.replace(/"/g, ""));
+      slides.push(new Slide(url, time, labelName));
+    } else if (line.startsWith("goto")) {
+      const [gotoCommand, condition] = line.split(" if ");
+      const labelName = gotoCommand.split(" ")[1];
+      if (eval(condition)) {
+        // Simple condition evaluation
+        Jump.goto(labelName, slides);
+      }
+    } else if (line.startsWith("set")) {
+      const [property, expression] = line.split(" = ");
+      assignation.set(property.split(" ")[1], expression);
+    }
+  });
 
   // Now that all async operations have completed, display the first content
   displayContentInsideViewer(currentIndex); // Start by displaying the first item
