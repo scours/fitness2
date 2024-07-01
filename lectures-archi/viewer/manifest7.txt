@@ -72,9 +72,11 @@ slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/recycling_
 
 // goto :safetyAssessmentLecture: if test expression
 
-:reusableAndReturnableLecture: slide "https://fitness.agroparistech.fr/fitness2/online/U_Aarhus/reusable_and_returnable_systems.html#/1" [7:31]
+:reusableAndReturnableLecture
+slide "https://fitness.agroparistech.fr/fitness2/online/U_Aarhus/reusable_and_returnable_systems.html#/1" [7:31]
 
-:safetyAssessmentLecture: slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/safety_assessment_biobased.html" [7:58]
+:safetyAssessmentLecture
+slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/safety_assessment_biobased.html" [7:58]
 
 
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=panoramaOfFoodPackaging&sessionId=2"

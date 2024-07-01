@@ -352,14 +352,16 @@ async function parseManifest(manifestContent) {
     let line = lines[index].trim();
     let lineLabelName = "";
 
-    // Detect and handle label names in the format ":labelName:"
-    if (line.startsWith(":")) {
-      const labelMatch = line.match(
-        /^:(\S+):\s*(slide|test)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/
-      );
+    // Detect and handle label names in the format ":labelName"
+    if (
+      line.startsWith(":") &&
+      !line.includes("slide") &&
+      !line.includes("test")
+    ) {
+      const labelMatch = line.match(/^:(\S+)/);
       if (labelMatch) {
-        lineLabelName = labelMatch[1];
-        line = line.replace(/^:\S+:\s*/, ""); // Remove the label part for further processing
+        currentLabelName = labelMatch[1];
+        continue;
       }
     }
 
@@ -394,8 +396,6 @@ async function parseManifest(manifestContent) {
     // Remaining parsing logic for "slide" and "test"...
     if (line.startsWith("slide") || line.startsWith("test")) {
       line = removeInlineComment(line); // Clean the line from inline comments first
-      // Implement parsing logic for "slide" and "test" here
-      // Ensure it is not part of defSlide content
       if (!readingDefSlide) {
         if (line.startsWith("slide")) {
           const regex = /^(slide)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/;
@@ -441,7 +441,7 @@ async function parseManifest(manifestContent) {
                         num,
                         currentMarkDownSlide,
                         index,
-                        lineLabelName
+                        currentLabelName
                       )
                     );
                     finalLecture.set(hash, currentMarkDownSlide);
@@ -458,7 +458,7 @@ async function parseManifest(manifestContent) {
                 // Handle lines without a specific slide number or range.
                 const hash = await generateHash(index, line, "");
                 contentArray.push(
-                  new Slide(hash, line, link, "", "", index, lineLabelName)
+                  new Slide(hash, line, link, "", "", index, currentLabelName)
                 );
               }
             }
@@ -477,7 +477,7 @@ async function parseManifest(manifestContent) {
                 cleanLink,
                 undefined,
                 index,
-                lineLabelName
+                currentLabelName
               )
             );
           }
