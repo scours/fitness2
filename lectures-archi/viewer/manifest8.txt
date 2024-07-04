@@ -1,14 +1,13 @@
 /*
- * File: manifest7.txt
+ * File: manifest8.txt
  * Contract: EU contract 2022-FR01-KA220-HED-000023509
  * Project: FitNESS 2 ERASMUS+
- * File Created: Thursday, 27th June 2024
+ * File Created: Wednesday, 3rd July 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Monday, 1st July 2024
+ * Last Modified: Thursday, 4th July 2024
  * Modified By: Steward OUADI
  */
-
 
 
 // Syntax: defSlide labelName {lines (markdown or html)}
@@ -59,23 +58,25 @@ set user.prop1 = 1
 
 
 
-
-// Syntax: slide URL slidesToShow
-test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=panoramaOfFoodPackaging&sessionId=1"
-
-// slide "https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html" [7:55]
-slide "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part4.html" [8:10]
-slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/recycling_safety.html" [7:42]
-
-if user.prop9 == 5 goto :reusableAndReturnableLecture else goto :safetyAssessmentLecture
-
-:reusableAndReturnableLecture
-slide "https://fitness.agroparistech.fr/fitness2/online/U_Aarhus/reusable_and_returnable_systems.html#/1" [7:31]
-goto :lastTest
-
-:safetyAssessmentLecture
-slide "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/safety_assessment_biobased.html" [7:58]
+if user.prop9 == 5 goto :helloBlock else goto :morningBlock
 
 
-:lastTest
-test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=panoramaOfFoodPackaging&sessionId=2"
+
+:helloBlock
+defSlide hello { 
+    
+    <p>Hello.</p>
+
+} 
+goto :lastSlideBlock
+
+
+:morningBlock
+defSlide morning { 
+    <p>Morning.</p>
+} 
+
+:lastSlideBlock
+defSlide last { 
+    <p>last Slide.</p>
+} 

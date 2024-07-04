@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 1st July 2024
+ * Last Modified: Wednesday, 3rd July 2024
  * Modified By: Steward OUADI
  */
 
@@ -352,7 +352,6 @@ async function parseManifest(manifestContent) {
     let line = lines[index].trim();
     let lineLabelName = "";
 
-    // Detect and handle label names in the format ":labelName"
     if (
       line.startsWith(":") &&
       !line.includes("slide") &&
@@ -365,14 +364,13 @@ async function parseManifest(manifestContent) {
       }
     }
 
-    // Detect and handle the start of a defSlide block
     if (line.startsWith("defSlide")) {
       const labelMatch = line.match(/^defSlide\s+(\S+)\s+\{/);
+      var slideName;
       if (labelMatch) {
-        currentLabelName = labelMatch[1];
+        slideName = labelMatch[1];
         readingDefSlide = true;
-        console.log(`Starting defSlide with label '${currentLabelName}'`);
-        continue; // Skip the start line of defSlide to prevent '{' from being added
+        continue;
       }
     }
 
@@ -380,22 +378,58 @@ async function parseManifest(manifestContent) {
       if (line.endsWith("}")) {
         currentDefSlideContent.push(line.slice(0, -1).trim());
         readingDefSlide = false;
-        await processDefSlideContent(
-          index,
-          currentDefSlideContent,
-          currentLabelName,
-          contentArray
+        const hash = await generateHash(
+          index + currentDefSlideContent.join("")
+        );
+        contentArray.push(
+          new VirtualSlide(
+            hash,
+            line,
+            slideName,
+            currentDefSlideContent.join("\n"),
+            currentDefSlideContent.join("\n"),
+            index,
+            currentLabelName
+          )
         );
         currentDefSlideContent = [];
-        currentLabelName = "";
       } else {
         currentDefSlideContent.push(line);
       }
     }
 
-    // Remaining parsing logic for "slide" and "test"...
+    if (line.startsWith("if")) {
+      const ifRegex =
+        /^if\s+([^=]+)\s*==\s*([^=]+)\s+goto\s+:(\S+)\s+else\s+goto\s+:(\S+)$/;
+      const match = line.match(ifRegex);
+      if (match) {
+        const [, condition, , trueLabel, falseLabel] = match;
+        const hash = await generateHash(index + line);
+        contentArray.push(
+          new DecisionMaking(
+            hash,
+            line,
+            condition,
+            trueLabel,
+            falseLabel,
+            index
+          )
+        );
+      }
+    }
+
+    if (line.startsWith("goto")) {
+      const gotoRegex = /^goto\s+:(\S+)$/;
+      const match = line.match(gotoRegex);
+      if (match) {
+        const [, targetLabel] = match;
+        const hash = await generateHash(index + line);
+        contentArray.push(new GotoInstruction(hash, line, targetLabel, index));
+      }
+    }
+
     if (line.startsWith("slide") || line.startsWith("test")) {
-      line = removeInlineComment(line); // Clean the line from inline comments first
+      line = removeInlineComment(line);
       if (!readingDefSlide) {
         if (line.startsWith("slide")) {
           const regex = /^(slide)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/;
@@ -406,28 +440,19 @@ async function parseManifest(manifestContent) {
             if (errorText) {
               displayErrorText(errorText);
             } else {
-              let [, , link, slideNumberIfAny] = match; // Destructure the URL and slide number or range from the match.
-
+              let [, , link, slideNumberIfAny] = match;
               link = cleanUrl(link);
               if (referenceURL === null) {
-                // Set reference URL to be the first encountered URL
                 referenceURL = link;
               }
-
               await updateMarkdownSlides(link);
-
-              // Check if there's a specified slide number or range.
               if (slideNumberIfAny) {
                 try {
                   let result = evaluateWithMathJs(slideNumberIfAny);
-
                   if (!Array.isArray(result)) {
                     result = [result];
                   }
-
-                  // Flatten the result to handle any nested arrays
                   result = result.flat();
-
                   for (let num of result) {
                     const hash = await generateHash(index, line, num);
                     const slideNumber = num - numberOfSyllabusSlide;
@@ -455,7 +480,6 @@ async function parseManifest(manifestContent) {
                   displayErrorText(errorText);
                 }
               } else {
-                // Handle lines without a specific slide number or range.
                 const hash = await generateHash(index, line, "");
                 contentArray.push(
                   new Slide(hash, line, link, "", "", index, currentLabelName)
@@ -485,6 +509,7 @@ async function parseManifest(manifestContent) {
       }
     }
   }
+
   console.log("Parsed contentArray:", JSON.stringify(contentArray, null, 2));
   return groupByLinkAndType(contentArray);
 }
@@ -1580,6 +1605,9 @@ function displayContentInsideViewer(contentIndex) {
 
   // Check the content type from the global container
   const contentType = globalContentContainer[contentIndex].type;
+  console.log(
+    `Displaying content at index: ${contentIndex}, type: ${contentType}`
+  );
 
   // Locate the element by its ID
   const openLectureFullScreenElement = document.getElementById(
@@ -1667,28 +1695,43 @@ function displayContentInsideViewer(contentIndex) {
 
 function navigateContent(direction) {
   const newIndex = currentIndex + direction;
-  const contentType = globalContentContainer[currentIndex].type;
-
   if (newIndex < 0 || newIndex >= globalContentContainer.length) {
     console.error("Content index out of bounds.");
     return;
   }
 
-  if (contentType === "test") {
-    const userConfirmed = confirm(
-      "Please save your result URL. Any information you did not save will be lost. Do you want to proceed?"
-    );
-    if (userConfirmed) {
-      displayContentInsideViewer(newIndex);
+  const currentContent = globalContentContainer[newIndex];
+  if (currentContent instanceof DecisionMaking) {
+    if (currentContent.evaluate(assignation)) {
+      console.log(
+        `Condition '${currentContent.condition}' is true. Navigating to label: ${currentContent.trueLabel}`
+      );
+      navigateToLabel(currentContent.trueLabel);
     } else {
-      // Do not proceed
-      return;
+      console.log(
+        `Condition '${currentContent.condition}' is false. Navigating to label: ${currentContent.falseLabel}`
+      );
+      navigateToLabel(currentContent.falseLabel);
     }
+  } else if (currentContent instanceof GotoInstruction) {
+    console.log(
+      `Goto instruction found. Navigating to label: ${currentContent.targetLabel}`
+    );
+    navigateToLabel(currentContent.targetLabel);
   } else {
     displayContentInsideViewer(newIndex);
   }
 }
 
+function navigateToLabel(label) {
+  const labelIndex = labelMap[label];
+  if (labelIndex !== undefined) {
+    console.log(`Navigating to label: ${label} at index: ${labelIndex}`);
+    displayContentInsideViewer(labelIndex);
+  } else {
+    console.error(`Label ${label} not found.`);
+  }
+}
 function updateButtonStates() {
   // Enable or disable buttons based on the current index
   document.getElementById("prevButton").disabled = currentIndex <= 0;

@@ -14,11 +14,11 @@ class VariableSpace {
     this.variables = {};
   }
 
-  get(name) {
-    return this.variables[name] !== undefined ? this.variables[name] : 0;
-  }
-
   set(name, value) {
     this.variables[name] = value;
+  }
+
+  get(name) {
+    return this.variables[name] || 0; // Return 0 if the variable is not defined
   }
 }
