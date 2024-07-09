@@ -5,7 +5,7 @@
  * File Created: Wednesday, 3rd July 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Wednesday, 3rd July 2024
+ * Last Modified: Tuesday, 9th July 2024
  * Modified By: Steward OUADI
  */
 
@@ -34,14 +34,5 @@ class DecisionMaking {
       console.error(`Error evaluating condition: ${this.condition}`, error);
       return false;
     }
-  }
-}
-
-class GotoInstruction {
-  constructor(hash, lineContent, targetLabel, lineNumber) {
-    this.hash = hash;
-    this.lineContent = lineContent;
-    this.targetLabel = targetLabel;
-    this.lineNumber = lineNumber;
   }
 }

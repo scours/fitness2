@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 4th July 2024
+ * Last Modified: Tuesday, 9th July 2024
  * Modified By: Steward OUADI
  */
 
@@ -332,6 +332,15 @@ async function processDefSlideContent(
   }
 }
 
+function getLabelIndex(labelName) {
+  for (let i = 0; i < globalContentContainer.length; i++) {
+    if (globalContentContainer[i].labelName === labelName) {
+      return i;
+    }
+  }
+  return -1; // Return -1 if the labelName is not found
+}
+
 /**
  * Asynchronously parses the manifest content, creating Slide objects for each valid line.
  * This function ensures lines not starting with "slide" are ignored and processes each valid line to create Slide objects,
@@ -350,8 +359,8 @@ async function parseManifest(manifestContent) {
 
   for (let index = 0; index < lines.length; index++) {
     let line = lines[index].trim();
-    let lineLabelName = "";
 
+    // Detect and handle label names in the format ":labelName"
     if (
       line.startsWith(":") &&
       !line.includes("slide") &&
@@ -364,13 +373,17 @@ async function parseManifest(manifestContent) {
       }
     }
 
+    // Detect and handle the start of a defSlide block
     if (line.startsWith("defSlide")) {
       const labelMatch = line.match(/^defSlide\s+(\S+)\s+\{/);
       var slideName;
       if (labelMatch) {
         slideName = labelMatch[1];
         readingDefSlide = true;
-        continue;
+        console.log(
+          `Starting defSlide with label name '${currentLabelName}' and slide name '${slideName}'`
+        );
+        continue; // Skip the start line of defSlide to prevent '{' from being added
       }
     }
 
@@ -427,9 +440,8 @@ async function parseManifest(manifestContent) {
         contentArray.push(new GotoInstruction(hash, line, targetLabel, index));
       }
     }
-
     if (line.startsWith("slide") || line.startsWith("test")) {
-      line = removeInlineComment(line);
+      line = removeInlineComment(line); // Clean the line from inline comments first
       if (!readingDefSlide) {
         if (line.startsWith("slide")) {
           const regex = /^(slide)\s+"([^"]+)"\s*(\[(\d+:\d+)\])?$/;
@@ -440,19 +452,28 @@ async function parseManifest(manifestContent) {
             if (errorText) {
               displayErrorText(errorText);
             } else {
-              let [, , link, slideNumberIfAny] = match;
+              let [, , link, slideNumberIfAny] = match; // Destructure the URL and slide number or range from the match.
+
               link = cleanUrl(link);
               if (referenceURL === null) {
+                // Set reference URL to be the first encountered URL
                 referenceURL = link;
               }
+
               await updateMarkdownSlides(link);
+
+              // Check if there's a specified slide number or range.
               if (slideNumberIfAny) {
                 try {
                   let result = evaluateWithMathJs(slideNumberIfAny);
+
                   if (!Array.isArray(result)) {
                     result = [result];
                   }
+
+                  // Flatten the result to handle any nested arrays
                   result = result.flat();
+
                   for (let num of result) {
                     const hash = await generateHash(index, line, num);
                     const slideNumber = num - numberOfSyllabusSlide;
@@ -480,6 +501,7 @@ async function parseManifest(manifestContent) {
                   displayErrorText(errorText);
                 }
               } else {
+                // Handle lines without a specific slide number or range.
                 const hash = await generateHash(index, line, "");
                 contentArray.push(
                   new Slide(hash, line, link, "", "", index, currentLabelName)
@@ -518,15 +540,21 @@ function groupByLinkAndType(entries) {
   const grouped = {};
 
   entries.forEach((entry) => {
-    const { lineNumber, link, labelName } = entry;
-
-    let type;
+    let { lineNumber, link, labelName, type } = entry;
+    // Skip grouping for DecisionMaking and GotoInstruction types
+    if (type === "decisionMaking" || type === "gotoInstruction") {
+      return;
+    }
     if (entry instanceof VirtualSlide) {
       type = "virtualSlide";
     } else if (entry instanceof Slide) {
       type = "slide";
     } else if (entry instanceof TestSlide) {
       type = "test";
+    } else if (entry instanceof DecisionMaking) {
+      type = "decisionMaking";
+    } else if (entry instanceof GotoInstruction) {
+      type = "gotoInstruction";
     } else {
       type = "unknown"; // This handles any unclassified types
     }
@@ -828,8 +856,7 @@ function displayContentInsideViewer(contentIndex) {
         // Now you can use the content variable as needed
       }
     });
-  } else {
-    // Handle non-slide content differently
+  } else if (contentType === "virtualSlide") {
     const contentDiv = document.createElement("div");
     contentDiv.innerHTML = globalContentContainer[contentIndex].htmlOutput; // Assume htmlOutput is suitable for direct insertion
     container.appendChild(contentDiv);
@@ -837,30 +864,40 @@ function displayContentInsideViewer(contentIndex) {
     // Update the current index and button states without setting up an iframe
     currentIndex = contentIndex;
     updateButtonStates();
-    if (contentType === "virtualSlide") {
-      // setTimeout(() => {
-      const form = document.getElementById("userForm");
 
-      if (form) {
-        // form.addEventListener("submit", function (event) {
-        //   event.preventDefault(); // Prevent the form from submitting in the traditional way
-        //   storeUserData();
-        // });
-        const firstNameField = document.getElementById("firstName");
-        const lastNameField = document.getElementById("lastName");
-        const emailField = document.getElementById("email");
+    const form = document.getElementById("userForm");
+    if (form) {
+      const firstNameField = document.getElementById("firstName");
+      const lastNameField = document.getElementById("lastName");
+      const emailField = document.getElementById("email");
 
-        if (firstNameField)
-          firstNameField.addEventListener("input", storeUserData);
-        if (lastNameField)
-          lastNameField.addEventListener("input", storeUserData);
-        if (emailField) emailField.addEventListener("input", storeUserData);
-        displayUserData(); // Optionally display right after storing to confirm data integrity
-      } else {
-        console.log("The form element was not found!");
-      }
-      // }, 5000); // Wait for 3 seconds before retrying
+      if (firstNameField)
+        firstNameField.addEventListener("input", storeUserData);
+      if (lastNameField) lastNameField.addEventListener("input", storeUserData);
+      if (emailField) emailField.addEventListener("input", storeUserData);
+      displayUserData(); // Optionally display right after storing to confirm data integrity
+    } else {
+      console.log("The form element was not found!");
     }
+  } else if (contentType === "decisionMaking") {
+    const decision = globalContentContainer[contentIndex].slides[0];
+    if (decision.evaluate(decision.condition)) {
+      console.log(
+        `Condition '${decision.condition}' is true. Navigating to label: ${decision.trueLabel}`
+      );
+      navigateToLabel(decision.trueLabel);
+    } else {
+      console.log(
+        `Condition '${decision.condition}' is false. Navigating to label: ${decision.falseLabel}`
+      );
+      navigateToLabel(decision.falseLabel);
+    }
+  } else if (contentType === "gotoInstruction") {
+    const gotoInstruction = globalContentContainer[contentIndex];
+    console.log(
+      `Goto instruction found. Navigating to label: ${gotoInstruction.targetLabel}`
+    );
+    navigateToLabel(gotoInstruction.targetLabel);
   }
 }
 
@@ -872,6 +909,7 @@ function navigateContent(direction) {
   }
 
   const currentContent = globalContentContainer[newIndex];
+
   if (currentContent instanceof DecisionMaking) {
     if (currentContent.evaluate(assignation)) {
       console.log(
@@ -888,15 +926,17 @@ function navigateContent(direction) {
     console.log(
       `Goto instruction found. Navigating to label: ${currentContent.targetLabel}`
     );
-    navigateToLabel(currentContent.targetLabel);
+    navigateToLabel(currentContent.labelName);
   } else {
     displayContentInsideViewer(newIndex);
   }
+
+  currentIndex = newIndex;
 }
 
 function navigateToLabel(label) {
-  const labelIndex = labelMap[label];
-  if (labelIndex !== undefined) {
+  const labelIndex = getLabelIndex(label);
+  if (labelIndex !== -1) {
     console.log(`Navigating to label: ${label} at index: ${labelIndex}`);
     displayContentInsideViewer(labelIndex);
   } else {
