@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 9th July 2024
+ * Last Modified: Wednesday, 10th July 2024
  * Modified By: Steward OUADI
  */
 
@@ -412,19 +412,28 @@ async function parseManifest(manifestContent) {
     }
 
     if (line.startsWith("if")) {
-      const ifRegex =
-        /^if\s+([^=]+)\s*==\s*([^=]+)\s+goto\s+:(\S+)\s+else\s+goto\s+:(\S+)$/;
+      // Adjusted regex to match the given format, with 'goto' included in the instructions
+      const ifRegex = /^if\s+(.+?)\s+goto\s+:(\w+)\s+else\s+goto\s+:(\w+)$/;
       const match = line.match(ifRegex);
       if (match) {
-        const [, condition, , trueLabel, falseLabel] = match;
+        // Extracting the condition, true instruction, and false instruction from the matched result
+        const [, condition, trueInstruction, falseInstruction] = match;
+
+        // Prepend 'goto :' to the instructions to retain original format
+        const trueInstructionFormatted = `goto :${trueInstruction}`;
+        const falseInstructionFormatted = `goto :${falseInstruction}`;
+
+        // Generating a unique hash for the line (this function should be defined elsewhere in your code)
         const hash = await generateHash(index + line);
+
+        // Creating a new DecisionMaking object with the extracted values and pushing it to the contentArray
         contentArray.push(
           new DecisionMaking(
             hash,
             line,
             condition,
-            trueLabel,
-            falseLabel,
+            trueInstructionFormatted,
+            falseInstructionFormatted,
             index
           )
         );
@@ -881,19 +890,37 @@ function displayContentInsideViewer(contentIndex) {
     }
   } else if (contentType === "decisionMaking") {
     const decision = globalContentContainer[contentIndex].slides[0];
-    if (decision.evaluate(decision.condition)) {
-      console.log(
-        `Condition '${decision.condition}' is true. Navigating to label: ${decision.trueLabel}`
-      );
-      navigateToLabel(decision.trueLabel);
+    if (decision.evaluate(assignation)) {
+      const trueInstruction = decision.trueInstruction;
+      if (trueInstruction.startsWith("goto")) {
+        const labelName = trueInstruction.split(":")[1].trim();
+        console.log(
+          `Condition '${decision.condition}' is true. Navigating to label: ${labelName}`
+        );
+        navigateToLabel(labelName);
+      } else {
+        // Handle other trueInstruction types if needed
+        console.log(
+          `True instruction '${trueInstruction}' is not a goto statement.`
+        );
+      }
     } else {
-      console.log(
-        `Condition '${decision.condition}' is false. Navigating to label: ${decision.falseLabel}`
-      );
-      navigateToLabel(decision.falseLabel);
+      const falseInstruction = decision.falseInstruction;
+      if (falseInstruction.startsWith("goto")) {
+        const labelName = falseInstruction.split(":")[1].trim();
+        console.log(
+          `Condition '${decision.condition}' is false. Navigating to label: ${labelName}`
+        );
+        navigateToLabel(labelName);
+      } else {
+        // Handle other falseInstruction types if needed
+        console.log(
+          `False instruction '${falseInstruction}' is not a goto statement.`
+        );
+      }
     }
   } else if (contentType === "gotoInstruction") {
-    const gotoInstruction = globalContentContainer[contentIndex];
+    const gotoInstruction = globalContentContainer[contentIndex].slides[0];
     console.log(
       `Goto instruction found. Navigating to label: ${gotoInstruction.targetLabel}`
     );
@@ -909,29 +936,25 @@ function navigateContent(direction) {
   }
 
   const currentContent = globalContentContainer[newIndex];
-
   if (currentContent instanceof DecisionMaking) {
-    if (currentContent.evaluate(assignation)) {
-      console.log(
-        `Condition '${currentContent.condition}' is true. Navigating to label: ${currentContent.trueLabel}`
-      );
-      navigateToLabel(currentContent.trueLabel);
-    } else {
-      console.log(
-        `Condition '${currentContent.condition}' is false. Navigating to label: ${currentContent.falseLabel}`
-      );
-      navigateToLabel(currentContent.falseLabel);
-    }
+    const instruction = currentContent.execute(assignation);
+    handleInstruction(instruction);
   } else if (currentContent instanceof GotoInstruction) {
-    console.log(
-      `Goto instruction found. Navigating to label: ${currentContent.targetLabel}`
-    );
-    navigateToLabel(currentContent.labelName);
+    handleInstruction(currentContent.targetLabel);
   } else {
     displayContentInsideViewer(newIndex);
   }
+}
 
-  currentIndex = newIndex;
+function handleInstruction(instruction) {
+  const gotoRegex = /^goto\s+:(\S+)$/;
+  const match = instruction.match(gotoRegex);
+  if (match) {
+    const [, targetLabel] = match;
+    navigateToLabel(targetLabel);
+  } else {
+    console.error(`Unknown instruction: ${instruction}`);
+  }
 }
 
 function navigateToLabel(label) {

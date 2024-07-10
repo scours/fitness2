@@ -5,20 +5,26 @@
  * File Created: Wednesday, 3rd July 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Tuesday, 9th July 2024
+ * Last Modified: Wednesday, 10th July 2024
  * Modified By: Steward OUADI
  */
 
 class DecisionMaking {
-  constructor(hash, lineContent, condition, trueLabel, falseLabel, lineNumber) {
+  constructor(
+    hash,
+    lineContent,
+    condition,
+    trueInstruction,
+    falseInstruction,
+    lineNumber
+  ) {
     this.hash = hash;
     this.lineContent = lineContent;
     this.condition = condition;
-    this.trueLabel = trueLabel;
-    this.falseLabel = falseLabel;
+    this.trueInstruction = trueInstruction;
+    this.falseInstruction = falseInstruction;
     this.lineNumber = lineNumber;
   }
-
   evaluate(assignation) {
     try {
       const expression = this.condition.replace(
@@ -34,5 +40,14 @@ class DecisionMaking {
       console.error(`Error evaluating condition: ${this.condition}`, error);
       return false;
     }
+  }
+
+  execute(assignation) {
+    const conditionResult = this.evaluate(assignation);
+    const instruction = conditionResult
+      ? this.trueInstruction
+      : this.falseInstruction;
+    console.log(`Executing instruction: ${instruction}`);
+    return instruction;
   }
 }
