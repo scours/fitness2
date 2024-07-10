@@ -59,7 +59,7 @@ set user.prop1 = 1
 
 
 if user.prop9 == 5 goto :helloBlock else goto :morningBlock
-
+echo prop1 value is: %user.prop1%
 
 
 

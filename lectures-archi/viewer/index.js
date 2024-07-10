@@ -341,6 +341,11 @@ function getLabelIndex(labelName) {
   return -1; // Return -1 if the labelName is not found
 }
 
+// Function to display a popup with the given message
+function showPopup(message) {
+  alert(message);
+}
+
 /**
  * Asynchronously parses the manifest content, creating Slide objects for each valid line.
  * This function ensures lines not starting with "slide" are ignored and processes each valid line to create Slide objects,
@@ -371,6 +376,27 @@ async function parseManifest(manifestContent) {
         currentLabelName = labelMatch[1];
         continue;
       }
+    }
+
+    if (line.startsWith("set")) {
+      const [property, expression] = line.split(" = ");
+      assignation.set(property.split(" ")[1], expression);
+    }
+
+    if (line.startsWith("echo")) {
+      let message = line.slice(5); // Remove the "echo " part
+
+      // Replace variable references with their values
+      message = message.replace(/%([a-zA-Z0-9_.]+)%/g, (match, varName) => {
+        const [space, name] = varName.split(".");
+        if (space && name) {
+          return assignation[space].get(name);
+        } else {
+          return assignation.user.get(varName); // Default to user space if no prefix
+        }
+      });
+
+      showPopup(message); // Show the popup with the final message
     }
 
     // Detect and handle the start of a defSlide block
@@ -1105,10 +1131,11 @@ async function processManifestAndDisplay(content) {
         // Simple condition evaluation
         Jump.goto(labelName, slides);
       }
-    } else if (line.startsWith("set")) {
-      const [property, expression] = line.split(" = ");
-      assignation.set(property.split(" ")[1], expression);
     }
+    // else if (line.startsWith("set")) {
+    //   const [property, expression] = line.split(" = ");
+    //   assignation.set(property.split(" ")[1], expression);
+    // }
   });
 
   // Now that all async operations have completed, display the first content
