@@ -644,20 +644,13 @@ function groupByLinkAndType(entries) {
 
   entries.forEach((entry) => {
     let { lineNumber, link, labelName, type } = entry;
-    // Skip grouping for DecisionMaking and GotoInstruction types
-    if (type === "decisionMaking" || type === "gotoInstruction") {
-      return;
-    }
+
     if (entry instanceof VirtualSlide) {
       type = "virtualSlide";
     } else if (entry instanceof Slide) {
       type = "slide";
     } else if (entry instanceof TestSlide) {
       type = "test";
-    } else if (entry instanceof DecisionMaking) {
-      type = "decisionMaking";
-    } else if (entry instanceof GotoInstruction) {
-      type = "gotoInstruction";
     } else {
       type = "unknown"; // This handles any unclassified types
     }
@@ -982,43 +975,6 @@ function displayContentInsideViewer(contentIndex) {
     } else {
       console.log("The form element was not found!");
     }
-  } else if (contentType === "decisionMaking") {
-    const decision = globalContentContainer[contentIndex].slides[0];
-    if (decision.evaluate(assignation)) {
-      const trueInstruction = decision.trueInstruction;
-      if (trueInstruction.startsWith("goto")) {
-        const labelName = trueInstruction.split(":")[1].trim();
-        console.log(
-          `Condition '${decision.condition}' is true. Navigating to label: ${labelName}`
-        );
-        navigateToLabel(labelName);
-      } else {
-        // Handle other trueInstruction types if needed
-        console.log(
-          `True instruction '${trueInstruction}' is not a goto statement.`
-        );
-      }
-    } else {
-      const falseInstruction = decision.falseInstruction;
-      if (falseInstruction.startsWith("goto")) {
-        const labelName = falseInstruction.split(":")[1].trim();
-        console.log(
-          `Condition '${decision.condition}' is false. Navigating to label: ${labelName}`
-        );
-        navigateToLabel(labelName);
-      } else {
-        // Handle other falseInstruction types if needed
-        console.log(
-          `False instruction '${falseInstruction}' is not a goto statement.`
-        );
-      }
-    }
-  } else if (contentType === "gotoInstruction") {
-    const gotoInstruction = globalContentContainer[contentIndex].slides[0];
-    console.log(
-      `Goto instruction found. Navigating to label: ${gotoInstruction.targetLabel}`
-    );
-    navigateToLabel(gotoInstruction.targetLabel);
   }
 }
 
@@ -1029,37 +985,9 @@ function navigateContent(direction) {
     return;
   }
 
-  const currentContent = globalContentContainer[newIndex];
-  if (currentContent instanceof DecisionMaking) {
-    const instruction = currentContent.execute(assignation);
-    handleInstruction(instruction);
-  } else if (currentContent instanceof GotoInstruction) {
-    handleInstruction(currentContent.targetLabel);
-  } else {
-    displayContentInsideViewer(newIndex);
-  }
+  displayContentInsideViewer(newIndex);
 }
 
-function handleInstruction(instruction) {
-  const gotoRegex = /^goto\s+:(\S+)$/;
-  const match = instruction.match(gotoRegex);
-  if (match) {
-    const [, targetLabel] = match;
-    navigateToLabel(targetLabel);
-  } else {
-    console.error(`Unknown instruction: ${instruction}`);
-  }
-}
-
-function navigateToLabel(label) {
-  const labelIndex = getLabelIndex(label);
-  if (labelIndex !== -1) {
-    console.log(`Navigating to label: ${label} at index: ${labelIndex}`);
-    displayContentInsideViewer(labelIndex);
-  } else {
-    console.error(`Label ${label} not found.`);
-  }
-}
 function updateButtonStates() {
   // Enable or disable buttons based on the current index
   document.getElementById("prevButton").disabled = currentIndex <= 0;
