@@ -5,7 +5,7 @@
  * File Created: Wednesday, 3rd July 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Wednesday, 10th July 2024
+ * Last Modified: Thursday, 11th July 2024
  * Modified By: Steward OUADI
  */
 
@@ -58,8 +58,8 @@ set user.prop1 = 1
 
 
 
-if user.prop9 == 5 goto :helloBlock else goto :morningBlock
 echo prop1 value is: %user.prop1%
+if user.prop9 == 5 goto :helloBlock else goto :morningBlock
 
 
 
@@ -76,6 +76,7 @@ goto :lastSlideBlock
 defSlide morning { 
     <p>Morning.</p>
 } 
+echo just after morning bloc
 
 :lastSlideBlock
 defSlide last { 

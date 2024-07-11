@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 10th July 2024
+ * Last Modified: Thursday, 11th July 2024
  * Modified By: Steward OUADI
  */
 
@@ -357,11 +357,12 @@ function showPopup(message) {
 async function parseManifest(manifestContent) {
   const contentArray = [];
   const lines = manifestContent.split("\n");
-
   let currentDefSlideContent = [];
   let readingDefSlide = false;
-  let currentLabelName = "";
 
+  let labels = {}; // Store labels and their line indices
+
+  // First pass: Register labels
   for (let index = 0; index < lines.length; index++) {
     let line = lines[index].trim();
 
@@ -373,7 +374,30 @@ async function parseManifest(manifestContent) {
     ) {
       const labelMatch = line.match(/^:(\S+)/);
       if (labelMatch) {
+        const labelName = labelMatch[1];
+        labels[labelName] = index; // Save the label with its line index
+      }
+    }
+  }
+
+  console.log("Registered labels:", JSON.stringify(labels, null, 2));
+
+  let currentIndex = 0;
+  let currentLabelName = "";
+
+  // Second pass: Execute commands
+  while (currentIndex < lines.length) {
+    let line = lines[currentIndex].trim();
+
+    if (
+      line.startsWith(":") &&
+      !line.includes("slide") &&
+      !line.includes("test")
+    ) {
+      const labelMatch = line.match(/^:(\S+)/);
+      if (labelMatch) {
         currentLabelName = labelMatch[1];
+        currentIndex++;
         continue;
       }
     }
@@ -409,7 +433,8 @@ async function parseManifest(manifestContent) {
         console.log(
           `Starting defSlide with label name '${currentLabelName}' and slide name '${slideName}'`
         );
-        continue; // Skip the start line of defSlide to prevent '{' from being added
+        currentIndex++; // Skip the start line of defSlide to prevent '{' from being added
+        continue;
       }
     }
 
@@ -418,7 +443,7 @@ async function parseManifest(manifestContent) {
         currentDefSlideContent.push(line.slice(0, -1).trim());
         readingDefSlide = false;
         const hash = await generateHash(
-          index + currentDefSlideContent.join("")
+          currentIndex + currentDefSlideContent.join("")
         );
         contentArray.push(
           new VirtualSlide(
@@ -427,7 +452,7 @@ async function parseManifest(manifestContent) {
             slideName,
             currentDefSlideContent.join("\n"),
             currentDefSlideContent.join("\n"),
-            index,
+            currentIndex,
             currentLabelName
           )
         );
@@ -438,31 +463,67 @@ async function parseManifest(manifestContent) {
     }
 
     if (line.startsWith("if")) {
-      // Adjusted regex to match the given format, with 'goto' included in the instructions
       const ifRegex = /^if\s+(.+?)\s+goto\s+:(\w+)\s+else\s+goto\s+:(\w+)$/;
       const match = line.match(ifRegex);
       if (match) {
-        // Extracting the condition, true instruction, and false instruction from the matched result
         const [, condition, trueInstruction, falseInstruction] = match;
 
-        // Prepend 'goto :' to the instructions to retain original format
         const trueInstructionFormatted = `goto :${trueInstruction}`;
         const falseInstructionFormatted = `goto :${falseInstruction}`;
 
-        // Generating a unique hash for the line (this function should be defined elsewhere in your code)
-        const hash = await generateHash(index + line);
-
-        // Creating a new DecisionMaking object with the extracted values and pushing it to the contentArray
-        contentArray.push(
-          new DecisionMaking(
-            hash,
-            line,
-            condition,
-            trueInstructionFormatted,
-            falseInstructionFormatted,
-            index
-          )
+        const hash = await generateHash(currentIndex + line);
+        const decision = new DecisionMaking(
+          hash,
+          line,
+          condition,
+          trueInstructionFormatted,
+          falseInstructionFormatted,
+          currentIndex,
+          currentLabelName
         );
+        // contentArray.push();
+
+        if (decision.evaluate(assignation)) {
+          const trueInstruction = decision.trueInstruction;
+          if (trueInstruction.startsWith("goto")) {
+            const labelName = trueInstruction.split(":")[1].trim();
+            console.log(
+              `Condition '${decision.condition}' is true. Navigating to label: ${labelName}`
+            );
+            // navigateToLabel(labelName);
+            if (labels[labelName] !== undefined) {
+              currentIndex = labels[labelName];
+              continue; // Jump to the target label
+            } else {
+              console.error(`Label '${labelName}' not found.`);
+            }
+          } else {
+            // Handle other trueInstruction types if needed
+            console.log(
+              `True instruction '${trueInstruction}' is not a goto statement.`
+            );
+          }
+        } else {
+          const falseInstruction = decision.falseInstruction;
+          if (falseInstruction.startsWith("goto")) {
+            const labelName = falseInstruction.split(":")[1].trim();
+            console.log(
+              `Condition '${decision.condition}' is false. Navigating to label: ${labelName}`
+            );
+            // navigateToLabel(labelName);
+            if (labels[labelName] !== undefined) {
+              currentIndex = labels[labelName];
+              continue; // Jump to the target label
+            } else {
+              console.error(`Label '${labelName}' not found.`);
+            }
+          } else {
+            // Handle other falseInstruction types if needed
+            console.log(
+              `False instruction '${falseInstruction}' is not a goto statement.`
+            );
+          }
+        }
       }
     }
 
@@ -471,10 +532,16 @@ async function parseManifest(manifestContent) {
       const match = line.match(gotoRegex);
       if (match) {
         const [, targetLabel] = match;
-        const hash = await generateHash(index + line);
-        contentArray.push(new GotoInstruction(hash, line, targetLabel, index));
+        if (labels[targetLabel] !== undefined) {
+          currentIndex = labels[targetLabel];
+          currentLabelName = targetLabel;
+          continue; // Jump to the target label
+        } else {
+          console.error(`Label '${targetLabel}' not found.`);
+        }
       }
     }
+
     if (line.startsWith("slide") || line.startsWith("test")) {
       line = removeInlineComment(line); // Clean the line from inline comments first
       if (!readingDefSlide) {
@@ -483,7 +550,12 @@ async function parseManifest(manifestContent) {
           const match = line.match(regex);
           if (match) {
             const args = ["slide", "link", "slideNumberIfAny"];
-            const errorText = lineFormatChecker(line, regex, args, index + 1);
+            const errorText = lineFormatChecker(
+              line,
+              regex,
+              args,
+              currentIndex + 1
+            );
             if (errorText) {
               displayErrorText(errorText);
             } else {
@@ -496,8 +568,8 @@ async function parseManifest(manifestContent) {
               }
 
               await updateMarkdownSlides(link);
-
               // Check if there's a specified slide number or range.
+
               if (slideNumberIfAny) {
                 try {
                   let result = evaluateWithMathJs(slideNumberIfAny);
@@ -505,12 +577,12 @@ async function parseManifest(manifestContent) {
                   if (!Array.isArray(result)) {
                     result = [result];
                   }
-
                   // Flatten the result to handle any nested arrays
+
                   result = result.flat();
 
                   for (let num of result) {
-                    const hash = await generateHash(index, line, num);
+                    const hash = await generateHash(currentIndex, line, num);
                     const slideNumber = num - numberOfSyllabusSlide;
                     const currentMarkDownSlide =
                       markDownSlides.get(link)[slideNumber];
@@ -521,7 +593,7 @@ async function parseManifest(manifestContent) {
                         link,
                         num,
                         currentMarkDownSlide,
-                        index,
+                        currentIndex,
                         currentLabelName
                       )
                     );
@@ -532,14 +604,23 @@ async function parseManifest(manifestContent) {
                     `Error evaluating slideNumberIfAny '${slideNumberIfAny}': ${error}`
                   );
                   const errorText =
-                    "At line " + (index + 1) + ":" + error.message;
+                    "At line " + (currentIndex + 1) + ":" + error.message;
                   displayErrorText(errorText);
                 }
               } else {
                 // Handle lines without a specific slide number or range.
-                const hash = await generateHash(index, line, "");
+
+                const hash = await generateHash(currentIndex, line, "");
                 contentArray.push(
-                  new Slide(hash, line, link, "", "", index, currentLabelName)
+                  new Slide(
+                    hash,
+                    line,
+                    link,
+                    "",
+                    "",
+                    currentIndex,
+                    currentLabelName
+                  )
                 );
               }
             }
@@ -550,14 +631,14 @@ async function parseManifest(manifestContent) {
           if (match) {
             const [, , link] = match;
             const cleanLink = cleanUrl(link);
-            const hash = await generateHash(index + cleanLink);
+            const hash = await generateHash(currentIndex + cleanLink);
             contentArray.push(
               new TestSlide(
                 hash,
                 line,
                 cleanLink,
                 undefined,
-                index,
+                currentIndex,
                 currentLabelName
               )
             );
@@ -565,6 +646,8 @@ async function parseManifest(manifestContent) {
         }
       }
     }
+
+    currentIndex++;
   }
 
   console.log("Parsed contentArray:", JSON.stringify(contentArray, null, 2));
