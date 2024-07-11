@@ -346,6 +346,15 @@ function showPopup(message) {
   alert(message);
 }
 
+function gotoLabel(labelName, labels, currentIndex) {
+  if (labels[labelName] !== undefined) {
+    return { newIndex: labels[labelName], found: true };
+  } else {
+    console.error(`Label '${labelName}' not found.`);
+    return { newIndex: currentIndex, found: false };
+  }
+}
+
 /**
  * Asynchronously parses the manifest content, creating Slide objects for each valid line.
  * This function ensures lines not starting with "slide" are ignored and processes each valid line to create Slide objects,
@@ -481,48 +490,25 @@ async function parseManifest(manifestContent) {
           currentIndex,
           currentLabelName
         );
-        // contentArray.push();
 
-        if (decision.evaluate(assignation)) {
-          const trueInstruction = decision.trueInstruction;
-          if (trueInstruction.startsWith("goto")) {
-            const labelName = trueInstruction.split(":")[1].trim();
-            console.log(
-              `Condition '${decision.condition}' is true. Navigating to label: ${labelName}`
-            );
-            // navigateToLabel(labelName);
-            if (labels[labelName] !== undefined) {
-              currentIndex = labels[labelName];
-              continue; // Jump to the target label
-            } else {
-              console.error(`Label '${labelName}' not found.`);
-            }
-          } else {
-            // Handle other trueInstruction types if needed
-            console.log(
-              `True instruction '${trueInstruction}' is not a goto statement.`
-            );
+        let instruction = decision.evaluate(assignation)
+          ? decision.trueInstruction
+          : decision.falseInstruction;
+
+        if (instruction.startsWith("goto")) {
+          const labelName = instruction.split(":")[1].trim();
+          console.log(
+            `Condition '${decision.condition}' evaluated to ${decision.evaluate(
+              assignation
+            )}. Navigating to label: ${labelName}`
+          );
+          let { newIndex, found } = gotoLabel(labelName, labels, currentIndex);
+          if (found) {
+            currentIndex = newIndex;
+            continue; // Jump to the target label
           }
         } else {
-          const falseInstruction = decision.falseInstruction;
-          if (falseInstruction.startsWith("goto")) {
-            const labelName = falseInstruction.split(":")[1].trim();
-            console.log(
-              `Condition '${decision.condition}' is false. Navigating to label: ${labelName}`
-            );
-            // navigateToLabel(labelName);
-            if (labels[labelName] !== undefined) {
-              currentIndex = labels[labelName];
-              continue; // Jump to the target label
-            } else {
-              console.error(`Label '${labelName}' not found.`);
-            }
-          } else {
-            // Handle other falseInstruction types if needed
-            console.log(
-              `False instruction '${falseInstruction}' is not a goto statement.`
-            );
-          }
+          console.log(`Instruction '${instruction}' is not a goto statement.`);
         }
       }
     }
@@ -532,12 +518,11 @@ async function parseManifest(manifestContent) {
       const match = line.match(gotoRegex);
       if (match) {
         const [, targetLabel] = match;
-        if (labels[targetLabel] !== undefined) {
-          currentIndex = labels[targetLabel];
+        let { newIndex, found } = gotoLabel(targetLabel, labels, currentIndex);
+        if (found) {
+          currentIndex = newIndex;
           currentLabelName = targetLabel;
           continue; // Jump to the target label
-        } else {
-          console.error(`Label '${targetLabel}' not found.`);
         }
       }
     }
