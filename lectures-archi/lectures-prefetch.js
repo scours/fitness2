@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Monday, 24th June 2024
+ * Last Modified: Thursday, 18th July 2024
  * Modified By: Steward OUADI
  */
 
@@ -100,7 +100,7 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging",
-  `<h1>Principles of mass transfer - Mass transfer in food packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>permeation,migration,diffusion,sorption,desorption,partition,modeling</p><h4>Abstract</h4><p>Understanding mass transfer (diffusion, sorption/desorption, permeation, migration) is essential to the packaging designer, food and process engineer, risk assessor: Which material to choose (alone or in association)? Which thickness to reach a prescribed thickness? Are my specific migration levels acceptable? The considered solute/migrant/permeant can be a gas or an organic chemical. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/advanced-principles-of-mass-transfer-in-food-packaging.html#/2" id="lecture-button-advanced-principles-of-mass-transfer-in-food-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Mia Kurek</li></ul>`
+  `<h1>Advanced principles of mass transfer</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>permeation,migration,diffusion,sorption,desorption,partition,modeling</p><h4>Abstract</h4><p>Understanding mass transfer (diffusion, sorption/desorption, permeation, migration) is essential to the packaging designer, food and process engineer, risk assessor: Which material to choose (alone or in association)? Which thickness to reach a prescribed thickness? Are my specific migration levels acceptable? The considered solute/migrant/permeant can be a gas or an organic chemical. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/advanced-principles-of-mass-transfer-in-food-packaging.html#/2" id="lecture-button-advanced-principles-of-mass-transfer-in-food-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Mia Kurek</li></ul>`
 );
 lecturesDetails.set(
   "Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials",
@@ -470,8 +470,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Principles of mass transfer"><a
             href="#Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
             id="Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Principles of mass transfer - Mass
-            transfer in food packaging<i class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Advanced principles of mass transfer<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Calculation of permeability in composite systems">Calculation of permeability in composite
