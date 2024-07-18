@@ -5,7 +5,7 @@
  * File Created: Wednesday, 3rd July 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 11th July 2024
+ * Last Modified: Thursday, 18th July 2024
  * Modified By: Steward OUADI
  */
 
@@ -43,7 +43,7 @@ defSlide labelSlide1 {
 </div>
 } 
 
-
+set myProperty1 = 98
 set user.prop6 = (1:2)*3
 set user.prop7 = 1./(1:2) 
 set user.prop8 = [1,2].*[3,4]
@@ -59,7 +59,7 @@ set user.prop1 = 1
 
 
 echo prop1 value is: %user.prop1%
-if user.prop9 == 5 goto :helloBlock else goto :morningBlock
+if myProperty1 == 98 goto :helloBlock else goto :morningBlock
 
 
 

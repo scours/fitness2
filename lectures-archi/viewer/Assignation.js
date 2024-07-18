@@ -5,7 +5,7 @@
  * File Created: Friday, 16th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 1st July 2024
+ * Last Modified: Thursday, 18th July 2024
  * Modified By: Steward OUADI
  */
 
@@ -19,10 +19,20 @@ class Assignation {
     this.user = new VariableSpace();
     this.session = new VariableSpace();
     this.global = new VariableSpace();
+    this.allSpaces = new VariableSpace();
   }
 
   set(property, expression) {
-    const [space, name] = property.split(".");
+    const parts = property.split(".");
+    let space, name;
+
+    if (parts.length === 2) {
+      [space, name] = parts;
+    } else {
+      space = "allSpaces"; // Default to allSpaces if no space is defined
+      name = parts[0];
+    }
+
     const value = this.evaluateExpression(expression, space);
     this[space].set(name, value);
   }
@@ -36,6 +46,17 @@ class Assignation {
           return this[p1].get(p2);
         }
       );
+
+      // Handle entire word variable references without a space
+      expression = expression.replace(/\b([a-zA-Z0-9_]+)\b/g, (match) => {
+        // Skip if it looks like a number or contains a "."
+        if (!isNaN(match) || match.includes(".")) {
+          return match;
+        }
+        // Return the value from allSpaces if it exists
+        const value = this.allSpaces.get(match);
+        return value !== undefined ? value : match;
+      });
 
       // Handle special cases for non-numeric expressions
       if (/^[0-9]+x[0-9]+$/.test(expression)) {
