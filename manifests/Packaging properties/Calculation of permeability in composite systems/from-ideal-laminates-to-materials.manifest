@@ -1,6 +1,6 @@
 {
   "idx": 44,
-  "title": "Permeability in composites: from ideal laminates to materials with defects and dispersed particles.",
+  "title": "Calculation of permeability in composite systems.",
   "level": "specialized",
   "section": "S4",
   "unit": "U4.4",
@@ -8,7 +8,7 @@
   "part": "part1",
   "author": "Oliver Miesbauer",
   "institution": "TUM",
-  "abstract": "The results of diffusion/migration in multimaterial/multilayer are exemplified at steady state to derive effective permeabilities from composite systems.  -  level intermediate, advanced",
+  "abstract": "Permeability in composites: from ideal laminates to materials with defects and dispersed particles. The results of diffusion/migration in multimaterial/multilayer are exemplified at steady state to derive effective permeabilities from composite systems.  -  level intermediate, advanced",
   "topic": [
     "permeation",
     "diffusion",

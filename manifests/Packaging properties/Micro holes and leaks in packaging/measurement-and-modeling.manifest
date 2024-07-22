@@ -1,6 +1,6 @@
 {
   "idx": 46,
-  "title": "Micro holes and leaks in packaging – measurement and modeling",
+  "title": "Micro holes and leaks.",
   "level": "specialized",
   "section": "S4",
   "unit": "U4.6",
@@ -8,7 +8,7 @@
   "part": "part1",
   "author": "Frederic Debeaufort",
   "institution": "UB",
-  "abstract": "Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them? measure and simulate their effects. -  level intermediate, advanced",
+  "abstract": "Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them? measure and simulate their effects – measurement and modeling -  level intermediate, advanced",
   "topic": [
     "defects",
     "holes",

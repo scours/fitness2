@@ -1,6 +1,6 @@
 {
   "idx": 45,
-  "title": "Multicomponent diffusion: diffusion and solubility at molecular scale (overview) and in non-ideal systems",
+  "title": "Multicomponent diffusion & predictive models.",
   "level": "specialized",
   "section": "S4",
   "unit": "U4.5",
@@ -8,7 +8,7 @@
   "part": "part1",
   "author": "Olivier Vitrac",
   "institution": "INRAE",
-  "abstract": "Diffusion and solubility at molecular scale and in non-ideal systems: how to integrate them in mass transfer models? How to relate the chemical structure of diffusants with their diffusivity and chemical affinity in polymers? How do temperature and plasticizing activate diffusion? How to get robust estimates?   -   level intermediate, advanced",
+  "abstract": "Multicomponent diffusion: diffusion and solubility at molecular scale (overview) and in non-ideal systems. Diffusion and solubility at molecular scale and in non-ideal systems: how to integrate them in mass transfer models? How to relate the chemical structure of diffusants with their diffusivity and chemical affinity in polymers? How do temperature and plasticizing activate diffusion? How to get robust estimates?   -   level intermediate, advanced",
   "topic": [
     "diffusion",
     "migration",

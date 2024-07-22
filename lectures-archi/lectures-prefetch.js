@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 18th July 2024
+ * Last Modified: Monday, 22nd July 2024
  * Modified By: Steward OUADI
  */
 
@@ -104,19 +104,19 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials",
-  `<h1>Permeability in composites: from ideal laminates to materials with defects and dispersed particles.</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>permeation,diffusion,defects,holes,modeling</p><h4>Abstract</h4><p>The results of diffusion/migration in multimaterial/multilayer are exemplified at steady state to derive effective permeabilities from composite systems.  -  level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.4/part1.html#/2" id="lecture-button-from-ideal-laminates-to-materials" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Oliver Miesbauer</li></ul>`
+  `<h1>Calculation of permeability in composite systems.</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>permeation,diffusion,defects,holes,modeling</p><h4>Abstract</h4><p>Permeability in composites: from ideal laminates to materials with defects and dispersed particles. The results of diffusion/migration in multimaterial/multilayer are exemplified at steady state to derive effective permeabilities from composite systems.  -  level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.4/part1.html#/2" id="lecture-button-from-ideal-laminates-to-materials" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Oliver Miesbauer</li></ul>`
 );
 lecturesDetails.set(
   "Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale",
-  `<h1>Multicomponent diffusion: diffusion and solubility at molecular scale (overview) and in non-ideal systems</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>diffusion,migration,interactions,mechanical,activation</p><h4>Abstract</h4><p>Diffusion and solubility at molecular scale and in non-ideal systems: how to integrate them in mass transfer models? How to relate the chemical structure of diffusants with their diffusivity and chemical affinity in polymers? How do temperature and plasticizing activate diffusion? How to get robust estimates?   -   level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.5/part1.html#/2" id="lecture-button-diffusion-and-solubility-at-molecular-scale" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Olivier Vitrac</li></ul>`
+  `<h1>Multicomponent diffusion &amp; predictive models.</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>diffusion,migration,interactions,mechanical,activation</p><h4>Abstract</h4><p>Multicomponent diffusion: diffusion and solubility at molecular scale (overview) and in non-ideal systems. Diffusion and solubility at molecular scale and in non-ideal systems: how to integrate them in mass transfer models? How to relate the chemical structure of diffusants with their diffusivity and chemical affinity in polymers? How do temperature and plasticizing activate diffusion? How to get robust estimates?   -   level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.5/part1.html#/2" id="lecture-button-diffusion-and-solubility-at-molecular-scale" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Olivier Vitrac</li></ul>`
 );
 lecturesDetails.set(
   "Packaging properties/Micro holes and leaks in packaging/measurement-and-modeling",
-  `<h1>Micro holes and leaks in packaging – measurement and modeling</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>defects,holes,permeation,shelf-life,modeling,oxygen</p><h4>Abstract</h4><p>Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them? measure and simulate their effects. -  level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.6/part1.html#/2" id="lecture-button-measurement-and-modeling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Frederic Debeaufort</li></ul>`
+  `<h1>Micro holes and leaks.</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>defects,holes,permeation,shelf-life,modeling,oxygen</p><h4>Abstract</h4><p>Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them? measure and simulate their effects – measurement and modeling -  level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.6/part1.html#/2" id="lecture-button-measurement-and-modeling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Frederic Debeaufort</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/introduction-to-mechanical-processes",
-  `<h1>Introduction into mechanical processes in packaging</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>forming,filling,sealing,process,design,optimization</p><h4>Abstract</h4><p>The most important factors for a company: i) Product quality from the customer's point of view, ii) Compliance with legal requirements, iii) Profitability: costs vs. revenue. These factors are essentially determined by the packaging material and the packaging process. This lecture is an introduction to U8.2-U8.6.    - level basic, intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.1/part1.html#/2" id="lecture-button-introduction-to-mechanical-processes" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>Introduction into mechanical processes</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>forming,filling,sealing,process,design,optimization</p><h4>Abstract</h4><p>The most important factors for a company: i) Product quality from the customer's point of view, ii) Compliance with legal requirements, iii) Profitability: costs vs. revenue. These factors are essentially determined by the packaging material and the packaging process. This lecture is an introduction to U8.2-U8.6.    - level basic, intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.1/part1.html#/2" id="lecture-button-introduction-to-mechanical-processes" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/Forming/plastic-forming",
@@ -176,7 +176,7 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Shelf-life/Food packaging and shelf life/shelf-life-definitions",
-  `<h1>Definitions</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,consumer,acceptability,law</p><h4>Abstract</h4><p>Shelf-life is a concept covering many facets in food (please read §3.1 before)  - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part1.html#/2" id="lecture-button-shelf-life-definitions" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=shelfLifeStudy&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
+  `<h1>Defining shelf life</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,consumer,acceptability,law</p><h4>Abstract</h4><p>Shelf-life is a concept covering many facets in food (please read §3.1 before)  - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part1.html#/2" id="lecture-button-shelf-life-definitions" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=shelfLifeStudy&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
   "Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life",
@@ -185,7 +185,7 @@ The unit is divided into four sections. In the first section shelf life definiti
 );
 lecturesDetails.set(
   "Shelf-life/Food packaging and shelf life/study-shelf-life",
-  `<h1>How to study shelf life</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,temperature,time,activation</p><h4>Abstract</h4><p>The quality of most foods and beverages decreases with time. The length of time between processing and consumption, during which the product maintains an “acceptable” quality, is named shelf life.
+  `<h1>Shelf life study</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,temperature,time,activation</p><h4>Abstract</h4><p>The quality of most foods and beverages decreases with time. The length of time between processing and consumption, during which the product maintains an “acceptable” quality, is named shelf life.
 The unit is divided into four sections. In the first section shelf life definitions and related regulation aspects are discussed. The second section is focused on factors influencing the shelf life, such as product characteristics, food packaging and environment. The third section introduces accelerated shelf life testing. The last section gives the tools for the prediction of shelf life of packaged foods.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part3.html#/2" id="lecture-button-study-shelf-life" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
@@ -194,12 +194,12 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Shelf-life/Food packaging and shelf life/predict-shelf-life",
-  `<h1>How to calculate/predict shelf-life</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,prediction,degradation,microbiological,chemical</p><h4>Abstract</h4><p>The quality of most foods and beverages decreases with time. The length of time between processing and consumption, during which the product maintains an “acceptable” quality, is named shelf life.
+  `<h1>Predicting shelf life.</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,prediction,degradation,microbiological,chemical</p><h4>Abstract</h4><p>How to calculate/predict shelf-life. The quality of most foods and beverages decreases with time. The length of time between processing and consumption, during which the product maintains an “acceptable” quality, is named shelf life.
 The unit is divided into four sections. In the first section shelf life definitions and related regulation aspects are discussed. The second section is focused on factors influencing the shelf life, such as product characteristics, food packaging and environment. The third section introduces accelerated shelf life testing. The last section gives the tools for the prediction of shelf life of packaged foods.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part4.html#/2" id="lecture-button-predict-shelf-life" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
   "Shelf-life/interaction",
-  `<h1>Interaction</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p></p><h4>Abstract</h4><p>Food packaging interaction</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/food-packaging-interaction.html#/2" id="lecture-button-interaction" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Mario Scetar</li></ul>`
+  `<h1>Food-packaging interactions</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p></p><h4>Abstract</h4><p>Food packaging interaction</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/food-packaging-interaction.html#/2" id="lecture-button-interaction" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Mario Scetar</li></ul>`
 );
 lecturesDetails.set(
   "Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging",
@@ -267,7 +267,7 @@ The second part of this unit is dedicated to the recycling of plastics. In this 
 );
 lecturesDetails.set(
   "Recoverability/Safety assessment of recycling processes/overview",
-  `<h1>Overview</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>recycling,process,pet,bottles,risk</p><h4>Abstract</h4><p>The directive (EU) 2019/904 requires the phase out of single-use plastics, the generalization of recycling and the reuse of materials in contact with food. The recycling of materials for food contact is authorized in Europe and the USA but under certain conditions. These include the control of deposits, cleaning of polymers, mechanical or chemical recycling, and the implementation of good industrial practices within the framework of regulation (EU) 2023/2006. For health safety reasons, only mechanical recycling of PET is now widespread and complies with clearly defended standards (regulation (EU) 282/2008). This course explains the conditions for the evaluation of recycled PET (rPET): validation of a recycling process and of the utilization of the recycled material.    Level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.5/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  `<h1>Safety assessment of plastic recycling processes</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>recycling,process,pet,bottles,risk</p><h4>Abstract</h4><p>The directive (EU) 2019/904 requires the phase out of single-use plastics, the generalization of recycling and the reuse of materials in contact with food. The recycling of materials for food contact is authorized in Europe and the USA but under certain conditions. These include the control of deposits, cleaning of polymers, mechanical or chemical recycling, and the implementation of good industrial practices within the framework of regulation (EU) 2023/2006. For health safety reasons, only mechanical recycling of PET is now widespread and complies with clearly defended standards (regulation (EU) 282/2008). This course explains the conditions for the evaluation of recycled PET (rPET): validation of a recycling process and of the utilization of the recycled material.    Level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.5/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
   "Legislation/EU, US others regulations/regulatory-framework",
@@ -479,9 +479,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Calculation of permeability in composite systems"><a
             href="#Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials"
             id="Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Permeability in composites: from ideal
-            laminates to materials with defects and dispersed particles.<i
-                class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Calculation of permeability in
+            composite systems.<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Multicomponent diffusion, predictive models">Multicomponent diffusion, predictive models<i
@@ -489,9 +488,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Multicomponent diffusion, predictive models"><a
             href="#Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale"
             id="Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Multicomponent diffusion: diffusion and
-            solubility at molecular scale (overview) and in non-ideal systems<i
-                class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Multicomponent diffusion &amp;
+            predictive models.<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-Micro holes and leaks in packaging">Micro holes and leaks in packaging<i
@@ -499,8 +497,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Micro holes and leaks in packaging"><a
             href="#Packaging properties/Micro holes and leaks in packaging/measurement-and-modeling"
             id="Packaging properties/Micro holes and leaks in packaging/measurement-and-modeling"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Micro holes and leaks in packaging –
-            measurement and modeling<i class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Micro holes and leaks.<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Packaging processes">Packaging processes<i
@@ -511,7 +509,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-introduction-to-mechanical-processes"><a
             href="#Packaging processes/introduction-to-mechanical-processes"
             id="Packaging processes/introduction-to-mechanical-processes" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Introduction into mechanical processes in packaging<i
+            onclick="lectureToDisplay(this.id)">Introduction into mechanical processes<i
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
@@ -626,7 +624,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Food packaging and shelf life"><a
             href="#Shelf-life/Food packaging and shelf life/shelf-life-definitions"
             id="Shelf-life/Food packaging and shelf life/shelf-life-definitions" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Definitions<i class="fa fa-star star-color-yellow little-space"></i><i
+            onclick="lectureToDisplay(this.id)">Defining shelf life<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life"
@@ -637,7 +636,7 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Shelf-life/Food packaging and shelf life/study-shelf-life"
             id="Shelf-life/Food packaging and shelf life/study-shelf-life" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">How to study shelf life<i
+            onclick="lectureToDisplay(this.id)">Shelf life study<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
@@ -649,14 +648,15 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
                 class="fa fa-star-o star-color-green little-space"></i></a><a
             href="#Shelf-life/Food packaging and shelf life/predict-shelf-life"
             id="Shelf-life/Food packaging and shelf life/predict-shelf-life" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">How to calculate/predict shelf-life<i
+            onclick="lectureToDisplay(this.id)">Predicting shelf life.<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
         id="dropdown-btn-interaction">interaction<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-interaction"><a href="#Shelf-life/interaction"
             id="Shelf-life/interaction" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Interaction<i class="fa fa-star star-color-green little-space"></i><i
+            onclick="lectureToDisplay(this.id)">Food-packaging interactions<i
+                class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Environmental pollution">Environmental pollution<i
@@ -798,7 +798,8 @@ dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging m
     <div class="dropdown-container" id="dropdown-container-Safety assessment of recycling processes"><a
             href="#Recoverability/Safety assessment of recycling processes/overview"
             id="Recoverability/Safety assessment of recycling processes/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-yellow little-space"></i><i
+            onclick="lectureToDisplay(this.id)">Safety assessment of plastic recycling processes<i
+                class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div>
 </div><button class="dropdown-btn" id="dropdown-btn-Legislation">Legislation<i class="fa fa-caret-down"></i></button>
