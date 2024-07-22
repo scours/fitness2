@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 11th July 2024
+ * Last Modified: Monday, 22nd July 2024
  * Modified By: Steward OUADI
  */
 
@@ -16,17 +16,26 @@ let referenceURL = null;
 const slides = [];
 const assignation = new Assignation();
 
-function storeUserData() {
-  const firstName = document.getElementById("firstName").value;
-  const lastName = document.getElementById("lastName").value;
-  const email = document.getElementById("email").value;
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-  // Create a data object
-  const userData = {
-    FirstName: firstName,
-    LastName: lastName,
-    Email: email,
-  };
+function storeUserData() {
+  const form = document.querySelector("form[id]");
+  if (!form) return;
+
+  const elements = form.querySelectorAll("[id]");
+  const userData = {};
+
+  elements.forEach((element) => {
+    const id = element.id;
+    const value = element.value;
+    const capitalizedId = capitalizeFirstLetter(id);
+    userData[capitalizedId] = value;
+
+    // Store in allSpaces
+    assignation.allSpaces.set(id, value);
+  });
 
   // Convert the data object to JSON string
   const jsonString = JSON.stringify(userData);
@@ -50,16 +59,14 @@ function displayUserData() {
       // Parse the JSON string back to an object
       const userData = JSON.parse(decompressedData);
 
-      // Set values to input fields if they exist and the elements are available in the DOM
-      const firstNameElement = document.getElementById("firstName");
-      const lastNameElement = document.getElementById("lastName");
-      const emailElement = document.getElementById("email");
-
-      if (firstNameElement && userData.FirstName)
-        firstNameElement.value = userData.FirstName;
-      if (lastNameElement && userData.LastName)
-        lastNameElement.value = userData.LastName;
-      if (emailElement && userData.Email) emailElement.value = userData.Email;
+      // Update all input fields based on userData keys
+      Object.keys(userData).forEach((key) => {
+        const elementId = key.charAt(0).toLowerCase() + key.slice(1);
+        const element = document.getElementById(elementId);
+        if (element) {
+          element.value = userData[key];
+        }
+      });
 
       console.log("Data retrieved and displayed from local storage:", userData);
     } else {
@@ -961,16 +968,14 @@ function displayContentInsideViewer(contentIndex) {
     currentIndex = contentIndex;
     updateButtonStates();
 
-    const form = document.getElementById("userForm");
+    const form = document.querySelector("form[id]");
     if (form) {
-      const firstNameField = document.getElementById("firstName");
-      const lastNameField = document.getElementById("lastName");
-      const emailField = document.getElementById("email");
+      const elements = form.querySelectorAll("[id]");
+      elements.forEach((element) => {
+        // assignation.allSpaces.set(element.id, element.value);
 
-      if (firstNameField)
-        firstNameField.addEventListener("input", storeUserData);
-      if (lastNameField) lastNameField.addEventListener("input", storeUserData);
-      if (emailField) emailField.addEventListener("input", storeUserData);
+        element.addEventListener("input", storeUserData);
+      });
       displayUserData(); // Optionally display right after storing to confirm data integrity
     } else {
       console.log("The form element was not found!");
