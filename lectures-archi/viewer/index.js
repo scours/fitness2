@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 22nd July 2024
+ * Last Modified: Thursday, 25th July 2024
  * Modified By: Steward OUADI
  */
 
@@ -69,6 +69,35 @@ function displayUserData() {
       });
 
       console.log("Data retrieved and displayed from local storage:", userData);
+    } else {
+      console.error("Failed to decode or decompress user data.");
+    }
+  } else {
+    console.log("No data found in local storage.");
+  }
+}
+
+function loadUserDataIntoAssignation() {
+  const encodedData = localStorage.getItem("learnerData");
+  if (encodedData) {
+    // Decode and decompress the data
+    const decompressedData =
+      LZString.decompressFromEncodedURIComponent(encodedData);
+
+    if (decompressedData) {
+      // Parse the JSON string back to an object
+      const userData = JSON.parse(decompressedData);
+
+      // Store the user data in assignation.allSpaces
+      Object.keys(userData).forEach((key) => {
+        const elementId = key.charAt(0).toLowerCase() + key.slice(1);
+        assignation.allSpaces.set(elementId, userData[key]);
+      });
+
+      console.log(
+        "Data retrieved and stored in assignation.allSpaces from local storage:",
+        userData
+      );
     } else {
       console.error("Failed to decode or decompress user data.");
     }
@@ -462,16 +491,15 @@ async function parseManifest(manifestContent) {
           currentIndex + currentDefSlideContent.join("")
         );
         contentArray.push(
-          new VirtualSlide(
-            hash,
-            line,
-            slideName,
-            currentDefSlideContent.join("\n"),
-            currentDefSlideContent.join("\n"),
-            currentIndex,
-            currentLabelName
-          )
+          hash,
+          line,
+          slideName,
+          currentDefSlideContent.join("\n"),
+          currentDefSlideContent.join("\n"),
+          currentIndex,
+          currentLabelName
         );
+        loadUserDataIntoAssignation();
         currentDefSlideContent = [];
       } else {
         currentDefSlideContent.push(line);
