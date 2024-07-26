@@ -5,7 +5,7 @@
  * File Created: Tuesday, 20th February 2024
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 25th July 2024
+ * Last Modified: Friday, 26th July 2024
  * Modified By: Steward OUADI
  */
 
@@ -491,13 +491,15 @@ async function parseManifest(manifestContent) {
           currentIndex + currentDefSlideContent.join("")
         );
         contentArray.push(
-          hash,
-          line,
-          slideName,
-          currentDefSlideContent.join("\n"),
-          currentDefSlideContent.join("\n"),
-          currentIndex,
-          currentLabelName
+          new VirtualSlide(
+            hash,
+            line,
+            slideName,
+            currentDefSlideContent.join("\n"),
+            currentDefSlideContent.join("\n"),
+            currentIndex,
+            currentLabelName
+          )
         );
         loadUserDataIntoAssignation();
         currentDefSlideContent = [];

@@ -1,0 +1,50 @@
+/*
+ * File: manifest-default.txt
+ * Contract: EU contract 2022-FR01-KA220-HED-000023509
+ * Project: FitNESS 2 ERASMUS+
+ * File Created: Friday, 26th July 2024
+ * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
+ * -----
+ * Last Modified: Friday, 26th July 2024
+ * Modified By: Steward OUADI
+ */
+
+
+:: Introduction Slide with Form
+defSlide introductionSlide { 
+<div>
+    <h2>Welcome to the Food Packaging Course! 🎓</h2>
+    <br/>
+    <p>Before we begin, please fill out the form below to participate in our quizzes and track your progress.</p>
+    <br/>
+    <form id="userForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+    </form>
+</div>
+}
+
+
+:: Test Slide
+:: Syntax: test URL 
+test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=panoramaOfFoodPackaging&sessionId=1"
+
+:: Syntax: slide URL slidesToShow
+slide "https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html" [7:55]
+
+:: Test Slide
+:: Syntax: test URL 
+test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=panoramaOfFoodPackaging&sessionId=2"
+
+:: End of Course
+defSlide endSlide {
+<p>Thank you for completing this Food Packaging Course! 🎓 We hope you enjoyed it and learned a lot. See you next time! 🚀</p>
+}
+
