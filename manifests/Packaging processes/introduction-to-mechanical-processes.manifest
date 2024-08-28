@@ -1,14 +1,17 @@
 {
   "idx": 59,
-  "title": "Introduction into mechanical processes",
+  "title": "D-1 Introduction into mechanical processes",
   "level": "specialized",
   "section": "S8",
   "unit": "U8.1",
   "difficultyLevel": "Novice",
   "part": "part1",
-  "author": "Horst-Christian Langowski",
-  "institution": "TUM",
-  "abstract": "The most important factors for a company: i) Product quality from the customer's point of view, ii) Compliance with legal requirements, iii) Profitability: costs vs. revenue. These factors are essentially determined by the packaging material and the packaging process. This lecture is an introduction to U8.2-U8.6.    - level basic, intermediate",
+  "author": [
+    "Horst-Christian Langowski",
+    "Uta Weiß"
+  ],
+  "institution": "FHG",
+  "abstract": "The most important factors for a company are i) the product quality from the customers point of view, ii) the compliance with legal requirements, iii) the profitability (costs vs. revenue). These factors are essentially determined by the packaging material and the packaging process, which are the subject of this lecture. The terminology for packaging and packaging machines is also covered to allow for a basic understanding. Finally, the economic aspects that determine the process specific cost are addressed.\nThis lecture is an introduction to D-2 to D-9. - level basic, intermediate",
   "topic": [
     "forming",
     "filling",
@@ -32,5 +35,5 @@
     "packing",
     "wrapping"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.1/part1.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Introduction-into-mechanical-processes.html#/1"
 }

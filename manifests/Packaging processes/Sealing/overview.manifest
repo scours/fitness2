@@ -1,14 +1,17 @@
 {
   "idx": 62,
-  "title": "Closing, hot/cold sealing, welding, sealed seams and packages",
+  "title": "D-6 Sealing",
   "level": "specialized",
   "section": "S8",
   "unit": "U8.4",
   "difficultyLevel": "Intermediate",
   "part": "part1",
-  "author": "Horst-Christian Langowski",
-  "institution": "TUM",
-  "abstract": "The safety and wholesomeness of industrially processed food cannot be considered without a good seal. There is no point in paying for a barrier package if the closure is porous and allows gases (oxygen, water vapour) to pass through. This lecture details the systems of closing, sealing, sealing, gluing. Please refer to §4.6 for the defect analysis.      - level intermediate, advanced",
+  "author": [
+    "Horst-Christian Langowski",
+    "Uta Weiß"
+  ],
+  "institution": "FHG",
+  "abstract": "The safety and wholesomeness of industrially processed food cannot be considered without a well-closed package. The more general term of closing includes sealing for closing as a subset, which is dealt with in detail here. Similarity and differences between welding and sealing are elaborated.  In principle, the bonding of the joining partners is achieved by applying heat. Different options are used to generate the heat for the bonding process: Contact with a hot tool, radiation-induced heating, convection with hot gases and internal or external friction processes. Here, the temperature distribution in the sealing zone plays a special role. With cold sealing, it is also possible to carry out a joining process using only pressure without the effect of a higher temperature. However, this requires packaging surfaces that have been coated with special cold seal lacquers. The final requirements for these processes are the integrity and tightness of the seal, but also its strength against delamination. This lecture also deals with the special features of different types of sealed seams with regard to their tightness and the measurement of sealed seam tightness and sealed seam strength. Please refer to  xxx for the defect analysis.",
   "topic": [
     "sealing",
     "bag",
@@ -34,5 +37,5 @@
     "temperature",
     "welding"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.4/part1.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Sealing.html#/1"
 }
