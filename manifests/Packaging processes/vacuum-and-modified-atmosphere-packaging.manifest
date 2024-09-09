@@ -43,5 +43,6 @@
     "Packaging stability",
     "Retail studies"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Vacuum-and-Modified-Atmosphere-Packaging.html#/1"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Vacuum-and-Modified-Atmosphere-Packaging.html#/1",
+  "qAndAVariables":["Take a quiz = vacuumAndModifiedAtmospherePackaging"]
 }

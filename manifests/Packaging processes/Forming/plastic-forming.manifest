@@ -43,5 +43,6 @@
     "Deep drawing",
     "Packaging process"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Forming-of-pre-products.html#/1"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Forming-of-pre-products.html#/1",
+  "qAndAVariables":["Take a quiz = formingOfPreProducts"]
 }
