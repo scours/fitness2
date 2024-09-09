@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Monday, 22nd July 2024
+ * Last Modified: Monday, 9th September 2024
  * Modified By: Steward OUADI
  */
 
@@ -116,11 +116,12 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Packaging processes/introduction-to-mechanical-processes",
-  `<h1>Introduction into mechanical processes</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>forming,filling,sealing,process,design,optimization</p><h4>Abstract</h4><p>The most important factors for a company: i) Product quality from the customer's point of view, ii) Compliance with legal requirements, iii) Profitability: costs vs. revenue. These factors are essentially determined by the packaging material and the packaging process. This lecture is an introduction to U8.2-U8.6.    - level basic, intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.1/part1.html#/2" id="lecture-button-introduction-to-mechanical-processes" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>D-1 Introduction into mechanical processes</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>forming,filling,sealing,process,design,optimization</p><h4>Abstract</h4><p>The most important factors for a company are i) the product quality from the customers point of view, ii) the compliance with legal requirements, iii) the profitability (costs vs. revenue). These factors are essentially determined by the packaging material and the packaging process, which are the subject of this lecture. The terminology for packaging and packaging machines is also covered to allow for a basic understanding. Finally, the economic aspects that determine the process specific cost are addressed.
+This lecture is an introduction to D-2 to D-9. - level basic, intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Introduction-into-mechanical-processes.html#/1" id="lecture-button-introduction-to-mechanical-processes" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Uta Weiß</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/Forming/plastic-forming",
-  `<h1>Plastics forming</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>forming,thermoforming,erecting,line,process</p><h4>Abstract</h4><p>This lecture describes plastics forming processes that can be directly integrated into a packaging line: thermoforming, cold forming, erecting.     - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.2/part1.html#/2" id="lecture-button-plastic-forming" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>D-2 Forming of pre-products</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Packaging line processes,Pre-products in packaging,Thermoforming,Blow molding,Stretch blow molding,Cold forming,Erecting,Packaging materials</p><h4>Abstract</h4><p>In many cases, pre-products are used to obtain the final form to the package in a packaging line. The pre-products may either be films or sheets which are transformed from the 2-dimensional into a 3-dimensional state. Another type of the pre-products are 3-dimensional pre forms that are made by injection molding. They are supplied to a packaging line, where they are transformed further via stretch blow molding into the final container.  Metal foils in laminates with polymers or covered by lacquers may be formed into small containers via cold forming. Flat cardboard blanks (cut-outs) are transformed into cardboard folding boxes via a process called erecting. These forming processes (thermoforming via deep drawing, blow molding and stretch blow molding, cold forming, erecting) can be directly integrated into a packaging line and therefore become part of the packaging process.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Forming-of-pre-products.html#/1" id="lecture-button-plastic-forming" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=formingOfPreProducts&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Uta Weiß</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/Forming/films-and-sheets",
@@ -132,23 +133,27 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Packaging processes/Filling and dosing/principles",
-  `<h1>Principles</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>dosing,food,weight,statistical,calibration,legal,optimization</p><h4>Abstract</h4><p>How to fill small 25 g chip bags at a high rate and with a precise weight without breaking them. This is the challenge of filling packaging with solid food. The weight cannot be exact in relation to the printed value on the package, but it must absolutely be within precise tolerance values by legislation in place (European rules). This lecture presents the principles and their implementation for powdered dry food but also for ready meals that do not flow.    - level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.3/part1.html#/2" id="lecture-button-principles" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>D-4 Filling and dosing</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Filling packaging with solid dry food,Precise weight filling,Dosing and filling equipment,Compliance with regulatory limits,Gravimetric dosing,Volumetric dosing,Statistical verification of compliance,European regulations in packaging</p><h4>Abstract</h4><p>How to fill small 25 g chip bags at a high rate and with a precise weight without breaking the sensitive products? This is a specific challenge of filling packaging with solid dry food. But also liquid or pasty food has to obey one important principle: Even though the filled quantity cannot and does not have to correspond to the last decimal place to the value printed on the pack, it must be within the specified tolerance limits established by European regulations. This lecture describes the dosing and filling equipment for different products, the accuracy of their operation and the verification of compliance with the regulatory limits. Different types of dosing devices, working with gravimetric or volumetric principles are shown for different types of food outside the beverage area. The statistical basis for verifying the compliance with the limit values is also presented.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Filling-and-dosing.html#/1" id="lecture-button-principles" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=fillingAndDosing&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Uta Weiß</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/Filling and dosing/forming-filling-sealing",
-  `<h1>Forming, filling, sealing</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>forming,filling,sealing,food,thermoforming,modified atmosphere,aseptic</p><h4>Abstract</h4><p>Ready-to-eat foods are packaged in a variety of different shapes and sizes to suit the use and minimize food waste: bowls, cups, blister packs, bags... or simply wrapped in film. The aseptic packaging allows the conservation over several days or even weeks without heat treatment. Like modified atmosphere filling, it has its own constraints. In particular, the volume of air/atmosphere that must be maintained under strong aseptic constraints without affecting production rates or the safety of the final product must be minimized.        -  level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.6/part1.html#/2" id="lecture-button-forming-filling-sealing" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>D-7 Forming, filling and sealing machines</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Integrated packaging lines,Forming,filling,and sealing in one line,Flexible packaging,Machine efficiency in packaging,Transportation of flexible films,Force transmission in packaging machines,Deformation processes in packaging,Thermoforming,Mandrel folding,Wrapping in packaging</p><h4>Abstract</h4><p>In many cases, the forming, filling and sealing steps are combined in one single line. The negative impact on overall efficiency that can result from linking machines is more than compensated for by less effort for transportation and much better hygienic conditions. The lecture will focus on flexible packaging, the difficulties of transporting flexible films in the machine, in particular the aspects of force transmission and deformation processes. The lecture will also show the use of other processes for forming of packaging: thermoforming, folding on a mandrel or wrapping.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Forming-filling-and-sealing-machinery.html#/1" id="lecture-button-forming-filling-sealing" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=formingFillingAndSealingMachines&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Uta Weiß</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/Filling and dosing/beverage-filling",
-  `<h1>Beverage filling</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>filling,bottles,labels,aseptic,thermal,pressure,design,optimization</p><h4>Abstract</h4><p>The bottles are filled at speeds of several thousand or even tens of thousands of bottles per hour. The bottles are eventually cleaned, filled, heat treated (if necessary), labeled, cartoned and palletized in parallel. Not only does the bottle have to be filled with the right volume, but also the overpressure and usually negative pressure requirements have to be met. The constraints of asepticity/sanitization, leak tightness and air/oxygen removal are discussed in this course.    -  level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.5/part1.html#/2" id="lecture-button-beverage-filling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>D-5 Beverage filling</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>High-speed beverage filling,Bottle filling lines,Non-returnable containers,Returnable containers,Bottle filling process,Dosing of beverages,Low-oxygen filling,Bottle cleaning,Bottle closing,Bottle labeling,Secondary packaging,Unit load production</p><h4>Abstract</h4><p>Beverage containers are usually filled at speeds of several tens of thousands of bottles per hour. A bottle filling line, be it for non-returnable or returnable containers, comprises operations from de-stacking, bottle cleaning, filling, closing, labelling, followed by the steps for producing the secondary package and the unit load. From these steps, the most critical step, namely filling, is addressed in this lecture. Dosing of beverages and especially filling of rigid bottles under very low levels of oxygen are focused. Different ways for the subsequent steps of closing and labelling are also shown.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Beverage-Filling-lecture.pdf" id="lecture-button-beverage-filling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=beverageFilling&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Uta Weiß</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/Sealing/overview",
-  `<h1>Closing, hot/cold sealing, welding, sealed seams and packages</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>sealing,bag,blister,glue,adhesion,leaks,holes,adhesive</p><h4>Abstract</h4><p>The safety and wholesomeness of industrially processed food cannot be considered without a good seal. There is no point in paying for a barrier package if the closure is porous and allows gases (oxygen, water vapour) to pass through. This lecture details the systems of closing, sealing, sealing, gluing. Please refer to §4.6 for the defect analysis.      - level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.4/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>D-6 Sealing</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>sealing,bag,blister,glue,adhesion,leaks,holes,adhesive</p><h4>Abstract</h4><p>The safety and wholesomeness of industrially processed food cannot be considered without a well-closed package. The more general term of closing includes sealing for closing as a subset, which is dealt with in detail here. Similarity and differences between welding and sealing are elaborated.  In principle, the bonding of the joining partners is achieved by applying heat. Different options are used to generate the heat for the bonding process: Contact with a hot tool, radiation-induced heating, convection with hot gases and internal or external friction processes. Here, the temperature distribution in the sealing zone plays a special role. With cold sealing, it is also possible to carry out a joining process using only pressure without the effect of a higher temperature. However, this requires packaging surfaces that have been coated with special cold seal lacquers. The final requirements for these processes are the integrity and tightness of the seal, but also its strength against delamination. This lecture also deals with the special features of different types of sealed seams with regard to their tightness and the measurement of sealed seam tightness and sealed seam strength. Please refer to  xxx for the defect analysis.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Sealing.html#/1" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Uta Weiß</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/surface-treatments-and-coatings",
   `<h1>Surface treatment and coating principles and technologies.</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>coating,surface,process,materials,permeation,migration,recycling</p><h4>Abstract</h4><p>Surface treatments increase the surface energy of the packaging surface in order to maximize the contact surface area and the adhesion of adhesives, inks and coatings. Principles and available technologies are reviewed in this lecture.  -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.7/part1.html#/2" id="lecture-button-surface-treatments-and-coatings" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Mia Kurek</li></ul>`
+);
+lecturesDetails.set(
+  "Packaging processes/vacuum-and-modified-atmosphere-packaging",
+  `<h1>D-9 Vacuum and modified atmosphere packaging</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Stability of packed food,Modified atmosphere packaging (MAP),Vacuum packaging,Headspace modification,Active modification,Passive modification,Packaging machines and technology,Gas exchange in packaging,Evacuation of filled packaging,Gas mixtures in packaging,Gas permeation,Product stability in packaging,Gas composition for different products,Retail packaging studies</p><h4>Abstract</h4><p>To increase the stability of packed food, the atmosphere of the headspace may either be modified (modified atmosphere packaging, MAP) or it can be minimized (in vacuum packaging). The modification of the headspace may either be achieved via a dedicated gas exchange (the so-called active modification) or by the respiratory activity of the packed product (the passive modification, predominantly for fresh produce). Machines and technology for evacuating the filled packaging, optionally with subsequent exposure to a special gas mixture, or alternatively purging the still open packaging with a gas mixture, are presented and the basic facts are discussed. The processes happening in the package after closing and the interaction with the environment via gas permeation are also addressed. The gas composition for the best product stability differ from product to product. Studies are also shown on a selection of different products purchased in retail stores that have been packaged in this way.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Vacuum-and-Modified-Atmosphere-Packaging.html#/1" id="lecture-button-vacuum-and-modified-atmosphere-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=vacuumAndModifiedAtmospherePackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/Printing and labelling processes/overview",
@@ -345,627 +350,649 @@ lecturesDetails.set(
   "Modeling tools/Calculations using fluctuation theorems/overview",
   `<h1>Overview</h1><h4>Difficulty level</h4><span>Advanced<i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i></span><h4>Topics</h4><p>molecular,diffusion,partition,affinity,solubility,modeling,thermodynamics</p><h4>Abstract</h4><p>Properties related to free-energies (solubilities, activity coefficients, miscibility...) can be calculated by brute force calculations at atomistic scale assuming a disordered mixture at molecule scale.    -   level advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S6/U6.3/part1.html#/2" id="lecture-button-overview" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Olivier Vitrac</li></ul>`
 );
-dropDownMenuContent = `<button class="dropdown-btn" id="dropdown-btn-Packaging materials">Packaging materials<i
-        class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Packaging materials"><button class="dropdown-btn"
-        id="dropdown-btn-Introduction">Introduction<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Introduction"><a
-            href="#Packaging materials/Introduction/panorama-of-food-packaging-part-1"
-            id="Packaging materials/Introduction/panorama-of-food-packaging-part-1" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)"> Panorama of food packaging<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Packaging materials and shaping process">Packaging materials and shaping process<i
+dropDownMenuContent = `<div><button class="dropdown-btn" id="dropdown-btn-Packaging materials">Packaging materials<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Packaging materials and shaping process"><a
-            href="#Packaging materials/Packaging materials and shaping process/glass-packaging"
-            id="Packaging materials/Packaging materials and shaping process/glass-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Glass<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/metal-packaging"
-            id="Packaging materials/Packaging materials and shaping process/metal-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Metal<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/plastic-packaging"
-            id="Packaging materials/Packaging materials and shaping process/plastic-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Plastic<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/paper-and-paperboard"
-            id="Packaging materials/Packaging materials and shaping process/paper-and-paperboard"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Paper and paperboard<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/bio-based-materials"
-            id="Packaging materials/Packaging materials and shaping process/bio-based-materials"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Bio-based materials<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/cork-as-food-packaging"
-            id="Packaging materials/Packaging materials and shaping process/cork-as-food-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Cork<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging materials/Packaging materials and shaping process/wood-packaging"
-            id="Packaging materials/Packaging materials and shaping process/wood-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Wood<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Basic legal framework">Basic legal framework<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Basic legal framework"><a
-            href="#Packaging materials/Basic legal framework/legal-framework-overview"
-            id="Packaging materials/Basic legal framework/legal-framework-overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Basic legal framework (chemicals, contact material, environment,
-            consumer safety)<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Packaging design">Packaging design<i
-        class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Packaging design"><button class="dropdown-btn"
-        id="dropdown-btn-the-basics-of-mechanical-engineering-for-packaging-designer">the-basics-of-mechanical-engineering-for-packaging-designer<i
+    <div class="dropdown-container" id="dropdown-container-Packaging materials"><button class="dropdown-btn"
+            id="dropdown-btn-Introduction">Introduction<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Introduction"><a
+                href="#Packaging materials/Introduction/panorama-of-food-packaging-part-1"
+                id="Packaging materials/Introduction/panorama-of-food-packaging-part-1" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)"> Panorama of food packaging<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Packaging materials and shaping process">Packaging materials and shaping process<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Packaging materials and shaping process"><a
+                href="#Packaging materials/Packaging materials and shaping process/glass-packaging"
+                id="Packaging materials/Packaging materials and shaping process/glass-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Glass<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Packaging materials/Packaging materials and shaping process/metal-packaging"
+                id="Packaging materials/Packaging materials and shaping process/metal-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Metal<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Packaging materials/Packaging materials and shaping process/plastic-packaging"
+                id="Packaging materials/Packaging materials and shaping process/plastic-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Plastic<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Packaging materials/Packaging materials and shaping process/paper-and-paperboard"
+                id="Packaging materials/Packaging materials and shaping process/paper-and-paperboard"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Paper and paperboard<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Packaging materials/Packaging materials and shaping process/bio-based-materials"
+                id="Packaging materials/Packaging materials and shaping process/bio-based-materials"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Bio-based materials<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Packaging materials/Packaging materials and shaping process/cork-as-food-packaging"
+                id="Packaging materials/Packaging materials and shaping process/cork-as-food-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Cork<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Packaging materials/Packaging materials and shaping process/wood-packaging"
+                id="Packaging materials/Packaging materials and shaping process/wood-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Wood<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Basic legal framework">Basic legal framework<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Basic legal framework"><a
+                href="#Packaging materials/Basic legal framework/legal-framework-overview"
+                id="Packaging materials/Basic legal framework/legal-framework-overview" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Basic legal framework (chemicals, contact material, environment,
+                consumer safety)<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div>
+    </div><button class="dropdown-btn" id="dropdown-btn-Packaging design">Packaging design<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-the-basics-of-mechanical-engineering-for-packaging-designer">
-        <a href="#Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
-            id="Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mechanical design of packaging: an
-            introduction<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Packaging properties">Packaging properties<i
-        class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Packaging properties"><button class="dropdown-btn"
-        id="dropdown-btn-Thermal, mechanical and barrier properties">Thermal, mechanical and barrier properties<i
+    <div class="dropdown-container" id="dropdown-container-Packaging design"><button class="dropdown-btn"
+            id="dropdown-btn-the-basics-of-mechanical-engineering-for-packaging-designer">the-basics-of-mechanical-engineering-for-packaging-designer<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container"
+            id="dropdown-container-the-basics-of-mechanical-engineering-for-packaging-designer"><a
+                href="#Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
+                id="Packaging design/the-basics-of-mechanical-engineering-for-packaging-designer"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mechanical design of packaging: an
+                introduction<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div>
+    </div><button class="dropdown-btn" id="dropdown-btn-Packaging properties">Packaging properties<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Thermal, mechanical and barrier properties"><a
-            href="#Packaging properties/Thermal, mechanical and barrier properties/thermal-properties"
-            id="Packaging properties/Thermal, mechanical and barrier properties/thermal-properties"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Thermal properties: methods and
-            standards<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties"
-            id="Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mechanical properties: methods and
-            standards<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties"
-            id="Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mass transfer properties: methods and
-            standards<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging properties/Thermal, mechanical and barrier properties/optical-properties"
-            id="Packaging properties/Thermal, mechanical and barrier properties/optical-properties"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Optical properties: methods and
-            standards<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Packaging properties/Thermal, mechanical and barrier properties/surface-properties"
-            id="Packaging properties/Thermal, mechanical and barrier properties/surface-properties"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Surface properties: methods and
-            standards<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Chemical and physical">Chemical and physical<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Chemical and physical"><a
-            href="#Packaging properties/Chemical and physical/food-packaging-interaction"
-            id="Packaging properties/Chemical and physical/food-packaging-interaction" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Food packaging interaction<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Principles of mass transfer">Principles of mass transfer<i
+    <div class="dropdown-container" id="dropdown-container-Packaging properties"><button class="dropdown-btn"
+            id="dropdown-btn-Thermal, mechanical and barrier properties">Thermal, mechanical and barrier properties<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Thermal, mechanical and barrier properties"><a
+                href="#Packaging properties/Thermal, mechanical and barrier properties/thermal-properties"
+                id="Packaging properties/Thermal, mechanical and barrier properties/thermal-properties"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Thermal properties: methods and
+                standards<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties"
+                id="Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mechanical properties: methods and
+                standards<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties"
+                id="Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mass transfer properties: methods
+                and standards<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Packaging properties/Thermal, mechanical and barrier properties/optical-properties"
+                id="Packaging properties/Thermal, mechanical and barrier properties/optical-properties"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Optical properties: methods and
+                standards<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Packaging properties/Thermal, mechanical and barrier properties/surface-properties"
+                id="Packaging properties/Thermal, mechanical and barrier properties/surface-properties"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Surface properties: methods and
+                standards<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Chemical and physical">Chemical and physical<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Chemical and physical"><a
+                href="#Packaging properties/Chemical and physical/food-packaging-interaction"
+                id="Packaging properties/Chemical and physical/food-packaging-interaction"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Food packaging interaction<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Principles of mass transfer">Principles of mass transfer<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Principles of mass transfer"><a
+                href="#Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
+                id="Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Advanced principles of mass
+                transfer<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Calculation of permeability in composite systems">Calculation of permeability in composite
+            systems<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Calculation of permeability in composite systems"><a
+                href="#Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials"
+                id="Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Calculation of permeability in
+                composite systems.<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Multicomponent diffusion, predictive models">Multicomponent diffusion, predictive models<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Multicomponent diffusion, predictive models"><a
+                href="#Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale"
+                id="Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Multicomponent diffusion &amp;
+                predictive models.<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Micro holes and leaks in packaging">Micro holes and leaks in packaging<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Micro holes and leaks in packaging"><a
+                href="#Packaging properties/Micro holes and leaks in packaging/measurement-and-modeling"
+                id="Packaging properties/Micro holes and leaks in packaging/measurement-and-modeling"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Micro holes and leaks.<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div>
+    </div><button class="dropdown-btn" id="dropdown-btn-Packaging processes">Packaging processes<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Principles of mass transfer"><a
-            href="#Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
-            id="Packaging properties/Principles of mass transfer/advanced-principles-of-mass-transfer-in-food-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Advanced principles of mass transfer<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Calculation of permeability in composite systems">Calculation of permeability in composite
-        systems<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Calculation of permeability in composite systems"><a
-            href="#Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials"
-            id="Packaging properties/Calculation of permeability in composite systems/from-ideal-laminates-to-materials"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Calculation of permeability in
-            composite systems.<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Multicomponent diffusion, predictive models">Multicomponent diffusion, predictive models<i
+    <div class="dropdown-container" id="dropdown-container-Packaging processes"><button class="dropdown-btn"
+            id="dropdown-btn-introduction-to-mechanical-processes">introduction-to-mechanical-processes<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-introduction-to-mechanical-processes"><a
+                href="#Packaging processes/introduction-to-mechanical-processes"
+                id="Packaging processes/introduction-to-mechanical-processes" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">D-1 Introduction into mechanical processes<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Forming">Forming<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Forming"><a
+                href="#Packaging processes/Forming/plastic-forming" id="Packaging processes/Forming/plastic-forming"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">D-2 Forming of pre-products<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Packaging processes/Forming/films-and-sheets" id="Packaging processes/Forming/films-and-sheets"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Films and sheets<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-aseptic-packaging">aseptic-packaging<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-aseptic-packaging"><a
+                href="#Packaging processes/aseptic-packaging" id="Packaging processes/aseptic-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Aseptic packaging<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Filling and dosing">Filling and dosing<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Filling and dosing"><a
+                href="#Packaging processes/Filling and dosing/principles"
+                id="Packaging processes/Filling and dosing/principles" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">D-4 Filling and dosing<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Packaging processes/Filling and dosing/forming-filling-sealing"
+                id="Packaging processes/Filling and dosing/forming-filling-sealing" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">D-7 Forming, filling and sealing machines<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Packaging processes/Filling and dosing/beverage-filling"
+                id="Packaging processes/Filling and dosing/beverage-filling" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">D-5 Beverage filling<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Sealing">Sealing<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Sealing"><a href="#Packaging processes/Sealing/overview"
+                id="Packaging processes/Sealing/overview" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">D-6 Sealing<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-surface-treatments-and-coatings">surface-treatments-and-coatings<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-surface-treatments-and-coatings"><a
+                href="#Packaging processes/surface-treatments-and-coatings"
+                id="Packaging processes/surface-treatments-and-coatings" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Surface treatment and coating principles and technologies.<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-vacuum-and-modified-atmosphere-packaging">vacuum-and-modified-atmosphere-packaging<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-vacuum-and-modified-atmosphere-packaging"><a
+                href="#Packaging processes/vacuum-and-modified-atmosphere-packaging"
+                id="Packaging processes/vacuum-and-modified-atmosphere-packaging" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">D-9 Vacuum and modified atmosphere packaging<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Printing and labelling processes">Printing and labelling processes<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Printing and labelling processes"><a
+                href="#Packaging processes/Printing and labelling processes/overview"
+                id="Packaging processes/Printing and labelling processes/overview" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Printing and labelling processes<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Digitization of packaging processes">Digitization of packaging processes<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Digitization of packaging processes"><a
+                href="#Packaging processes/Digitization of packaging processes/overview"
+                id="Packaging processes/Digitization of packaging processes/overview" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Digitization of packaging processes<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Packaging line">Packaging line<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Packaging line"><a
+                href="#Packaging processes/Packaging line/optimization"
+                id="Packaging processes/Packaging line/optimization" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Optimization<i class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i></a><a
+                href="#Packaging processes/Packaging line/hygienic-design"
+                id="Packaging processes/Packaging line/hygienic-design" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Hygienic design<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div>
+    </div><button class="dropdown-btn" id="dropdown-btn-Shelf-life">Shelf-life<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container" id="dropdown-container-Shelf-life"><button class="dropdown-btn"
+            id="dropdown-btn-Food preservation technology and packaging">Food preservation technology and packaging<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Food preservation technology and packaging"><a
+                href="#Shelf-life/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies"
+                id="Shelf-life/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction to preservation and
+                packaging technologies<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Common physical chemical factors affecting food stability">Common physical chemical factors
+            affecting food stability<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container"
+            id="dropdown-container-Common physical chemical factors affecting food stability"><a
+                href="#Shelf-life/Common physical chemical factors affecting food stability/overview"
+                id="Shelf-life/Common physical chemical factors affecting food stability/overview"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview physical and chemical
+                processes impacting the shelf-life of food-products (processed or not)<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Food packaging and shelf life">Food packaging and shelf life<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Food packaging and shelf life"><a
+                href="#Shelf-life/Food packaging and shelf life/shelf-life-definitions"
+                id="Shelf-life/Food packaging and shelf life/shelf-life-definitions" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Defining shelf life<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life"
+                id="Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Factors affection shelf-life<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Shelf-life/Food packaging and shelf life/study-shelf-life"
+                id="Shelf-life/Food packaging and shelf life/study-shelf-life" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Shelf life study<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Shelf-life/Food packaging and shelf life/microbiological-assessment-of-food-and-packaging"
+                id="Shelf-life/Food packaging and shelf life/microbiological-assessment-of-food-and-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Microbiological assessment of food
+                and packaging<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a><a
+                href="#Shelf-life/Food packaging and shelf life/predict-shelf-life"
+                id="Shelf-life/Food packaging and shelf life/predict-shelf-life" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Predicting shelf life.<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-interaction">interaction<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-interaction"><a href="#Shelf-life/interaction"
+                id="Shelf-life/interaction" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Food-packaging interactions<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div>
+    </div><button class="dropdown-btn" id="dropdown-btn-Environmental pollution">Environmental pollution<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Multicomponent diffusion, predictive models"><a
-            href="#Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale"
-            id="Packaging properties/Multicomponent diffusion, predictive models/diffusion-and-solubility-at-molecular-scale"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Multicomponent diffusion &amp;
-            predictive models.<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Micro holes and leaks in packaging">Micro holes and leaks in packaging<i
+    <div class="dropdown-container" id="dropdown-container-Environmental pollution"><button class="dropdown-btn"
+            id="dropdown-btn-Methodologies used in life cycle assessment">Methodologies used in life cycle assessment<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Methodologies used in life cycle assessment"><a
+                href="#Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging"
+                id="Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Sustainability and Packaging - What
+                is suistainability? (part 1/2)<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Environmental pollution/Methodologies used in life cycle assessment/life-cycle-assessment"
+                id="Environmental pollution/Methodologies used in life cycle assessment/life-cycle-assessment"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Sustainability and Packaging - Life
+                Cycle Assessment (part 2/2)<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Tools for life cycle impact assessment">Tools for life cycle impact assessment<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Tools for life cycle impact assessment"><a
+                href="#Environmental pollution/Tools for life cycle impact assessment/overview"
+                id="Environmental pollution/Tools for life cycle impact assessment/overview"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Glass food contact material recycling">Glass food contact material recycling<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Glass food contact material recycling"><a
+                href="#Environmental pollution/Glass food contact material recycling/glass-food-contact-material-recycling"
+                id="Environmental pollution/Glass food contact material recycling/glass-food-contact-material-recycling"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Glass food contact material
+                recycling<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Metal food contact material recycling">Metal food contact material recycling<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Metal food contact material recycling"><a
+                href="#Environmental pollution/Metal food contact material recycling/metal-food-contact-material-recycling"
+                id="Environmental pollution/Metal food contact material recycling/metal-food-contact-material-recycling"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Metal food contact material
+                recycling<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Biodegradation and microplastics">Biodegradation and microplastics<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Biodegradation and microplastics"><a
+                href="#Environmental pollution/Biodegradation and microplastics/overview"
+                id="Environmental pollution/Biodegradation and microplastics/overview" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div>
+    </div><button class="dropdown-btn" id="dropdown-btn-Marketing and design">Marketing and design<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Micro holes and leaks in packaging"><a
-            href="#Packaging properties/Micro holes and leaks in packaging/measurement-and-modeling"
-            id="Packaging properties/Micro holes and leaks in packaging/measurement-and-modeling"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Micro holes and leaks.<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Packaging processes">Packaging processes<i
-        class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Packaging processes"><button class="dropdown-btn"
-        id="dropdown-btn-introduction-to-mechanical-processes">introduction-to-mechanical-processes<i
+    <div class="dropdown-container" id="dropdown-container-Marketing and design"><button class="dropdown-btn"
+            id="dropdown-btn-Sensory science">Sensory science<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Sensory science"><a
+                href="#Marketing and design/Sensory science/sensory-science"
+                id="Marketing and design/Sensory science/sensory-science" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Sensory science<i
+                    class="fa fa-star star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i><i
+                    class="fa fa-star-o star-color-green little-space"></i></a></div>
+    </div><button class="dropdown-btn" id="dropdown-btn-Innovations">Innovations<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-introduction-to-mechanical-processes"><a
-            href="#Packaging processes/introduction-to-mechanical-processes"
-            id="Packaging processes/introduction-to-mechanical-processes" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Introduction into mechanical processes<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Forming">Forming<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Forming"><a
-            href="#Packaging processes/Forming/plastic-forming" id="Packaging processes/Forming/plastic-forming"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Plastics forming<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Packaging processes/Forming/films-and-sheets" id="Packaging processes/Forming/films-and-sheets"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Films and sheets<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-aseptic-packaging">aseptic-packaging<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-aseptic-packaging"><a
-            href="#Packaging processes/aseptic-packaging" id="Packaging processes/aseptic-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Aseptic packaging<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Filling and dosing">Filling and dosing<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Filling and dosing"><a
-            href="#Packaging processes/Filling and dosing/principles"
-            id="Packaging processes/Filling and dosing/principles" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Principles<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Packaging processes/Filling and dosing/forming-filling-sealing"
-            id="Packaging processes/Filling and dosing/forming-filling-sealing" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Forming, filling, sealing<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Packaging processes/Filling and dosing/beverage-filling"
-            id="Packaging processes/Filling and dosing/beverage-filling" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Beverage filling<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Sealing">Sealing<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Sealing"><a href="#Packaging processes/Sealing/overview"
-            id="Packaging processes/Sealing/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Closing, hot/cold sealing, welding, sealed seams and packages<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-surface-treatments-and-coatings">surface-treatments-and-coatings<i
+    <div class="dropdown-container" id="dropdown-container-Innovations"><button class="dropdown-btn"
+            id="dropdown-btn-Biobased and biodegradable materials">Biobased and biodegradable materials<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Biobased and biodegradable materials"><a
+                href="#Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics"
+                id="Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Active packaging">Active packaging<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Active packaging"><a
+                href="#Innovations/Active packaging/overview" id="Innovations/Active packaging/overview"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview and principles<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Smart packaging">Smart packaging<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Smart packaging"><a
+                href="#Innovations/Smart packaging/overview" id="Innovations/Smart packaging/overview"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">From principles to commercially
+                available intelligent packaging systems<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Nanotechnology strategies">Nanotechnology strategies<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Nanotechnology strategies"><a
+                href="#Innovations/Nanotechnology strategies/definitions"
+                id="Innovations/Nanotechnology strategies/definitions" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Definitions, nano-scale additives, examples of gains and
+                applications.<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Bacterial polyesters">Bacterial polyesters<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Bacterial polyesters"><a
+                href="#Innovations/Bacterial polyesters/bacterial-polyesters"
+                id="Innovations/Bacterial polyesters/bacterial-polyesters" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Bacterial Polyesters<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Advanced cellulosic materials">Advanced cellulosic materials<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Advanced cellulosic materials"><a
+                href="#Innovations/Advanced cellulosic materials/advanced-cellulosic-materials-for-food-packaging"
+                id="Innovations/Advanced cellulosic materials/advanced-cellulosic-materials-for-food-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Advanced cellulosic materials for
+                food packaging<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Modified atmosphere packaging">Modified atmosphere packaging<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Modified atmosphere packaging"><a
+                href="#Innovations/Modified atmosphere packaging/modified-atmosphere-packaging"
+                id="Innovations/Modified atmosphere packaging/modified-atmosphere-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Modified atmosphere packaging <i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i></a></div>
+    </div><button class="dropdown-btn" id="dropdown-btn-Recoverability">Recoverability<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-surface-treatments-and-coatings"><a
-            href="#Packaging processes/surface-treatments-and-coatings"
-            id="Packaging processes/surface-treatments-and-coatings" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Surface treatment and coating principles and technologies.<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Printing and labelling processes">Printing and labelling processes<i
+    <div class="dropdown-container" id="dropdown-container-Recoverability"><button class="dropdown-btn"
+            id="dropdown-btn-Environmental impact of plastics and recycling">Environmental impact of plastics and
+            recycling<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Environmental impact of plastics and recycling"><a
+                href="#Recoverability/Environmental impact of plastics and recycling/overview"
+                id="Recoverability/Environmental impact of plastics and recycling/overview"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Safety assessment of recycling processes">Safety assessment of recycling processes<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Safety assessment of recycling processes"><a
+                href="#Recoverability/Safety assessment of recycling processes/overview"
+                id="Recoverability/Safety assessment of recycling processes/overview" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Safety assessment of plastic recycling processes<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div>
+    </div><button class="dropdown-btn" id="dropdown-btn-Legislation">Legislation<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Printing and labelling processes"><a
-            href="#Packaging processes/Printing and labelling processes/overview"
-            id="Packaging processes/Printing and labelling processes/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Printing and labelling processes<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Digitization of packaging processes">Digitization of packaging processes<i
+    <div class="dropdown-container" id="dropdown-container-Legislation"><button class="dropdown-btn"
+            id="dropdown-btn-EU, US others regulations">EU, US others regulations<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-EU, US others regulations"><a
+                href="#Legislation/EU, US others regulations/regulatory-framework"
+                id="Legislation/EU, US others regulations/regulatory-framework" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Regulatory framework in the EU and the US<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-GMP and quality assurance standards">GMP and quality assurance standards<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-GMP and quality assurance standards"><a
+                href="#Legislation/GMP and quality assurance standards/safety-and-quality-management-system"
+                id="Legislation/GMP and quality assurance standards/safety-and-quality-management-system"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">GMP, Safety, Quality management
+                system, Responsibilities and Certification<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Universe of food contact chemicals">Universe of food contact chemicals<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Universe of food contact chemicals"><a
+                href="#Legislation/Universe of food contact chemicals/universe-of-food-contact-chemicals"
+                id="Legislation/Universe of food contact chemicals/universe-of-food-contact-chemicals"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Universe of food contact
+                chemicals<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Hazard identification and characterization">Hazard identification and characterization<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Hazard identification and characterization"><a
+                href="#Legislation/Hazard identification and characterization/introduction"
+                id="Legislation/Hazard identification and characterization/introduction"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Legislation/Hazard identification and characterization/identification"
+                id="Legislation/Hazard identification and characterization/identification"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Identification<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Legislation/Hazard identification and characterization/characterization"
+                id="Legislation/Hazard identification and characterization/characterization"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Characterization<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Exposure and risk assessment">Exposure and risk assessment<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Exposure and risk assessment"><a
+                href="#Legislation/Exposure and risk assessment/exposure-and-risk-assessment"
+                id="Legislation/Exposure and risk assessment/exposure-and-risk-assessment"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Exposure and risk assessment<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Risk assessment tools">Risk assessment tools<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Risk assessment tools"><a
+                href="#Legislation/Risk assessment tools/risk-assessment-tools"
+                id="Legislation/Risk assessment tools/risk-assessment-tools" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Risk assessment tools<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div>
+    </div><button class="dropdown-btn" id="dropdown-btn-Modeling tools">Modeling tools<i
             class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Digitization of packaging processes"><a
-            href="#Packaging processes/Digitization of packaging processes/overview"
-            id="Packaging processes/Digitization of packaging processes/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Digitization of packaging processes<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Packaging line">Packaging line<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Packaging line"><a
-            href="#Packaging processes/Packaging line/optimization" id="Packaging processes/Packaging line/optimization"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Optimization<i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a><a
-            href="#Packaging processes/Packaging line/hygienic-design"
-            id="Packaging processes/Packaging line/hygienic-design" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Hygienic design<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Shelf-life">Shelf-life<i class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Shelf-life"><button class="dropdown-btn"
-        id="dropdown-btn-Food preservation technology and packaging">Food preservation technology and packaging<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Food preservation technology and packaging"><a
-            href="#Shelf-life/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies"
-            id="Shelf-life/Food preservation technology and packaging/introduction-to-preservation-and-packaging-technologies"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction to preservation and
-            packaging technologies<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Common physical chemical factors affecting food stability">Common physical chemical factors
-        affecting food stability<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Common physical chemical factors affecting food stability"><a
-            href="#Shelf-life/Common physical chemical factors affecting food stability/overview"
-            id="Shelf-life/Common physical chemical factors affecting food stability/overview"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview physical and chemical
-            processes impacting the shelf-life of food-products (processed or not)<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Food packaging and shelf life">Food packaging and shelf life<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Food packaging and shelf life"><a
-            href="#Shelf-life/Food packaging and shelf life/shelf-life-definitions"
-            id="Shelf-life/Food packaging and shelf life/shelf-life-definitions" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Defining shelf life<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life"
-            id="Shelf-life/Food packaging and shelf life/factors-affecting-shelf-life" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Factors affection shelf-life<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Shelf-life/Food packaging and shelf life/study-shelf-life"
-            id="Shelf-life/Food packaging and shelf life/study-shelf-life" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Shelf life study<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Shelf-life/Food packaging and shelf life/microbiological-assessment-of-food-and-packaging"
-            id="Shelf-life/Food packaging and shelf life/microbiological-assessment-of-food-and-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Microbiological assessment of food and
-            packaging<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Shelf-life/Food packaging and shelf life/predict-shelf-life"
-            id="Shelf-life/Food packaging and shelf life/predict-shelf-life" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Predicting shelf life.<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-interaction">interaction<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-interaction"><a href="#Shelf-life/interaction"
-            id="Shelf-life/interaction" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Food-packaging interactions<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Environmental pollution">Environmental pollution<i
-        class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Environmental pollution"><button class="dropdown-btn"
-        id="dropdown-btn-Methodologies used in life cycle assessment">Methodologies used in life cycle assessment<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Methodologies used in life cycle assessment"><a
-            href="#Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging"
-            id="Environmental pollution/Methodologies used in life cycle assessment/sustainability-and-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Sustainability and Packaging - What is
-            suistainability? (part 1/2)<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Environmental pollution/Methodologies used in life cycle assessment/life-cycle-assessment"
-            id="Environmental pollution/Methodologies used in life cycle assessment/life-cycle-assessment"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Sustainability and Packaging - Life
-            Cycle Assessment (part 2/2)<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Tools for life cycle impact assessment">Tools for life cycle impact assessment<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Tools for life cycle impact assessment"><a
-            href="#Environmental pollution/Tools for life cycle impact assessment/overview"
-            id="Environmental pollution/Tools for life cycle impact assessment/overview"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Glass food contact material recycling">Glass food contact material recycling<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Glass food contact material recycling"><a
-            href="#Environmental pollution/Glass food contact material recycling/glass-food-contact-material-recycling"
-            id="Environmental pollution/Glass food contact material recycling/glass-food-contact-material-recycling"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Glass food contact material recycling<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Metal food contact material recycling">Metal food contact material recycling<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Metal food contact material recycling"><a
-            href="#Environmental pollution/Metal food contact material recycling/metal-food-contact-material-recycling"
-            id="Environmental pollution/Metal food contact material recycling/metal-food-contact-material-recycling"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Metal food contact material recycling<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Biodegradation and microplastics">Biodegradation and microplastics<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Biodegradation and microplastics"><a
-            href="#Environmental pollution/Biodegradation and microplastics/overview"
-            id="Environmental pollution/Biodegradation and microplastics/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Marketing and design">Marketing and design<i
-        class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Marketing and design"><button class="dropdown-btn"
-        id="dropdown-btn-Sensory science">Sensory science<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Sensory science"><a
-            href="#Marketing and design/Sensory science/sensory-science"
-            id="Marketing and design/Sensory science/sensory-science" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Sensory science<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Innovations">Innovations<i class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Innovations"><button class="dropdown-btn"
-        id="dropdown-btn-Biobased and biodegradable materials">Biobased and biodegradable materials<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Biobased and biodegradable materials"><a
-            href="#Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics"
-            id="Innovations/Biobased and biodegradable materials/from-polymers-to-bioplastics"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Active packaging">Active packaging<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Active packaging"><a
-            href="#Innovations/Active packaging/overview" id="Innovations/Active packaging/overview"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview and principles<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Smart packaging">Smart packaging<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Smart packaging"><a
-            href="#Innovations/Smart packaging/overview" id="Innovations/Smart packaging/overview"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">From principles to commercially
-            available intelligent packaging systems<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Nanotechnology strategies">Nanotechnology strategies<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Nanotechnology strategies"><a
-            href="#Innovations/Nanotechnology strategies/definitions"
-            id="Innovations/Nanotechnology strategies/definitions" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Definitions, nano-scale additives, examples of gains and applications.<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Bacterial polyesters">Bacterial polyesters<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Bacterial polyesters"><a
-            href="#Innovations/Bacterial polyesters/bacterial-polyesters"
-            id="Innovations/Bacterial polyesters/bacterial-polyesters" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Bacterial Polyesters<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Advanced cellulosic materials">Advanced cellulosic materials<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Advanced cellulosic materials"><a
-            href="#Innovations/Advanced cellulosic materials/advanced-cellulosic-materials-for-food-packaging"
-            id="Innovations/Advanced cellulosic materials/advanced-cellulosic-materials-for-food-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Advanced cellulosic materials for food
-            packaging<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Modified atmosphere packaging">Modified atmosphere packaging<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Modified atmosphere packaging"><a
-            href="#Innovations/Modified atmosphere packaging/modified-atmosphere-packaging"
-            id="Innovations/Modified atmosphere packaging/modified-atmosphere-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Modified atmosphere packaging <i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Recoverability">Recoverability<i
-        class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Recoverability"><button class="dropdown-btn"
-        id="dropdown-btn-Environmental impact of plastics and recycling">Environmental impact of plastics and
-        recycling<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Environmental impact of plastics and recycling"><a
-            href="#Recoverability/Environmental impact of plastics and recycling/overview"
-            id="Recoverability/Environmental impact of plastics and recycling/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Safety assessment of recycling processes">Safety assessment of recycling processes<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Safety assessment of recycling processes"><a
-            href="#Recoverability/Safety assessment of recycling processes/overview"
-            id="Recoverability/Safety assessment of recycling processes/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Safety assessment of plastic recycling processes<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Legislation">Legislation<i class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Legislation"><button class="dropdown-btn"
-        id="dropdown-btn-EU, US others regulations">EU, US others regulations<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-EU, US others regulations"><a
-            href="#Legislation/EU, US others regulations/regulatory-framework"
-            id="Legislation/EU, US others regulations/regulatory-framework" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Regulatory framework in the EU and the US<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-GMP and quality assurance standards">GMP and quality assurance standards<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-GMP and quality assurance standards"><a
-            href="#Legislation/GMP and quality assurance standards/safety-and-quality-management-system"
-            id="Legislation/GMP and quality assurance standards/safety-and-quality-management-system"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">GMP, Safety, Quality management system,
-            Responsibilities and Certification<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Universe of food contact chemicals">Universe of food contact chemicals<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Universe of food contact chemicals"><a
-            href="#Legislation/Universe of food contact chemicals/universe-of-food-contact-chemicals"
-            id="Legislation/Universe of food contact chemicals/universe-of-food-contact-chemicals"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Universe of food contact chemicals<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Hazard identification and characterization">Hazard identification and characterization<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Hazard identification and characterization"><a
-            href="#Legislation/Hazard identification and characterization/introduction"
-            id="Legislation/Hazard identification and characterization/introduction" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Introduction<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Legislation/Hazard identification and characterization/identification"
-            id="Legislation/Hazard identification and characterization/identification" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Identification<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Legislation/Hazard identification and characterization/characterization"
-            id="Legislation/Hazard identification and characterization/characterization"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Characterization<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Exposure and risk assessment">Exposure and risk assessment<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Exposure and risk assessment"><a
-            href="#Legislation/Exposure and risk assessment/exposure-and-risk-assessment"
-            id="Legislation/Exposure and risk assessment/exposure-and-risk-assessment" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Exposure and risk assessment<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Risk assessment tools">Risk assessment tools<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Risk assessment tools"><a
-            href="#Legislation/Risk assessment tools/risk-assessment-tools"
-            id="Legislation/Risk assessment tools/risk-assessment-tools" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Risk assessment tools<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div>
-</div><button class="dropdown-btn" id="dropdown-btn-Modeling tools">Modeling tools<i
-        class="fa fa-caret-down"></i></button>
-<div class="dropdown-container" id="dropdown-container-Modeling tools"><button class="dropdown-btn"
-        id="dropdown-btn-Migration modeling for monomaterials">Migration modeling for monomaterials<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Migration modeling for monomaterials"><a
-            href="#Modeling tools/Migration modeling for monomaterials/mass-transfer-modeling"
-            id="Modeling tools/Migration modeling for monomaterials/mass-transfer-modeling"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Theory and case studies<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Modeling for multi-materials, multi-steps process">Modeling for multi-materials, multi-steps
-        process<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Modeling for multi-materials, multi-steps process"><a
-            href="#Modeling tools/Modeling for multi-materials, multi-steps process/mass-transfer-for-multi-materials"
-            id="Modeling tools/Modeling for multi-materials, multi-steps process/mass-transfer-for-multi-materials"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Theory and case studies<i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Introduction to decision theory and risk management">Introduction to decision theory and risk
-        management<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Introduction to decision theory and risk management"><a
-            href="#Modeling tools/Introduction to decision theory and risk management/introduction"
-            id="Modeling tools/Introduction to decision theory and risk management/introduction"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Managing uncertainty by intervals and worst-case scenarios">Managing uncertainty by intervals
-        and worst-case scenarios<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Managing uncertainty by intervals and worst-case scenarios">
-        <a href="#Modeling tools/Managing uncertainty by intervals and worst-case scenarios/monotonic-calculations"
-            id="Modeling tools/Managing uncertainty by intervals and worst-case scenarios/monotonic-calculations"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Principles of monotonic (conservative)
-            calculations of migration in presence of uncertainty.<i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Probabilistic approaches and Bayesian approaches">Probabilistic approaches and Bayesian
-        approaches<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Probabilistic approaches and Bayesian approaches"><a
-            href="#Modeling tools/Probabilistic approaches and Bayesian approaches/descriptions"
-            id="Modeling tools/Probabilistic approaches and Bayesian approaches/descriptions"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Descriptions of migration<i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-History and principles of FMEA-FMECA">History and principles of FMEA-FMECA<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-History and principles of FMEA-FMECA"><a
-            href="#Modeling tools/History and principles of FMEA-FMECA/fmeca-approaches"
-            id="Modeling tools/History and principles of FMEA-FMECA/fmeca-approaches" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Approaches, link with regulation 2023/2006/EC<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Diagram-based approaches">Diagram-based approaches<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Diagram-based approaches"><a
-            href="#Modeling tools/Diagram-based approaches/overview"
-            id="Modeling tools/Diagram-based approaches/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">FMECA modeling<i class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Computer-aided approaches">Computer-aided approaches<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Computer-aided approaches"><a
-            href="#Modeling tools/Computer-aided approaches/overview"
-            id="Modeling tools/Computer-aided approaches/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">FMECA approaches (application to mass transfer problems)<i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Principles (forcefields, statistical-ensembles), overview of online databases">Principles
-        (forcefields, statistical-ensembles), overview of online databases<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container"
-        id="dropdown-container-Principles (forcefields, statistical-ensembles), overview of online databases"><a
-            href="#Modeling tools/Principles (forcefields, statistical-ensembles), overview of online databases/overview"
-            id="Modeling tools/Principles (forcefields, statistical-ensembles), overview of online databases/overview"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview<i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Microscopic theories of transport coefficients and free-energies">Microscopic theories of
-        transport coefficients and free-energies<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container"
-        id="dropdown-container-Microscopic theories of transport coefficients and free-energies"><a
-            href="#Modeling tools/Microscopic theories of transport coefficients and free-energies/overview"
-            id="Modeling tools/Microscopic theories of transport coefficients and free-energies/overview"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview<i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Calculations using fluctuation theorems">Calculations using fluctuation theorems<i
-            class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Calculations using fluctuation theorems"><a
-            href="#Modeling tools/Calculations using fluctuation theorems/overview"
-            id="Modeling tools/Calculations using fluctuation theorems/overview" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a></div>
+    <div class="dropdown-container" id="dropdown-container-Modeling tools"><button class="dropdown-btn"
+            id="dropdown-btn-Migration modeling for monomaterials">Migration modeling for monomaterials<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Migration modeling for monomaterials"><a
+                href="#Modeling tools/Migration modeling for monomaterials/mass-transfer-modeling"
+                id="Modeling tools/Migration modeling for monomaterials/mass-transfer-modeling"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Theory and case studies<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Modeling for multi-materials, multi-steps process">Modeling for multi-materials,
+            multi-steps process<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Modeling for multi-materials, multi-steps process"><a
+                href="#Modeling tools/Modeling for multi-materials, multi-steps process/mass-transfer-for-multi-materials"
+                id="Modeling tools/Modeling for multi-materials, multi-steps process/mass-transfer-for-multi-materials"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Theory and case studies<i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Introduction to decision theory and risk management">Introduction to decision theory and
+            risk management<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Introduction to decision theory and risk management"><a
+                href="#Modeling tools/Introduction to decision theory and risk management/introduction"
+                id="Modeling tools/Introduction to decision theory and risk management/introduction"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Managing uncertainty by intervals and worst-case scenarios">Managing uncertainty by
+            intervals and worst-case scenarios<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container"
+            id="dropdown-container-Managing uncertainty by intervals and worst-case scenarios"><a
+                href="#Modeling tools/Managing uncertainty by intervals and worst-case scenarios/monotonic-calculations"
+                id="Modeling tools/Managing uncertainty by intervals and worst-case scenarios/monotonic-calculations"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Principles of monotonic
+                (conservative) calculations of migration in presence of uncertainty.<i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Probabilistic approaches and Bayesian approaches">Probabilistic approaches and Bayesian
+            approaches<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Probabilistic approaches and Bayesian approaches"><a
+                href="#Modeling tools/Probabilistic approaches and Bayesian approaches/descriptions"
+                id="Modeling tools/Probabilistic approaches and Bayesian approaches/descriptions"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Descriptions of migration<i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-History and principles of FMEA-FMECA">History and principles of FMEA-FMECA<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-History and principles of FMEA-FMECA"><a
+                href="#Modeling tools/History and principles of FMEA-FMECA/fmeca-approaches"
+                id="Modeling tools/History and principles of FMEA-FMECA/fmeca-approaches"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Approaches, link with regulation
+                2023/2006/EC<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Diagram-based approaches">Diagram-based approaches<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Diagram-based approaches"><a
+                href="#Modeling tools/Diagram-based approaches/overview"
+                id="Modeling tools/Diagram-based approaches/overview" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">FMECA modeling<i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Computer-aided approaches">Computer-aided approaches<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Computer-aided approaches"><a
+                href="#Modeling tools/Computer-aided approaches/overview"
+                id="Modeling tools/Computer-aided approaches/overview" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">FMECA approaches (application to mass transfer problems)<i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Principles (forcefields, statistical-ensembles), overview of online databases">Principles
+            (forcefields, statistical-ensembles), overview of online databases<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container"
+            id="dropdown-container-Principles (forcefields, statistical-ensembles), overview of online databases"><a
+                href="#Modeling tools/Principles (forcefields, statistical-ensembles), overview of online databases/overview"
+                id="Modeling tools/Principles (forcefields, statistical-ensembles), overview of online databases/overview"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview<i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Microscopic theories of transport coefficients and free-energies">Microscopic theories of
+            transport coefficients and free-energies<i class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container"
+            id="dropdown-container-Microscopic theories of transport coefficients and free-energies"><a
+                href="#Modeling tools/Microscopic theories of transport coefficients and free-energies/overview"
+                id="Modeling tools/Microscopic theories of transport coefficients and free-energies/overview"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview<i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Calculations using fluctuation theorems">Calculations using fluctuation theorems<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Calculations using fluctuation theorems"><a
+                href="#Modeling tools/Calculations using fluctuation theorems/overview"
+                id="Modeling tools/Calculations using fluctuation theorems/overview" class="dropdown-container-class"
+                onclick="lectureToDisplay(this.id)">Overview<i class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i><i
+                    class="fa fa-star star-color-red little-space"></i></a></div>
+    </div>
 </div>`;
