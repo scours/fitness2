@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Tuesday, 14th May 2024
+ * Last Modified: Thursday, 12th September 2024
  * Modified By: Steward OUADI
  * -----
  */
@@ -91,8 +91,42 @@ function getAnswersFromFillInTheBlanksQuestion(currentSlide) {
     userAnswer: currentSlide.getAnswers(),
   };
 
-  questionsAndUserAnswers.push(questionAndUserAnswer);
+  pushInOrder(questionAndUserAnswer);
 }
+
+function pushInOrder(questionAndUserAnswer) {
+  // Determine the ID of the current questionAndUserAnswer object
+  let questionId;
+  if (questionAndUserAnswer.currentSlide) {
+    questionId = questionAndUserAnswer.currentSlide.id;
+  } else if (questionAndUserAnswer.slideToRegister) {
+    questionId = questionAndUserAnswer.slideToRegister.id;
+  }
+
+  // Extract keys in the correct order depending on the type of slideElementContainer
+  let orderedKeys;
+  if (slideElementContainer instanceof Map) {
+    // If slideElementContainer is a Map
+    orderedKeys = [...slideElementContainer.keys()];
+  } else {
+    // If slideElementContainer is a plain object
+    orderedKeys = Object.keys(slideElementContainer).map(
+      (key) => Object.keys(slideElementContainer[key])[0]
+    );
+  }
+
+  // Find the correct index for the current questionAndUserAnswer based on its ID
+  const correctIndex = orderedKeys.indexOf(questionId);
+
+  // If questionsAndUserAnswers array is not yet long enough, fill it with undefined values up to the correct index
+  while (questionsAndUserAnswers.length <= correctIndex) {
+    questionsAndUserAnswers.push(undefined);
+  }
+
+  // Place the questionAndUserAnswer in the correct position
+  questionsAndUserAnswers[correctIndex] = questionAndUserAnswer;
+}
+
 function getScoreForCheckboxesQuiz(
   modifyUserAnswersColor,
   answerContainer,
@@ -190,7 +224,7 @@ function getScoreForCheckboxesQuiz(
     userAnswer: userAnswers === undefined ? "undefined" : userAnswers,
   };
 
-  questionsAndUserAnswers.push(questionAndUserAnswer);
+  pushInOrder(questionAndUserAnswer);
 
   // If score negative or if selected all answers while all answers are not expected to be selected
   if (
@@ -762,7 +796,7 @@ function computeScore() {
           userAnswer: userAnswer === undefined ? "undefined" : userAnswer,
         };
 
-        questionsAndUserAnswers.push(questionAndUserAnswer);
+        pushInOrder(questionAndUserAnswer);
       }
 
       // If current question is of type multiple correct answers, get list of answers

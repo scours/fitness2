@@ -5,7 +5,7 @@
  * File Created: Tuesday, 23rd April 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 25th April 2024
+ * Last Modified: Tuesday, 10th September 2024
  * Modified By: Steward OUADI
  */
 
@@ -66,9 +66,16 @@ class FillInTheBlanksSlide extends GlobalSlide {
 
   getAnswers() {
     let resultText = this.questionText;
-    Object.entries(this.inputsData).forEach(([inputId, value]) => {
-      // Update the original question text by replacing placeholders with actual input values
-      resultText = resultText.replace(/BLANK/, `BLANK(${value})`);
+    // Create an array from the inputsData values, ensuring they are ordered correctly
+    const inputValues = Object.values(this.inputsData);
+
+    // Use a counter to keep track of which input value to insert
+    let counter = 0;
+
+    // Replace each 'BLANK' with the corresponding value in order
+    resultText = resultText.replace(/BLANK/g, () => {
+      counter += 1; // Increment the counter
+      return `BLANK(${inputValues[counter - 1]})`; // Insert the current input value
     });
 
     return resultText;

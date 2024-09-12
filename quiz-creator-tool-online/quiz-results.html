@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Tuesday, 14th May 2024
 Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
 -----
-Last Modified: Tuesday, 21st May 2024
+Last Modified: Thursday, 12th September 2024
 Modified By: Steward OUADI
 -->
 <!DOCTYPE html>
@@ -62,7 +62,62 @@ Modified By: Steward OUADI
     .incorrect {
       color: red;
     }
+
+    /* New CSS for enhanced visual separation and clarity */
+    #questionsContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      /* Space between each question block */
+    }
+
+    .question-block {
+      border: 2px solid #ddd;
+      /* Light gray border */
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      /* Light background */
+    }
+
+
+    .question-text {
+      font-weight: bold;
+      color: #333;
+      /* Darker color for questions */
+    }
+
+    .correct-answer,
+    .user-answer {
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .correct-answer {
+      background-color: #c8e6c9;
+      /* Light green for correct answers */
+    }
+
+    .incorrect-answer {
+      background-color: #ffcdd2;
+      /* Light red for incorrect answers */
+    }
+
+    ul.choices {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #00796b;
+      /* Distinctive header color */
+    }
   </style>
+
 </head>
 
 <body>
@@ -282,34 +337,58 @@ Modified By: Steward OUADI
           // Display questions and answers
           const questionsContainer = document.getElementById('questionsContainer');
           quizInfo.questionsAndUserAnswers.forEach((q, index) => {
+            // Create a div for each question block
             const questionDiv = document.createElement('div');
-            questionDiv.className = 'question';
+            questionDiv.className = 'question-block'; // Apply the new class for visual separation
 
-            const questionText = document.createElement('p');
-            questionText.textContent = `${q.currentSlide.question.text}`;
-            questionDiv.appendChild(questionText);
+            // Adding a header for the question block with numbering
+            const questionHeader = document.createElement('h3');
+            questionHeader.textContent = `Question ${index + 1}`;
+            questionDiv.appendChild(questionHeader);
 
-            const choicesList = document.createElement('ul');
-            choicesList.className = 'choices';
-            for (const [key, answer] of Object.entries(q.currentSlide.answers)) {
-              const choiceItem = document.createElement('li');
-              choiceItem.textContent = `${key}: ${answer.text}`;
-              choicesList.appendChild(choiceItem);
+            if (q.currentSlide) {
+              // Handle currentSlide type
+              const questionText = document.createElement('p');
+              questionText.className = 'question-text'; // Apply the new class for question text
+              questionText.textContent = `${q.currentSlide.question.text}`;
+              questionDiv.appendChild(questionText);
+
+              const choicesList = document.createElement('ul');
+              choicesList.className = 'choices';
+              for (const [key, answer] of Object.entries(q.currentSlide.answers)) {
+                const choiceItem = document.createElement('li');
+                choiceItem.textContent = `${key}: ${answer.text}`;
+                choicesList.appendChild(choiceItem);
+              }
+              questionDiv.appendChild(choicesList);
+
+              const correctAnswer = document.createElement('p');
+              correctAnswer.className = 'correct-answer'; // Class for correct answer style
+              correctAnswer.textContent = `Expected Answer: ${q.currentSlide.correctAnswer}`;
+              questionDiv.appendChild(correctAnswer);
+
+              const userAnswer = document.createElement('p');
+              userAnswer.className = q.currentSlide.correctAnswer === q.userAnswer ? 'correct' : 'incorrect';
+              userAnswer.textContent = `Your Answer: ${q.userAnswer}`;
+              questionDiv.appendChild(userAnswer);
+            } else if (q.slideToRegister) {
+              // Handle slideToRegister type, showing only questionText and userAnswer
+              const questionText = document.createElement('p');
+              questionText.className = 'question-text'; // Use the same class for consistency
+              questionText.textContent = `${q.slideToRegister.questionText}`;
+              questionDiv.appendChild(questionText);
+
+              const userAnswer = document.createElement('p');
+              userAnswer.className = 'user-answer'; // Class for user answer style
+              userAnswer.textContent = `Your Answer: ${q.userAnswer}`;
+              questionDiv.appendChild(userAnswer);
             }
-            questionDiv.appendChild(choicesList);
 
-            const correctAnswer = document.createElement('p');
-            correctAnswer.className = 'correct';
-            correctAnswer.textContent = `Expected Answer: ${q.currentSlide.correctAnswer}`;
-            questionDiv.appendChild(correctAnswer);
-
-            const userAnswer = document.createElement('p');
-            userAnswer.className = q.currentSlide.correctAnswer === q.userAnswer ? 'correct' : 'incorrect';
-            userAnswer.textContent = `Your Answer: ${q.userAnswer}`;
-            questionDiv.appendChild(userAnswer);
-
+            // Append the question block to the main container
             questionsContainer.appendChild(questionDiv);
           });
+
+
 
         } else {
           console.error('Failed to decompress quiz information.');
