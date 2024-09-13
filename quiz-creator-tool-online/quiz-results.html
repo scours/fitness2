@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Tuesday, 14th May 2024
 Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
 -----
-Last Modified: Thursday, 12th September 2024
+Last Modified: Friday, 13th September 2024
 Modified By: Steward OUADI
 -->
 <!DOCTYPE html>
@@ -20,6 +20,7 @@ Modified By: Steward OUADI
   <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness2.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="src/lecturesDataContent.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -131,20 +132,22 @@ Modified By: Steward OUADI
     </div>
     <div class="section">
       <h2>Quiz Information</h2>
+      <p><a id="lectureURL" href="#" target="_blank"></a></p>
       <p><a id="quizURL" href="#" target="_blank"></a></p>
       <p id="successPercentage"></p>
       <p id="startedAt"></p>
       <p id="endedAt"></p>
       <p id="elapsedTime"></p>
-    </div>
-    <div class="section">
+      <!-- <div class="section"> -->
       <h2>Questions and Answers</h2>
       <div id="questionsContainer"></div>
-    </div>
-    <div class="section">
-      <h2>Score Graph</h2>
-      <div id="scoreChart"></div>
-      <p id="participantsCount"></p>
+      <!-- </div> -->
+      <!-- Hide graph for now, as we don't need it right now -->
+      <!-- <div class="section">
+        <h2>Score Graph</h2>
+        <div id="scoreChart"></div>
+        <p id="participantsCount"></p>
+      </div> -->
     </div>
     <!-- <div class="section">
       <h2>Elapsed Time Graph</h2>
@@ -287,7 +290,26 @@ Modified By: Steward OUADI
 
           // Display quiz information
           const metadata = quizInfo.metadata;
-          document.getElementById('quizURL').textContent = "Click here to access the quiz";
+
+          // Assuming quizInfo.metadata.name corresponds to lecturesData.id
+          const lectureId = quizInfo.metadata.name;
+
+          // Find the lecture data that matches the given id
+          const lectureData = lecturesData.find(lecture => lecture.id === lectureId);
+
+          if (lectureData) {
+            // Set the text content for the lecture URL
+            document.getElementById('lectureURL').textContent = `Access the lecture "${lectureData.name}" by clicking
+          here`;
+
+            // Set the href attribute for the lecture URL
+            document.getElementById('lectureURL').href = lectureData.url;
+          } else {
+            // Handle the case where the lecture data is not found (optional)
+            console.error(`Lecture with ID "${lectureId}" not found in lecturesData.`);
+          }
+
+          document.getElementById('quizURL').textContent = "Access the quiz by clicking here";
           document.getElementById('quizURL').href = metadata.quizUrl;
           const numberOfCorrectAnswers = parseFloat(metadata.numberOfCorrectAnswers);
           const numberOfQuestions = parseInt(metadata.numberOfQuestions);
