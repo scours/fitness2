@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Monday, 9th September 2024
+ * Last Modified: Monday, 16th September 2024
  * Modified By: Steward OUADI
  */
 
@@ -82,6 +82,7 @@ function createDropDownMenuElements() {
 
 function createDropDownMenuElementsToPrint() {
   console.log("createDropDownMenuElementsToPrint beg");
+
   // Create a document fragment to hold the dropdown menu
   const dropdownFragment = document.createDocumentFragment();
 
@@ -96,38 +97,35 @@ function createDropDownMenuElementsToPrint() {
 
     if (valueI.children.size > 0) {
       for (let [keyJ, valueJ] of valueI.children) {
-        const dropdownButtonAndContainerJ = getDropdownButtonAndContainer(
-          valueJ.name,
-          keyJ
-        );
-        const dropdownButtonJ = dropdownButtonAndContainerJ.dropdownButton;
-        const dropdownContainerDivJ =
-          dropdownButtonAndContainerJ.dropdownContainerDiv;
-
         if (valueJ.children.size > 0) {
+          // Handle three levels
+          const dropdownButtonAndContainerJ = getDropdownButtonAndContainer(
+            valueJ.name,
+            keyJ
+          );
+          const dropdownButtonJ = dropdownButtonAndContainerJ.dropdownButton;
+          const dropdownContainerDivJ =
+            dropdownButtonAndContainerJ.dropdownContainerDiv;
+
           for (let [keyK, valueK] of valueJ.children) {
-            // It is a third level lecture
             const aElementK = createAElementForDropDownMenuToPrint(
               valueK.manifestPath
             );
             dropdownContainerDivJ.appendChild(aElementK);
           }
-        } else {
-          if (valueJ.manifestPath !== null) {
-            // It is a second level lecture
-            const aElementJ = createAElementForDropDownMenuToPrint(
-              valueJ.manifestPath
-            );
-            dropdownContainerDivJ.appendChild(aElementJ);
-          }
-        }
 
-        dropdownContainerDivI.appendChild(dropdownButtonJ);
-        dropdownContainerDivI.appendChild(dropdownContainerDivJ);
+          dropdownContainerDivI.appendChild(dropdownButtonJ);
+          dropdownContainerDivI.appendChild(dropdownContainerDivJ);
+        } else {
+          // Handle two levels: Directly add links without extra dropdowns
+          const aElementJ = createAElementForDropDownMenuToPrint(
+            valueJ.manifestPath
+          );
+          dropdownContainerDivI.appendChild(aElementJ);
+        }
       }
     } else {
       if (valueI.manifestPath !== null) {
-        // It is a first level lecture
         const aElementI = createAElementForDropDownMenuToPrint(
           valueI.manifestPath
         );
