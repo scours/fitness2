@@ -23,6 +23,70 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
   <link rel="stylesheet" href="../lectures-archi/src/css/font-awesome-4-7-0.min.css">
   <link href="../lectures-archi/src/css/fitness.css" rel="stylesheet">
   <style>
+    .main-heading {
+      font-size: 2.5em;
+      margin-top: 20px;
+      text-align: center;
+      color: #ec6807;
+      font-weight: bold;
+    }
+
+    .sub-heading {
+      text-align: center;
+      color: #555;
+      font-size: 1em;
+      margin-top: 5px;
+    }
+
+    .btn-access {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #ec6807;
+      /* Orange color */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2em;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-access:hover {
+      background-color: #d95700;
+    }
+
+    .video-container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px auto;
+      max-width: 80%;
+    }
+
+    .video-container div {
+      width: 48%;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .center-text {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: #333;
+      font-weight: bold;
+      background-color: #f7f7f7;
+      /* Light background to make it stand out */
+      padding: 10px;
+      border-radius: 8px;
+    }
+
     .card-container {
       display: flex;
       flex-wrap: wrap;
@@ -46,9 +110,7 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
       transform: scale(1.05);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       /* subtle shadow for depth */
-
     }
-
 
     .card img {
       width: 100%;
@@ -57,69 +119,95 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
     }
 
     .card-text {
-      /* padding: 20px; */
       text-align: center;
       background-color: #f2f2f2;
-      /* height: 33.33%; */
     }
 
     .card-text h1 {
       font-size: 1.2em;
-      /* Adjust the font size as needed */
-    }
-
-    .center-text {
-      text-align: center;
-      /* Center-align the text */
-    }
-
-
-    .standout {
-      /* Bootstrap primary color for emphasis */
-      box-shadow: 2px 6px 10px #ec6807;
-      /* Soft glow effect */
     }
 
     @media (max-width: 768px) {
-      .objective-section {
+      .video-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .video-container video {
+        width: 80%;
         margin-bottom: 20px;
-        /* Smaller margin for smaller screens */
-        padding: 10px;
-        /* Smaller padding for smaller screens */
       }
 
       .card-container {
         justify-content: center;
-        /* Center cards on smaller screens */
       }
 
       .card {
         width: calc(60% - 10%);
       }
-
-
-
     }
 
     .objective-section {
       width: 80%;
-      /* Set the width of each section to 80% of its container's width */
       margin: 20px auto 40px;
-      /* Center the section and add vertical spacing */
       padding: 20px;
-      /* Adds padding inside each section for spacing */
       border-radius: 8px;
-      /* Optional: Adds rounded corners to each section */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      /* Optional: Adds a subtle shadow for depth */
       background-color: #dfdcdc;
-      /* Light background color for the section */
+    }
+
+    .info-text {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 1em;
+      color: #555;
     }
   </style>
 </head>
 
 <body class="center-text">
   <main-header></main-header>
+
+  <!-- Section: Title -->
+  <h1 class="main-heading">Access free lectures on food packaging</h1>
+
+  <!-- Visual space -->
+  <div style="height: 20px;"></div>
+
+  <!-- Section: What FITNESS stands for -->
+  <p class="center-text">FITNESS stands for Food packaging open courseware for higher education and staff of companies
+  </p>
+
+  <!-- Visual space -->
+  <div style="height: 20px;"></div>
+
+  <!-- Section: Button to Access with info text -->
+  <a href="https://fitness.agroparistech.fr/fitness2/lectures/lectures.html" class="btn-access">Access FITNESS2
+    lectures</a>
+  <p class="sub-heading">No account or email required</p>
+
+  <!-- Visual space -->
+  <div style="height: 20px;"></div>
+
+  <!-- Video Placeholders with Titles -->
+  <div class="video-container">
+    <div>
+      <h4>Why FITNESS</h4>
+      <video controls>
+        <source src="https://fitness.agroparistech.fr/fitness2/lectures/media/FITNESS2_tutorial_video.mp4"
+          type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div>
+      <h4>How to use the platform?</h4>
+      <video controls>
+        <source src="https://fitness.agroparistech.fr/fitness2/lectures/media/FITNESS2_promotional_video.mp4"
+          type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
 
   <section class="objective-section">
     <h2>I want to learn</h2>
@@ -148,7 +236,11 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
                     <h1>QUIZZ</h1>
                 </div>
             </div> -->
-
+      <p class="info-text">
+        FITNESS2 contains the latest up-to-date content available on the platform, while FITNESS1 is legacy and contains
+        the
+        first versions of the platform's content.
+      </p>
 
     </div>
   </section>
