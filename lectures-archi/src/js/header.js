@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 4th December 2023
+ * Last Modified: Tuesday, 17th September 2024
  * Modified By: Steward OUADI
  */
 class Header extends HTMLElement {
@@ -17,6 +17,7 @@ class Header extends HTMLElement {
             <i class="fa fa-bars"></i>
         </a>
     </div>
+    <div id="google_translate_element"></div> <!-- Google Translate element -->
     `;
   }
 }
