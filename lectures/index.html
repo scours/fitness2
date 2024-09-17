@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 3rd December 2020
 Authors: Steward OUADI, Olivier Vitrac
 -----
-Last Modified: Tuesday, 4th June 2024
+Last Modified: Tuesday, 17th September 2024
 Modified By: Steward OUADI
 -----
 $2020-12-20$ make local modifyLectures/index.html (note that index.html is required to have the application working)
@@ -13,314 +13,293 @@ $2021-03-02$ update legal information
 $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire (modmol.agroparistech.fr and SFPP3.agroparistech.fr) are down
 -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <!-- rev. 20191020 INRA/O. Vitrac - Site derived from a template from Mobirise Website Builder v4.10.8, https://mobirise.com -->
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="generator" content="Bluefish 2.2.10" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-  <link rel="shortcut icon" href="assets/images/safari-pinned-tab-1.svg" type="image/x-icon" />
-  <meta name="description"
-    content="PROJECT FitNESS - funded by the European Union's ERASMUS programme (contract 2017-1-FR01-KA202-037441)
-Food packaging open courseware for higher education and staff of companies
-Partners: Croatia (UZAB-PBF), France (ACTIA, LNE, AGROPARISTECH/INRA, AGROSUP DIJON), Germany (TUM), Portugal (UCP), Spain (CSIC)" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Your Objective</title>
+  <link rel="stylesheet" href="../lectures-archi/modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../lectures-archi/src/css/font-awesome-4-7-0.min.css">
+  <link href="../lectures-archi/src/css/fitness.css" rel="stylesheet">
+  <style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      margin: 10%;
+    }
 
-  <title>FitNESS</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css" />
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css" />
-  <link rel="stylesheet" href="assets/tether/tether.min.css" />
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css" />
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css" />
-  <link rel="stylesheet" href="assets/dropdown/css/style.css" />
-  <link rel="stylesheet" href="assets/socicon/css/styles.css" />
-  <link rel="stylesheet" href="assets/animatecss/animate.min.css" />
-  <link rel="stylesheet" href="assets/theme/css/style.css" />
-  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css" />
-  <link rel="stylesheet" href="src/css/clickhere.css" type="text/css" />
+    .card {
+      width: calc(30% - 5%);
+      margin: 10px;
+      box-sizing: border-box;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      /* subtle shadow for depth */
+
+    }
+
+
+    .card img {
+      width: 100%;
+      height: 66.66%;
+      object-fit: cover;
+    }
+
+    .card-text {
+      /* padding: 20px; */
+      text-align: center;
+      background-color: #f2f2f2;
+      /* height: 33.33%; */
+    }
+
+    .card-text h1 {
+      font-size: 1.2em;
+      /* Adjust the font size as needed */
+    }
+
+    .center-text {
+      text-align: center;
+      /* Center-align the text */
+    }
+
+
+    .standout {
+      /* Bootstrap primary color for emphasis */
+      box-shadow: 2px 6px 10px #ec6807;
+      /* Soft glow effect */
+    }
+
+    @media (max-width: 768px) {
+      .objective-section {
+        margin-bottom: 20px;
+        /* Smaller margin for smaller screens */
+        padding: 10px;
+        /* Smaller padding for smaller screens */
+      }
+
+      .card-container {
+        justify-content: center;
+        /* Center cards on smaller screens */
+      }
+
+      .card {
+        width: calc(60% - 10%);
+      }
+
+
+
+    }
+
+    .objective-section {
+      width: 80%;
+      /* Set the width of each section to 80% of its container's width */
+      margin: 20px auto 40px;
+      /* Center the section and add vertical spacing */
+      padding: 20px;
+      /* Adds padding inside each section for spacing */
+      border-radius: 8px;
+      /* Optional: Adds rounded corners to each section */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      /* Optional: Adds a subtle shadow for depth */
+      background-color: #dfdcdc;
+      /* Light background color for the section */
+    }
+  </style>
 </head>
 
-<body>
-  <section class="menu cid-qTkzRZLJNu" once="menu" id="menu1-0">
-    <!-- Menu Problem Solved by Dipesh on 02/01/2020 align-items-center navbar-fixed-top navbar-toggleable-sm -->
-    <nav class="navbar navbar-expand beta-menu navbar-dropdown">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </button>
-      <div class="menu-logo">
-        <div class="navbar-brand">
-          <span class="navbar-logo">
-            <a href="/fitness/external/" target="_blank">
-              <img src="assets/images/fitness-logo-rvb-274x123.png" alt="Fitness"
-                title="direct access to external (but related) content" style="height: 3.8rem" />
-            </a>
-          </span>
-          <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-4"
-              href="/fitness/lectures/html/teasing/FITNessOverview.html" title="FitNESS overview"
-              target="_blank">Croatia, France, Germany, Portugal, Spain</a></span>
-        </div>
-      </div>
-      <div class="navbar-right">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-            <li class="nav-item">
-              <a class="nav-link link text-white display-4" href="/fitness/lectures/html/"
-                title="access to the main of lectures and search engine">
-                <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>Menu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link text-white display-4"
-                href="https://www.contactalimentaire.fr/fr/unite-mixte-technologique-actia-safemat-2207"
-                title="Our Joint Technological Unit hosting FitNESS and its developments (AgroParisTech/INRAE, LNE)">
-                <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span> About
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link link text-white display-4" href="https://sfpp3.contactalimentaire.fr/" target="_SFPP2"
-                title="Tools and databases hosted on  the SafeFoodPackaging Portal (v2)">
-                <span class="mbri-extension mbr-iconfont mbr-iconfont-btn"></span>tools
-              </a>
-            </li>
-          </ul>
-          <div class="navbar-buttons mbr-section-btn">
-            <a class="btn btn-sm btn-warning display-4" href="../jobs/" target="_jobs"
-              title="Job offers associated with the FitNESS content, come back regularly">
-              <span class="mbri-users mbr-iconfont mbr-iconfont-btn"></span>jobs</a>
-          </div>
-          <div class="navbar-buttons mbr-section-btn">
-            <a class="btn btn-sm btn-primary display-4"
-              href="https://sfpp3-simulation.contactalimentaire.fr/cgi-bin/login.cgi" target="_SFPP3"
-              title="Launch a connection to our computational server: SFPP3">
-              <span class="mbri-sites mbr-iconfont mbr-iconfont-btn"></span>SFPP3</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </section>
+<body class="center-text">
+  <main-header></main-header>
 
-  <section class="engine">
-    <a href="http://modmol.agroparistech.fr">outdated primary portal (SFPP2)</a>
-  </section>
-  <section class="cid-qTkA127IK8 mbr-fullscreen mbr-parallax-background" id="header2-1">
-    <div class="container align-center">
-      <div class="row justify-content-md-center">
-        <div class="mbr-white col-md-10">
-          <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1"> <br />
-            Welcome to FitNESS
-          </h1>
-          <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2">
-            FitNESS stands for <strong>Food packaging open courseware for higher education and staff of
-              companies</strong>
-          </h3>
-          <p class="mbr-text pb-3 mbr-fonts-style display-5">
-            <br /><br />All lectures and interactive contents are
-            provided <b>"AS IS"</b>.<br />The content (85 lectures from Common to
-            Specialized Modules) is under development and may contain
-            inconsistencies and inaccuracies. It will be updated regularly.
-          </p>
-          <!-- Click here -->
-          <!-- mouseovernot working
-            <div class="clickherecontainer">
-              <div class=""><img src="assets/arrow/clickhere.svg" alt="clickhere" class="clickhereimage"></div>
-            </div>
-            -->
-          <div class="mbr-section-btn">
-            <a class="btn btn-md btn-secondary display-4" href="./html/">I have understood</a>
-            <a class="btn btn-md btn-white-outline display-4"
-              href="https://fitness.agroparistech.fr/fitness2/lectures/menu.html" target="_blank">Access FITNESS 2</a>
-          </div>
-          <img src="assets/arrow/clickhere.svg" alt="clickhere" class="clickhereimage">
-          <!-- end click here -->
+  <section class="objective-section">
+    <h2>I want to learn</h2>
+    <div class="card-container">
+
+      <div class="card standout"
+        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/lectures.html`'>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Learn.png" alt="Learn">
+        <div class="card-text">
+          <h1>with FITNESS2 (new)</h1>
         </div>
       </div>
-    </div>
-    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
-      <a href="#next">
-        <i class="mbri-down mbr-iconfont"></i>
-      </a>
+
+      <div class="card" onclick='window.location.href=`https://fitness.agroparistech.fr/fitness/lectures/html/` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Legacy.png"
+          alt="FITNESS 1">
+        <div class="card-text">
+          <h1>with FITNESS1</h1>
+        </div>
+      </div>
+
+      <!-- <div class="card" onclick='window.location.href=`#` '>
+                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/quiz.png"
+                    alt="QUIZZ">
+                <div class="card-text">
+                    <h1>QUIZZ</h1>
+                </div>
+            </div> -->
+
+
     </div>
   </section>
 
-  <section class="cid-qTkAaeaxX5" id="footer1-2">
-    <div class="container">
-      <div class="media-container-row content text-white">
-        <div class="col-12 col-md-3">
-          <div class="media-wrap">
-            <a href="/fitness/">
-              <img src="assets/images/partnerscoutries-1-405x130.png" alt="FitNESS Partners"
-                title="access to the entire website (no restrictions)" />
-            </a>
-          </div>
-        </div>
-        <div class="col-12 col-md-3 mbr-fonts-style display-7">
-          <h5 class="pb-3">ERASMUS+ (2017-2020)</h5>
-          <p class="mbr-text">The FitNESS platform is hosted by <a
-              href="https://www.contactalimentaire.fr/fr/unite-recherche-developpement/projet-fitness-food-packaging-open-courseware-higher-education-and"
-              title="show context (in French)" target="_blank">UMT Actia SafeMat</a></p>
-          <p class="mbr-text">The FitNESS project is administratively coordinated by <a
-              href="https://www.actia-asso.eu/en/projets/fitness/" title="administrative coordination ACTIA"
-              target="_blank">ACTIA</a> and <a href="https://www.lne.fr/fr" title="administrative coordination LNE"
-              target="_blank">LNE</a></p>
-        </div>
-        <div class="col-12 col-md-3 mbr-fonts-style display-7">
-          <h5 class="pb-3">Contact</h5>
-          <p class="mbr-text">
-            Developer/Administrator<br /><a href="mailto:olivier.vitrac@agroparistech.fr"
-              title="contact the Administrator">&#128232; <small>olivier.vitrac@agroparistech.fr</small></a><br /><a
-              href="mailto:olivier.vitrac@agroparistech.fr" title="contact the Administrator">&#128222; <small>+33 (0)1
-                89 10 11 85</small></a>
-          </p>
-        </div>
-        <div class="col-12 col-md-3 mbr-fonts-style display-7">
-          <h5 class="pb-3">Links</h5>
-          <p class="mbr-text">
-            <a href="https://htmlpreview.github.io/?https://github.com/scours/fitness2/blob/wip/fitness/overview/FITNessOverview.html#6-how-to-clone-fitness-or-to-run-it-offline--%F0%9F%93%B4"
-              target="_blank" title="jump to the download folder (check dates)">
-              &#129387; Download all lectures as a single ZIP file, including sources.
-            </a><br />
-            <a href="modifyLectures/index.html" target="_blank" title="The data are modified only after review.">
-              &#128736; Author's interface to revise metadata.
-            </a><br />
-            <a href="html/teasing/TestBeginner.html" target="_blank" title="Test yourself">
-              Test yourself
-            </a><br />
-            <a href="https://fitness.agroparistech.fr/fitness2/webinar/fitness-2-june-2024.html" target="_blank"
-              title="fitness 2 presentation - June 2024">
-              FITNESS 2 June 2024 presentation
-            </a><br />
-            <a href="https://fitness.agroparistech.fr/fitness2/webinar/training-session-may-2024.html" target="_blank"
-              title="fitness 2 presentation - May 2024">
-              FITNESS 2 May 2024 presentation
-            </a><br />
-            <a href="https://fitness.agroparistech.fr/fitness2/lectures/fitness2-presentations.html" target="_blank"
-              title="fitness 2 presentations">
-              FITNESS 2 presentations
-            </a><br />
-            <a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/q-a-web-testA.html#testA"
-              target="_blank" title="Webinar Quiz test A">Webinar Test A</a><br />
-            <a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/q-a-web-testB.html#testB"
-              target="_blank" title="Webinar Quiz test B">Webinar Test B</a><br />
-          </p>
-        </div>
-        <div class="col-12 col-md-3 mbr-fonts-style display-7">
-          <h5 class="pb-3">Teasing</h5>
-          <p class="mbr-text">
-            <a href="html/teasing/TestBeginner.html" target="_blank" title="Check your knowledge in 20 Q/A">&#129349;
-              Test your knowledge</a><br />
-            <a href="html/teasing/FITNessOverview.html" target="_blank"
-              title="Technical description of the platform">&#128745; FITNess overview</a><br />
-            <a href="/fitness/external/SAFEMAT/hose/tutorial.html" target="_blank"
-              title="From basic to very advanced content">&#128640; Advanced content</a><br />
-            <a href="https://youtu.be/amMn8yz8eLg" target="_blank" title="Time-lapse of the site (YouTube)">&#127902;
-              Video teaser</a><br />
-            <a href="https://mol12.agroparistech.fr/fitness2/webinar/index.html" target="_blank"
-              title="Webinar presentation">
-              Webinar</a><br />
-            <a href="https://fitness.agroparistech.fr/fitness/external/AgroParisTech/Introduction/" target="_blank"
-              title="French archives INA (education only)">&#128252; Packaging 56 years ago</a>
+  <section class="objective-section">
+    <h2>I want to contribute</h2>
+    <div class="card-container">
 
-            <p class="mbr-text">
-              Tests<br />
-              <a href="https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#testA" target="_blank"
-                title="Quiz test A">Test A</a><br /><a
-                href="https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#testB" target="_blank"
-                title="Quiz test B">Test B</small></a>
-            </p>
-          </p>
+      <div class="card"
+        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/upgrade-teaching-material.html`  '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/upgrade.png"
+          alt="Upgrade teaching material">
+        <div class="card-text">
+          <h1>Upgrade Teaching Material</h1>
         </div>
       </div>
-      <div class="footer-lower">
-        <div class="media-container-row">
-          <div class="col-sm-12">
-            <hr />
-          </div>
-        </div>
-        <div class="media-container-row mbr-white">
-          <div class="col-sm-6 copyright">
-            <p class="mbr-text mbr-fonts-style display-7">
-              FitNESS was funded with the support of the Erasmus+ Programme of the European Union (contract
-              <a href="https://ec.europa.eu/programmes/erasmus-plus/projects/eplus-project-details/#project/2017-1-FR01-KA202-037441"
-                title="project card" target="_EU">2017-1-FR01-KA202-037441</a>)
-              <br /><a href="https://ec.europa.eu/programmes/erasmus-plus/node_en"
-                title="Presentation of ERASMUS+ Programme" target="_EU">
-                <img src="./assets/images/Erasmus-Logo-sans-fond-1-uai-1032x212.png" width="100%" /></a>
-              <br /><a href="https://agence.erasmusplus.fr/projet-erasmus-quest-ce-quune-bonne-pratique/"
-                title="explaination of the label received after project evaluation" target="_EU">
-                <img src="./assets/images/logo-bonne-pratique-fr.png" width="30%" /></a>
-            </p>
-            <br />
-            <!-- Last updated line  -->
-            <small><em>$ last updated: October 16 2023 $</em></small></p>
-          </div>
-          <div class="col-md-6">
-            <div class="social-list align-right">
-              <div class="soc-item">
-                <a href="/fitness/external/SAFEMAT/evaluation/" target="_blank"
-                  title="short video of our activities in our Joint Technological Unit SafeMAT">
-                  <span class="mbr-iconfont mbr-iconfont-social mbri-touch-swipe"></span>
-                </a>
-              </div>
-              <div class="soc-item">
-                <a href="/fitness/external/covid19/__COVID-19_FORECAST__.html" target="_blank"
-                  title="COVID19 forecast: an independent project">
-                  <span class="mbr-iconfont mbr-iconfont-social mbri-tablet-vertical" style="
-                        color: rgb(204, 204, 204);
-                        fill: rgb(204, 204, 204);
-                      "></span>
-                </a>
-              </div>
-              <div class="soc-item">
-                <a href="/fitness/external/covid19/CF19sim/" target="_blank"
-                  title="COVID19 particle collider: an independent project">
-                  <span class="mbr-iconfont mbr-iconfont-social mbri-laptop"></span>
-                </a>
-              </div>
-              <div class="soc-item">
-                <a href="/fitness/external/conferences/" target="_blank"
-                  title="Some presentations at international conferences">
-                  <span class="mbr-iconfont mbr-iconfont-social mobi-mbri-timer mobi-mbri"></span>
-                </a>
-              </div>
-              <div class="soc-item">
-                <a href="https://www.linkedin.com/in/olivier-vitrac-safemat/" target="_blank" title="social media">
-                  <span class="mbr-iconfont mbr-iconfont-social mobi-mbri-users mobi-mbri"></span>
-                </a>
-              </div>
-              <div class="soc-item">
-                <a href="https://scholar.google.com/citations?user=LuqeFG4AAAAJ&hl=en" target="_blank"
-                  title="some scientific references related to FitNESS">
-                  <span class="mbr-iconfont mbr-iconfont-social socicon-google-scholar socicon"></span>
-                </a>
-              </div>
-            </div>
-          </div>
+
+      <div class="card"
+        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/contribute.html` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/contribute.png"
+          alt="Contribute">
+        <div class="card-text">
+          <h1>Contribute</h1>
         </div>
       </div>
     </div>
   </section>
 
-  <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/dropdown/js/nav-dropdown.js"></script>
-  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="assets/viewportchecker/jquery.viewportchecker.js"></script>
-  <script src="assets/parallax/jarallax.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-  <script src="assets/theme/js/script.js"></script>
 
-  <input name="animation" type="hidden" />
+
+
+
+
+
+
+
+
+
+  <section class="objective-section">
+    <h2 style="margin-bottom: 40px;">I want to know more</h2>
+
+
+    <!-- Bold Line for separation -->
+    <hr style="border-top: 4px solid #ec6807; width: 30%; margin-top: 20px; margin-bottom: 20px; margin-left: auto;
+            margin-right: auto;">
+
+    <!-- New Section Heading -->
+    <h4>Related resources</h4>
+    <div class="card-container">
+      <div class="card" onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/training-session-may-2024.html`
+                '>
+        <img
+          src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/training-session-may-2024.png"
+          alt="Training session">
+        <div class="card-text">
+          <h1>Training session May 2024</h1>
+        </div>
+      </div>
+
+      <div class="card" onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/ppwr2.html` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/PPWR2.png" alt="PPWR">
+        <div class="card-text">
+          <h1>PPWR</h1>
+        </div>
+      </div>
+
+      <!-- <div class="card" onclick='window.location.href=`#` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/hot.png"
+          alt="Hot Topics">
+        <div class="card-text">
+          <h1>Hot Topics</h1>
+        </div>
+      </div> -->
+    </div>
+
+
+    <!-- Bold Line for separation -->
+    <hr style="border-top: 4px solid #ec6807; width: 30%; margin-top: 20px; margin-bottom: 20px; margin-left: auto;
+            margin-right: auto;">
+
+    <h4>Explore further</h4>
+    <div class="card-container">
+      <div class="card"
+        onclick="window.open(`https://htmlpreview.github.io/?https://github.com/scours/fitness2/blob/wip/README.html`, '_blank')">
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/FitnessInfo.png"
+          alt="FITNESS Information">
+        <div class="card-text">
+          <h1>FITNESS Information</h1>
+        </div>
+      </div>
+
+      <!-- <div class="card" onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/certificate/` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/certificate.png"
+          alt="Certificate">
+        <div class="card-text">
+          <h1>Certificate</h1>
+        </div>
+      </div> -->
+
+      <div class="card"
+        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/fitness2-presentations.html` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/conferences.png"
+          alt="Conferences">
+        <div class="card-text">
+          <h1>Presentations</h1>
+        </div>
+      </div>
+
+      <!-- <div class="card" onclick='window.location.href=`#` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/simulations.png"
+          alt="Simulations">
+        <div class="card-text">
+          <h1>Simulations</h1>
+        </div>
+      </div> -->
+
+      <!-- <div class="card" onclick='window.location.href=`#` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/safemat.png"
+          alt="Research Group SAFEMAT">
+        <div class="card-text">
+          <h1>Research Group SAFEMAT</h1>
+        </div>
+      </div> -->
+      <!-- <div class="card" onclick='window.location.href=`#` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/contact.png"
+          alt="Contact">
+        <div class="card-text">
+          <h1>Contact</h1>
+        </div>
+      </div> -->
+      <div class="card"
+        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/disclaimer.html` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/disclaimer.png"
+          alt="Disclaimer">
+        <div class="card-text">
+          <h1>Disclaimer</h1>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+  </section>
+
+
+  <main-footer></main-footer>
+  <link rel="stylesheet" href="../lectures-archi/modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
+  <script src="../lectures-archi/src/js/header.js"></script>
+  <script src="../lectures-archi/src/js/footer.js"></script>
 </body>
 
 </html>
