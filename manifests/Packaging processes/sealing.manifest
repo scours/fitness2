@@ -1,0 +1,41 @@
+{
+  "idx": 62,
+  "title": "Sealing",
+  "level": "specialized",
+  "section": "S8",
+  "unit": "U8.4",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": [
+    "Horst-Christian Langowski",
+    "Uta Weiß"
+  ],
+  "institution": "FHG",
+  "abstract": "D-6 Sealing: The safety and wholesomeness of industrially processed food cannot be considered without a well-closed package. The more general term of closing includes sealing for closing as a subset, which is dealt with in detail here. Similarity and differences between welding and sealing are elaborated.  In principle, the bonding of the joining partners is achieved by applying heat. Different options are used to generate the heat for the bonding process: Contact with a hot tool, radiation-induced heating, convection with hot gases and internal or external friction processes. Here, the temperature distribution in the sealing zone plays a special role. With cold sealing, it is also possible to carry out a joining process using only pressure without the effect of a higher temperature. However, this requires packaging surfaces that have been coated with special cold seal lacquers. The final requirements for these processes are the integrity and tightness of the seal, but also its strength against delamination. This lecture also deals with the special features of different types of sealed seams with regard to their tightness and the measurement of sealed seam tightness and sealed seam strength. Please refer to  xxx for the defect analysis.",
+  "topic": [
+    "sealing",
+    "bag",
+    "blister",
+    "glue",
+    "adhesion",
+    "leaks",
+    "holes",
+    "adhesive"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "adhesive",
+    "closure",
+    "flank",
+    "heating",
+    "layer",
+    "leak",
+    "partner",
+    "profile",
+    "roll",
+    "sealing",
+    "temperature",
+    "welding"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Sealing.html#/1"
+}

@@ -1,0 +1,28 @@
+{
+  "idx": 12,
+  "title": "Basic legal framework on food packaging materials",
+  "level": "common",
+  "section": "S1",
+  "unit": "U1.3",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": "Catherine Loriot",
+  "institution": "LNE",
+  "abstract": "Basic legal framework (chemicals, contact material, environment, consumer safety). Food packaging must comply with several obligations and legislations on chemicals, contact material, environment, consumer safety. - level basic",
+  "topic": [
+    "regulation",
+    "plastics",
+    "europe"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "biocides",
+    "dispensers",
+    "en",
+    "food",
+    "regulation",
+    "safety",
+    "substances"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.3/part1.html#/2"
+}

@@ -1,0 +1,29 @@
+{
+  "idx": 847949,
+  "title": "Microbiological food assessment",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": [
+    "Horst-Christian Langowski",
+    "Peter Muranyi",
+    "Bernd Kramer Kata Galić",
+    "Mia Kurek",
+    "Mario Ščetar"
+  ],
+  "institution": "FHG",
+  "abstract": "Microbiological assessment of food and packaging",
+  "topic": [
+    "Microbiological assessment",
+    "food packaging"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Microbiological assessment",
+    "food packaging"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/microbiological-assessment-of-food-and-packaging.html#/1",
+  "qAndAVariables":["Take a quiz = microbiologicalAssessmentOfFoodAndPackaging"]
+}

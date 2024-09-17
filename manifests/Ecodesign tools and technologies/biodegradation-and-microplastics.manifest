@@ -1,0 +1,36 @@
+{
+  "idx": 56,
+  "title": "Biodegradation and microplastics",
+  "level": "specialized",
+  "section": "S7",
+  "unit": "U7.3",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": "Sandra Domenek",
+  "institution": "AgroParisTech",
+  "abstract": "Food packaging accounts for approximately 40% of the uses of plastics, but accounts for more than half of plastic waste. Non-food uses are more durable, while the lifespan of plastic packaging usually does not exceed half a year. The fragmentation of uncollected plastics and their reuse as recycled textile fibers is the main source of microplastics and marine litter. The understanding of biodegradation phenomena is essential to appreciate the impact of plastics on the environment, whether they are biodegradable or not.     - Level basic, intermediate",
+  "topic": [
+    "biodegradable",
+    "pollution",
+    "regulation",
+    "renewable",
+    "environment",
+    "bottles"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "biobased",
+    "biodegradable",
+    "bioplastic",
+    "context",
+    "fermentation",
+    "health",
+    "iupac",
+    "label",
+    "microplastics",
+    "synthesis",
+    "water",
+    "years"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.3/part1.html#/2"
+}

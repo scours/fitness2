@@ -1,0 +1,32 @@
+{
+  "idx": 47,
+  "title": "History and principles of FMEA-FMECA",
+  "level": "specialized",
+  "section": "S5",
+  "unit": "U5.1",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Olivier Vitrac",
+  "institution": "INRAE",
+  "abstract": "When something dramatic occurs, there is not one single cause. Failure modes, effects, and criticality analysis is a methodology (FMECA) originating from the aeronautic industry to identify and analyze: all potential failure models of the various components of a system, the effects these failures may have on the system, how to avoid the failures and/or to mitigate their effects. The microbiological risks and some physical risks are managed already by the food industry by closely related methods (e.g., HACCP). The FMECA method has been proposed to manage chemical risks associated to migration and cross mass-transfer between materials. The method is compliant with the obligations set in regulations (EC) 2023/2006, 282/2008. They open the way to safe-by-design/preventive approaches of the contamination.  -   level intermediate, advanced",
+  "topic": [
+    "design",
+    "prevention",
+    "safe-by-design",
+    "risk",
+    "safety",
+    "modeling"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "cf",
+    "go",
+    "information",
+    "poor",
+    "preventive",
+    "reduce",
+    "risk",
+    "unit"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S5/U5.1/part1.html#/2"
+}

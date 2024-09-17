@@ -1,0 +1,35 @@
+{
+  "idx": 105076,
+ "title": "Advanced cellulosic materials",
+  "level": "specialized",
+  "section": "S6",
+  "unit": "U6.5",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": [
+    "María José Fabra",
+    "Eugenia Núñez-Calzado",
+    "Amparo López-Rubio"
+  ],
+  "institution": "CSIC",
+  "abstract": "Global food packaging is a billion-dollar market that is projected to reach USD 464 billion by 2027. In general, there are many types of packaging materials available in the market, such as plastics, glass, aluminium and paper. However, cellulose and its derivates has received great attention recently as food pacakjging materials due to environmental pressure by local authorities or driven by national and international policy. This is also because of sustainabililty, renewability and disposal issues. This unit compiles recent advances of cellulose-based packaging materials and the use of nanocellulose (especially nanofibrillated cellulose (NFC), cellulose nmanocrystals (CNC) and bacterial cellulose (BC)) to enhace barrier properties and other performance attributes of new generations of packaging materials. ",
+  "topic": [
+    "Cellulose",
+    "nanocellulose",
+    "advanced coatings",
+    "cellulose nanocrystals",
+    "barrier properties",
+    "packaging"
+  ],
+  "license": "CC-BY-NC-SA 4.0",
+  "keywords": [
+    "Cellulose",
+    "nanocellulose",
+    "advanced coatings",
+    "bacterial cellulose",
+    "nanofibrillated cellulose",
+    "microfibrillated cellulose"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/CSIC/Advanced-cellulosic-materials.html#/2",
+  "qAndAVariables":["Take a quiz = cellulose"]
+}

@@ -1,0 +1,34 @@
+{
+  "idx": 31,
+  "title": "Smart packaging",
+  "level": "common",
+  "section": "S4",
+  "unit": "U4.3",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Maria José Fabra",
+  "institution": "CSIC",
+  "abstract": "Smart packaging concepts bring intelligent functions to the packaging  (detecting, sensing, recording, tracing, communicating, applying some mathematical logic) (please read §1 before). Content: overview, indicators, RFID, sensors, commercially available intelligent packaging systems - level intermediate",
+  "topic": [
+    "RFID",
+    "smart",
+    "indicator"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "definition",
+    "facilitate",
+    "food",
+    "indicator",
+    "indicators",
+    "measuring",
+    "monitoring",
+    "packaging",
+    "radio",
+    "smartpackaging",
+    "substances",
+    "temperature"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.html#/2",
+  "qAndAVariables":["Take a quiz = smartPackaging"]
+}

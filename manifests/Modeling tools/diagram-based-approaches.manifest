@@ -1,0 +1,37 @@
+{
+  "idx": 48,
+  "title": "Diagram-based approaches",
+  "level": "specialized",
+  "section": "S5",
+  "unit": "U5.2",
+  "difficultyLevel": "Advanced",
+  "part": "part1",
+  "author": "Olivier Vitrac",
+  "institution": "INRAE",
+  "abstract": "The FMECA approach requires to build large inventories and functional relations between entities and events. Diagrams help to organize the initial brain-storming and to orient future priorities.  -  level advanced",
+  "topic": [
+    "design",
+    "prevention",
+    "safe-by-design",
+    "migration",
+    "risk",
+    "safety",
+    "modeling"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "crisis",
+    "des",
+    "diagram",
+    "fault",
+    "information",
+    "ink",
+    "phase",
+    "preventive",
+    "r",
+    "risk",
+    "riskperception",
+    "unit"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S5/U5.2/part1.html#/2"
+}

@@ -1,0 +1,37 @@
+{
+  "idx": 29,
+  "title": "Active packaging",
+  "level": "common",
+  "section": "S4",
+  "unit": "U4.2",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Maria José Fabra",
+  "institution": "CSIC",
+  "abstract": "With the concept of active packaging, the packaging system is not inert anymore and the active system is interacting with the food and/or its atmosphere. Active systems require to be beneficial for the food. Note that the use of active systems may have legal implications. (please read §1 before). Content: overview, oxygen scavengers, CO2 absorbing/releasing systems, ethylene scavengers, flavor/odor absorber/releaser, antioxidants. - level intermediate",
+  "topic": [
+    "active",
+    "absorber",
+    "scavanger",
+    "emitter",
+    "oxygen",
+    "CO2"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "active",
+    "ethylene",
+    "food",
+    "inside",
+    "iron",
+    "oxygen",
+    "packaging",
+    "prevent",
+    "properties",
+    "scavengers",
+    "substances",
+    "systems"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/CSIC/active-packaging.html#/2",
+  "qAndAVariables":["Take a quiz = activePackaging"]
+}

@@ -1,0 +1,34 @@
+{
+  "idx": 55,
+  "title": "Tools for life cycle impact assessment",
+  "level": "specialized",
+  "section": "S7",
+  "unit": "U7.2",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Sandra Domenek",
+  "institution": "AgroParisTech",
+  "abstract": "Eco-design of Packaging - Overview - Why eco-design? – Introduction and definitions General design process Tools of eco-design Case studies Advances and limits of LCA analysis - Evaluation of food/packaging systems through the supply chain",
+  "topic": [
+    "environment",
+    "ecodesign",
+    "LCA",
+    "design"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "ecodesign",
+    "ecological",
+    "food",
+    "ideas",
+    "impacts",
+    "knowledge",
+    "lca",
+    "life",
+    "packaging",
+    "packagingdomenek",
+    "problem",
+    "requirements"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.2/part1.html#/2"
+}

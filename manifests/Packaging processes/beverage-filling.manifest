@@ -1,0 +1,49 @@
+{
+  "idx": 63,
+  "title": "Beverage filling",
+  "level": "specialized",
+  "section": "S8",
+  "unit": "U8.5",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": [
+    "Horst-Christian Langowski",
+    "Uta Weiß"
+  ],
+  "institution": "FHG",
+  "abstract": "D-5 Beverage filling: Beverage containers are usually filled at speeds of several tens of thousands of bottles per hour. A bottle filling line, be it for non-returnable or returnable containers, comprises operations from de-stacking, bottle cleaning, filling, closing, labelling, followed by the steps for producing the secondary package and the unit load. From these steps, the most critical step, namely filling, is addressed in this lecture. Dosing of beverages and especially filling of rigid bottles under very low levels of oxygen are focused. Different ways for the subsequent steps of closing and labelling are also shown.",
+  "topic": [
+    "High-speed beverage filling",
+    "Bottle filling lines",
+    "Non-returnable containers",
+    "Returnable containers",
+    "Bottle filling process",
+    "Dosing of beverages",
+    "Low-oxygen filling",
+    "Bottle cleaning",
+    "Bottle closing",
+    "Bottle labeling",
+    "Secondary packaging",
+    "Unit load production"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Beverage containers",
+    "High-speed filling",
+    "Bottle filling",
+    "Non-returnable bottles",
+    "Returnable bottles",
+    "De-stacking",
+    "Bottle cleaning",
+    "Filling",
+    "Closing",
+    "Labeling",
+    "Secondary packaging",
+    "Unit load",
+    "Oxygen levels",
+    "Rigid bottles",
+    "Dosing"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Beverage-Filling-lecture.pdf",
+  "qAndAVariables":["Take a quiz = beverageFilling"]
+}

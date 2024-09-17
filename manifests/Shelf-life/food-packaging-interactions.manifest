@@ -1,0 +1,36 @@
+{
+  "idx": 19,
+  "title": "Food packaging interactions",
+  "level": "common",
+  "section": "S2",
+  "unit": "U2.3",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Mario Scetar",
+  "institution": "UNIZG",
+  "abstract": "Chemical and physical stability of packaging materials",
+  "topic": [
+    "interactions",
+    "permeation",
+    "migration",
+    "corrosion",
+    "metal",
+    "cans"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "aroma",
+    "corrosion",
+    "food",
+    "foodpackage",
+    "light",
+    "material",
+    "packaged",
+    "packaging",
+    "product",
+    "protection",
+    "sulphide",
+    "uv"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/UNIZG/food-packaging-interaction.html#/2"
+}

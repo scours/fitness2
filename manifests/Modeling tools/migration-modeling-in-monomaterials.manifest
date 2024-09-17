@@ -1,0 +1,39 @@
+{
+  "idx": 42,
+  "title": "Migration modeling in monomaterials",
+  "level": "specialized",
+  "section": "S4",
+  "unit": "U4.2",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Olivier Vitrac",
+  "institution": "INRAE",
+  "abstract": "Desorption of substances from materials in direct contact with food (of finite volume $V_F$) is coined migration. This mass transfer is full described in a simple case by the a dimensionless time Fo=D_Pxt/l_p^2 , the packaging-to-food volume ratio L_PF=V_P/V_F and the partition coefficient K_FP=C_P^eq/C_Peq. This lecture will explain why the migration is so different between fatty and aqueous food products, between a rubber and a glassy material, between a small and large migrant...  - level intermediate",
+  "topic": [
+    "diffusion",
+    "migration",
+    "modeling",
+    "partition",
+    "plastics",
+    "regulation",
+    "compliance",
+    "risk"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "concentration",
+    "diffusion",
+    "food",
+    "known",
+    "material",
+    "migration",
+    "modelling",
+    "pp",
+    "properties",
+    "session",
+    "supplier",
+    "thickness"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.2/part1.html#/2",
+  "qAndAVariables":["Access the assessment = https://fitness.agroparistech.fr/fitness2/online/LNE/assessments/migration-modeling-for-monomaterials/index.html"]
+}

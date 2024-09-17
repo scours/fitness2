@@ -1,0 +1,37 @@
+{
+  "idx": 52,
+  "title": "Calculation using fluctuation theorems",
+  "level": "specialized",
+  "section": "S6",
+  "unit": "U6.3",
+  "difficultyLevel": "Advanced",
+  "part": "part1",
+  "author": "Olivier Vitrac",
+  "institution": "INRAE",
+  "abstract": "Properties related to free-energies (solubilities, activity coefficients, miscibility...) can be calculated by brute force calculations at atomistic scale assuming a disordered mixture at molecule scale.    -   level advanced",
+  "topic": [
+    "molecular",
+    "diffusion",
+    "partition",
+    "affinity",
+    "solubility",
+    "modeling",
+    "thermodynamics"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "chemical",
+    "ethanol",
+    "excess",
+    "food",
+    "howcrisis",
+    "incredible",
+    "ir",
+    "molecular",
+    "partition",
+    "polymer",
+    "representation",
+    "theory"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S6/U6.3/part1.html#/2"
+}
