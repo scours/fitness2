@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 17th September 2024
+ * Last Modified: Wednesday, 18th September 2024
  * Modified By: Steward OUADI
  */
 
@@ -16,8 +16,8 @@ class Footer extends HTMLElement {
         <div class="container">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
             <div class="col mb-3">
-                <img src="../lectures-archi/src/Fitness2_logo.PNG" class="rounded mx-auto d-block" alt="" width="90%" height="auto">
-                <img src="../lectures-archi/src/img/Erasmus-Logo-sans-fond-1-uai-1032x212.png" class="rounded mx-auto d-block" alt=""
+                <img src="../Fitness2_logo.PNG" class="rounded mx-auto d-block" alt="" width="90%" height="auto">
+                <img src="../img/Erasmus-Logo-sans-fond-1-uai-1032x212.png" class="rounded mx-auto d-block" alt=""
                     width="90%" height="auto">
                 <p class="nav-link p-0 text-muted"> FITNESS 2 is funded by the European Union's ERASMUS programme
                     (contract
