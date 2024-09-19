@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 3rd December 2020
 Authors: Steward OUADI, Olivier Vitrac
 -----
-Last Modified: Wednesday, 18th September 2024
+Last Modified: Thursday, 19th September 2024
 Modified By: Steward OUADI
 -----
 $2020-12-20$ make local modifyLectures/index.html (note that index.html is required to have the application working)
@@ -66,11 +66,16 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
 
     .video-container div {
       width: 48%;
+      /* Keep the same width for both videos */
     }
 
     .video-container video {
+      height: 360px;
+      /* Set a fixed height */
       width: 100%;
-      height: auto;
+      /* Adjust width to fill the container */
+      object-fit: cover;
+      /* Maintain the aspect ratio by cropping the video if necessary */
       border: 1px solid #ddd;
       border-radius: 8px;
     }
@@ -193,7 +198,8 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
   <div class="video-container">
     <div>
       <h4>Why FITNESS</h4>
-      <video controls>
+      <video controls
+        poster="https://fitness.agroparistech.fr/fitness2/lectures/media/video/FITNESS2_promotional_video_thumbnail.png">
         <source src="https://fitness.agroparistech.fr/fitness2/lectures/media/video/FITNESS2_promotional_video.mp4"
           type="video/mp4">
         Your browser does not support the video tag.
@@ -201,7 +207,8 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
     </div>
     <div>
       <h4>How to use the platform?</h4>
-      <video controls>
+      <video controls
+        poster="https://fitness.agroparistech.fr/fitness2/lectures/media/video/FITNESS2_tutorial_video_thumbnail.png">
         <source src="https://fitness.agroparistech.fr/fitness2/lectures/media/video/FITNESS2_tutorial_video.mp4"
           type="video/mp4">
         Your browser does not support the video tag.
@@ -386,7 +393,8 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
 
   </section>
   <p class="info-text">
-    All lectures and interactive contents are provided "AS IS". The content may contain inconsistencies and inaccuracies
+    All lectures and interactive contents are provided "AS IS". The content may contain inconsistencies and
+    inaccuracies
   </p>
 
 
