@@ -24,11 +24,13 @@ Below are the different presentations of the FITNESS 2 platforms.
 
 ### Webinar
 
+[Freising webinar, September 2024](https://fitness.agroparistech.fr/fitness2/webinar/fitness-2-platform-sept-2024.html)
+
 [How to deal with the safety aspects of Paper and Board recycling?, june 2024](https://fitness.agroparistech.fr/fitness2/webinar/fitness-2-june-2024.html)
 
 [from recycling towards reuse, june 2023](https://fitness.agroparistech.fr/fitness2/webinar/from-recycling-towards-reuse/#/title-slide)
 
-[porto webinar, march 2023](https://fitness.agroparistech.fr/fitness2/webinar/index.html#/title-slide)
+[Porto webinar, march 2023](https://fitness.agroparistech.fr/fitness2/webinar/index.html#/title-slide)
 
 ### Online trainings
 
