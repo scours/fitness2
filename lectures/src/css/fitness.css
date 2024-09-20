@@ -138,3 +138,28 @@ body {
 }
 
 /* Custom styles for Bootstrap heroes end */
+
+/* Adjust the font size and spacing in the footer */
+footer {
+  font-size: 0.9em; /* Reduce the overall font size */
+}
+
+footer h5 {
+  font-size: 1em; /* Reduce the size of headings */
+  margin-bottom: 10px; /* Adjust spacing below headings */
+}
+
+footer p,
+footer a,
+footer li {
+  font-size: 0.9em; /* Smaller text size for paragraphs and links */
+}
+
+footer .col {
+  padding: 10px 15px; /* Adjust padding inside columns */
+}
+
+footer .nav-link {
+  padding: 0; /* Reduce padding for links */
+  margin: 5px 0; /* Reduce margin between links */
+}
