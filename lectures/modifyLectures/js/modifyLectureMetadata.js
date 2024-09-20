@@ -1,70 +1,75 @@
 /*
  * File: modifyLectureMetadata.js
  * Contract: EU contract 2017-1-FR01-KA202-037441
- * Project: FitNESS ERASMUS+
+ * Project: FitNESS 2 ERASMUS+
  * File Created: Thursday, 5th November 2020
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 7th December 2020
+ * Last Modified: Monday, 23rd October 2023
  * Modified By: Steward OUADI
  * -----
  */
 // Get all lectures from local storage.
-const lectures = JSON.parse(localStorage.getItem('lectures'));
+// const lectures = JSON.parse(localStorage.getItem('lectures'));
 
-let currentLectureId = '';
-let currentLecture = '';
-const levels = new Set(); // Set containing all the levels from all lectures
-const sections = new Set(); // Set containing all the sections from all lectures
-const units = new Set(); // Set containing all the units from all lectures
+let currentLectureId = "";
+let currentLecture = "";
+const levels = new Set(); // Set containing all the levels for all lectures
+const difficultyLevel = new Set(); // Set containing all the difficulty levels for all lectures
+const sections = new Set(); // Set containing all the sections for all lectures
+const units = new Set(); // Set containing all the units for all lectures
+const institutions = new Set(); // Set containing all the institutions for all lectures
 
 // Set element ids so we can get them from "document" object
-const headerElementId = 'header';
-const titleElementId = 'title';
-const levelElementId = 'select-level';
-const sectionElementId = 'select-section';
-const unitElementId = 'select-unit';
-const partElementId = 'part';
-const authorElementId = 'author';
-const institutionElementId = 'institution';
-const abstractElementId = 'abstract';
-const topicsElementId = 'topics';
-const licenseElementId = 'license';
-const keywordsElementId = 'keywords';
+const headerElementId = "header";
+const titleElementId = "title";
+const levelElementId = "select-level";
+const sectionElementId = "select-section";
+const unitElementId = "select-unit";
+const difficultyLevelElementId = "select-difficulty-level";
+const partElementId = "part";
+const authorElementId = "author";
+const institutionElementId = "institution";
+const abstractElementId = "abstract";
+const topicsElementId = "topics";
+const licenseElementId = "license";
+const keywordsElementId = "keywords";
 
-const titleMinLengthElementId = 'title-min-length';
-const titleMaxLengthElementId = 'title-max-length';
-const abstractMinLengthElementId = 'abstract-min-length';
-const abstractMaxLengthElementId = 'abstract-max-length';
+const titleMinLengthElementId = "title-min-length";
+const titleMaxLengthElementId = "title-max-length";
+const abstractMinLengthElementId = "abstract-min-length";
+const abstractMaxLengthElementId = "abstract-max-length";
 
-const topicsMinLengthElementId = 'topics-min-length';
-const topicsMaxLengthElementId = 'topics-max-length';
-const topicsContainerElementId = 'nb-topics-container';
-const topicsNbCurrentElementId = 'topics-current-nb';
-const topicsMaximumNbElementId = 'topics-maximum-nb';
-const topicsPassedOrFailedElementId = 'topics-passed-or-failed';
-const topicsVerifyMinLengthElementId = 'topics-verify-min-length';
+const topicsMinLengthElementId = "topics-min-length";
+const topicsMaxLengthElementId = "topics-max-length";
+const topicsContainerElementId = "nb-topics-container";
+const topicsNbCurrentElementId = "topics-current-nb";
+const topicsMaximumNbElementId = "topics-maximum-nb";
+const topicsPassedOrFailedElementId = "topics-passed-or-failed";
+const topicsVerifyMinLengthElementId = "topics-verify-min-length";
 
-const titleNbCharsContainerElementId = 'title-nb-chars-container';
-const titleNbCurrentCharsElementId = 'title-nb-current-chars';
-const titleMaximumNbCharsElementId = 'title-maximum-nb-chars';
-const titlePassedOrFailedElementId = 'title-passed-or-failed';
-const titleVerifyMinLengthElementId = 'title-verify-min-length';
+const titleNbCharsContainerElementId = "title-nb-chars-container";
+const titleNbCurrentCharsElementId = "title-nb-current-chars";
+const titleMaximumNbCharsElementId = "title-maximum-nb-chars";
+const titlePassedOrFailedElementId = "title-passed-or-failed";
+const titleVerifyMinLengthElementId = "title-verify-min-length";
 
-const abstractNbWordsContainerElementId = 'abstract-nb-words-container';
-const abstractNbCurrentWordsElementId = 'abstract-nb-current-words';
-const abstractMaximumNbWordsElementId = 'abstract-maximum-nb-words';
-const abstractPassedOrFailedElementId = 'abstract-passed-or-failed';
-const abstractVerifyMinLengthElementId = 'abstract-verify-min-length';
+const abstractNbWordsContainerElementId = "abstract-nb-words-container";
+const abstractNbCurrentWordsElementId = "abstract-nb-current-words";
+const abstractMaximumNbWordsElementId = "abstract-maximum-nb-words";
+const abstractPassedOrFailedElementId = "abstract-passed-or-failed";
+const abstractVerifyMinLengthElementId = "abstract-verify-min-length";
 
-const keywordsNbCharsContainerElementId = 'nb-keywords-container';
-const keywordsNbCurrentNbWordsElementId = 'current-nb-words-keywords';
-const keywordsMaximumNbWordsElementId = 'maximum-nb-words-keywords';
-const keywordsPassedOrFailedElementId = 'keywords-passed-or-failed';
-const keywordsVerifyMinLengthElementId = 'keywords-verify-min-length';
+const keywordsNbCharsContainerElementId = "nb-keywords-container";
+const keywordsNbCurrentNbWordsElementId = "current-nb-words-keywords";
+const keywordsMaximumNbWordsElementId = "maximum-nb-words-keywords";
+const keywordsPassedOrFailedElementId = "keywords-passed-or-failed";
+const keywordsVerifyMinLengthElementId = "keywords-verify-min-length";
 
-const keywordsMinLengthElementId = 'keywords-min-length';
-const keywordsMaxLengthElementId = 'keywords-max-length';
+const keywordsMinLengthElementId = "keywords-min-length";
+const keywordsMaxLengthElementId = "keywords-max-length";
+
+const lectureUrlElementId = "lecture-url";
 
 // Set boolean values for minimum requirements for some fields
 let titleMeetsMinimumRequirements = false;
@@ -114,6 +119,8 @@ const topicsTextareaMaxLength = document.getElementById(
   topicsMaxLengthElementId
 );
 
+const lectureUrlInput = document.getElementById(lectureUrlElementId);
+
 // Set min and max values
 const titleMaxLength = 300;
 const titleRawMinLength = titleMaxLength / 11;
@@ -131,18 +138,27 @@ const minKeywords = 3;
 const topicsMinLength = 1;
 const topicsMaxLength = 8;
 
-// Parse the URL to get lecture id
-function getCurrentLecture() {
-  const sPageURL = window.location.href;
-  const parameter = sPageURL.split('?');
-  const nameToProcess = parameter[1].split('=')[1];
-  const quotationMark = /%22/gi;
-  const space = /%20/gi;
+const minId = 100; // Minimum lecture ID
+const maxId = 900000; // Maximum lecture ID
 
-  const removedQuotationMarks = nameToProcess.replace(quotationMark, '');
-  currentLectureId = parseInt(removedQuotationMarks.replace(space, ' '));
+function createLectureFileName(isoStringDate, title) {
+  let lectureFileName;
+
+  // Remove chars not allowed in path
+  let removedCharsNotAllowed = title.replace(/[/\\?%*:|"<>]/g, "-");
+
+  // Replace Multiple Spaces with a Single Space
+  let singleSpaceTitle = removedCharsNotAllowed.replace(/  +/g, " ");
+  console.log(singleSpaceTitle);
+
+  // Replace all spaces with dash sign
+  let dashSignTitle = singleSpaceTitle.replaceAll(" ", "-");
+  console.log(dashSignTitle);
+
+  lectureFileName = `manifest_${dashSignTitle}__iso-date_${isoStringDate}.json`;
+
+  return lectureFileName;
 }
-
 function updateElementCountStyle(
   nbElementCount,
   currentNbElementCount,
@@ -155,15 +171,15 @@ function updateElementCountStyle(
 ) {
   // Change element count style based on current element length
   if (nbElementCount < mean) {
-    currentNbElementCount.style.cssText = 'color: #666';
+    currentNbElementCount.style.cssText = "color: #666";
   }
   if (nbElementCount >= mean) {
-    maximumNbElementCount.style.cssText = 'color: #8f0001';
-    currentNbElementCount.style.cssText = 'color: #8f0001';
-    nbCountElementContainer.style.cssText = 'font-weight: bold';
+    maximumNbElementCount.style.cssText = "color: #8f0001";
+    currentNbElementCount.style.cssText = "color: #8f0001";
+    nbCountElementContainer.style.cssText = "font-weight: bold";
   } else {
-    maximumNbElementCount.style.cssText = 'color: #666';
-    nbCountElementContainer.style.cssText = 'font-weight: normal';
+    maximumNbElementCount.style.cssText = "color: #666";
+    nbCountElementContainer.style.cssText = "font-weight: normal";
     // if (abstractCheckMark.classList.contains('text-success')) {
     //   abstractCheckMark.classList.remove('text-success');
     // }
@@ -318,7 +334,7 @@ function commaSeparatedWordCount(
   const nbWordsContainer = document.getElementById(nbWordsContainerId);
   const passedOrFailed = document.getElementById(passedOrFailedId);
 
-  const splitKeywords = rawKeywords.split(',');
+  const splitKeywords = rawKeywords.split(",");
 
   const uniqueKeywords = new Set();
   // Trim keyword if necessary
@@ -376,7 +392,7 @@ function fillInputs(lecture) {
   );
 
   // Set listener so we can update count on type
-  title.addEventListener('input', () =>
+  title.addEventListener("input", () =>
     charCount(
       titleNbCharsContainerElementId,
       titleNbCurrentCharsElementId,
@@ -408,7 +424,7 @@ function fillInputs(lecture) {
   );
 
   // Set listener so we can update count on type
-  abstract.addEventListener('input', () =>
+  abstract.addEventListener("input", () =>
     wordCount(
       abstractNbWordsContainerElementId,
       abstractNbCurrentWordsElementId,
@@ -433,7 +449,7 @@ function fillInputs(lecture) {
     topicsMaxLength,
     topicsMinLength
   );
-  topics.addEventListener('input', () =>
+  topics.addEventListener("input", () =>
     commaSeparatedWordCount(
       topicsContainerElementId,
       topicsNbCurrentElementId,
@@ -458,7 +474,7 @@ function fillInputs(lecture) {
     maxKeywords,
     minKeywords
   );
-  keywords.addEventListener('input', () =>
+  keywords.addEventListener("input", () =>
     commaSeparatedWordCount(
       keywordsNbCharsContainerElementId,
       keywordsNbCurrentNbWordsElementId,
@@ -471,17 +487,28 @@ function fillInputs(lecture) {
   );
 
   fillInput(licenseElementId, lecture.license);
+  fillInput(lectureUrlElementId, lecture.userProvidedURLForLecture);
 
   createDropDownOptions(levelElementId, levels, lecture.level);
   createDropDownOptions(sectionElementId, sections, lecture.section);
   createDropDownOptions(unitElementId, units, lecture.unit);
+  createDropDownOptions(
+    difficultyLevelElementId,
+    difficultyLevel,
+    lecture.difficultyLevel
+  );
+  createDropDownOptions(
+    institutionElementId,
+    institutions,
+    lecture.institution
+  );
 }
 
 function download(filename, stringifiedModifiedLecture) {
-  const element = document.createElement('a');
+  const element = document.createElement("a");
   element.setAttribute(
-    'href',
-    'data:text/plain;charset=utf-8,' +
+    "href",
+    "data:text/plain;charset=utf-8," +
       encodeURIComponent(stringifiedModifiedLecture)
   );
   element.download = filename;
@@ -493,10 +520,10 @@ function download(filename, stringifiedModifiedLecture) {
   document.body.removeChild(element);
 }
 
-const filename = document.getElementById('upload-button');
+const filename = document.getElementById("upload-button");
 // Start file upload.
 
-filename.addEventListener('change', function () {
+filename.addEventListener("change", function () {
   // Creating a FileReader object using the constructor.
   const fileReader = new FileReader();
   // Reading a file as plain text
@@ -506,20 +533,21 @@ filename.addEventListener('change', function () {
   fileReader.onload = function () {
     const lecture = JSON.parse(fileReader.result);
     currentLecture = lecture;
+    setDropDownData(lecture);
     fillInputs(lecture);
   };
   // Print the error incase there is one
   fileReader.onerror = function () {
-    console.log('Error: ', fileReader.error);
+    console.log("Error: ", fileReader.error);
   };
 });
 
 function getArrayOfString(elementId) {
   const rawString = document.getElementById(elementId).value;
-  if (rawString.includes(',')) {
+  if (rawString.includes(",")) {
     // If string has a comma char, then split every string
 
-    const splitString = rawString.split(',');
+    const splitString = rawString.split(",");
     const words = [];
     // Trim word if necessary
     splitString.forEach((word) => {
@@ -546,8 +574,9 @@ function getArrayOfString(elementId) {
 }
 
 // Start file download.
-document.getElementById('save-button').addEventListener('click', function () {
-  const modifiedLecture = currentLecture;
+document.getElementById("save-button").addEventListener("click", function () {
+  const modifiedLecture = {};
+  modifiedLecture.idx = currentLecture.idx;
   const isoStringDate = new Date().toISOString();
 
   // Set user modified values
@@ -555,11 +584,16 @@ document.getElementById('save-button').addEventListener('click', function () {
   const level = document.getElementById(levelElementId).value;
   const section = document.getElementById(sectionElementId).value;
   const unit = document.getElementById(unitElementId).value;
+  const difficultyLevel = document.getElementById(
+    difficultyLevelElementId
+  ).value;
   const part = document.getElementById(partElementId).value;
   // const author = document.getElementById(authorElementId).value;
   const institution = document.getElementById(institutionElementId).value;
   const abstract = document.getElementById(abstractElementId).value;
   const license = document.getElementById(licenseElementId).value;
+  const userProvidedURLForLecture =
+    document.getElementById(lectureUrlElementId).value;
 
   const keywords = getArrayOfString(keywordsElementId);
   const topic = getArrayOfString(topicsElementId);
@@ -569,6 +603,7 @@ document.getElementById('save-button').addEventListener('click', function () {
   modifiedLecture.level = level;
   modifiedLecture.section = section;
   modifiedLecture.unit = unit;
+  modifiedLecture.difficultyLevel = difficultyLevel;
   modifiedLecture.part = part;
   modifiedLecture.author = author;
   modifiedLecture.institution = institution;
@@ -576,11 +611,11 @@ document.getElementById('save-button').addEventListener('click', function () {
   modifiedLecture.topic = topic;
   modifiedLecture.license = license;
   modifiedLecture.keywords = keywords;
+  modifiedLecture.userProvidedURLForLecture = userProvidedURLForLecture;
 
-  // Store modified data in json format. Filename is composed of lecture id and modification date
-  const filename = `lecture-id_${currentLecture.idx}__iso-date_${isoStringDate}.json`;
+  const filename = createLectureFileName(isoStringDate, title);
 
-  download(filename, JSON.stringify(modifiedLecture));
+  download(filename, JSON.stringify(modifiedLecture, null, 2));
 
   // Display alert message if some requirements are not met
   if (
@@ -590,34 +625,80 @@ document.getElementById('save-button').addEventListener('click', function () {
     topicsMeetsMinimumRequirements === false
   ) {
     let alertText =
-      'Your modifications have been saved, but be aware that your content does not meet the minimum requirements (green check mark) for the following fields:';
+      "Your modifications have been saved, but be aware that your content does not meet the minimum requirements (green check mark) for the following fields:";
 
     if (titleMeetsMinimumRequirements === false) {
-      alertText += '\n  - Title ';
+      alertText += "\n  - Title ";
     }
 
     if (abstractMeetsMinimumRequirements === false) {
-      alertText += '\n  - Abstract ';
+      alertText += "\n  - Abstract ";
     }
 
     if (topicsMeetsMinimumRequirements === false) {
-      alertText += '\n  - Topics ';
+      alertText += "\n  - Topics ";
     }
 
     if (keywordsMeetsMinimumRequirements === false) {
-      alertText += '\n  - Keywords ';
+      alertText += "\n  - Keywords ";
     }
     alert(alertText);
   }
 });
 
-function setDropDownData() {
-  // Parse database to get all available options for dropdown lists
-  lectures.forEach((lecture) => {
-    levels.add(lecture.level);
-    sections.add(lecture.section);
-    units.add(lecture.unit);
-  });
+function setDifficultyLevelsDefaultValues() {
+  difficultyLevel.add("Novice");
+  difficultyLevel.add("Intermediate");
+  difficultyLevel.add("Advanced");
+}
+
+function setInstitutionDefaultValues() {
+  institutions.add("AgroParisTech");
+  institutions.add("CSIC");
+  institutions.add("FHG");
+  institutions.add("FPF");
+  institutions.add("INRAE");
+  institutions.add("Institut-Agro-Dijon");
+  institutions.add("LNE");
+  institutions.add("TUM");
+  institutions.add("UB");
+  institutions.add("UCP");
+  institutions.add("UNIZG");
+  institutions.add("U_Aarhus");
+}
+
+function setLevelDefaultValues() {
+  levels.add("common");
+  levels.add("specialized");
+}
+
+function setSectionDefaultValues() {
+  for (let i = 1; i <= 8; i++) {
+    sections.add("S" + i);
+  }
+}
+
+function setUnitDefaultValues() {
+  for (let i = 1; i <= 8; i++) {
+    for (let j = 1; j <= 8; j++) {
+      units.add("U" + i + "." + j);
+    }
+  }
+}
+
+function setDropDownDefaultValues() {
+  setDifficultyLevelsDefaultValues();
+  setLevelDefaultValues();
+  setSectionDefaultValues();
+  setUnitDefaultValues();
+  setInstitutionDefaultValues();
+}
+
+function setDropDownData(lecture) {
+  // Get lecture data and add them into sets containing all the levels/sections/units/difficulty level from all lectures
+  levels.add(lecture.level);
+  sections.add(lecture.section);
+  units.add(lecture.unit);
 }
 
 function createDropDownOptions(id, options, defaultValue) {
@@ -625,11 +706,11 @@ function createDropDownOptions(id, options, defaultValue) {
   const selectList = document.getElementById(id);
 
   // Clear list options
-  selectList.innerHTML = '';
+  selectList.innerHTML = "";
 
   //Create and append the options
   options.forEach((key, value) => {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.value = value;
     option.text = value;
     selectList.appendChild(option);
@@ -656,6 +737,37 @@ function createAndDisplayLectureContent() {
   });
 }
 
-setDropDownData();
-getCurrentLecture();
-createAndDisplayLectureContent();
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
+/**
+ * Fill the fields once the metadata html page is opened
+ */
+function fillFieldsOnceOpened() {
+  const id = getRandomInt(minId, maxId);
+  const lecture = {
+    idx: id,
+    title: "Title",
+    level: "Level",
+    section: "Section",
+    unit: "Unit",
+    difficultyLevel: "Novice",
+    part: "part1",
+    author: "Author",
+    institution: "Institution",
+    abstract: "Abstract",
+    topic: ["topic1", "topic2", "topic3"],
+    license: "BY-SA-ND",
+    keywords: ["keyword1", "keyword2", "keyword3"],
+    userProvidedURLForLecture: "",
+  };
+
+  currentLecture = lecture;
+  fillInputs(lecture);
+}
+
+setDropDownDefaultValues();
+fillFieldsOnceOpened();

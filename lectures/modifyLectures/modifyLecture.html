@@ -1,337 +1,295 @@
 <!--
 File: modifyLecture.html
 Contract: EU contract 2017-1-FR01-KA202-037441
-Project: FitNESS ERASMUS+
+Project: FitNESS 2 ERASMUS+
 File Created: Monday, 26th October 2020
 Author: Steward OUADI
 -----
-Last Modified: Tuesday, 8th December 2020
+Last Modified: Tuesday, 17th September 2024
 Modified By: Steward OUADI
 -----
 -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="flex-vertical-center">
-        <img
-          src="../src/Fitness logo RVB.png"
-          referrerpolicy="no-referrer"
-          alt="FITNESS"
-          title="ERASMUS+ Project"
-          width="200px"
-          height="auto"
-        />
-      </div>
 
-      <div id="lecture-details">
-        <h1 id="header">
-          Micro holes and leaks in packaging – measurement and modelling MICRO
-          HOLES AND LEAKS
-        </h1>
-        <div class="step-explanation-text">
-          <h3>Information</h3>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <main-header></main-header>
+
+  <div class="container">
+    <div class="text-center">
+      <h1>Manifest Editor</h1>
+    </div>
+
+
+    <p>Import a manifest file</p>
+    <input type="file" id="upload-button" class="btn" />
+    <div id="lecture-details">
+      <h1 id="header">
+      </h1>
+      <div class="step-explanation-text">
+        <h3>Information</h3>
+        <p>
+          This form will help you modify the metadata of your lectures. The
+          metadata is used to find your lecture when a search is performed on
+          <a href="https://fitness.agroparistech.fr/fitness/lectures/html/" target="_blank">
+            fitness AgroParisTech.
+          </a>
+          The more accurate your metadata is, the easier it will be to find
+          your lectures.
+          <br />
+          The form is separated in two steps.
+          <br />
+          In <strong>Step 1</strong>, you have a set of fields that you can
+          modify at your convenience. In order to have homogeneous fields
+          values, whenever it is necessary, there is a suggestion text as well
+          as some examples.
+          <br />
+          In <strong>Step 2</strong>, you can save your
+          modifications for a lecture. In step 2, you also have the detailed
+          way to proceed in order to upload your file online.
+        </p>
+      </div>
+      <h3>Step 1</h3>
+      <div class="fields-container">
+        <div class="editable-element">
+          <h5>
+            <strong>Title: </strong>
+          </h5>
           <p>
-            This form will help you modify the metadata of your lectures. The
-            metadata is used to find your lecture when a search is performed on
-            <a
-              href="https://fitness.agroparistech.fr/fitness/lectures/html/"
-              target="_blank"
-            >
-              fitness AgroParisTech.
+            Write a title between <strong id="title-min-length"></strong> and
+            <strong id="title-max-length"></strong> characters
+          </p>
+          <textarea id="title" style="width: 100%"></textarea>
+          <div id="title-nb-chars-container">
+            <span>Suggested number of characters: </span>
+            <span id="title-nb-current-chars"></span> /
+            <span id="title-maximum-nb-chars"></span>
+          </div>
+          <strong id="title-verify-min-length"></strong> characters minimum
+          <span id="title-passed-or-failed"> </span>
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>Difficulty level: </strong>
+          </h5>
+          <select id="select-difficulty-level"></select>
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>Level: </strong>
+          </h5>
+          <select id="select-level"></select>
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>Section: </strong>
+          </h5>
+          <select id="select-section"></select>
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>Unit: </strong>
+          </h5>
+          <select id="select-unit"></select>
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>Part: </strong>
+          </h5>
+          <p>Write a part name in lower case followed by a number.</p>
+          <strong class="examples">Examples:</strong>
+          <ul class="exampleItem">
+            <li>part1</li>
+            <li>part2</li>
+          </ul>
+          <input type="text" id="part" />
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>Authors: </strong>
+          </h5>
+          <p>
+            List authors' names using the following format: first-name
+            middle-name last-name or first-name last-name. Separate each
+            author by a comma ","
+          </p>
+          <strong class="examples">Examples:</strong>
+          <ul class="exampleItem">
+            <li>Andrea Mia Ghez</li>
+            <li>Gérard Albert Mourou</li>
+            <li>Barbara Liskov, Andrea Mia Ghez</li>
+          </ul>
+          <input type="text" id="author" style="width: 70%" />
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>Institution: </strong>
+          </h5>
+          <select id="institution"></select>
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>Abstract: </strong>
+          </h5>
+          <p>
+            Write an abstract between
+            <strong id="abstract-min-length"></strong> and
+            <strong id="abstract-max-length"></strong> words
+          </p>
+          <textarea id="abstract" rows="10" style="width: 100%"></textarea>
+          <div id="abstract-nb-words-container">
+            <span>Suggested number of words: </span>
+            <span id="abstract-nb-current-words"></span> /
+            <span id="abstract-maximum-nb-words"></span>
+          </div>
+          <strong id="abstract-verify-min-length"></strong> words minimum
+          <span id="abstract-passed-or-failed"> </span>
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>Topics: </strong>
+          </h5>
+          <p>
+            Write between <strong id="topics-min-length"></strong> and
+            <strong id="topics-max-length"></strong> topics in lower case
+            letters. Separate each topic by a comma ",".
+          </p>
+          <strong class="examples">Examples:</strong>
+          <ul class="exampleItem">
+            <li>wood</li>
+            <li>wood, biodegradable</li>
+          </ul>
+          <textarea id="topics" style="width: 100%"></textarea>
+          <div id="nb-topics-container">
+            <span>Suggested number of topics: </span>
+            <span id="topics-current-nb"></span> /
+            <span id="topics-maximum-nb"></span>
+          </div>
+          <div>
+            <strong id="topics-verify-min-length"></strong> topic minimum
+            <span id="topics-passed-or-failed"> </span>
+          </div>
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>Keywords: </strong>
+          </h5>
+          <p>
+            Some keywords might have been generated automatically. You can
+            write between <strong id="keywords-min-length"></strong> and
+            <strong id="keywords-max-length"></strong> keywords. Separate each
+            keyword by a comma ",".
+          </p>
+          <textarea id="keywords" style="width: 100%"></textarea>
+          <div id="nb-keywords-container">
+            <span>Suggested number of keywords: </span>
+            <span id="current-nb-words-keywords"></span> /
+            <span id="maximum-nb-words-keywords"></span>
+          </div>
+          <strong id="keywords-verify-min-length"></strong> keywords minimum
+          <span id="keywords-passed-or-failed"> </span>
+        </div>
+        <div class="editable-element">
+          <h5>
+            <strong>License: </strong>
+          </h5>
+          <p>
+            To help you choose a license,
+            <a href="https://chooser-beta.creativecommons.org/" target="_blank">
+              click on this license chooser link.
             </a>
-            The more accurate your metadata is, the easier it will be to find
-            your lectures.
-            <br />
-            The form is separated in two steps.
-            <br />
-            In <strong>Step 1</strong>, you have a set of fields that you can
-            modify at your convenience. In order to have homogeneous fields
-            values, whenever it is necessary, there is a suggestion text as well
-            as some examples.
-            <br />
-            In <strong>Step 2</strong>, you can save or import your
-            modifications for a lecture. In step 2, you also have the detailed
-            way to proceed in order to send your modifications to the
-            administrator.
+            Follow the instructions and answer the questions to generate a
+            recommended license. Then, copy the licence name and paste it in
+            the field below. On the license chooser website, the license name
+            is generated on the right. A license name is similar to what is in
+            the red rectangle on this picture.
+          </p>
+          <div id="img-container">
+            <img src="assets/images/license-chooser.png" alt="License chooser with red rectangle showing license name"
+              class="rounded img-fluid" />
+          </div>
+          <strong class="examples">Examples:</strong>
+          <ul class="exampleItem">
+            <li>CC-BY</li>
+            <li>CC-BY-NC</li>
+            <li>CC-BY-ND</li>
+          </ul>
+          <input type="text" id="license" />
+          <p>
+            <span>
+              <svg width="1.2em" height="1.2em" viewBox="0 0 16 16" class="bi bi-info-circle-fill text-primary"
+                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+              </svg>
+            </span>
+            More information about creative common licenses:
+            <a href="https://creativecommons.org/about/cclicenses/" target="_blank">
+              creative common licenses
+            </a>
           </p>
         </div>
-        <h3>Step 1</h3>
-        <div class="fields-container">
-          <div class="editable-element">
-            <h5>
-              <strong>Title: </strong>
-            </h5>
-            <p>
-              Write a title between <strong id="title-min-length"></strong> and
-              <strong id="title-max-length"></strong> characters
-            </p>
-            <textarea id="title" style="width: 100%"></textarea>
-            <div id="title-nb-chars-container">
-              <span>Suggested number of characters: </span>
-              <span id="title-nb-current-chars"></span> /
-              <span id="title-maximum-nb-chars"></span>
-            </div>
-            <strong id="title-verify-min-length"></strong> characters minimum
-            <span id="title-passed-or-failed"> </span>
-          </div>
-          <div class="editable-element">
-            <h5>
-              <strong>Level: </strong>
-            </h5>
-            <select id="select-level"></select>
-          </div>
-          <div class="editable-element">
-            <h5>
-              <strong>Section: </strong>
-            </h5>
-            <select id="select-section"></select>
-          </div>
-          <div class="editable-element">
-            <h5>
-              <strong>Unit: </strong>
-            </h5>
-            <select id="select-unit"></select>
-          </div>
-          <div class="editable-element">
-            <h5>
-              <strong>Part: </strong>
-            </h5>
-            <p>Write a part name in lower case followed by a number.</p>
-            <strong class="examples">Examples:</strong>
-            <ul class="exampleItem">
-              <li>part1</li>
-              <li>part2</li>
-            </ul>
-            <input type="text" id="part" />
-          </div>
-          <div class="editable-element">
-            <h5>
-              <strong>Authors: </strong>
-            </h5>
-            <p>
-              List authors' names using the following format: first-name
-              middle-name last-name or first-name last-name. Separate each
-              author by a comma ","
-            </p>
-            <strong class="examples">Examples:</strong>
-            <ul class="exampleItem">
-              <li>Andrea Mia Ghez</li>
-              <li>Gérard Albert Mourou</li>
-              <li>Barbara Liskov, Andrea Mia Ghez</li>
-            </ul>
-            <input type="text" id="author" style="width: 70%" />
-          </div>
-          <div class="editable-element">
-            <h5>
-              <strong>Institution: </strong>
-            </h5>
-            <input type="text" id="institution" />
-          </div>
-          <div class="editable-element">
-            <h5>
-              <strong>Abstract: </strong>
-            </h5>
-            <p>
-              Write an abstract between
-              <strong id="abstract-min-length"></strong> and
-              <strong id="abstract-max-length"></strong> words
-            </p>
-            <textarea id="abstract" rows="10" style="width: 100%"></textarea>
-            <div id="abstract-nb-words-container">
-              <span>Suggested number of words: </span>
-              <span id="abstract-nb-current-words"></span> /
-              <span id="abstract-maximum-nb-words"></span>
-            </div>
-            <strong id="abstract-verify-min-length"></strong> words minimum
-            <span id="abstract-passed-or-failed"> </span>
-          </div>
-          <div class="editable-element">
-            <h5>
-              <strong>Topics: </strong>
-            </h5>
-            <p>
-              Write between <strong id="topics-min-length"></strong> and
-              <strong id="topics-max-length"></strong> topics in lower case
-              letters. Separate each topic by a comma ",".
-            </p>
-            <strong class="examples">Examples:</strong>
-            <ul class="exampleItem">
-              <li>wood</li>
-              <li>wood, biodegradable</li>
-            </ul>
-            <textarea id="topics" style="width: 100%"></textarea>
-            <div id="nb-topics-container">
-              <span>Suggested number of topics: </span>
-              <span id="topics-current-nb"></span> /
-              <span id="topics-maximum-nb"></span>
-            </div>
-            <div>
-              <strong id="topics-verify-min-length"></strong> topic minimum
-              <span id="topics-passed-or-failed"> </span>
-            </div>
-          </div>
-          <div class="editable-element">
-            <h5>
-              <strong>Keywords: </strong>
-            </h5>
-            <p>
-              Some keywords might have been generated automatically. You can
-              write between <strong id="keywords-min-length"></strong> and
-              <strong id="keywords-max-length"></strong> keywords. Separate each
-              keyword by a comma ",".
-            </p>
-            <textarea id="keywords" style="width: 100%"></textarea>
-            <div id="nb-keywords-container">
-              <span>Suggested number of keywords: </span>
-              <span id="current-nb-words-keywords"></span> /
-              <span id="maximum-nb-words-keywords"></span>
-            </div>
-            <strong id="keywords-verify-min-length"></strong> keywords minimum
-            <span id="keywords-passed-or-failed"> </span>
-          </div>
-          <div class="editable-element">
-            <h5>
-              <strong>License: </strong>
-            </h5>
-            <p>
-              To help you choose a license,
-              <a
-                href="https://chooser-beta.creativecommons.org/"
-                target="_blank"
-              >
-                click on this license chooser link.
-              </a>
-              Follow the instructions and answer the questions to generate a
-              recommended license. Then, copy the licence name and paste it in
-              the field below. On the license chooser website, the license name
-              is generated on the right. A license name is similar to what is in
-              the red rectangle on this picture.
-            </p>
-            <div id="img-container">
-              <img
-                src="assets/images/license-chooser.png"
-                alt="License chooser with red rectangle showing license name"
-                class="rounded img-fluid"
-              />
-            </div>
-            <strong class="examples">Examples:</strong>
-            <ul class="exampleItem">
-              <li>CC-BY</li>
-              <li>CC-BY-NC</li>
-              <li>CC-BY-ND</li>
-            </ul>
-            <input type="text" id="license" />
-            <p>
-              <span>
-                <svg
-                  width="1.2em"
-                  height="1.2em"
-                  viewBox="0 0 16 16"
-                  class="bi bi-info-circle-fill text-primary"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
-                  />
-                </svg>
-              </span>
-              More information about creative common licenses:
-              <a
-                href="https://creativecommons.org/about/cclicenses/"
-                target="_blank"
-              >
-                creative common licenses
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h3>Step 2</h3>
-        <p>
-          When you are satisfied with your modifications, you can click the
-          "Save modifications" button. This button will allow you to download a
-          file containing all your modifications for this lecture.
-        </p>
-        <p>
-          Once you have modified the metadata of all your lectures, so that you
-          have 1 file for each lecture, we suggest you two options to send those
-          files to the administrator.
-        </p>
-        <ul>
-          <li>
-            <strong> Option 1: </strong> If you use an email client (Outlook,
-            Thunderbird, Gmail, Apple Mail, ...), click
-            <a
-              href="mailto:olivier.vitrac@agroparistech.fr?subject=[Fitness 1 - Metadata]"
-              target="_blank"
-            >
-              on this email link</a
-            >. The recipient and subject fields are already filled for you.
-            Then, you have to:
-            <ol>
-              <li>Add all your saved metadata files as attachments</li>
-              <li>Fill in the email body</li>
-              <li>Send the email</li>
-            </ol>
-          </li>
-          <li>
-            <strong> Option 2: </strong> If you don't use an email client
-            (Outlook, Thunderbird, Gmail, Apple Mail, ...), you will send an
-            email to the administrator by following the instructions below:
-            <ol>
-              <li>
-                Fill in the recipient field with the administrator's email
-                address:
-                <a
-                  href="mailto:olivier.vitrac@agroparistech.fr?subject=[Fitness 1 - Metadata]"
-                  target="_blank"
-                >
-                  olivier.vitrac@agroparistech.fr
-                </a>
-              </li>
-              <li>
-                Fill in the email subject with the following bold content:
-                <strong> [Fitness 1 - Metadata] </strong>
-              </li>
-              <li>Add all your saved metadata files as attachments</li>
-              <li>Fill in the email body</li>
-              <li>Send the email</li>
-            </ol>
-          </li>
-        </ul>
-      </div>
-      <div class="display-buttons">
-        <div class="left-group-button">
-          <p>You can import a previously saved file</p>
-          <input type="file" id="upload-button" class="btn" />
-        </div>
-        <div class="right-group-button">
-          <input
-            type="button"
-            id="save-button"
-            value="Save modifications"
-            class="btn"
-          />
+        <div>
+          <h5>
+            <strong>Lecture URL: </strong>
+          </h5>
+          <strong class="examples">Examples:</strong>
+          <ul class="exampleItem">
+            <li>https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.1/part1.html</li>
+            <li>https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.html</li>
+            <li>https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part5.html</li>
+          </ul>
+          <input type="text" id="lecture-url" style="width: 70%" />
         </div>
       </div>
     </div>
-    <script src="js/modifyLectureMetadata.js"></script>
-    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/css.css" />
-    <!-- <link
+
+    <div>
+      <h3>Step 2</h3>
+      <p>
+        When you are satisfied with your modifications, you can click the
+        "Save modifications" button. This button will allow you to download a
+        file containing all your modifications for this lecture.
+        <a href="https://htmlpreview.github.io/?https://github.com/scours/fitness2/blob/wip/lectures-archi/documentation/README.html"
+          target="_blank">
+          You can then follow this procedure to upload your metadata file online.
+        </a>
+      </p>
+
+    </div>
+    <div class="display-buttons">
+      <div class="left-group-button">
+      </div>
+      <div class="right-group-button">
+        <input type="button" id="save-button" value="Save modifications" class="btn" />
+      </div>
+    </div>
+  </div>
+
+  <main-footer></main-footer>
+
+  <script src="js/modifyLectureMetadata.js"></script>
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/css.css" />
+
+  <link rel="stylesheet" href="../src/css/fitness.css" />
+  <link rel="stylesheet" href="../src/css/font-awesome-4-7-0.min.css">
+
+  <script src="src/js/google_translate_plugin.js"></script>
+  <script src="../src/js/header.js"></script>
+  <script src="../src/js/footer.js"></script>
+  <!-- <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     /> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-    <!-- <script src="../assets/bootstrap/js/bootstrap.min.js"></script> -->
-  </body>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+  <!-- <script src="../assets/bootstrap/js/bootstrap.min.js"></script> -->
+</body>
+
 </html>
