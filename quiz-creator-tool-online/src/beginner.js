@@ -5,7 +5,7 @@
  * File Created: Thursday, 17th December 2020
  * Authors: Olivier VITRAC, Steward OUADI
  * -----
- * Last Modified: Thursday, 12th September 2024
+ * Last Modified: Saturday, 21st September 2024
  * Modified By: Steward OUADI
  * -----
  */
@@ -256,7 +256,7 @@ function getScoreForCheckboxesQuiz(
         globalSlidesInfo.currentScore
       );
       // color the answers green
-      answerContainers[questionNumber].style.color = "forestgreen";
+      // answerContainers[questionNumber].style.color = "forestgreen"; don't show it for now, as learner can use it to cheat easily
     } else {
       // if answer is wrong or blank
       // Wrong answer, compute points to remove
@@ -265,7 +265,7 @@ function getScoreForCheckboxesQuiz(
         currentSlide.pointsIfWrongAnswer
       );
       // color the answers red
-      answerContainers[questionNumber].style.color = "Crimson";
+      // answerContainers[questionNumber].style.color = "Crimson"; don't show it for now, as learner can use it to cheat easily
     }
   }
 
@@ -402,7 +402,7 @@ function computeNextSlideElementBasedOnScore() {
       // add this question and its answers to the output
       quizContainer.appendChild(newNextSlideHtmlObject);
 
-      showNumberOfAnswersOutOfTotal();
+      // showNumberOfAnswersOutOfTotal(); // don't show it for now, as learner can use it to cheat easily
     }
   }
 }
@@ -758,7 +758,7 @@ function computeScore() {
           numberOfCorrectAnswers++;
 
           // color the answers green
-          answerContainers[questionNumber].style.color = "forestgreen";
+          // answerContainers[questionNumber].style.color = "forestgreen"; don't show it for now, as learner can use it to cheat easily
 
           // Correct answer, compute points to add
           newCurrentScore = math.add(
@@ -770,7 +770,7 @@ function computeScore() {
         // if answer is wrong or blank
         else {
           // color the answers red
-          answerContainers[questionNumber].style.color = "Crimson";
+          // answerContainers[questionNumber].style.color = "Crimson"; don't show it for now, as learner can use it to cheat easily
 
           // Wrong answer, compute points to remove
           newCurrentScore = math.add(
@@ -842,7 +842,7 @@ function showNumberOfAnswersOutOfTotal() {
 
 function showResults() {
   computeScore();
-  showNumberOfAnswersOutOfTotal();
+  // showNumberOfAnswersOutOfTotal(); // don't show it for now, as learner can use it to cheat easily
   displaySendResultsByEmailButtonIfNecessary();
   // createMenuBasedOnLearnerAnswers();
   showNextSlide();
