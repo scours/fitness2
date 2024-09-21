@@ -6,7 +6,11 @@
   "unit": "U2.3",
   "difficultyLevel": "Intermediate",
   "part": "part1",
-  "author": "Mario Scetar",
+  "author": [
+    "Kata Galić",
+    "Mia Kurek",
+    "Mario Ščetar"
+  ],
   "institution": "UNIZG",
   "abstract": "Chemical and physical stability of packaging materials",
   "topic": [

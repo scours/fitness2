@@ -1,12 +1,19 @@
 {
   "idx": 340169,
-  "title": "Sensory science applied to food packaging",
+  "title": "Sensory science applied to food and food packaging",
   "level": "",
   "section": "",
   "unit": "",
   "difficultyLevel": "Novice",
   "part": "part1",
-  "author": "Author",
+  "author": [
+    "Andrea Strube",
+    "Zinaida Catruc",
+    "Horst-Christian Langowski",
+    "Kata Galić",
+    "Mia Kurek",
+    "Mario Ščetar"
+  ],
   "institution": "",
   "abstract": "Abstract",
   "topic": [

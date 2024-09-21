@@ -6,7 +6,11 @@
   "unit": "U4.1",
   "difficultyLevel": "Intermediate",
   "part": "part1",
-  "author": "Mia Kurek",
+  "author": [
+    "Kata Galić",
+    "Mia Kurek",
+    "Mario Ščetar"
+  ],
   "institution": "UNIZG",
   "abstract": "Understanding mass transfer (diffusion, sorption/desorption, permeation, migration) is essential to the packaging designer, food and process engineer, risk assessor: Which material to choose (alone or in association)? Which thickness to reach a prescribed thickness? Are my specific migration levels acceptable? The considered solute/migrant/permeant can be a gas or an organic chemical. ",
   "topic": [

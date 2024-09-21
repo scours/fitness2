@@ -6,7 +6,11 @@
   "unit": "U8.7",
   "difficultyLevel": "Intermediate",
   "part": "part1",
-  "author": "Mia Kurek",
+  "author": [
+    "Kata Galić",
+    "Mia Kurek",
+    "Mario Ščetar"
+  ],
   "institution": "UNIZG",
   "abstract": "Surface treatments increase the surface energy of the packaging surface in order to maximize the contact surface area and the adhesion of adhesives, inks and coatings. Principles and available technologies are reviewed in this lecture.  -  level intermediate",
   "topic": [
