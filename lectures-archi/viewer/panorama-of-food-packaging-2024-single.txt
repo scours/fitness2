@@ -5,7 +5,7 @@
  * File Created: Friday, 20th September 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Friday, 20th September 2024
+ * Last Modified: Saturday, 21st September 2024
  * Modified By: Steward OUADI
  */
   
@@ -20,8 +20,8 @@ defSlide labelSlide1 {
     <br/>
     <br/>
     <p>You'll take a quiz 📝 to gauge your knowledge.</p>
-    <p>If you're ready to begin, please fill out the form on your screen to participate.</p>
-            
+    <p>Filling out the form below is optional, but required if you want to receive a certificate with your name on it. The certificate will be sent to your email address.</p>
+
     <p>Let's get started! 🚀</p>
     <br/>
     <br/>
@@ -44,5 +44,4 @@ defSlide labelSlide1 {
 
 
 // Syntax: slide URL slidesToShow
-slide "https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html" [7:55]
 test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=panoramaOfFoodPackaging&sessionId=1"
