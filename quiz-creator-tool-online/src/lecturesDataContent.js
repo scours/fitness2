@@ -11,6 +11,11 @@
 
 const lecturesData = [
   {
+    id: "panoramaOfFoodPackaging",
+    name: "History and overview",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Panorama%20of%20food%20packaging/panorama-of-food-packaging-part-1",
+  },
+  {
     id: "glassFoodContactMaterialRecycling",
     name: "Glass food contact material recycling",
     url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Environmental%20pollution/Glass%20food%20contact%20material%20recycling/glass-food-contact-material-recycling",
