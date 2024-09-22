@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 3rd December 2020
 Authors: Steward OUADI, Olivier Vitrac
 -----
-Last Modified: Friday, 20th September 2024
+Last Modified: Sunday, 22nd September 2024
 Modified By: Steward OUADI
 -----
 $2020-12-20$ make local modifyLectures/index.html (note that index.html is required to have the application working)
@@ -134,11 +134,21 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
       .video-container {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
+        /* Adds space between videos when stacked */
+      }
+
+      .video-container div {
+        max-width: 90%;
+        /* Adjust width for smaller screens */
       }
 
       .video-container video {
-        width: 80%;
-        margin-bottom: 20px;
+        height: auto;
+        /* Remove fixed height to maintain aspect ratio */
+        object-fit: contain;
+        /* Ensures the full video is visible without cropping */
+        width: 100%;
       }
 
       .card-container {
