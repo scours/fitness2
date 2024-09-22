@@ -5,7 +5,7 @@
  * File Created: Friday, 13th September 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Friday, 13th September 2024
+ * Last Modified: Sunday, 22nd September 2024
  * Modified By: Steward OUADI
  */
 
@@ -102,27 +102,27 @@ const lecturesData = [
   },
   {
     id: "vacuumAndModifiedAtmospherePackaging",
-    name: "D-9 Vacuum and modified atmosphere packaging",
+    name: "Vacuum and modified atmosphere packaging",
     url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20processes/vacuum-and-modified-atmosphere-packaging",
   },
   {
     id: "beverageFilling",
-    name: "D-5 Beverage filling",
+    name: "Beverage filling",
     url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20processes/Filling%20and%20dosing/beverage-filling",
   },
   {
     id: "formingFillingAndSealingMachines",
-    name: "D-7 Forming, filling and sealing machines",
+    name: "Forming, filling and sealing machines",
     url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20processes/Filling%20and%20dosing/forming-filling-sealing",
   },
   {
     id: "fillingAndDosing",
-    name: "D-4 Filling and dosing",
+    name: "Filling and dosing",
     url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20processes/Filling%20and%20dosing/principles",
   },
   {
     id: "formingOfPreProducts",
-    name: "D-2 Forming of pre-products",
+    name: "Forming of pre-products",
     url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20processes/Forming/plastic-forming",
   },
   {
