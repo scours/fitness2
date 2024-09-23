@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Saturday, 21st September 2024
+ * Last Modified: Monday, 23rd September 2024
  * Modified By: Steward OUADI
  */
 
@@ -13,7 +13,7 @@ let dropDownMenuContent;
 let lecturesDetails = new Map();
 lecturesDetails.set(
   "Panorama of food packaging/panorama-of-food-packaging-part-1",
-  `<h1>History and overview</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>history,overview,plastics,polymer,challenges,waste,environment,function</p><h4>Abstract</h4><p>This course is an introduction to the entire content of the FITNess project. The history of plastics is quickly summarized through the past centuries as well as the current challenges for the environment and society. Food packaging has developed at the interface of food needs (safety, preservation), technological possibilities and consumer expectations. The science of packaging combines food process engineering, materials science, toxicology, microbiology, regulations...). This course introduces the seven functions of packaging: preserving food quality; preventing microbiological risk; preserving the integrity of the packaging and its contents; preventing chemical risk; preserving the environment; meeting the technical and economic requirements of the manufacturer and the user of the packaging; interacting and communicating with the consumer.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html" id="lecture-button-panorama-of-food-packaging-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#panorama-of-food-packaging-2024-single" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>History and overview</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>history,overview,plastics,polymer,challenges,waste,environment,function</p><h4>Abstract</h4><p>This course is an introduction to the entire content of the FITNess project. The history of plastics is quickly summarized through the past centuries as well as the current challenges for the environment and society. Food packaging has developed at the interface of food needs (safety, preservation), technological possibilities and consumer expectations. The science of packaging combines food process engineering, materials science, toxicology, microbiology, regulations...). This course introduces the seven functions of packaging: preserving food quality; preventing microbiological risk; preserving the integrity of the packaging and its contents; preventing chemical risk; preserving the environment; meeting the technical and economic requirements of the manufacturer and the user of the packaging; interacting and communicating with the consumer.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html#/1" id="lecture-button-panorama-of-food-packaging-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#panorama-of-food-packaging-2024-single" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/glass-packaging",
@@ -217,15 +217,27 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Ecodesign tools and technologies/Sustainability and packaging/sustainability-and-packaging",
-  `<h1>What is suistainability? (part 1/2)</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>sustainability,environment,ecodesign,LCA,bottles</p><h4>Abstract</h4><p>Food Packaging needs to be sustainable. What does it mean? How to use Life Cycle Analysis (LCA) to evaluate the impact of food packaging and to $eco-design$ new food packaging.       -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.1/part1.html#/2" id="lecture-button-sustainability-and-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  `<h1>What is suistainability?</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>sustainability,environment,ecodesign,LCA,bottles</p><h4>Abstract</h4><p>Food Packaging needs to be sustainable. What does it mean? How to use Life Cycle Analysis (LCA) to evaluate the impact of food packaging and to $eco-design$ new food packaging.       -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.1/part1.html#/2" id="lecture-button-sustainability-and-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
   "Ecodesign tools and technologies/Sustainability and packaging/life-cycle-assessment",
-  `<h1>Life Cycle Assessment (part 2/2)</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>sustainability,environment,ecodesign,LCA,bottles</p><h4>Abstract</h4><p>Food Packaging needs to be sustainable. What does it mean? How to use Life Cycle Analysis (LCA) to evaluate the impact of food packaging and to $eco-design$ new food packaging.       -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.1/part2.html#/2" id="lecture-button-life-cycle-assessment" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
+  `<h1>Life Cycle Assessment</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>sustainability,environment,ecodesign,LCA,bottles</p><h4>Abstract</h4><p>Food Packaging needs to be sustainable. What does it mean? How to use Life Cycle Analysis (LCA) to evaluate the impact of food packaging and to $eco-design$ new food packaging.       -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.1/part2.html#/2" id="lecture-button-life-cycle-assessment" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
-  "Ecodesign tools and technologies/tools-for-life-cycle-impact-assessment",
-  `<h1>Tools for life cycle impact assessment</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>environment,ecodesign,LCA,design</p><h4>Abstract</h4><p>Eco-design of Packaging - Overview - Why eco-design? – Introduction and definitions General design process Tools of eco-design Case studies Advances and limits of LCA analysis - Evaluation of food/packaging systems through the supply chain</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.2/part1.html#/2" id="lecture-button-tools-for-life-cycle-impact-assessment" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
+  "Ecodesign tools and technologies/Tools for life cycle impact assessment/introduction-to-Circular-Economy",
+  `<h1>Introduction to Circular Economy</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Circular Economy,Sustainability Challenges,Circular Transition,Circular Principles,Circular Business Models</p><h4>Abstract</h4><p>Objectives of the Course: 
+    • Understand the concept of the circular economy and its significance in addressing global sustainability challenges
+    • Explore the transition from a linear to a circular economy and the implications for businesses, governments, and society
+    • Identify the key principles and pillars of the circular economy model
+    • Discover circular business models</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/introduction-circular-ecocomy.html#/1" id="lecture-button-introduction-to-Circular-Economy" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
+);
+lecturesDetails.set(
+  "Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign",
+  `<h1>Ecodesign</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Ecodesign Concepts,Design Tools,Environmental Integration,Generative Design,Circularity Indicators</p><h4>Abstract</h4><p>This course introduces the fundamental concepts, of ecodesign and tools for the desing process. Students will learn how to integrate environmental considerations into design processes to reduce the ecological impact of products from conception to end-of-life. Generative design tools adapted to early design phases and evaluative tools for later desing phases are presented, including circularity indicators.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/ecodesign.html#/1" id="lecture-button-ecodesign" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
+);
+lecturesDetails.set(
+  "Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign-applied-to-packaging",
+  `<h1>Ecodesign applied to packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Ecodesign Principles,Sustainable Packaging,Packaging Lifecycle,Design Strategies,Case Studies</p><h4>Abstract</h4><p>This course focuses on the principles of Ecodesign in the packaging sector, emphasizing sustainable solutions throughout the packaging lifecycle. Students learn about the specificities of the packaging sector, adpted design strategies for ecocesing, and gain insights from case studies on successful sustainable packaging innovations.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/ecodesing-packaging.html#/1" id="lecture-button-ecodesign-applied-to-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
 );
 lecturesDetails.set(
   "Ecodesign tools and technologies/environmental-impact-of-plastics-and-recycling",
@@ -247,8 +259,8 @@ lecturesDetails.set(
   `<h1>Metal food contact material recycling</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>metal,recycling</p><h4>Abstract</h4><p>This lecture provides an overview of the recycling process for food contact metals with a focus on aluminum and steel. It introduces existing collection methods including curbside collection, bring banks, and container deposit systems. The basic processing steps for recycling each metal type are summarized along with photos, explanatory videos, and links to publications that provide more detail. Key environmental benefits from recycling, as well as impacts stemming from the recycling processes are also reviewed along with European regulations pertinent to metal recycling.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/metal-food-contact-material-recycling.html" id="lecture-button-metal-food-contact-material-recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=metalFoodContactMaterialRecycling&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Lindsey Parkinson</li><li>Justin Boucher</li><li>Joel Scheuchzer</li></ul>`
 );
 lecturesDetails.set(
-  "Ecodesign tools and technologies/biodegradation-and-microplastics",
-  `<h1>Biodegradation and microplastics</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>biodegradable,pollution,regulation,renewable,environment,bottles</p><h4>Abstract</h4><p>Food packaging accounts for approximately 40% of the uses of plastics, but accounts for more than half of plastic waste. Non-food uses are more durable, while the lifespan of plastic packaging usually does not exceed half a year. The fragmentation of uncollected plastics and their reuse as recycled textile fibers is the main source of microplastics and marine litter. The understanding of biodegradation phenomena is essential to appreciate the impact of plastics on the environment, whether they are biodegradable or not.     - Level basic, intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S7/U7.3/part1.html#/2" id="lecture-button-biodegradation-and-microplastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
+  "Ecodesign tools and technologies/Biodegradation and microplastics/biodegradability-and-biobased-carbon-content",
+  `<h1>Biodegradability and biobased carbon content</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Biodegradability Standards,Biobased Content,Biodegradation Processes,Polymer Biodegradation,Biobased Plastics</p><h4>Abstract</h4><p>The lecture on Biodegradability and Biobased Carbon Content of Plastic Packaging Materials focuses on biobased materials and biodegradability standards. It covers general definitions from the IUPAC and international standards for biobased content and biodegradability criteria. It gives detailed information on biodegradation processes and biodegradation measurement. Some examples of biodegradation of polymers are discussed. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/biodegradation.html#/1" id="lecture-button-biodegradability-and-biobased-carbon-content" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
 );
 lecturesDetails.set(
   "Legislation and safety/basic-legal-framework",
@@ -591,22 +603,37 @@ dropDownMenuContent = `<div>
         <div class="dropdown-container" id="dropdown-container-Sustainability and packaging"><a
                 href="#Ecodesign tools and technologies/Sustainability and packaging/sustainability-and-packaging"
                 id="Ecodesign tools and technologies/Sustainability and packaging/sustainability-and-packaging"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">What is suistainability? (part
-                1/2)<i class="fa fa-star star-color-yellow little-space"></i><i
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">What is suistainability?<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
                     class="fa fa-star star-color-yellow little-space"></i><i
                     class="fa fa-star-o star-color-yellow little-space"></i></a><a
                 href="#Ecodesign tools and technologies/Sustainability and packaging/life-cycle-assessment"
                 id="Ecodesign tools and technologies/Sustainability and packaging/life-cycle-assessment"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Life Cycle Assessment (part 2/2)<i
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Life Cycle Assessment<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
+            id="dropdown-btn-Tools for life cycle impact assessment">Tools for life cycle impact assessment<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Tools for life cycle impact assessment"><a
+                href="#Ecodesign tools and technologies/Tools for life cycle impact assessment/introduction-to-Circular-Economy"
+                id="Ecodesign tools and technologies/Tools for life cycle impact assessment/introduction-to-Circular-Economy"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Introduction to Circular Economy<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign"
+                id="Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Ecodesign<i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign-applied-to-packaging"
+                id="Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign-applied-to-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Ecodesign applied to packaging<i
                     class="fa fa-star star-color-yellow little-space"></i><i
                     class="fa fa-star star-color-yellow little-space"></i><i
                     class="fa fa-star-o star-color-yellow little-space"></i></a></div><a
-            href="#Ecodesign tools and technologies/tools-for-life-cycle-impact-assessment"
-            id="Ecodesign tools and technologies/tools-for-life-cycle-impact-assessment"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Tools for life cycle impact
-            assessment<i class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Ecodesign tools and technologies/environmental-impact-of-plastics-and-recycling"
             id="Ecodesign tools and technologies/environmental-impact-of-plastics-and-recycling"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Environmental and human health impacts
@@ -630,13 +657,16 @@ dropDownMenuContent = `<div>
             onclick="lectureToDisplay(this.id)">Metal food contact material recycling<i
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Ecodesign tools and technologies/biodegradation-and-microplastics"
-            id="Ecodesign tools and technologies/biodegradation-and-microplastics" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Biodegradation and microplastics<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a>
+                class="fa fa-star-o star-color-green little-space"></i></a><button class="dropdown-btn"
+            id="dropdown-btn-Biodegradation and microplastics">Biodegradation and microplastics<i
+                class="fa fa-caret-down"></i></button>
+        <div class="dropdown-container" id="dropdown-container-Biodegradation and microplastics"><a
+                href="#Ecodesign tools and technologies/Biodegradation and microplastics/biodegradability-and-biobased-carbon-content"
+                id="Ecodesign tools and technologies/Biodegradation and microplastics/biodegradability-and-biobased-carbon-content"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Biodegradability and biobased
+                carbon content<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a></div>
     </div><button class="dropdown-btn" id="dropdown-btn-Legislation and safety">Legislation and safety<i
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Legislation and safety"><a

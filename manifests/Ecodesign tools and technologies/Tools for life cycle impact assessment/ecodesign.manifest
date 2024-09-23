@@ -1,0 +1,28 @@
+{
+  "idx": 333341,
+  "title": "Ecodesign",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Sandra Domenek",
+  "institution": "AgroParisTech",
+  "abstract": "This course introduces the fundamental concepts, of ecodesign and tools for the desing process. Students will learn how to integrate environmental considerations into design processes to reduce the ecological impact of products from conception to end-of-life. Generative design tools adapted to early design phases and evaluative tools for later desing phases are presented, including circularity indicators.",
+  "topic": [
+    "Ecodesign Concepts",
+    "Design Tools",
+    "Environmental Integration",
+    "Generative Design",
+    "Circularity Indicators"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Ecodesign",
+    "Environmental Impact",
+    "Design Process",
+    "Generative Tools",
+    "Circularity"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/ecodesign.html#/1"
+}

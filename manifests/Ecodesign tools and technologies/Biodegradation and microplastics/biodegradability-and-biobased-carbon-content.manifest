@@ -1,0 +1,28 @@
+{
+  "idx": 762372,
+  "title": "Biodegradability and biobased carbon content",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Sandra Domenek",
+  "institution": "AgroParisTech",
+  "abstract": "The lecture on Biodegradability and Biobased Carbon Content of Plastic Packaging Materials focuses on biobased materials and biodegradability standards. It covers general definitions from the IUPAC and international standards for biobased content and biodegradability criteria. It gives detailed information on biodegradation processes and biodegradation measurement. Some examples of biodegradation of polymers are discussed. ",
+  "topic": [
+    "Biodegradability Standards",
+    "Biobased Content",
+    "Biodegradation Processes",
+    "Polymer Biodegradation",
+    "Biobased Plastics"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Biodegradability",
+    "Biobased Carbon",
+    "Biodegradation Measurement",
+    "IUPAC Standards",
+    "Biodegradable Polymers"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/biodegradation.html#/1"
+}
