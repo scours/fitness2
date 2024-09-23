@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Friday, 6th September 2024
+ * Last Modified: Monday, 23rd September 2024
  * Modified By: Steward OUADI
  */
 
@@ -2174,4 +2174,93 @@ Q4: Which modified atmospheres should be used for so-called active MAP? What hap
 
 
 canBeSentByEmail:true
+`;
+
+var biodegradation = `
+Q1: What is the definition of a biopolymer?
+
+- [ ] A material composed entirely of synthetic macromolecules
+- [x] A substance composed of biomacromolecules formed by living organisms
+- [ ] A plastic material derived from fossil fuels
+- [ ] A substance that cannot be broken down by microorganisms
+
+Q2: Which of the following is true about bioplastics?
+
+- [ ] All bioplastics are both biodegradable and biobased
+- [ ] Bioplastics are derived solely from petrochemical resources
+- [x] Bioplastics can be biobased, biodegradable, or both
+- [ ] Bioplastics are always environmentally superior to petrochemical plastics
+
+Q3: What does the term “biodegradable” imply?
+
+- [ ] A material is only degradable when exposed to UV light
+- [x] A material can be broken down into CO2, water, methane, and biomass by microorganisms
+- [ ] A material will completely degrade in less than one year
+- [ ] A material will degrade only under specific laboratory conditions
+
+Q4: Is “biodegradable” a total or partial property of a polymer?
+
+- [x] Total
+- [ ] Partial
+
+Q5: What precaution needs to be taken when speaking about biodegradation?
+
+- [x] The term biodegradation needs always to be accompanied by information on the degradation environment and time.
+- [ ] The specific type of biodegradation needs to be detailed
+- [ ] Information on the measurement methodology needs to be given
+- [ ] None
+
+Q6: Which of the following is a requirement for a material to be labeled as compostable under industrial conditions (EN 13432)?
+
+- [ ] The material must biodegrade within 1 year
+- [x] The material must reach 90% biodegradation in 6 months or less
+- [ ] The material must disintegrate within 24 hours
+- [ ] The material must be made entirely from biobased components
+
+Q7: Which of the following methods describes how the biobased content of a material is determined in international standards?
+
+- [ ] By measuring the weight of the material before and after biodegradation
+- [x] By quantifying the carbon-14 isotope in the material to distinguish biobased from fossil-derived carbon
+- [ ] By analyzing the molecular structure of the material through infrared spectroscopy
+- [ ] By testing the material’s resistance to decomposition in a composting environment
+
+Q8: A biobased polymer is always biodegradable?
+
+- [ ] True
+- [x] False
+
+canBeSentByEmail: true
+`;
+
+var ecodesign = `
+Q1: What is Ecodesign?
+
+- [x] A design approach integrating environmental aspects into the product development process, by balancing ecological and economic requirements in the aim to decrease the environmental impact throughout the whole product life cycle.
+- [ ] A tool to assess design options in the light of associated ecological impacts throughout the whole product life cycle.
+- [ ] A holistic methodology to assess and minimize environmental impacts of products throughout the whole product life cycle.
+
+Q2: Which of the following are generative tools for Ecodesign?
+
+- [ ] Life Cycle Assessment
+- [x] Checklists
+- [ ] Carbon footprint
+- [x] Guidelines
+
+Q3: What is Circular Economy?
+
+- [ ] An economy which encompasses all the activities of production and transformation of biomass, whether forestry, agriculture and aquaculture for the purposes of food production, animal feed, bio-based materials, energy.
+- [ ] An economic system which seeks to meet the needs of the present without compromising the ability of future generations to meet their own needs.
+- [x] An economic system of exchange and production which, at all stages of the life cycle of products (goods and services), aims to increase the efficiency of the use of resources and reduce the impact on the environment while developing the well-being of individuals.
+- [x] An economic system which seeks to produce goods and services while limiting the consumption and waste of raw materials, water and energy sources.
+- [x] The circular economy is a model of production and consumption, which involves sharing, leasing, reusing, repairing, refurbishing and recycling existing materials and products as long as possible.
+
+Q4: Which of the following are Circularity Indicators?
+
+- [ ] Emission of greenhouse gasses
+- [ ] Land use
+- [x] Materials flow analysis
+- [ ] Quantity of renewable materials
+- [x] Material circularity indicator
+
+canBeSentByEmail: true
 `;
