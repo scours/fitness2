@@ -5,7 +5,7 @@
  * File Created: Friday, 13th September 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Sunday, 22nd September 2024
+ * Last Modified: Tuesday, 24th September 2024
  * Modified By: Steward OUADI
  */
 
@@ -14,6 +14,11 @@ const lecturesData = [
     id: "panoramaOfFoodPackaging",
     name: "History and overview",
     url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Panorama%20of%20food%20packaging/panorama-of-food-packaging-part-1",
+  },
+  {
+    id: "environmentalImpactOfFoodPackaging",
+    name: "Environmental impact of food packaging",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Ecodesign%20tools%20and%20technologies/Tools%20for%20life%20cycle%20impact%20assessment/environmental-impact-of-food-packaging",
   },
   {
     id: "glassFoodContactMaterialRecycling",
