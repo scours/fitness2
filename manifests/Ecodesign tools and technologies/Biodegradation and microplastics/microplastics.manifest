@@ -1,0 +1,28 @@
+{
+  "idx": 131496,
+  "title": "Overview of the Microplastics Issue",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Sandra Domenek",
+  "institution": "AgroParisTech",
+  "abstract": "The lecture covers general information on the origins, distribution, and effects of microplastics on ecosystems and human health. It provides an overview of the global production and pollution of plastics, classifying microplastics as primary or secondary, depending on their source. It addresses how microplastics enter natural habitats, primarily through land-based activities and marine sources. The impacts on marine life, terrestrial ecosystems, and human health are summarized, and legal measures to restrict microplastics are shown. The lecture concludes with open questions regarding the long-term health effects and environmental fate of microplastics, calling for further research on exposure pathways, breakdown kinetics, and size-related toxicity.",
+  "topic": [
+    "Microplastics Origins",
+    "Microplastics Effects",
+    "Pollution Sources",
+    "Marine Impact",
+    "Legal Restrictions"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Microplastics",
+    "Ecosystem Impact",
+    "Human Health",
+    "Pollution Sources",
+    "Environmental Fate"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/microplastics.html#/1"
+}

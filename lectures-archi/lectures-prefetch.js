@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Monday, 23rd September 2024
+ * Last Modified: Tuesday, 24th September 2024
  * Modified By: Steward OUADI
  */
 
@@ -232,12 +232,22 @@ lecturesDetails.set(
     • Discover circular business models</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/introduction-circular-ecocomy.html#/1" id="lecture-button-introduction-to-Circular-Economy" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
 );
 lecturesDetails.set(
+  "Ecodesign tools and technologies/Tools for life cycle impact assessment/environmental-legislation-for-packaging",
+  `<h1>Environmental legislation for packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Environmental Regulations,Extended Responsibility</p><h4>Abstract</h4><p>Objectives of the Course: 
+    • Know European environmental regulations linked to packaging
+    • Understand the concept of Extended Producer Responsibility </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/envrionmental-legislation.html#/1" id="lecture-button-environmental-legislation-for-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Ejsi Hasanbelliu</li><li>Sandra Domenek</li></ul>`
+);
+lecturesDetails.set(
   "Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign",
   `<h1>Ecodesign</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Ecodesign Concepts,Design Tools,Environmental Integration,Generative Design,Circularity Indicators</p><h4>Abstract</h4><p>This course introduces the fundamental concepts, of ecodesign and tools for the desing process. Students will learn how to integrate environmental considerations into design processes to reduce the ecological impact of products from conception to end-of-life. Generative design tools adapted to early design phases and evaluative tools for later desing phases are presented, including circularity indicators.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/ecodesign.html#/1" id="lecture-button-ecodesign" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=ecodesign&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
 );
 lecturesDetails.set(
   "Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign-applied-to-packaging",
   `<h1>Ecodesign applied to packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Ecodesign Principles,Sustainable Packaging,Packaging Lifecycle,Design Strategies,Case Studies</p><h4>Abstract</h4><p>This course focuses on the principles of Ecodesign in the packaging sector, emphasizing sustainable solutions throughout the packaging lifecycle. Students learn about the specificities of the packaging sector, adpted design strategies for ecocesing, and gain insights from case studies on successful sustainable packaging innovations.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/ecodesing-packaging.html#/1" id="lecture-button-ecodesign-applied-to-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
+);
+lecturesDetails.set(
+  "Ecodesign tools and technologies/Tools for life cycle impact assessment/environmental-impact-of-food-packaging",
+  `<h1>Environmental impact of food packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Packaging Impact,Resource Use,Waste Generation,Carbon Footprint,Packaging Sustainability</p><h4>Abstract</h4><p>Environmental impact of food packaging</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/environmental-impact.html#/1" id="lecture-button-environmental-impact-of-food-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#environmental-impact-of-food-packaging" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
 );
 lecturesDetails.set(
   "Ecodesign tools and technologies/environmental-impact-of-plastics-and-recycling",
@@ -261,6 +271,10 @@ lecturesDetails.set(
 lecturesDetails.set(
   "Ecodesign tools and technologies/Biodegradation and microplastics/biodegradability-and-biobased-carbon-content",
   `<h1>Biodegradability and biobased carbon content</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Biodegradability Standards,Biobased Content,Biodegradation Processes,Polymer Biodegradation,Biobased Plastics</p><h4>Abstract</h4><p>The lecture on Biodegradability and Biobased Carbon Content of Plastic Packaging Materials focuses on biobased materials and biodegradability standards. It covers general definitions from the IUPAC and international standards for biobased content and biodegradability criteria. It gives detailed information on biodegradation processes and biodegradation measurement. Some examples of biodegradation of polymers are discussed. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/biodegradation.html#/1" id="lecture-button-biodegradability-and-biobased-carbon-content" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=biodegradation&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
+);
+lecturesDetails.set(
+  "Ecodesign tools and technologies/Biodegradation and microplastics/microplastics",
+  `<h1>Overview of the Microplastics Issue</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Microplastics Origins,Microplastics Effects,Pollution Sources,Marine Impact,Legal Restrictions</p><h4>Abstract</h4><p>The lecture covers general information on the origins, distribution, and effects of microplastics on ecosystems and human health. It provides an overview of the global production and pollution of plastics, classifying microplastics as primary or secondary, depending on their source. It addresses how microplastics enter natural habitats, primarily through land-based activities and marine sources. The impacts on marine life, terrestrial ecosystems, and human health are summarized, and legal measures to restrict microplastics are shown. The lecture concludes with open questions regarding the long-term health effects and environmental fate of microplastics, calling for further research on exposure pathways, breakdown kinetics, and size-related toxicity.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/microplastics.html#/1" id="lecture-button-microplastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
 );
 lecturesDetails.set(
   "Legislation and safety/basic-legal-framework",
@@ -622,6 +636,12 @@ dropDownMenuContent = `<div>
                     class="fa fa-star star-color-yellow little-space"></i><i
                     class="fa fa-star star-color-yellow little-space"></i><i
                     class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Ecodesign tools and technologies/Tools for life cycle impact assessment/environmental-legislation-for-packaging"
+                id="Ecodesign tools and technologies/Tools for life cycle impact assessment/environmental-legislation-for-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Environmental legislation for
+                packaging<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
                 href="#Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign"
                 id="Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign"
                 class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Ecodesign<i
@@ -632,6 +652,12 @@ dropDownMenuContent = `<div>
                 id="Ecodesign tools and technologies/Tools for life cycle impact assessment/ecodesign-applied-to-packaging"
                 class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Ecodesign applied to packaging<i
                     class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Ecodesign tools and technologies/Tools for life cycle impact assessment/environmental-impact-of-food-packaging"
+                id="Ecodesign tools and technologies/Tools for life cycle impact assessment/environmental-impact-of-food-packaging"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Environmental impact of food
+                packaging<i class="fa fa-star star-color-yellow little-space"></i><i
                     class="fa fa-star star-color-yellow little-space"></i><i
                     class="fa fa-star-o star-color-yellow little-space"></i></a></div><a
             href="#Ecodesign tools and technologies/environmental-impact-of-plastics-and-recycling"
@@ -665,6 +691,12 @@ dropDownMenuContent = `<div>
                 id="Ecodesign tools and technologies/Biodegradation and microplastics/biodegradability-and-biobased-carbon-content"
                 class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Biodegradability and biobased
                 carbon content<i class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star star-color-yellow little-space"></i><i
+                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
+                href="#Ecodesign tools and technologies/Biodegradation and microplastics/microplastics"
+                id="Ecodesign tools and technologies/Biodegradation and microplastics/microplastics"
+                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview of the Microplastics
+                Issue<i class="fa fa-star star-color-yellow little-space"></i><i
                     class="fa fa-star star-color-yellow little-space"></i><i
                     class="fa fa-star-o star-color-yellow little-space"></i></a></div>
     </div><button class="dropdown-btn" id="dropdown-btn-Legislation and safety">Legislation and safety<i

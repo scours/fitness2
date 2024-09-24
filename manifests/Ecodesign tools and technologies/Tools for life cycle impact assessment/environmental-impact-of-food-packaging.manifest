@@ -1,0 +1,29 @@
+{
+  "idx": 870458,
+  "title": "Environmental impact of food packaging",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Sandra Domenek",
+  "institution": "AgroParisTech",
+  "abstract": "Environmental impact of food packaging",
+  "topic": [
+    "Packaging Impact",
+    "Resource Use",
+    "Waste Generation",
+    "Carbon Footprint",
+    "Packaging Sustainability"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Environmental Impact",
+    "Food Packaging",
+    "Carbon Emissions",
+    "Waste Management",
+    "Sustainable Packaging"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/environmental-impact.html#/1",
+  "qAndAVariables":["Take a quiz = https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#environmental-impact-of-food-packaging"]
+}

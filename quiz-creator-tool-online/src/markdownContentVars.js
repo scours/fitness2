@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 23rd September 2024
+ * Last Modified: Tuesday, 24th September 2024
  * Modified By: Steward OUADI
  */
 
@@ -2261,6 +2261,82 @@ Q4: Which of the following are Circularity Indicators?
 - [x] Materials flow analysis
 - [ ] Quantity of renewable materials
 - [x] Material circularity indicator
+
+canBeSentByEmail: true
+`;
+
+var environmentalImpactOfFoodPackaging = `
+Q1: What is one of the primary functions of food packaging?
+
+- [ ] Generate waste
+- [x] Protect against mechanical, microbial, and chemical contamination
+- [ ] Increase food cost
+- [ ] Decrease the food's shelf life
+
+Q2: Which of the following best describes the specificity of packaging in Ecodesign?
+
+- [ ] Packaging operates independently of its content and has minimal environmental impact
+- [ ] Packaging only affects the transportation phase of the supply chain
+- [x] Packaging is a facilitator of the supply chain, with both direct and indirect environmental impacts linked to its use and content
+- [ ] Packaging is primarily concerned with aesthetics and branding, with no significant environmental considerations
+
+Q3: Which packaging material is associated with high energy consumption and CO2 release due to its weight?
+
+- [ ] Plastic
+- [x] Glass
+- [ ] Paper
+- [ ] Bioplastic
+
+Q4: Which of the following describes the concept of a circular economy in packaging?
+
+- [ ] Materials are discarded after a single use
+- [x] Materials never become waste and are continuously reused or recycled
+- [ ] Packaging design focuses only on reducing cost
+- [ ] Packaging is disposed of in landfills after use
+
+Q5: Which of the following outlines the correct sequence of steps in an Ecodesign project?
+
+- [x] Define objectives, develop a design strategy, apply strategy elements, check achievements, measure and communicate results
+- [ ] Develop a design strategy, apply strategy elements, define objectives, check achievements, measure and communicate results
+- [ ] Apply strategy elements, define objectives, check achievements, develop a design strategy, measure and communicate results
+- [ ] Define objectives, measure results, apply strategy elements, develop a design strategy, check achievements
+
+Q6: Which of the following strategies is recommended for the Ecodesign of secondary packaging?
+
+- [x] Decrease voids: adapt packaging height, improve stacking ability
+- [ ] Use heavier materials for long transport distances
+- [x] Optimize grouping packages
+- [ ] Avoid reusable packaging to prevent contamination risks
+
+Q7: Packaging contributes to the supply chain impact for both liquid and solid food equally.
+
+- [ ] True
+- [x] False
+
+Q8: Microplastics and leachates from packaging materials can contribute to environmental pollution and acidification.
+
+- [x] True
+- [ ] False
+
+Q9: Glass packaging production has generally a higher environmental impact in terms of global warming potential than plastic packaging due to its weight and energy consumption.
+
+- [x] True
+- [ ] False
+
+Q10: Recycling is always preferred over other forms of material recovery in a circular economy.
+
+- [ ] True
+- [x] False
+
+Q11: Biobased plastics have no negative impacts on land and water use.
+
+- [ ] True
+- [x] False
+
+Q12: Evaluative ecodesign tools are adapted to later stages of the design process.
+
+- [x] True
+- [ ] False
 
 canBeSentByEmail: true
 `;

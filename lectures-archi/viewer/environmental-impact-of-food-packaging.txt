@@ -1,0 +1,48 @@
+/*
+ * File: environmental-impact-of-food-packaging.txt
+ * Contract: EU contract 2022-FR01-KA220-HED-000023509
+ * Project: FitNESS 2 ERASMUS+
+ * File Created: Tuesday, 24th September 2024
+ * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
+ * -----
+ * Last Modified: Tuesday, 24th September 2024
+ * Modified By: Steward OUADI
+ */
+
+  
+
+// Syntax: defSlide labelName {lines (markdown or html)}
+
+
+defSlide labelSlide1 { 
+    
+<div>
+    <h2>Welcome to Our Lecture Series! 🎓</h2>
+    <br/>
+    <br/>
+    <p>You'll take a quiz 📝 to gauge your knowledge.</p>
+    <p>Filling out the form below is optional, but required if you want to receive a certificate with your name on it. The certificate will be sent to your email address.</p>
+
+    <p>Let's get started! 🚀</p>
+    <br/>
+    <br/>
+    <br/>
+
+
+  <form id="userForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+  </form>
+</div>
+} 
+
+
+// Syntax: slide URL slidesToShow
+test "https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=environmentalImpactOfFoodPackaging&sessionId=1"
