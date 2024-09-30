@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 19th September 2024
+ * Last Modified: Monday, 30th September 2024
  * Modified By: Steward OUADI
  */
 
@@ -62,6 +62,14 @@ class Footer extends HTMLElement {
                             class="nav-link p-0 text-muted" target="_blank" title="download all lectures)"> &#129387;
                             Download all
                             lectures as a single ZIP file, including sources.</a></li>
+                    <li class="nav-item mb-2"><a
+                    href="https://fitness.agroparistech.fr/fitness/lectures/html/"
+                    class="nav-link p-0 text-muted" target="_blank" title="FITNESS1">
+                    FITNESS1: first versions of the platform's content</a></li>
+                    <li class="nav-item mb-2"><a
+                    href="https://fitness.agroparistech.fr/fitness2/lectures/fitness2-presentations.html"
+                    class="nav-link p-0 text-muted" target="_blank" title="FITNESS2 presentations">
+                    FITNESS2 presentations</a></li>
                     <li class="nav-item mb-2">
                         <a href="modifyLectures/modifyLecture.html" class="nav-link p-0 text-muted" target="_blank"
                             title="The data are modified only after review.">Manifest

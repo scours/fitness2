@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 3rd December 2020
 Authors: Steward OUADI, Olivier Vitrac
 -----
-Last Modified: Monday, 23rd September 2024
+Last Modified: Monday, 30th September 2024
 Modified By: Steward OUADI
 -----
 $2020-12-20$ make local modifyLectures/index.html (note that index.html is required to have the application working)
@@ -182,6 +182,21 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
       font-size: 1em;
       color: #555;
     }
+
+    .card-text button {
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #ec6807;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .card-text button:hover {
+      background-color: #d95700;
+    }
   </style>
 </head>
 
@@ -202,9 +217,17 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
   <div style="height: 20px;"></div>
 
   <!-- Section: Button to Access with info text -->
-  <a href="https://fitness.agroparistech.fr/fitness2/lectures/lectures.html" class="btn-access">Access FITNESS2
-    lectures</a>
+  <a href="https://fitness.agroparistech.fr/fitness2/lectures/lectures.html" class="btn-access">Access Training
+    Content</a>
   <p class="sub-heading">No account or email required</p>
+
+  <!-- Visual space -->
+  <div style="height: 60px;"></div>
+
+  <!-- Section: Button to Access About fitness text -->
+  <a href="https://www.fitness-foodpackaging.com/about-fitness" class="btn-access">About the FITNESS
+    Project</a>
+
 
   <!-- Visual space -->
   <div style="height: 20px;"></div>
@@ -212,7 +235,7 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
   <!-- Video Placeholders with Titles -->
   <div class="video-container">
     <div>
-      <h4>Why FITNESS</h4>
+      <h4>The FITNESS Project Explained</h4>
       <video controls
         poster="https://fitness.agroparistech.fr/fitness2/lectures/media/video/FITNESS2_promotional_video_thumbnail.png">
         <source src="https://fitness.agroparistech.fr/fitness2/lectures/media/video/FITNESS2_promotional_video.mp4"
@@ -232,67 +255,87 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
   </div>
 
   <section class="objective-section">
-    <h2>I want to learn</h2>
+    <h2>I want to choose my pathway</h2>
     <div class="card-container">
 
-      <div class="card standout"
-        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/lectures.html`'>
-        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Learn.png" alt="Learn">
+      <!-- Packaging Production Line Workers - basic -->
+      <div class="card">
+        <img
+          src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Packaging-Production-Line-Workers.png"
+          alt="Packaging Production Line Workers">
         <div class="card-text">
-          <h1>with FITNESS2 (new)</h1>
+          <h1>Packaging Production Line Workers</h1>
+          <div>
+            <button
+              onclick='window.location.href="https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#PackagingProductionLineWorkers-basic"'>
+              Basic
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="card" onclick='window.location.href=`https://fitness.agroparistech.fr/fitness/lectures/html/` '>
-        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Legacy.png"
-          alt="FITNESS 1">
+      <!-- Research and Development Managers in Food Packaging -->
+      <div class="card">
+        <img
+          src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Research-and-Development-Managers-in-Food-Packaging.png"
+          alt="Research and Development Managers in Food Packaging">
         <div class="card-text">
-          <h1>with FITNESS1</h1>
+          <h1>Research and Development Managers in Food Packaging</h1>
+          <div>
+            <button
+              onclick='window.location.href="https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#ResearchAndDevelopment-basic"'>
+              Basic
+            </button>
+            <button
+              onclick='window.location.href="https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#ResearchAndDevelopment-advanced"'>
+              Advanced
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- <div class="card" onclick='window.location.href=`#` '>
-                <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/quiz.png"
-                    alt="QUIZZ">
-                <div class="card-text">
-                    <h1>QUIZZ</h1>
-                </div>
-            </div> -->
-      <p class="info-text">
-        FITNESS2 contains the latest up-to-date content available on the platform, while FITNESS1 contains the
-        first versions of the platform's content.
-      </p>
+      <!-- Quality Managers in Food Packaging -->
+      <div class="card">
+        <img
+          src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Quality-Managers-in-Food-Packaging.png"
+          alt="Quality Managers in Food Packaging">
+        <div class="card-text">
+          <h1>Quality Managers in Food Packaging</h1>
+          <div>
+            <button
+              onclick='window.location.href="https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#QualityManagers-basic"'>
+              Basic
+            </button>
+            <button
+              onclick='window.location.href="https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#QualityManagers-advanced"'>
+              Advanced
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Packaging Production Managers -->
+      <div class="card">
+        <img
+          src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/Packaging-Production-Managers.png"
+          alt="Packaging Production Managers">
+        <div class="card-text">
+          <h1>Packaging Production Managers</h1>
+          <div>
+            <button
+              onclick='window.location.href="https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#PackagingProductionManagers-basic"'>
+              Basic
+            </button>
+            <button
+              onclick='window.location.href="https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#PackagingProductionManagers-advanced"'>
+              Advanced
+            </button>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
-
-  <section class="objective-section">
-    <h2>I want to contribute</h2>
-    <div class="card-container">
-
-      <div class="card"
-        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/upgrade-teaching-material.html`  '>
-        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/upgrade.png"
-          alt="Upgrade teaching material">
-        <div class="card-text">
-          <h1>Upgrade Teaching Material</h1>
-        </div>
-      </div>
-
-      <div class="card"
-        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/contribute.html` '>
-        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/contribute.png"
-          alt="Contribute">
-        <div class="card-text">
-          <h1>Contribute</h1>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-
 
 
 
@@ -342,25 +385,9 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
     <hr style="border-top: 4px solid #ec6807; width: 30%; margin-top: 20px; margin-bottom: 20px; margin-left: auto;
             margin-right: auto;">
 
-    <h4>Learning Pathways</h4>
-    <div class="card-container">
-      <div class="card"
-        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html`'>
-        <img src="src/img/lectures-pathways.webp" alt="FITNESS booklet pathways">
-        <div class="card-text">
-          <h1>Booklet</h1>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bold Line for separation -->
-    <hr style="border-top: 4px solid #ec6807; width: 30%; margin-top: 20px; margin-bottom: 20px; margin-left: auto;
-            margin-right: auto;">
-
     <h4>Explore further</h4>
     <div class="card-container">
-      <div class="card"
-        onclick="window.open(`https://htmlpreview.github.io/?https://github.com/scours/fitness2/blob/wip/README.html`, '_blank')">
+      <div class="card" onclick="window.open(`https://www.fitness-foodpackaging.com/about-fitness`, '_blank')">
         <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/FitnessInfo.png"
           alt="FITNESS Information">
         <div class="card-text">
@@ -376,14 +403,6 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
         </div>
       </div> -->
 
-      <div class="card"
-        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/fitness2-presentations.html` '>
-        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/conferences.png"
-          alt="Conferences">
-        <div class="card-text">
-          <h1>Presentations</h1>
-        </div>
-      </div>
 
       <!-- <div class="card" onclick='window.location.href=`#` '>
         <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/simulations.png"
@@ -416,14 +435,6 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
         </div>
       </div>
 
-      <div class="card"
-        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/disclaimer.html` '>
-        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/disclaimer.png"
-          alt="Disclaimer">
-        <div class="card-text">
-          <h1>Disclaimer</h1>
-        </div>
-      </div>
     </div>
 
 
@@ -431,9 +442,35 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
 
 
   </section>
+
+  <section class="objective-section">
+    <h2>I want to contribute</h2>
+    <div class="card-container">
+
+      <div class="card"
+        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/upgrade-teaching-material.html`  '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/upgrade.png"
+          alt="Upgrade teaching material">
+        <div class="card-text">
+          <h1>Upgrade Teaching Material</h1>
+        </div>
+      </div>
+
+      <div class="card"
+        onclick='window.location.href=`https://fitness.agroparistech.fr/fitness2/lectures/contribute.html` '>
+        <img src="https://fitness.agroparistech.fr/fitness2/lectures/media/img-select-objective/contribute.png"
+          alt="Contribute">
+        <div class="card-text">
+          <h1>Partner Training Sessions</h1>
+        </div>
+      </div>
+    </div>
+  </section>
   <p class="info-text">
-    All lectures and interactive contents are provided "AS IS". The content may contain inconsistencies and
-    inaccuracies
+    The lectures and interactive content provided on this platform are offered "as is". While every effort is made to
+    ensure
+    accuracy and relevance, the material may contain inconsistencies or inaccuracies. Users are encouraged to verify
+    information independently and apply their own judgment when using the content.
   </p>
 
 
