@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 24th September 2024
+ * Last Modified: Monday, 7th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -2337,6 +2337,169 @@ Q12: Evaluative ecodesign tools are adapted to later stages of the design proces
 
 - [x] True
 - [ ] False
+
+canBeSentByEmail: true
+`;
+
+var circularEconomy = `
+Q1: What is the main principle of the circular economy?
+
+- [ ] Take-make-dispose
+- [x] Reuse, reduce, recycle
+- [ ] Maximize short-term profitability
+- [ ] Increase the use of finite resources
+
+Q2: Which of the following is a key difference between the linear and circular economy?
+
+- [ ] The circular economy focuses on maximizing short-term profits.
+- [ ] The linear economy prioritizes resource regeneration.
+- [x] The circular economy emphasizes reducing waste and maximizing resource value.
+- [ ] The linear economy seeks to maximize environmental benefits.
+
+Q3: Which of the following is NOT a pillar of the circular economy?
+
+- [x] Short-term profitability
+- [ ] Sustainable sourcing
+- [ ] Ecodesign
+- [ ] Recycling
+
+Q4: What is the role of "Economy of functionality" in the circular economy?
+
+- [ ] It focuses on the ownership of goods rather than their use.
+- [x] It promotes the idea of favoring use over ownership.
+- [ ] It encourages the use of disposable products.
+- [ ] It aims to reduce repair and reuse activities.
+
+Q5: What is new in a circular business model canvas? 
+
+- [ ] Description of value proposition
+- [x] Identification of ecosystemic risks
+- [x] Section on ecosystemic impacts
+- [ ] Evaluation of key partners
+- [ ] Evaluation of customer segments
+
+Q6: In a circular economy, materials are designed to never become waste and instead re-enter the system.
+
+- [x] True
+- [ ] False
+
+Q7: The circular economy increases primary material consumption compared to a linear economy.
+
+- [ ] True
+- [x] False
+
+Q8: The bioeconomy is concerned with the production and transformation of biomass for goods and services.
+
+- [x] True
+- [ ] False
+
+Q9: Circular economy models encourage short-term gains over long-term sustainability.
+
+- [ ] True
+- [x] False
+
+Q10: Recycling is one of the key pillars of the circular economy.
+
+- [x] True
+- [ ] False
+
+canBeSentByEmail: true
+`;
+
+var microplastics = `
+Q1: What are primary microplastics?
+
+- [x] Microplastics that enter directly into the environment as small particles.
+- [ ] Microplastics that are fabricated as small particles.
+- [ ] Microplastics that are products of abrasion of litter.
+
+Q2: Does environmental legislation consider microplastics?
+
+- [ ] Microplastics is a young field, there is no legislation yet.
+- [x] The European agency ECHA adopted restrictive measures in the REACH regulation.
+- [ ] The European REACH regulation restricted the production of microplastics.
+
+canBeSentByEmail: true
+`;
+
+var environmentalLegislation = `
+Q1: European environmental legislation on packaging waste
+
+- [ ] Regulates treatment of plastic waste
+- [ ] Regulates decrease of plastic waste
+- [x] Regulates reduction and treatment of all types of packaging waste
+
+Q2: Which of the following is a key objective of the Extended Producer Responsibility (EPR) scheme?
+
+- [ ] Increase the use of non-recyclable packaging
+- [x] Make producers financially responsible for the lifecycle of their products
+- [ ] Reduce the amount of recycled content in products
+- [ ] Ban the use of compostable materials
+
+Q3: How does Extended Producer Responsibility (EPR) operate in the context of packaging waste?
+
+- [ ] Producers are only responsible for the design phase of their products.
+- [x] Producers pay fees to cover the costs of waste management, including collection, sorting, and recycling of their products' packaging.
+- [ ] Consumers are required to pay all costs related to recycling packaging.
+- [ ] Producers are not involved in the recycling process and have no financial obligations.
+
+Q4: What is the role of producer responsibility organizations (eco-organizations or systems) in the context of Extended Producer Responsibility (EPR)?
+
+- [x] They manage the financial contributions from producers to fund packaging waste management systems.
+- [ ] They produce packaging materials for manufacturers.
+- [ ] They are responsible for designing packaging to meet recycling standards.
+- [ ] They handle the disposal of hazardous materials only.
+
+canBeSentByEmail: true
+`;
+
+var ecodesignPackaging = `
+Q1: What is the specificity of packaging in the context of ecodesign?
+
+- [ ] Packaging is always independent of the product and its environmental impact is minimal.
+- [x] Packaging facilitates the supply chain and has both direct and indirect environmental impacts.
+- [ ] Packaging is designed purely for aesthetic purposes and has no effect on sustainability.
+- [ ] Packaging is unrelated to product loss or food transportation efficiency.
+
+Q2: Why is it important to consider both packaging and food loss in ecodesign?
+
+- [ ] Packaging has a much higher environmental impact than food loss.
+- [x] The goal is to minimize both food loss and the environmental impact of the packaging system.
+- [ ] Packaging design has no effect on food preservation or waste.
+- [ ] Food waste is only a concern in the production stage and not related to packaging.
+
+Q3: What is the first step in the ecodesign process for packaging?
+
+- [x] Apply the strategy elements.
+- [ ] Check achievements and make adjustments.
+- [ ] Define objectives and environmental targets.
+- [ ] Measure and implement communication strategies.
+
+Q4: Which of the following is recommended to extend the shelf life of products in ecodesign?
+
+- [ ] Increasing the thickness of packaging materials.
+- [ ] Using reusable packaging only.
+- [x] Developing packaging that is the right size for consumer needs and extends product shelf life.
+- [ ] Avoiding packaging entirely to reduce costs.
+
+Q5: Which of the following is a key design element for optimizing transport packaging in ecodesign? 
+
+- [ ] Increasing the size of the packaging to fill more space in transport vehicles.
+- [ ] Designing packaging with more decorative elements to improve aesthetics.
+- [x] Decreasing voids and optimizing stacking ability for better palletization.
+- [ ] Using single-use packaging to minimize contamination risks.
+- [x] Using reusable/returnable containers
+- [x] Using bulk shipping
+
+Q6: Which of the following is an important design element for primary packaging in ecodesign? (multiple answers allowed)
+
+- [ ] Using thicker materials to ensure maximum product protection.
+- [x] Designing for easy portioning and emptying to minimize food waste.
+- [ ] Adding complex decorations to improve market appeal.
+- [ ] Using materials that cannot be recycled to reduce costs.
+- [x] Decreasing material mass
+- [x] Selecting minimal impact packaging materials
+- [x] Using reusable packaging
 
 canBeSentByEmail: true
 `;
