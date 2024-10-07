@@ -35,5 +35,6 @@
     "packing",
     "wrapping"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Introduction-into-mechanical-processes.html#/1"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Introduction-into-mechanical-processes.html#/1",
+  "qAndAVariables":["Take a quiz = mechanicalProcesses"]
 }

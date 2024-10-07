@@ -37,5 +37,6 @@
     "temperature",
     "welding"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Sealing.html#/1"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/Sealing.html#/1",
+  "qAndAVariables":["Take a quiz = sealingAndWelding"]
 }

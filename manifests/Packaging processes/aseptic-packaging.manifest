@@ -18,5 +18,6 @@
     "Aseptic",
     "packaging"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/aseptic-packaging.html#/1"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/aseptic-packaging.html#/1",
+  "qAndAVariables":["Take a quiz = asepticPackaging"]
 }
