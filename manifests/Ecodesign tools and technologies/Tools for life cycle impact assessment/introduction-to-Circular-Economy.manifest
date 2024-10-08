@@ -24,5 +24,6 @@
     "Circular Business",
     "Sustainability"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/introduction-circular-ecocomy.html#/1"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/introduction-circular-ecocomy.html#/1",
+  "qAndAVariables":["Take a quiz = circularEconomy"]
 }

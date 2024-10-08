@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Monday, 23rd September 2024
+ * Last Modified: Tuesday, 8th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -284,6 +284,10 @@ function createAElementForDropDownMenuToPrint(identifier) {
   const abstractHeader = document.createElement("h4");
   abstractHeader.innerHTML = "Abstract";
   const abstractElement = document.createElement("p");
+  // Apply CSS to preserve whitespace and newlines
+  abstractElement.style.whiteSpace = "pre-wrap";
+
+  // Append the text node
   const abstractNode = document.createTextNode(lecture.abstract);
   abstractElement.appendChild(abstractNode);
 

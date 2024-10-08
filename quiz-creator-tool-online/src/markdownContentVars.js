@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Monday, 7th October 2024
+ * Last Modified: Tuesday, 8th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -2573,6 +2573,182 @@ Q7: Measurement of the tightness of sealed seams. Which of the following stateme
 - [ ] The exact localization of defects is easier with non-destructive testing
 - [ ] The measurement of gas leakage from finished packs can only be carried out in a destructive test
 - [x] If the gas leakage from finished packs is determined in a separate container, the packaged products can still be sold
+
+canBeSentByEmail: true
+`;
+
+var surfaceTreatmentsAndCoatings = `
+Q1: What is the definition of coating?
+
+- [x] A layer of any substance spread over a surface
+- [x] Mixture of film-forming materials with additives applied to a surface
+- [x] A layer of film spread over a surface for protection or decoration
+
+Q2: What are the functions of coatings?
+
+- [x] Improve material properties
+- [ ] Provide material information
+- [ ] Enable material selling
+
+Q3: Which material can be coated?
+
+- [x] Glass
+- [x] Metal
+- [x] Plastic 
+
+Q4: Select surface coating methods!
+
+- [x] Chemical vapour deposition
+- [x] Physical vapour deposition
+- [x] Electrochemical deposition
+
+Q5: Why are food cans coated?
+
+- [ ] To attract consumers
+- [x] To provide inner barrier
+- [ ] To initiate corrosion
+
+Q6: Which types of coating are used for food cans?
+
+- [x] Acrylic
+- [x] Epoxy-phenolic
+- [x] Vinyl
+
+Q7: What is laminate in food packaging?
+
+- [x] Laminate is packaging material made of two or more materials.
+- [ ] Laminate is metallic packaging material.
+- [ ] Laminate is low barrier packaging material.
+
+Q8: Which of the following processes are used for laminating?
+
+- [x] Coating
+- [x] Extrusion coating
+- [x] Lamination
+
+Q9: Which coating material is mostly used for metallized film production?
+
+- [x] Aluminium
+- [ ] Zink
+- [ ] Tin
+
+Q10: Select properties of metallized film
+
+- [x] Improved barrier characteristics 
+- [ ] Decrease food shelf-life.
+- [ ] Increase film transparency.
+
+canBeSentByEmail: true
+`;
+
+var advancedPrinciplesMassTransfer = `
+Q1: Select mass transfer parameters in environment-package-food system.
+
+- [ ] Permeation and migration
+- [ ] Sorption and migration
+- [x] Permeation, sorption, and migration
+
+Q2: What is diffusion?
+
+- [ ] Diffusion is the movement of molecules from an area of low to an area of high concentration.
+- [x] Diffusion is the movement of molecules from an area of high to an area of low concentration.
+- [ ] Diffusion is the movement of the particles in a solid.
+
+Q3: What does FLUX stand for?
+
+- [ ] Quantity of permeant expressed in mass, mole or volume units
+- [x] Amount of permeant transported per unit time through a given area
+- [ ] Amount of permeant transported per unit time and unit area
+
+Q4: Which coefficient is used to calculate Permeability coefficient?
+
+- [ ] Diffusion coefficient
+- [ ] Solubility coefficient
+- [x] Diffusion and solubility coefficients
+
+Q5: What is WVTR in flexible packaging?
+
+- [ ] Water Vapour Thermal Resistance 
+- [x] Water Vapour Transmission Rate
+- [ ] Water Vapour Thermal Rate
+
+Q6: What term refers to the migration process of packaged food?
+
+- [x] Mass transfer of chemicals from package to food
+- [ ] Chemicals addition to polymers
+- [ ] Solvents addition to polymers
+
+Q7: What are the factors affecting the migration of chemicals in food-package system?
+
+- [ ] Concentration and solubility of migrants
+- [ ] Time and temperature of contact
+- [x] All above
+
+Q8: Which law describes migration process?
+
+- [x] Fick’s law
+- [ ] Law of gravitation
+- [ ] All above
+
+Q9: Which law describes steady-state permeation through membrane?
+
+- [ ] Fick’s second law
+- [x] Fick’s first law
+- [ ] Fick’s first and second law
+
+Q10: What is a definition of Permeance?
+
+- [x] Permeability coefficient divided by the thickness
+- [ ] Permeability coefficient multiplied by the thickness
+- [ ] Diffusion coefficient divided by the thickness
+
+Q11: What is the SI unit for Gas permeability coefficient?
+
+- [ ] mol.m-2.s-1
+- [ ] mol.m-2.s-1.Pa-1
+- [x] mol.m-1.s-1.Pa-1
+
+Q12: What is the unit of Diffusion coefficient?
+
+- [x] m2 s-1
+- [ ] cm3 s-1
+- [ ] m s-1
+
+Q13: What is the SI unit for Water vapour permeability?
+
+- [ ] mol.m-2.s-1
+- [x] mol.m-2.s-1.Pa-1
+- [ ] mol.m-1.s-1.Pa-1
+
+Q14: Which method can be used to determine gas permeability?
+
+- [ ] Isostatic, steady-state method
+- [ ] Dynamic accumulation permeation cell
+- [x] All above
+
+Q15: Which parameters are used to calculate permeability of multilayer materials?
+
+- [ ] Permeability of material
+- [ ] Thickness of material
+- [x] Permeability and thickness of each layer
+
+Q16: Which of the following describes migration process?
+
+- [x] Interaction between packaging materials and food
+- [ ] Movement of the molecules in food product
+- [ ] Movement of the molecules in packaging material
+
+Q17: Which types of migration process exists?
+
+- [ ] Overall (global) migration
+- [ ] Specific migration
+- [x] All above
+
+Q18: Which types of migration experiment can be used?
+
+- [x] Migration cells
+- [ ] Thickness measuring
+- [x] Immersing strips
 
 canBeSentByEmail: true
 `;

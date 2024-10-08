@@ -24,5 +24,6 @@
     "EPR",
     "Environmental Compliance"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/environmental-legislation.html#/1"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/environmental-legislation.html#/1",
+  "qAndAVariables":["Take a quiz = environmentalLegislation"]
 }

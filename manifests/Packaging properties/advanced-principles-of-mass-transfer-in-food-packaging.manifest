@@ -37,5 +37,6 @@
     "unit",
     "water"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/UNIZG/advanced-principles-of-mass-transfer-in-food-packaging.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/UNIZG/advanced-principles-of-mass-transfer-in-food-packaging.html#/1",
+  "qAndAVariables":["Take a quiz = advancedPrinciplesMassTransfer"]
 }
