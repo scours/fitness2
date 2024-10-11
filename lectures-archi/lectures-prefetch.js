@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Tuesday, 8th October 2024
+ * Last Modified: Friday, 11th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -100,7 +100,8 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Packaging properties/measurement-and-modeling",
-  `<h1>Micro holes and leaks</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>defects,holes,permeation,shelf-life,modeling,oxygen</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them? measure and simulate their effects – measurement and modeling -  level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UB/microholes-and-leaks.html#/1" id="lecture-button-measurement-and-modeling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Frederic Debeaufort</li></ul>`
+  `<h1>Micro holes and leaks</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>transfers of gas and vapours,packaging properties,shelf-life</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Micro holes and leaks in packaging: Calculations (modeling), Measurement and Case studies
+ Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them and how it could affect the shelf-life ? The same question concerns the microperforated packaging which the holes have to be designed and dimensionned according the tgas transfer requirements for the packed food. This lecture present two case study : how to estimated the impact of a defect on the cheese shelf-life, the orther on the number of holes required for the preservation of mushrooms.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UB/microholes-and-leaks.html#/1" id="lecture-button-measurement-and-modeling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Frédéric Debeaufort</li></ul>`
 );
 lecturesDetails.set(
   "Packaging properties/the-basics-of-mechanical-engineering-for-packaging-designer",

@@ -6,31 +6,23 @@
   "unit": "U4.6",
   "difficultyLevel": "Intermediate",
   "part": "part1",
-  "author": "Frederic Debeaufort",
+  "author": "Frédéric Debeaufort",
   "institution": "UB",
-  "abstract": "Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them? measure and simulate their effects – measurement and modeling -  level intermediate, advanced",
+  "abstract": "Micro holes and leaks in packaging: Calculations (modeling), Measurement and Case studies\n Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them and how it could affect the shelf-life ? The same question concerns the microperforated packaging which the holes have to be designed and dimensionned according the tgas transfer requirements for the packed food. This lecture present two case study : how to estimated the impact of a defect on the cheese shelf-life, the orther on the number of holes required for the preservation of mushrooms.",
   "topic": [
-    "defects",
-    "holes",
-    "permeation",
-    "shelf-life",
-    "modeling",
-    "oxygen"
+    "transfers of gas and vapours",
+    "packaging properties",
+    "shelf-life"
   ],
   "license": "BY-SA-ND",
   "keywords": [
-    "diffusing",
-    "diffusion",
-    "gas",
-    "henrys",
-    "leaks",
-    "materials",
-    "micro",
-    "molar",
-    "molecular",
-    "oxygen",
-    "pore",
-    "test"
+    "defects",
+    "holes",
+    "microperforated",
+    "permeation",
+    "shelf-life",
+    "modeling",
+    "gas and moisture"
   ],
   "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/UB/microholes-and-leaks.html#/1"
 }
