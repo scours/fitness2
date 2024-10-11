@@ -24,6 +24,8 @@ Below are the different presentations of the FITNESS 2 platforms.
 
 ### Webinar
 
+[Webinar with Zero Waste Europe, October 2024: The contribution of the free platform FitNESS for life-long training in the field of responsible food packaging](https://fitness.agroparistech.fr/fitness2/webinar/fitness-2-platform-october-2024.html)
+
 [Freising webinar, September 2024](https://fitness.agroparistech.fr/fitness2/webinar/fitness-2-platform-sept-2024.html)
 
 [How to deal with the safety aspects of Paper and Board recycling?, june 2024](https://fitness.agroparistech.fr/fitness2/webinar/fitness-2-june-2024.html)
