@@ -1,0 +1,30 @@
+{
+  "idx": 847949,
+  "title": "Microbiological assessment of food and packaging",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Advanced",
+  "part": "part1",
+  "author": [
+    "Horst-Christian Langowski",
+    "Peter Muranyi",
+    "Bernd Kramer",
+    "Kata Galić",
+    "Mia Kurek",
+    "Mario Ščetar"
+  ],
+  "institution": "FHG",
+  "abstract": "The microbiological shelf life of food is determined by both the status of the food and of the associated packaging at the time of packaging.\nThe so-called spoilage microorganisms, which are only relevant to health in extreme quantities, and the pathogenic microorganisms, which are harmful to health or even life-threatening, even in small numbers, in the form of their metabolic products or just by themselves, must be considered separately.\nThe lecture gives an overview of the types of microorganisms and their living conditions, such as temperature and humidity conditions, the resulting consequences for shelf life and their determination.\nThe models for the time course of microbial growth are briefly presented.\nLimit values for different foods are addressed.\nA larger section is devoted to the principles and processes for inactivating microorganisms in food and on packaging as well as the guideline values for the maximum occurrence on different types of packaging.\nThis requires techniques for specifying the type and quantity of microorganisms, which are also addressed.\nThe lecture concludes with a concrete case study and a summary as well as the bibliography.\n",
+  "topic": [
+    "Microbiological assessment",
+    "food packaging"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Microbiological assessment",
+    "food packaging"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/microbiological-assessment-of-food-and-packaging.html#/1",
+  "qAndAVariables":["Take a quiz = microbiologicalAssessmentOfFoodAndPackaging"]
+}

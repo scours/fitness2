@@ -1,0 +1,34 @@
+{
+  "idx": 22,
+  "title": "Physico chemical factors affecting food stability",
+  "level": "common",
+  "section": "S3",
+  "unit": "U3.1",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": "Horst-Christian Langowski",
+  "institution": "TUM",
+  "abstract": "To understand the shelf-life properties of each food, it is necessary to know how the food can spoil and how packaging delays this process. In addition to microbiological processes, which are dealt with in detail in a separate chapter, the deterioration of food quality occurs via physical and chemical or biochemical mechanisms, as well as via the metabolism of products with active cells. In addition to the sensory quality of the food, other factors may also be important that are difficult for the consumer to perceive, but which deviate from the declared quantity, such as the filling quantity or the vitamin content. Almost all of these mechanisms are influenced by the transport of substances through the packaging. This applies to both processed and fresh products.\n\nThe most important influences are caused by the presence or absence of water vapor and oxygen, the latter often in combination with light. Another factor is the loss of flavoring substances or the entry of off-flavors.\n\nThe lesson covers the most important mechanisms of product degradation in combination with water / water vapor, with oxygen and with light, as well as the transport of flavor and off-flavors. Where possible, quantitative values are given to establish the connection with the properties of the packaging.\n",
+  "topic": [
+    "shelf-life",
+    "humidity",
+    "oxygen",
+    "permeation"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "aw",
+    "conditions",
+    "examples",
+    "light",
+    "mechanisms",
+    "packaging",
+    "product",
+    "products",
+    "reaction",
+    "sorption",
+    "transport",
+    "water"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.1/part1.html#/2"
+}

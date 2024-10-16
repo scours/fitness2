@@ -7,9 +7,9 @@
   "difficultyLevel": "Intermediate",
   "part": "part1",
   "author": [
+    "Kata Galić",
     "Mia Kurek",
-    "Mario Ščetar",
-    "Kata Galić"
+    "Mario Ščetar"
   ],
   "institution": "UNIZG",
   "abstract": "Molecular interactions between food or/in package covers sorption, migration and permeation and begin from the moment the package contact the food. It all begins in production line and extends throughout the package shelf life and can produce adverse effects on the food and/or package.\nFlavour scalping is known as loss of food constituents to packaging. The sorption of food constituents by polymeric packaging materials has received considerable attention during the past few years, and is generally recognized as a problem in the food packaging industry.\nExposure of packaged foods to ultraviolet radiation and visible light can cause (depending on food composition) oxidative deterioration of lipids, vitamins, proteins and colorants in foods so result can be formation of off-flavours, nutrient losses and discoloration of food. The sensitivity of a particular food to light will determine the selection of packaging material and its composition to protect/not react on packaged food.\nCorrosion as electrochemical process that is, an exchange of electrons in the interior of cans containing food products. Internal reaction corrosion can affect the organoleptic properties of foods and as a consequence, toxicological effects on human health can occur. Factors that affecting corrosion rate are oxygen, food composition, temperature and tinplate properties. In order to prevent corrosion, protection for specific foodstuffs, an appropriate tin coating thickness and/or specific inner lacquer is applied. So lacquered can corrosion can be prevented by: heavier lacquer coating (x2), lacquer after can formation, side stripe lacquer, good lacquer adhesion, reduced handling damage, correct lacquer selection for product.\nMigration is defined as «the mass transfer from an external source into food by sub-microscopic processes». Commission Regulation (EU) No 10/2011 define „Overall migration limit” (OML) means the maximum permitted amount of non-volatile substances released from a material or article into food simulants and „Specific migration limit” (SML) means the maximum permitted amount of a given substance released from a material or article into food or food simulants. 82/711/EEC, 85/572/EEC, 2007/19/EEC; Regulation (EU) No. 10/2011 Annex III:  define Food simulants with times (t) and temperatures (T) conditions.\nPackaging materials may contain a variety of chemical substances that could migrate to the packaged food. Special concerns for materials and what can migrate are: monomers/oligomers: basic unit or small polymer chains, additives used in the production of plastic food contact materials (FCMs), adhesives and printing inks. Migration limits of FCMs have been set for many substances based on the toxicological risk assessment of these substances. All of these limits for known substances are included in Food Contact regulations (national and EU) with the aim to control the exposure to these substances in order to protect our health. Risk assessment of chemicals in food and their potential impact on the safety assessment of substances used in food contact materials is performed by European Food Safety Authority (EFSA) in Europe union.\n",
@@ -37,5 +37,6 @@
     "sulphide",
     "uv"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/UNIZG/food-packaging-interaction.html#/1"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/UNIZG/food-packaging-interaction.html#/1",
+  "qAndAVariables":["Take a quiz = foodPackagingInteractions"]
 }

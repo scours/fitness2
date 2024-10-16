@@ -1,0 +1,40 @@
+{
+  "idx": 340169,
+  "title": "Sensory science applied to food packaging",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": [
+    "Andrea Strube",
+    "Zinaida Catruc",
+    "Horst-Christian Langowski",
+    "Kata Galić",
+    "Mia Kurek",
+    "Mario Ščetar"
+  ],
+  "institution": "",
+  "abstract": "The essential acceptance criteria for foods by consumers are based on sensory perception. These determine whether a food is rated as more or less valuable. In connection with the packaging, the shelf life and thus the shelf life is determined by it.\n\nIn the first section (Sensory analytics of food products), this unit presents the methods used to make a reproducible and comprehensible assessment of the sensory acceptance of food. Here, the human senses serve as a measuring instrument that is not easy to calibrate.\n\nThe second section (Instrumental analytics coupled to sensory evaluation) presents selected analytical methods with which the physico-chemical product properties and product constituents behind the sensory impressions can be identified and quantified. They can be used to elucidate the physical or chemical mechanisms of the sensory perceptible quality losses and to identify the central, i.e. the most rapidly proceeding degradation mechanisms.\n\nThe third section (Sensory evaluation in shelf life testing of packed food) describes in more detail the methods to evaluate the quality evolution of food during storage and to quantify the mechanisms of deterioration.  While the simple determination of shelf life via hedonic tests can be carried out without instrumental analysis, the determination of the influences of the packaging requires deeper knowledge of the mechanisms of the sensory perceptible quality losses. Accelerated shelf-life tests also require this knowledge. For this purpose, one needs to know how the rate of the central degradation mechanisms depends on the reaction partners and reaction conditions, and this in a quantitative way. \n\nThe fourth section (Sensory and analytical investigations of packaging materials) deals with the sensory influences that constituents of the packaging material (such as residual solvents from printing inks) exert directly on the packaged food. These influences are mainly of an olfactory nature. In rare cases, such packaging constituents can also react with ingredients of the food and form unexpected sensory active compounds.\n",
+  "topic": [
+    "Sensory perception",
+    "Food shelf life",
+    "Sensory analytics",
+    "Instrumental analytics",
+    "Quality evaluation",
+    "Degradation mechanisms",
+    "Packaging materials"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Sensory",
+    "Shelf-life",
+    "Packaging",
+    "Analytics",
+    "Degradation",
+    "Quality",
+    "Evaluation"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/sensory-science-applied-to-food-and-food-packaging.html#/1",
+  "qAndAVariables":["General questions for introductory assessment = factorsShelfLifeGeneral", "Sensory analytics of food products = sensoryAnalyticsOfFoodProducts", "Instrumental analytics coupled to sensory evaluation = instrumentalAnalyticsCoupledToSensoryEvaluation", "Sensory evaluation in shelf life testing of packed food = sensoryEvaluationInShelfLifeTestingOfPackedFood", "Sensory investigations of packaging materials = instrumentalAnalyticsCoupledToSensoryEvaluation"]
+}

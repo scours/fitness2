@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Friday, 11th October 2024
+ * Last Modified: Wednesday, 16th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -13,7 +13,7 @@ let dropDownMenuContent;
 let lecturesDetails = new Map();
 lecturesDetails.set(
   "Panorama of food packaging/panorama-of-food-packaging-part-1",
-  `<h1>History and overview</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>history,overview,plastics,polymer,challenges,waste,environment,function</p><h4>Abstract</h4><p style="white-space: pre-wrap;">This course is an introduction to the entire content of the FITNess project. The history of plastics is quickly summarized through the past centuries as well as the current challenges for the environment and society. Food packaging has developed at the interface of food needs (safety, preservation), technological possibilities and consumer expectations. The science of packaging combines food process engineering, materials science, toxicology, microbiology, regulations...). This course introduces the seven functions of packaging: preserving food quality; preventing microbiological risk; preserving the integrity of the packaging and its contents; preventing chemical risk; preserving the environment; meeting the technical and economic requirements of the manufacturer and the user of the packaging; interacting and communicating with the consumer.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html#/1" id="lecture-button-panorama-of-food-packaging-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#panorama-of-food-packaging-2024-single" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>History and overview</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>history,overview,plastics,polymer,challenges,waste,environment,function</p><h4>Abstract</h4><p style="white-space: pre-wrap;">This course is an introduction to the entire content of the FITNess project. The history of packaging is quickly summarized through the past centuries as well as the current challenges for the environment and society. Food packaging has developed at the interface of food needs (safety, preservation), technological possibilities, requirements of retail and consumer expectations. The science of packaging is a multi-disciplinary combination of food process engineering, materials science, toxicology, microbiology, regulatory issues and many other subjects. This course introduces basic packaging terminology, the five main functional sectors of packaging: protection of the packed food against influences from the outside and the packaging itself, containment of its contents and avoidance of defects, e.g. due to corrosion; communication of necessary information (“mandatory particulars” according to Regulation 1169/2011 of the EU and the filled contents according to Council Directive 76/211/EEC), convenience, i.e. easy storage, opening and preparation by the consumer, but also helping to avoid food waste; and, finally, conservation, the functions that help to reduce the overall environmental impact of the packaged goods, right up to their disposal, recycling or re-use.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Panorama-of-food-packaging-2024.html#/1" id="lecture-button-panorama-of-food-packaging-part-1" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/viewer/index.html#panorama-of-food-packaging-2024-single" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
 lecturesDetails.set(
   "Packaging materials/glass-packaging",
@@ -44,7 +44,7 @@ lecturesDetails.set(
   `<h1>Wood</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,wood,timber</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Wood is used as food packaging and for shipment: barrels, pallets</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part10.html#/2" id="lecture-button-wood-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/Thermal, mechanical and barrier properties/thermal-properties",
+  "Packaging material properties/Thermal, mechanical and barrier properties/thermal-properties",
   `<h1>Thermal properties: methods and standards</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,properties,thermal</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The objective of this unit is to gain basic knowledge about the properties of food packaging materials that play a key in their processing and use. This gives the basics to read and understand a technical datasheet, as well as to better select a packaging material according to the shelf-life of the food.
 
 The unit is divided into five sections. Each one is related to a specific property in which are discussed influencing factors, physical parameters of importance and analysis tools. 
@@ -52,7 +52,7 @@ The unit is divided into five sections. Each one is related to a specific proper
 The first section describes the thermal properties of packaging materials related to their structure. The second section is dedicated to mechanical properties, the third one to mass transfer properties, the fourth one to electromagnetic properties and the last one to surface properties. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part1.html#/2" id="lecture-button-thermal-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=thermalProperties&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties",
+  "Packaging material properties/Thermal, mechanical and barrier properties/mechanical-properties",
   `<h1>Mechanical properties: methods and standards</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,properties,mechanical</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The objective of this unit is to gain basic knowledge about the properties of food packaging materials that play a key in their processing and use. This gives the basics to read and understand a technical datasheet, as well as to better select a packaging material according to the shelf-life of the food.
 
 The unit is divided into five sections. Each one is related to a specific property in which are discussed influencing factors, physical parameters of importance and analysis tools. 
@@ -60,7 +60,7 @@ The unit is divided into five sections. Each one is related to a specific proper
 The first section describes the thermal properties of packaging materials related to their structure. The second section is dedicated to mechanical properties, the third one to mass transfer properties, the fourth one to electromagnetic properties and the last one to surface properties. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part2.html#/2" id="lecture-button-mechanical-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=mechanicalProperties&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/Thermal, mechanical and barrier properties/optical-properties",
+  "Packaging material properties/Thermal, mechanical and barrier properties/optical-properties",
   `<h1>Optical properties: methods and standards</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,properties,optic,radiation,microwaves,refractivity</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The objective of this unit is to gain basic knowledge about the properties of food packaging materials that play a key in their processing and use. This gives the basics to read and understand a technical datasheet, as well as to better select a packaging material according to the shelf-life of the food.
 
 The unit is divided into five sections. Each one is related to a specific property in which are discussed influencing factors, physical parameters of importance and analysis tools. 
@@ -69,7 +69,7 @@ The first section describes the thermal properties of packaging materials relate
 </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part4.html#/2" id="lecture-button-optical-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/Thermal, mechanical and barrier properties/surface-properties",
+  "Packaging material properties/Thermal, mechanical and barrier properties/surface-properties",
   `<h1>Surface properties: methods and standards</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,properties,surface,wetting,adhesion,coating</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The objective of this unit is to gain basic knowledge about the properties of food packaging materials that play a key in their processing and use. This gives the basics to read and understand a technical datasheet, as well as to better select a packaging material according to the shelf-life of the food.
 
 The unit is divided into five sections. Each one is related to a specific property in which are discussed influencing factors, physical parameters of importance and analysis tools. 
@@ -78,7 +78,7 @@ The first section describes the thermal properties of packaging materials relate
 </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part5.html#/2" id="lecture-button-surface-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties",
+  "Packaging material properties/Thermal, mechanical and barrier properties/mass-transfer-properties",
   `<h1>Mass transfer properties: methods and standards</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>materials,properties,permeability,solubility,diffusion,gases</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The objective of this unit is to gain basic knowledge about the properties of food packaging materials that play a key in their processing and use. This gives the basics to read and understand a technical datasheet, as well as to better select a packaging material according to the shelf-life of the food.
 
 The unit is divided into five sections. Each one is related to a specific property in which are discussed influencing factors, physical parameters of importance and analysis tools. 
@@ -87,25 +87,25 @@ The first section describes the thermal properties of packaging materials relate
 </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.1/part3.html#/2" id="lecture-button-mass-transfer-properties" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=massTransferProperties&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/advanced-principles-of-mass-transfer-in-food-packaging",
+  "Packaging material properties/advanced-principles-of-mass-transfer-in-food-packaging",
   `<h1>Advanced principles of mass transfer</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>permeation,migration,diffusion,sorption,desorption,partition,modeling</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Understanding mass transfer (diffusion, sorption/desorption, permeation, migration) is essential to the packaging designer, food and process engineer, risk assessor: Which material to choose (alone or in association)? Which thickness to reach a prescribed thickness? Are my specific migration levels acceptable? The considered solute/migrant/permeant can be a gas or an organic chemical. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/advanced-principles-of-mass-transfer-in-food-packaging.html#/1" id="lecture-button-advanced-principles-of-mass-transfer-in-food-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=advancedPrinciplesMassTransfer&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Kata Galić</li><li>Mia Kurek</li><li>Mario Ščetar</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/from-ideal-laminates-to-materials",
+  "Packaging material properties/from-ideal-laminates-to-materials",
   `<h1>Calculation of permeability in composite systems</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>permeation,diffusion,defects,holes,modeling</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Permeability in composites: from ideal laminates to materials with defects and dispersed particles. The results of diffusion/migration in multimaterial/multilayer are exemplified at steady state to derive effective permeabilities from composite systems.  -  level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.4/part1.html#/2" id="lecture-button-from-ideal-laminates-to-materials" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Oliver Miesbauer</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/diffusion-and-solubility-at-molecular-scale",
+  "Packaging material properties/diffusion-and-solubility-at-molecular-scale",
   `<h1>Multicomponent diffusion &amp; predictive models</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>diffusion,migration,interactions,mechanical,activation</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Multicomponent diffusion: diffusion and solubility at molecular scale (overview) and in non-ideal systems. Diffusion and solubility at molecular scale and in non-ideal systems: how to integrate them in mass transfer models? How to relate the chemical structure of diffusants with their diffusivity and chemical affinity in polymers? How do temperature and plasticizing activate diffusion? How to get robust estimates?   -   level intermediate, advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.5/part1.html#/2" id="lecture-button-diffusion-and-solubility-at-molecular-scale" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Olivier Vitrac</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/measurement-and-modeling",
-  `<h1>Micro holes and leaks</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>transfers of gas and vapours,packaging properties,shelf-life</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Micro holes and leaks in packaging: Calculations (modeling), Measurement and Case studies
- Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them and how it could affect the shelf-life ? The same question concerns the microperforated packaging which the holes have to be designed and dimensionned according the tgas transfer requirements for the packed food. This lecture present two case study : how to estimated the impact of a defect on the cheese shelf-life, the orther on the number of holes required for the preservation of mushrooms.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UB/microholes-and-leaks.html#/1" id="lecture-button-measurement-and-modeling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Frédéric Debeaufort</li></ul>`
+  "Packaging material properties/measurement-and-modeling",
+  `<h1>Micro holes and leaks</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>transfers of gas and vapours,packaging properties,shelf-life</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Micro holes and leaks in packaging: Calculations (modeling), Measurement and Case studies.
+Micro holes and leaks modify significantly the barrier properties of food packaging: how to characterize them and how it could affect the shelf-life ? The same question concerns the microperforated packaging which the holes have to be designed and dimensionned according the tgas transfer requirements for the packed food. This lecture present two case study : how to estimated the impact of a defect on the cheese shelf-life, the orther on the number of holes required for the preservation of mushrooms.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UB/microholes-and-leaks.html#/1" id="lecture-button-measurement-and-modeling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Frédéric Debeaufort</li></ul>`
 );
 lecturesDetails.set(
-  "Packaging properties/the-basics-of-mechanical-engineering-for-packaging-designer",
-  `<h1>Mechanical design</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>properties,mechanical</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Mechanical engineering of food packaging  (please read §2.1 and §2.2 before) - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.4/part1.html#/2" id="lecture-button-the-basics-of-mechanical-engineering-for-packaging-designer" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Murielle Hayert</li></ul>`
+  "Packaging material properties/the-basics-of-mechanical-engineering-for-packaging-designer",
+  `<h1>Mechanical design</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>properties,mechanical</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Mechanical engineering of food packaging.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.4/part1.html#/2" id="lecture-button-the-basics-of-mechanical-engineering-for-packaging-designer" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Murielle Hayert</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/introduction-to-mechanical-processes",
@@ -118,7 +118,8 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Packaging processes/aseptic-packaging",
-  `<h1>Aseptic packaging</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Aseptic,packaging</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Aseptic packaging</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/aseptic-packaging.html#/1" id="lecture-button-aseptic-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=asepticPackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>Aseptic packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Aseptic,packaging</p><h4>Abstract</h4><p style="white-space: pre-wrap;">In contrast to sterilization of already packed food in its closed package, aseptic packaging combines separately sterilized food with a sterilized packaging in a sterile compartment of the machine with the help of sterile equipment. To help understand the context, the thermal processes of pasteurization and sterilization are defined and their properties are explained. 
+The role of the food in its required degree of sterility and especially the dependence on its pH value are elucidated. Another part of the lecture is the separate sterilization of food containers and of packaging components. In most cases, heat and chemical disinfectants like H2O2 are used for this purpose. Another part of an aseptic processing line are clean rooms as the sterile compartment in which filling and closing take place. Their classification and their layout are explained. Testing and validation of aseptic packaging lines are also covered. Finally, different types of aseptic packaging lines are presented.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/aseptic-packaging.html#/1" id="lecture-button-aseptic-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=asepticPackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/filling-and-dosing",
@@ -134,92 +135,114 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Packaging processes/forming-filling-sealing",
-  `<h1>Forming, filling and sealing machines</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Integrated packaging lines,Forming,filling,and sealing in one line,Flexible packaging,Machine efficiency in packaging,Transportation of flexible films,Force transmission in packaging machines,Deformation processes in packaging,Thermoforming,Mandrel folding,Wrapping in packaging</p><h4>Abstract</h4><p style="white-space: pre-wrap;">D-7 Forming, filling and sealing machines: In many cases, the forming, filling and sealing steps are combined in one single line. The negative impact on overall efficiency that can result from linking machines is more than compensated for by less effort for transportation and much better hygienic conditions. The lecture will focus on flexible packaging, the difficulties of transporting flexible films in the machine, in particular the aspects of force transmission and deformation processes. The lecture will also show the use of other processes for forming of packaging: thermoforming, folding on a mandrel or wrapping.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Forming-filling-and-sealing-machinery.html#/1" id="lecture-button-forming-filling-sealing" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=formingFillingAndSealingMachines&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Uta Weiß</li></ul>`
+  `<h1>Forming, filling and sealing machinery</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Integrated packaging lines,Forming,filling,and sealing in one line,Flexible packaging,Machine efficiency in packaging,Transportation of flexible films,Force transmission in packaging machines,Deformation processes in packaging,Thermoforming,Mandrel folding,Wrapping in packaging</p><h4>Abstract</h4><p style="white-space: pre-wrap;">D-7 Forming, filling and sealing machines: In many cases, the forming, filling and sealing steps are combined in one single line. The negative impact on overall efficiency that can result from linking machines is more than compensated for by less effort for transportation and much better hygienic conditions. The lecture will focus on flexible packaging, the difficulties of transporting flexible films in the machine, in particular the aspects of force transmission and deformation processes. The lecture will also show the use of other processes for forming of packaging: thermoforming, folding on a mandrel or wrapping.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Forming-filling-and-sealing-machinery.html#/1" id="lecture-button-forming-filling-sealing" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=formingFillingAndSealingMachines&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Uta Weiß</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/surface-treatments-and-coatings",
-  `<h1>Surface treatment and coating principles and technologies.</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>coating,surface,process,materials,permeation,migration,recycling</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Surface treatments increase the surface energy of the packaging surface in order to maximize the contact surface area and the adhesion of adhesives, inks and coatings. Principles and available technologies are reviewed in this lecture.  -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/surface-treatments-and-coatings.html#/1" id="lecture-button-surface-treatments-and-coatings" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=surfaceTreatmentsAndCoatings&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Kata Galić</li><li>Mia Kurek</li><li>Mario Ščetar</li></ul>`
+  `<h1>Surface treatment and coatings</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>coating,surface,process,materials,permeation,migration,recycling</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Surface treatments increase the surface energy of the packaging surface in order to maximize the contact surface area and the adhesion of adhesives, inks and coatings. Principles and available technologies are reviewed in this lecture.  -  level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/surface-treatments-and-coatings.html#/1" id="lecture-button-surface-treatments-and-coatings" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=surfaceTreatmentsAndCoatings&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Kata Galić</li><li>Mia Kurek</li><li>Mario Ščetar</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/vacuum-and-modified-atmosphere-packaging",
-  `<h1>Vacuum and modified atmosphere packaging</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Stability of packed food,Modified atmosphere packaging (MAP),Vacuum packaging,Headspace modification,Active modification,Passive modification,Packaging machines and technology,Gas exchange in packaging,Evacuation of filled packaging,Gas mixtures in packaging,Gas permeation,Product stability in packaging,Gas composition for different products,Retail packaging studies</p><h4>Abstract</h4><p style="white-space: pre-wrap;">D-9 Vacuum and modified atmosphere packaging: To increase the stability of packed food, the atmosphere of the headspace may either be modified (modified atmosphere packaging, MAP) or it can be minimized (in vacuum packaging). The modification of the headspace may either be achieved via a dedicated gas exchange (the so-called active modification) or by the respiratory activity of the packed product (the passive modification, predominantly for fresh produce). Machines and technology for evacuating the filled packaging, optionally with subsequent exposure to a special gas mixture, or alternatively purging the still open packaging with a gas mixture, are presented and the basic facts are discussed. The processes happening in the package after closing and the interaction with the environment via gas permeation are also addressed. The gas composition for the best product stability differ from product to product. Studies are also shown on a selection of different products purchased in retail stores that have been packaged in this way.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Vacuum-and-Modified-Atmosphere-Packaging.html#/1" id="lecture-button-vacuum-and-modified-atmosphere-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=vacuumAndModifiedAtmospherePackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  `<h1>Vacuum and modified atmosphere packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Stability of packed food,Modified atmosphere packaging (MAP),Vacuum packaging,Headspace modification,Active modification,Passive modification,Packaging machines and technology,Gas exchange in packaging,Evacuation of filled packaging,Gas mixtures in packaging,Gas permeation,Product stability in packaging,Gas composition for different products,Retail packaging studies</p><h4>Abstract</h4><p style="white-space: pre-wrap;">D-9 Vacuum and modified atmosphere packaging: To increase the stability of packed food, the atmosphere of the headspace may either be modified (modified atmosphere packaging, MAP) or it can be minimized (in vacuum packaging). The modification of the headspace may either be achieved via a dedicated gas exchange (the so-called active modification) or by the respiratory activity of the packed product (the passive modification, predominantly for fresh produce). Machines and technology for evacuating the filled packaging, optionally with subsequent exposure to a special gas mixture, or alternatively purging the still open packaging with a gas mixture, are presented and the basic facts are discussed. The processes happening in the package after closing and the interaction with the environment via gas permeation are also addressed. The gas composition for the best product stability differ from product to product. Studies are also shown on a selection of different products purchased in retail stores that have been packaged in this way.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/Vacuum-and-Modified-Atmosphere-Packaging.html#/1" id="lecture-button-vacuum-and-modified-atmosphere-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=vacuumAndModifiedAtmospherePackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
 lecturesDetails.set(
   "Packaging processes/Packaging line/optimization",
   `<h1>Optimization</h1><h4>Difficulty level</h4><span>Advanced<i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i></span><h4>Topics</h4><p>process,filling,closing,bottles,optimization,machine,design</p><h4>Abstract</h4><p style="white-space: pre-wrap;">A packaging line is a series system of the stages of the packaging process. For each stage, one or more (parallel) machines are used. These machines frequently have to deal with failures. The machines are put in a sequence and connected by conveyors, which can also serve as buffers. Which tools to optimize the packaging line and assure efficiency? Efficiency is the quality of being efficient, meaning that it produces the expected results without waste. Follow the lecture to learn mor    -   level advanced</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S8/U8.8/part1.html#/1" id="lecture-button-optimization" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Murielle Hayert</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/shelf-life-definition",
-  `<h1>Defining shelf life</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,consumer,acceptability,law</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Shelf-life is a concept covering many facets in food (please read §3.1 before)  - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part1.html#/2" id="lecture-button-shelf-life-definition" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=shelfLifeStudy&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
+  "Packaging and food shelf-life/shelf-life-definition",
+  `<h1>Defining shelf life</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,consumer,acceptability,law</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Shelf-life is a concept covering many facets in food</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part1.html#/2" id="lecture-button-shelf-life-definition" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=shelfLifeStudy&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/introduction-to-preservation-and-packaging-technologies",
+  "Packaging and food shelf-life/introduction-to-preservation-and-packaging-technologies",
   `<h1>Food preservation technologies and packaging</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>process,aseptic,modified atmosphere,thermal</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Introduction to preservation and packaging technologies: thermal processing, modified atmosphere, aseptic packaging.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S2/U2.2/part1.html#/2" id="lecture-button-introduction-to-preservation-and-packaging-technologies" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Fátima Poças</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/modified-atmosphere-packaging",
+  "Packaging and food shelf-life/modified-atmosphere-packaging",
   `<h1>Modified atmosphere packaging and shelf-life</h1><h4>Difficulty level</h4><span>Advanced<i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i></span><h4>Topics</h4><p>fresh product,shelf life,packaging methods</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Modified atmosphere packaging is a preservation method where the surrounding atmosphere of the product is replaced typically with an inert gas, such as nitrogen combined with an antimicrobially active carbon dioxide, and oxygen in exact amounts, to extend its shelf life. Control of water loss, protection from skin abrasion and softening, reduced contamination of the produce during handling, and delayed ripening and slow various compositional changes associated with ripening are only some benefits of using MAP. Gases used, product and storage factors to be taken into account, packaging materials, and mathematical principles are well described in this presentation. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/modified-atmosphere-packaging.html#/1" id="lecture-button-modified-atmosphere-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=modifiedAtmospherePackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Mario Ščetar</li><li>Mia Kurek</li><li>Kata Galić</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/food-packaging-interactions",
+  "Packaging and food shelf-life/food-packaging-interactions",
   `<h1>Food packaging interactions</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>interactions,permeation,migration,corrosion,soprtion,metal,cans</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Molecular interactions between food or/in package covers sorption, migration and permeation and begin from the moment the package contact the food. It all begins in production line and extends throughout the package shelf life and can produce adverse effects on the food and/or package.
 Flavour scalping is known as loss of food constituents to packaging. The sorption of food constituents by polymeric packaging materials has received considerable attention during the past few years, and is generally recognized as a problem in the food packaging industry.
 Exposure of packaged foods to ultraviolet radiation and visible light can cause (depending on food composition) oxidative deterioration of lipids, vitamins, proteins and colorants in foods so result can be formation of off-flavours, nutrient losses and discoloration of food. The sensitivity of a particular food to light will determine the selection of packaging material and its composition to protect/not react on packaged food.
 Corrosion as electrochemical process that is, an exchange of electrons in the interior of cans containing food products. Internal reaction corrosion can affect the organoleptic properties of foods and as a consequence, toxicological effects on human health can occur. Factors that affecting corrosion rate are oxygen, food composition, temperature and tinplate properties. In order to prevent corrosion, protection for specific foodstuffs, an appropriate tin coating thickness and/or specific inner lacquer is applied. So lacquered can corrosion can be prevented by: heavier lacquer coating (x2), lacquer after can formation, side stripe lacquer, good lacquer adhesion, reduced handling damage, correct lacquer selection for product.
 Migration is defined as «the mass transfer from an external source into food by sub-microscopic processes». Commission Regulation (EU) No 10/2011 define „Overall migration limit” (OML) means the maximum permitted amount of non-volatile substances released from a material or article into food simulants and „Specific migration limit” (SML) means the maximum permitted amount of a given substance released from a material or article into food or food simulants. 82/711/EEC, 85/572/EEC, 2007/19/EEC; Regulation (EU) No. 10/2011 Annex III:  define Food simulants with times (t) and temperatures (T) conditions.
 Packaging materials may contain a variety of chemical substances that could migrate to the packaged food. Special concerns for materials and what can migrate are: monomers/oligomers: basic unit or small polymer chains, additives used in the production of plastic food contact materials (FCMs), adhesives and printing inks. Migration limits of FCMs have been set for many substances based on the toxicological risk assessment of these substances. All of these limits for known substances are included in Food Contact regulations (national and EU) with the aim to control the exposure to these substances in order to protect our health. Risk assessment of chemicals in food and their potential impact on the safety assessment of substances used in food contact materials is performed by European Food Safety Authority (EFSA) in Europe union.
-</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/food-packaging-interaction.html#/1" id="lecture-button-food-packaging-interactions" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Mia Kurek</li><li>Mario Ščetar</li><li>Kata Galić</li></ul>`
+</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/UNIZG/food-packaging-interaction.html#/1" id="lecture-button-food-packaging-interactions" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=foodPackagingInteractions&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Kata Galić</li><li>Mia Kurek</li><li>Mario Ščetar</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/factors-affecting-shelf-life",
+  "Packaging and food shelf-life/factors-affecting-shelf-life",
   `<h1>Factors affecting shelf life</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,light,oxygen,humidity</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The quality of most foods and beverages decreases with time. The length of time between processing and consumption, during which the product maintains an “acceptable” quality, is named shelf life.
 The unit is divided into four sections. In the first section shelf life definitions and related regulation aspects are discussed. The second section is focused on factors influencing the shelf life, such as product characteristics, food packaging and environment. The third section introduces accelerated shelf life testing. The last section gives the tools for the prediction of shelf life of packaged foods.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part2.html#/2" id="lecture-button-factors-affecting-shelf-life" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/physico-chemical-factors-affecting-food-stability",
-  `<h1>Physico chemical factors affecting food stability</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,humidity,oxygen,permeation</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Overview physical and chemical processes impacting the shelf-life of food-products (processed or not). Effects of water, oxygen, light, flavor losses, fresh food products, functionality requirements (please read §2.4 before) - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.1/part1.html#/2" id="lecture-button-physico-chemical-factors-affecting-food-stability" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
+  "Packaging and food shelf-life/physico-chemical-factors-affecting-food-stability",
+  `<h1>Physico chemical factors affecting food stability</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,humidity,oxygen,permeation</p><h4>Abstract</h4><p style="white-space: pre-wrap;">To understand the shelf-life properties of each food, it is necessary to know how the food can spoil and how packaging delays this process. In addition to microbiological processes, which are dealt with in detail in a separate chapter, the deterioration of food quality occurs via physical and chemical or biochemical mechanisms, as well as via the metabolism of products with active cells. In addition to the sensory quality of the food, other factors may also be important that are difficult for the consumer to perceive, but which deviate from the declared quantity, such as the filling quantity or the vitamin content. Almost all of these mechanisms are influenced by the transport of substances through the packaging. This applies to both processed and fresh products.
+
+The most important influences are caused by the presence or absence of water vapor and oxygen, the latter often in combination with light. Another factor is the loss of flavoring substances or the entry of off-flavors.
+
+The lesson covers the most important mechanisms of product degradation in combination with water / water vapor, with oxygen and with light, as well as the transport of flavor and off-flavors. Where possible, quantitative values are given to establish the connection with the properties of the packaging.
+</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.1/part1.html#/2" id="lecture-button-physico-chemical-factors-affecting-food-stability" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/study-shelf-life",
+  "Packaging and food shelf-life/study-shelf-life",
   `<h1>Shelf life study</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,temperature,time,activation</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The quality of most foods and beverages decreases with time. The length of time between processing and consumption, during which the product maintains an “acceptable” quality, is named shelf life.
 The unit is divided into four sections. In the first section shelf life definitions and related regulation aspects are discussed. The second section is focused on factors influencing the shelf life, such as product characteristics, food packaging and environment. The third section introduces accelerated shelf life testing. The last section gives the tools for the prediction of shelf life of packaged foods.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part3.html#/2" id="lecture-button-study-shelf-life" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/microbiological-assessment-of-food-and-packaging",
-  `<h1>Microbiological assessment of food and packaging</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Microbiological assessment,food packaging</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Microbiological assessment of food and packaging</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/microbiological-assessment-of-food-and-packaging.html#/1" id="lecture-button-microbiological-assessment-of-food-and-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=microbiologicalAssessmentOfFoodAndPackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Peter Muranyi</li><li>Bernd Kramer</li><li>Kata Galić</li><li>Mia Kurek</li><li>Mario Ščetar</li></ul>`
+  "Packaging and food shelf-life/microbiological-assessment-of-food-and-packaging",
+  `<h1>Microbiological assessment of food and packaging</h1><h4>Difficulty level</h4><span>Advanced<i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i><i class="fa fa-star star-color-red little-space"></i></span><h4>Topics</h4><p>Microbiological assessment,food packaging</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The microbiological shelf life of food is determined by both the status of the food and of the associated packaging at the time of packaging.
+The so-called spoilage microorganisms, which are only relevant to health in extreme quantities, and the pathogenic microorganisms, which are harmful to health or even life-threatening, even in small numbers, in the form of their metabolic products or just by themselves, must be considered separately.
+The lecture gives an overview of the types of microorganisms and their living conditions, such as temperature and humidity conditions, the resulting consequences for shelf life and their determination.
+The models for the time course of microbial growth are briefly presented.
+Limit values for different foods are addressed.
+A larger section is devoted to the principles and processes for inactivating microorganisms in food and on packaging as well as the guideline values for the maximum occurrence on different types of packaging.
+This requires techniques for specifying the type and quantity of microorganisms, which are also addressed.
+The lecture concludes with a concrete case study and a summary as well as the bibliography.
+</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/microbiological-assessment-of-food-and-packaging.html#/1" id="lecture-button-microbiological-assessment-of-food-and-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=microbiologicalAssessmentOfFoodAndPackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Horst-Christian Langowski</li><li>Peter Muranyi</li><li>Bernd Kramer</li><li>Kata Galić</li><li>Mia Kurek</li><li>Mario Ščetar</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/sensory-science",
-  `<h1>Sensory science applied to food and food packaging</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>topic1,topic2,topic3</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Abstract</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/sensory-science-applied-to-food-and-food-packaging.html#/1" id="lecture-button-sensory-science" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=factorsShelfLifeGeneral&amp;sessionId=1" target="_blank">General questions for introductory assessment</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=sensoryAnalyticsOfFoodProducts&amp;sessionId=1" target="_blank">Sensory analytics of food products</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=instrumentalAnalyticsCoupledToSensoryEvaluation&amp;sessionId=1" target="_blank">Instrumental analytics coupled to sensory evaluation</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=sensoryEvaluationInShelfLifeTestingOfPackedFood&amp;sessionId=1" target="_blank">Sensory evaluation in shelf life testing of packed food</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=instrumentalAnalyticsCoupledToSensoryEvaluation&amp;sessionId=1" target="_blank">Sensory investigations of packaging materials</a></p><h4>Authors</h4><ul><li>Andrea Strube</li><li>Zinaida Catruc</li><li>Horst-Christian Langowski</li><li>Kata Galić</li><li>Mia Kurek</li><li>Mario Ščetar</li></ul>`
+  "Packaging and food shelf-life/sensory-science",
+  `<h1>Sensory science applied to food packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Sensory perception,Food shelf life,Sensory analytics,Instrumental analytics,Quality evaluation,Degradation mechanisms,Packaging materials</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The essential acceptance criteria for foods by consumers are based on sensory perception. These determine whether a food is rated as more or less valuable. In connection with the packaging, the shelf life and thus the shelf life is determined by it.
+
+In the first section (Sensory analytics of food products), this unit presents the methods used to make a reproducible and comprehensible assessment of the sensory acceptance of food. Here, the human senses serve as a measuring instrument that is not easy to calibrate.
+
+The second section (Instrumental analytics coupled to sensory evaluation) presents selected analytical methods with which the physico-chemical product properties and product constituents behind the sensory impressions can be identified and quantified. They can be used to elucidate the physical or chemical mechanisms of the sensory perceptible quality losses and to identify the central, i.e. the most rapidly proceeding degradation mechanisms.
+
+The third section (Sensory evaluation in shelf life testing of packed food) describes in more detail the methods to evaluate the quality evolution of food during storage and to quantify the mechanisms of deterioration.  While the simple determination of shelf life via hedonic tests can be carried out without instrumental analysis, the determination of the influences of the packaging requires deeper knowledge of the mechanisms of the sensory perceptible quality losses. Accelerated shelf-life tests also require this knowledge. For this purpose, one needs to know how the rate of the central degradation mechanisms depends on the reaction partners and reaction conditions, and this in a quantitative way. 
+
+The fourth section (Sensory and analytical investigations of packaging materials) deals with the sensory influences that constituents of the packaging material (such as residual solvents from printing inks) exert directly on the packaged food. These influences are mainly of an olfactory nature. In rare cases, such packaging constituents can also react with ingredients of the food and form unexpected sensory active compounds.
+</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FHG/sensory-science-applied-to-food-and-food-packaging.html#/1" id="lecture-button-sensory-science" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=factorsShelfLifeGeneral&amp;sessionId=1" target="_blank">General questions for introductory assessment</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=sensoryAnalyticsOfFoodProducts&amp;sessionId=1" target="_blank">Sensory analytics of food products</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=instrumentalAnalyticsCoupledToSensoryEvaluation&amp;sessionId=1" target="_blank">Instrumental analytics coupled to sensory evaluation</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=sensoryEvaluationInShelfLifeTestingOfPackedFood&amp;sessionId=1" target="_blank">Sensory evaluation in shelf life testing of packed food</a><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=instrumentalAnalyticsCoupledToSensoryEvaluation&amp;sessionId=1" target="_blank">Sensory investigations of packaging materials</a></p><h4>Authors</h4><ul><li>Andrea Strube</li><li>Zinaida Catruc</li><li>Horst-Christian Langowski</li><li>Kata Galić</li><li>Mia Kurek</li><li>Mario Ščetar</li></ul>`
 );
 lecturesDetails.set(
-  "Shelf-life/predict-shelf-life",
+  "Packaging and food shelf-life/predict-shelf-life",
   `<h1>Predicting shelf life</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>shelf-life,quality,prediction,degradation,microbiological,chemical</p><h4>Abstract</h4><p style="white-space: pre-wrap;">How to calculate/predict shelf-life. The quality of most foods and beverages decreases with time. The length of time between processing and consumption, during which the product maintains an “acceptable” quality, is named shelf life.
 The unit is divided into four sections. In the first section shelf life definitions and related regulation aspects are discussed. The second section is focused on factors influencing the shelf life, such as product characteristics, food packaging and environment. The third section introduces accelerated shelf life testing. The last section gives the tools for the prediction of shelf life of packaged foods.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.2/part4.html#/2" id="lecture-button-predict-shelf-life" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p>There is no assessment for this lecture.</p><h4>Authors</h4><ul><li>Thomas Karbowiak</li></ul>`
 );
 lecturesDetails.set(
-  "Innovations/biobased-and-biodegradable-materials",
-  `<h1>Biobased and biodegradable materials</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>biodegradable,renewable,environment,starch,polysaccharides,proteins</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Biobased and biodegradable materials: from polymers to bioplastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/biobased-and-biodegradable-materials.html#/2" id="lecture-button-biobased-and-biodegradable-materials" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=materialBioBased&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
+  "Innovative food packaging/bioplastics",
+  `<h1>Bioplastics</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>biodegradable,renewable,environment,starch,polysaccharides,proteins</p><h4>Abstract</h4><p style="white-space: pre-wrap;">From polymers to bioplastics</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/biobased-and-biodegradable-materials.html#/2" id="lecture-button-bioplastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=materialBioBased&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
 );
 lecturesDetails.set(
-  "Innovations/bacterial-polyesters",
+  "Innovative food packaging/bacterial-polyesters",
   `<h1>Bacterial Polyesters</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>PHB,bioplastic,PHBV,properties,packaging</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Among the biobased materials, the ones synthesized by microorganisms are of great interest in the sense that thanks to the metabolic engineering of those microorganisms, it is possible to adjust the physicochemical properties of such biobased polymers together with the possibilities to introduce repeating units of a different nature in the macromolecular backbone by feeding the microorgansisms with various carbon sources.
 This unit provides an overview of: i) the classification and structures of PHAs, ii) the established methods for the synthesis of PHAs and their copolymers by microorganisms, iii) the main properties of such biobased polymers and iv) their major applications.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/bacterial-polyesters.html#/2" id="lecture-button-bacterial-polyesters" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=bacterialPolyester&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>María José Fabra</li><li>Eugenia Núñez-Calzado</li><li>Cristina Campano</li><li>Amparo López-Rubio</li></ul>`
 );
 lecturesDetails.set(
-  "Innovations/advanced-cellulosic-materials-for-food-packaging",
+  "Innovative food packaging/advanced-cellulosic-materials-for-food-packaging",
   `<h1>Advanced cellulosic materials</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Cellulose,nanocellulose,advanced coatings,cellulose nanocrystals,barrier properties,packaging</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Global food packaging is a billion-dollar market that is projected to reach USD 464 billion by 2027. In general, there are many types of packaging materials available in the market, such as plastics, glass, aluminium and paper. However, cellulose and its derivates has received great attention recently as food pacakjging materials due to environmental pressure by local authorities or driven by national and international policy. This is also because of sustainabililty, renewability and disposal issues. This unit compiles recent advances of cellulose-based packaging materials and the use of nanocellulose (especially nanofibrillated cellulose (NFC), cellulose nmanocrystals (CNC) and bacterial cellulose (BC)) to enhace barrier properties and other performance attributes of new generations of packaging materials. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/Advanced-cellulosic-materials.html#/2" id="lecture-button-advanced-cellulosic-materials-for-food-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=cellulose&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>María José Fabra</li><li>Eugenia Núñez-Calzado</li><li>Amparo López-Rubio</li></ul>`
 );
 lecturesDetails.set(
-  "Innovations/active-packaging",
-  `<h1>Active packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>active,absorber,scavanger,emitter,oxygen,CO2</p><h4>Abstract</h4><p style="white-space: pre-wrap;">With the concept of active packaging, the packaging system is not inert anymore and the active system is interacting with the food and/or its atmosphere. Active systems require to be beneficial for the food. Note that the use of active systems may have legal implications. (please read §1 before). Content: overview, oxygen scavengers, CO2 absorbing/releasing systems, ethylene scavengers, flavor/odor absorber/releaser, antioxidants. - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/active-packaging.html#/2" id="lecture-button-active-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=activePackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
+  "Innovative food packaging/active-packaging",
+  `<h1>Active packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>active,absorber,scavanger,emitter,oxygen,CO2</p><h4>Abstract</h4><p style="white-space: pre-wrap;">With the concept of active packaging, the packaging system is not inert anymore and the active system is interacting with the food and/or its atmosphere. Active systems require to be beneficial for the food. Note that the use of active systems may have legal implications. Content: overview, oxygen scavengers, CO2 absorbing/releasing systems, ethylene scavengers, flavor/odor absorber/releaser, antioxidants. - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/CSIC/active-packaging.html#/2" id="lecture-button-active-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=activePackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
 );
 lecturesDetails.set(
-  "Innovations/smart-packaging",
-  `<h1>Smart packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>RFID,smart,indicator</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Smart packaging concepts bring intelligent functions to the packaging  (detecting, sensing, recording, tracing, communicating, applying some mathematical logic) (please read §1 before). Content: overview, indicators, RFID, sensors, commercially available intelligent packaging systems - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.html#/2" id="lecture-button-smart-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=smartPackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
+  "Innovative food packaging/smart-packaging",
+  `<h1>Intelligent packaging</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>RFID,smart,indicator</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Intelligent packaging concepts bring intelligent functions to the packaging  (detecting, sensing, recording, tracing, communicating, applying some mathematical logic). Content: overview, indicators, RFID, sensors, commercially available intelligent packaging systems.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.3/part1.html#/2" id="lecture-button-smart-packaging" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=smartPackaging&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
 );
 lecturesDetails.set(
-  "Innovations/nanotechnology-strategies",
+  "Innovative food packaging/nanotechnology-strategies",
   `<h1>Nanotechnology strategies</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>properties,nanotechnology,active,smart</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Nanotechnology is an umbrella name covering different technologies, capabilities and impacts. They are essential to advanced, active, smart food packaging systems.   - level intermediate</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness/lectures/html/common/S4/U4.4/part1.html#/2" id="lecture-button-nanotechnology-strategies" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=nanomaterials&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Maria José Fabra</li></ul>`
 );
 lecturesDetails.set(
@@ -276,12 +299,12 @@ lecturesDetails.set(
   `<h1>Metal food contact material recycling</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>metal,recycling</p><h4>Abstract</h4><p style="white-space: pre-wrap;">This lecture provides an overview of the recycling process for food contact metals with a focus on aluminum and steel. It introduces existing collection methods including curbside collection, bring banks, and container deposit systems. The basic processing steps for recycling each metal type are summarized along with photos, explanatory videos, and links to publications that provide more detail. Key environmental benefits from recycling, as well as impacts stemming from the recycling processes are also reviewed along with European regulations pertinent to metal recycling.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/FPF/metal-food-contact-material-recycling.html" id="lecture-button-metal-food-contact-material-recycling" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=metalFoodContactMaterialRecycling&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Lindsey Parkinson</li><li>Justin Boucher</li><li>Joel Scheuchzer</li></ul>`
 );
 lecturesDetails.set(
-  "Ecodesign tools and technologies/Biodegradation and microplastics/biodegradability-and-biobased-carbon-content",
-  `<h1>Biodegradability and biobased carbon content</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Biodegradability Standards,Biobased Content,Biodegradation Processes,Polymer Biodegradation,Biobased Plastics</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The lecture on Biodegradability and Biobased Carbon Content of Plastic Packaging Materials focuses on biobased materials and biodegradability standards. It covers general definitions from the IUPAC and international standards for biobased content and biodegradability criteria. It gives detailed information on biodegradation processes and biodegradation measurement. Some examples of biodegradation of polymers are discussed. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/biodegradation.html#/1" id="lecture-button-biodegradability-and-biobased-carbon-content" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=biodegradation&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
+  "Ecodesign tools and technologies/microplastics",
+  `<h1>Overview of the Microplastics Issue</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Microplastics Origins,Microplastics Effects,Pollution Sources,Marine Impact,Legal Restrictions</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The lecture covers general information on the origins, distribution, and effects of microplastics on ecosystems and human health. It provides an overview of the global production and pollution of plastics, classifying microplastics as primary or secondary, depending on their source. It addresses how microplastics enter natural habitats, primarily through land-based activities and marine sources. The impacts on marine life, terrestrial ecosystems, and human health are summarized, and legal measures to restrict microplastics are shown. The lecture concludes with open questions regarding the long-term health effects and environmental fate of microplastics, calling for further research on exposure pathways, breakdown kinetics, and size-related toxicity.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/microplastics.html#/1" id="lecture-button-microplastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=microplastics&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
 );
 lecturesDetails.set(
-  "Ecodesign tools and technologies/Biodegradation and microplastics/microplastics",
-  `<h1>Overview of the Microplastics Issue</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Microplastics Origins,Microplastics Effects,Pollution Sources,Marine Impact,Legal Restrictions</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The lecture covers general information on the origins, distribution, and effects of microplastics on ecosystems and human health. It provides an overview of the global production and pollution of plastics, classifying microplastics as primary or secondary, depending on their source. It addresses how microplastics enter natural habitats, primarily through land-based activities and marine sources. The impacts on marine life, terrestrial ecosystems, and human health are summarized, and legal measures to restrict microplastics are shown. The lecture concludes with open questions regarding the long-term health effects and environmental fate of microplastics, calling for further research on exposure pathways, breakdown kinetics, and size-related toxicity.</p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/microplastics.html#/1" id="lecture-button-microplastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=microplastics&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
+  "Ecodesign tools and technologies/biodegradability-and-biobased-carbon-content",
+  `<h1>Biodegradability and biobased carbon content</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Biodegradability Standards,Biobased Content,Biodegradation Processes,Polymer Biodegradation,Biobased Plastics</p><h4>Abstract</h4><p style="white-space: pre-wrap;">The lecture on Biodegradability and Biobased Carbon Content of Plastic Packaging Materials focuses on biobased materials and biodegradability standards. It covers general definitions from the IUPAC and international standards for biobased content and biodegradability criteria. It gives detailed information on biodegradation processes and biodegradation measurement. Some examples of biodegradation of polymers are discussed. </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/AgroParisTech/biodegradation.html#/1" id="lecture-button-biodegradability-and-biobased-carbon-content" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=biodegradation&amp;sessionId=1" target="_blank">Take a quiz</a></p><h4>Authors</h4><ul><li>Sandra Domenek</li></ul>`
 );
 lecturesDetails.set(
   "Legislation and safety/basic-legal-framework",
@@ -409,66 +432,68 @@ dropDownMenuContent = `<div>
             onclick="lectureToDisplay(this.id)">Wood<i class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Packaging properties">Packaging properties<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Packaging properties"><button class="dropdown-btn"
+        id="dropdown-btn-Packaging material properties">Packaging material properties<i
+            class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container" id="dropdown-container-Packaging material properties"><button class="dropdown-btn"
             id="dropdown-btn-Thermal, mechanical and barrier properties">Thermal, mechanical and barrier properties<i
                 class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Thermal, mechanical and barrier properties"><a
-                href="#Packaging properties/Thermal, mechanical and barrier properties/thermal-properties"
-                id="Packaging properties/Thermal, mechanical and barrier properties/thermal-properties"
+                href="#Packaging material properties/Thermal, mechanical and barrier properties/thermal-properties"
+                id="Packaging material properties/Thermal, mechanical and barrier properties/thermal-properties"
                 class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Thermal properties: methods and
                 standards<i class="fa fa-star star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i></a><a
-                href="#Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties"
-                id="Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties"
+                href="#Packaging material properties/Thermal, mechanical and barrier properties/mechanical-properties"
+                id="Packaging material properties/Thermal, mechanical and barrier properties/mechanical-properties"
                 class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mechanical properties: methods and
                 standards<i class="fa fa-star star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i></a><a
-                href="#Packaging properties/Thermal, mechanical and barrier properties/optical-properties"
-                id="Packaging properties/Thermal, mechanical and barrier properties/optical-properties"
+                href="#Packaging material properties/Thermal, mechanical and barrier properties/optical-properties"
+                id="Packaging material properties/Thermal, mechanical and barrier properties/optical-properties"
                 class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Optical properties: methods and
                 standards<i class="fa fa-star star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i></a><a
-                href="#Packaging properties/Thermal, mechanical and barrier properties/surface-properties"
-                id="Packaging properties/Thermal, mechanical and barrier properties/surface-properties"
+                href="#Packaging material properties/Thermal, mechanical and barrier properties/surface-properties"
+                id="Packaging material properties/Thermal, mechanical and barrier properties/surface-properties"
                 class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Surface properties: methods and
                 standards<i class="fa fa-star star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i></a><a
-                href="#Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties"
-                id="Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties"
+                href="#Packaging material properties/Thermal, mechanical and barrier properties/mass-transfer-properties"
+                id="Packaging material properties/Thermal, mechanical and barrier properties/mass-transfer-properties"
                 class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mass transfer properties: methods
                 and standards<i class="fa fa-star star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i><i
                     class="fa fa-star-o star-color-green little-space"></i></a></div><a
-            href="#Packaging properties/advanced-principles-of-mass-transfer-in-food-packaging"
-            id="Packaging properties/advanced-principles-of-mass-transfer-in-food-packaging"
+            href="#Packaging material properties/advanced-principles-of-mass-transfer-in-food-packaging"
+            id="Packaging material properties/advanced-principles-of-mass-transfer-in-food-packaging"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Advanced principles of mass transfer<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Packaging properties/from-ideal-laminates-to-materials"
-            id="Packaging properties/from-ideal-laminates-to-materials" class="dropdown-container-class"
+            href="#Packaging material properties/from-ideal-laminates-to-materials"
+            id="Packaging material properties/from-ideal-laminates-to-materials" class="dropdown-container-class"
             onclick="lectureToDisplay(this.id)">Calculation of permeability in composite systems<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Packaging properties/diffusion-and-solubility-at-molecular-scale"
-            id="Packaging properties/diffusion-and-solubility-at-molecular-scale" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Multicomponent diffusion &amp; predictive models<i
+            href="#Packaging material properties/diffusion-and-solubility-at-molecular-scale"
+            id="Packaging material properties/diffusion-and-solubility-at-molecular-scale"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Multicomponent diffusion &amp;
+            predictive models<i class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
+            href="#Packaging material properties/measurement-and-modeling"
+            id="Packaging material properties/measurement-and-modeling" class="dropdown-container-class"
+            onclick="lectureToDisplay(this.id)">Micro holes and leaks<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Packaging properties/measurement-and-modeling" id="Packaging properties/measurement-and-modeling"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Micro holes and leaks<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Packaging properties/the-basics-of-mechanical-engineering-for-packaging-designer"
-            id="Packaging properties/the-basics-of-mechanical-engineering-for-packaging-designer"
+            href="#Packaging material properties/the-basics-of-mechanical-engineering-for-packaging-designer"
+            id="Packaging material properties/the-basics-of-mechanical-engineering-for-packaging-designer"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Mechanical design<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
@@ -489,9 +514,9 @@ dropDownMenuContent = `<div>
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Packaging processes/aseptic-packaging" id="Packaging processes/aseptic-packaging"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Aseptic packaging<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Packaging processes/filling-and-dosing" id="Packaging processes/filling-and-dosing"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Filling and dosing<i
                 class="fa fa-star star-color-yellow little-space"></i><i
@@ -507,22 +532,22 @@ dropDownMenuContent = `<div>
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Packaging processes/forming-filling-sealing" id="Packaging processes/forming-filling-sealing"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Forming, filling and sealing machines<i
-                class="fa fa-star star-color-yellow little-space"></i><i
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Forming, filling and sealing
+            machinery<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Packaging processes/surface-treatments-and-coatings"
             id="Packaging processes/surface-treatments-and-coatings" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Surface treatment and coating principles and technologies.<i
+            onclick="lectureToDisplay(this.id)">Surface treatment and coatings<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Packaging processes/vacuum-and-modified-atmosphere-packaging"
             id="Packaging processes/vacuum-and-modified-atmosphere-packaging" class="dropdown-container-class"
             onclick="lectureToDisplay(this.id)">Vacuum and modified atmosphere packaging<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><button class="dropdown-btn"
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><button class="dropdown-btn"
             id="dropdown-btn-Packaging line">Packaging line<i class="fa fa-caret-down"></i></button>
         <div class="dropdown-container" id="dropdown-container-Packaging line"><a
                 href="#Packaging processes/Packaging line/optimization"
@@ -530,89 +555,98 @@ dropDownMenuContent = `<div>
                 onclick="lectureToDisplay(this.id)">Optimization<i class="fa fa-star star-color-red little-space"></i><i
                     class="fa fa-star star-color-red little-space"></i><i
                     class="fa fa-star star-color-red little-space"></i></a></div>
-    </div><button class="dropdown-btn" id="dropdown-btn-Shelf-life">Shelf-life<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Shelf-life"><a href="#Shelf-life/shelf-life-definition"
-            id="Shelf-life/shelf-life-definition" class="dropdown-container-class"
+    </div><button class="dropdown-btn" id="dropdown-btn-Packaging and food shelf-life">Packaging and food shelf-life<i
+            class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container" id="dropdown-container-Packaging and food shelf-life"><a
+            href="#Packaging and food shelf-life/shelf-life-definition"
+            id="Packaging and food shelf-life/shelf-life-definition" class="dropdown-container-class"
             onclick="lectureToDisplay(this.id)">Defining shelf life<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Shelf-life/introduction-to-preservation-and-packaging-technologies"
-            id="Shelf-life/introduction-to-preservation-and-packaging-technologies" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Food preservation technologies and packaging<i
-                class="fa fa-star star-color-green little-space"></i><i
+            href="#Packaging and food shelf-life/introduction-to-preservation-and-packaging-technologies"
+            id="Packaging and food shelf-life/introduction-to-preservation-and-packaging-technologies"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Food preservation technologies and
+            packaging<i class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i></a><a
-            href="#Shelf-life/modified-atmosphere-packaging" id="Shelf-life/modified-atmosphere-packaging"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Modified atmosphere packaging and
-            shelf-life<i class="fa fa-star star-color-red little-space"></i><i
+            href="#Packaging and food shelf-life/modified-atmosphere-packaging"
+            id="Packaging and food shelf-life/modified-atmosphere-packaging" class="dropdown-container-class"
+            onclick="lectureToDisplay(this.id)">Modified atmosphere packaging and shelf-life<i
                 class="fa fa-star star-color-red little-space"></i><i
-                class="fa fa-star star-color-red little-space"></i></a><a href="#Shelf-life/food-packaging-interactions"
-            id="Shelf-life/food-packaging-interactions" class="dropdown-container-class"
+                class="fa fa-star star-color-red little-space"></i><i
+                class="fa fa-star star-color-red little-space"></i></a><a
+            href="#Packaging and food shelf-life/food-packaging-interactions"
+            id="Packaging and food shelf-life/food-packaging-interactions" class="dropdown-container-class"
             onclick="lectureToDisplay(this.id)">Food packaging interactions<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Shelf-life/factors-affecting-shelf-life" id="Shelf-life/factors-affecting-shelf-life"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Factors affecting shelf life<i
+            href="#Packaging and food shelf-life/factors-affecting-shelf-life"
+            id="Packaging and food shelf-life/factors-affecting-shelf-life" class="dropdown-container-class"
+            onclick="lectureToDisplay(this.id)">Factors affecting shelf life<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Shelf-life/physico-chemical-factors-affecting-food-stability"
-            id="Shelf-life/physico-chemical-factors-affecting-food-stability" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Physico chemical factors affecting food stability<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a href="#Shelf-life/study-shelf-life"
-            id="Shelf-life/study-shelf-life" class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Shelf
-            life study<i class="fa fa-star star-color-yellow little-space"></i><i
+            href="#Packaging and food shelf-life/physico-chemical-factors-affecting-food-stability"
+            id="Packaging and food shelf-life/physico-chemical-factors-affecting-food-stability"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Physico chemical factors affecting food
+            stability<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Shelf-life/microbiological-assessment-of-food-and-packaging"
-            id="Shelf-life/microbiological-assessment-of-food-and-packaging" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Microbiological assessment of food and packaging<i
-                class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a href="#Shelf-life/sensory-science"
-            id="Shelf-life/sensory-science" class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Sensory
-            science applied to food and food packaging<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a href="#Shelf-life/predict-shelf-life"
-            id="Shelf-life/predict-shelf-life" class="dropdown-container-class"
+            href="#Packaging and food shelf-life/study-shelf-life" id="Packaging and food shelf-life/study-shelf-life"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Shelf life study<i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
+            href="#Packaging and food shelf-life/microbiological-assessment-of-food-and-packaging"
+            id="Packaging and food shelf-life/microbiological-assessment-of-food-and-packaging"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Microbiological assessment of food and
+            packaging<i class="fa fa-star star-color-red little-space"></i><i
+                class="fa fa-star star-color-red little-space"></i><i
+                class="fa fa-star star-color-red little-space"></i></a><a
+            href="#Packaging and food shelf-life/sensory-science" id="Packaging and food shelf-life/sensory-science"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Sensory science applied to food
+            packaging<i class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
+            href="#Packaging and food shelf-life/predict-shelf-life"
+            id="Packaging and food shelf-life/predict-shelf-life" class="dropdown-container-class"
             onclick="lectureToDisplay(this.id)">Predicting shelf life<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
-        id="dropdown-btn-Innovations">Innovations<i class="fa fa-caret-down"></i></button>
-    <div class="dropdown-container" id="dropdown-container-Innovations"><a
-            href="#Innovations/biobased-and-biodegradable-materials"
-            id="Innovations/biobased-and-biodegradable-materials" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Biobased and biodegradable materials <i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a href="#Innovations/bacterial-polyesters"
-            id="Innovations/bacterial-polyesters" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Bacterial Polyesters<i
+        id="dropdown-btn-Innovative food packaging">Innovative food packaging<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container" id="dropdown-container-Innovative food packaging"><a
+            href="#Innovative food packaging/bioplastics" id="Innovative food packaging/bioplastics"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Bioplastics<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Innovations/advanced-cellulosic-materials-for-food-packaging"
-            id="Innovations/advanced-cellulosic-materials-for-food-packaging" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Advanced cellulosic materials<i
+            href="#Innovative food packaging/bacterial-polyesters" id="Innovative food packaging/bacterial-polyesters"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Bacterial Polyesters<i
                 class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a href="#Innovations/active-packaging"
-            id="Innovations/active-packaging" class="dropdown-container-class"
-            onclick="lectureToDisplay(this.id)">Active packaging<i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star star-color-yellow little-space"></i><i
-                class="fa fa-star-o star-color-yellow little-space"></i></a><a href="#Innovations/smart-packaging"
-            id="Innovations/smart-packaging" class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Smart
-            packaging<i class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
-            href="#Innovations/nanotechnology-strategies" id="Innovations/nanotechnology-strategies"
-            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Nanotechnology strategies<i
+            href="#Innovative food packaging/advanced-cellulosic-materials-for-food-packaging"
+            id="Innovative food packaging/advanced-cellulosic-materials-for-food-packaging"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Advanced cellulosic materials<i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
+            href="#Innovative food packaging/active-packaging" id="Innovative food packaging/active-packaging"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Active packaging<i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
+            href="#Innovative food packaging/smart-packaging" id="Innovative food packaging/smart-packaging"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Intelligent packaging<i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
+            href="#Innovative food packaging/nanotechnology-strategies"
+            id="Innovative food packaging/nanotechnology-strategies" class="dropdown-container-class"
+            onclick="lectureToDisplay(this.id)">Nanotechnology strategies<i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star star-color-yellow little-space"></i><i
                 class="fa fa-star-o star-color-yellow little-space"></i></a></div><button class="dropdown-btn"
@@ -690,22 +724,18 @@ dropDownMenuContent = `<div>
             onclick="lectureToDisplay(this.id)">Metal food contact material recycling<i
                 class="fa fa-star star-color-green little-space"></i><i
                 class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><button class="dropdown-btn"
-            id="dropdown-btn-Biodegradation and microplastics">Biodegradation and microplastics<i
-                class="fa fa-caret-down"></i></button>
-        <div class="dropdown-container" id="dropdown-container-Biodegradation and microplastics"><a
-                href="#Ecodesign tools and technologies/Biodegradation and microplastics/biodegradability-and-biobased-carbon-content"
-                id="Ecodesign tools and technologies/Biodegradation and microplastics/biodegradability-and-biobased-carbon-content"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Biodegradability and biobased
-                carbon content<i class="fa fa-star star-color-yellow little-space"></i><i
-                    class="fa fa-star star-color-yellow little-space"></i><i
-                    class="fa fa-star-o star-color-yellow little-space"></i></a><a
-                href="#Ecodesign tools and technologies/Biodegradation and microplastics/microplastics"
-                id="Ecodesign tools and technologies/Biodegradation and microplastics/microplastics"
-                class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview of the Microplastics
-                Issue<i class="fa fa-star star-color-yellow little-space"></i><i
-                    class="fa fa-star star-color-yellow little-space"></i><i
-                    class="fa fa-star-o star-color-yellow little-space"></i></a></div>
+                class="fa fa-star-o star-color-green little-space"></i></a><a
+            href="#Ecodesign tools and technologies/microplastics" id="Ecodesign tools and technologies/microplastics"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Overview of the Microplastics Issue<i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
+            href="#Ecodesign tools and technologies/biodegradability-and-biobased-carbon-content"
+            id="Ecodesign tools and technologies/biodegradability-and-biobased-carbon-content"
+            class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Biodegradability and biobased carbon
+            content<i class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a>
     </div><button class="dropdown-btn" id="dropdown-btn-Legislation and safety">Legislation and safety<i
             class="fa fa-caret-down"></i></button>
     <div class="dropdown-container" id="dropdown-container-Legislation and safety"><a

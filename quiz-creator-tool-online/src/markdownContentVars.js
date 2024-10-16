@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 8th October 2024
+ * Last Modified: Wednesday, 16th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -696,16 +696,16 @@ canBeSentByEmail:true
 var bacterialPolyester = `
 Q1: Which bacteria are known to produce bacterial polyesters?
 
-- [ ]    Escherichia coli
-- [x]  Pseudomonas putida
+- [ ] Escherichia coli
+- [x] Pseudomonas putida
 - [ ] Bacillus subtilis
 - [ ] All of the above
 
 
 Q2: What is the primary monomer unit of bacterial polyesters?
 
-- [ ]  Glucose
-- [ ]  Lactic acid
+- [ ] Glucose
+- [ ] Lactic acid
 - [x] Hydroxybutyrate
 - [ ] Ethylene glycol
 
@@ -734,38 +734,38 @@ Q5: Are bacterial polyesters generally considered to be:
 
 Q6: What are polyhydroxyalkanoates (PHAs)?
 
-- [ ]  Synthetic polymers
-- [x]  Naturally occurring biopolymers
-- [ ]  Radioactive mateirals
-- [ ]  Metal alloys
+- [ ] Synthetic polymers
+- [x] Naturally occurring biopolymers
+- [ ] Radioactive mateirals
+- [ ] Metal alloys
 
 Q7: Which microorganisms are known to produce polyhydroxyalkanoates?
 
-- [ ]  Fungi
+- [ ] Fungi
 - [x] Bacteria
-- [ ]  Viruses
-- [ ]  Archaea
+- [ ] Viruses
+- [ ] Archaea
 
 Q8: What is the primary function of polyhydroxyalkanoates in bacteria?
 
-- [x]  Energy storage
+- [x] Energy storage
 - [ ] Structural support
-- [ ]  Antibiotic production
-- [ ]  Heat resistance
+- [ ] Antibiotic production
+- [ ] Heat resistance
 
 Q9: In the context of PHAs, what does the term "alkanoate" refer to ?
 
-- [x]  Hydroxycarbon chains
+- [x] Hydroxycarbon chains
 - [ ] Aminoacids
-- [ ]  Phosphoric acid
-- [ ]  Sugar molecules
+- [ ] Phosphoric acid
+- [ ] Sugar molecules
 
 Q10: Which applications are polyhydroxyalkanoates commonly used for?
 
-- [ ]  Water purification
+- [ ] Water purification
 - [x] Biodegradable plastics
-- [ ]  Electronic manufacturing 
-- [ ]  Nuclear energy production
+- [ ] Electronic manufacturing 
+- [ ] Nuclear energy production
 
 canBeSentByEmail:true
 `;
@@ -797,7 +797,7 @@ Q4: What is the purpose of using QR codes or barcodes in smart packaging?
 - [x] To provide easy access to product information
 
 Q5: How do freshness indicators in smart packaging benefit consumers?
-- [ ]  By reducing the visibility of product information
+- [ ] By reducing the visibility of product information
 - [ ] By making packaging materials less transparent
 - [x] By providing real-time information on product quality
 - [ ] By releasing odors into the packaged product
@@ -815,7 +815,7 @@ Q1:  What is a primary advantage of using nanomaterials in food packaging?
 Q2: How do nanomaterials differ from conventional materials in terms of particle size?
 - [ ] Larger particle size
 - [x] Smaller particle size at the nanoscale
-- [ ]  Same particle size
+- [ ] Same particle size
 
 Q3: What unique properties emerge in nanomaterials due to their nanoscale dimensions?
 - [ ] Reduced toxicity
@@ -828,14 +828,14 @@ Q4: In what industries are nanomaterials commonly applied due to their unique pr
 - [x] Across various industries, including electronics, medicine, and materials science
 
 Q5: What is a potential concern associated with the use of nanomaterials?
-- [x]  Potential environmental and health impacts
+- [x] Potential environmental and health impacts
 - [ ] Limited applications
 - [ ] Increased stability
 
 Q6: How does the high surface area-to-volume ratio of nanomaterials affect their reactivity?
 - [ ] Reduces reactivity
 - [x] Increases reactivity
-- [ ]  Has no impact on reactivity
+- [ ] Has no impact on reactivity
 
 Q7: What role do nanomaterials play in preventing the growth of bacteria and pathogens in food packaging?
 - [ ] They promote bacterial growth
@@ -843,7 +843,7 @@ Q7: What role do nanomaterials play in preventing the growth of bacteria and pat
 - [x] They exhibit antimicrobial properties, preventing bacterial growth
 
 Q8: How do nanomaterials in food packaging contribute to reducing food waste?
-- [x]  They enhance food preservation and reduce spoilage, thus reducing food waste
+- [x] They enhance food preservation and reduce spoilage, thus reducing food waste
 - [ ] They increase food waste
 - [ ] They have no impact on food waste
 
@@ -860,7 +860,7 @@ Q1:  Which of the following is a common active feature in biobased packaging?
 
 Q2: How does oxygen scavenging in active biobased packaging benefit food products?
 - [x] Extends the shelf life by reducing oxygen exposure
-- [ ]  Increases oxygen content in the package
+- [ ] Increases oxygen content in the package
 - [ ] Enhances the flavor of the food
 - [ ] Causes food spoilage
 
@@ -877,28 +877,28 @@ Q4: In which industry is active biobased packaging gaining significant attention
 - [ ] Electronics
 
 Q5: How does active biobased packaging contribute to reducing food waste?
-- [ ]  By increasing spoilage
-- [ ]  By making packaging materials harder to recycle
+- [ ] By increasing spoilage
+- [ ] By making packaging materials harder to recycle
 - [x] By preventing microbial growth and extending shelf life
-- [ ]  By adding unnecessary weight to the packaging
+- [ ] By adding unnecessary weight to the packaging
 
 Q6: What is active packaging?
 - [ ] Packaging that remains static
 - [x] Packaging with interactive features
-- [ ]  Packaging for heavy-duty items
+- [ ] Packaging for heavy-duty items
 - [ ] Packaging made from non-renewable materials
 
 Q7: Which environmental benefit is associated with active packaging?
-- [ ]  Increased waste generation
-- [ ]  Enhanced recyclability
+- [ ] Increased waste generation
+- [ ] Enhanced recyclability
 - [x] Reduced use of renewable resources
 - [ ] Higher dependence on fossil fuels
 
 Q8: Which type of active packaging is designed to control and adjust the internal atmosphere of the package?
-- [ ]  Release films
-- [ ]  Barrier coatings
-- [ ]  Moisture absorbers
-- [x]  Modified atmosphere packaging (MAP)
+- [ ] Release films
+- [ ] Barrier coatings
+- [ ] Moisture absorbers
+- [x] Modified atmosphere packaging (MAP)
 
 canBeSentByEmail:true
 `;
@@ -945,10 +945,10 @@ Q6: What is the purpose of sorting glass waste by color before recycling?
 
 Q7: At what temperature range is glass typically melted in the furnace during recycling?
 
-- [ ] 200 - 650 degrees C
-- [ ] 850 - 1000 degrees C
-- [x] 1,300 - 1,650 degrees C
-- [ ] 2,100 - 2,400 degrees C
+- [ ] Choice A: 200 - 650 degrees C
+- [ ] Choice B: 850 - 1000 degrees C
+- [x] Choice C: 1,300 - 1,650 degrees C
+- [ ] Choice D: 2,100 - 2,400 degrees C
 
 Q8: The annealing process is used to strengthen the glass by adding reinforcing materials. True or false?
 
@@ -1090,10 +1090,10 @@ Q7: Which are key concerns associated with the use of aluminum in reusable appli
 
 Q8: In total, how many food contact chemicals are known to be potentially present in and/or detected across all types of food contact materials?
 
-- [ ] 279
-- [ ] 6405
-- [x] 13,233
-- [ ] 62,864
+- [ ] Choice A: 279
+- [ ] Choice B: 6405
+- [x] Choice C: 13,233
+- [ ] Choice D: 62,864
 
 Q9: Of the food contact material types shown below, which four can contain the highest numbers of identified food contact chemicals of concern?
 
@@ -1160,7 +1160,7 @@ Q5: Which of the following items is a packaging constituent?
 - [x] The colorant in the plastic of a white yoghurt cup
 - [ ] The Aluminum lid on a tray for soft cheese
 
-Q6: Which of the following items is a packaging constituent?
+Q6: What do you do if a product with a use-by date seems to be prematurely degraded or if its date has been expired? 
 
 - [x] Hand it back to the shop before the “use-by” date
 - [ ] Eat it if it does not have a negative odor
@@ -1301,10 +1301,10 @@ Q1. What is the final target of the European Green Deal?
 - [x] Reusing packaging/containers so that no waste is generated anymore
 
 Q2. What is the irreducible rate of plastic waste not collected and lost in the environment?
-- [ ] 20%
-- [ ] 10%
-- [ ] 5%
-- [x] 3%
+- [ ] Choice A: 20%
+- [ ] Choice B: 10%
+- [ ] Choice C: 5%
+- [x] Choice D: 3%
 
 Q3. Pick regulations controlling the safety of recycled papers for food contact.
 - [ ] Packaging, Packaging Waste Regulation
@@ -1347,14 +1347,14 @@ Q7. List mechanisms responsible for the contamination of recycled feedstocks.
 - [x] Contamination through the gas phase
 
 Q8. Amount of cosmetic packaging tolerated in mechanical recycling of plastics for food contact.
-- [ ] 50%
-- [ ] 30%
-- [ ] 20%
-- [ ] 10%
-- [x] 5%
-- [ ] 2%
-- [ ] 1%
-- [ ] 0%
+- [ ] Choice A: 50%
+- [ ] Choice B: 30%
+- [ ] Choice C: 20%
+- [ ] Choice D: 10%
+- [x] Choice E: 5%
+- [ ] Choice F: 2%
+- [ ] Choice G: 1%
+- [ ] Choice H: 0%
 
 Q9. List of toxicological endpoints that are compulsory in safety assessment.
 - [x] Cancers
@@ -1369,23 +1369,23 @@ Q10. Can recycled plastic safe for adults be considered safe for infants and tod
 - [x] No
 
 Q11. What is the threshold of toxicological concern for genotoxic substances?
-- [ ] 0.0025 mg/kg body weight/day
-- [x] 0.0025 µg/kg body weight/day
-- [ ] 0.0025 ng/kg body weight/day
+- [ ] Choice A: 0.0025 mg/kg body weight/day
+- [x] Choice B: 0.0025 µg/kg body weight/day
+- [ ] Choice C: 0.0025 ng/kg body weight/day
 
 Q12. What is the maximum concentration amount currently applied in PET feedstocks for genotoxic substances before decontamination?
-- [ ] 300 mg/kg plastics
-- [ ] 30 mg/kg plastics 
-- [x] 3 mg/kg plastics
-- [ ] 0.3 mg/kg plastics
+- [ ] Choice A: 300 mg/kg plastics
+- [ ] Choice B: 30 mg/kg plastics 
+- [x] Choice C: 3 mg/kg plastics
+- [ ] Choice D: 0.3 mg/kg plastics
 
 Q13. What is the minimum plastics recycled rate in PET bottles required in Europe by 2030 according to the new regulation PPWR?
-- [ ] 80%
-- [ ] 70%
-- [ ] 50%
-- [x] 30%
-- [ ] 20%
-- [ ] 10%
+- [ ] Choice A: 80%
+- [ ] Choice B: 70%
+- [ ] Choice C: 50%
+- [x] Choice D: 30%
+- [ ] Choice E: 20%
+- [ ] Choice F: 10%
 
 Q14. Recycled plastics for food contact are:
 - [ ] Cheaper than virgin ones
@@ -1470,7 +1470,7 @@ Q5: Which kind of packaging barrier properties are required for MAP of fresh pro
 - [ ] Absolute barrier to oxygen 
 - [ ] Absolute barrier to carbon dioxide
 - [ ] Absolute barrier to moisture
-- [x]  Different gas barrier
+- [x] Different gas barrier
 
 Q6: On which parameters MAP dynamics depends on?
 
@@ -1512,20 +1512,12 @@ Q4. Fickian diffusion through packaging polymer matrix is the main mechanism by 
 - [x] True
 - [ ] False
 
-Q5. No question -
-
-- [ ] Diffusivity
-- [x] Concentration gradient
-- [ ] Mass flow
-- [ ] Thickness
-- [ ] Chemical potential
-
-Q6. Fickian behavior refers to the diffusion process in polymer where the permeant concentration is?
+Q5. Fickian behavior refers to the diffusion process in polymer where the permeant concentration is?
 
 - [x] Non concentration dependent diffusion coefficient
 - [ ] Concentration dependent diffusion coefficient
 
-Q7. Which molecules can permeate through food packaging? (multiple choice)
+Q6. Which molecules can permeate through food packaging? (multiple choice)
 
 - [x] O2
 - [x] CO2
@@ -1534,20 +1526,20 @@ Q7. Which molecules can permeate through food packaging? (multiple choice)
 - [x] Aroma compounds
 
 
-Q8. What are the characteristics of the permeant that influence the permeability phenomenon the most?
+Q7. What are the characteristics of the permeant that influence the permeability phenomenon the most?
 
 - [x] Molecular size for diffusivity and chemical affinity to the polymer matrix for solubility
 - [ ] Molecular size for solubility and chemical affinity to the polymer matrix for diffusivity
 
 
-Q9.  Carbon dioxide (CO2) permeability value is usually 3-7 times higher than oxygen permeability: why?
+Q8.  Carbon dioxide (CO2) permeability value is usually 3-7 times higher than oxygen permeability: why?
 
 - [x] Lower diffusion coefficient of CO2 than O2 but higher solubility of CO2 than O2
 - [ ] Lower diffusion coefficient of O2 than CO2 but higher solubility of O2 than CO2
 - [ ] Both diffusion coefficient and solubility coefficient of CO2 higher than O2
 
 
-Q10. In which materials do permeability phenomenon occurs during food storage? (multiple choice)
+Q9. In which materials do permeability phenomenon occurs during food storage? (multiple choice)
 
 - [ ] Glass
 - [ ] Metal
@@ -1557,12 +1549,12 @@ Q10. In which materials do permeability phenomenon occurs during food storage? (
 - [x] Wood
 
 
-Q11.  Contrary to permanent gases, vapor refers to low-boiling-point molecules that are non-condensable and exist only in the gaseous state at ambient temperature and atmospheric pressure
+Q10.  Contrary to permanent gases, vapor refers to low-boiling-point molecules that are non-condensable and exist only in the gaseous state at ambient temperature and atmospheric pressure
 
 - [ ] True
 - [x] False
 
-Q12.  Permeation phenomenon is affected by (multiple choice)
+Q11.  Permeation phenomenon is affected by (multiple choice)
 
 - [x] Nature of polymer matrix
 - [x] Nature of permeant
@@ -1570,37 +1562,37 @@ Q12.  Permeation phenomenon is affected by (multiple choice)
 - [x] Porosity
 
 
-Q13.  Is the permeability of non-polar packaging polymers affected by water vapor?
+Q12.  Is the permeability of non-polar packaging polymers affected by water vapor?
 
 - [ ] Yes
 - [x] No
 
 
-Q14. Is the permeability phenomenon affected by the glass transition temperature of the polymer?
+Q13. Is the permeability phenomenon affected by the glass transition temperature of the polymer?
 
 - [x] Yes
 - [ ] No
 
-Q15. Permeability value is higher for an amorphous material than for the same crystalline material having identical thickness
+Q14. Permeability value is higher for an amorphous material than for the same crystalline material having identical thickness
 
 - [x] Yes
 - [ ] No
 
 
-Q16. If you add fillers or plasticizers in a polymer matrix, the permeability
+Q15. If you add fillers or plasticizers in a polymer matrix, the permeability
 
 - [ ] Does not change
 - [x] Increases
 - [ ] Decreases
 
 
-Q17. In a multilayer film, the total resistance to mass transfer is equal to the sum of permeance values of each individual layer
+Q16. In a multilayer film, the total resistance to mass transfer is equal to the sum of permeance values of each individual layer
 
 - [ ] Yes
 - [x] No
 
 
-Q18. In order to convert transmission rate (TR) in permeability: which operations do I have to perform?
+Q17. In order to convert transmission rate (TR) in permeability: which operations do I have to perform?
 
 - [ ] Divide by pressure difference and thickness
 - [x] Divide by pressure difference and multiply by thickness
@@ -1608,7 +1600,7 @@ Q18. In order to convert transmission rate (TR) in permeability: which operation
 - [ ] Multiply by both thickness and pressure
 
 
-Q19. When measuring gas permeation, what is the driving force for gas transfer through packaging?
+Q18. When measuring gas permeation, what is the driving force for gas transfer through packaging?
 
 - [x] Partial pressure difference
 - [ ] Total pressure difference
@@ -1945,9 +1937,9 @@ Q3. Which of the following aspects do reuse systems need to operate most effecti
 
 Q4.  Approximately how many different chemicals are recorded to have been used intentionally in the manufacture of all types of food contact materials?
 
-- [ ] 500
-- [ ] 3,000
-- [x] 16,000
+- [ ] Choice A: 500
+- [ ] Choice B: 3,000
+- [x] Choice C: 16,000
 
 canBeSentByEmail:true
 `;
@@ -2744,11 +2736,99 @@ Q17: Which types of migration process exists?
 - [ ] Specific migration
 - [x] All above
 
-Q18: Which types of migration experiment can be used?
+Q18: Which types of migration experiment can be used? (Multiple answers may be correct)
 
 - [x] Migration cells
 - [ ] Thickness measuring
 - [x] Immersing strips
+
+canBeSentByEmail: true
+`;
+
+var foodPackagingInteractions = `
+Q1: What is flavour scalping in food packaging?
+
+- [ ] Flavour removal by washing
+- [x] Flavour adsorption by packaging material
+- [ ] Flavour addition to packaging material
+
+Q2: Which factors have a deteriorative effect of light? (Multiple answers may be correct)
+
+- [x] Intensity of light
+- [x] Duration of exposure
+- [x] Light transmittance of packaging materials
+
+Q3: Which packaging material is an effective barrier against light?
+
+- [x] Metal
+- [ ] White glass
+- [ ] Plastic
+
+Q4: What is corrosion?
+
+- [x] Chemical process of material loss
+- [x] Electrochemical process of material loss
+- [x] Natural process of metal conversion into oxide form
+
+Q5: Which factors act as corrosion accelerators?
+
+- [x] Acids
+- [x] Nitrates
+- [x] Phosphates
+
+Q6: Which metals can be dissolved from tinplate cans in contact with food?
+
+- [ ] Tin and aluminium
+- [ ] Aluminium and iron
+- [x] Tin and iron
+
+Q7: Which compounds are responsible for sulphur staining in tinplate cans?
+
+- [ ] Tin and Iron
+- [x] Iron and Sulphur
+- [ ] Sulphur and hydrogen
+
+Q8: Why are cans lacquered? (Multiple answers may be correct)
+
+- [x] To prevent corrosion
+- [x] To prevent sulphide staining
+- [ ] To increase sales
+
+Q9: Which problems can be associated with lacquered cans? (Multiple answers may be correct)
+
+- [x] Flavour loss
+- [x] Colour loss
+- [x] Adhesion
+
+Q10: What is a definition of global migration in food packaging?
+
+- [ ] Transport of packaging materials into warehouse
+- [x] Transfer of chemicals from packaging material into food
+- [ ] Transport of food into packaging material
+
+Q11: What is a definition of specific migration?
+
+- [ ] Transport of specific materials into warehouse
+- [ ] Transport of specific food into packaging material
+- [x] Transfer of specific substance from packaging material into food
+
+Q12: Select food simulants!
+
+- [ ] Ethanol and methanol
+- [ ] Ethanol and propanol
+- [x] Ethanol and acetic acid
+
+Q13: Select conditions for migration testing!
+
+- [ ] Time
+- [ ] Temperature
+- [x] Time and temperature
+
+Q14: Which substances can migrate from plastics? (Multiple answers may be correct)
+
+- [x] Monomers
+- [x] Additives
+- [x] Residual solvents
 
 canBeSentByEmail: true
 `;

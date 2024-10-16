@@ -15,16 +15,16 @@
 
 
 
-    "Packaging properties/Thermal, mechanical and barrier properties/thermal-properties",
-    "Packaging properties/Thermal, mechanical and barrier properties/mechanical-properties",
-    "Packaging properties/Thermal, mechanical and barrier properties/optical-properties",
-    "Packaging properties/Thermal, mechanical and barrier properties/surface-properties",
-    "Packaging properties/Thermal, mechanical and barrier properties/mass-transfer-properties",
-    "Packaging properties/advanced-principles-of-mass-transfer-in-food-packaging",
-    "Packaging properties/from-ideal-laminates-to-materials",
-    "Packaging properties/diffusion-and-solubility-at-molecular-scale",
-    "Packaging properties/measurement-and-modeling",
-    "Packaging properties/the-basics-of-mechanical-engineering-for-packaging-designer",
+    "Packaging material properties/Thermal, mechanical and barrier properties/thermal-properties",
+    "Packaging material properties/Thermal, mechanical and barrier properties/mechanical-properties",
+    "Packaging material properties/Thermal, mechanical and barrier properties/optical-properties",
+    "Packaging material properties/Thermal, mechanical and barrier properties/surface-properties",
+    "Packaging material properties/Thermal, mechanical and barrier properties/mass-transfer-properties",
+    "Packaging material properties/advanced-principles-of-mass-transfer-in-food-packaging",
+    "Packaging material properties/from-ideal-laminates-to-materials",
+    "Packaging material properties/diffusion-and-solubility-at-molecular-scale",
+    "Packaging material properties/measurement-and-modeling",
+    "Packaging material properties/the-basics-of-mechanical-engineering-for-packaging-designer",
 
 
 
@@ -39,24 +39,24 @@
     "Packaging processes/vacuum-and-modified-atmosphere-packaging",
     "Packaging processes/Packaging line/optimization",
 
-    "Shelf-life/shelf-life-definition",
-    "Shelf-life/introduction-to-preservation-and-packaging-technologies",
-    "Shelf-life/modified-atmosphere-packaging",
-    "Shelf-life/food-packaging-interactions",
-    "Shelf-life/factors-affecting-shelf-life",
-    "Shelf-life/physico-chemical-factors-affecting-food-stability",
-    "Shelf-life/study-shelf-life",
-    "Shelf-life/microbiological-assessment-of-food-and-packaging",
-    "Shelf-life/sensory-science",
-    "Shelf-life/predict-shelf-life",
+    "Packaging and food shelf-life/shelf-life-definition",
+    "Packaging and food shelf-life/introduction-to-preservation-and-packaging-technologies",
+    "Packaging and food shelf-life/modified-atmosphere-packaging",
+    "Packaging and food shelf-life/food-packaging-interactions",
+    "Packaging and food shelf-life/factors-affecting-shelf-life",
+    "Packaging and food shelf-life/physico-chemical-factors-affecting-food-stability",
+    "Packaging and food shelf-life/study-shelf-life",
+    "Packaging and food shelf-life/microbiological-assessment-of-food-and-packaging",
+    "Packaging and food shelf-life/sensory-science",
+    "Packaging and food shelf-life/predict-shelf-life",
 
 
-    "Innovations/biobased-and-biodegradable-materials",
-    "Innovations/bacterial-polyesters",
-    "Innovations/advanced-cellulosic-materials-for-food-packaging",
-    "Innovations/active-packaging",
-    "Innovations/smart-packaging",
-    "Innovations/nanotechnology-strategies",
+    "Innovative food packaging/bioplastics",
+    "Innovative food packaging/bacterial-polyesters",
+    "Innovative food packaging/advanced-cellulosic-materials-for-food-packaging",
+    "Innovative food packaging/active-packaging",
+    "Innovative food packaging/smart-packaging",
+    "Innovative food packaging/nanotechnology-strategies",
 
 
     "Ecodesign tools and technologies/Sustainability and packaging/sustainability-and-packaging",
@@ -70,8 +70,8 @@
     "Ecodesign tools and technologies/safety-assessment-of-recycling-processes",
     "Ecodesign tools and technologies/glass-food-contact-material-recycling",
     "Ecodesign tools and technologies/metal-food-contact-material-recycling",
-    "Ecodesign tools and technologies/Biodegradation and microplastics/biodegradability-and-biobased-carbon-content",
-    "Ecodesign tools and technologies/Biodegradation and microplastics/microplastics",
+    "Ecodesign tools and technologies/microplastics",
+    "Ecodesign tools and technologies/biodegradability-and-biobased-carbon-content",
 
 
 

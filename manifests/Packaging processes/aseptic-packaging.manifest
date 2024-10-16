@@ -4,11 +4,11 @@
   "level": "",
   "section": "",
   "unit": "",
-  "difficultyLevel": "Novice",
+  "difficultyLevel": "Intermediate",
   "part": "part1",
   "author": "Horst-Christian Langowski",
   "institution": "FHG",
-  "abstract": "Aseptic packaging",
+  "abstract": "In contrast to sterilization of already packed food in its closed package, aseptic packaging combines separately sterilized food with a sterilized packaging in a sterile compartment of the machine with the help of sterile equipment. To help understand the context, the thermal processes of pasteurization and sterilization are defined and their properties are explained. \nThe role of the food in its required degree of sterility and especially the dependence on its pH value are elucidated. Another part of the lecture is the separate sterilization of food containers and of packaging components. In most cases, heat and chemical disinfectants like H2O2 are used for this purpose. Another part of an aseptic processing line are clean rooms as the sterile compartment in which filling and closing take place. Their classification and their layout are explained. Testing and validation of aseptic packaging lines are also covered. Finally, different types of aseptic packaging lines are presented.",
   "topic": [
     "Aseptic",
     "packaging"

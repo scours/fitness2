@@ -5,7 +5,7 @@
  * File Created: Friday, 13th September 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Tuesday, 24th September 2024
+ * Last Modified: Tuesday, 15th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -33,22 +33,22 @@ const lecturesData = [
   {
     id: "activePackaging",
     name: "Overview and principles",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovations/active-packaging",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovative%20food%20packaging/active-packaging",
   },
   {
     id: "cellulose",
     name: "Advanced cellulosic materials for food packaging",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovations/advanced-cellulosic-materials-for-food-packaging",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovative%20food%20packaging/advanced-cellulosic-materials-for-food-packaging",
   },
   {
     id: "bacterialPolyester",
     name: "Bacterial Polyesters",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovations/bacterial-polyesters",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovative%20food%20packaging/bacterial-polyesters",
   },
   {
     id: "materialBioBased",
     name: "Overview",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovations/biobased-and-biodegradable-materials",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovative%20food%20packaging/bioplastics",
   },
   {
     id: "modifiedAtmospherePackaging",
@@ -58,12 +58,12 @@ const lecturesData = [
   {
     id: "nanomaterials",
     name: "Definitions, nano-scale additives, examples of gains and applications.",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovations/nanotechnology-strategies",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovative%20food%20packaging/nanotechnology-strategies",
   },
   {
     id: "smartPackaging",
     name: "From principles to commercially available intelligent packaging systems",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovations/smart-packaging",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Innovative%20food%20packaging/smart-packaging",
   },
   {
     id: "regulatoryFramework",
@@ -83,7 +83,7 @@ const lecturesData = [
   {
     id: "sensoryScience",
     name: "Sensory science",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Shelf-life/sensory-science",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20and%20food%20shelf-life/sensory-science",
   },
   {
     id: "materialBioBased",
@@ -138,26 +138,26 @@ const lecturesData = [
   {
     id: "massTransferProperties",
     name: "Mass transfer properties: methods and standards",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20properties/mass-transfer-properties",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20material%20properties/mass-transfer-properties",
   },
   {
     id: "mechanicalProperties",
     name: "Mechanical properties: methods and standards",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20properties/mechanical-properties",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20material%20properties/mechanical-properties",
   },
   {
     id: "thermalProperties",
     name: "Thermal properties: methods and standards",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20properties/thermal-properties",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20material%20properties/thermal-properties",
   },
   {
     id: "microbiologicalAssessmentOfFoodAndPackaging",
     name: "Microbiological assessment of food and packaging",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Shelf-life/microbiological-assessment-of-food-and-packaging",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20and%20food%20shelf-life/microbiological-assessment-of-food-and-packaging",
   },
   {
     id: "shelfLifeStudy",
     name: "Defining shelf life",
-    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Shelf-life/study-shelf-life",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20and%20food%20shelf-life/study-shelf-life",
   },
 ];

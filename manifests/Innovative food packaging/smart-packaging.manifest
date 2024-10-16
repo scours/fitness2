@@ -1,6 +1,6 @@
 {
   "idx": 31,
-  "title": "Smart packaging",
+  "title": "Intelligent packaging",
   "level": "common",
   "section": "S4",
   "unit": "U4.3",
@@ -8,7 +8,7 @@
   "part": "part1",
   "author": "Maria José Fabra",
   "institution": "CSIC",
-  "abstract": "Smart packaging concepts bring intelligent functions to the packaging  (detecting, sensing, recording, tracing, communicating, applying some mathematical logic) (please read §1 before). Content: overview, indicators, RFID, sensors, commercially available intelligent packaging systems - level intermediate",
+  "abstract": "Intelligent packaging concepts bring intelligent functions to the packaging  (detecting, sensing, recording, tracing, communicating, applying some mathematical logic). Content: overview, indicators, RFID, sensors, commercially available intelligent packaging systems.",
   "topic": [
     "RFID",
     "smart",
