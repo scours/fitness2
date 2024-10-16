@@ -6,7 +6,10 @@
   "unit": "U1.3",
   "difficultyLevel": "Novice",
   "part": "part1",
-  "author": "Catherine Loriot",
+  "author": [
+    "Patrick Sauvegrain",
+    "Catherine Loriot"
+  ],
   "institution": "LNE",
   "abstract": "Basic legal framework (chemicals, contact material, environment, consumer safety). Food packaging must comply with several obligations and legislations on chemicals, contact material, environment, consumer safety. - level basic",
   "topic": [
@@ -24,5 +27,5 @@
     "safety",
     "substances"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.3/part1.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.3/part1.html#/1"
 }

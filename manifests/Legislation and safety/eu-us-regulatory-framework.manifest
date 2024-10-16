@@ -6,9 +6,13 @@
   "unit": "U3.1",
   "difficultyLevel": "Intermediate",
   "part": "part1",
-  "author": "Catherine Loriot",
+  "author": [
+    "Patrick Sauvegrain",
+    "Catherine Loriot",
+    "Jean-Mario Julien"
+  ],
   "institution": "LNE",
-  "abstract": "Since 1976, the regulation of food contact materials, including food packaging, is managed at the European level. However, not all of 17 groups of materials benefit from harmonized regulations. This lecture provides an overview of applicable regulations and of their principles. They obey to the same aim protecting consumers.    - level intermediate*",
+  "abstract": "Since 1976, the regulation of food contact materials, including food packaging, is managed at the European level. However, not all of 17 groups of materials benefit from harmonized regulations. This lecture provides an overview of applicable regulations and of their principles. They obey to the same aim protecting consumers.",
   "topic": [
     "materials",
     "regulation",
@@ -34,7 +38,7 @@
     "substances",
     "unit"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S3/U3.1/part1.html#/2",
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/LNE/regulatory-framework-in-the-EU-and-the-US.html#/1",
   "qAndAVariables":["Access the assessment = https://fitness.agroparistech.fr/fitness2/online/LNE/assessments/regulatory-context-EU-and-US/index.html"]
 
 }
