@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 1st October 2024
+ * Last Modified: Thursday, 17th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -52,6 +52,18 @@ class Footer extends HTMLElement {
                         </p>
                     </li>
                 </ul>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <p class="nav-link p-0 text-muted">
+                            Project coordinator (Actia)<br /><a href="mailto:g.cornuau@actia-asso.eu"
+                                title="contact the Coordinator">&#128232;
+                                <small>g.cornuau@actia-asso.eu</small></a><br /><a
+                                href="mailto:g.cornuau@actia-asso.eu"
+                                </a>
+                        </p>
+                    </li>
+                </ul>
             </div>
 
             <div class="col mb-3">
@@ -75,6 +87,11 @@ class Footer extends HTMLElement {
                             title="The data are modified only after review.">Manifest
                             editor</a>
                     </li>
+                    <li class="nav-item mb-2"><a
+                    href="https://www.fitness-foodpackaging.com/legalnotice"
+                    class="nav-link p-0 text-muted" target="_blank" title="Legal notice">
+                    Legal notice</a></li>
+                    
                 </ul>
             </div>
 

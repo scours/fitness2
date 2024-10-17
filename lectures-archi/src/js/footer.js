@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Tuesday, 1st October 2024
+ * Last Modified: Thursday, 17th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -16,8 +16,8 @@ class Footer extends HTMLElement {
         <div class="container">
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
             <div class="col mb-3">
-                <img src="../Fitness2_logo.PNG" class="rounded mx-auto d-block" alt="" width="90%" height="auto">
-                <img src="../img/Erasmus-Logo-sans-fond-1-uai-1032x212.png" class="rounded mx-auto d-block" alt=""
+                <img src="Fitness2_logo.PNG" class="rounded mx-auto d-block" alt="" width="90%" height="auto">
+                <img src="Erasmus-Logo-sans-fond-1-uai-1032x212.png" class="rounded mx-auto d-block" alt=""
                     width="90%" height="auto">
                 <p class="nav-link p-0 text-muted"> FITNESS 2 is funded by the European Union's ERASMUS programme
                     (contract
@@ -38,7 +38,7 @@ class Footer extends HTMLElement {
             </div>
 
             <div class="col mb-3">
-                <h5 class="txt-orange-fitness">Contact</h5>
+                <h5 class="txt-orange-fitness">Contacts</h5>
 
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
@@ -49,6 +49,18 @@ class Footer extends HTMLElement {
                                 href="mailto:olivier.vitrac@agroparistech.fr"
                                 title="contact the Administrator">&#128222;
                                 <small>+33 (0)1 89 10 11 85</small></a>
+                        </p>
+                    </li>
+                </ul>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <p class="nav-link p-0 text-muted">
+                            Project coordinator (Actia)<br /><a href="mailto:g.cornuau@actia-asso.eu"
+                                title="contact the Coordinator">&#128232;
+                                <small>g.cornuau@actia-asso.eu</small></a><br /><a
+                                href="mailto:g.cornuau@actia-asso.eu"
+                                </a>
                         </p>
                     </li>
                 </ul>
@@ -75,6 +87,11 @@ class Footer extends HTMLElement {
                             title="The data are modified only after review.">Manifest
                             editor</a>
                     </li>
+                     <li class="nav-item mb-2"><a
+                    href="https://www.fitness-foodpackaging.com/legalnotice"
+                    class="nav-link p-0 text-muted" target="_blank" title="Legal notice">
+                    Legal notice</a></li>
+                    
                 </ul>
             </div>
 

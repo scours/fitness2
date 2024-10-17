@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 3rd December 2020
 Authors: Steward OUADI, Olivier Vitrac
 -----
-Last Modified: Tuesday, 1st October 2024
+Last Modified: Thursday, 17th October 2024
 Modified By: Steward OUADI
 -----
 $2020-12-20$ make local modifyLectures/index.html (note that index.html is required to have the application working)
@@ -197,11 +197,55 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
     .card-text button:hover {
       background-color: #d95700;
     }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      /* This centers the div */
+      align-items: center;
+      margin-bottom: 10px;
+      /* Adjust for spacing between logos and heading */
+      padding: 0 20px;
+      /* Add left and right padding to center the logos */
+    }
+
+    .logo {
+      max-width: 100px;
+      /* Adjust the size of the logos */
+      height: auto;
+      /* Keeps the aspect ratio */
+      margin: 0 20px;
+      /* Adds space between the two logos */
+    }
+
+    .left-logo {
+      margin-right: 10px;
+      /* Optional: adjust space between left logo and the heading */
+    }
+
+    .right-logo {
+      margin-left: 10px;
+      /* Optional: adjust space between right logo and the heading */
+    }
+
+    @media screen and (max-width: 600px) {
+      .logo {
+        max-width: 80px;
+        /* Adjust the size for smaller screens */
+        margin: 0 10px;
+        /* Reduce space between logos for smaller screens */
+      }
+    }
   </style>
 </head>
 
 <body class="center-text">
   <main-header></main-header>
+
+  <div class="logo-container">
+    <img src="src/Fitness2_logo-no-background.png" alt="FITNESS 2 Logo" class="logo left-logo">
+    <img src="src/coordinator-actia-logo-no-background.png" alt="ACTIA Logo" class="logo right-logo">
+  </div>
 
   <!-- Section: Title -->
   <h1 class="main-heading">Access free lectures on food packaging</h1>
@@ -467,11 +511,11 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
     </div>
   </section>
   <p class="info-text">
-    Disclaimer: the lectures and interactive content provided on this platform are offered "as is". While every effort
-    is made to
-    ensure
-    accuracy and relevance, the material may contain inconsistencies or inaccuracies. Users are encouraged to verify
-    information independently and apply their own judgment when using the content.
+    Disclaimer: The lectures and interactive content provided on this platform are offered "as is". While every effort
+    is made to ensure accuracy and relevance, the material may contain inconsistencies or inaccuracies. Users are
+    encouraged to verify information independently and apply their own judgment when using the content. This platform
+    reflects the views only of the author, and the Commission cannot be held responsible for any use which may be made
+    of the information contained therein.
   </p>
 
 

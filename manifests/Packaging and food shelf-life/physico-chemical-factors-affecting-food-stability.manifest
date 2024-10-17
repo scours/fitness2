@@ -30,5 +30,6 @@
     "transport",
     "water"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.1/part1.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S3/U3.1/part1.html#/2",
+  "qAndAVariables":["Access the assessment = physicoChemicalFactorsFoodStability"]
 }

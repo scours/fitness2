@@ -2832,3 +2832,193 @@ Q14: Which substances can migrate from plastics? (Multiple answers may be correc
 
 canBeSentByEmail: true
 `;
+
+var plasticsRecycling = `
+Q1: Substitution of plastic packaging is particularly easy with glass and metal packaging because their functionality is retained or is even better. This substitution works without additional environmental burdens.
+
+- [ ] True
+- [x] False
+
+Q2: Plastic laminates (multi-layer structures) are just as recyclable as single-layer films.
+
+- [ ] True
+- [x] False
+
+Q3: Paper multilayer laminates with plastic layers are more difficult to recycle than simple paper packaging and generate more waste in the process. However, in comparison to simple paper, they result in products with a longer shelf life.
+
+- [x] True
+- [ ] False
+
+Q4: In Europe, on average, the majority of used plastic packaging is incinerated or landfilled.
+
+- [x] True
+- [ ] False
+
+Q5: Chemical recycling processes... (Multiple answers may be correct)
+
+- [x] ...generally require more process energy than mechanical recycling processes.
+- [ ] ...lead to the same intermediate products as mechanical processes.
+- [x] ...break the polymer chains into smaller molecules.
+- [ ] ...always result in plastics that are inferior to the virgin material.
+
+Q6: Input processes that happen before the actual mechanical recycling... (Multiple answers may be correct)
+
+- [x] ...serve to separate different polymers.
+- [ ] ...have no influence on possible contamination of the recyclates.
+- [x] ...can change the shape of the plastic items.
+- [ ] ...do not distinguish between the original forms of the packaging.
+
+Q7: The extrusion processes in mechanical recycling... (Multiple answers may be correct)
+
+- [ ] ...always treat the materials below their melting temperature.
+- [x] ...remove the contaminating molecules via their gas phase.
+- [x] ...produce plastic granulates.
+- [ ] ...can process different types of mixed plastics together.
+
+Q8: Multilayer composites... (Multiple answers may be correct)
+
+- [ ] ...can be processed and recycled by melting without further treatment.
+- [x] ...are often used to achieve long product shelf lives.
+- [ ] ...can be easily separated into their individual layers.
+- [x] ...can also contain layers that are not made of plastic.
+
+Q9: Solvent-based recycling processes... (Multiple answers may be correct)
+
+- [ ] ...do not require any prior cleaning of the plastic items.
+- [x] ...can in principle be used for most thermoplastics.
+- [x] ...should preferably be used for the main component of laminates.
+- [ ] ...can process all plastics in a mixture together.
+
+Q10: Functional barriers in plastic packaging with recyclates... (Multiple answers may be correct)
+
+- [x] ...can prevent the transport of contaminants.
+- [x] ...can prevent the transport of other substances (gases, water vapor, flavorings, ...) as well.
+- [ ] ...can only be produced with extruded barrier polymers.
+- [ ] ...are always incompatible with a further mechanical recycling process.
+
+canBeSentByEmail: true
+`;
+
+var physicoChemicalFactorsFoodStability = `
+Q1: The quality of food always reaches its maximum directly after packaging/filling and then continuously decreases.
+
+- [ ] Correct
+- [x] Not correct
+
+Q2: In some cases, the quality of food can even improve after packaging/filling.
+
+- [x] Correct
+- [ ] Not correct
+
+Q3: For similar types of food, the quality degradation always occurs at the same speed, and a shelf life limit can be reliably specified.
+
+- [ ] Correct
+- [x] Not correct
+
+Q4: The reduction in food quality depends on many factors and can occur at different rates in the same food that has been packaged in the same way.
+
+- [x] Correct
+- [ ] Not correct
+
+Q5: The most important parameter overall is the water balance of the products.
+
+- [x] Correct
+- [ ] Not correct
+
+Q6: The loss of flavorings is not relevant because packaged products always contain sufficient flavorings.
+
+- [ ] Correct
+- [x] Not correct
+
+Q7: Oxygen is harmful to all products and should therefore be excluded as far as possible.
+
+- [ ] Correct
+- [x] Not correct
+
+Q8: For certain foodstuffs, a combination of light and oxygen is particularly harmful.
+
+- [x] Correct
+- [ ] Not correct
+
+Q9: Dried foodstuffs are stable and cannot be degraded by microbiological processes.
+
+- [ ] Correct
+- [x] Not correct
+
+Q10: Products with a very high water activity close to 1 can be packed in packaging with a very high water vapor permeability, since a slight loss of water does not lead to a reduction in shelf life.
+
+- [ ] Correct
+- [x] Not correct
+
+Q11: Foods in which the water can be bound in several layers on top of each other show a non-linear increase in mass with increasing moisture.
+
+- [x] Correct
+- [ ] Not correct
+
+Q12: Foods with a high water activity close to 1 may still have a relatively low water content of, for example, 20 percent by mass.
+
+- [x] Correct
+- [ ] Not correct
+
+Q13: For some products, it is advantageous to pack them under a higher oxygen content than in the atmosphere.
+
+- [x] Correct
+- [ ] Not correct
+
+Q14: Products are particularly sensitive if they contain unsaturated fatty acids.
+
+- [x] Correct
+- [ ] Not correct
+
+Q15: Products that contain particularly pure additional ingredients in addition to their unsaturated fatty acids have a shorter shelf life than those in which metal complexes or enzymes are also present.
+
+- [ ] Correct
+- [x] Not correct
+
+Q16: Unsaturated fatty acids always develop a strong off-flavor during their first reaction step with oxygen.
+
+- [ ] Correct
+- [x] Not correct
+
+Q17: Only ultraviolet (UV) light has the energy to affect food components. It is therefore sufficient to use product packaging that is impermeable to UV light.
+
+- [ ] Correct
+- [x] Not correct
+
+Q18: Oxidation processes that start with the excitation of dyes (photo-oxidation) can be prevented by excluding oxygen.
+
+- [x] Correct
+- [ ] Not correct
+
+Q19: For autoxidation processes, it is sufficient to employ packaging materials that are impermeable to light.
+
+- [ ] Correct
+- [x] Not correct
+
+Q20: To prevent photo-oxidation processes, packaging materials should be used that are both light-impermeable and have low oxygen permeability.
+
+- [x] Correct
+- [ ] Not correct
+
+Q21: Plastic packaging is impermeable to flavors and off-flavors.
+
+- [ ] Correct
+- [x] Not correct
+
+Q22: Flavors and off-flavors can dissolve in plastics.
+
+- [x] Correct
+- [ ] Not correct
+
+Q23: The solution properties for flavors and off-flavors are very similar for all plastics.
+
+- [ ] Correct
+- [x] Not correct
+
+Q24: Significant quantities of very intense flavors can permeate plastic packaging and have an undesirable effect.
+
+- [x] Correct
+- [ ] Not correct
+
+canBeSentByEmail: true
+`;

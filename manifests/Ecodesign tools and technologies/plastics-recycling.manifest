@@ -1,0 +1,36 @@
+{
+  "idx": 522428,
+  "title": "Plastics recycling",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Intermediate",
+  "part": "part1",
+  "author": [
+    "Horst-Christian Langowski",
+    "Maximilian Wende"
+  ],
+  "institution": "FHG",
+  "abstract": "Plastics Recycling – Rationale and Technology\n\nThe European Union and the United Nations are pursuing a strategy to reduce resource consumption and waste, as well as emissions to air, soil and water. At the same time, however, food losses are also to be significantly reduced. This requires that the functionality of packaging and thus the shelf life of the products it contains be maintained. As a result, recycling of used packaging is becoming an essential element of this strategy. Recycling is often a complex process for plastic packaging, which is why this lecture will focus on its technical implications.\n\nAs a rough classification, the following methods of technical recycling exist for used plastic items: - Material recycling as a physical process, with the subgroups of mechanical recycling and solvent-based recycling, in which the macromolecules of the polymers are retained and \n- chemical recycling, with the subgroups of depolymerization, in which monomers are produced, and conversion to other small molecules, up to and including energy recovery using the resulting CO2. However, the chemical processes require a higher overall energy input and are less mature on a large scale.\n\nTherefore, this lecture only covers the material recycling processes of mechanical and solvent-based recycling. The principles and sub-steps are presented and - as a special point for its use in food packaging - the decontamination of the material along the recycling path. This point also defines the limits especially of polyolefin recycling, in contrast to recycling of PET. Thus, processes with high decontamination efficiency, such as solvent-based processes, may become more important in the future than they are today.\n\nFinally, four case studies / project examples are shown which demonstrate the ongoing research and development in this area.\n",
+  "topic": [
+    "Plastics recycling",
+    "Recycling technology",
+    "Material recycling",
+    "Mechanical recycling",
+    "Solvent-based recycling",
+    "Chemical recycling",
+    "Food packaging safety"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Recycling",
+    "Plastics",
+    "EU strategy",
+    "Decontamination",
+    "Mechanical processes",
+    "Solvent-based methods",
+    "Resource reduction"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/FHG/plastics-recycling.html#/1",
+  "qAndAVariables":["Access the assessment = plasticsRecycling"]
+}
