@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Friday, 20th September 2024
+ * Last Modified: Friday, 18th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -162,4 +162,59 @@ footer .col {
 footer .nav-link {
   padding: 0; /* Reduce padding for links */
   margin: 5px 0; /* Reduce margin between links */
+}
+
+.logo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure all logos are aligned vertically in the middle */
+  padding-left: 20px; /* Left padding */
+  padding-right: 20px; /* Right padding */
+}
+
+.logo {
+  max-width: 150px; /* Adjust the size of FITNESS 2 and Coordinator logos */
+  height: auto;
+}
+
+.logo-right {
+  display: flex; /* Make sure Coordinator, Twitter, and LinkedIn logos stay on the same line */
+  align-items: center;
+}
+
+.social-logo {
+  max-width: 35px; /* Set smaller size for Twitter and LinkedIn logos */
+  margin-left: 15px; /* Space between Coordinator and social media logos */
+  height: auto;
+}
+
+.bottom-border {
+  height: 20px;
+  background-color: #3849a6; /* Your specified color */
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Add 10px space below the bottom border */
+}
+
+/* Media Query for smaller screen sizes */
+@media screen and (max-width: 768px) {
+  .logo {
+    max-width: 100px; /* Make the main logos smaller on smaller screens */
+  }
+
+  .social-logo {
+    max-width: 25px; /* Reduce the size of social logos on smaller screens */
+    margin-left: 10px; /* Adjust the margin between the logos */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    max-width: 80px; /* Further reduce the size on very small screens */
+  }
+
+  .social-logo {
+    max-width: 20px; /* Further reduce the size of social logos */
+    margin-left: 8px;
+  }
 }
