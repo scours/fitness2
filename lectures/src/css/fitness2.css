@@ -299,6 +299,8 @@ video {
   max-width: 90%; /* Max width to prevent stretching on very wide screens */
   word-wrap: break-word; /* Allow long words to be broken and wrap onto the next line */
   overflow-wrap: break-word; /* Standard CSS property, equivalent to word-wrap */
+  padding-bottom: 100px; /* Add extra space so footer does not overlap */
+  min-height: 70vh; /* Ensures that content takes up a good part of the screen */
 }
 
 @media (max-width: 768px) {
