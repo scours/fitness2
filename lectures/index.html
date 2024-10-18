@@ -24,10 +24,9 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
   <link href="src/css/fitness.css" rel="stylesheet">
   <style>
     .main-heading {
-      font-size: 2.5em;
+      font-size: 2em;
       margin-top: 20px;
       text-align: center;
-      color: #ec6807;
       font-weight: bold;
     }
 
@@ -51,6 +50,31 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
       text-align: center;
       transition: background-color 0.3s ease;
       text-decoration: none;
+    }
+
+    .blue-background {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #3849a6;
+      /* Orange color */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2em;
+      text-align: center;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+
+
+    }
+
+    .blue-background:hover {
+      background-color: #4f6edc;
+      /* Lighter blue for hover */
+      /* Slightly different blue for hover */
+      transition: background-color 0.3s ease;
+      /* Smooth transition effect */
     }
 
     .btn-access:hover {
@@ -82,9 +106,9 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
 
     .center-text {
       text-align: center;
-      font-size: 1.3em;
+      font-size: 1.1em;
       color: #333;
-      font-weight: bold;
+      /* font-weight: bold; */
       background-color: #f7f7f7;
       /* Light background to make it stand out */
       border-radius: 8px;
@@ -236,37 +260,59 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
         /* Reduce space between logos for smaller screens */
       }
     }
+
+    .blue-text {
+      color: #3849a6;
+    }
+
+    .centered-content {
+      text-align: center;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    @media screen and (min-width: 768px) {
+      .centered-content {
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+
+    }
   </style>
 </head>
 
 <body class="center-text">
   <main-header></main-header>
 
-  <!-- Section: Title -->
-  <h1 class="main-heading">Access free lectures on food packaging</h1>
+  <!-- Section: Container with centered content -->
+  <div class="centered-content">
 
-  <!-- Visual space -->
-  <div style="height: 20px;"></div>
+    <!-- Section: Title -->
+    <h1 class="main-heading blue-text">ACCESS FREE LECTURES ON FOOD PACKAGING</h1>
 
-  <!-- Section: What FITNESS stands for -->
-  <p class="center-text">FITNESS stands for Food packaging open courseware for higher education and staff of companies
-  </p>
+    <!-- Visual space -->
+    <!-- <div style="height: 20px;"></div> -->
+
+    <!-- Section: What FITNESS stands for -->
+    <p class="center-text blue-text">FITNESS STANDS FOR FOOD PACKAGING OPEN COURSEWARE FOR HIGHER EDUCATION AND STAFF OF
+      COMPANIES</p>
+  </div>
+
 
   <!-- Visual space -->
   <div style="height: 20px;"></div>
 
   <!-- Section: Button to Access with info text -->
-  <a href="https://fitness.agroparistech.fr/fitness2/lectures/lectures.html" class="btn-access">Access Training
-    Content</a>
-  <p class="sub-heading">No account or email required</p>
+  <a href="https://fitness.agroparistech.fr/fitness2/lectures/lectures.html" class="btn-access">ACCESS TRAINING
+    CONTENT</a>
+  <p class="sub-heading blue-text">NO ACCOUNT OR EMAIL REQUIRED</p>
 
   <!-- Visual space -->
   <div style="height: 60px;"></div>
 
   <!-- Section: Button to Access About fitness text -->
-  <a href="https://www.fitness-foodpackaging.com/about-fitness" class="btn-access">About the FITNESS
-    Project</a>
-
+  <a href="https://www.fitness-foodpackaging.com/about-fitness" class="blue-background">ABOUT THE FITNESS
+    PROJECT</a>
 
   <!-- Visual space -->
   <div style="height: 20px;"></div>
@@ -274,24 +320,25 @@ $2023-05-25$ add links for the new SFPP3 and SFPP2 hosted by contact alimentaire
   <!-- Video Placeholders with Titles -->
   <div class="video-container">
     <div>
-      <h4>The FITNESS Project Explained</h4>
+      <h4 class="blue-text">THE FITNESS PROJECT EXPLAINED</h4>
       <video controls
         poster="https://fitness.agroparistech.fr/fitness2/lectures/media/video/FITNESS2_promotional_video_thumbnail.png">
         <source src="https://fitness.agroparistech.fr/fitness2/lectures/media/video/FITNESS2_promotional_video.mp4"
           type="video/mp4">
-        Your browser does not support the video tag.
+        YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG.
       </video>
     </div>
     <div>
-      <h4>How to use the platform?</h4>
+      <h4 class="blue-text">HOW TO USE THE PLATFORM?</h4>
       <video controls
         poster="https://fitness.agroparistech.fr/fitness2/lectures/media/video/FITNESS2_tutorial_video_thumbnail.png">
         <source src="https://fitness.agroparistech.fr/fitness2/lectures/media/video/FITNESS2_tutorial_video.mp4"
           type="video/mp4">
-        Your browser does not support the video tag.
+        YOUR BROWSER DOES NOT SUPPORT THE VIDEO TAG.
       </video>
     </div>
   </div>
+
 
   <section class="objective-section">
     <h2>I want to choose my pathway</h2>
