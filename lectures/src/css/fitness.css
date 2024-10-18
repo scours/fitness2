@@ -9,9 +9,45 @@
  * Modified By: Steward OUADI
  */
 
+@font-face {
+  font-family: Utility;
+  src: url("../fonts/UtilityOT.otf") format("opentype"); /* Regular */
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Utility;
+  src: url("../fonts/UtilityOT-Light.otf") format("opentype"); /* Light */
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Utility;
+  src: url("../fonts/UtilityOT-Medi.otf") format("opentype"); /* Medium */
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Utility;
+  src: url("../fonts/UtilityOT-Bold.otf") format("opentype"); /* Bold */
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Utility;
+  src: url("../fonts/UtilityOT-Black.otf") format("opentype"); /* Black */
+  font-weight: 900;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Utility, Arial, Helvetica, sans-serif;
 }
 
 .topnav {

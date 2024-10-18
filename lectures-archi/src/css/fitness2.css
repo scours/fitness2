@@ -5,12 +5,42 @@
  * File Created: Tuesday, 16th January 2024
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 23rd May 2024
+ * Last Modified: Friday, 18th October 2024
  * Modified By: Steward OUADI
  */
 
+@font-face {
+  font-family: Utility;
+  src: url("../fonts/UtilityOT.otf") format("opentype"); /* Regular */
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Utility;
+  src: url("../fonts/UtilityOT-Light.otf") format("opentype"); /* Light */
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Utility;
+  src: url("../fonts/UtilityOT-Medi.otf") format("opentype"); /* Medium */
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Utility;
+  src: url("../fonts/UtilityOT-Bold.otf") format("opentype"); /* Bold */
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Utility;
+  src: url("../fonts/UtilityOT-Black.otf") format("opentype"); /* Black */
+  font-weight: 900;
+}
+
 body {
-  font-family: "Lato", sans-serif;
+  font-family: Utility, "Lato", sans-serif;
 }
 
 .sidebar {
