@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Thursday, 17th October 2024
+ * Last Modified: Friday, 18th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -123,25 +123,56 @@ class Footer extends HTMLElement {
                 </ul>
             </div>
 
+        <div class="col mb-3">
+            <h5 class="txt-orange-fitness">Social</h5>
+            <ul class="nav flex-column social-links">
+                <li class="nav-item mb-2">
+                    <a href="https://twitter.com/FitNESS_2_0" target="_blank" class="nav-link p-0 text-muted">
+                        <i class="fa fa-twitter social-icon" aria-hidden="true"></i> Twitter
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="https://www.linkedin.com/company/fitness-packaging/" target="_blank" class="nav-link p-0 text-muted">
+                        <i class="fa fa-linkedin social-icon" aria-hidden="true"></i> LinkedIn
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a href="https://www.youtube.com/@fitness-responsiblefoodpac7807" target="_blank" class="nav-link p-0 text-muted">
+                        <i class="fa fa-youtube-play social-icon" aria-hidden="true"></i> YouTube
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        </div>
 
         </footer>
 
-        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-
-            <ul class="list-unstyled d-flex">
-                <li class="ms-3"><a class="link-dark" href="https://www.linkedin.com/company/fitness-packaging/"><i
-                            class="fa fa-linkedin" aria-hidden="true"></i>
-                    </a></li>
-                <li class="ms-3"><a class="link-dark" href="https://twitter.com/FitNESS_2_0"><i class="fa fa-twitter"
-                            aria-hidden="true"></i>
-                    </a></li>
-                <li class="ms-3"><a class="link-dark" href="https://www.youtube.com/@fitness-responsiblefoodpac7807"><i
-                            class="fa fa-youtube-play" aria-hidden="true"></i>
-                    </a></li>
-            </ul>
-        </div>
-    </div>
     
+     <!-- Footer Section -->
+ <div class="footer-blue">
+   <div class="footer-content">
+     <!-- Left: Logo -->
+     <div class="footer-left">
+       <img src="src/european-flag.png" alt="European flag" class="footer-logo">
+     </div>
+
+     <!-- Center: Text -->
+     <div class="footer-center">
+       <p>FITNESS 2.0 HAS RECEIVED FUNDING FROM THE EUROPEAN UNION'S ERASMUS+ PROGRAM UNDER CONTRACT N°
+         2021-1-FR01-KA220-HED-000023509.</p>
+       <p>THIS WEBSITE REFLECTS THE VIEWS ONLY OF THE AUTHOR, AND THE COMMISSION CANNOT BE HELD RESPONSIBLE FOR ANY USE
+         WHICH MAY BE MADE OF THE INFORMATION CONTAINED THEREIN.</p>
+     </div>
+
+     <!-- Right: Buttons -->
+     <div class="footer-right">
+       <a href="https://www.fitness-foodpackaging.com/legalnotice" class="footer-button">LEGAL NOTICE</a>
+       <a href="https://www.fitness-foodpackaging.com/actia-and-lne" class="footer-button">CONTACTS</a>
+     </div>
+   </div>
+ </div>
+
     `;
   }
 }

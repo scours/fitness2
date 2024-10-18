@@ -254,3 +254,135 @@ footer .nav-link {
     margin-left: 8px;
   }
 }
+
+/* Blue footer background */
+.footer-blue {
+  background-color: #3849a6; /* Blue color */
+  padding: 20px 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+/* Flexbox for footer content */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* Logo on the left */
+.footer-left {
+  flex: 1;
+}
+
+.footer-logo {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Centered text */
+.footer-center {
+  flex: 2;
+  text-align: center;
+}
+
+.footer-center p {
+  margin: 5px 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Buttons on the right */
+.footer-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px; /* Space between buttons */
+}
+
+.footer-button {
+  background-color: #616acc;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-button:hover {
+  background-color: #525daa;
+  color: white;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  /* Stack the elements vertically */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    margin-bottom: 15px; /* Add space between the sections */
+  }
+
+  /* Center buttons on small screens */
+  .footer-right {
+    justify-content: center;
+  }
+
+  /* Adjust logo size for smaller screens */
+  .footer-logo {
+    max-width: 120px;
+  }
+
+  /* Adjust button size for smaller screens */
+  .footer-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further adjustments for very small screens (mobile) */
+  .footer-logo {
+    max-width: 100px;
+  }
+
+  .footer-button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+/* Styling for social section */
+.social-links {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove default padding */
+}
+
+.social-icon {
+  font-size: 1.2rem; /* Adjust icon size */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.social-links a {
+  display: flex;
+  align-items: center; /* Align text and icon vertically */
+  font-size: 1rem; /* Adjust text size */
+  color: #6c757d; /* Muted text color */
+}
+
+.social-links a:hover {
+  color: #3849a6; /* Change color on hover */
+}
+
+.social-links a i {
+  transition: color 0.3s ease; /* Smooth color transition */
+}
