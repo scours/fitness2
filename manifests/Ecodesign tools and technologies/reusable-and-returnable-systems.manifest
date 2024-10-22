@@ -1,0 +1,31 @@
+{
+  "idx": 318670,
+  "title": "Reusable and returnable systems",
+  "level": "",
+  "section": "",
+  "unit": "",
+  "difficultyLevel": "Novice",
+  "part": "part1",
+  "author": [
+    "Ilke Uysal Unalan",
+    "Justin Boucher"
+  ],
+  "institution": "U_Aarhus, FPF",
+  "abstract": "Reusable packaging is durable and designed to be used multiple times for the same purpose as initially intended. A growing interest in reusable packaging systems, such as returnable and refillable packaging is recognized as a viable approach to reduce packaging waste and overall environmental impacts compared to single use alternatives. \nHowever, transitioning from single-use to reusable packaging systems can be complex and require input from several actors including industry stakeholders, academia, consumers and policy makers to successfully implement and scale-up reuse and fully consider the influences on environmental, health, economic, social and technical aspects. This includes the possible migration of hazardous chemicals from packaging into food. This lecture introduces the fundamentals of reuse systems as well as aspects to consider within system scale up.",
+  "topic": [
+    "Reusable packaging",
+    "Packaging systems",
+    "Refillable packaging",
+    "Environmental impacts",
+    "System scale-up"
+  ],
+  "license": "BY-SA-ND",
+  "keywords": [
+    "Reuse",
+    "Migration",
+    "Stakeholders",
+    "Chemicals",
+    "Policy"
+  ],
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/U_Aarhus/reusable-and-returnable-systems.html#/1"
+}

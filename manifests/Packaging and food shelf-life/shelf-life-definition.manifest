@@ -6,7 +6,10 @@
   "unit": "U3.2",
   "difficultyLevel": "Intermediate",
   "part": "part1",
-  "author": "Thomas Karbowiak",
+  "author": [
+  "Massimiliano Gerometta",
+  "Thomas Karbowiak"
+  ],
   "institution": "Institut-Agro-Dijon",
   "abstract": "Shelf-life is a concept covering many facets in food",
   "topic": [
