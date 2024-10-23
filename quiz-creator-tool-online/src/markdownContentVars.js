@@ -3065,3 +3065,77 @@ Q6: The following statements apply to mass transfer through media that are imper
 
 canBeSentByEmail: true
 `;
+
+var sensoryScienceOverall = `
+Q1: Microbial spoilage of food depends on (Multiple answers may be correct):
+
+- [x] Type of food
+- [x] Initial level of microorganisms in food
+- [x] Storage and handling conditions
+- [x] Temperature
+
+Q2: Which is the correct term for the end of food shelf-life in Europe for microbiologically sensitive products?
+
+- [x] Use by
+- [ ] Sell by
+- [ ] Best before
+- [ ] Eat before
+
+Q3: Select sensory properties of a food product! (Multiple answers may be correct)
+
+- [x] Texture
+- [x] Taste and odour
+- [x] Color
+- [x] General appearance
+
+Q4: Which people are suitable for serving on a trained panel? (Multiple answers may be correct)
+
+- [x] Basically all persons
+- [ ] People with sensory deficits (e.g. anosmia) cannot work in a trained panel
+- [x] It depends on the product to be tested which persons can be included in the trained panel.
+- [x] One single fixed panel is not suitable for testing of all products
+
+Q5: Why is it useful to identify the associated substances in addition to the olfactory impressions of impaired foods? (Multiple answers may be correct)
+
+- [x] One can reconstruct the origin and formation mechanism of the substances
+- [x] One can identify substances that may be harmful to health
+- [ ] One can estimate the nutritional value of a foodstuff.
+- [ ] One can determine from which geographical area the food originates
+
+Q6: In an investigation in which gas chromatography is coupled with olfactometry and mass spectrometry (GC-O/MS), several different odour-active substances are detected. Which of the following statements are correct? (Multiple answers may be correct)
+
+- [ ] The mass spectrometer always allows an unambiguous identification of the substances
+- [x] In conventional mass spectrometers, fragments of the investigated substances are formed, which can therefore not be clearly identified.
+- [x] The substances produce fragment patterns in the mass spectrometer, which must be assigned with the help of reference spectra.
+- [ ] The generation of fragments is the same for all types of mass spectrometers
+
+Q7: Orange juice turns brownish when stored for a prolonged period of time and the ascorbic acid (vitamin C) it contains degrades when exposed to oxygen. Which of the following statements is correct? (Multiple answers may be correct)
+
+- [ ] As long as the vitamin C content is above the typical value, the product is still marketable, regardless of its colour.
+- [x] The vitamin C content is a directly measurable, but not sensory relevant criterion for quality preservation.
+- [ ] The vitamin C loss has no significance as long as the product is assessed as acceptable by an untrained panel in terms of its colour.
+- [x] Both criteria (vitamin C content, colour) are decisive for shelf life.
+
+Q8: A new food product is to be launched on the market and its shelf life must therefore be determined. What individual tests should be carried out for this purpose? (Multiple answers may be correct)
+
+- [x] An initial test of the freshly packaged product by a trained panel
+- [x] A hedonic entry test by a group of untrained panellists
+- [x] A shelf life study using a trained panel
+- [x] A final test after the end of the expected shelf life using an untrained panel
+
+Q9: Which sensory categories are directly relevant for the evaluation of food packaging with regard to a possible change in the typical properties of the packed food? (Multiple answers may be correct)
+
+- [x] Odour transitions
+- [ ] The haptics of the packaging
+- [ ] The appearance of the packaging
+- [x] Taste impairments
+
+Q10: Packaging materials can affect the sensory properties of food by the transfer of substances. Which of the following statements are correct? (Multiple answers may be correct)
+
+- [ ] Direct contact is absolutely necessary to transfer substances from the packaging to the food.
+- [x] Substances can be transferred by direct as well as indirect contact (via the headspace)
+- [x] In Europe, any transfer of substances from packaging to food is subject to Directive 1935 / 2004.
+- [ ] From a legal point of view, only the transfer of potentially harmful substances is relevant, but not that of sensory active substances
+
+canBeSentByEmail: true
+`;
