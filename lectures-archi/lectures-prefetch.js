@@ -5,7 +5,7 @@
  * File Created: Tuesday, 31st October 2023
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Wednesday, 16th October 2024
+ * Last Modified: Wednesday, 23rd October 2024
  * Modified By: Steward OUADI
  */
 
@@ -344,8 +344,8 @@ lecturesDetails.set(
 );
 lecturesDetails.set(
   "Legislation and safety/recycled-plastics",
-  `<h1>Recycled plastics - Regulation (EU) 2022/1616</h1><h4>Difficulty level</h4><span>Novice<i class="fa fa-star star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i><i class="fa fa-star-o star-color-green little-space"></i></span><h4>Topics</h4><p>Recycled plastics regulation,EU regulation,Regulatory context,Plastic recycling measures,Member state compliance,Material safety,Legislative updates</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Specific measures for recycled plastics Regulation (EU) No 2022/1616 repealing Regulation (EC) No 282/2008.
-Regulatory context EU and member states </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/LNE/recycled-plastics.html#/1" id="lecture-button-recycled-plastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/online/LNE/assessments/regulatory-context-EU-and-US/index.html" target="_blank">Access the assessment</a></p><h4>Authors</h4><ul><li>Catherine Loriot</li><li>Jean-Mario Julien</li></ul>`
+  `<h1>Recycled plastics - Regulation (EU) 2022/1616</h1><h4>Difficulty level</h4><span>Intermediate<i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star star-color-yellow little-space"></i><i class="fa fa-star-o star-color-yellow little-space"></i></span><h4>Topics</h4><p>Recycled plastics regulation,EU regulation,Regulatory context,Plastic recycling measures,Member state compliance,Material safety,Legislative updates</p><h4>Abstract</h4><p style="white-space: pre-wrap;">Specific measures for recycled plastics Regulation (EU) No 2022/1616 repealing Regulation (EC) No 282/2008.
+Regulatory context EU and member states </p><a target="_blank" class="btn btn-primary" href="https://fitness.agroparistech.fr/fitness2/online/LNE/recycled-plastics.html#/1" id="lecture-button-recycled-plastics" style="background-color: rgb(236, 104, 7); border-color: rgb(236, 104, 7); margin-bottom: 2%;">Read the lecture</a><h4>Test your knowledge</h4><p><a href="https://fitness.agroparistech.fr/fitness2/online/LNE/assessments/recycling-regulation/index.html" target="_blank">Access the assessment</a></p><h4>Authors</h4><ul><li>Catherine Loriot</li><li>Jean-Mario Julien</li></ul>`
 );
 lecturesDetails.set(
   "Legislation and safety/gmp-and-quality-assurance-standards",
@@ -797,9 +797,9 @@ dropDownMenuContent = `<div>
                 class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Legislation and safety/recycled-plastics" id="Legislation and safety/recycled-plastics"
             class="dropdown-container-class" onclick="lectureToDisplay(this.id)">Recycled plastics - Regulation (EU)
-            2022/1616<i class="fa fa-star star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i><i
-                class="fa fa-star-o star-color-green little-space"></i></a><a
+            2022/1616<i class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star star-color-yellow little-space"></i><i
+                class="fa fa-star-o star-color-yellow little-space"></i></a><a
             href="#Legislation and safety/gmp-and-quality-assurance-standards"
             id="Legislation and safety/gmp-and-quality-assurance-standards" class="dropdown-container-class"
             onclick="lectureToDisplay(this.id)">GMP and quality assurance standards<i

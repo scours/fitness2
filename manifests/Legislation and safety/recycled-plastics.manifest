@@ -4,7 +4,7 @@
   "level": "",
   "section": "",
   "unit": "",
-  "difficultyLevel": "Novice",
+  "difficultyLevel": "Intermediate",
   "part": "part1",
   "author": [
     "Catherine Loriot",
@@ -32,5 +32,5 @@
     "Legislation"
   ],
   "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/LNE/recycled-plastics.html#/1",
-  "qAndAVariables":["Access the assessment = https://fitness.agroparistech.fr/fitness2/online/LNE/assessments/regulatory-context-EU-and-US/index.html"]
+  "qAndAVariables":["Access the assessment = https://fitness.agroparistech.fr/fitness2/online/LNE/assessments/recycling-regulation/index.html"]
 }
