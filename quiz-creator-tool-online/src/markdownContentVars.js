@@ -3022,3 +3022,46 @@ Q24: Significant quantities of very intense flavors can permeate plastic packagi
 
 canBeSentByEmail: true
 `;
+
+var calculationOfPermeabilitiesInCompositeSystems = `
+Q1: You expose a polymer film, which was previously unloaded, to a certain gas at a fixed pressure on one side in a measuring apparatus. On the other side, you determine how much of the gas has passed through the film. What course do you notice?
+
+- [ ] The amount of gas that has passed through increases linearly with time from the very beginning
+- [ ] The amount of gas that passes through is at a maximum for short periods of time and then decreases
+- [x] The permeated gas quantity is practically zero for a certain period of time and then shows a linear increase with time for a certain period of time
+
+Q2: You join two polymer films firmly over their entire surface. Film 1 has the permeance p1, film 2 has the permeance p2. Now you determine the total permeance of the two joined films by means of a measurement. What do you notice?
+
+- [ ] The resulting permeance is the sum of the two individual permeances, i.e. ptot = p1 + p2
+- [x] The reciprocal of the resulting permeance is the sum of the reciprocal values of the two individual permeances, i.e. ptot-1 = p1-1 + p2-1
+
+Q3: Materials made of polymers with finely distributed inhomogeneities (either small impermeable particles or small cavities) show the following properties compared to the same polymers without inhomogeneities. (Multiple answers may be correct)
+
+- [ ] Compared to the pure polymer, the polymers with inhomogeneities always have greater permeance at the same thickness, regardless of their type
+- [x] For polymers with finely distributed particles, the permeances are smaller for the same thickness, whereas for polymers with cavities they are always greater than for the pure polymer.
+- [x] For polymers with finely distributed particles, the permeances depend on the orientation of the particles if they differ greatly in length and thickness.
+- [ ] Both types of included inhomogeneities have no effect on permeance.
+
+Q4: In a permeation experiment with simple films as well as film laminates, the amount of permeated substance after a lag time (a multiple of the lag time) shows a linear course over time. Which statements are true for a laminate made of three films of different polymeric materials? (Multiple answers may be correct)
+
+- [x] The lag time depends on the direction of permeation through the laminate
+- [ ] The lag time is the same regardless of the direction in which the permeation experiment is carried out relative to the film
+- [x] The lag time depends on the coefficients of diffusion and solubility of the materials for the permeating substance
+- [ ] The longest lag time is obtained when the materials with the largest solubility coefficient are placed on the outside
+
+Q5: If a metallic layer (e.g. a film), which however contains individual defects, is sandwiched between two polymer layers, the following principles apply to the mass transfer through this composite. (Multiple answers may be correct)
+
+- [ ] A composite with many small defects in the metal layer and a composite with fewer larger defects, but where the total area of all defects in both cases is the same, have the same permeance
+- [x] If I compare the composite with a metallic layer with small defects with a composite in which the metallic layer has the same number of larger defects, the permeation is lower in the first variant.
+- [ ] For such a composite, which always has defects of the same size in the metal layer, the permeance is strictly proportional to the number of defects, even for large numbers of defects.
+- [x] If we compare a composite with a small number of defects with one with a higher number of defects of the same size, then the permeance is lower for the first composite, but the lag time is higher
+
+Q6: The following statements apply to mass transfer through media that are impermeable in the material and contain permeable pores, as well as permeable materials in which impermeable particles are embedded. (Multiple answers may be correct)
+
+- [ ] For permeable pores, the amount of mass transfer is proportional to the pore length
+- [x] For permeable pores, the amount of mass transfer is proportional to the cross-sectional area of the pores
+- [ ] For polymeric materials containing impermeable particles, the mass transfer increases when the ratio of the particle dimension transverse to the direction of diffusion to the particle dimension longitudinal to the direction of diffusion is increased
+- [x] For polymeric materials containing impermeable particles, increasing the ratio of the particle dimension transverse to the direction of diffusion to the particle dimension longitudinal to the direction of diffusion will increase the lag time
+
+canBeSentByEmail: true
+`;

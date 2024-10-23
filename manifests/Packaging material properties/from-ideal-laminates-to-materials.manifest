@@ -8,7 +8,7 @@
   "part": "part1",
   "author": "Oliver Miesbauer",
   "institution": "TUM",
-  "abstract": "Permeability in composites: from ideal laminates to materials with defects and dispersed particles. The results of diffusion/migration in multimaterial/multilayer are exemplified at steady state to derive effective permeabilities from composite systems.  -  level intermediate, advanced",
+  "abstract": "The lecture considers the mass transfer through different types of composite materials. Contrary to what the title suggests, the permeabilities, which apply to the steady state of permeation at a constant mass transfer rate, are not the central point. Rather, the focus is on the time dependency of the mass transfer rate and its dependence on the properties of the material systems. The so-called breakthrough time is further described as the characteristic time for the transient process.\n\nThe conditions for single-phase systems and for the interface between two phases are discussed first. For the composite systems, the structure of an ideal laminate is used as a starting point. This consists of several layers of polymeric materials that are assumed to be homogeneous, firmly bonded to one another, and arranged perpendicular to the permeation direction.\n\nThe next section deals with combinations of impermeable layers (e.g. made of metals or other inorganic materials) in combination with polymer layers, where the impermeable layers have defects at which the permeation processes are concentrated.\n\nFurthermore, porous materials are treated whose material outside the pores is approximated as impermeable. Their characteristic quantities are porosity as the volume fraction of the pores and tortuosity as the ratio of the distance traveled by the diffusing molecules (here equal to the pore length) to the material thickness. Finally, the lesson deals with particle-filled materials in which the particles, assumed to be impermeable, are present in a polymeric matrix. Here, again, tortuosity is important, as well as orientation relative to the macroscopic diffusion direction and the aspect ratio of the particles.",
   "topic": [
     "permeation",
     "diffusion",
@@ -30,5 +30,6 @@
     "surface",
     "time"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.4/part1.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/specialized/S4/U4.4/part1.html#/2",
+  "qAndAVariables":["Access the assessment = calculationOfPermeabilitiesInCompositeSystems"]
 }
