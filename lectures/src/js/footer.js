@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Friday, 18th October 2024
+ * Last Modified: Thursday, 24th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -38,7 +38,7 @@ class Footer extends HTMLElement {
             </div>
 
             <div class="col mb-3">
-                <h5 class="txt-orange-fitness">Contact</h5>
+                <h5 class="txt-orange-fitness">Contacts</h5>
 
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">

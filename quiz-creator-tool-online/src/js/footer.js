@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Friday, 18th October 2024
+ * Last Modified: Thursday, 24th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -38,7 +38,7 @@ class Footer extends HTMLElement {
             </div>
 
             <div class="col mb-3">
-                <h5 class="txt-orange-fitness">Contact</h5>
+                <h5 class="txt-orange-fitness">Contacts</h5>
 
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
@@ -49,6 +49,18 @@ class Footer extends HTMLElement {
                                 href="mailto:olivier.vitrac@agroparistech.fr"
                                 title="contact the Administrator">&#128222;
                                 <small>+33 (0)1 89 10 11 85</small></a>
+                        </p>
+                    </li>
+                </ul>
+
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2">
+                        <p class="nav-link p-0 text-muted">
+                            Project coordinator (Actia)<br /><a href="mailto:g.cornuau@actia-asso.eu"
+                                title="contact the Coordinator">&#128232;
+                                <small>g.cornuau@actia-asso.eu</small></a><br /><a
+                                href="mailto:g.cornuau@actia-asso.eu"
+                                </a>
                         </p>
                     </li>
                 </ul>
