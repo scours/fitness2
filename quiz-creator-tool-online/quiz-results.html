@@ -117,12 +117,37 @@ Modified By: Steward OUADI
       color: #00796b;
       /* Distinctive header color */
     }
+
+    .authenticity {
+      text-align: center;
+      font-size: 1.2em;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 5px solid;
+      border-radius: 8px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .authentic-green {
+      border-color: green;
+      color: green;
+    }
+
+    .authentic-red {
+      border-color: red;
+      color: red;
+    }
   </style>
 
 </head>
 
 <body>
   <main-header></main-header>
+
+  <!-- Authenticity div -->
+  <div id="authenticity" class="authenticity"></div>
 
   <div class="container">
     <div class="section">
@@ -167,6 +192,8 @@ Modified By: Steward OUADI
 
 
     document.addEventListener('DOMContentLoaded', function () {
+      const authenticityDiv = document.getElementById('authenticity');
+
       // Get the hash part of the URL, which contains the compressedQuizInfo
       const hash = window.location.hash.substring(1);
 
@@ -174,6 +201,10 @@ Modified By: Steward OUADI
         // Decompress the hash value
         const decompressedQuizInfo = LZString.decompressFromEncodedURIComponent(hash);
         if (decompressedQuizInfo) {
+          // Set authenticity message to valid
+          authenticityDiv.classList.add('authentic-green');
+          authenticityDiv.textContent = 'The information on this page is authentic and valid.';
+
           // Parse the decompressed string to an object
           const quizInfo = JSON.parse(decompressedQuizInfo);
 
@@ -302,9 +333,14 @@ Modified By: Steward OUADI
 
 
         } else {
+          // Set authenticity message to invalid
+          authenticityDiv.classList.add('authentic-red');
+          authenticityDiv.textContent = 'The information on this page is not authentic and valid.';
           console.error('Failed to decompress quiz information.');
         }
       } else {
+        authenticityDiv.classList.add('authentic-red');
+        authenticityDiv.textContent = 'The information on this page is not authentic and valid.';
         console.error('No quiz information found in the URL.');
       }
     });
