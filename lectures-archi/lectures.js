@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Wednesday, 16th October 2024
+ * Last Modified: Thursday, 24th October 2024
  * Modified By: Steward OUADI
  */
 
@@ -760,9 +760,55 @@ function loadFile(filePath) {
 }
 
 function openNav() {
-  document.getElementById("sidebar-menu").style.width = "60%";
-  document.getElementById("main-id").style.marginLeft = "60%";
+  const sidebar = document.getElementById("sidebar-menu");
+  const footer = document.querySelector("main-footer");
+  const mainIdOffsetTop = document.getElementById("main-id").offsetTop;
+
+  // Set the width and position of the sidebar
+  sidebar.style.width = "50%";
+  sidebar.style.position = "absolute";
+
+  // Adjust the top margin of the sidebar based on main-id's offset
+  sidebar.style.marginTop = mainIdOffsetTop + "px";
+
+  // Calculate the distance between the bottom of the sidebar and the footer
+  const sidebarHeight = sidebar.offsetHeight;
+  const footerPosition =
+    footer.getBoundingClientRect().top + window.pageYOffset;
+  const sidebarPosition =
+    sidebar.getBoundingClientRect().top + window.pageYOffset;
+  const availableSpace = footerPosition - sidebarPosition;
+
+  // If the sidebar height exceeds the space above the footer, limit its height
+  if (availableSpace < sidebarHeight) {
+    sidebar.style.height = availableSpace + "px"; // Limit the height of the sidebar
+    sidebar.style.overflowY = "auto"; // Enable scrolling if content exceeds height
+  } else {
+    sidebar.style.height = ""; // Reset height if there's enough space
+  }
+
+  document.getElementById("main-id").style.marginLeft = "50%";
   document.getElementById("open-menu-button").style.visibility = "hidden";
+
+  // Select all links (a elements) within the sidebar
+  const sidebarLinks = document.querySelectorAll("#sidebar-menu a");
+
+  // Add a smooth scroll event listener for each link
+  sidebarLinks.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      // Prevent the default link behavior
+      event.preventDefault();
+
+      // Delay the smooth scroll to the top to allow the jump effect first
+      setTimeout(function () {
+        // Scroll smoothly to the top of the page
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, 900); // Delay the scroll to the top (300ms or adjust as needed)
+    });
+  });
 }
 
 function closeNav() {
