@@ -21,8 +21,7 @@ Modified By: Steward OUADI
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript" src="src/lecturesDataContent.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 
   <style>
     body {
@@ -194,50 +193,36 @@ Modified By: Steward OUADI
     }
 
     // Function to capture the page as it appears and convert it to PDF
+    // Generate the PDF including the logos
     function generatePDF() {
-      html2canvas(document.body).then(function (canvas) {
-        const imgData = canvas.toDataURL('image/png');
-        const {
-          jsPDF
-        } = window.jspdf;
-        const pdf = new jsPDF();
+      const element = document.body; // The entire page or a specific element
 
-        // Add the image from the canvas into the PDF
-        const imgWidth = 210; // A4 page width in mm
-        const pageHeight = 297; // A4 page height in mm
-        const imgHeight = canvas.height * imgWidth / canvas.width;
-        let heightLeft = imgHeight;
-        let position = 0;
-
-        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
-
-        // Add pages if the content exceeds one PDF page
-        while (heightLeft >= 0) {
-          position = heightLeft - imgHeight;
-          pdf.addPage();
-          pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-          heightLeft -= pageHeight;
-        }
-
-        // Get current date and time for file name
-        const now = new Date();
-        const day = now.getDate();
-        const month = now.toLocaleString('default', {
-          month: 'long'
-        });
-        const year = now.getFullYear();
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const seconds = now.getSeconds().toString().padStart(2, '0');
-
-        const fileName = `quiz-results-${day}-${month}-${year}-${hours}-${minutes}-${seconds}.pdf`;
-
-        // Save the PDF with the dynamically generated file name
-        pdf.save(fileName);
+      // Customize file name with date and time
+      const now = new Date();
+      const day = now.getDate();
+      const month = now.toLocaleString('default', {
+        month: 'long'
       });
-    }
+      const year = now.getFullYear();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
 
+      const fileName = `quiz-results-${day}-${month}-${year}-${hours}-${minutes}-${seconds}.pdf`;
+
+      // Use html2pdf to generate the PDF
+      html2pdf().from(element).set({
+        filename: fileName,
+        html2canvas: {
+          scale: 2
+        }, // Adjust quality
+        jsPDF: {
+          orientation: 'portrait',
+          unit: 'mm',
+          format: 'a4'
+        }
+      }).save();
+    }
     document.addEventListener('DOMContentLoaded', function () {
       const authenticityDiv = document.getElementById('authenticity');
 
