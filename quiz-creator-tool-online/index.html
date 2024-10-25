@@ -422,7 +422,8 @@ Modified By: Steward OUADI
 
       // Encode the updated profile information and store it in localStorage
       const encodedFitness2ProfileInfo = LZString.compressToEncodedURIComponent(JSON.stringify(fitness2ProfileInfo));
-      const fitness2ProfileInfoUrl = `${window.location.origin}/profile.html?data=${encodedFitness2ProfileInfo}`;
+      const fitness2ProfileInfoUrl =
+        `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/profile.html?data=${encodedFitness2ProfileInfo}`;
       localStorage.setItem("fitness2ProfileInfoUrl", fitness2ProfileInfoUrl);
 
       console.log("Generated and saved fitness2ProfileInfoUrl:", fitness2ProfileInfoUrl);
@@ -513,53 +514,54 @@ Modified By: Steward OUADI
       // Create the sheet name
       var sheetName = `${formattedDate} ${quizIdentifier} ${sessionId}`;
 
-      if (!learnerData) {
-        learnerData = {
+
+      // Generate URLWithQuizInfo FIRST
+      const quizInfo = {
+        learnerData: learnerData || {
           FirstName: "unknown",
           LastName: "unknown",
           Email: "unknown"
-        };
-      }
-
-      const profileInfoUrl = generateFitness2ProfileInfo(learnerData, successRate, markdownVariableToRead,
-        URLWithQuizInfo);
-
-      const metadata = {
-        name: markdownVariableToRead,
-        numberOfCorrectAnswers: numberOfCorrectAnswersFixed,
-        numberOfQuestions: numberOfQuestions,
-        successRate: successRate,
-        elapsedTime: elapsedTime,
-        quizUrl: quizUrl,
-        profileInfoUrl: profileInfoUrl,
-        startedAt: startedAt,
-        endedAt: endedAt,
-        sheetName: sheetName,
-        sessionIdentifier: sessionId,
-      };
-      const quizInfo = {
-        learnerData,
+        },
         questionsAndUserAnswers,
-        metadata
-      }
-
+        metadata: {
+          name: markdownVariableToRead,
+          numberOfCorrectAnswers: numberOfCorrectAnswersFixed,
+          numberOfQuestions,
+          successRate,
+          elapsedTime,
+          quizUrl: `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/index.html?quizId=${markdownVariableToRead}&sessionId=${sessionId}`,
+          startedAt,
+          endedAt,
+          sheetName: `${new Date().toLocaleDateString('en-GB').split('/').reverse().join('/')} ${markdownVariableToRead}
+      ${sessionId}`,
+          sessionIdentifier: sessionId,
+        }
+      };
 
 
       console.log("Stringified content:", quizInfo);
 
-      // Convert the data object to JSON string
-      const quizInfoStringified = JSON.stringify(quizInfo);
+      // Step 1: Create initial URLWithQuizInfo without profileInfoUrl
+      let quizInfoStringified = JSON.stringify(quizInfo);
+      let compressedQuizInfo = LZString.compressToEncodedURIComponent(quizInfoStringified);
+      let URLWithQuizInfo =
+        `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`;
 
-      // Compress and encode the JSON string
-      const compressedQuizInfo = LZString.compressToEncodedURIComponent(quizInfoStringified);
+      // Step 2: Generate profileInfoUrl based on initial URLWithQuizInfo
+      const profileInfoUrl = generateFitness2ProfileInfo(learnerData, successRate, markdownVariableToRead,
+        URLWithQuizInfo);
 
-      const URLWithQuizInfo =
-        `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`
+      // Step 3: Update quizInfo with profileInfoUrl and recreate URLWithQuizInfo
+      quizInfo.metadata.profileInfoUrl = profileInfoUrl;
 
-      // const URLWithQuizInfo =
-      //   `http://127.0.0.1:5502/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`;
+      // Re-encode quizInfo with the updated profileInfoUrl
+      quizInfoStringified = JSON.stringify(quizInfo);
+      compressedQuizInfo = LZString.compressToEncodedURIComponent(quizInfoStringified);
+      URLWithQuizInfo =
+        `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/quiz-results.html#${compressedQuizInfo}`;
 
-
+      // Now URLWithQuizInfo contains profileInfoUrl in its data, and you can continue with the rest of your code
+      console.log("Updated URLWithQuizInfo with profileInfoUrl:", URLWithQuizInfo);
 
       let bodyToSend = JSON.stringify({
         url: URLWithQuizInfo,
