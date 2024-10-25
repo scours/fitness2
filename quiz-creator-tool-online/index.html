@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Thursday, 17th December 2020
 Authors: Olivier VITRAC, Steward OUADI
 -----
-Last Modified: Monday, 23rd September 2024
+Last Modified: Friday, 25th October 2024
 Modified By: Steward OUADI
 -----
 -->
@@ -13,6 +13,8 @@ Modified By: Steward OUADI
 <!-- Test for beginners - designed by Olivier Vitrac - rev. $ 2020-12-04 $ -->
 
 <head>
+  <link rel="icon" href="/fitness/lectures/favicon.ico" type="image/x-icon">
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FITNESS Quizz</title>
@@ -42,10 +44,21 @@ Modified By: Steward OUADI
       </tr>
     </table>
   </h1>
-  <div id="qbutton">
-    <button id="previous"></button>
-    <button id="next"></button>
-    <button id="submit"></button>
+  <!-- Quiz buttons initially hidden -->
+  <div id="qbutton" style="display: none;">
+    <button id="previous">Previous</button>
+    <button id="next">Next</button>
+    <button id="submit">Submit</button>
+  </div>
+
+  <!-- Learner data input form, initially hidden -->
+  <div id="learnerDataForm" style="text-align: center; display: none;">
+    <h3>Please enter your details</h3>
+    <p>These details will be used for your certificate and cannot be changed later.</p>
+    <input type="text" id="firstName" placeholder="First Name" required><br>
+    <input type="text" id="lastName" placeholder="Last Name" required><br>
+    <input type="email" id="email" placeholder="Email" required><br>
+    <button onclick="saveLearnerData()">Validate and Save</button>
   </div>
   <div id="results">
   </div>
@@ -86,6 +99,50 @@ Modified By: Steward OUADI
 
 
   <script>
+    // Check for existing learner data
+    function checkLearnerData() {
+      const learnerData = localStorage.getItem("learnerData");
+
+      if (learnerData) {
+        // Data exists: show quiz buttons and hide learner data form
+        document.getElementById("qbutton").style.display = "block";
+        document.getElementById("learnerDataForm").style.display = "none";
+      } else {
+        // Data does not exist: show learner data form and hide quiz buttons
+        document.getElementById("learnerDataForm").style.display = "block";
+        document.getElementById("qbutton").style.display = "none";
+      }
+    }
+
+    // Save learner data function
+    function saveLearnerData() {
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const email = document.getElementById("email").value.trim();
+
+      // Simple validation
+      if (firstName && lastName && email) {
+        // Save data to localStorage
+        const learnerData = {
+          FirstName: firstName,
+          LastName: lastName,
+          Email: email
+        };
+        const encodedLearnerData = LZString.compressToEncodedURIComponent(JSON.stringify(learnerData));
+        localStorage.setItem("learnerData", encodedLearnerData);
+
+        // Show success message and update UI
+        alert("Your details have been saved successfully. You may now proceed with the quiz.");
+        document.getElementById("qbutton").style.display = "block";
+        document.getElementById("learnerDataForm").style.display = "none";
+      } else {
+        alert("Please fill out all fields.");
+      }
+    }
+
+    // Run checkLearnerData on page load
+    document.addEventListener("DOMContentLoaded", checkLearnerData);
+
     let currentFilename = "";
 
     displaySendResultsByEmailButtonIfNecessary();
@@ -320,16 +377,68 @@ Modified By: Steward OUADI
       return Math.random().toString(36).substring(2, 6).toUpperCase();
     }
 
+    function generateFitness2ProfileInfo(learnerData, successRate, markdownVariableToRead, quizUrl) {
+      console.log("Generating fitness2ProfileInfo...");
+
+      // Check if there's an existing profile URL in localStorage
+      let existingProfileInfoUrl = localStorage.getItem("fitness2ProfileInfoUrl");
+      console.log("Existing fitness2ProfileInfoUrl in localStorage:", existingProfileInfoUrl);
+
+      // Define fitness2ProfileInfo with learnerData fields
+      let fitness2ProfileInfo = {
+        firstName: learnerData.FirstName,
+        lastName: learnerData.LastName,
+        email: learnerData.Email,
+        assessmentMap: {}
+      };
+
+      // If existing data is found in localStorage, decode and parse it
+      if (existingProfileInfoUrl) {
+        const existingEncodedData = new URLSearchParams(new URL(existingProfileInfoUrl).search).get("data");
+        console.log("Decoded existing encoded data:", existingEncodedData);
+        const decodedExistingData = LZString.decompressFromEncodedURIComponent(existingEncodedData);
+
+        if (decodedExistingData) {
+          const existingDataObj = JSON.parse(decodedExistingData);
+          fitness2ProfileInfo = {
+            ...fitness2ProfileInfo,
+            ...existingDataObj
+          }; // Merge with current learner data
+        }
+      }
+
+      // Define the new assessment details
+      const newAssessment = {
+        name: markdownVariableToRead,
+        successRate: successRate,
+        quizUrl: quizUrl
+      };
+
+      // Add the new assessment only if it doesn't exist in the assessmentMap
+      if (!fitness2ProfileInfo.assessmentMap[newAssessment.name]) {
+        fitness2ProfileInfo.assessmentMap[newAssessment.name] = newAssessment;
+        console.log("Added new assessment to assessmentMap:", newAssessment);
+      }
+
+      // Encode the updated profile information and store it in localStorage
+      const encodedFitness2ProfileInfo = LZString.compressToEncodedURIComponent(JSON.stringify(fitness2ProfileInfo));
+      const fitness2ProfileInfoUrl = `${window.location.origin}/profile.html?data=${encodedFitness2ProfileInfo}`;
+      localStorage.setItem("fitness2ProfileInfoUrl", fitness2ProfileInfoUrl);
+
+      console.log("Generated and saved fitness2ProfileInfoUrl:", fitness2ProfileInfoUrl);
+      return fitness2ProfileInfoUrl;
+    }
+
     questionsFromURL();
     const webAppUrl =
       "https://script.google.com/macros/s/AKfycbyk2zFtF7CKPRwYnj_wAM__BL5Vrdt6bKUPHf0oh-PtzG8OoK4a-D2Bh-2zsxWYIMEU/exec";
     document.getElementById("submit-results").addEventListener("click", function () {
       event.preventDefault();
+
       console.log("button clicked")
 
       endedAt = new Date();
       // Define variables
-      var recipient1 = "rotam@gmail.com";
       var title = markdownVariableToRead;
       var identifier = defaultSessionIdentifier;
       var subject = encodeURIComponent(title + "__" + identifier);
@@ -367,6 +476,7 @@ Modified By: Steward OUADI
         if (decompressedLearnerData) {
           // Parse the JSON string back to an object
           learnerData = JSON.parse(decompressedLearnerData);
+          console.log("Decoded learnerData from localStorage:", learnerData);
 
           // // Set values to input fields if they exist and the elements are available in the DOM
           // const firstNameElement = document.getElementById("firstName");
@@ -411,14 +521,17 @@ Modified By: Steward OUADI
         };
       }
 
+      const profileInfoUrl = generateFitness2ProfileInfo(learnerData, successRate, markdownVariableToRead,
+        URLWithQuizInfo);
+
       const metadata = {
         name: markdownVariableToRead,
-        mailRecipient: recipient1,
         numberOfCorrectAnswers: numberOfCorrectAnswersFixed,
         numberOfQuestions: numberOfQuestions,
         successRate: successRate,
         elapsedTime: elapsedTime,
         quizUrl: quizUrl,
+        profileInfoUrl: profileInfoUrl,
         startedAt: startedAt,
         endedAt: endedAt,
         sheetName: sheetName,

@@ -1,0 +1,131 @@
+<!--
+File: profile.html
+Contract: EU contract 2022-FR01-KA220-HED-000023509
+Project: FitNESS 2 ERASMUS+
+File Created: Friday, 25th October 2024
+Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
+-----
+Last Modified: Friday, 25th October 2024
+Modified By: Steward OUADI
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="/fitness/lectures/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/font-awesome-4-7-0.min.css">
+  <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness.css" rel="stylesheet">
+  <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness2.css" rel="stylesheet">
+
+  <style>
+    .container {
+      max-width: 600px;
+      width: 90%;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .welcome-message {
+      font-size: 1.8em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #00796b;
+      font-size: 1.6em;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      color: #555;
+      font-size: 1.4em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    #profile-content p,
+    #assessmentList li {
+      font-size: 1.1em;
+      margin: 5px 0;
+    }
+
+    #assessmentList {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .no-info {
+      color: #888;
+      font-style: italic;
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main-header></main-header>
+
+  <div class="container">
+    <div class="welcome-message txt-orange-fitness">Welcome to your profile overview.</div>
+    <div id="profile-content">
+      <h2>Profile Information</h2>
+      <p id="userName" class="no-info">Loading...</p>
+      <p id="userEmail" class="no-info">Loading...</p>
+      <h3>Assessments History</h3>
+      <ul id="assessmentList" class="no-info">Loading...</ul>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Read and decode profile information from URL
+      const params = new URLSearchParams(window.location.search);
+      const encodedProfileInfo = params.get("data");
+
+      if (encodedProfileInfo) {
+        const profileInfo = JSON.parse(LZString.decompressFromEncodedURIComponent(encodedProfileInfo));
+
+        // Display user profile information
+        document.getElementById("userName").textContent = `Name: ${profileInfo.firstName} ${profileInfo.lastName}`;
+        document.getElementById("userEmail").textContent = `Email: ${profileInfo.email}`;
+
+        // Display assessment history
+        const assessmentList = document.getElementById("assessmentList");
+        assessmentList.innerHTML = ''; // Clear loading text
+        Object.values(profileInfo.assessmentMap).forEach(assessment => {
+          const li = document.createElement("li");
+          li.innerHTML = `<strong>${assessment.name}</strong> - Success Rate: ${assessment.successRate} - 
+            <a href="${assessment.quizUrl}" target="_blank">View Quiz</a>`;
+          assessmentList.appendChild(li);
+        });
+
+        // If there is no assessment history, show message
+        if (assessmentList.children.length === 0) {
+          assessmentList.innerHTML = '<li class="no-info">No assessment history available.</li>';
+        }
+      } else {
+        document.getElementById("profile-content").innerHTML =
+          "<p class='no-info'>No profile information available.</p>";
+      }
+    });
+  </script>
+
+  <main-footer></main-footer>
+
+  <link rel="stylesheet" href="modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
+  <script src="src/js/google_translate_plugin.js"></script>
+  <script src="src/js/header.js"></script>
+  <script src="src/js/footer.js"></script>
+</body>
+
+</html>
