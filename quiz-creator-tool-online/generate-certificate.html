@@ -1,0 +1,176 @@
+<!--
+File: generate-certificate.html
+Contract: EU contract 2022-FR01-KA220-HED-000023509
+Project: FitNESS 2 ERASMUS+
+File Created: Friday, 25th October 2024
+Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
+-----
+Last Modified: Friday, 25th October 2024
+Modified By: Steward OUADI
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Certificate</title>
+  <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness.css" rel="stylesheet">
+  <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness2.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f9;
+      margin: 0;
+    }
+
+    .certificate-container {
+      width: 90%;
+      max-width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .certificate-container h2 {
+      color: #4caf50;
+      margin-bottom: 10px;
+    }
+
+    .input-group {
+      margin: 20px 0;
+    }
+
+    .input-group label {
+      display: block;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .input-group input,
+    .input-group select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+    }
+
+    .info-text {
+      margin-top: 20px;
+      color: #555;
+      font-size: 1.1em;
+      line-height: 1.5em;
+    }
+
+    .info-highlight {
+      color: #00796b;
+      font-weight: bold;
+    }
+
+    .generate-btn {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      width: 100%;
+      max-width: 200px;
+      margin-top: 20px;
+    }
+
+    .generate-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="certificate-container">
+    <h2>Generate Certificate</h2>
+
+    <div class="input-group">
+      <label for="profileUrl">Profile URL:</label>
+      <input type="text" id="profileUrl" placeholder="Paste the profile URL here">
+    </div>
+
+    <button class="generate-btn" onclick="processProfileUrl()">Load Profile Info</button>
+
+    <div class="info-text" id="profileInfo" style="display: none;">
+      <p>The generated certificate will be for:</p>
+      <p>First Name: <span class="info-highlight" id="firstName"></span></p>
+      <p>Last Name: <span class="info-highlight" id="lastName"></span></p>
+      <p>Email: <span class="info-highlight" id="email"></span></p>
+
+      <div class="input-group">
+        <label for="pathwaySelect">Select Pathway:</label>
+        <select id="pathwaySelect">
+          <option value="pathway1">Pathway 1</option>
+          <option value="pathway2">Pathway 2</option>
+          <option value="pathway3">Pathway 3</option>
+        </select>
+      </div>
+
+      <button class="generate-btn" onclick="generateCertificate()">Generate Certificate</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+  <script>
+    function processProfileUrl() {
+      const profileUrl = document.getElementById('profileUrl').value;
+      const urlParams = new URLSearchParams(new URL(profileUrl).search);
+      const encodedProfileInfo = urlParams.get('data');
+
+      // Log encoded profile info for debugging
+      console.log("Encoded Profile Info:", encodedProfileInfo);
+
+      if (encodedProfileInfo) {
+        const profileInfo = JSON.parse(LZString.decompressFromEncodedURIComponent(encodedProfileInfo));
+
+        document.getElementById('firstName').textContent = profileInfo.firstName || 'N/A';
+        document.getElementById('lastName').textContent = profileInfo.lastName || 'N/A';
+        document.getElementById('email').textContent = profileInfo.email || 'N/A';
+
+        // Show profile info section
+        document.getElementById('profileInfo').style.display = 'block';
+      } else {
+        alert("Invalid Profile URL! Please ensure it includes the necessary data parameter.");
+      }
+    }
+
+    function generateCertificate() {
+      const firstName = document.getElementById('firstName').textContent;
+      const lastName = document.getElementById('lastName').textContent;
+      const email = document.getElementById('email').textContent;
+      const selectedPathway = document.getElementById('pathwaySelect').value;
+
+      console.log("Generating certificate for:", {
+        firstName,
+        lastName,
+        email,
+        selectedPathway
+      });
+
+      // Certificate generation logic goes here
+      alert(`Certificate generated for ${firstName} ${lastName} with pathway: ${selectedPathway}`);
+    }
+  </script>
+
+</body>
+
+</html>
