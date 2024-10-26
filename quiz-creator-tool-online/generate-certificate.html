@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Friday, 25th October 2024
 Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
 -----
-Last Modified: Friday, 25th October 2024
+Last Modified: Saturday, 26th October 2024
 Modified By: Steward OUADI
 -->
 
@@ -104,11 +104,11 @@ Modified By: Steward OUADI
     <h2>Generate Certificate</h2>
 
     <div class="input-group">
-      <label for="profileUrl">Profile URL:</label>
-      <input type="text" id="profileUrl" placeholder="Paste the profile URL here">
+      <label for="encodedDataInput">Encoded Profile Data:</label>
+      <input type="text" id="encodedDataInput" placeholder="Paste the encoded data here">
     </div>
 
-    <button class="generate-btn" onclick="processProfileUrl()">Load Profile Info</button>
+    <button class="generate-btn" onclick="loadProfileData()">Load Profile Info</button>
 
     <div class="info-text" id="profileInfo" style="display: none;">
       <p>The generated certificate will be for:</p>
@@ -119,9 +119,13 @@ Modified By: Steward OUADI
       <div class="input-group">
         <label for="pathwaySelect">Select Pathway:</label>
         <select id="pathwaySelect">
-          <option value="pathway1">Pathway 1</option>
-          <option value="pathway2">Pathway 2</option>
-          <option value="pathway3">Pathway 3</option>
+          <option value="R&D_Manager_Basic">Research and Development Managers in Food Packaging (Basic)</option>
+          <option value="R&D_Manager_Advanced">Research and Development Managers in Food Packaging (Advanced)</option>
+          <option value="Quality_Manager_Basic">Quality Managers in Food Packaging (Basic)</option>
+          <option value="Quality_Manager_Advanced">Quality Managers in Food Packaging (Advanced)</option>
+          <option value="Production_Line_Worker_Basic">Packaging Production Line Workers (Basic)</option>
+          <option value="Production_Manager_Basic">Packaging Production Managers (Basic)</option>
+          <option value="Production_Manager_Advanced">Packaging Production Managers (Advanced)</option>
         </select>
       </div>
 
@@ -129,48 +133,94 @@ Modified By: Steward OUADI
     </div>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blob-stream/0.1.3/blob-stream.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
-  <script>
-    function processProfileUrl() {
-      const profileUrl = document.getElementById('profileUrl').value;
-      const urlParams = new URLSearchParams(new URL(profileUrl).search);
-      const encodedProfileInfo = urlParams.get('data');
 
-      // Log encoded profile info for debugging
+  <script>
+    function loadProfileData() {
+      const encodedProfileInfo = document.getElementById('encodedDataInput').value.trim();
       console.log("Encoded Profile Info:", encodedProfileInfo);
 
       if (encodedProfileInfo) {
-        const profileInfo = JSON.parse(LZString.decompressFromEncodedURIComponent(encodedProfileInfo));
-
-        document.getElementById('firstName').textContent = profileInfo.firstName || 'N/A';
-        document.getElementById('lastName').textContent = profileInfo.lastName || 'N/A';
-        document.getElementById('email').textContent = profileInfo.email || 'N/A';
-
-        // Show profile info section
-        document.getElementById('profileInfo').style.display = 'block';
+        try {
+          const profileInfo = JSON.parse(LZString.decompressFromEncodedURIComponent(encodedProfileInfo));
+          document.getElementById('firstName').textContent = profileInfo.firstName || 'N/A';
+          document.getElementById('lastName').textContent = profileInfo.lastName || 'N/A';
+          document.getElementById('email').textContent = profileInfo.email || 'N/A';
+          document.getElementById('profileInfo').style.display = 'block';
+        } catch (error) {
+          alert("Failed to decode the profile data. Please ensure it is valid encoded data.");
+          console.error("Decoding error:", error);
+        }
       } else {
-        alert("Invalid Profile URL! Please ensure it includes the necessary data parameter.");
+        alert("Please enter the encoded profile data.");
       }
     }
 
-    function generateCertificate() {
+    async function generateCertificate() {
       const firstName = document.getElementById('firstName').textContent;
       const lastName = document.getElementById('lastName').textContent;
-      const email = document.getElementById('email').textContent;
-      const selectedPathway = document.getElementById('pathwaySelect').value;
+      const selectedPathwayText = document.getElementById('pathwaySelect').selectedOptions[0].textContent;
 
-      console.log("Generating certificate for:", {
-        firstName,
-        lastName,
-        email,
-        selectedPathway
+      // Fetch the base certificate PDF
+      const url = 'images/certificate-of-completion-fitness-2.pdf';
+      const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+      const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+
+      // Embed the Helvetica font
+      const helveticaFont = await pdfDoc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+
+      // Get the first page of the document
+      const page = pdfDoc.getPage(0);
+
+      // Define positions and font sizes
+      const pageWidth = page.getWidth();
+      const fontSize = 24;
+
+      // Center the fullName text
+      const fullName = `${firstName} ${lastName}`;
+      const nameTextWidth = helveticaFont.widthOfTextAtSize(fullName, fontSize);
+      const nameX = 355 - nameTextWidth / 2;
+      const nameY = 300;
+
+      page.drawText(fullName, {
+        x: nameX,
+        y: nameY,
+        size: fontSize,
+        font: helveticaFont,
+        color: PDFLib.rgb(0, 0, 0)
       });
 
-      // Certificate generation logic goes here
-      alert(`Certificate generated for ${firstName} ${lastName} with pathway: ${selectedPathway}`);
+      // Center the pathway text
+      const pathwayTextWidth = helveticaFont.widthOfTextAtSize(selectedPathwayText, fontSize / 2);
+      const pathwayX = 355 - pathwayTextWidth / 2;
+      const pathwayY = 220;
+
+      page.drawText(selectedPathwayText, {
+        x: pathwayX,
+        y: pathwayY,
+        size: fontSize / 2,
+        font: helveticaFont,
+        color: PDFLib.rgb(0, 0, 0)
+      });
+
+      // Serialize the PDF document to bytes
+      const pdfBytes = await pdfDoc.save();
+
+      // Download the PDF file
+      const blob = new Blob([pdfBytes], {
+        type: 'application/pdf'
+      });
+      const blobUrl = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = `${firstName}_${lastName}_Certificate.pdf`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
     }
   </script>
-
 </body>
 
 </html>
