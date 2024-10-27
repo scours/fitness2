@@ -197,19 +197,6 @@ Modified By: Steward OUADI
         color: PDFLib.rgb(0, 0, 0)
       });
 
-      // Draw verification instruction
-      // const instructionText = "Scan to verify certificate authenticity.";
-      // const instructionTextWidth = helveticaFont.widthOfTextAtSize(instructionText, 14);
-      // const instructionX = pageWidth / 2 - instructionTextWidth / 2;
-      // const instructionY = 180;
-      // page.drawText(instructionText, {
-      //   x: instructionX,
-      //   y: instructionY,
-      //   size: 14,
-      //   font: helveticaFont,
-      //   color: PDFLib.rgb(0, 0, 0)
-      // });
-
       // Generate QR code for verification link
       const qr = new QRious({
         value: verificationLink,
