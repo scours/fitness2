@@ -135,40 +135,45 @@ Modified By: Steward OUADI
       const firstName = document.getElementById('firstNameInput').value;
       const lastName = document.getElementById('lastNameInput').value;
       const selectedPathwayText = document.getElementById('pathwaySelect').selectedOptions[0].textContent;
-      const certificationDate = new Date().toLocaleDateString();
 
-      // Encode certificate information for verification link
+      const certificationDate = new Date();
+      const certificationDateFormatted = `Certified on ${certificationDate.toLocaleDateString('en-GB', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+    })}`;
+
       const certificateInfo = {
-        firstName: firstName,
-        lastName: lastName,
+        firstName,
+        lastName,
         pathway: selectedPathwayText,
-        certificationDate: certificationDate
+        certificationDate: certificationDateFormatted
       };
-      const encodedCertificateInfo =
-        encodeURIComponent(LZString.compressToEncodedURIComponent(JSON.stringify(certificateInfo)));
+
+      const encodedCertificateInfo = encodeURIComponent(
+        LZString.compressToEncodedURIComponent(JSON.stringify(certificateInfo))
+      );
       const verificationLink =
         `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/verify-certificate-authenticity.html?data=${encodedCertificateInfo}`;
 
-      // Fetch the base certificate PDF
       const url = 'images/certificate-of-completion-fitness-2.pdf';
-      const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+      const existingPdfBytes = await fetch(url).then((res) => res.arrayBuffer());
       const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
 
-      // Embed the Times Roman font
       const timesRomanFont = await pdfDoc.embedFont(PDFLib.StandardFonts.TimesRoman);
       const page = pdfDoc.getPage(0);
 
-      // Define font sizes and positions
+      // Define positions
       const fontSize = 24;
       const pageWidth = page.getWidth();
 
-      // Draw fullName text, centered on X-axis with a bold effect
+      // Draw fullName text
       const fullName = `${firstName} ${lastName}`;
       const nameTextWidth = timesRomanFont.widthOfTextAtSize(fullName, fontSize);
-      const nameX = (pageWidth - nameTextWidth) / 2; // Centered on X-axis
+      const nameX = (pageWidth - nameTextWidth) / 2;
       const nameY = 330;
 
-      // Draw multiple layers for bold effect
       page.drawText(fullName, {
         x: nameX,
         y: nameY,
@@ -176,23 +181,10 @@ Modified By: Steward OUADI
         font: timesRomanFont,
         color: PDFLib.rgb(0, 0, 0)
       });
-      page.drawText(fullName, {
-        x: nameX + 0.5, // Slight horizontal offset
-        y: nameY,
-        size: fontSize,
-        font: timesRomanFont,
-        color: PDFLib.rgb(0, 0, 0)
-      });
-      page.drawText(fullName, {
-        x: nameX,
-        y: nameY - 0.5, // Slight vertical offset
-        size: fontSize,
-        font: timesRomanFont,
-        color: PDFLib.rgb(0, 0, 0)
-      });
-      // Draw pathway text, centered on X-axis
+
+      // Draw pathway text
       const pathwayTextWidth = timesRomanFont.widthOfTextAtSize(selectedPathwayText, fontSize / 2);
-      const pathwayX = (pageWidth - pathwayTextWidth) / 2; // Centered on X-axis
+      const pathwayX = (pageWidth - pathwayTextWidth) / 2;
       const pathwayY = 270;
 
       page.drawText(selectedPathwayText, {
@@ -203,22 +195,28 @@ Modified By: Steward OUADI
         color: PDFLib.rgb(0, 0, 0)
       });
 
-      // Generate QR code at a high resolution
-      const qr = new QRious({
-        value: verificationLink,
-        size: 200 // Set larger size for better image quality
+      // Draw certification date in Times New Roman, color #15257b
+      page.drawText(certificationDateFormatted, {
+        x: 600,
+        y: 150,
+        size: 12,
+        font: timesRomanFont,
+        color: PDFLib.rgb(21 / 255, 37 / 255, 123 / 255)
       });
 
-      // Convert QR code to image bytes and embed in PDF
+      // Generate QR code
+      const qr = new QRious({
+        value: verificationLink,
+        size: 200
+      });
       const qrImageBytes = qr.toDataURL().split(",")[1];
       const qrImage = await pdfDoc.embedPng(qrImageBytes);
 
-      // Draw QR code at fixed size on PDF
       page.drawImage(qrImage, {
-        x: 100, // X-coordinate
-        y: 100, // Y-coordinate
-        width: 100, // Fixed width for QR code display
-        height: 100 // Fixed height for QR code display
+        x: 100,
+        y: 100,
+        width: 100,
+        height: 100
       });
 
       // Save and download PDF
