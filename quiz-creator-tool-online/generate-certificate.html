@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Friday, 25th October 2024
 Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
 -----
-Last Modified: Saturday, 26th October 2024
+Last Modified: Sunday, 27th October 2024
 Modified By: Steward OUADI
 -->
 
@@ -136,6 +136,8 @@ Modified By: Steward OUADI
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/blob-stream/0.1.3/blob-stream.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
 
   <script>
     function loadProfileData() {
@@ -162,6 +164,19 @@ Modified By: Steward OUADI
       const firstName = document.getElementById('firstName').textContent;
       const lastName = document.getElementById('lastName').textContent;
       const selectedPathwayText = document.getElementById('pathwaySelect').selectedOptions[0].textContent;
+      const certificationDate = new Date().toLocaleDateString();
+
+      // Encode certificate information for verification link
+      const certificateInfo = {
+        firstName: firstName,
+        lastName: lastName,
+        pathway: selectedPathwayText,
+        certificationDate: certificationDate
+      };
+      const encodedCertificateInfo =
+        encodeURIComponent(LZString.compressToEncodedURIComponent(JSON.stringify(certificateInfo)));
+      const verificationLink =
+        `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/verify-certificate-authenticity.html?data=${encodedCertificateInfo}`;
 
       // Fetch the base certificate PDF
       const url = 'images/certificate-of-completion-fitness-2.pdf';
@@ -174,9 +189,9 @@ Modified By: Steward OUADI
       // Get the first page of the document
       const page = pdfDoc.getPage(0);
 
-      // Define positions and font sizes
-      const pageWidth = page.getWidth();
+      // Define font sizes and text positions
       const fontSize = 24;
+      const pageWidth = page.getWidth();
 
       // Center the fullName text
       const fullName = `${firstName} ${lastName}`;
@@ -203,6 +218,38 @@ Modified By: Steward OUADI
         size: fontSize / 2,
         font: helveticaFont,
         color: PDFLib.rgb(0, 0, 0)
+      });
+
+      // Draw the verification instruction text
+      const instructionText = "Scan to verify certificate authenticity.";
+      const instructionTextWidth = helveticaFont.widthOfTextAtSize(instructionText, 14);
+      const instructionX = pageWidth / 2 - instructionTextWidth / 2;
+      const instructionY = 180;
+
+      page.drawText(instructionText, {
+        x: instructionX,
+        y: instructionY,
+        size: 14,
+        font: helveticaFont,
+        color: PDFLib.rgb(0, 0, 0)
+      });
+
+      // Generate a larger QR code for the verification link
+      const qr = new QRious({
+        value: verificationLink,
+        size: 150 // Increase size for better scan visibility
+      });
+
+      // Convert QR code to image bytes and embed it into the PDF
+      const qrImageBytes = qr.toDataURL().split(",")[1];
+      const qrImage = await pdfDoc.embedPng(qrImageBytes);
+
+      // Adjust position and size on the PDF without additional scaling
+      page.drawImage(qrImage, {
+        x: instructionX - 35, // Adjust X for centering based on new size
+        y: instructionY - 150, // Adjust Y position for the larger QR
+        width: qrImage.width, // Directly use the generated size
+        height: qrImage.height
       });
 
       // Serialize the PDF document to bytes
