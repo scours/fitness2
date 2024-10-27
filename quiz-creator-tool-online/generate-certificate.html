@@ -162,11 +162,12 @@ Modified By: Steward OUADI
       const fontSize = 24;
       const pageWidth = page.getWidth();
 
-      // Draw fullName text
+      // Draw fullName text, centered on X-axis
       const fullName = `${firstName} ${lastName}`;
       const nameTextWidth = helveticaFont.widthOfTextAtSize(fullName, fontSize);
-      const nameX = 355 - nameTextWidth / 2;
-      const nameY = 300;
+      const nameX = (pageWidth - nameTextWidth) / 2; // Centered on X-axis
+      const nameY = 330;
+
       page.drawText(fullName, {
         x: nameX,
         y: nameY,
@@ -175,10 +176,11 @@ Modified By: Steward OUADI
         color: PDFLib.rgb(0, 0, 0)
       });
 
-      // Draw pathway text
+      // Draw pathway text, centered on X-axis
       const pathwayTextWidth = helveticaFont.widthOfTextAtSize(selectedPathwayText, fontSize / 2);
-      const pathwayX = 355 - pathwayTextWidth / 2;
-      const pathwayY = 220;
+      const pathwayX = (pageWidth - pathwayTextWidth) / 2; // Centered on X-axis
+      const pathwayY = 270;
+
       page.drawText(selectedPathwayText, {
         x: pathwayX,
         y: pathwayY,
@@ -187,20 +189,23 @@ Modified By: Steward OUADI
         color: PDFLib.rgb(0, 0, 0)
       });
 
-      // Generate QR code for verification link
+      // Generate QR code at a high resolution
       const qr = new QRious({
         value: verificationLink,
-        size: 110
-      });
-      const qrImageBytes = qr.toDataURL().split(",")[1];
-      const qrImage = await pdfDoc.embedPng(qrImageBytes);
-      page.drawImage(qrImage, {
-        x: 100,
-        y: 100,
-        width: qrImage.width,
-        height: qrImage.height
+        size: 200 // Set larger size for better image quality
       });
 
+      // Convert QR code to image bytes and embed in PDF
+      const qrImageBytes = qr.toDataURL().split(",")[1];
+      const qrImage = await pdfDoc.embedPng(qrImageBytes);
+
+      // Draw QR code at fixed size on PDF
+      page.drawImage(qrImage, {
+        x: 100, // X-coordinate
+        y: 100, // Y-coordinate
+        width: 100, // Fixed width for QR code display
+        height: 100 // Fixed height for QR code display
+      });
       // Save and download PDF
       const pdfBytes = await pdfDoc.save();
       const blob = new Blob([pdfBytes], {
