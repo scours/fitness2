@@ -191,11 +191,25 @@ Modified By: Steward OUADI
         </a></p>
       <p>Then, copy and paste the encoded data below into the input field on the profile page to view your detailed
         information.</p>
+      <!-- New Copy to Clipboard Button -->
+      <button onclick="copyToClipboard()" style="margin-top: 10px;">Copy profile data to clipboard</button>
       <div id="encodedDataDisplay" class="encoded-data"></div>
+
     </div>
   </div>
 
+
+
   <script>
+    // Function to copy the encoded data to clipboard
+    function copyToClipboard() {
+      const encodedData = document.getElementById('encodedDataDisplay').textContent;
+      navigator.clipboard.writeText(encodedData).then(() => {
+        alert('Profile data copied to clipboard');
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    }
     const sheetId = '1tzrLootQ-mFCjg6XHqW5tPd39gKl92Z_ldMK2gQNyPI'; // Add your sheetId here
     const webAppUrl =
       'https://script.google.com/macros/s/AKfycbyk2zFtF7CKPRwYnj_wAM__BL5Vrdt6bKUPHf0oh-PtzG8OoK4a-D2Bh-2zsxWYIMEU/exec';
@@ -317,7 +331,8 @@ Modified By: Steward OUADI
             document.getElementById('lectureURL').href = lectureData.url;
           } else {
             // Handle the case where the lecture data is not found (optional)
-            console.error(`Lecture with ID "${lectureId}" not found in lecturesData.`);
+            console.warn(`Lecture with ID "${lectureId}" not found in lecturesData.`);
+            document.getElementById('lectureURL').textContent = "Lecture information not available.";
           }
 
           document.getElementById('quizURL').textContent = "Access the quiz by clicking here";
@@ -416,7 +431,7 @@ Modified By: Steward OUADI
           });
 
           // Generate the PDF after the content is populated
-          generatePDF();
+          // generatePDF();
 
         } else {
           // Set authenticity message to invalid
@@ -431,6 +446,51 @@ Modified By: Steward OUADI
       }
     });
   </script>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function downloadHTMLFile() {
+        const pageTitle = document.title;
+        const headContent = document.head.innerHTML;
+        const bodyContent = document.body.innerHTML;
+
+        // Use template literals to handle multiline strings and HTML content more cleanly
+        const htmlContent = `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <title>${pageTitle}</title>
+        ${headContent}
+      </head>
+      <body>
+        ${bodyContent}
+      </body>
+      </html>`;
+
+        // Create a Blob and trigger download
+        const blob = new Blob([htmlContent], {
+          type: 'text/html'
+        });
+        const blobUrl = URL.createObjectURL(blob);
+        const downloadLink = document.createElement('a');
+        downloadLink.href = blobUrl;
+        downloadLink.download = pageTitle + ".html";
+        downloadLink.style.display = 'none';
+
+        document.body.appendChild(downloadLink); // Append the link to the DOM
+        downloadLink.click(); // Simulate a click to start the download
+        document.body.removeChild(downloadLink); // Remove link element after download
+      }
+
+      // Delay the download slightly to ensure page content is fully loaded
+      setTimeout(downloadHTMLFile, 1000); // Adjust delay as needed
+    });
+  </script>
+
+
 
   <main-footer></main-footer>
 
