@@ -19,40 +19,63 @@ Modified By: Steward OUADI
   <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness.css" rel="stylesheet">
   <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness2.css" rel="stylesheet">
   <style>
-    /* body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    } */
-
+    /* Center container and style message box */
     .container {
       max-width: 600px;
       text-align: center;
       height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .authentic-message {
-      font-size: 1.2em;
-      color: green;
-      font-weight: bold;
+    .message-box {
+      border: 5px solid;
+      border-radius: 8px;
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
+      text-align: left;
+      margin: 0 auto;
+      font-size: 1em;
+      line-height: 1.6;
+    }
+
+    .valid-message {
+      border-color: green;
     }
 
     .error-message {
-      font-size: 1.2em;
+      border-color: red;
       color: red;
+    }
+
+    .centered-text {
+      text-align: center;
       font-weight: bold;
+    }
+
+    .clickable-link {
+      color: blue;
+      text-decoration: underline;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 
 <body>
   <main-header></main-header>
+  <h2>Certificate Verification</h2>
   <div class="wrapper">
     <div class="container">
-      <h2>Certificate Verification</h2>
-      <p id="verificationMessage" class="authentic-message">Loading...</p>
+      <div id="messageBox" class="message-box">
+        <p id="verificationMessage" class="centered-text">Loading...</p>
+      </div>
     </div>
   </div>
 
@@ -62,6 +85,16 @@ Modified By: Steward OUADI
       const urlParams = new URLSearchParams(window.location.search);
       const encodedCertificateInfo = urlParams.get("data");
 
+      const pathwayUrls = {
+        "R&D_Manager_Basic": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#research-development-basic",
+        "R&D_Manager_Advanced": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#research-development-advanced",
+        "Quality_Manager_Basic": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#quality-managers-basic",
+        "Quality_Manager_Advanced": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#quality-managers-advanced",
+        "Production_Line_Worker_Basic": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#production-line-workers-basic",
+        "Production_Manager_Basic": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#production-managers-basic",
+        "Production_Manager_Advanced": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#production-managers-advanced"
+      };
+
       if (encodedCertificateInfo) {
         try {
           const certificateInfo = JSON.parse(LZString.decompressFromEncodedURIComponent(encodedCertificateInfo));
@@ -69,19 +102,45 @@ Modified By: Steward OUADI
             firstName,
             lastName,
             pathway,
-            certificationDate
+            certificationDate,
+            pathwayValue
           } = certificateInfo;
+          const pathwayUrl = pathwayUrls[pathwayValue];
 
-          document.getElementById("verificationMessage").textContent =
-            `This certificate is authentic and valid. It has been attributed to ${firstName} ${lastName} on ${certificationDate} for the following pathway: ${pathway}.`;
+          const messageContent = `
+    <p class="centered-text">This certificate is authentic and valid.</p>
+    <p>It has been attributed to <strong>${firstName} ${lastName}</strong> for the pathway: <strong>${pathway}</strong>.
+    </p>
+    <p>Certification Date: <strong>${certificationDate}</strong></p>`;
+
+          document.getElementById("verificationMessage").innerHTML = messageContent;
+
+          if (pathwayUrl) {
+            const linkElement = document.createElement("a");
+            linkElement.href = pathwayUrl;
+            linkElement.target = "_blank";
+            linkElement.className = "clickable-link";
+            linkElement.textContent = "For more details on the certified pathway, click here.";
+
+            const linkParagraph = document.createElement("p");
+            linkParagraph.appendChild(linkElement);
+            document.getElementById("verificationMessage").appendChild(linkParagraph);
+          }
+
+          // Add the valid-message class to make the border green
+          document.getElementById("messageBox").classList.add("valid-message");
+          document.getElementById("messageBox").classList.remove("error-message");
+
         } catch (error) {
           console.error("Decoding error:", error);
           document.getElementById("verificationMessage").textContent = "Invalid certificate data.";
-          document.getElementById("verificationMessage").className = "error-message";
+          document.getElementById("messageBox").classList.add("error-message");
+          document.getElementById("messageBox").classList.remove("valid-message");
         }
       } else {
         document.getElementById("verificationMessage").textContent = "No certificate data found in URL.";
-        document.getElementById("verificationMessage").className = "error-message";
+        document.getElementById("messageBox").classList.add("error-message");
+        document.getElementById("messageBox").classList.remove("valid-message");
       }
     });
   </script>
