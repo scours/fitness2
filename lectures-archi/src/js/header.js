@@ -13,10 +13,13 @@ class Header extends HTMLElement {
     this.innerHTML = `
     <div id="google_translate_element"></div> <!-- Google Translate element -->
     <div class="topnav" id="topNavId1">
-        <a href="https://fitness.agroparistech.fr" >Home</a>
-        <a href="javascript:void(0);" class="icon" onclick="topNavOnClick()">
-            <i class="fa fa-bars"></i>
-        </a>
+      <a href="https://fitness.agroparistech.fr">Home</a>
+      <a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/profile.html" class="profile-icon" title="Profile">
+        <i class="fa fa-user"></i>
+      </a>
+      <a href="javascript:void(0);" class="icon" onclick="topNavOnClick()">
+        <i class="fa fa-bars"></i>
+      </a>
     </div>
     <div class="logo-header">
       <div class="logo-left">
