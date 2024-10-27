@@ -13,20 +13,24 @@ Modified By: Steward OUADI
 <html lang="en">
 
 <head>
+  <link rel="icon" href="/fitness/lectures/favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <title>Verify Certificate Authenticity</title>
+  <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness.css" rel="stylesheet">
+  <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness2.css" rel="stylesheet">
   <style>
-    body {
+    /* body {
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-    }
+    } */
 
     .container {
       max-width: 600px;
       text-align: center;
+      height: 50vh;
     }
 
     .authentic-message {
@@ -44,9 +48,12 @@ Modified By: Steward OUADI
 </head>
 
 <body>
-  <div class="container">
-    <h2>Certificate Verification</h2>
-    <p id="verificationMessage" class="authentic-message">Loading...</p>
+  <main-header></main-header>
+  <div class="wrapper">
+    <div class="container">
+      <h2>Certificate Verification</h2>
+      <p id="verificationMessage" class="authentic-message">Loading...</p>
+    </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
@@ -78,6 +85,12 @@ Modified By: Steward OUADI
       }
     });
   </script>
+  <main-footer></main-footer>
+
+  <link rel="stylesheet" href="modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
+  <script src="src/js/google_translate_plugin.js"></script>
+  <script src="src/js/header.js"></script>
+  <script src="src/js/footer.js"></script>
 </body>
 
 </html>
