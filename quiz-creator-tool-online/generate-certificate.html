@@ -19,94 +19,25 @@ Modified By: Steward OUADI
   <title>Generate Certificate</title>
   <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness.css" rel="stylesheet">
   <link href="https://fitness.agroparistech.fr/fitness2/lectures/src/css/fitness2.css" rel="stylesheet">
-  <style>
-    .certificate-container {
-      width: 90%;
-      max-width: 600px;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      margin: 50px auto;
-
-    }
-
-    .certificate-container h2 {
-
-      margin-bottom: 10px;
-    }
-
-    .input-group {
-      margin: 20px 0;
-    }
-
-    .input-group label {
-      display: block;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 8px;
-      text-align: left;
-    }
-
-    .input-group input,
-    .input-group select {
-      width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ddd;
-      box-sizing: border-box;
-    }
-
-    .info-text {
-      margin-top: 20px;
-      color: #555;
-      font-size: 1.1em;
-      line-height: 1.5em;
-    }
-
-    .info-highlight {
-      color: #00796b;
-      font-weight: bold;
-    }
-
-    .generate-btn {
-      /* background-color: #4caf50; */
-      color: #fff;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1em;
-      font-weight: bold;
-      transition: background-color 0.3s;
-      width: 100%;
-      max-width: 200px;
-      margin-top: 20px;
-    }
-  </style>
 </head>
 
 <body>
+
   <main-header></main-header>
 
-  <div class="certificate-container txt-orange-fitness">
+  <div class="certificate-container txt-orange-fitness" style="display:none;" id="certificateSection">
     <h2>Generate Certificate</h2>
-
     <div class="info-text">
       <p>The generated certificate will be for:</p>
-
     </div>
     <div class="input-group">
       <label for="firstNameInput">First Name:</label>
       <input type="text" id="firstNameInput" placeholder="Enter first name">
     </div>
-
     <div class="input-group">
       <label for="lastNameInput">Last Name:</label>
       <input type="text" id="lastNameInput" placeholder="Enter last name">
     </div>
-
     <div class="input-group">
       <label for="pathwaySelect">Select Pathway:</label>
       <select id="pathwaySelect">
@@ -119,86 +50,71 @@ Modified By: Steward OUADI
         <option value="Production_Manager_Advanced">Packaging Production Managers (Advanced)</option>
       </select>
     </div>
-
-
-
     <button class="generate-btn btn-default" onclick="generateCertificate()">Generate Certificate</button>
   </div>
+
+  <!-- MD5 Hashing Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.18.0/js/md5.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
 
-
   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const storedHash = "f7aa1b04f7ac15f961f53cf80d06f233";
+
+      let enteredPassword = prompt("Enter the password to access this page:");
+      if (enteredPassword && md5(enteredPassword) === storedHash) {
+        document.getElementById("certificateSection").style.display = "block";
+      } else {
+        alert("Incorrect password.");
+        window.location.href = "https://fitness.agroparistech.fr";
+      }
+    });
+
     async function generateCertificate() {
       const firstName = document.getElementById('firstNameInput').value;
       const lastName = document.getElementById('lastNameInput').value;
-      const selectedPathway = document.getElementById('pathwaySelect').value; // Only the value
+      const selectedPathway = document.getElementById('pathwaySelect').value;
       const selectedPathwayText = document.getElementById('pathwaySelect').selectedOptions[0].textContent;
-      const certificationDate = new Date();
-      const certificationDateFormatted = `Certified on ${certificationDate.toLocaleDateString('en-GB', {
-    weekday: 'long',
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric'
+      const certificationDateFormatted = `Certified on ${new Date().toLocaleDateString('en-GB', {
+      weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
     })}`;
 
-      // Encode certificate information, passing only the selected pathway value
       const certificateInfo = {
-        firstName: firstName,
-        lastName: lastName,
+        firstName,
+        lastName,
         pathway: selectedPathwayText,
         certificationDate: certificationDateFormatted,
-        pathwayValue: selectedPathway // Transmit only the value
+        pathwayValue: selectedPathway
       };
-
-
-      const encodedCertificateInfo = encodeURIComponent(
-        LZString.compressToEncodedURIComponent(JSON.stringify(certificateInfo))
-      );
+      const encodedCertificateInfo = encodeURIComponent(LZString.compressToEncodedURIComponent(JSON.stringify(
+        certificateInfo)));
       const verificationLink =
         `https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/verify-certificate-authenticity.html?data=${encodedCertificateInfo}`;
-
-      const url = 'images/certificate-of-completion-fitness-2.pdf';
-      const existingPdfBytes = await fetch(url).then((res) => res.arrayBuffer());
+      const existingPdfBytes = await fetch('images/certificate-of-completion-fitness-2.pdf').then(res => res
+        .arrayBuffer());
       const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
-
       const timesRomanFont = await pdfDoc.embedFont(PDFLib.StandardFonts.TimesRoman);
       const page = pdfDoc.getPage(0);
-
-      // Define positions
       const fontSize = 24;
       const pageWidth = page.getWidth();
 
-      // Draw fullName text
-      const fullName = `${firstName} ${lastName}`;
-      const nameTextWidth = timesRomanFont.widthOfTextAtSize(fullName, fontSize);
-      const nameX = (pageWidth - nameTextWidth) / 2;
-      const nameY = 330;
-
-      page.drawText(fullName, {
-        x: nameX,
-        y: nameY,
+      page.drawText(`${firstName} ${lastName}`, {
+        x: (pageWidth - timesRomanFont.widthOfTextAtSize(`${firstName} ${lastName}`, fontSize)) / 2,
+        y: 330,
         size: fontSize,
-        font: timesRomanFont,
-        color: PDFLib.rgb(0, 0, 0)
+        font: timesRomanFont
       });
-
-      // Draw pathway text
-      const pathwayTextWidth = timesRomanFont.widthOfTextAtSize(selectedPathwayText, fontSize / 2);
-      const pathwayX = (pageWidth - pathwayTextWidth) / 2;
-      const pathwayY = 270;
 
       page.drawText(selectedPathwayText, {
-        x: pathwayX,
-        y: pathwayY,
+        x: (pageWidth - timesRomanFont.widthOfTextAtSize(selectedPathwayText, fontSize / 2)) / 2,
+        y: 270,
         size: fontSize / 2,
-        font: timesRomanFont,
-        color: PDFLib.rgb(0, 0, 0)
+        font: timesRomanFont
       });
 
-      // Draw certification date in Times New Roman, color #15257b
       page.drawText(certificationDateFormatted, {
         x: 600,
         y: 150,
@@ -207,7 +123,6 @@ Modified By: Steward OUADI
         color: PDFLib.rgb(21 / 255, 37 / 255, 123 / 255)
       });
 
-      // Generate QR code
       const qr = new QRious({
         value: verificationLink,
         size: 200
@@ -222,7 +137,6 @@ Modified By: Steward OUADI
         height: 110
       });
 
-      // Save and download PDF
       const pdfBytes = await pdfDoc.save();
       const blob = new Blob([pdfBytes], {
         type: 'application/pdf'
@@ -236,12 +150,8 @@ Modified By: Steward OUADI
       document.body.removeChild(a);
     }
   </script>
-  <main-footer></main-footer>
 
-  <link rel="stylesheet" href="modifyLectures/assets/bootstrap/css/bootstrap.min.css" />
-  <script src="src/js/google_translate_plugin.js"></script>
-  <script src="src/js/header.js"></script>
-  <script src="src/js/footer.js"></script>
+  <main-footer></main-footer>
 </body>
 
 </html>
