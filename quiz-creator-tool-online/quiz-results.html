@@ -233,184 +233,189 @@ Modified By: Steward OUADI
       const authenticityDiv = document.getElementById('authenticity');
       const profileLoginDiv = document.getElementById('profileLoginDiv'); // Profile login div
 
+      // Check if the page is being served over http/https
+      if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+        // Get the hash part of the URL, which contains the compressedQuizInfo
+        const hash = window.location.hash.substring(1);
 
-      // Get the hash part of the URL, which contains the compressedQuizInfo
-      const hash = window.location.hash.substring(1);
+        if (hash) {
+          // Decompress the hash value
+          const decompressedQuizInfo = LZString.decompressFromEncodedURIComponent(hash);
 
-      if (hash) {
-        // Decompress the hash value
-        const decompressedQuizInfo = LZString.decompressFromEncodedURIComponent(hash);
+          if (decompressedQuizInfo) {
+            // Parse the decompressed string to an object
+            const quizInfo = JSON.parse(decompressedQuizInfo);
 
-        if (decompressedQuizInfo) {
-          // Parse the decompressed string to an object
-          const quizInfo = JSON.parse(decompressedQuizInfo);
+            // Debug: Log the entire quizInfo object to see if it contains the expected data
+            console.log('Parsed quizInfo:', quizInfo);
 
-          // Debug: Log the entire quizInfo object to see if it contains the expected data
-          console.log('Parsed quizInfo:', quizInfo);
+            // Set authenticity message to valid
+            authenticityDiv.classList.add('authentic-green');
+            authenticityDiv.textContent = 'The information on this page is authentic and valid.';
 
-          // Set authenticity message to valid
-          authenticityDiv.classList.add('authentic-green');
-          authenticityDiv.textContent = 'The information on this page is authentic and valid.';
+            // Access profileInfoUrl safely and log it for debugging
+            let profileInfoUrl = null;
+            if (quizInfo.metadata && quizInfo.metadata.profileInfoUrl) {
+              profileInfoUrl = quizInfo.metadata.profileInfoUrl;
 
-          // Access profileInfoUrl safely and log it for debugging
-          let profileInfoUrl = null;
-          if (quizInfo.metadata && quizInfo.metadata.profileInfoUrl) {
-            profileInfoUrl = quizInfo.metadata.profileInfoUrl;
+              // Extract the encoded data (data parameter) from profileInfoUrl
+              const urlParams = new URLSearchParams(new URL(profileInfoUrl).search);
+              let encodedProfileData = urlParams.get("data");
 
-            // Extract the encoded data (data parameter) from profileInfoUrl
-            const urlParams = new URLSearchParams(new URL(profileInfoUrl).search);
-            let encodedProfileData = urlParams.get("data");
+              // Replace spaces with + to ensure proper encoding format
+              if (encodedProfileData) {
+                encodedProfileData = encodedProfileData.replace(/ /g, '+');
 
-            // Replace spaces with + to ensure proper encoding format
-            if (encodedProfileData) {
-              encodedProfileData = encodedProfileData.replace(/ /g, '+');
-
-              // Display the extracted encoded data for the user to copy
-              encodedDataDisplay.textContent = encodedProfileData;
-              console.log('Encoded profile data:', encodedProfileData);
+                // Display the extracted encoded data for the user to copy
+                encodedDataDisplay.textContent = encodedProfileData;
+                console.log('Encoded profile data:', encodedProfileData);
+              } else {
+                console.warn('No encoded profile data found in profileInfoUrl');
+              }
             } else {
-              console.warn('No encoded profile data found in profileInfoUrl');
+              console.warn('profileInfoUrl not found in quizInfo.metadata');
             }
-          } else {
-            console.warn('profileInfoUrl not found in quizInfo.metadata');
-          }
 
 
-          // Display learner information
-          const learnerData = quizInfo.learnerData;
-          document.getElementById('learnerName').textContent =
-            `Name: ${learnerData.FirstName} ${learnerData.LastName}`;
-          document.getElementById('learnerEmail').textContent = `Email: ${learnerData.Email}`;
+            // Display learner information
+            const learnerData = quizInfo.learnerData;
+            document.getElementById('learnerName').textContent =
+              `Name: ${learnerData.FirstName} ${learnerData.LastName}`;
+            document.getElementById('learnerEmail').textContent = `Email: ${learnerData.Email}`;
 
-          // Display quiz information
-          const metadata = quizInfo.metadata;
+            // Display quiz information
+            const metadata = quizInfo.metadata;
 
-          // Assuming quizInfo.metadata.name corresponds to lecturesData.id
-          const lectureId = quizInfo.metadata.name;
+            // Assuming quizInfo.metadata.name corresponds to lecturesData.id
+            const lectureId = quizInfo.metadata.name;
 
-          // Find the lecture data that matches the given id
-          const lectureData = lecturesData.find(lecture => lecture.id === lectureId);
+            // Find the lecture data that matches the given id
+            const lectureData = lecturesData.find(lecture => lecture.id === lectureId);
 
-          if (lectureData) {
-            // Set the text content for the lecture URL
-            document.getElementById('lectureURL').textContent = `Access the lecture "${lectureData.name}" by clicking
+            if (lectureData) {
+              // Set the text content for the lecture URL
+              document.getElementById('lectureURL').textContent = `Access the lecture "${lectureData.name}" by clicking
           here`;
 
-            // Set the href attribute for the lecture URL
-            document.getElementById('lectureURL').href = lectureData.url;
-          } else {
-            // Handle the case where the lecture data is not found (optional)
-            console.warn(`Lecture with ID "${lectureId}" not found in lecturesData.`);
-            document.getElementById('lectureURL').textContent = "Lecture information not available.";
-          }
-
-          document.getElementById('quizURL').textContent = "Access the quiz by clicking here";
-          document.getElementById('quizURL').href = metadata.quizUrl;
-          const numberOfCorrectAnswers = parseFloat(metadata.numberOfCorrectAnswers);
-          const numberOfQuestions = parseInt(metadata.numberOfQuestions);
-          const successPercentage = ((numberOfCorrectAnswers / numberOfQuestions) * 100).toFixed(2);
-          document.getElementById('successPercentage').textContent = `Success Percentage: ${successPercentage}%`;
-          let sheetName = metadata.sheetName;
-
-
-          // Display startedAt and endedAt with separate date and time including the weekday
-          const startedAt = new Date(metadata.startedAt);
-          const endedAt = new Date(metadata.endedAt);
-
-          // Options to include the weekday in the date string
-          const dateOptions = {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          };
-
-          // Format the start and end times
-          const startedAtTime = startedAt.toLocaleTimeString();
-          const startedAtDate = startedAt.toLocaleDateString(undefined, dateOptions);
-          const endedAtTime = endedAt.toLocaleTimeString();
-          const endedAtDate = endedAt.toLocaleDateString(undefined, dateOptions);
-
-          document.getElementById('startedAt').textContent =
-            `Quiz Started At: ${startedAtTime}, on ${startedAtDate}`;
-          document.getElementById('endedAt').textContent = `Quiz Ended At: ${endedAtTime}, on ${endedAtDate}`;
-
-          // Calculate and display elapsed time
-          const elapsedTime = endedAt - startedAt;
-          const elapsedHours = Math.floor(elapsedTime / (1000 * 60 * 60));
-          const elapsedMinutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
-          const elapsedSeconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
-          document.getElementById('elapsedTime').textContent =
-            `Elapsed Time: ${elapsedHours}h ${elapsedMinutes}m ${elapsedSeconds}s`;
-
-          // Display questions and answers
-          const questionsContainer = document.getElementById('questionsContainer');
-          quizInfo.questionsAndUserAnswers.forEach((q, index) => {
-            // Create a div for each question block
-            const questionDiv = document.createElement('div');
-            questionDiv.className = 'question-block'; // Apply the new class for visual separation
-
-            // Adding a header for the question block with numbering
-            const questionHeader = document.createElement('h3');
-            questionHeader.textContent = `Question ${index + 1}`;
-            questionDiv.appendChild(questionHeader);
-
-            if (q.currentSlide) {
-              // Handle currentSlide type
-              const questionText = document.createElement('p');
-              questionText.className = 'question-text'; // Apply the new class for question text
-              questionText.textContent = `${q.currentSlide.question.text}`;
-              questionDiv.appendChild(questionText);
-
-              const choicesList = document.createElement('ul');
-              choicesList.className = 'choices';
-              for (const [key, answer] of Object.entries(q.currentSlide.answers)) {
-                const choiceItem = document.createElement('li');
-                choiceItem.textContent = `${key}: ${answer.text}`;
-                choicesList.appendChild(choiceItem);
-              }
-              questionDiv.appendChild(choicesList);
-
-              const correctAnswer = document.createElement('p');
-              correctAnswer.className = 'correct-answer'; // Class for correct answer style
-              correctAnswer.textContent = `Expected Answer: ${q.currentSlide.correctAnswer}`;
-              questionDiv.appendChild(correctAnswer);
-
-              const userAnswer = document.createElement('p');
-              // Use compareAnswers function to determine if the user's answer is correct
-              userAnswer.className = compareAnswers(q.currentSlide.correctAnswer, q.userAnswer) ? 'correct' :
-                'incorrect';
-              userAnswer.textContent = `Your Answer: ${q.userAnswer}`;
-              questionDiv.appendChild(userAnswer);
-            } else if (q.slideToRegister) {
-              // Handle slideToRegister type, showing only questionText and userAnswer
-              const questionText = document.createElement('p');
-              questionText.className = 'question-text'; // Use the same class for consistency
-              questionText.textContent = `${q.slideToRegister.questionText}`;
-              questionDiv.appendChild(questionText);
-
-              const userAnswer = document.createElement('p');
-              userAnswer.className = 'user-answer'; // Class for user answer style
-              userAnswer.textContent = `Your Answer: ${q.userAnswer}`;
-              questionDiv.appendChild(userAnswer);
+              // Set the href attribute for the lecture URL
+              document.getElementById('lectureURL').href = lectureData.url;
+            } else {
+              // Handle the case where the lecture data is not found (optional)
+              console.warn(`Lecture with ID "${lectureId}" not found in lecturesData.`);
+              document.getElementById('lectureURL').textContent = "Lecture information not available.";
             }
 
-            // Append the question block to the main container
-            questionsContainer.appendChild(questionDiv);
-          });
+            document.getElementById('quizURL').textContent = "Access the quiz by clicking here";
+            document.getElementById('quizURL').href = metadata.quizUrl;
+            const numberOfCorrectAnswers = parseFloat(metadata.numberOfCorrectAnswers);
+            const numberOfQuestions = parseInt(metadata.numberOfQuestions);
+            const successPercentage = ((numberOfCorrectAnswers / numberOfQuestions) * 100).toFixed(2);
+            document.getElementById('successPercentage').textContent = `Success Percentage: ${successPercentage}%`;
+            let sheetName = metadata.sheetName;
+
+
+            // Display startedAt and endedAt with separate date and time including the weekday
+            const startedAt = new Date(metadata.startedAt);
+            const endedAt = new Date(metadata.endedAt);
+
+            // Options to include the weekday in the date string
+            const dateOptions = {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            };
+
+            // Format the start and end times
+            const startedAtTime = startedAt.toLocaleTimeString();
+            const startedAtDate = startedAt.toLocaleDateString(undefined, dateOptions);
+            const endedAtTime = endedAt.toLocaleTimeString();
+            const endedAtDate = endedAt.toLocaleDateString(undefined, dateOptions);
+
+            document.getElementById('startedAt').textContent =
+              `Quiz Started At: ${startedAtTime}, on ${startedAtDate}`;
+            document.getElementById('endedAt').textContent = `Quiz Ended At: ${endedAtTime}, on ${endedAtDate}`;
+
+            // Calculate and display elapsed time
+            const elapsedTime = endedAt - startedAt;
+            const elapsedHours = Math.floor(elapsedTime / (1000 * 60 * 60));
+            const elapsedMinutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
+            const elapsedSeconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
+            document.getElementById('elapsedTime').textContent =
+              `Elapsed Time: ${elapsedHours}h ${elapsedMinutes}m ${elapsedSeconds}s`;
+
+            // Display questions and answers
+            const questionsContainer = document.getElementById('questionsContainer');
+            quizInfo.questionsAndUserAnswers.forEach((q, index) => {
+              // Create a div for each question block
+              const questionDiv = document.createElement('div');
+              questionDiv.className = 'question-block'; // Apply the new class for visual separation
+
+              // Adding a header for the question block with numbering
+              const questionHeader = document.createElement('h3');
+              questionHeader.textContent = `Question ${index + 1}`;
+              questionDiv.appendChild(questionHeader);
+
+              if (q.currentSlide) {
+                // Handle currentSlide type
+                const questionText = document.createElement('p');
+                questionText.className = 'question-text'; // Apply the new class for question text
+                questionText.textContent = `${q.currentSlide.question.text}`;
+                questionDiv.appendChild(questionText);
+
+                const choicesList = document.createElement('ul');
+                choicesList.className = 'choices';
+                for (const [key, answer] of Object.entries(q.currentSlide.answers)) {
+                  const choiceItem = document.createElement('li');
+                  choiceItem.textContent = `${key}: ${answer.text}`;
+                  choicesList.appendChild(choiceItem);
+                }
+                questionDiv.appendChild(choicesList);
+
+                const correctAnswer = document.createElement('p');
+                correctAnswer.className = 'correct-answer'; // Class for correct answer style
+                correctAnswer.textContent = `Expected Answer: ${q.currentSlide.correctAnswer}`;
+                questionDiv.appendChild(correctAnswer);
+
+                const userAnswer = document.createElement('p');
+                // Use compareAnswers function to determine if the user's answer is correct
+                userAnswer.className = compareAnswers(q.currentSlide.correctAnswer, q.userAnswer) ? 'correct' :
+                  'incorrect';
+                userAnswer.textContent = `Your Answer: ${q.userAnswer}`;
+                questionDiv.appendChild(userAnswer);
+              } else if (q.slideToRegister) {
+                // Handle slideToRegister type, showing only questionText and userAnswer
+                const questionText = document.createElement('p');
+                questionText.className = 'question-text'; // Use the same class for consistency
+                questionText.textContent = `${q.slideToRegister.questionText}`;
+                questionDiv.appendChild(questionText);
+
+                const userAnswer = document.createElement('p');
+                userAnswer.className = 'user-answer'; // Class for user answer style
+                userAnswer.textContent = `Your Answer: ${q.userAnswer}`;
+                questionDiv.appendChild(userAnswer);
+              }
+
+              // Append the question block to the main container
+              questionsContainer.appendChild(questionDiv);
+            });
 
 
 
+          } else {
+            // Set authenticity message to invalid
+            authenticityDiv.classList.add('authentic-red');
+            authenticityDiv.textContent = 'The information on this page is not authentic and valid.';
+            console.error('Failed to decompress quiz information.');
+          }
         } else {
-          // Set authenticity message to invalid
           authenticityDiv.classList.add('authentic-red');
           authenticityDiv.textContent = 'The information on this page is not authentic and valid.';
-          console.error('Failed to decompress quiz information.');
+          console.error('No quiz information found in the URL.');
         }
       } else {
-        authenticityDiv.classList.add('authentic-red');
-        authenticityDiv.textContent = 'The information on this page is not authentic and valid.';
-        console.error('No quiz information found in the URL.');
+        // Offline environment: hide authenticityDiv
+        authenticityDiv.style.display = 'none';
       }
     });
   </script>
@@ -420,58 +425,62 @@ Modified By: Steward OUADI
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       function downloadHTMLFile() {
-        const pageTitle = "quiz-results";
+        // Only proceed if the page is being served online
+        if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+          const pageTitle = "quiz-results";
 
-        // Get the current date and time for filename generation
-        const now = new Date();
-        const day = now.getDate().toString().padStart(2, '0');
-        const month = now.toLocaleString('default', {
-          month: 'long'
-        });
-        const year = now.getFullYear();
-        const hours = now.getHours().toString().padStart(2, '0');
-        const minutes = now.getMinutes().toString().padStart(2, '0');
-        const seconds = now.getSeconds().toString().padStart(2, '0');
+          // Get the current date and time for filename generation
+          const now = new Date();
+          const day = now.getDate().toString().padStart(2, '0');
+          const month = now.toLocaleString('default', {
+            month: 'long'
+          });
+          const year = now.getFullYear();
+          const hours = now.getHours().toString().padStart(2, '0');
+          const minutes = now.getMinutes().toString().padStart(2, '0');
+          const seconds = now.getSeconds().toString().padStart(2, '0');
 
-        // Create the dynamic filename
-        const fileName = `${pageTitle}-${day}-${month}-${year}-${hours}-${minutes}-${seconds}.html`;
+          // Create the dynamic filename
+          const fileName = `${pageTitle}-${day}-${month}-${year}-${hours}-${minutes}-${seconds}.html`;
 
-        const headContent = document.head.innerHTML;
-        const bodyContent = document.body.innerHTML;
+          const headContent = document.head.innerHTML;
+          const bodyContent = document.body.innerHTML;
 
-        // Use template literals to generate the HTML content
-        const htmlContent = `
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <title>${pageTitle}</title>
-        ${headContent}
-      </head>
-      <body>
-        ${bodyContent}
-      </body>
-      </html>`;
+          // Use template literals to generate the HTML content
+          const htmlContent = `
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <title>${pageTitle}</title>
+            ${headContent}
+          </head>
+          <body>
+            ${bodyContent}
+          </body>
+          </html>`;
 
-        // Create a Blob and trigger download
-        const blob = new Blob([htmlContent], {
-          type: 'text/html'
-        });
-        const blobUrl = URL.createObjectURL(blob);
-        const downloadLink = document.createElement('a');
-        downloadLink.href = blobUrl;
-        downloadLink.download = fileName;
-        downloadLink.style.display = 'none';
+          // Create a Blob and trigger download
+          const blob = new Blob([htmlContent], {
+            type: 'text/html'
+          });
+          const blobUrl = URL.createObjectURL(blob);
+          const downloadLink = document.createElement('a');
+          downloadLink.href = blobUrl;
+          downloadLink.download = fileName;
+          downloadLink.style.display = 'none';
 
-        document.body.appendChild(downloadLink); // Append link to DOM
-        downloadLink.click(); // Start download
-        document.body.removeChild(downloadLink); // Remove link after download
+          document.body.appendChild(downloadLink); // Append link to DOM
+          downloadLink.click(); // Start download
+          document.body.removeChild(downloadLink); // Remove link after download
+        }
       }
 
       // Delay the download slightly to ensure page content is fully loaded
       setTimeout(downloadHTMLFile, 1000); // Adjust delay as needed
     });
   </script>
+
 
 
 
