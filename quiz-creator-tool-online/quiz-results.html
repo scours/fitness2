@@ -475,13 +475,49 @@ Modified By: Steward OUADI
           document.body.appendChild(downloadLink); // Append link to DOM
           downloadLink.click(); // Start download
           document.body.removeChild(downloadLink); // Remove link after download
+
+          // Show a professional popup after download
+          showDownloadPopup();
         }
+      }
+
+      function showDownloadPopup() {
+        // Create popup container
+        const popup = document.createElement('div');
+        popup.style.position = 'fixed';
+        popup.style.top = '50%';
+        popup.style.left = '50%';
+        popup.style.transform = 'translate(-50%, -50%)';
+        popup.style.backgroundColor = '#fff';
+        popup.style.padding = '20px';
+        popup.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+        popup.style.zIndex = '1000';
+        popup.style.borderRadius = '8px';
+        popup.style.width = '90%';
+        popup.style.maxWidth = '400px';
+        popup.style.textAlign = 'center';
+
+        // Popup content
+        popup.innerHTML = `
+        <p><strong>File Downloaded Successfully</strong></p>
+        <p>Your quiz result has been automatically downloaded. You can refer to this file later, which includes your profile identifier at the end. This identifier allows you to connect and view your profile conveniently.</p>
+        <button id="popupCloseButton" style="margin-top: 10px; padding: 8px 16px; background-color: #ec6807; color: #fff; border: none; border-radius: 4px; cursor: pointer;">OK</button>
+      `;
+
+        // Append popup to body
+        document.body.appendChild(popup);
+
+        // Close button functionality
+        document.getElementById('popupCloseButton').onclick = function () {
+          document.body.removeChild(popup);
+        };
       }
 
       // Delay the download slightly to ensure page content is fully loaded
       setTimeout(downloadHTMLFile, 1000); // Adjust delay as needed
     });
   </script>
+
 
 
 
