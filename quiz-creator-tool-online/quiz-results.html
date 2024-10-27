@@ -228,37 +228,7 @@ Modified By: Steward OUADI
       return JSON.stringify(correctArray) === JSON.stringify(userArray);
     }
 
-    // Function to capture the page as it appears and convert it to PDF
-    // Generate the PDF including the logos
-    function generatePDF() {
-      const element = document.body; // The entire page or a specific element
 
-      // Customize file name with date and time
-      const now = new Date();
-      const day = now.getDate();
-      const month = now.toLocaleString('default', {
-        month: 'long'
-      });
-      const year = now.getFullYear();
-      const hours = now.getHours().toString().padStart(2, '0');
-      const minutes = now.getMinutes().toString().padStart(2, '0');
-      const seconds = now.getSeconds().toString().padStart(2, '0');
-
-      const fileName = `quiz-results-${day}-${month}-${year}-${hours}-${minutes}-${seconds}.pdf`;
-
-      // Use html2pdf to generate the PDF
-      html2pdf().from(element).set({
-        filename: fileName,
-        html2canvas: {
-          scale: 2
-        }, // Adjust quality
-        jsPDF: {
-          orientation: 'portrait',
-          unit: 'mm',
-          format: 'a4'
-        }
-      }).save();
-    }
     document.addEventListener('DOMContentLoaded', function () {
       const authenticityDiv = document.getElementById('authenticity');
       const profileLoginDiv = document.getElementById('profileLoginDiv'); // Profile login div
@@ -429,8 +399,7 @@ Modified By: Steward OUADI
             questionsContainer.appendChild(questionDiv);
           });
 
-          // Generate the PDF after the content is populated
-          // generatePDF();
+
 
         } else {
           // Set authenticity message to invalid
