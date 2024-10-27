@@ -141,7 +141,7 @@ dmypy.json
 # ENDNOTE
 #########
 *.rdf
-*.pdf
+
 
 # Lammps output, source
 ###################
