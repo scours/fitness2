@@ -134,8 +134,8 @@ Modified By: Steward OUADI
     async function generateCertificate() {
       const firstName = document.getElementById('firstNameInput').value;
       const lastName = document.getElementById('lastNameInput').value;
+      const selectedPathway = document.getElementById('pathwaySelect').value; // Only the value
       const selectedPathwayText = document.getElementById('pathwaySelect').selectedOptions[0].textContent;
-
       const certificationDate = new Date();
       const certificationDateFormatted = `Certified on ${certificationDate.toLocaleDateString('en-GB', {
     weekday: 'long',
@@ -144,12 +144,15 @@ Modified By: Steward OUADI
     year: 'numeric'
     })}`;
 
+      // Encode certificate information, passing only the selected pathway value
       const certificateInfo = {
-        firstName,
-        lastName,
+        firstName: firstName,
+        lastName: lastName,
         pathway: selectedPathwayText,
-        certificationDate: certificationDateFormatted
+        certificationDate: certificationDateFormatted,
+        pathwayValue: selectedPathway // Transmit only the value
       };
+
 
       const encodedCertificateInfo = encodeURIComponent(
         LZString.compressToEncodedURIComponent(JSON.stringify(certificateInfo))
