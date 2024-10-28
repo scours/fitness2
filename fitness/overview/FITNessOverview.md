@@ -165,7 +165,71 @@ Each presentation includes a presenter mode (<kbd>P</kbd>) enabling a display on
 
 ## 6. HOW TO CLONE FITNESS OR TO RUN IT OFFLINE | 📴
 
-### 6.1 Download procedure | ⬇️
+### 6.1 FITNESS 2: Download procedure | ⬇️
+
+### 1. Overview
+
+FITNESS 2 is a web-based learning and training platform designed for easy duplication and deployment on compatible web servers. Unlike FITNESS 1, which is standalone and independent, FITNESS 2 currently relies on a main version hosted on AgroParisTech’s infrastructure. This setup simplifies distribution but may require some adjustments for a fully independent setup.
+
+> If you wish to create a fully independent version of FITNESS 2, you can clone the code from the **[GitHub repository here](https://github.com/scours/fitness2/tree/wip)** and adapt the code as needed to remove dependencies on AgroParisTech’s infrastructure.
+
+### 2. Download the FITNESS 2 Package
+
+The complete FITNESS 2 platform is packaged as a ZIP file, which can be downloaded from: **https://fitness.agroparistech.fr/fitness2/cloning-duplicating-FITNESS/FITNESS2/**. The ZIP file name follows this pattern: `FITNESS2_package_year_month_day__hh_mm.zip`, indicating the date and time of creation.
+
+### 3. Installation Steps
+
+1. **Extract the ZIP Package**:
+
+   - Download and place the ZIP file in your preferred directory, e.g., `/var/www/fitness2`.
+
+   - Extract it using:
+
+     ```
+     unzip FITNESS2_package_YYYY_MM_DD__HH_MM.zip -d /var/www/fitness2
+     ```
+
+2. **Setup Apache Configuration**:
+
+   - Place the `fitnessII.conf` file into Apache’s configuration directory (usually `/etc/apache2/sites-available/` or `/etc/httpd/conf.d/` depending on your distribution).
+
+   - Ensure paths in `fitnessII.conf` match your server’s directory structure.
+
+   - Enable the configuration with:
+
+     ```
+     sudo a2ensite fitnessII.conf
+     sudo systemctl restart apache2
+     ```
+
+     or for 
+
+     ```
+     httpd
+     ```
+
+     :
+
+     ```
+     sudo systemctl restart httpd
+     ```
+
+3. **Modify `fitnessII.conf` for Your Server**:
+
+   - Adjust aliases, if necessary. For instance:
+
+     ```
+     Alias "/fitness2/" "/var/www/fitness2/"
+     ```
+
+   - Update permissions or file paths according to your server’s requirements.
+
+4. **Testing and Running FITNESS 2 Offline or Online**:
+
+   - Open `lectures/index.html` in any modern browser (Chrome, Firefox, Safari) to run the content offline.
+   - For online usage, access the base URL configured in `fitnessII.conf` to verify the setup.
+
+### 6.2 FITNESS 1: Download procedure | ⬇️
 
 The FITNess platform combines computer code (client and server sides, on-line and off-lines), teaching (HTML, Markdown, SVG, PNG) material and activities (Q&A, case-studies, guidelines, videos...). The 🗄️ entire content of FITNess (with sources) is released as 🗜️ ZIP packages with (~23 GB). Click here to ⬇️ [**download the zip file**](https://fitness.agroparistech.fr/fitness2/cloning-duplicating-FITNESS/FITNESS1/FITNESS_2022_10_25__14-29.zip).
 
@@ -173,13 +237,13 @@ The FITNess platform combines computer code (client and server sides, on-line an
 
 > Original PowerPoint files are not provided as it was decided to distribute only 🌐 WEB compliant files. All slides are available as JPG (raster images) and SVG (vectorial images) in the 📂 folders `lectures/html/common(or specialized)/S*/U*/src_part1/, src_part2/...` corresponding to the considered part. The text is available in the original MarkDown files next to the 📄 original files `part1.html, part2.html....`
 
-### 6.2 Running off-line | 💤
+### 6.3 Running off-line | 💤
 
 You do not need any &#128423; webserver to 🛫 launch the FITNess platform content. You just need to ⬇️ download everything (see **§6.1**), open the 📂 folder `lectures/` and start the application by clicking on the 📄 file `index.html`. No installation is needed and it runs on Windows, Linux, Mac with a modern &#128468; Web browser. Eligible browsers must use the render engine WebKit or Chromium such as: Google Chrome, FireFox, Safari, Microsoft Edge based on Chromium... Internet Explorer is not supported.
 
 > We use a🏳️🏴 dual technology enabling FITNess to run within a webserver (Apache for us on Ubuntu 18.04 for development and CentOS 8 for production) or without. **All URLs are indeed relative and not absolute, asynchronous connections to the server are replaced by a faked server when the system goes offline** 💤.
 
-### 6.3 Running online | 🤳
+### 6.4 Running online | 🤳
 
 The platform FITNess has been designed to be easily duplicated as needed from a 🗜️ ZIP package. The 📐flexible architecture enables to ⚓anchor the server to any 🗁 place of an existing &#128423; webserver (with several GB of free space). There is no special security configuration required as 🚫 no information is sent back to the server. All 🕀 interactions run on the client side with ✔️ proper JavaScript codes included in each 📦 package.
 
