@@ -27,5 +27,6 @@
     "Chemicals",
     "Policy"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/U_Aarhus/reusable-and-returnable-systems.html#/1"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness2/online/U_Aarhus/reusable-and-returnable-systems.html#/1",
+  "qAndAVariables":["Access the assessment = reusableAndReturnableSystems"]
 }

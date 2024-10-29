@@ -3139,3 +3139,38 @@ Q10: Packaging materials can affect the sensory properties of food by the transf
 
 canBeSentByEmail: true
 `;
+
+var reusableAndReturnableSystems = `
+Q1: Are there currently any regulations or guidelines for reusable packaging?
+
+- [ ] No, there are none that exist.
+- [x] Yes, there are some guidelines proposed for using reusable packaging, particularly for beverages and take aways. Regulations, however, are limited and not yet widely developed.
+- [ ] Yes, guidelines and regulations are already clearly set for reuse across each food group.
+
+Q2: Do reusable packaging systems result in a lower environmental footprint than single use ones?
+
+- [ ] No, single-use systems are always preferable.
+- [x] The environmental benefits of reuse systems depend on reaching their breakeven points and on several factors including high return rates and reuse in practice for targeted food products.
+- [ ] Reuse systems always require at least 10 reuse cycles to have a lower environmental footprint compared to a single use alternative.
+
+Q3: Which of the following aspects do reuse systems need to operate most effectively? 
+
+- [ ] Development of sufficient infrastructure and standardization of packaging items to lower costs and increase interoperability
+- [ ] Defining legal liability for reuse operators and considering cultural/geographical aspects of where a system operates
+- [x] All of the above
+
+Q4: Approximately how many different chemicals are recorded to have been used intentionally in the manufacture of all types of food contact materials?
+
+- [ ] 500
+- [ ] 3,000
+- [x] 16,000
+
+Q5: Which of the following aspects is important to consider when designing a reuse system?
+
+- [ ] Greenhouse gas emissions from across the product life cycle
+- [ ] Water use from washing systems
+- [ ] Hazardous chemicals that can be present in the final containers
+- [x] All of these aspects are important to consider
+
+canBeSentByEmail: true
+`;
