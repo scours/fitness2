@@ -78,7 +78,7 @@ Modified By: Steward OUADI
     <div class="welcome-message txt-orange-fitness">Welcome to your profile overview.</div>
     <div>
       <label for="encodedDataInput">Paste your encoded profile identifier:</label>
-      <input type="text" id="encodedDataInput" placeholder="Enter encoded profile identifier here"
+      <input type="text" id="encodedDataInput" placeholder="Enter an encoded profile identifier here"
         style="width: 100%; padding: 10px; margin: 15px 0;">
       <div style="display: flex; justify-content: space-between;">
         <button onclick="loadProfileData()" class="btn-default" style="padding: 10px 20px; font-size: 1em;">Log
@@ -86,18 +86,22 @@ Modified By: Steward OUADI
         <button onclick="confirmLogout()" class="btn-default" style="padding: 10px 20px; font-size: 1em;">Log
           out</button>
       </div>
-      <label for="encodedDataInput">Once your information is loaded, you will be 'logged in,' which will enable you to
-        take assessments. To receive your first encoded profile identifier, complete your first assessment. This
-        identifier will update after each assessment.</label>
+      <label for="encodedDataInput" style="display: block; margin-top: 10px;">
+        Once your information is loaded, you will be 'logged in,' which will enable you to take assessments. To receive
+        your
+        first encoded profile identifier, complete your first assessment. This identifier will update after each
+        assessment.
+      </label>
+
     </div>
 
 
     <div id="profile-content">
       <h2>Profile Information</h2>
-      <p id="userName" class="no-info">Loading...</p>
-      <p id="userEmail" class="no-info">Loading...</p>
+      <p id="userName" class="no-info">Enter an encoded profile identifier above to load data</p>
+      <p id="userEmail" class="no-info"></p>
       <h3>Assessments History</h3>
-      <ul id="assessmentList" class="no-info">Loading...</ul>
+      <ul id="assessmentList" class="no-info">Enter an encoded profile identifier above to load data</ul>
     </div>
   </div>
 
