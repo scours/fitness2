@@ -78,17 +78,19 @@ Modified By: Steward OUADI
     <div class="welcome-message txt-orange-fitness">Welcome to your profile overview.</div>
     <div>
       <label for="encodedDataInput">Paste your encoded profile identifier:</label>
-
       <input type="text" id="encodedDataInput" placeholder="Enter encoded profile identifier here"
         style="width: 100%; padding: 10px; margin: 15px 0;">
-      <button onclick="loadProfileData()" style="padding: 10px 20px; font-size: 1em;">Log in</button>
+      <div style="display: flex; justify-content: space-between;">
+        <button onclick="loadProfileData()" class="btn-default" style="padding: 10px 20px; font-size: 1em;">Log
+          in</button>
+        <button onclick="confirmLogout()" class="btn-default" style="padding: 10px 20px; font-size: 1em;">Log
+          out</button>
+      </div>
       <label for="encodedDataInput">Once your information is loaded, you will be 'logged in,' which will enable you to
-        take assessments.
-        with all your information saved automatically. To receive your first encoded profile identifier, you must
-        complete your first assessment. After each subsequent assessment, this identifier will be updated and displayed
-        at the end
-        of your assessment results file.</label>
+        take assessments. To receive your first encoded profile identifier, complete your first assessment. This
+        identifier will update after each assessment.</label>
     </div>
+
 
     <div id="profile-content">
       <h2>Profile Information</h2>
@@ -118,6 +120,41 @@ Modified By: Steward OUADI
         };
       });
     }
+
+    // Confirm log out action
+    function confirmLogout() {
+      if (confirm("Are you sure you want to log out? This will clear your stored data.")) {
+        logout();
+      }
+    }
+
+    // Log out: clear IndexedDB, local storage, and page content
+    async function logout() {
+      // Clear IndexedDB data
+      try {
+        const db = await initDB();
+        const transaction = db.transaction(STORE_NAME, "readwrite");
+        const store = transaction.objectStore(STORE_NAME);
+        store.delete("profile");
+
+        console.log("Profile data cleared from IndexedDB");
+      } catch (error) {
+        console.error("Error clearing data from IndexedDB:", error);
+      }
+
+      // Clear additional local storage items
+      localStorage.removeItem("learnerData");
+      localStorage.removeItem("fitness2ProfileInfoUrl");
+      console.log("Additional data cleared from local storage");
+
+      // Clear input field and profile display
+      document.getElementById("encodedDataInput").value = "";
+      document.getElementById("userName").textContent = "Name: Not available";
+      document.getElementById("userEmail").textContent = "Email: Not available";
+      document.getElementById("assessmentList").innerHTML =
+        '<li class="no-info">No assessment history available.</li>';
+    }
+
 
     // Store profile data in IndexedDB
     async function storeProfileData(encodedData, profileInfo) {
