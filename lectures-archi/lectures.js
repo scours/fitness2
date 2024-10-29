@@ -204,6 +204,35 @@ function makeid(length) {
   return result;
 }
 
+// Mapping of authors to their URLs
+const authorUrls = {
+  "Catherine Loriot": "https://www.fitness-foodpackaging.com/actia-and-lne",
+  "Jean-Mario Julien": "https://www.fitness-foodpackaging.com/actia-and-lne",
+  "Ilke Uysal Unalan":
+    "https://www.fitness-foodpackaging.com/aarhus-university",
+  "Olivier Vitrac": "https://www.fitness-foodpackaging.com/agroparistech-inrae",
+  "Murielle Hayert":
+    "https://www.fitness-foodpackaging.com/agroparistech-inrae",
+  "Sandra Domenek": "https://www.fitness-foodpackaging.com/agroparistech-inrae",
+  "María José Fabra": "https://www.fitness-foodpackaging.com/csic",
+  "Amparo López-Rubio": "https://www.fitness-foodpackaging.com/csic",
+  "Horst-Christian Langowski":
+    "https://www.fitness-foodpackaging.com/fraunhofer-ivv",
+  "Justin Boucher": "https://www.fitness-foodpackaging.com/foodpackagingforum",
+  "Thomas Karbowiak": "https://www.fitness-foodpackaging.com/institutagrodijon",
+  "Marie-Christine Chagnon":
+    "https://www.fitness-foodpackaging.com/institutagrodijon",
+  "Massimiliano Gerometta":
+    "https://www.fitness-foodpackaging.com/institutagrodijon",
+  "Fátima Poças":
+    "https://www.fitness-foodpackaging.com/universidadecatolicaportuguesa",
+  "Frédéric Debeaufort":
+    "https://www.fitness-foodpackaging.com/universityofburgundy",
+  "Kata Galić": "https://www.fitness-foodpackaging.com/universityofzagreb",
+  "Mario Ščetar": "https://www.fitness-foodpackaging.com/universityofzagreb",
+  "Mia Kurek": "https://www.fitness-foodpackaging.com/universityofzagreb",
+};
+
 function createAElementForDropDownMenuToPrint(identifier) {
   // console.log("createAElementForDropDownMenuToPrint beg");
   const lecture = lecturesContainer.get(identifier);
@@ -296,21 +325,37 @@ function createAElementForDropDownMenuToPrint(identifier) {
   authorsHeader.innerHTML = "Authors";
   const authorsElement = document.createElement("ul"); // Use a <ul> for the list
 
+  // Function to create list items for each author, adding a link if URL exists
+  function createAuthorListItem(author) {
+    const listItem = document.createElement("li");
+    const authorUrl = authorUrls[author.trim()];
+
+    if (authorUrl) {
+      // Create a clickable link if URL exists
+      const authorLink = document.createElement("a");
+      authorLink.href = authorUrl;
+      authorLink.textContent = `${author.trim()} - see author profile`;
+      authorLink.target = "_blank"; // Opens link in a new tab
+      listItem.appendChild(authorLink);
+    } else {
+      // Display only the author's name if no URL is found
+      listItem.textContent = author.trim();
+    }
+
+    return listItem;
+  }
+
   // Check if lecture.author is a string or an array
   if (Array.isArray(lecture.author)) {
     // If it's an array, iterate through authors
     lecture.author.forEach((author) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = author.trim();
-      authorsElement.appendChild(listItem);
+      authorsElement.appendChild(createAuthorListItem(author));
     });
   } else if (typeof lecture.author === "string") {
     // If it's a string, split it by commas
     const authors = lecture.author.split(",");
     authors.forEach((author) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = author.trim();
-      authorsElement.appendChild(listItem);
+      authorsElement.appendChild(createAuthorListItem(author));
     });
   }
 
