@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Friday, 25th October 2024
 Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
 -----
-Last Modified: Monday, 28th October 2024
+Last Modified: Tuesday, 29th October 2024
 Modified By: Steward OUADI
 -->
 
@@ -79,7 +79,7 @@ Modified By: Steward OUADI
     <div>
       <label for="encodedDataInput">Paste your encoded profile identifier:</label>
 
-      <input type="text" id="encodedDataInput" placeholder="Enter encoded data here"
+      <input type="text" id="encodedDataInput" placeholder="Enter encoded profile identifier here"
         style="width: 100%; padding: 10px; margin: 15px 0;">
       <button onclick="loadProfileData()" style="padding: 10px 20px; font-size: 1em;">Log in</button>
       <label for="encodedDataInput">Once your information is loaded, you will be 'logged in,' which will enable you to
@@ -101,56 +101,156 @@ Modified By: Steward OUADI
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lz-string/1.4.4/lz-string.min.js"></script>
   <script>
-    function loadProfileData() {
-      // Get the encoded data from the input field
-      const encodedProfileInfo = document.getElementById("encodedDataInput").value.trim();
+    const DB_NAME = "FitnessProfileDB";
+    const STORE_NAME = "ProfileStore";
 
-      // Check if input is provided
+    // Initialize IndexedDB
+    function initDB() {
+      return new Promise((resolve, reject) => {
+        const request = indexedDB.open(DB_NAME, 1);
+        request.onerror = () => reject(request.error);
+        request.onsuccess = () => resolve(request.result);
+        request.onupgradeneeded = (event) => {
+          const db = event.target.result;
+          db.createObjectStore(STORE_NAME, {
+            keyPath: "id"
+          });
+        };
+      });
+    }
+
+    // Store profile data in IndexedDB
+    async function storeProfileData(encodedData, profileInfo) {
+      const db = await initDB();
+      const transaction = db.transaction(STORE_NAME, "readwrite");
+      const store = transaction.objectStore(STORE_NAME);
+      store.put({
+        id: "profile",
+        encodedData,
+        profileInfo
+      });
+    }
+
+    // Retrieve profile data from IndexedDB
+    async function getProfileData() {
+      try {
+        const db = await initDB();
+        const transaction = db.transaction(STORE_NAME, "readonly");
+        const store = transaction.objectStore(STORE_NAME);
+        const request = store.get("profile");
+
+        return new Promise((resolve, reject) => {
+          request.onsuccess = () => {
+            console.log("Data retrieved from IndexedDB:", request.result); // Debugging log
+            resolve(request.result);
+          };
+          request.onerror = () => {
+            console.error("Error retrieving data from IndexedDB:", request.error); // Debugging log
+            reject(request.error);
+          };
+        });
+      } catch (error) {
+        console.error("Error initializing IndexedDB:", error); // Debugging log
+      }
+    }
+
+    // Load profile data either from input or IndexedDB
+    async function loadProfileData() {
+      const encodedDataInput = document.getElementById("encodedDataInput");
+      let encodedProfileInfo = encodedDataInput.value.trim();
+
+      // If no input is provided, attempt to retrieve from IndexedDB
+      if (!encodedProfileInfo) {
+        try {
+          const storedData = await getProfileData();
+
+          if (storedData && storedData.encodedData) {
+            // Only set the input field and display profile data if `encodedData` is valid
+            encodedDataInput.value = storedData.encodedData;
+            displayProfileData(storedData.profileInfo);
+            console.log("Profile data displayed from IndexedDB"); // Debugging log
+          } else {
+            // Clear the input field to show the placeholder if no valid data is found
+            encodedDataInput.value = "";
+            console.log("No valid data found in IndexedDB"); // Debugging log
+          }
+        } catch (error) {
+          console.error("Error loading profile data on page load:", error); // Debugging log
+        }
+      }
+
+      // If encodedProfileInfo is still empty after the above checks, alert and exit
       if (!encodedProfileInfo) {
         alert("Please enter the encoded data.");
         return;
       }
 
-      // Clear previous data
-      document.getElementById("userName").textContent = "Loading...";
-      document.getElementById("userEmail").textContent = "Loading...";
-      document.getElementById("assessmentList").innerHTML = "Loading...";
-
-      // Attempt to decompress and parse the encoded data
+      // Process and display the profile data from the input
       try {
         const decompressedData = LZString.decompressFromEncodedURIComponent(encodedProfileInfo);
-
-        // If decompression fails, show an error
         if (!decompressedData) throw new Error("Invalid encoded data.");
 
         const profileInfo = JSON.parse(decompressedData);
+        displayProfileData(profileInfo);
 
-        // Display user profile information if valid
-        document.getElementById("userName").textContent = `Name: ${profileInfo.firstName} ${profileInfo.lastName}`;
-        document.getElementById("userEmail").textContent = `Email: ${profileInfo.email}`;
-
-        // Display assessment history
-        const assessmentList = document.getElementById("assessmentList");
-        assessmentList.innerHTML = ''; // Clear loading text
-        if (profileInfo.assessmentMap && Object.keys(profileInfo.assessmentMap).length > 0) {
-          Object.values(profileInfo.assessmentMap).forEach(assessment => {
-            const li = document.createElement("li");
-            li.innerHTML = `<strong>${assessment.name}</strong> - Success Rate: ${assessment.successRate} - 
-            <a href="${assessment.quizUrl}" target="_blank">View Quiz</a>`;
-            assessmentList.appendChild(li);
-          });
-        } else {
-          assessmentList.innerHTML = '<li class="no-info">No assessment history available.</li>';
-        }
+        // Store encoded data and profile information in IndexedDB for future access
+        storeProfileData(encodedProfileInfo, profileInfo);
 
       } catch (error) {
-        // Display error message if data is invalid
         console.error("Error loading profile data:", error);
         document.getElementById("profile-content").innerHTML =
           "<p class='no-info'>No valid profile information available. Please check the encoded data and try again.</p>";
       }
     }
+
+
+    // Display profile information on the page
+    function displayProfileData(profileInfo) {
+      // Check if profileInfo exists and has the necessary properties
+      const userNameElement = document.getElementById("userName");
+      const userEmailElement = document.getElementById("userEmail");
+      const assessmentList = document.getElementById("assessmentList");
+
+      if (profileInfo && profileInfo.firstName && profileInfo.lastName) {
+        userNameElement.textContent = `Name: ${profileInfo.firstName} ${profileInfo.lastName}`;
+      } else {
+        userNameElement.textContent = "Name: Not available";
+      }
+
+      if (profileInfo && profileInfo.email) {
+        userEmailElement.textContent = `Email: ${profileInfo.email}`;
+      } else {
+        userEmailElement.textContent = "Email: Not available";
+      }
+
+      // Display assessment history if available
+      assessmentList.innerHTML = ''; // Clear any existing content
+      if (profileInfo && profileInfo.assessmentMap && Object.keys(profileInfo.assessmentMap).length > 0) {
+        Object.values(profileInfo.assessmentMap).forEach(assessment => {
+          const li = document.createElement("li");
+          li.innerHTML = `<strong>${assessment.name}</strong> - Success Rate: ${assessment.successRate} -
+    <a href="${assessment.quizUrl}" target="_blank">View Quiz</a>`;
+          assessmentList.appendChild(li);
+        });
+      } else {
+        assessmentList.innerHTML = '<li class="no-info">No assessment history available.</li>';
+      }
+    }
+
+    // Attempt to load profile data from IndexedDB on page load
+    document.addEventListener("DOMContentLoaded", async () => {
+      const storedData = await getProfileData();
+      if (storedData && storedData.encodedData) {
+        // Only set the input field and display profile data if `encodedData` is valid
+        document.getElementById("encodedDataInput").value = storedData.encodedData;
+        displayProfileData(storedData.profileInfo);
+      } else {
+        // Clear the input field to show the placeholder if no valid data is found
+        document.getElementById("encodedDataInput").value = "";
+      }
+    });
   </script>
+
 
 
   <main-footer></main-footer>
