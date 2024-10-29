@@ -5,7 +5,7 @@
  * File Created: Tuesday, 21st February 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Friday, 18th October 2024
+ * Last Modified: Tuesday, 29th October 2024
  * Modified By: Steward OUADI
  */
 class Header extends HTMLElement {
@@ -16,9 +16,6 @@ class Header extends HTMLElement {
       <a href="https://fitness.agroparistech.fr">Home</a>
       <a href="https://fitness.agroparistech.fr/fitness2/lectures/quiz-creator-tool-online/profile.html" class="profile-icon" title="Profile">
         <i class="fa fa-user"></i>
-      </a>
-      <a href="javascript:void(0);" class="icon" onclick="topNavOnClick()">
-        <i class="fa fa-bars"></i>
       </a>
     </div>
     <div class="logo-header">
