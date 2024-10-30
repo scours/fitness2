@@ -100,8 +100,6 @@ Modified By: Steward OUADI
       <h2>Profile Information</h2>
       <p id="userName" class="no-info">Enter an encoded profile identifier above to load data</p>
       <p id="userEmail" class="no-info"></p>
-      <h3>Assessments History</h3>
-      <ul id="assessmentList" class="no-info">Enter an encoded profile identifier above to load data</ul>
     </div>
   </div>
 
@@ -1412,10 +1410,8 @@ Modified By: Steward OUADI
 
     function displayPathways(profileInfo) {
       const profileContent = document.getElementById("profile-content");
-      if (!profileContent) return; // Check if element exists to prevent errors
-      profileContent.innerHTML = ""; // Clear existing content
 
-      // Sort pathways to ensure "Research and Development Managers in Food Packaging - Basic" comes first
+      // Sort pathways to ensure consistent display order
       const orderedPathways = ["RnD_Manager_Basic", "RnD_Manager_Advanced", "Quality_Manager_Basic",
         "Quality_Manager_Advanced", "Production_Line_Worker_Basic",
         "Production_Manager_Basic", "Production_Manager_Advanced"
@@ -1428,10 +1424,11 @@ Modified By: Steward OUADI
         pathwayContainer.style.padding = "10px";
         pathwayContainer.style.borderTop = "2px solid orange";
 
-        // Pathway header and information link
+        // Pathway Header
         const pathwayHeader = document.createElement("h3");
         pathwayHeader.textContent = pathway.pathwayName;
 
+        // Pathway Information Link
         const pathwayLink = document.createElement("a");
         pathwayLink.href = pathwayUrls[pathwayKey];
         pathwayLink.textContent = "For more information on this pathway, click here";
@@ -1456,16 +1453,14 @@ Modified By: Steward OUADI
           (completedMandatoryAssessments / totalMandatoryAssessments) * 100 :
           0;
 
-        // Success rate and explanation text
+        // Success Rate and Explanation Text
         const successText = document.createElement("p");
         successText.innerHTML =
           `<strong>Your overall success for this pathway: ${overallSuccessRate.toFixed(2)}%</strong>`;
 
         const explanationText = document.createElement("p");
-        explanationText.textContent =
-          `Your overall success considers only the mandatory assessments for this pathway. To request a certificate from an author
-        for a pathway, an overall success rate above 65 % is required.
-        `;
+        explanationText.textContent = `Your overall success considers only the mandatory assessments for this pathway. To
+   request a certificate from an author for a pathway, an overall success rate above 65 % is required.`;
 
         pathwayContainer.appendChild(pathwayHeader);
         pathwayContainer.appendChild(pathwayLink);
@@ -1481,19 +1476,15 @@ Modified By: Steward OUADI
 
           topic.lectures.forEach((lecture) => {
             const lectureContainer = document.createElement("div");
-
-            // Add lecture name and mandatory/elective status
             const mandatoryStatus = lecture.mandatory ? "Mandatory" : "Elective";
-            lectureContainer.textContent = `${lecture.name} - ${mandatoryStatus}`;
-
-            // Check if assessment exists for the lecture
             const assessment = profileInfo.assessmentMap[lecture.id];
+
+            // Display Lecture Details with Status and Assessment (if completed)
             if (assessment) {
-              // Append assessment result if available
-              const assessmentLink = document.createElement("a");
-              assessmentLink.href = assessment.quizUrl;
-              assessmentLink.textContent = ` - Assessment completed: ${assessment.successRate}`;
-              lectureContainer.appendChild(assessmentLink);
+              lectureContainer.innerHTML = `${lecture.name} - ${mandatoryStatus} - Assessment completed:
+   ${assessment.successRate}`;
+            } else {
+              lectureContainer.textContent = `${lecture.name} - ${mandatoryStatus}`;
             }
 
             topicContainer.appendChild(lectureContainer);
@@ -1505,8 +1496,6 @@ Modified By: Steward OUADI
         profileContent.appendChild(pathwayContainer);
       });
     }
-
-
     // Confirm log out action
     function confirmLogout() {
       if (confirm("Are you sure you want to log out? This will clear your stored data.")) {
@@ -1537,8 +1526,7 @@ Modified By: Steward OUADI
       document.getElementById("encodedDataInput").value = "";
       document.getElementById("userName").textContent = "Name: Not available";
       document.getElementById("userEmail").textContent = "Email: Not available";
-      document.getElementById("assessmentList").innerHTML =
-        '<li class="no-info">No assessment history available.</li>';
+
     }
 
 
@@ -1631,48 +1619,36 @@ Modified By: Steward OUADI
 
     // Display profile information on the page
     function displayProfileData(profileInfo) {
+      const profileContent = document.getElementById("profile-content");
 
-      // Check if profileInfo is defined and has data before processing
+      // Check if profileInfo exists and is valid
       if (!profileInfo || typeof profileInfo !== 'object' || Object.keys(profileInfo).length === 0) {
         console.error("No valid profile information available. Please check the encoded data and try again.");
-        document.getElementById("profile-content").innerHTML =
-          "<p class='no-info'>No valid profile information available. Please check the encoded data and try again.</p>";
+        profileContent.innerHTML =
+          `<p class='no-info'>No valid profile information available. Please check the encoded data
+        and
+        try again. < /p>`;
         return;
       }
+
+      // Update user name and email, displaying 'Not available' if data is missing
+      const userNameElement = document.getElementById("userName");
+      const userEmailElement = document.getElementById("userEmail");
+
+
+      userNameElement.textContent = profileInfo.firstName && profileInfo.lastName ?
+        `Name: ${profileInfo.firstName} ${profileInfo.lastName}` :
+        "Name: Not available";
+
+      userEmailElement.textContent = profileInfo.email ?
+        `Email: ${profileInfo.email}` :
+        "Email: Not available";
 
       // Proceed with displaying pathways if profileInfo is valid
       displayPathways(profileInfo);
 
-      // Check if profileInfo exists and has the necessary properties
-      const userNameElement = document.getElementById("userName");
-      const userEmailElement = document.getElementById("userEmail");
-      const assessmentList = document.getElementById("assessmentList");
-
-      if (profileInfo && profileInfo.firstName && profileInfo.lastName) {
-        userNameElement.textContent = `Name: ${profileInfo.firstName} ${profileInfo.lastName}`;
-      } else {
-        userNameElement.textContent = "Name: Not available";
-      }
-
-      if (profileInfo && profileInfo.email) {
-        userEmailElement.textContent = `Email: ${profileInfo.email}`;
-      } else {
-        userEmailElement.textContent = "Email: Not available";
-      }
-
-      // Display assessment history if available
-      assessmentList.innerHTML = ''; // Clear any existing content
-      if (profileInfo && profileInfo.assessmentMap && Object.keys(profileInfo.assessmentMap).length > 0) {
-        Object.values(profileInfo.assessmentMap).forEach(assessment => {
-          const li = document.createElement("li");
-          li.innerHTML = `<strong>${assessment.name}</strong> - Success Rate: ${assessment.successRate} -
-    <a href="${assessment.quizUrl}" target="_blank">View Quiz</a>`;
-          assessmentList.appendChild(li);
-        });
-      } else {
-        assessmentList.innerHTML = '<li class="no-info">No assessment history available.</li>';
-      }
     }
+
 
     // Attempt to load profile data from IndexedDB on page load
     document.addEventListener("DOMContentLoaded", async () => {
