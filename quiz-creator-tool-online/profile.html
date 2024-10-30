@@ -5,7 +5,7 @@ Project: FitNESS 2 ERASMUS+
 File Created: Friday, 25th October 2024
 Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
 -----
-Last Modified: Tuesday, 29th October 2024
+Last Modified: Wednesday, 30th October 2024
 Modified By: Steward OUADI
 -->
 
@@ -110,6 +110,1291 @@ Modified By: Steward OUADI
     const DB_NAME = "FitnessProfileDB";
     const STORE_NAME = "ProfileStore";
 
+    const pathwayUrls = {
+      "RnD_Manager_Basic": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#research-development-basic",
+      "RnD_Manager_Advanced": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#research-development-advanced",
+      "Quality_Manager_Basic": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#quality-managers-basic",
+      "Quality_Manager_Advanced": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#quality-managers-advanced",
+      "Production_Line_Worker_Basic": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#production-line-workers-basic",
+      "Production_Manager_Basic": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#production-managers-basic",
+      "Production_Manager_Advanced": "https://fitness.agroparistech.fr/fitness2/lectures/lectures-pathways.html#production-managers-advanced"
+    };
+
+    const pathways = {
+      RnD_Manager_Basic: {
+        pathwayName: "Research and Development Managers in Food Packaging - Basic",
+        topics: [{
+            topicName: "Panorama of Food Packaging",
+            lectures: [{
+              id: "panoramaOfFoodPackaging",
+              code: "FP-A-1",
+              name: "History and overview",
+              mandatory: true,
+            }, ],
+          },
+          {
+            topicName: "Packaging Materials",
+            lectures: [{
+                id: "materialGlass",
+                code: "FP-B-1",
+                name: "Glass",
+                mandatory: true,
+              },
+              {
+                id: "materialMetal",
+                code: "FP-B-2",
+                name: "Metal",
+                mandatory: true,
+              },
+              {
+                id: "materialPlastics",
+                code: "FP-B-3",
+                name: "Plastic",
+                mandatory: true,
+              },
+              {
+                id: "materialPaperAndBoard",
+                code: "FP-B-4",
+                name: "Paper and paperboard",
+                mandatory: true,
+              },
+              {
+                id: "bioBasedMaterials",
+                code: "FP-B-5",
+                name: "Bio-based polymers",
+                mandatory: false,
+              },
+              {
+                code: "FP-B-6",
+                name: "Cork",
+                mandatory: false,
+              },
+              {
+                code: "FP-B-7",
+                name: "Wood",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging Material Properties",
+            lectures: [{
+                id: "thermalProperties",
+                code: "FP-C-1",
+                name: "Thermal properties",
+                mandatory: true,
+              },
+              {
+                id: "mechanicalProperties",
+                code: "FP-C-2",
+                name: "Mechanical properties",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-3",
+                name: "Optical properties",
+                mandatory: false,
+              },
+              {
+                code: "FP-C-4",
+                name: "Surface properties",
+                mandatory: false,
+              },
+              {
+                id: "massTransferProperties",
+                code: "FP-C-5",
+                name: "Mass transfer properties",
+                mandatory: true,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging Processes",
+            lectures: [{
+                id: "mechanicalProcesses",
+                code: "FP-D-1",
+                name: "Introduction to mechanical processes",
+                mandatory: true,
+              },
+              {
+                id: "formingOfPreProducts",
+                code: "FP-D-2",
+                name: "Forming of pre-products",
+                mandatory: true,
+              },
+              {
+                id: "asepticPackaging",
+                code: "FP-D-3",
+                name: "Aseptic packaging",
+                mandatory: true,
+              },
+              {
+                id: "fillingAndDosing",
+                code: "FP-D-4",
+                name: "Filling and dosing",
+                mandatory: true,
+              },
+              {
+                id: "beverageFilling",
+                code: "FP-D-5",
+                name: "Beverage filling",
+                mandatory: true,
+              },
+              {
+                id: "sealingAndWelding",
+                code: "FP-D-6",
+                name: "Sealing",
+                mandatory: true,
+              },
+              {
+                id: "formingFillingAndSealingMachines",
+                code: "FP-D-7",
+                name: "Forming, filling and sealing machinery",
+                mandatory: true,
+              },
+              {
+                id: "surfaceTreatmentsAndCoatings",
+                code: "FP-D-8",
+                name: "Surface treatments and coatings",
+                mandatory: false,
+              },
+              {
+                id: "vacuumAndModifiedAtmospherePackaging",
+                code: "FP-D-9",
+                name: "Vacuum and modified atmosphere packaging",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging and Food Shelf-life",
+            lectures: [{
+                id: "shelfLifeStudy",
+                code: "FP-E-1",
+                name: "Defining shelf-life",
+                mandatory: true,
+              },
+              {
+                id: "modifiedAtmospherePackaging",
+                code: "FP-E-3",
+                name: "Modified atmosphere packaging and shelf-life",
+                mandatory: false,
+              },
+              {
+                id: "foodPackagingInteractions",
+                code: "FP-E-4",
+                name: "Food-packaging interactions",
+                mandatory: true,
+              },
+              {
+                id: "physicoChemicalFactorsFoodStability",
+                code: "FP-E-5",
+                name: "Factors affecting shelf-life",
+                mandatory: true,
+              },
+            ],
+          },
+          {
+            topicName: "Innovative Food Packaging",
+            lectures: [{
+                id: "activePackaging",
+                code: "FP-F-1",
+                name: "Active packaging",
+                mandatory: false,
+              },
+              {
+                id: "smartPackaging",
+                code: "FP-F-2",
+                name: "Intelligent packaging",
+                mandatory: false,
+              },
+              {
+                id: "nanomaterials",
+                code: "FP-F-3",
+                name: "Nanotechnology applications in packaging",
+                mandatory: false,
+              },
+              {
+                id: "materialBioBased",
+                code: "FP-F-4",
+                name: "Bioplastics",
+                mandatory: true,
+              },
+              {
+                code: "FP-F-5",
+                name: "Edible and biodegradable packaging",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Ecodesign Tools and Technologies",
+            lectures: [{
+                id: "ecodesign",
+                code: "FP-G-1",
+                name: "Ecodesign principles",
+                mandatory: true,
+              },
+              {
+                id: "environmentalImpactOfFoodPackaging",
+                code: "FP-G-3",
+                name: "Environmental impact of packaging",
+                mandatory: true,
+              },
+              {
+                id: "reusableAndReturnableSystems",
+                code: "FP-G-6",
+                name: "Reusable and returnable packaging",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Legislation and Safety",
+            lectures: [{
+                id: "universeOfFoodContactChemicals",
+                code: "FP-H-1",
+                name: "Food contact materials regulation",
+                mandatory: true,
+              },
+              {
+                code: "FP-H-2",
+                name: "Chemical safety and toxicology",
+                mandatory: true,
+              },
+              {
+                code: "FP-H-3",
+                name: "Good manufacturing practices (GMP)",
+                mandatory: true,
+              },
+              {
+                code: "FP-H-4",
+                name: "Quality assurance and certification",
+                mandatory: false,
+              },
+              {
+                code: "FP-H-5",
+                name: "Traceability and transparency",
+                mandatory: false,
+              },
+            ],
+          },
+        ],
+      },
+      RnD_Manager_Advanced: {
+        pathwayName: "Research and Development Managers in Food Packaging - Advanced",
+        topics: [{
+            topicName: "Packaging Material Properties",
+            lectures: [{
+                id: "advancedPrinciplesMassTransfer",
+                code: "FP-C-6",
+                name: "Advanced principles of mass transfer",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-7",
+                name: "Calculation of permeability in composite systems",
+                mandatory: false,
+              },
+              {
+                code: "FP-C-8",
+                name: "Multicomponent diffusion & predictive models",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-9",
+                name: "Microholes and leaks: measurement and case studies",
+                mandatory: true,
+              },
+            ],
+          },
+          {
+            topicName: "Ecodesign Tools and Technologies",
+            lectures: [{
+                code: "FP-G-1",
+                name: "What is Sustainability?",
+                mandatory: true,
+              },
+              {
+                id: "environmentalImpactOfFoodPackaging",
+                code: "FP-G-2",
+                name: "Environmental and human health impacts of packaging",
+                mandatory: true,
+              },
+              {
+                id: "microplastics",
+                code: "FP-G-3",
+                name: "Overview over microplastics issue",
+                mandatory: true,
+              },
+              {
+                id: "ecodesignPackaging",
+                code: "FP-G-4",
+                name: "Tools for ecodesign and life cycle assessment",
+                mandatory: true,
+              },
+              {
+                id: "glassFoodContactMaterialRecycling",
+                code: "FP-G-5",
+                name: "Glass food contact material recycling",
+                mandatory: true,
+              },
+              {
+                id: "metalFoodContactMaterialRecycling",
+                code: "FP-G-6",
+                name: "Metal food contact material recycling",
+                mandatory: true,
+              },
+              {
+                id: "plasticsRecycling",
+                code: "FP-G-7",
+                name: "Plastic recycling",
+                mandatory: true,
+              },
+              {
+                code: "FP-G-8",
+                name: "Paper and board recycling",
+                mandatory: true,
+              },
+              {
+                id: "biodegradation",
+                code: "FP-G-9",
+                name: "Biodegradation and biobased carbon content",
+                mandatory: false,
+              },
+              {
+                id: "reusableAndReturnableSystems",
+                code: "FP-G-10",
+                name: "Returnable and reuse systems",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Legislation and Safety",
+            lectures: [{
+                code: "FP-H-3",
+                name: "Recycled plastics - Regulation (EU) 2022/1616",
+                mandatory: true,
+              },
+              {
+                code: "FP-H-4",
+                name: "Safety assessment of plastic recycling processes",
+                mandatory: true,
+              },
+              {
+                code: "FP-H-5",
+                name: "Safety assessment of recycled paper and board",
+                mandatory: true,
+              },
+              {
+                code: "FP-H-8",
+                name: "Overview on risk assessment",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Modelling Tools",
+            lectures: [{
+                code: "FP-I-1",
+                name: "Migration modelling in monomaterials",
+                mandatory: true,
+              },
+              {
+                code: "FP-I-2",
+                name: "Migration modelling in multimaterials",
+                mandatory: true,
+              },
+              {
+                code: "FP-I-4",
+                name: "Managing uncertainty by intervals and worst-case scenarios",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-5",
+                name: "Probabilistic approaches and Bayesian approaches",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-6",
+                name: "History and principles of FMEA-FMECA",
+                mandatory: true,
+              },
+              {
+                code: "FP-I-7",
+                name: "Diagram-based approaches",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-8",
+                name: "Computer-aided approaches",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-9",
+                name: "Principles of online databases",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-10",
+                name: "Microscopic theories of transport coefficients and free-energies",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-11",
+                name: "Calculation using fluctuation theorems",
+                mandatory: false,
+              },
+            ],
+          },
+        ],
+      },
+      Quality_Manager_Basic: {
+        pathwayName: "Quality Managers in Food Packaging - Basic",
+        topics: [{
+            topicName: "Panorama of Food Packaging",
+            lectures: [{
+              id: "panoramaOfFoodPackaging",
+              code: "FP-A-1",
+              name: "History and overview",
+              mandatory: true,
+            }, ],
+          },
+          {
+            topicName: "Packaging Materials",
+            lectures: [{
+                id: "materialGlass",
+                code: "FP-B-1",
+                name: "Glass",
+                mandatory: true,
+              },
+              {
+                id: "materialMetal",
+                code: "FP-B-2",
+                name: "Metal",
+                mandatory: true,
+              },
+              {
+                id: "materialPlastics",
+                code: "FP-B-3",
+                name: "Plastic",
+                mandatory: true,
+              },
+              {
+                id: "materialPaperAndBoard",
+                code: "FP-B-4",
+                name: "Paper and paperboard",
+                mandatory: true,
+              },
+              {
+                id: "materialBioBased",
+                code: "FP-B-5",
+                name: "Bio-based polymers",
+                mandatory: true,
+              },
+              {
+                code: "FP-B-6",
+                name: "Cork",
+                elective: true,
+              },
+              {
+                code: "FP-B-7",
+                name: "Wood",
+                elective: true,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging Material Properties",
+            lectures: [{
+                id: "thermalProperties",
+                code: "FP-C-1",
+                name: "Thermal properties",
+                mandatory: true,
+              },
+              {
+                id: "mechanicalProperties",
+                code: "FP-C-2",
+                name: "Mechanical properties",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-3",
+                name: "Optical properties",
+                elective: true,
+              },
+              {
+                code: "FP-C-4",
+                name: "Surface properties",
+                elective: true,
+              },
+              {
+                id: "massTransferProperties",
+                code: "FP-C-5",
+                name: "Mass transfer properties",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-10",
+                name: "Mechanical design",
+                elective: true,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging Processes",
+            lectures: [{
+                id: "mechanicalProcesses",
+                code: "FP-D-1",
+                name: "Introduction to mechanical processes",
+                mandatory: true,
+              },
+              {
+                id: "formingOfPreProducts",
+                code: "FP-D-2",
+                name: "Forming of pre-products",
+                mandatory: true,
+              },
+              {
+                id: "asepticPackaging",
+                code: "FP-D-3",
+                name: "Aseptic packaging",
+                elective: true,
+              },
+              {
+                id: "fillingAndDosing",
+                code: "FP-D-4",
+                name: "Filling and dosing",
+                mandatory: true,
+              },
+              {
+                id: "beverageFilling",
+                code: "FP-D-5",
+                name: "Beverage filling",
+                mandatory: true,
+              },
+              {
+                id: "sealingAndWelding",
+                code: "FP-D-6",
+                name: "Sealing",
+                mandatory: true,
+              },
+              {
+                id: "formingFillingAndSealingMachines",
+                code: "FP-D-7",
+                name: "Forming, filling, and sealing machinery",
+                mandatory: true,
+              },
+              {
+                id: "surfaceTreatmentsAndCoatings",
+                code: "FP-D-8",
+                name: "Surface treatments and coatings",
+                mandatory: true,
+              },
+              {
+                id: "vacuumAndModifiedAtmospherePackaging",
+                code: "FP-D-9",
+                name: "Vacuum and modified atmosphere packaging",
+                elective: true,
+              },
+              {
+                code: "FP-D-10",
+                name: "Optimization",
+                mandatory: true,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging and Food Shelf-life",
+            lectures: [{
+                id: "shelfLifeStudy",
+                code: "FP-E-1",
+                name: "Defining shelf-life",
+                mandatory: true,
+              },
+              {
+                code: "FP-E-2",
+                name: "Food preservation technologies and packaging",
+                mandatory: true,
+              },
+              {
+                id: "modifiedAtmospherePackaging",
+                code: "FP-E-3",
+                name: "Modified atmosphere packaging and shelf-life",
+                elective: true,
+              },
+              {
+                id: "foodPackagingInteractions",
+                code: "FP-E-4",
+                name: "Food-packaging interactions",
+                mandatory: true,
+              },
+              {
+                code: "FP-E-5",
+                name: "Factors affecting shelf-life",
+                mandatory: true,
+              },
+              {
+                id: "physicoChemicalFactorsFoodStability",
+                code: "FP-E-6",
+                name: "Physico-chemical factors affecting food stability",
+                mandatory: true,
+              },
+              {
+                code: "FP-E-7",
+                name: "Shelf-life study",
+                mandatory: true,
+              },
+              {
+                id: "microbiologicalAssessmentOfFoodAndPackaging",
+                code: "FP-E-8",
+                name: "Microbiological assessment of food and packaging",
+                mandatory: true,
+              },
+              {
+                code: "FP-E-9",
+                name: "Sensory science applied to food packaging",
+                mandatory: true,
+              },
+              {
+                code: "FP-E-10",
+                name: "Predicting shelf-life",
+                mandatory: true,
+              },
+            ],
+          },
+        ],
+      },
+      Quality_Manager_Advanced: {
+        pathwayName: "Quality Managers in Food Packaging - Advanced",
+        topics: [{
+            topicName: "Packaging Material Properties",
+            lectures: [{
+                id: "advancedPrinciplesMassTransfer",
+                code: "FP-C-6",
+                name: "Advanced principles of mass transfer",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-7",
+                name: "Calculation of permeability in composite systems",
+                mandatory: false,
+              },
+              {
+                code: "FP-C-8",
+                name: "Multicomponent diffusion & predictive models",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-9",
+                name: "Microholes and leaks: measurement and case studies",
+                mandatory: true,
+              },
+            ],
+          },
+          {
+            topicName: "Ecodesign Tools and Technologies",
+            lectures: [{
+              id: "ecodesignPackaging",
+              code: "FP-G-4",
+              name: "Tools for ecodesign and life cycle assessment",
+              mandatory: true,
+            }, ],
+          },
+          {
+            topicName: "Modelling Tools",
+            lectures: [{
+                id: "massTransferProperties",
+                code: "FP-I-1",
+                name: "Migration modelling in monomaterials",
+                mandatory: false,
+              },
+              {
+                id: "massTransferProperties",
+                code: "FP-I-2",
+                name: "Migration modelling in multimaterials",
+                mandatory: false,
+              },
+            ],
+          },
+        ],
+      },
+      Production_Line_Worker_Basic: {
+        pathwayName: "Packaging Production Line Workers - Basic",
+        topics: [{
+            topicName: "Panorama of Food Packaging",
+            lectures: [{
+              id: "panoramaOfFoodPackaging",
+              code: "FP-A-1",
+              name: "History and overview",
+              mandatory: true,
+            }, ],
+          },
+          {
+            topicName: "Packaging Materials",
+            lectures: [{
+                id: "materialGlass",
+                code: "FP-B-1",
+                name: "Glass",
+                mandatory: true,
+              },
+              {
+                id: "materialMetal",
+                code: "FP-B-2",
+                name: "Metal",
+                mandatory: true,
+              },
+              {
+                id: "materialPlastics",
+                code: "FP-B-3",
+                name: "Plastic",
+                mandatory: true,
+              },
+              {
+                id: "materialPaperAndBoard",
+                code: "FP-B-4",
+                name: "Paper and paperboard",
+                mandatory: true,
+              },
+              {
+                id: "bioBasedMaterials",
+                code: "FP-B-5",
+                name: "Bio-based polymers",
+                mandatory: false,
+              },
+              {
+                code: "FP-B-6",
+                name: "Cork",
+                mandatory: false,
+              },
+              {
+                code: "FP-B-7",
+                name: "Wood",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging Material Properties",
+            lectures: [{
+                id: "thermalProperties",
+                code: "FP-C-1",
+                name: "Thermal properties",
+                mandatory: true,
+              },
+              {
+                id: "mechanicalProperties",
+                code: "FP-C-2",
+                name: "Mechanical properties",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-3",
+                name: "Optical properties",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-4",
+                name: "Surface properties",
+                mandatory: true,
+              },
+              {
+                id: "massTransferProperties",
+                code: "FP-C-5",
+                name: "Mass transfer properties",
+                mandatory: true,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging Processes",
+            lectures: [{
+                id: "mechanicalProcesses",
+                code: "FP-D-1",
+                name: "Introduction to mechanical processes",
+                mandatory: true,
+              },
+              {
+                id: "formingOfPreProducts",
+                code: "FP-D-2",
+                name: "Forming of pre-products",
+                mandatory: true,
+              },
+              {
+                id: "asepticPackaging",
+                code: "FP-D-3",
+                name: "Aseptic packaging",
+                mandatory: true,
+              },
+              {
+                id: "fillingAndDosing",
+                code: "FP-D-4",
+                name: "Filling and dosing",
+                mandatory: true,
+              },
+              {
+                id: "beverageFilling",
+                code: "FP-D-5",
+                name: "Beverage filling",
+                mandatory: true,
+              },
+              {
+                id: "sealingAndWelding",
+                code: "FP-D-6",
+                name: "Sealing",
+                mandatory: true,
+              },
+              {
+                id: "formingFillingAndSealingMachines",
+                code: "FP-D-7",
+                name: "Forming, filling and sealing machinery",
+                mandatory: true,
+              },
+              {
+                id: "surfaceTreatmentsAndCoatings",
+                code: "FP-D-8",
+                name: "Surface treatments and coatings",
+                mandatory: false,
+              },
+              {
+                id: "vacuumAndModifiedAtmospherePackaging",
+                code: "FP-D-9",
+                name: "Vacuum and modified atmosphere packaging",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging and Food Shelf-life",
+            lectures: [{
+              id: "foodPackagingInteractions",
+              code: "FP-E-2",
+              name: "Food preservation technologies and packaging",
+              mandatory: false,
+            }, ],
+          },
+          {
+            topicName: "Legislation and Safety",
+            lectures: [{
+                code: "FP-H-6",
+                name: "GMP and quality assurance standards",
+                mandatory: true,
+              },
+              {
+                id: "environmentalLegislation",
+                code: "FP-H-8",
+                name: "Overview on risk assessment",
+                mandatory: false,
+              },
+            ],
+          },
+        ],
+      },
+      Production_Manager_Basic: {
+        pathwayName: "Packaging Production Line Workers - Basic",
+        topics: [{
+            topicName: "Panorama of Food Packaging",
+            lectures: [{
+              id: "panoramaOfFoodPackaging",
+              code: "FP-A-1",
+              name: "History and overview",
+              mandatory: true,
+            }, ],
+          },
+          {
+            topicName: "Packaging Materials",
+            lectures: [{
+                id: "materialGlass",
+                code: "FP-B-1",
+                name: "Glass",
+                mandatory: true,
+              },
+              {
+                id: "materialMetal",
+                code: "FP-B-2",
+                name: "Metal",
+                mandatory: true,
+              },
+              {
+                id: "materialPlastics",
+                code: "FP-B-3",
+                name: "Plastic",
+                mandatory: true,
+              },
+              {
+                id: "materialPaperAndBoard",
+                code: "FP-B-4",
+                name: "Paper and paperboard",
+                mandatory: true,
+              },
+              {
+                id: "bioBasedMaterials",
+                code: "FP-B-5",
+                name: "Bio-based polymers",
+                mandatory: false,
+              },
+              {
+                code: "FP-B-6",
+                name: "Cork",
+                mandatory: false,
+              },
+              {
+                code: "FP-B-7",
+                name: "Wood",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging Material Properties",
+            lectures: [{
+                id: "thermalProperties",
+                code: "FP-C-1",
+                name: "Thermal properties",
+                mandatory: true,
+              },
+              {
+                id: "mechanicalProperties",
+                code: "FP-C-2",
+                name: "Mechanical properties",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-3",
+                name: "Optical properties",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-4",
+                name: "Surface properties",
+                mandatory: true,
+              },
+              {
+                id: "massTransferProperties",
+                code: "FP-C-5",
+                name: "Mass transfer properties",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging Processes",
+            lectures: [{
+                id: "mechanicalProcesses",
+                code: "FP-D-1",
+                name: "Introduction to mechanical processes",
+                mandatory: true,
+              },
+              {
+                id: "formingOfPreProducts",
+                code: "FP-D-2",
+                name: "Forming of pre-products",
+                mandatory: true,
+              },
+              {
+                id: "asepticPackaging",
+                code: "FP-D-3",
+                name: "Aseptic packaging",
+                mandatory: false,
+              },
+              {
+                id: "fillingAndDosing",
+                code: "FP-D-4",
+                name: "Filling and dosing",
+                mandatory: true,
+              },
+              {
+                id: "beverageFilling",
+                code: "FP-D-5",
+                name: "Beverage filling",
+                mandatory: true,
+              },
+              {
+                id: "sealingAndWelding",
+                code: "FP-D-6",
+                name: "Sealing",
+                mandatory: true,
+              },
+              {
+                id: "formingFillingAndSealingMachines",
+                code: "FP-D-7",
+                name: "Forming, filling and sealing machinery",
+                mandatory: true,
+              },
+              {
+                id: "surfaceTreatmentsAndCoatings",
+                code: "FP-D-8",
+                name: "Surface treatments and coatings",
+                mandatory: true,
+              },
+              {
+                id: "vacuumAndModifiedAtmospherePackaging",
+                code: "FP-D-9",
+                name: "Vacuum and modified atmosphere packaging",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Packaging and Food Shelf-life",
+            lectures: [{
+                id: "shelfLifeStudy",
+                code: "FP-E-1",
+                name: "Defining shelf-life",
+                mandatory: true,
+              },
+              {
+                id: "foodPackagingInteractions",
+                code: "FP-E-2",
+                name: "Food preservation technologies and packaging",
+                mandatory: true,
+              },
+              {
+                id: "modifiedAtmospherePackaging",
+                code: "FP-E-3",
+                name: "Modified atmosphere packaging and shelf-life",
+                mandatory: false,
+              },
+              {
+                id: "foodPackagingInteractions",
+                code: "FP-E-4",
+                name: "Food-packaging interactions",
+                mandatory: true,
+              },
+              {
+                id: "physicoChemicalFactorsFoodStability",
+                code: "FP-E-5",
+                name: "Factors affecting shelf-life",
+                mandatory: true,
+              },
+            ],
+          },
+          {
+            topicName: "Innovative Food Packaging",
+            lectures: [{
+                id: "materialBioBased",
+                code: "FP-F-1",
+                name: "Bioplastics",
+                mandatory: true,
+              },
+              {
+                id: "bacterialPolyester",
+                code: "FP-F-2",
+                name: "Bacterial polyesters",
+                mandatory: false,
+              },
+              {
+                id: "cellulose",
+                code: "FP-F-3",
+                name: "Advanced cellulosic materials",
+                mandatory: false,
+              },
+              {
+                id: "activePackaging",
+                code: "FP-F-4",
+                name: "Active packaging",
+                mandatory: true,
+              },
+              {
+                id: "smartPackaging",
+                code: "FP-F-5",
+                name: "Intelligent packaging",
+                mandatory: true,
+              },
+              {
+                id: "nanomaterials",
+                code: "FP-F-6",
+                name: "Nanotechnology strategies",
+                mandatory: true,
+              },
+            ],
+          },
+          {
+            topicName: "Legislation and Safety",
+            lectures: [{
+              id: "environmentalLegislation",
+              code: "FP-H-1",
+              name: "Basic legal framework on food packaging materials",
+              mandatory: true,
+            }, ],
+          },
+        ],
+      },
+      Production_Manager_Advanced: {
+        pathwayName: "Packaging Production Managers - Advanced",
+        topics: [{
+            topicName: "Packaging Material Properties",
+            lectures: [{
+                id: "advancedPrinciplesMassTransfer",
+                code: "FP-C-6",
+                name: "Advanced principles of mass transfer",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-7",
+                name: "Calculation of permeability in composite systems",
+                mandatory: false,
+              },
+              {
+                id: "massTransferProperties",
+                code: "FP-C-8",
+                name: "Multicomponent diffusion & predictive models",
+                mandatory: true,
+              },
+              {
+                code: "FP-C-9",
+                name: "Microholes and leaks: measurement and case studies",
+                mandatory: true,
+              },
+            ],
+          },
+          {
+            topicName: "Ecodesign Tools and Technologies",
+            lectures: [{
+                code: "FP-G-1",
+                name: "What is Sustainability?",
+                mandatory: true,
+              },
+              {
+                id: "environmentalImpactOfFoodPackaging",
+                code: "FP-G-2",
+                name: "Environmental and human health impacts of packaging",
+                mandatory: true,
+              },
+              {
+                id: "microplastics",
+                code: "FP-G-3",
+                name: "Overview over microplastics issue",
+                mandatory: true,
+              },
+              {
+                id: "ecodesignPackaging",
+                code: "FP-G-4",
+                name: "Tools for ecodesign and life cycle assessment",
+                mandatory: true,
+              },
+              {
+                id: "glassFoodContactMaterialRecycling",
+                code: "FP-G-5",
+                name: "Glass food contact material recycling",
+                mandatory: true,
+              },
+              {
+                id: "metalFoodContactMaterialRecycling",
+                code: "FP-G-6",
+                name: "Metal food contact material recycling",
+                mandatory: true,
+              },
+              {
+                id: "plasticsRecycling",
+                code: "FP-G-7",
+                name: "Plastic recycling",
+                mandatory: true,
+              },
+              {
+                code: "FP-G-8",
+                name: "Paper and board recycling",
+                mandatory: true,
+              },
+              {
+                id: "biodegradation",
+                code: "FP-G-9",
+                name: "Biodegradation and biobased carbon content",
+                mandatory: false,
+              },
+              {
+                id: "reusableAndReturnableSystems",
+                code: "FP-G-10",
+                name: "Returnable and reuse systems",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Legislation and Safety",
+            lectures: [{
+                code: "FP-H-3",
+                name: "Recycled plastics - Regulation (EU) 2022/1616",
+                mandatory: true,
+              },
+              {
+                code: "FP-H-4",
+                name: "Safety assessment of plastic recycling processes",
+                mandatory: true,
+              },
+              {
+                code: "FP-H-5",
+                name: "Safety assessment of recycled paper and board",
+                mandatory: true,
+              },
+              {
+                id: "environmentalLegislation",
+                code: "FP-H-8",
+                name: "Overview on risk assessment",
+                mandatory: false,
+              },
+            ],
+          },
+          {
+            topicName: "Modelling Tools",
+            lectures: [{
+                code: "FP-I-1",
+                name: "Migration modelling in monomaterials",
+                mandatory: true,
+              },
+              {
+                code: "FP-I-2",
+                name: "Migration modelling in multimaterials",
+                mandatory: true,
+              },
+              {
+                code: "FP-I-4",
+                name: "Managing uncertainty by intervals and worst-case scenarios",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-5",
+                name: "Probabilistic approaches and Bayesian approaches",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-6",
+                name: "History and principles of FMEA-FMECA",
+                mandatory: true,
+              },
+              {
+                code: "FP-I-7",
+                name: "Diagram-based approaches",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-8",
+                name: "Computer-aided approaches",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-9",
+                name: "Principles of online databases",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-10",
+                name: "Microscopic theories of transport coefficients and free-energies",
+                mandatory: false,
+              },
+              {
+                code: "FP-I-11",
+                name: "Calculation using fluctuation theorems",
+                mandatory: false,
+              },
+            ],
+          },
+        ],
+      }
+    };
+
+
     // Initialize IndexedDB
     function initDB() {
       return new Promise((resolve, reject) => {
@@ -124,6 +1409,103 @@ Modified By: Steward OUADI
         };
       });
     }
+
+    function displayPathways(profileInfo) {
+      const profileContent = document.getElementById("profile-content");
+      if (!profileContent) return; // Check if element exists to prevent errors
+      profileContent.innerHTML = ""; // Clear existing content
+
+      // Sort pathways to ensure "Research and Development Managers in Food Packaging - Basic" comes first
+      const orderedPathways = ["RnD_Manager_Basic", "RnD_Manager_Advanced", "Quality_Manager_Basic",
+        "Quality_Manager_Advanced", "Production_Line_Worker_Basic",
+        "Production_Manager_Basic", "Production_Manager_Advanced"
+      ];
+
+      orderedPathways.forEach((pathwayKey) => {
+        const pathway = pathways[pathwayKey];
+        const pathwayContainer = document.createElement("div");
+        pathwayContainer.style.marginBottom = "20px";
+        pathwayContainer.style.padding = "10px";
+        pathwayContainer.style.borderTop = "2px solid orange";
+
+        // Pathway header and information link
+        const pathwayHeader = document.createElement("h3");
+        pathwayHeader.textContent = pathway.pathwayName;
+
+        const pathwayLink = document.createElement("a");
+        pathwayLink.href = pathwayUrls[pathwayKey];
+        pathwayLink.textContent = "For more information on this pathway, click here";
+
+        // Calculate overall success rate for mandatory assessments
+        let completedMandatoryAssessments = 0;
+        let totalMandatoryAssessments = 0;
+
+        pathway.topics.forEach((topic) => {
+          topic.lectures.forEach((lecture) => {
+            if (lecture.mandatory) {
+              totalMandatoryAssessments++;
+              const assessment = profileInfo.assessmentMap[lecture.id];
+              if (assessment) {
+                completedMandatoryAssessments += parseFloat(assessment.successRate.replace('%', '')) / 100;
+              }
+            }
+          });
+        });
+
+        const overallSuccessRate = totalMandatoryAssessments > 0 ?
+          (completedMandatoryAssessments / totalMandatoryAssessments) * 100 :
+          0;
+
+        // Success rate and explanation text
+        const successText = document.createElement("p");
+        successText.innerHTML =
+          `<strong>Your overall success for this pathway: ${overallSuccessRate.toFixed(2)}%</strong>`;
+
+        const explanationText = document.createElement("p");
+        explanationText.textContent =
+          `Your overall success considers only the mandatory assessments for this pathway. To request a certificate from an author
+        for a pathway, an overall success rate above 65 % is required.
+        `;
+
+        pathwayContainer.appendChild(pathwayHeader);
+        pathwayContainer.appendChild(pathwayLink);
+        pathwayContainer.appendChild(successText);
+        pathwayContainer.appendChild(explanationText);
+
+        // Topic and lecture details with assessment status and mandatory/elective label
+        pathway.topics.forEach((topic) => {
+          const topicContainer = document.createElement("div");
+          const topicHeader = document.createElement("h4");
+          topicHeader.textContent = topic.topicName;
+          topicContainer.appendChild(topicHeader);
+
+          topic.lectures.forEach((lecture) => {
+            const lectureContainer = document.createElement("div");
+
+            // Add lecture name and mandatory/elective status
+            const mandatoryStatus = lecture.mandatory ? "Mandatory" : "Elective";
+            lectureContainer.textContent = `${lecture.name} - ${mandatoryStatus}`;
+
+            // Check if assessment exists for the lecture
+            const assessment = profileInfo.assessmentMap[lecture.id];
+            if (assessment) {
+              // Append assessment result if available
+              const assessmentLink = document.createElement("a");
+              assessmentLink.href = assessment.quizUrl;
+              assessmentLink.textContent = ` - Assessment completed: ${assessment.successRate}`;
+              lectureContainer.appendChild(assessmentLink);
+            }
+
+            topicContainer.appendChild(lectureContainer);
+          });
+
+          pathwayContainer.appendChild(topicContainer);
+        });
+
+        profileContent.appendChild(pathwayContainer);
+      });
+    }
+
 
     // Confirm log out action
     function confirmLogout() {
@@ -214,6 +1596,8 @@ Modified By: Steward OUADI
             // Clear the input field to show the placeholder if no valid data is found
             encodedDataInput.value = "";
             console.log("No valid data found in IndexedDB"); // Debugging log
+            document.getElementById("pathwayList").innerHTML = "No pathways available.";
+
           }
         } catch (error) {
           console.error("Error loading profile data on page load:", error); // Debugging log
@@ -247,6 +1631,18 @@ Modified By: Steward OUADI
 
     // Display profile information on the page
     function displayProfileData(profileInfo) {
+
+      // Check if profileInfo is defined and has data before processing
+      if (!profileInfo || typeof profileInfo !== 'object' || Object.keys(profileInfo).length === 0) {
+        console.error("No valid profile information available. Please check the encoded data and try again.");
+        document.getElementById("profile-content").innerHTML =
+          "<p class='no-info'>No valid profile information available. Please check the encoded data and try again.</p>";
+        return;
+      }
+
+      // Proceed with displaying pathways if profileInfo is valid
+      displayPathways(profileInfo);
+
       // Check if profileInfo exists and has the necessary properties
       const userNameElement = document.getElementById("userName");
       const userEmailElement = document.getElementById("userEmail");
