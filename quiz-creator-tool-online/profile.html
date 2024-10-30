@@ -1460,7 +1460,7 @@ Modified By: Steward OUADI
 
         const explanationText = document.createElement("p");
         explanationText.textContent = `Your overall success considers only the mandatory assessments for this pathway. To
-   request a certificate from an author for a pathway, an overall success rate above 65 % is required.`;
+    request a certificate from an author for a pathway, an overall success rate above 65 % is required.`;
 
         pathwayContainer.appendChild(pathwayHeader);
         pathwayContainer.appendChild(pathwayLink);
@@ -1481,8 +1481,8 @@ Modified By: Steward OUADI
 
             // Display Lecture Details with Status and Assessment (if completed)
             if (assessment) {
-              lectureContainer.innerHTML = `${lecture.name} - ${mandatoryStatus} - Assessment completed:
-   ${assessment.successRate}`;
+              lectureContainer.innerHTML = `${lecture.name} - ${mandatoryStatus} - <a href="${assessment.quizUrl}"
+      target="_blank">Assessment completed: ${assessment.successRate}</a>`;
             } else {
               lectureContainer.textContent = `${lecture.name} - ${mandatoryStatus}`;
             }
@@ -1496,6 +1496,7 @@ Modified By: Steward OUADI
         profileContent.appendChild(pathwayContainer);
       });
     }
+
     // Confirm log out action
     function confirmLogout() {
       if (confirm("Are you sure you want to log out? This will clear your stored data.")) {
