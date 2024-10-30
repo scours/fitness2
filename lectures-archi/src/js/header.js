@@ -22,22 +22,22 @@ class Header extends HTMLElement {
       <div class="logo-left">
         <!-- FITNESS 2 Logo with link to home -->
         <a href="/" title="Back to Home">
-          <img src="Fitness2_logo-no-background.png" alt="FITNESS 2 Logo" class="logo">
+          <img src="src/img/Fitness2_logo-no-background.png" alt="FITNESS 2 Logo" class="logo">
         </a>
       </div>
 
       <div class="logo-right">
         <!-- Coordinator Logo -->
-        <img src="coordinator-actia-logo-no-background.png" alt="Coordinator Logo" class="logo">
+        <img src="src/img/coordinator-actia-logo-no-background.png" alt="Coordinator Logo" class="logo">
 
         <!-- Twitter Logo with link -->
         <a href="https://twitter.com/FitNESS_2_0" target="_blank" title="Twitter">
-          <img src="twitter-icon.png" alt="Twitter Logo" class="social-logo">
+          <img src="src/img/twitter-icon.png" alt="Twitter Logo" class="social-logo">
         </a>
 
         <!-- LinkedIn Logo with link -->
         <a href="https://www.linkedin.com/company/fitness-packaging/" target="_blank" title="LinkedIn">
-          <img src="LinkedIn_icon.png" alt="LinkedIn Logo" class="social-logo">
+          <img src="src/img/LinkedIn_icon.png" alt="LinkedIn Logo" class="social-logo">
         </a>
       </div>
     </div>
