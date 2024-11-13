@@ -25,5 +25,6 @@
     "packaging",
     "planks"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part9.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part9.html#/2",
+  "qAndAVariables":["Access the assessment = materialCork"]
 }

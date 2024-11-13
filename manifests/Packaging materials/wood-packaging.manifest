@@ -6,7 +6,10 @@
   "unit": "U1.2",
   "difficultyLevel": "Novice",
   "part": "part10",
-  "author": "Fátima Poças",
+  "author": [
+    "Patrícia Soares",
+    "Fátima Poças"
+  ],
   "institution": "UCP",
   "abstract": "Wood is used as food packaging and for shipment: barrels, pallets",
   "topic": [
@@ -27,5 +30,6 @@
     "water",
     "wood"
   ],
-  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part10.html#/2"
+  "userProvidedURLForLecture": "https://fitness.agroparistech.fr/fitness/lectures/html/common/S1/U1.2/part10.html#/2",
+  "qAndAVariables":["Access the assessment = materialWood"]
 }

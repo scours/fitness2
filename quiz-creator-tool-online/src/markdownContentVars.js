@@ -5,7 +5,7 @@
  * File Created: Wednesday, 27th September 2023
  * Author: Steward OUADI
  * -----
- * Last Modified: Wednesday, 16th October 2024
+ * Last Modified: Tuesday, 12th November 2024
  * Modified By: Steward OUADI
  */
 
@@ -366,6 +366,52 @@ Q8: The water vapour transmission rate of 3g/day.m2 corresponds to a permeabilit
 - [x] True	
 - [ ] False
 
+
+canBeSentByEmail:true`;
+
+var materialCork = `
+Q1: Cork is impermeable to liquids and gases.
+- [x] True
+- [ ] False
+
+Q2: Cork is harvested from the Cork Oak tree.
+- [x] True
+- [ ] False
+
+Q3: Cork Oak trees can live up to 200 years.
+- [x] True
+- [ ] False
+
+Q4: Cork bark can be extracted from the tree multiple times throughout its lifetime.
+- [x] True
+- [ ] False
+
+Q5: Cork stoppers are produced through a molding process.
+- [ ] True
+- [x] False
+
+canBeSentByEmail:true`;
+
+var materialWood = `
+Q1: Wood packaging materials from non-EU countries must be heat treated or fumigated in line with ISPM15 procedures.
+- [x] True
+- [ ] False
+
+Q2: Wood is a porous material.
+- [x] True
+- [ ] False
+
+Q3: The EU Timber Regulation prohibits the trade in illegally harvested timber and timber products.
+- [x] True
+- [ ] False
+
+Q4: The Euro Pallet dimensions in wood are: 1200 x 880.
+- [ ] True
+- [x] False
+
+Q5: The European framework regulation 1935/2004 does not apply to wood food contact materials because it is not a plastic.
+- [ ] True
+- [x] False
 
 canBeSentByEmail:true`;
 

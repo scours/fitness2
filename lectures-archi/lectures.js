@@ -5,7 +5,7 @@
  * File Created: Tuesday, 6th September 2022
  * Authors: Steward OUADI (AgroParisTech),  Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Thursday, 24th October 2024
+ * Last Modified: Wednesday, 13th November 2024
  * Modified By: Steward OUADI
  */
 
@@ -225,6 +225,8 @@ const authorUrls = {
   "Massimiliano Gerometta":
     "https://www.fitness-foodpackaging.com/institutagrodijon",
   "Fátima Poças":
+    "https://www.fitness-foodpackaging.com/universidadecatolicaportuguesa",
+  "Maria do Céu Selbourne":
     "https://www.fitness-foodpackaging.com/universidadecatolicaportuguesa",
   "Frédéric Debeaufort":
     "https://www.fitness-foodpackaging.com/universityofburgundy",

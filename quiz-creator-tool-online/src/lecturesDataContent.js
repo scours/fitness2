@@ -5,7 +5,7 @@
  * File Created: Friday, 13th September 2024
  * Authors: Steward OUADI (AgroParisTech), Olivier VITRAC (INRAE)
  * -----
- * Last Modified: Tuesday, 29th October 2024
+ * Last Modified: Tuesday, 12th November 2024
  * Modified By: Steward OUADI
  */
 
@@ -169,6 +169,16 @@ const lecturesData = [
     id: "materialPaperAndBoard",
     name: "Paper and paperboard",
     url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20materials/paper-and-paperboard",
+  },
+  {
+    id: "materialCork",
+    name: "Cork",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20materials/cork-as-food-packaging",
+  },
+  {
+    id: "materialWood",
+    name: "Wood",
+    url: "https://fitness.agroparistech.fr/fitness2/lectures/lectures.html#Packaging%20materials/wood-packaging",
   },
   {
     id: "materialPlastics",
